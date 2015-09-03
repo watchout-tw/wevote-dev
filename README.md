@@ -1,0 +1,1 @@
+base: https://github.com/erikras/react-redux-universal-hot-example @ 0.0.4

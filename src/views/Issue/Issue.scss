@@ -1,0 +1,25 @@
+$main: #006060;
+
+.masthead {
+  
+  text-align: center;
+  
+  h1 {
+    color: $main;
+    font-size: 4em;
+  }
+  h2 {
+    color: #ddd;
+    font-size: 2em;
+    margin: 20px;
+  }
+  a {
+    color: #ddd;
+  }
+  p {
+    margin: 10px;
+  }
+  
+}
+
+

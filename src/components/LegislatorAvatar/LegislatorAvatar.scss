@@ -1,0 +1,39 @@
+.wrap {
+	display: inline-block;
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+
+    //border: 1px solid rgb(220,220,220);
+    border-radius: 50%;
+    display: inline-block;
+} 
+
+.is-KMT {
+    border-color: #3288bd;
+}
+.is-DPP {
+    border-color: #7fbc41;
+}
+.is-PFP {
+    border-color: orange;
+}
+.is-TSU {
+    border-color: #b35806;
+}
+.is-NP {
+    border-color: gray;
+}
+.is-NPU {
+    border-color: rgba(194,15,81,0.9);
+}
+
+.name {
+	  vertical-align: top;
+	  padding-top: 16px;
+	  margin-left: 5px;
+    text-align: center;
+}
