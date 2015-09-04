@@ -10,9 +10,16 @@ $break-large: 1000px;
 		margin: 0 auto;
 	}
 }
+.slideImgLoading {
+	width: 100%;
+	opacity: 0.2;
+	
+}
 .slideImg {
 	width: 100%;
-	transition: opacity 2s;
+	opacity: 1;
+	transition: all 0.8s ease-out;
+	
 }
 .pageWrap {
 	text-align: left;

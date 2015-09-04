@@ -12,14 +12,23 @@ export default class Slideshow extends Component {
   //initial state
   constructor(props) { super(props)
     this.state = {
-        currentIndex: 0
+        currentIndex: 0,
+        imageLoaded: true
     }
   }
 
   _setCurrentIndex(value, event){
-    console.log("set index");
+    //console.log("set index");
+    this._setImageLoaded(false);
     this.setState({
       currentIndex: value
+    })
+  }
+
+  _setImageLoaded(value, event){
+    //console.log("set loaded " + value);
+    this.setState({
+      imageLoaded: value
     })
   }
 
@@ -43,13 +52,14 @@ export default class Slideshow extends Component {
   render() {
     const styles = require('./Slideshow.scss');
     const {data, topic} = this.props;
-    let {currentIndex} = this.state;
+    let {currentIndex, imageLoaded} = this.state;
     
 
     return (
       <div className={styles.wrap}>
           <img alt="to-be-add"
-               className={styles.slideImg}
+               className={imageLoaded===true ? styles.slideImg : styles.slideImgLoading}
+               onLoad={this._setImageLoaded.bind(this,true)}
                src={require(`./images/${data[currentIndex]}.jpg`)} />
           <div className={styles.pageWrap}>
           {
