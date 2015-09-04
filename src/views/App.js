@@ -7,6 +7,8 @@ import {createTransitionHook} from '../universalRouter';
 
 import './normalize.scss';
 
+import Appbar from '../components/Appbar/Appbar.js';
+
 const title = '立委求職中';
 const description = '0.0.1';
 const image = 'https://react-redux.herokuapp.com/logo.jpg';
@@ -63,34 +65,11 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
-        <nav className="navbar navbar-default">
-          <div className="container">
-            <Link to="/" className="navbar-brand">
-              <div className={styles.brand}/>
-              立委求職中
-            </Link>
-
-          
-            <ul className="nav navbar-nav">
-              <li><Link to={`/issues/marriage-equality`}  className="nav navbar-nav">婚姻平權</Link></li>
-              <li><Link to={`/issues/recall`}  className="nav navbar-nav">罷免</Link></li>
-              <li><Link to="about">About Us</Link></li>
-            </ul>
-            
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a href="https://www.facebook.com/WatchOutTW"
-                   target="_blank" title="View on Github">fb</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Appbar/>
         <div className={styles.appContent}>
           {this.props.children}
         </div>
-        
-
-       
+  
       </div>
     );
   }

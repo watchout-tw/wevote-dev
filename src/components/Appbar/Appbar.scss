@@ -1,0 +1,33 @@
+$themeColor: #006060;
+$navHeight: 50px;
+$paddingHeight: 15px; /* (50-20)/2 */
+nav {
+	background: $themeColor;
+	height: $navHeight;
+}
+.brand {
+	display: inline-block;
+	padding: 0px $paddingHeight;
+}
+ul.lists {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+}
+.lists li {
+	margin: 0;
+	display: inline-block;
+	height: $navHeight;
+}
+.lists li:hover {
+	background: lighten( $themeColor, 10% );
+}
+a, a:visited{
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	padding: $paddingHeight;
+}
+.nav {
+	color: green;
+}
