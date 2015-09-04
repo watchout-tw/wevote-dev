@@ -10,13 +10,31 @@ $break-large: 1000px;
 		margin: 0 auto;
 	}
 }
+.prev {
+	padding: 6px 20px 6px 20px;
+	left: 5px;
+}
+.next {
+	padding: 6px 20px 6px 20px;
+	right: 5px;
+}
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	z-index: 1;
+}
+.prev:hover, .next:hover {
+	background: black;
+	color: white;
+}
 .slideImgLoading {
-	width: 100%;
+	width: calc( 100% - 10px );
 	opacity: 0.2;
 	
 }
 .slideImg {
-	width: 100%;
+	width: calc( 100% - 10px );
 	opacity: 1;
 	transition: all 0.8s ease-out;
 	

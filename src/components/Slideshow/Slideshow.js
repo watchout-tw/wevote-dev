@@ -12,6 +12,7 @@ export default class Slideshow extends Component {
   //initial state
   constructor(props) { super(props)
     this.state = {
+        autoplayTimer: "",
         currentIndex: 0,
         imageLoaded: true
     }
@@ -19,10 +20,22 @@ export default class Slideshow extends Component {
 
   _setCurrentIndex(value, event){
     //console.log("set index");
+    var maxIndex =  this.props.data.length - 1;
+    if(value > maxIndex){
+      value = value % (maxIndex+1);
+    }
+    if(value < 0){
+      value = maxIndex;
+    }
+
+
     this._setImageLoaded(false);
+
     this.setState({
       currentIndex: value
     })
+
+    this._autoplay();
   }
 
   _setImageLoaded(value, event){
@@ -32,12 +45,25 @@ export default class Slideshow extends Component {
     })
   }
 
+  _autoplay(){
+
+    clearInterval(this.state.autoplayTimer);
+
+    let timer = setInterval(()=>{
+        let nextIndex = (this.state.currentIndex + 1)%(this.props.data.length);
+        this._setCurrentIndex(nextIndex);
+    }, 5000); 
+    
+    this.setState(
+      { 
+        autoplayTimer:  timer
+      }
+    )
+  }
+
   componentDidMount() {
       //console.log("I'm mount!");
-      setInterval(()=>{
-          let nextIndex = (this.state.currentIndex + 1)%(this.props.data.length);
-          this._setCurrentIndex(nextIndex);
-      }, 5000); 
+      this._autoplay();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -49,6 +75,15 @@ export default class Slideshow extends Component {
        
   }
 
+  _imageOnHover(value, event){
+    //console.log("* hover * "+value)
+    if(value){
+      clearInterval(this.state.autoplayTimer);
+    }else{
+      this._autoplay();
+    }
+  }
+
   render() {
     const styles = require('./Slideshow.scss');
     const {data, topic} = this.props;
@@ -57,9 +92,15 @@ export default class Slideshow extends Component {
 
     return (
       <div className={styles.wrap}>
+          <div className={styles.prev}
+               onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>Prev</div>
+          <div className={styles.next}
+               onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>Next</div>
           <img alt="to-be-add"
                className={imageLoaded===true ? styles.slideImg : styles.slideImgLoading}
                onLoad={this._setImageLoaded.bind(this,true)}
+               onMouseEnter={this._imageOnHover.bind(this, true)}
+               onMouseLeave={this._imageOnHover.bind(this, false)}
                src={require(`./images/${data[currentIndex]}.jpg`)} />
           <div className={styles.pageWrap}>
           {
