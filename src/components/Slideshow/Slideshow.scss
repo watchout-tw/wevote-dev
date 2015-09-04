@@ -1,0 +1,30 @@
+$break-large: 1000px;
+
+.wrap {
+	position: relative;
+	width: 100%;
+}
+@media screen and (min-width:$break-large){
+	.wrap {
+		width: 1000px;
+		margin: 0 auto;
+	}
+}
+.slideImg {
+	width: 100%;
+	transition: opacity 2s;
+}
+.pageWrap {
+	text-align: left;
+}
+.page {
+	background: black;
+	color: white;
+	display: inline-block;
+	margin: 3px;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+.page:hover, .activePage {
+	background: gray;
+}

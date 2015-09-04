@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 import {connect} from 'react-redux';
 
 import PositionGroup from '../../components/PositionGroup/PositionGroup.js';
+import Slideshow from '../../components/Slideshow/Slideshow.js';
 
 @connect(
     state => ({issues: state.issues}),
@@ -18,12 +19,14 @@ export default class Issue extends Component {
 
     let positionGroups = issue.positions.map((value, index)=>{
       return <PositionGroup data={value} key={index}/>
-    });
+    })
+
+    // <h1>{issue.title}</h1>
+    // <p>{issue.question}</p>
 
     return (
       <div className={styles.masthead}>
-          <h1>{issue.title}</h1>
-          <p>{issue.question}</p>
+          <Slideshow data={issue.slideshows} topic={issue.title}/>
           {positionGroups}
       </div>
     );

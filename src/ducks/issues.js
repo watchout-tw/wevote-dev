@@ -8,7 +8,8 @@ const initialState = {
         {  "position" : "against", "id" : [2, 7] },
         {  "position" : "unknown", "id" : [3] },
         {  "position" : "none", "id" : [4] }
-      ]
+      ],
+      "slideshows" : [1,2,3,4,5,6,7,8,9,10]
     },
     "recall" : {
       "title" : "罷免",
@@ -18,7 +19,8 @@ const initialState = {
         {  "position" : "against", "id" : [3] },
         {  "position" : "unknown", "id" : [1] },
         {  "position" : "none", "id" : [7] }
-      ]
+      ],
+      "slideshows" : [11,12,13,14,15,16,17,18,19]
     } 
    
 }
