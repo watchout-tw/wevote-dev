@@ -5,6 +5,8 @@ import {connect} from 'react-redux';
 import DocumentMeta from 'react-document-meta';
 import {createTransitionHook} from '../universalRouter';
 
+import './normalize.scss';
+
 const title = '立委求職中';
 const description = '0.0.1';
 const image = 'https://react-redux.herokuapp.com/logo.jpg';
