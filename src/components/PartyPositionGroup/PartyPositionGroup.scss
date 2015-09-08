@@ -1,0 +1,22 @@
+$cubeSize: 20px;
+$forColor: #00FFB0;
+$againstColor: #FF0055;
+$unknownColor: #FFF800;
+
+.wrap {
+	display: inline-block;
+}
+.postionCube {
+	width: $cubeSize;
+	height: $cubeSize;
+	float: left;
+}
+.for {
+	background: $forColor;
+}
+.against {
+	background: $againstColor;
+}
+.unknown {
+	background: $unknownColor;
+}
