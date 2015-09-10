@@ -1,6 +1,6 @@
 $cubeSize: 20px;
-$forColor: #00FFB0;
-$againstColor: #FF0055;
+$ayeColor: #00FFB0;
+$nayColor: #FF0055;
 $unknownColor: #FFF800;
 
 .wrap {
@@ -11,11 +11,11 @@ $unknownColor: #FFF800;
 	height: $cubeSize;
 	float: left;
 }
-.for {
-	background: $forColor;
+.aye {
+	background: $ayeColor;
 }
-.against {
-	background: $againstColor;
+.nay {
+	background: $nayColor;
 }
 .unknown {
 	background: $unknownColor;
