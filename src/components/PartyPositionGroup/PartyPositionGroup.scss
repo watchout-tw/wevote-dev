@@ -5,11 +5,16 @@ $unknownColor: #FFF800;
 
 .wrap {
 	display: inline-block;
+	position: relative;
 }
 .postionCube {
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
+	cursor: pointer;
+}
+.postionCube:hover {
+	border: 3px solid;
 }
 .aye {
 	background: $ayeColor;
@@ -19,4 +24,12 @@ $unknownColor: #FFF800;
 }
 .unknown {
 	background: $unknownColor;
+}
+.activeRecord {
+	width: 100%;
+	position: absolute;
+	text-align: left;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 1.4;
 }
