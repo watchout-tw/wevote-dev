@@ -10,7 +10,7 @@ const initialState = {
       "title" : "罷免",
       "titleEng" : "recall",
       "question" : "你是否支持下修罷免門檻？",
-      "slideshows" : [11,12,13,14,15,16,17,18,19]
+      "slideshows" : [11,12,13,14,15,16,17]
     } 
    
 }
