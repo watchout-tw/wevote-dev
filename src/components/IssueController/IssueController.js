@@ -1,52 +1,63 @@
 import React, {Component, PropTypes} from 'react';
+import {bindActionCreators} from 'redux';
+import {Link} from 'react-router';
+import {connect} from 'react-redux';
+import {setToViewParty, setToViewLegislator, setToViewPosition} from '../../ducks/issueController';
 
-// 看政黨 viewParty
-// 看委員 viewLegislator
-// 看表態 viewPosition
+const VIEW_PARTY = 'VIEW_PARTY';
+const VIEW_LEGISLATOR = 'VIEW_LEGISLATOR';
+const VIEW_POSITION = 'VIEW_POSITION';
 
-class OptionItem extends Component {
- 
-  render() {
-    const styles = require('./IssueController.scss');
-    const {data, active, handlerSetOption} = this.props;
-    
-    //let imgURL = (active === true) ? require(`./images/${data.id}-active.svg`):require(`./images/${data.id}.svg`);
-    
-    let imgURL = require(`./images/${data.id}.svg`);
-    
-    let itemActive = (active === true) ? styles.optionItemActive : "";
-    let imgActive  = (active === true) ? styles.optionImgActive : "";
+@connect(
+    state => ({ issueController: state.issueController}),
+    dispatch => bindActionCreators({setToViewParty, setToViewLegislator, setToViewPosition}, dispatch))
 
-    return (
-      <div className={`${styles.optionItem} ${itemActive}`} onClick={handlerSetOption.bind(null, data.id)}>
-          <img className={`${styles.optionImg} ${imgActive}`} src={imgURL} />
-          {data.title}
-      </div>
-    )
+export default class IssueController extends Component {
+  /* 一定要寫，因為要把滑鼠動作 bind 到 function，如果沒寫，component 可能還沒 mount，就無法 bind */
+  static propTypes = {
+    setToViewParty: PropTypes.func.isRequired,
+    setToViewLegislator: PropTypes.func.isRequired,
+    setToViewPosition: PropTypes.func.isRequired
   }
-
-  props = {
-    className: ''
-  }
-}
-
-
-export default class PartyPositionGroup extends Component {
-  // static propTypes = {
-  //   // count: PropTypes.number,
-  //   // increment: PropTypes.func.isRequired,
-  //   // className: PropTypes.string
-  // }
 
   render() {
     const styles = require('./IssueController.scss');
-    const {options, activeOption, handlerSetOption} = this.props;
-    
-    
+    const { issueController, setToViewParty, setToViewLegislator, setToViewPosition } = this.props;
+    // console.log(issueController);
+    console.log(this.props);
+   
+   
+
+    let {options, activeOption} = issueController;
+
+    let bindSetToViewParty = setToViewParty.bind(this);
+    let bindSetToViewLegislator = setToViewLegislator.bind(this);
+    let bindSetToViewPosition = setToViewPosition.bind(this);
+
     let optionItems = options.map((value,index)=>{
       
       let active = (value.id === activeOption) ? true : false;
-      return <OptionItem data={value} active={active} key={index} handlerSetOption={handlerSetOption}/>
+      
+      let handler;
+      switch(value.id){
+          case VIEW_PARTY:
+            handler = bindSetToViewParty;
+            break;
+
+          case VIEW_LEGISLATOR:
+            handler = bindSetToViewLegislator;
+            break;
+
+          case VIEW_POSITION:
+            handler = bindSetToViewPosition;
+            break;
+
+          default:
+            handler = bindSetToViewParty;
+      }
+     
+     
+      return <OptionItem data={value} active={active} handler={handler} key={index}/>
     })
 
     return (
@@ -54,6 +65,30 @@ export default class PartyPositionGroup extends Component {
            {optionItems} 
       </div>
     );
+  }
+
+  props = {
+    className: ''
+  }
+}
+
+class OptionItem extends Component {
+ 
+  render() {
+    const styles = require('./IssueController.scss');
+    const {data, active, handler} = this.props;
+    
+    let imgURL = require(`./images/${data.id}.svg`);
+
+    let itemActive = (active === true) ? styles.optionItemActive : "";
+    let imgActive  = (active === true) ? styles.optionImgActive : "";
+
+    return (
+      <div className={`${styles.optionItem} ${itemActive}`} onClick={handler}>
+          <img className={`${styles.optionImg} ${imgActive}`} src={imgURL} />
+          {data.title}
+      </div>
+    )
   }
 
   props = {

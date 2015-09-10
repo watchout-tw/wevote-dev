@@ -3,7 +3,6 @@ import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
 
-
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 
 import PartyPositionGroup from '../../components/PartyPositionGroup/PartyPositionGroup.js';
@@ -12,48 +11,27 @@ import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPart
 
 import IssueController from '../../components/IssueController/IssueController.js';
 
+const VIEW_PARTY = 'VIEW_PARTY';
+const VIEW_LEGISLATOR = 'VIEW_LEGISLATOR';
+const VIEW_POSITION = 'VIEW_POSITION';
+
 @connect(
     state => ({
                 issues: state.issues, 
                 partyView: state.partyView,
                 legislatorView: state.legislatorView,
-                positionView: state.positionView
+                positionView: state.positionView,
+                issueController: state.issueController
               }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Issue extends Component {
-  //設定 initial state
-  constructor(props) { super(props)
-      this.state = {
-            options: [
-                  {
-                    'title' : '看政黨',
-                    'id' : 'viewParty'
-                  },
-                  {
-                    'title' : '看委員',
-                    'id' : 'viewLegislator'
-                  },
-                  {
-                    'title' : '看表態',
-                    'id' : 'viewPosition'
-                  }
-
-            ],
-            activeOption: 'viewParty'
-      }
-  }
-
-  _toggleOption(value, event){
-    this.setState({activeOption: value})
-  }
-
+  
   render() {
     const styles = require('./Issue.scss');
 
-    const {issues, partyView, legislatorView, positionView} = this.props;
-    const {options, activeOption} = this.state;
-
+    const {issues, partyView, legislatorView, positionView, issueController} = this.props;
+   
     const currentIssueName = this.props.params.issueName;/* 從 URL 知道現在讀的議題頁面 */
 
     const currentIssue = issues[currentIssueName]//只拿目前頁面議題的議題基本資料，maybe refine to ducks/select later on
@@ -85,27 +63,27 @@ export default class Issue extends Component {
 
 
     let positionFigure;
-    switch(activeOption){
-        case 'viewParty': 
+    switch(issueController.activeOption){
+        case VIEW_PARTY: 
             positionFigure = partyPositionGroups;
             break;
 
-        case 'viewLegislator': 
+        case VIEW_LEGISLATOR: 
             positionFigure = positionLegislatorGroups;
             break;
 
-        case 'viewPosition': 
+        case VIEW_POSITION: 
             positionFigure = positionPartyGroups;
             break;
         
     }
-
+   
 
     return (
       <div className={styles.masthead}>
           <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
           
-          <IssueController options={options} activeOption={activeOption} handlerSetOption={this._toggleOption.bind(this)}/>
+          <IssueController />
           
           <div className={styles.records}>
             {positionFigure}
