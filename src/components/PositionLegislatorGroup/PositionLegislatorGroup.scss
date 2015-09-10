@@ -1,0 +1,38 @@
+.wrap {
+	display: inline-block;
+	text-align: left;
+}
+.title {
+	text-align: center;
+}
+.avatarImg {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+
+    display: inline-block;
+} 
+
+.KMT {
+    border-color: #000095;
+}
+.DPP {
+    border-color: #009A00;
+}
+.PFP {
+    border-color: #FE6407;
+}
+.TSU {
+    border-color: #A25B09;
+}
+.NP {
+    border-color: gray;
+}
+.NPU {
+    border-color: rgba(194,15,81,0.9);
+}
+

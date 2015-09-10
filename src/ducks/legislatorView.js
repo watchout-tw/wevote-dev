@@ -9,6 +9,7 @@ const initialState = {
                 "legislators": [
                     {
                         "name": "黃昭順",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -31,6 +32,7 @@ const initialState = {
                     },
                     {
                         "name": "蕭美琴",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -128,6 +130,7 @@ const initialState = {
                     },
                     {
                         "name": "尤美女",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -255,6 +258,7 @@ const initialState = {
                     },
                     {
                         "name": "吳秉叡",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -292,6 +296,7 @@ const initialState = {
                     },
                     {
                         "name": "林佳龍",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -314,6 +319,7 @@ const initialState = {
                     },
                     {
                         "name": "林淑芬",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -366,6 +372,7 @@ const initialState = {
                     },
                     {
                         "name": "黃文玲",
+                        "party": "TSU",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -388,6 +395,7 @@ const initialState = {
                     },
                     {
                         "name": "鄭麗君",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -440,6 +448,7 @@ const initialState = {
                     },
                     {
                         "name": "段宜康",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -507,6 +516,7 @@ const initialState = {
                     },
                     {
                         "name": "陳其邁",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -574,6 +584,7 @@ const initialState = {
                     },
                     {
                         "name": "李俊俋",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -611,6 +622,7 @@ const initialState = {
                     },
                     {
                         "name": "姚文智",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -648,6 +660,7 @@ const initialState = {
                     },
                     {
                         "name": "邱志偉",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -670,6 +683,7 @@ const initialState = {
                     },
                     {
                         "name": "吳宜臻",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -697,6 +711,7 @@ const initialState = {
                 "legislators": [
                     {
                         "name": "呂學樟",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -734,6 +749,7 @@ const initialState = {
                     },
                     {
                         "name": "孔文吉",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -756,6 +772,7 @@ const initialState = {
                     },
                     {
                         "name": "羅淑蕾",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -778,6 +795,7 @@ const initialState = {
                     },
                     {
                         "name": "丁守中",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -800,6 +818,7 @@ const initialState = {
                     },
                     {
                         "name": "林鴻池",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -822,6 +841,7 @@ const initialState = {
                     },
                     {
                         "name": "李貴敏",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -844,6 +864,7 @@ const initialState = {
                     },
                     {
                         "name": "廖正井",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "婚姻平權",
@@ -878,6 +899,7 @@ const initialState = {
                 "legislators": [
                     {
                         "name": "紀國棟",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -930,6 +952,7 @@ const initialState = {
                     },
                     {
                         "name": "吳育昇",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -982,6 +1005,7 @@ const initialState = {
                     },
                     {
                         "name": "陳超明",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1004,6 +1028,7 @@ const initialState = {
                     },
                     {
                         "name": "江啟臣",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1041,6 +1066,7 @@ const initialState = {
                     },
                     {
                         "name": "徐欣瑩",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1063,6 +1089,7 @@ const initialState = {
                     },
                     {
                         "name": "蔡正元",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1085,6 +1112,7 @@ const initialState = {
                     },
                     {
                         "name": "張慶忠",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1107,6 +1135,7 @@ const initialState = {
                     },
                     {
                         "name": "邱文彥",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1129,6 +1158,7 @@ const initialState = {
                     },
                     {
                         "name": "謝國樑",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1151,6 +1181,7 @@ const initialState = {
                     },
                     {
                         "name": "李慶華",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1178,6 +1209,7 @@ const initialState = {
                 "legislators": [
                     {
                         "name": "陳其邁",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1260,6 +1292,7 @@ const initialState = {
                     },
                     {
                         "name": "姚文智",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1327,6 +1360,7 @@ const initialState = {
                     },
                     {
                         "name": "黃文玲",
+                        "party": "TSU",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1364,6 +1398,7 @@ const initialState = {
                     },
                     {
                         "name": "許添財",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1416,6 +1451,7 @@ const initialState = {
                     },
                     {
                         "name": "許忠信",
+                        "party": "TSU",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1468,6 +1504,7 @@ const initialState = {
                     },
                     {
                         "name": "李俊俋",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1595,6 +1632,7 @@ const initialState = {
                     },
                     {
                         "name": "周倪安",
+                        "party": "TSU",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1617,6 +1655,7 @@ const initialState = {
                     },
                     {
                         "name": "邱志偉",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1654,6 +1693,7 @@ const initialState = {
                     },
                     {
                         "name": "陳亭妃",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1736,6 +1776,7 @@ const initialState = {
                     },
                     {
                         "name": "尤美女",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1773,6 +1814,7 @@ const initialState = {
                     },
                     {
                         "name": "莊瑞雄",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1795,6 +1837,7 @@ const initialState = {
                     },
                     {
                         "name": "林佳龍",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1817,6 +1860,7 @@ const initialState = {
                     },
                     {
                         "name": "陳歐珀",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1854,6 +1898,7 @@ const initialState = {
                     },
                     {
                         "name": "林世嘉",
+                        "party": "TSU",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1891,6 +1936,7 @@ const initialState = {
                     },
                     {
                         "name": "台灣團結聯盟黨團",
+                        "party": "TSU",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1943,6 +1989,7 @@ const initialState = {
                     },
                     {
                         "name": "邱議瑩",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -1980,6 +2027,7 @@ const initialState = {
                     },
                     {
                         "name": "葉宜津",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2002,6 +2050,7 @@ const initialState = {
                     },
                     {
                         "name": "許智傑",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2024,6 +2073,7 @@ const initialState = {
                     },
                     {
                         "name": "趙天麟",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2046,6 +2096,7 @@ const initialState = {
                     },
                     {
                         "name": "蘇震清",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2113,6 +2164,7 @@ const initialState = {
                     },
                     {
                         "name": "李昆澤",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2150,6 +2202,7 @@ const initialState = {
                     },
                     {
                         "name": "蔡其昌",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2172,6 +2225,7 @@ const initialState = {
                     },
                     {
                         "name": "賴振昌",
+                        "party": "TSU",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2194,6 +2248,7 @@ const initialState = {
                     },
                     {
                         "name": "李應元",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2231,6 +2286,7 @@ const initialState = {
                     },
                     {
                         "name": "鄭麗君",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2253,6 +2309,7 @@ const initialState = {
                     },
                     {
                         "name": "高志鵬",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2275,6 +2332,7 @@ const initialState = {
                     },
                     {
                         "name": "柯建銘",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2297,6 +2355,7 @@ const initialState = {
                     },
                     {
                         "name": "楊曜",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2319,6 +2378,7 @@ const initialState = {
                     },
                     {
                         "name": "薛凌",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2341,6 +2401,7 @@ const initialState = {
                     },
                     {
                         "name": "吳秉叡",
+                        "party": "DPP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2383,6 +2444,7 @@ const initialState = {
                 "legislators": [
                     {
                         "name": "陳怡潔",
+                        "party": "PFP",
                         "records": [
                             {
                                 "issue": "罷免",
@@ -2405,6 +2467,7 @@ const initialState = {
                     },
                     {
                         "name": "黃昭順",
+                        "party": "KMT",
                         "records": [
                             {
                                 "issue": "罷免",
