@@ -3,7 +3,6 @@ import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
 
-import PositionGroup from '../../components/PositionGroup/PositionGroup.js';
 import PartyPositionGroup from '../../components/PartyPositionGroup/PartyPositionGroup.js';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 

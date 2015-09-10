@@ -3,8 +3,6 @@ import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
 
-import PositionGroup from '../../components/PositionGroup/PositionGroup.js';
-
 @connect(
     state => ({candidates: state.candidates}),
     dispatch => bindActionCreators({}, dispatch))
