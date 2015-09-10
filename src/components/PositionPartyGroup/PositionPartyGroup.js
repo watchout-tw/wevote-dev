@@ -20,11 +20,11 @@ function position_eng_to_color (position_eng) {
 class Record extends Component {
  
   render() {
-    const styles = require('./PartyPositionGroup.scss');
+    const styles = require('./PositionPartyGroup.scss');
     const {data} = this.props;
     
     return (
-      <div className={` ${styles.postionCube}  ${styles[data.position]}`}>
+      <div className={` ${styles.postionCube}  ${styles[data.party]}`}>
       
       </div>
     )
@@ -36,7 +36,7 @@ class Record extends Component {
 }
 
 
-export default class PartyPositionGroup extends Component {
+export default class PositionPartyGroup extends Component {
   // static propTypes = {
   //   // count: PropTypes.number,
   //   // increment: PropTypes.func.isRequired,
@@ -44,13 +44,13 @@ export default class PartyPositionGroup extends Component {
   // }
 
   render() {
-    const styles = require('./PartyPositionGroup.scss');
+    const styles = require('./PositionPartyGroup.scss');
     const {data, issueStatement} = this.props;
+  
+
+    console.log(data);
+
     
-    let partyTitle = eng2cht(data.party);//KMT->中國國民黨
-
-
-
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
@@ -73,7 +73,7 @@ export default class PartyPositionGroup extends Component {
     let cubesWrap = {
       width: width * 2,
       height: width * 2,
-      boxShadow: `0px 0px 0px ${borderWidth}px ${position_eng_to_color(data.dominantPosition)}`,
+      boxShadow: `0px 0px 0px ${borderWidth}px ${position_eng_to_color(data.position)}`,
       borderRadius: "50%",
       display: "inline-block",
       verticalAlign: "middle",
@@ -90,11 +90,15 @@ export default class PartyPositionGroup extends Component {
       left: width/2
     }
 
+    let title = `我${eng2cht(data.position)}${issueStatement}`;
+    if(data.position === "unknown")
+      title = "我立場模糊";
+
+
     return (
       <div className={styles.wrap}>
-        <div>{partyTitle}</div>
-        <div>{`${data.dominantPercentage}% ${eng2cht(data.dominantPosition)}`}</div>
-        <div>{issueStatement}</div>
+        <div>{title}</div>
+      
         <div style={cubesWrap}>
           <div style={cubes}>{records}</div>
         </div>

@@ -1,0 +1,40 @@
+$cubeSize: 20px;
+$ayeColor: #00FFB0;
+$nayColor: #FF0055;
+$unknownColor: #FFF800;
+
+.wrap {
+	display: inline-block;
+}
+.postionCube {
+	width: $cubeSize;
+	height: $cubeSize;
+	float: left;
+}
+.aye {
+	background: $ayeColor;
+}
+.nay {
+	background: $nayColor;
+}
+.unknown {
+	background: $unknownColor;
+}
+.KMT {
+    background: #000095;
+}
+.DPP {
+    background: #009A00;
+}
+.PFP {
+    background: #FE6407;
+}
+.TSU {
+    background: #A25B09;
+}
+.NP {
+    border-color: gray;
+}
+.NPU {
+    border-color: rgba(194,15,81,0.9);
+}
