@@ -1,0 +1,18 @@
+.wrap {
+	position: relative;
+}
+.optionImg {
+	opacity: 0.3;
+}
+.optionItem:hover .optionImg, .optionImg:hover, .optionImgActive {
+	opacity: 1;
+}
+.optionItem {
+	display: inline-block;
+	cursor: pointer;
+	color: #cccccc;
+	margin: 10px;
+}
+.optionItem:hover, .optionItemActive {
+	color: rgb(53,55,54);
+}
