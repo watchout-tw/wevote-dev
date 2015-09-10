@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import cht2eng from '../../util/cht2eng';
-import eng2cht from '../../util/eng2cht';
+import cht2eng from '../../utils/cht2eng';
+import eng2cht from '../../utils/eng2cht';
 
 function position_eng_to_color (position_eng) {
     switch(position_eng){
