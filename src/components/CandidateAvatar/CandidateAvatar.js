@@ -8,10 +8,10 @@ import { connect } from 'react-redux';
     dispatch => bindActionCreators({}, dispatch))
 
 
-export default class LegislatorAvatar extends Component {
+export default class CandidateAvatar extends Component {
   render () {
 
-    const styles = require('./LegislatorAvatar.scss');
+    const styles = require('./CandidateAvatar.scss');
 
     const {candidates, id} = this.props;
     const candidate = candidates[id];

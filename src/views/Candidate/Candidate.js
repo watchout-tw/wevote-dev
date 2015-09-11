@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
 
-import LegislatorAvatar from '../../components/LegislatorAvatar/LegislatorAvatar.js';
+import CandidateAvatar from '../../components/CandidateAvatar/CandidateAvatar.js';
 
 @connect(
     state => ({candidates: state.candidates}),
@@ -16,7 +16,7 @@ export default class Candidate extends Component {
     
     return (
       <div className={styles.wrap}>
-          <LegislatorAvatar id={id} />
+          <CandidateAvatar id={id} />
       </div>
     );
   }
