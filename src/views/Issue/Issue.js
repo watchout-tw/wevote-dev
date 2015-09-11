@@ -27,10 +27,23 @@ const VIEW_POSITION = 'VIEW_POSITION';
 
 export default class Issue extends Component {
   
+  constructor(props) { super(props)
+    this.state = {
+        activeRecord: ""
+    }
+  }
+  
+  _setActiveRecord(record_id, event){
+    console.log("set active record")
+    console.log(record_id)
+    this.setState({ activeRecord: record_id });
+  }
+
   render() {
     const styles = require('./Issue.scss');
 
     const {issues, partyView, legislatorView, positionView, issueController} = this.props;
+    const {activeRecord} = this.state;
    
     const currentIssueName = this.props.params.issueName;/* 從 URL 知道現在讀的議題頁面 */
 
@@ -38,12 +51,15 @@ export default class Issue extends Component {
   
 
 
+    let bindSetActiveRecord = this._setActiveRecord.bind(this);
 
     /* 1. 看政黨 */
     const currentPartyView = partyView[currentIssue.titleEng];
     let partyPositionGroups = currentPartyView.partyPositions.map((value, index)=>{
         //console.log(value);
-        return <PartyPositionGroup data={value} issueStatement={currentPartyView.statement} key={index}/>;
+        return <PartyPositionGroup data={value} issueStatement={currentPartyView.statement} key={index}
+                                   setToActiveRecord={bindSetActiveRecord}
+                                   activeRecord={activeRecord} />;
     });
 
 
@@ -83,11 +99,13 @@ export default class Issue extends Component {
       <div className={styles.masthead}>
           <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
           
-          <IssueController />
+          <IssueController/>
           
           <div className={styles.records}>
             {positionFigure}
           </div>
+
+          <div>{activeRecord}</div>
          
       </div>
     );

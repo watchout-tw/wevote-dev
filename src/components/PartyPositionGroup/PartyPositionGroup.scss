@@ -19,7 +19,7 @@ $unknownColor: #FFF800;
 	float: left;
 	cursor: pointer;
 }
-.postionCube:hover {
+.postionCube:hover, .postionCubeActive {
 	border: 3px solid;
 }
 .aye {
@@ -31,7 +31,7 @@ $unknownColor: #FFF800;
 .unknown {
 	background: $unknownColor;
 }
-.activeRecord {
+.activeCube {
 	width: 100%;
 	background: white;
 	position: absolute;

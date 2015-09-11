@@ -25,24 +25,26 @@ class Record extends Component {
 
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data} = this.props;
+    const {data, setToActiveRecord, activeRecord} = this.props;
     const {active} = this.state;
 
     let date = moment.unix(data.date);
 
     let detailText = (active) ? (
-      <div className={styles.activeRecord}>
+      <div className={styles.activeCube}>
            <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
            <div>{data.content}</div>
       </div>): "";
 
+    let cubeActiveStyle = (activeRecord === data.id) ? styles.postionCubeActive : "";
+   
     return (
       <div className={styles.postionWrap}>
            
            {detailText}
 
-          <div className={` ${styles.postionCube}  ${styles[data.position]}`}
-               onClick={this._setActive.bind(this)}
+          <div className={` ${styles.postionCube} ${cubeActiveStyle} ${styles[data.position]}`}
+               onClick={setToActiveRecord.bind(null, data.id)}
                onMouseEnter={this._setActive.bind(this)}
                onMouseLeave={this._setInactive.bind(this)}>
           </div>
@@ -66,13 +68,13 @@ export default class PartyPositionGroup extends Component {
 
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, issueStatement} = this.props;
+    const {data, issueStatement, setToActiveRecord, activeRecord} = this.props;
     
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
-      return <Record data={item} key={index} />
+      return <Record data={item} key={index} setToActiveRecord={setToActiveRecord} activeRecord={activeRecord}/>
     });
 
     /*

@@ -1,7 +1,6 @@
 const VIEW_PARTY = 'VIEW_PARTY';
 const VIEW_LEGISLATOR = 'VIEW_LEGISLATOR';
 const VIEW_POSITION = 'VIEW_POSITION';
-const INCREMENT = 'redux-example/counter/INCREMENT';
 
 const initialState = {
   views: [
@@ -39,6 +38,7 @@ export default function reducer(state = initialState, action = {}) {
         views: state.views,
         activeView: VIEW_POSITION
       };
+    
     default:
       return state;
   }

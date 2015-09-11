@@ -17,7 +17,7 @@ export default class IssueController extends Component {
 
   render() {
     const styles = require('./IssueController.scss');
-    const { issueController, setActiveView } = this.props;
+    const { issueController, setActiveView} = this.props;
    
     let {views, activeView} = issueController;
 
@@ -52,9 +52,10 @@ class OptionItem extends Component {
 
     let itemActive = (active === true) ? styles.optionItemActive : "";
     let imgActive  = (active === true) ? styles.optionImgActive : "";
+
     
     return (
-      <div className={`${styles.optionItem} ${itemActive}`} onClick={handler.bind(null, data.id)}>
+      <div className={`${styles.optionItem} ${itemActive}`} onClick={handler.bind(null,data.id)}>
           <img className={`${styles.optionImg} ${imgActive}`} src={imgURL} />
           {data.title}
       </div>
