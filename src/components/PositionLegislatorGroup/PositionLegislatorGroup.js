@@ -3,9 +3,34 @@ import cht2eng from '../../utils/cht2eng';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 
+/*
+{
+    "name": "黃昭順",
+    "party": "KMT",
+    "records": [
+        {
+            "id": 1,
+            "issue": "婚姻平權",
+            "legislator": "黃昭順",
+            "party": "KMT",
+            "date": 1336665600,
+            "category": "發言",
+            "content": "本院黃委員昭順，針對近日同性婚姻合法化爭議，認為人生而平等，同性婚姻權益等同於異性之婚姻權，應與其享婚姻中相同的權利與義務，亦應受憲法婚姻自由之保障，對於同性婚姻也應採取理解並尊重之態度，儘速修正相關法令，以期落實平等原則，特向行政院提出質詢。",
+            "positionJudgement": "贊成同性婚姻合法化",
+            "position": "aye",
+            "clarificationContent": "",
+            "clarificationLastUpdate": "",
+            "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/101/32/LCIDC01_1013201.pdf",
+            "meeting": "院會",
+            "meetingCategory": "院會書面質詢"
+        }
+    ],
+    "dominantPosition": "aye",
+    "dominantPercentage": 100
+},*/
 class LegislatorAvatar extends Component {
   render () {
-    const {data} = this.props;
+    const {data, setToActiveRecord} = this.props;
     const styles = require('./PositionLegislatorGroup.scss');
 
     let {party, name} = data;
@@ -19,7 +44,8 @@ class LegislatorAvatar extends Component {
     
     return (
         <img className={`${styles.avatarImg} ${styles[party]}`}
-             src={imgURL} />
+             src={imgURL}
+             onClick={setToActiveRecord.bind(null, data.records)} />
     );
 
   }
@@ -33,16 +59,28 @@ export default class PositionLegislatorGroup extends Component {
   //   // className: PropTypes.string
   // }
 
+  constructor(props) { super(props)
+      this.state = {
+          active: false
+      }
+  }
+  
+  _setActive(value, event){
+    this.setState({ active: true });
+  }
+
+  _setInactive(){  
+    this.setState({ active: false });
+  }
+
   render() {
     const styles = require('./PositionLegislatorGroup.scss');
-    const {data, issueStatement} = this.props;
+    const {data, issueStatement, setToActiveRecord, activeRecords} = this.props;
+    const {active} = this.state;
     
-    //   let partyTitle = eng2cht(data.party);//KMT->中國國民黨
-   
-
     /* 這裡是立委們 */
     let legislators = data.legislators.map((item,index)=>{
-      return <LegislatorAvatar data={item} key={index}/>
+      return <LegislatorAvatar data={item} key={index} setToActiveRecord={setToActiveRecord}/>
     });
 
     /*

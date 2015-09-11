@@ -1,30 +1,57 @@
 import React, {Component, PropTypes} from 'react';
+import moment from 'moment';
+
 import cht2eng from '../../utils/cht2eng';
 import eng2cht from '../../utils/eng2cht';
-
-
-
-function position_eng_to_color (position_eng) {
-    switch(position_eng){
-      case 'aye':
-        return '#00FFB0';
-      case 'nay':
-        return '#FF0055';
-      case 'unknown':
-        return '#FFF800'
-    }
-}
-
+import position2color from '../../utils/position2color';
 
 
 class Record extends Component {
- 
+  // //設定 initial state
+  constructor(props) { super(props)
+      this.state = {
+          active: false
+      }
+  }
+  
+  _setActive(value, event){
+    this.setState({ active: true });
+  }
+
+  _setInactive(){  
+    this.setState({ active: false });
+  }
+
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data} = this.props;
-    
+    const {data, activeRecords, setToActiveRecord} = this.props;
+    const {active} = this.state;
+
+    let date = moment.unix(data.date);
+
+    let detailText = (active) ? (
+      <div className={styles.activeCube}>
+           <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
+           <div>{data.content}</div>
+      </div>): "";
+
+
+    let cubeActiveStyle = "";
+    activeRecords.map((record, index)=>{
+      if(record.id === data.id)
+        cubeActiveStyle = styles.positionCubeActive;
+    });
+
     return (
-      <div className={` ${styles.postionCube}  ${styles[data.party]}`}>
+      <div className={styles.positionWrap}>
+           
+          {detailText}
+          
+          <div className={` ${styles.positionCube}  ${styles[data.party]}`}
+               onClick={setToActiveRecord.bind(null, [data])}
+               onMouseEnter={this._setActive.bind(this)}
+               onMouseLeave={this._setInactive.bind(this)} >
+          </div>
       
       </div>
     )
@@ -45,12 +72,13 @@ export default class PositionPartyGroup extends Component {
 
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, issueStatement} = this.props;
+    const {data, issueStatement, activeRecords, setToActiveRecord} = this.props;
 
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
-      return <Record data={item} key={index}/>
+      return <Record data={item} key={index} 
+                     setToActiveRecord={setToActiveRecord} activeRecords={activeRecords}/>
     });
 
     /*
@@ -69,7 +97,7 @@ export default class PositionPartyGroup extends Component {
     let cubesWrap = {
       width: width * 2,
       height: width * 2,
-      boxShadow: `0px 0px 0px ${borderWidth}px ${position_eng_to_color(data.position)}`,
+      boxShadow: `0px 0px 0px ${borderWidth}px ${position2color(data.position)}`,
       borderRadius: "50%",
       display: "inline-block",
       verticalAlign: "middle",

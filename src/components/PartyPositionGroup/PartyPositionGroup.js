@@ -8,7 +8,6 @@ import position2color from '../../utils/position2color';
 
 class Record extends Component {
   // //設定 initial state
-  
   constructor(props) { super(props)
       this.state = {
           active: false
@@ -25,7 +24,7 @@ class Record extends Component {
 
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, setToActiveRecord, activeRecord} = this.props;
+    const {data, setToActiveRecord, activeRecords} = this.props;
     const {active} = this.state;
 
     let date = moment.unix(data.date);
@@ -36,15 +35,19 @@ class Record extends Component {
            <div>{data.content}</div>
       </div>): "";
 
-    let cubeActiveStyle = (activeRecord === data.id) ? styles.postionCubeActive : "";
-   
+    let cubeActiveStyle = "";
+    activeRecords.map((record, index)=>{
+      if(record.id === data.id)
+        cubeActiveStyle = styles.positionCubeActive;
+    });
+
     return (
       <div className={styles.postionWrap}>
            
            {detailText}
 
-          <div className={` ${styles.postionCube} ${cubeActiveStyle} ${styles[data.position]}`}
-               onClick={setToActiveRecord.bind(null, data.id)}
+          <div className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]}`}
+               onClick={setToActiveRecord.bind(null, [data])}
                onMouseEnter={this._setActive.bind(this)}
                onMouseLeave={this._setInactive.bind(this)}>
           </div>
@@ -68,13 +71,13 @@ export default class PartyPositionGroup extends Component {
 
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, issueStatement, setToActiveRecord, activeRecord} = this.props;
+    const {data, issueStatement, setToActiveRecord, activeRecords} = this.props;
     
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
-      return <Record data={item} key={index} setToActiveRecord={setToActiveRecord} activeRecord={activeRecord}/>
+      return <Record data={item} key={index} setToActiveRecord={setToActiveRecord} activeRecords={activeRecords}/>
     });
 
     /*

@@ -7,19 +7,17 @@ $unknownColor: #FFF800;
 	display: inline-block;
 	position: relative;
 }
-
-
-.postionWrap {
+.positionWrap {
 	position: relative;
 	float: left;
 }
-.postionCube {
+.positionCube {
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
 	cursor: pointer;
 }
-.postionCube:hover, .postionCubeActive {
+.positionCube:hover, .positionCubeActive {
 	border: 3px solid;
 }
 .aye {
@@ -31,6 +29,7 @@ $unknownColor: #FFF800;
 .unknown {
 	background: $unknownColor;
 }
+/* hover 上的時候顯示的文字 */
 .activeCube {
 	width: 100%;
 	background: white;

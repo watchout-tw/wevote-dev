@@ -6,10 +6,18 @@ $unknownColor: #FFF800;
 .wrap {
 	display: inline-block;
 }
-.postionCube {
+.positionWrap {
+	position: relative;
+	float: left;
+}
+.positionCube {
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
+	cursor: pointer;
+}
+.positionCube:hover, .positionCubeActive {
+	border: 3px solid;
 }
 .aye {
 	background: $ayeColor;
@@ -37,4 +45,20 @@ $unknownColor: #FFF800;
 }
 .NPU {
     border-color: rgba(194,15,81,0.9);
+}
+.activeCube {
+	width: 100%;
+	background: white;
+	position: absolute;
+	text-align: left;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 1.4;
+	top: -100px;
+	height:90px;
+	width: 340px;
+	border: 1px solid;
+  	overflow: hidden;
+	z-index: 1;
+	box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
 }

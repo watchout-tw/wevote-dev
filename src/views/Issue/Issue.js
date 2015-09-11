@@ -11,6 +11,8 @@ import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPart
 
 import IssueController from '../../components/IssueController/IssueController.js';
 
+import PositionRecord from '../../components/PositionRecord/PositionRecord.js';
+
 const VIEW_PARTY = 'VIEW_PARTY';
 const VIEW_LEGISLATOR = 'VIEW_LEGISLATOR';
 const VIEW_POSITION = 'VIEW_POSITION';
@@ -29,21 +31,20 @@ export default class Issue extends Component {
   
   constructor(props) { super(props)
     this.state = {
-        activeRecord: ""
+        activeRecords: []
     }
   }
   
-  _setActiveRecord(record_id, event){
-    console.log("set active record")
-    console.log(record_id)
-    this.setState({ activeRecord: record_id });
+  _setActiveRecord(records, event){
+    
+    this.setState({ activeRecords: records});
   }
 
   render() {
     const styles = require('./Issue.scss');
 
     const {issues, partyView, legislatorView, positionView, issueController} = this.props;
-    const {activeRecord} = this.state;
+    const {activeRecords} = this.state;
    
     const currentIssueName = this.props.params.issueName;/* 從 URL 知道現在讀的議題頁面 */
 
@@ -59,7 +60,7 @@ export default class Issue extends Component {
         //console.log(value);
         return <PartyPositionGroup data={value} issueStatement={currentPartyView.statement} key={index}
                                    setToActiveRecord={bindSetActiveRecord}
-                                   activeRecord={activeRecord} />;
+                                   activeRecords={activeRecords} />;
     });
 
 
@@ -67,14 +68,18 @@ export default class Issue extends Component {
     const currentLegislatorView = legislatorView[currentIssue.titleEng];
     let positionLegislatorGroups = currentLegislatorView.positions.map((value, index)=>{
         //console.log(value);
-        return <PositionLegislatorGroup data={value} issueStatement={currentPartyView.statement} key={index}/>;
+        return <PositionLegislatorGroup data={value} issueStatement={currentPartyView.statement} key={index}
+                                        setToActiveRecord={bindSetActiveRecord}
+                                        activeRecords={activeRecords}/>;
     });
 
     /* 3. 看表態 */
     const currentPositionView = positionView[currentIssue.titleEng];//只拿: 目前頁面議題的表態資料
     let positionPartyGroups = currentPositionView.positions.map((value, index)=>{
         //console.log(value);
-        return <PositionPartyGroup data={value} issueStatement={currentPartyView.statement} key={index}/>;
+        return <PositionPartyGroup data={value} issueStatement={currentPartyView.statement} key={index}
+                                   setToActiveRecord={bindSetActiveRecord}
+                                   activeRecords={activeRecords}/>;
     });
 
 
@@ -93,7 +98,11 @@ export default class Issue extends Component {
             break;
         
     }
-   
+
+    /* 顯示目前 active 的 records */
+    let activeRecordItems = activeRecords.map((record, index)=>{
+        return <PositionRecord data={record} key={index} />
+    });
 
     return (
       <div className={styles.masthead}>
@@ -104,9 +113,7 @@ export default class Issue extends Component {
           <div className={styles.records}>
             {positionFigure}
           </div>
-
-          <div>{activeRecord}</div>
-         
+          {activeRecordItems}
       </div>
     );
   }
