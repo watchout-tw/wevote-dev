@@ -10,7 +10,8 @@ import { connect } from 'react-redux';
 
 export default class CandidateAvatar extends Component {
   static propTypes = {
-    candidates: PropTypes.object.isRequired
+    candidates: PropTypes.object.isRequired,
+    id: PropTypes.string.isRequired
   
   }
   
@@ -20,8 +21,7 @@ export default class CandidateAvatar extends Component {
 
     const {candidates, id} = this.props;
     const candidate = candidates[id];
-    //console.log(candidates);
-
+   
     let {name, party} = candidate;
     
     let imgURL;

@@ -3,10 +3,7 @@ import {Link} from 'react-router';
 
 
 export default class Appbar extends Component {
-  static propTypes = {
-    
-  }
-
+  
   render() {
     
     const styles = require('./Appbar.scss');

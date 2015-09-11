@@ -30,6 +30,9 @@ import position2color from '../../utils/position2color';
 },*/
 class LegislatorAvatar extends Component {
   static propTypes = {
+
+    data: PropTypes.object.isRequired,
+    activeLegislator: PropTypes.string,
     setToActiveRecord: PropTypes.func.isRequired,
     setToActiveLegislator: PropTypes.func.isRequired
   }
@@ -76,8 +79,13 @@ class LegislatorAvatar extends Component {
 
 export default class PositionLegislatorGroup extends Component {
   static propTypes = {
+    
+    activeLegislator: PropTypes.string,
+    data: PropTypes.object.isRequired,
+    issueStatement: PropTypes.string.isRequired,
     setToActiveRecord: PropTypes.func.isRequired,
     setToActiveLegislator: PropTypes.func.isRequired
+    
   }
 
   constructor(props) { super(props)

@@ -24,11 +24,9 @@ import candidates_name2id from '../../utils/candidates_name2id';
 },
 */
 export default class PositionRecord extends Component {
-  // static propTypes = {
-  //   // count: PropTypes.number,
-  //   // increment: PropTypes.func.isRequired,
-  //   // className: PropTypes.string
-  // }
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  }
 
   render() {
     const styles = require('./PositionRecord.scss');

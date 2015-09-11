@@ -4,9 +4,9 @@ import React, {Component, PropTypes} from 'react';
 
 export default class Slideshow extends Component {
   static propTypes = {
-    data: PropTypes.array,
-    topic: PropTypes.string,
-    className: PropTypes.string
+      data: PropTypes.array,
+      topic: PropTypes.string,
+      className: PropTypes.string
   }
 
   //initial state
@@ -14,7 +14,7 @@ export default class Slideshow extends Component {
     this.state = {
         autoplayTimer: "",
         currentIndex: 0,
-        imageLoaded: true
+        imageLoaded: false
     }
   }
 
@@ -87,9 +87,9 @@ export default class Slideshow extends Component {
   render() {
     const styles = require('./Slideshow.scss');
     const {data, topic} = this.props;
+
     let {currentIndex, imageLoaded} = this.state;
     
-
     return (
       <div className={styles.wrap}>
           <div className={styles.prev}
@@ -102,6 +102,7 @@ export default class Slideshow extends Component {
                onMouseEnter={this._imageOnHover.bind(this, true)}
                onMouseLeave={this._imageOnHover.bind(this, false)}
                src={require(`./images/${data[currentIndex]}.jpg`)} />
+          
           <div className={styles.pageWrap}>
           {
             data.map((value,index)=>{

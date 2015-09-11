@@ -11,7 +11,9 @@ import {setActiveView} from '../../ducks/issueController';
 export default class IssueController extends Component {
   
   /* 一定要寫，因為要把滑鼠動作 bind 到 function，如果沒寫，component 可能還沒 mount，就無法 bind */
+  
   static propTypes = {
+    issueController: PropTypes.object.isRequired,
     setActiveView: PropTypes.func.isRequired
   }
 
@@ -43,7 +45,11 @@ export default class IssueController extends Component {
 }
 
 class OptionItem extends Component {
- 
+  static propTypes = {
+    data: PropTypes.object.isRequired,
+    active: PropTypes.bool.isRequired,
+    handler: PropTypes.func.isRequired
+  }
   render() {
     const styles = require('./IssueController.scss');
     const {data, active, handler} = this.props;

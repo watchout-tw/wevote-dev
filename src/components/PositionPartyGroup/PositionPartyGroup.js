@@ -8,6 +8,8 @@ import position2color from '../../utils/position2color';
 
 class Record extends Component {
   static propTypes = {
+    activeRecords: PropTypes.array,
+    data: PropTypes.object.isRequired,
     setToActiveRecord: PropTypes.func.isRequired
   
   }
@@ -70,6 +72,9 @@ class Record extends Component {
 
 export default class PositionPartyGroup extends Component {
   static propTypes = {
+    data: PropTypes.object.isRequired,
+    issueStatement: PropTypes.string.isRequired,
+    activeRecords: PropTypes.array,
     setToActiveRecord: PropTypes.func.isRequired
   
   }

@@ -8,8 +8,9 @@ import position2color from '../../utils/position2color';
 
 class Record extends Component {
   static propTypes = {
+    activeRecords: PropTypes.array,
+    data : PropTypes.object.isRequired,
     setToActiveRecord: PropTypes.func.isRequired
-  
   }
 
   // //設定 initial state

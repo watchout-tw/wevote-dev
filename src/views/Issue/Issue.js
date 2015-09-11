@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
@@ -28,7 +28,14 @@ const VIEW_POSITION = 'VIEW_POSITION';
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Issue extends Component {
-  
+  static propTypes = {
+     issues: PropTypes.object.isRequired,
+     partyView: PropTypes.object.isRequired,
+     legislatorView: PropTypes.object.isRequired,
+     positionView: PropTypes.object.isRequired,
+     issueController: PropTypes.object.isRequired
+  }
+
   constructor(props) { super(props)
     this.state = {
         activeRecords: [],
