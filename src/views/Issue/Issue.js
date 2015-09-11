@@ -31,20 +31,24 @@ export default class Issue extends Component {
   
   constructor(props) { super(props)
     this.state = {
-        activeRecords: []
+        activeRecords: [],
+        activeLegislator: ""
     }
   }
   
   _setActiveRecord(records, event){
-    
     this.setState({ activeRecords: records});
+  }
+
+  _setActiveLegislator(name, event){
+    this.setState({ activeLegislator: name});
   }
 
   render() {
     const styles = require('./Issue.scss');
 
     const {issues, partyView, legislatorView, positionView, issueController} = this.props;
-    const {activeRecords} = this.state;
+    const {activeRecords, activeLegislator} = this.state;
    
     const currentIssueName = this.props.params.issueName;/* 從 URL 知道現在讀的議題頁面 */
 
@@ -53,6 +57,7 @@ export default class Issue extends Component {
 
 
     let bindSetActiveRecord = this._setActiveRecord.bind(this);
+    let bindSetActiveLegislator = this._setActiveLegislator.bind(this);
 
     /* 1. 看政黨 */
     const currentPartyView = partyView[currentIssue.titleEng];
@@ -70,7 +75,8 @@ export default class Issue extends Component {
         //console.log(value);
         return <PositionLegislatorGroup data={value} issueStatement={currentPartyView.statement} key={index}
                                         setToActiveRecord={bindSetActiveRecord}
-                                        activeRecords={activeRecords}/>;
+                                        setToActiveLegislator={bindSetActiveLegislator}
+                                        activeLegislator={activeLegislator}/>;
     });
 
     /* 3. 看表態 */

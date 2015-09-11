@@ -3,6 +3,7 @@ $main: #006060;
 .masthead {
   
   text-align: center;
+  padding-bottom: 200px;/* for scrolling */
   
   h1 {
     color: $main;
@@ -19,7 +20,6 @@ $main: #006060;
   p {
     margin: 10px;
   }
-  
 }
 .records {
   margin: 60px auto;

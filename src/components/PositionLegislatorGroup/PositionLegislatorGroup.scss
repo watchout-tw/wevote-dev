@@ -18,6 +18,9 @@
 
     cursor: pointer;
 } 
+.avatarImg:hover, .avatarImgActive {
+    box-shadow: 0 0 0 4px rgb(180,180,180);
+}
 
 .KMT {
     border-color: #000095;

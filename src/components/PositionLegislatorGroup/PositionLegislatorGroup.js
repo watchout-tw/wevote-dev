@@ -29,13 +29,30 @@ import position2color from '../../utils/position2color';
     "dominantPercentage": 100
 },*/
 class LegislatorAvatar extends Component {
+  _onClickHandler(){
+    
+    const { data, setToActiveRecord, setToActiveLegislator } = this.props;
+   
+    setToActiveLegislator(data.name);
+    setToActiveRecord(data.records);
+
+  }
+
   render () {
-    const {data, setToActiveRecord} = this.props;
+    const {data, activeLegislator} = this.props;
     const styles = require('./PositionLegislatorGroup.scss');
 
     let {party, name} = data;
     let imgURL;
 
+    let imgActiveStyle = (activeLegislator === name)? styles.avatarImgActive : "";
+    
+    if(activeLegislator === name){
+    console.log("****")
+    console.log(activeLegislator);
+    console.log(name);
+    }
+    
     try {
       imgURL = require("./images/avatar/"+name+".png");
     }catch(e){
@@ -43,9 +60,9 @@ class LegislatorAvatar extends Component {
     }
     
     return (
-        <img className={`${styles.avatarImg} ${styles[party]}`}
+        <img className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}
              src={imgURL}
-             onClick={setToActiveRecord.bind(null, data.records)} />
+             onClick={this._onClickHandler.bind(this)} />
     );
 
   }
@@ -75,12 +92,13 @@ export default class PositionLegislatorGroup extends Component {
 
   render() {
     const styles = require('./PositionLegislatorGroup.scss');
-    const {data, issueStatement, setToActiveRecord, activeRecords} = this.props;
+    const {data, issueStatement, setToActiveRecord, setToActiveLegislator, activeLegislator} = this.props;
     const {active} = this.state;
     
     /* 這裡是立委們 */
     let legislators = data.legislators.map((item,index)=>{
-      return <LegislatorAvatar data={item} key={index} setToActiveRecord={setToActiveRecord}/>
+      return <LegislatorAvatar data={item} key={index} 
+              setToActiveRecord={setToActiveRecord} setToActiveLegislator={setToActiveLegislator} activeLegislator={activeLegislator}/>
     });
 
     /*
