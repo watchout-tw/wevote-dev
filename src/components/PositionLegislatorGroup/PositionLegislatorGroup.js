@@ -29,6 +29,11 @@ import position2color from '../../utils/position2color';
     "dominantPercentage": 100
 },*/
 class LegislatorAvatar extends Component {
+  static propTypes = {
+    setToActiveRecord: PropTypes.func.isRequired,
+    setToActiveLegislator: PropTypes.func.isRequired
+  }
+
   _onClickHandler(){
     
     const { data, setToActiveRecord, setToActiveLegislator } = this.props;
@@ -70,11 +75,10 @@ class LegislatorAvatar extends Component {
 
 
 export default class PositionLegislatorGroup extends Component {
-  // static propTypes = {
-  //   // count: PropTypes.number,
-  //   // increment: PropTypes.func.isRequired,
-  //   // className: PropTypes.string
-  // }
+  static propTypes = {
+    setToActiveRecord: PropTypes.func.isRequired,
+    setToActiveLegislator: PropTypes.func.isRequired
+  }
 
   constructor(props) { super(props)
       this.state = {

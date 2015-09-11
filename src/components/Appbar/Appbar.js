@@ -10,18 +10,19 @@ export default class Appbar extends Component {
   render() {
     
     const styles = require('./Appbar.scss');
+    const siteLogo = require('./images/logo.svg');
+
     return (
-      <nav className="navbar navbar-default">
+      <nav className={styles.appbar}>
           
-            <Link to="/" className="navbar-brand">
-              <div className={styles.brand}/>
-              立委求職中
+            <Link to="/">
+              <img src={siteLogo} className={styles.siteLogo}/>
             </Link>
 
             <ul className={styles.lists}>
-              <li><Link to={`/issues/marriage-equality`}  className="nav navbar-nav">婚姻平權</Link></li>
-              <li><Link to={`/issues/recall`}  className="nav navbar-nav">罷免</Link></li>
-              <li><Link to="about">About Us</Link></li>
+              <li><Link className={styles.navItem} to={`/issues/marriage-equality`} >婚姻平權</Link></li>
+              <li><Link className={styles.navItem} to={`/issues/recall`}  >罷免</Link></li>
+              <li><Link className={styles.navItem} to={`/about`}>關於本站</Link></li>
             </ul>
             
         

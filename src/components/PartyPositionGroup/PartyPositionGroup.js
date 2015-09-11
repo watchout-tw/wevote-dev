@@ -7,11 +7,14 @@ import position2color from '../../utils/position2color';
 
 
 class Record extends Component {
+  static propTypes = {
+    setToActiveRecord: PropTypes.func.isRequired
+  
+  }
+
   // //設定 initial state
   constructor(props) { super(props)
-      this.state = {
-          active: false
-      }
+      this.state = { active: false}
   }
   
   _setActive(value, event){
@@ -63,11 +66,10 @@ class Record extends Component {
 
 
 export default class PartyPositionGroup extends Component {
-  // static propTypes = {
-  //   // count: PropTypes.number,
-  //   // increment: PropTypes.func.isRequired,
-  //   // className: PropTypes.string
-  // }
+  static propTypes = {
+    setToActiveRecord: PropTypes.func.isRequired
+  
+  }
 
   render() {
     const styles = require('./PartyPositionGroup.scss');
