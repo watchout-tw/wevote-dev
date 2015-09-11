@@ -46,15 +46,11 @@ export default class PositionPartyGroup extends Component {
   render() {
     const styles = require('./PositionPartyGroup.scss');
     const {data, issueStatement} = this.props;
-  
 
-    console.log(data);
-
-    
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
-      return <Record data={item} index={index}/>
+      return <Record data={item} key={index}/>
     });
 
     /*

@@ -52,7 +52,7 @@ export default class PositionLegislatorGroup extends Component {
 
     /* 這裡是立委們 */
     let legislators = data.legislators.map((item,index)=>{
-      return <LegislatorAvatar data={item} index={index}/>
+      return <LegislatorAvatar data={item} key={index}/>
     });
 
     /*

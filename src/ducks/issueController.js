@@ -43,20 +43,9 @@ export default function reducer(state = initialState, action = {}) {
       return state;
   }
 }
-export function setToViewParty() {
+export function setActiveView(value) {
   return {
-    type: VIEW_PARTY
-  };
-}
-export function setToViewLegislator() {
-  return {
-    type: VIEW_LEGISLATOR
-  };
-}
-
-export function setToViewPosition() {
-  return {
-    type: VIEW_POSITION
+    type: value
   };
 }
 
