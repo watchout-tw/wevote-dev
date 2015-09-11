@@ -1,20 +1,52 @@
 import React, {Component, PropTypes} from 'react';
+import moment from 'moment';
+
 import cht2eng from '../../utils/cht2eng';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 
 
 class Record extends Component {
- 
+  // //設定 initial state
+  
+  constructor(props) { super(props)
+      this.state = {
+          active: false
+      }
+  }
+  
+  _setActive(value, event){
+    this.setState({ active: true });
+  }
+
+  _setInactive(){  
+    this.setState({ active: false });
+  }
+
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, setActive, reset} = this.props;
-    
+    const {data} = this.props;
+    const {active} = this.state;
+
+    let date = moment.unix(data.date);
+
+    let detailText = (active) ? (
+      <div className={styles.activeRecord}>
+           <div>{date.format('YYYY-MM-DD')} / {data.meetingCategory}</div>
+           <div>{data.content}</div>
+      </div>): "";
+
     return (
-      <div className={` ${styles.postionCube}  ${styles[data.position]}`}
-           onClick={setActive}
-           onMouseEnter={setActive}
-           >
+      <div className={styles.postionWrap}>
+           
+           {detailText}
+
+          <div className={` ${styles.postionCube}  ${styles[data.position]}`}
+               onClick={this._setActive.bind(this)}
+               onMouseEnter={this._setActive.bind(this)}
+               onMouseLeave={this._setInactive.bind(this)}>
+          </div>
+
       </div>
     )
   }
@@ -31,28 +63,11 @@ export default class PartyPositionGroup extends Component {
   //   // increment: PropTypes.func.isRequired,
   //   // className: PropTypes.string
   // }
-  //設定 initial state
-  constructor(props) { super(props)
-      this.state = {
-          activeRecord: ""
-      }
-  }
-
-  _setActiveRecord(value, event){
-    console.log("oh, set active record.")
-    console.log(value);
-    this.setState({ activeRecord: value });
-  }
-
-   _resetActiveRecord(){
-    
-    this.setState({ activeRecord: "" });
-  }
 
   render() {
     const styles = require('./PartyPositionGroup.scss');
     const {data, issueStatement} = this.props;
-    const {activeRecord} = this.state;
+    
     
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
@@ -61,9 +76,7 @@ export default class PartyPositionGroup extends Component {
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
-      return <Record data={item} key={index} 
-                     setActive={this._setActiveRecord.bind(this, item)}
-                     reset={this._resetActiveRecord.bind(this)}/>
+      return <Record data={item} key={index} />
     });
 
     /*
@@ -106,12 +119,6 @@ export default class PartyPositionGroup extends Component {
         <div>{issueStatement}</div>
         <div style={cubesWrap}>
           <div style={cubes}>{records}</div>
-        </div>
-        <div className={styles.activeRecord}>
-          <div>{activeRecord.date}</div>
-          <div>{activeRecord.legislator}</div>
-          <div>{activeRecord.content}</div>
-          <div>{activeRecord.meetingCategory}</div>
         </div>
       </div>
     );
