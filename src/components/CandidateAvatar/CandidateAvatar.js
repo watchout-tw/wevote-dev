@@ -9,6 +9,11 @@ import { connect } from 'react-redux';
 
 
 export default class CandidateAvatar extends Component {
+  static propTypes = {
+    candidates: PropTypes.object.isRequired
+  
+  }
+  
   render () {
 
     const styles = require('./CandidateAvatar.scss');
