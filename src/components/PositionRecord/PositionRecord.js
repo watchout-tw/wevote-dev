@@ -1,9 +1,10 @@
 import React, {Component, PropTypes} from 'react';
+import { Link } from "react-router";
 import moment from 'moment';
 
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
-
+import candidates_name2id from '../../utils/candidates_name2id';
 /*
 {
     "id": 1,
@@ -38,7 +39,8 @@ export default class PositionRecord extends Component {
 
     return (
       <div className={styles.wrap}>
-        <div>{legislator} {positionJudgement}</div>
+        <div><Link to={`/candidates/${candidates_name2id(legislator)}`}
+                   className={styles.link}>{legislator}</Link> {positionJudgement}</div>
         <div>{date.format('YYYY-MM-DD')} / {meetingCategory}</div>
         <div>{content}</div>
       </div>
