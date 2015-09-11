@@ -7,6 +7,7 @@ const initialState = {
                 "position": "aye",
                 "records": [
                     {
+                        "id": 1,
                         "issue": "婚姻平權",
                         "legislator": "黃昭順",
                         "party": "KMT",
@@ -22,6 +23,7 @@ const initialState = {
                         "meetingCategory": "院會書面質詢"
                     },
                     {
+                        "id": 2,
                         "issue": "婚姻平權",
                         "legislator": "蕭美琴",
                         "party": "DPP",
@@ -37,6 +39,7 @@ const initialState = {
                         "meetingCategory": "院會質詢"
                     },
                     {
+                        "id": 3,
                         "issue": "婚姻平權",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -52,6 +55,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 4,
                         "issue": "婚姻平權",
                         "legislator": "吳秉叡",
                         "party": "DPP",
@@ -67,6 +71,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 5,
                         "issue": "婚姻平權",
                         "legislator": "林佳龍",
                         "party": "DPP",
@@ -82,6 +87,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 6,
                         "issue": "婚姻平權",
                         "legislator": "林淑芬",
                         "party": "DPP",
@@ -97,6 +103,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 7,
                         "issue": "婚姻平權",
                         "legislator": "黃文玲",
                         "party": "TSU",
@@ -112,6 +119,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 8,
                         "issue": "婚姻平權",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -127,6 +135,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 9,
                         "issue": "婚姻平權",
                         "legislator": "蕭美琴",
                         "party": "DPP",
@@ -142,6 +151,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 11,
                         "issue": "婚姻平權",
                         "legislator": "吳秉叡",
                         "party": "DPP",
@@ -157,6 +167,7 @@ const initialState = {
                         "meetingCategory": "公聽會\r\n 發言"
                     },
                     {
+                        "id": 12,
                         "issue": "婚姻平權",
                         "legislator": "蕭美琴",
                         "party": "DPP",
@@ -172,6 +183,7 @@ const initialState = {
                         "meetingCategory": "公聽會\r\n 發言"
                     },
                     {
+                        "id": 13,
                         "issue": "婚姻平權",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -187,6 +199,7 @@ const initialState = {
                         "meetingCategory": "公聽會\r\n 主辦"
                     },
                     {
+                        "id": 14,
                         "issue": "婚姻平權",
                         "legislator": "蕭美琴",
                         "party": "DPP",
@@ -202,6 +215,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 16,
                         "issue": "婚姻平權",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -217,6 +231,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 17,
                         "issue": "婚姻平權",
                         "legislator": "林淑芬",
                         "party": "DPP",
@@ -232,6 +247,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 18,
                         "issue": "婚姻平權",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -247,6 +263,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 19,
                         "issue": "婚姻平權",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -262,6 +279,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 20,
                         "issue": "婚姻平權",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -277,6 +295,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 21,
                         "issue": "婚姻平權",
                         "legislator": "蕭美琴",
                         "party": "DPP",
@@ -292,6 +311,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 24,
                         "issue": "婚姻平權",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -307,6 +327,7 @@ const initialState = {
                         "meetingCategory": "預算凍結案"
                     },
                     {
+                        "id": 25,
                         "issue": "婚姻平權",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -322,6 +343,7 @@ const initialState = {
                         "meetingCategory": "預算凍結案"
                     },
                     {
+                        "id": 26,
                         "issue": "婚姻平權",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -337,6 +359,7 @@ const initialState = {
                         "meetingCategory": "預算凍結案"
                     },
                     {
+                        "id": 27,
                         "issue": "婚姻平權",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -352,6 +375,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 28,
                         "issue": "婚姻平權",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -367,6 +391,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 29,
                         "issue": "婚姻平權",
                         "legislator": "邱志偉",
                         "party": "DPP",
@@ -382,6 +407,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 30,
                         "issue": "婚姻平權",
                         "legislator": "蕭美琴",
                         "party": "DPP",
@@ -397,6 +423,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 31,
                         "issue": "婚姻平權",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -412,6 +439,7 @@ const initialState = {
                         "meetingCategory": "公聽會\r\n 主辦"
                     },
                     {
+                        "id": 32,
                         "issue": "婚姻平權",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -427,6 +455,7 @@ const initialState = {
                         "meetingCategory": "預算主決議"
                     },
                     {
+                        "id": 33,
                         "issue": "婚姻平權",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -442,6 +471,7 @@ const initialState = {
                         "meetingCategory": "預算主決議"
                     },
                     {
+                        "id": 34,
                         "issue": "婚姻平權",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -457,6 +487,7 @@ const initialState = {
                         "meetingCategory": "預算主決議"
                     },
                     {
+                        "id": 35,
                         "issue": "婚姻平權",
                         "legislator": "吳宜臻",
                         "party": "DPP",
@@ -472,6 +503,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 36,
                         "issue": "婚姻平權",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -487,6 +519,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 37,
                         "issue": "婚姻平權",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -502,6 +535,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 39,
                         "issue": "婚姻平權",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -517,6 +551,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 40,
                         "issue": "婚姻平權",
                         "legislator": "林淑芬",
                         "party": "DPP",
@@ -532,6 +567,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 41,
                         "issue": "婚姻平權",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -547,6 +583,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 45,
                         "issue": "婚姻平權",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -562,6 +599,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 46,
                         "issue": "婚姻平權",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -577,6 +615,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 47,
                         "issue": "婚姻平權",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -597,6 +636,7 @@ const initialState = {
                 "position": "unknown",
                 "records": [
                     {
+                        "id": 10,
                         "issue": "婚姻平權",
                         "legislator": "呂學樟",
                         "party": "KMT",
@@ -617,6 +657,7 @@ const initialState = {
                 "position": "nay",
                 "records": [
                     {
+                        "id": 15,
                         "issue": "婚姻平權",
                         "legislator": "孔文吉",
                         "party": "KMT",
@@ -632,6 +673,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 22,
                         "issue": "婚姻平權",
                         "legislator": "羅淑蕾",
                         "party": "KMT",
@@ -647,6 +689,7 @@ const initialState = {
                         "meetingCategory": "院會書面質詢"
                     },
                     {
+                        "id": 23,
                         "issue": "婚姻平權",
                         "legislator": "丁守中",
                         "party": "KMT",
@@ -662,6 +705,7 @@ const initialState = {
                         "meetingCategory": "院會質詢"
                     },
                     {
+                        "id": 38,
                         "issue": "婚姻平權",
                         "legislator": "林鴻池",
                         "party": "KMT",
@@ -677,6 +721,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 42,
                         "issue": "婚姻平權",
                         "legislator": "呂學樟",
                         "party": "KMT",
@@ -692,6 +737,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 43,
                         "issue": "婚姻平權",
                         "legislator": "李貴敏",
                         "party": "KMT",
@@ -707,6 +753,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 44,
                         "issue": "婚姻平權",
                         "legislator": "廖正井",
                         "party": "KMT",
@@ -733,6 +780,7 @@ const initialState = {
                 "position": "unknown",
                 "records": [
                     {
+                        "id": 48,
                         "issue": "罷免",
                         "legislator": "紀國棟",
                         "party": "KMT",
@@ -748,6 +796,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 61,
                         "issue": "罷免",
                         "legislator": "許添財",
                         "party": "DPP",
@@ -763,6 +812,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 63,
                         "issue": "罷免",
                         "legislator": "陳怡潔",
                         "party": "PFP",
@@ -778,6 +828,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 67,
                         "issue": "罷免",
                         "legislator": "邱志偉",
                         "party": "DPP",
@@ -793,6 +844,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢\r\n 書面質詢"
                     },
                     {
+                        "id": 76,
                         "issue": "罷免",
                         "legislator": "黃昭順",
                         "party": "KMT",
@@ -813,6 +865,7 @@ const initialState = {
                 "position": "aye",
                 "records": [
                     {
+                        "id": 49,
                         "issue": "罷免",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -828,6 +881,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 51,
                         "issue": "罷免",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -843,6 +897,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 54,
                         "issue": "罷免",
                         "legislator": "黃文玲",
                         "party": "TSU",
@@ -858,6 +913,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 55,
                         "issue": "罷免",
                         "legislator": "許添財",
                         "party": "DPP",
@@ -873,6 +929,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 58,
                         "issue": "罷免",
                         "legislator": "黃文玲",
                         "party": "TSU",
@@ -888,6 +945,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 60,
                         "issue": "罷免",
                         "legislator": "許忠信",
                         "party": "TSU",
@@ -903,6 +961,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 62,
                         "issue": "罷免",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -918,6 +977,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 64,
                         "issue": "罷免",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -933,6 +993,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 65,
                         "issue": "罷免",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -948,6 +1009,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 66,
                         "issue": "罷免",
                         "legislator": "周倪安",
                         "party": "TSU",
@@ -963,6 +1025,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 69,
                         "issue": "罷免",
                         "legislator": "陳亭妃",
                         "party": "DPP",
@@ -978,6 +1041,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 70,
                         "issue": "罷免",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -993,6 +1057,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 71,
                         "issue": "罷免",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -1008,6 +1073,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 72,
                         "issue": "罷免",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -1023,6 +1089,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 74,
                         "issue": "罷免",
                         "legislator": "莊瑞雄",
                         "party": "DPP",
@@ -1038,6 +1105,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 75,
                         "issue": "罷免",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -1053,6 +1121,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 77,
                         "issue": "罷免",
                         "legislator": "林佳龍",
                         "party": "DPP",
@@ -1068,6 +1137,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 78,
                         "issue": "罷免",
                         "legislator": "陳亭妃",
                         "party": "DPP",
@@ -1083,6 +1153,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 79,
                         "issue": "罷免",
                         "legislator": "陳歐珀",
                         "party": "DPP",
@@ -1098,6 +1169,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 80,
                         "issue": "罷免",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -1113,6 +1185,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 81,
                         "issue": "罷免",
                         "legislator": "許添財",
                         "party": "DPP",
@@ -1128,6 +1201,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 82,
                         "issue": "罷免",
                         "legislator": "林世嘉",
                         "party": "TSU",
@@ -1143,6 +1217,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 83,
                         "issue": "罷免",
                         "legislator": "台灣團結聯盟黨團",
                         "party": "TSU",
@@ -1158,6 +1233,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 84,
                         "issue": "罷免",
                         "legislator": "許忠信",
                         "party": "TSU",
@@ -1173,6 +1249,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 85,
                         "issue": "罷免",
                         "legislator": "邱議瑩",
                         "party": "DPP",
@@ -1188,6 +1265,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 86,
                         "issue": "罷免",
                         "legislator": "葉宜津",
                         "party": "DPP",
@@ -1203,6 +1281,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 87,
                         "issue": "罷免",
                         "legislator": "許智傑",
                         "party": "DPP",
@@ -1218,6 +1297,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 88,
                         "issue": "罷免",
                         "legislator": "趙天麟",
                         "party": "DPP",
@@ -1233,6 +1313,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 89,
                         "issue": "罷免",
                         "legislator": "陳亭妃",
                         "party": "DPP",
@@ -1248,6 +1329,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 90,
                         "issue": "罷免",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -1263,6 +1345,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 91,
                         "issue": "罷免",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -1278,6 +1361,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 92,
                         "issue": "罷免",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -1293,6 +1377,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 93,
                         "issue": "罷免",
                         "legislator": "林世嘉",
                         "party": "TSU",
@@ -1308,6 +1393,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 100,
                         "issue": "罷免",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -1323,6 +1409,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 101,
                         "issue": "罷免",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -1338,6 +1425,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 102,
                         "issue": "罷免",
                         "legislator": "陳亭妃",
                         "party": "DPP",
@@ -1353,6 +1441,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 103,
                         "issue": "罷免",
                         "legislator": "蘇震清",
                         "party": "DPP",
@@ -1368,6 +1457,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 104,
                         "issue": "罷免",
                         "legislator": "李昆澤",
                         "party": "DPP",
@@ -1383,6 +1473,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 105,
                         "issue": "罷免",
                         "legislator": "台灣團結聯盟黨團",
                         "party": "TSU",
@@ -1398,6 +1489,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 106,
                         "issue": "罷免",
                         "legislator": "許忠信",
                         "party": "TSU",
@@ -1413,6 +1505,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 107,
                         "issue": "罷免",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -1428,6 +1521,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 108,
                         "issue": "罷免",
                         "legislator": "李昆澤",
                         "party": "DPP",
@@ -1443,6 +1537,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 109,
                         "issue": "罷免",
                         "legislator": "陳亭妃",
                         "party": "DPP",
@@ -1458,6 +1553,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 110,
                         "issue": "罷免",
                         "legislator": "蔡其昌",
                         "party": "DPP",
@@ -1473,6 +1569,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 111,
                         "issue": "罷免",
                         "legislator": "台灣團結聯盟黨團",
                         "party": "TSU",
@@ -1488,6 +1585,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 112,
                         "issue": "罷免",
                         "legislator": "賴振昌",
                         "party": "TSU",
@@ -1503,6 +1601,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 113,
                         "issue": "罷免",
                         "legislator": "邱志偉",
                         "party": "DPP",
@@ -1518,6 +1617,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 114,
                         "issue": "罷免",
                         "legislator": "蘇震清",
                         "party": "DPP",
@@ -1533,6 +1633,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 115,
                         "issue": "罷免",
                         "legislator": "李應元",
                         "party": "DPP",
@@ -1548,6 +1649,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 116,
                         "issue": "罷免",
                         "legislator": "陳歐珀",
                         "party": "DPP",
@@ -1563,6 +1665,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 117,
                         "issue": "罷免",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -1578,6 +1681,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 118,
                         "issue": "罷免",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -1593,6 +1697,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 119,
                         "issue": "罷免",
                         "legislator": "高志鵬",
                         "party": "DPP",
@@ -1608,6 +1713,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 120,
                         "issue": "罷免",
                         "legislator": "柯建銘",
                         "party": "DPP",
@@ -1623,6 +1729,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 121,
                         "issue": "罷免",
                         "legislator": "邱議瑩",
                         "party": "DPP",
@@ -1638,6 +1745,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 122,
                         "issue": "罷免",
                         "legislator": "楊曜",
                         "party": "DPP",
@@ -1653,6 +1761,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 123,
                         "issue": "罷免",
                         "legislator": "薛凌",
                         "party": "DPP",
@@ -1668,6 +1777,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 124,
                         "issue": "罷免",
                         "legislator": "李應元",
                         "party": "DPP",
@@ -1683,6 +1793,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 125,
                         "issue": "罷免",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -1698,6 +1809,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 126,
                         "issue": "罷免",
                         "legislator": "吳秉叡",
                         "party": "DPP",
@@ -1713,6 +1825,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 127,
                         "issue": "罷免",
                         "legislator": "蘇震清",
                         "party": "DPP",
@@ -1728,6 +1841,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 128,
                         "issue": "罷免",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -1743,6 +1857,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 129,
                         "issue": "罷免",
                         "legislator": "吳秉叡",
                         "party": "DPP",
@@ -1758,6 +1873,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 130,
                         "issue": "罷免",
                         "legislator": "蘇震清",
                         "party": "DPP",
@@ -1778,6 +1894,7 @@ const initialState = {
                 "position": "nay",
                 "records": [
                     {
+                        "id": 50,
                         "issue": "罷免",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1793,6 +1910,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 52,
                         "issue": "罷免",
                         "legislator": "紀國棟",
                         "party": "KMT",
@@ -1808,6 +1926,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 53,
                         "issue": "罷免",
                         "legislator": "陳超明",
                         "party": "KMT",
@@ -1823,6 +1942,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 56,
                         "issue": "罷免",
                         "legislator": "江啟臣",
                         "party": "KMT",
@@ -1838,6 +1958,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢\r\n 書面質詢"
                     },
                     {
+                        "id": 57,
                         "issue": "罷免",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1853,6 +1974,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 59,
                         "issue": "罷免",
                         "legislator": "徐欣瑩",
                         "party": "KMT",
@@ -1868,6 +1990,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 68,
                         "issue": "罷免",
                         "legislator": "蔡正元",
                         "party": "KMT",
@@ -1883,6 +2006,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 73,
                         "issue": "罷免",
                         "legislator": "張慶忠",
                         "party": "KMT",
@@ -1898,6 +2022,7 @@ const initialState = {
                         "meetingCategory": "委員會質詢"
                     },
                     {
+                        "id": 94,
                         "issue": "罷免",
                         "legislator": "邱文彥",
                         "party": "KMT",
@@ -1913,6 +2038,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 95,
                         "issue": "罷免",
                         "legislator": "紀國棟",
                         "party": "KMT",
@@ -1928,6 +2054,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 96,
                         "issue": "罷免",
                         "legislator": "謝國樑",
                         "party": "KMT",
@@ -1943,6 +2070,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 97,
                         "issue": "罷免",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1958,6 +2086,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 98,
                         "issue": "罷免",
                         "legislator": "江啟臣",
                         "party": "KMT",
@@ -1973,6 +2102,7 @@ const initialState = {
                         "meetingCategory": "法律提案"
                     },
                     {
+                        "id": 99,
                         "issue": "罷免",
                         "legislator": "李慶華",
                         "party": "KMT",

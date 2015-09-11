@@ -1,17 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import cht2eng from '../../utils/cht2eng';
 import eng2cht from '../../utils/eng2cht';
-
-function position_eng_to_color (position_eng) {
-    switch(position_eng){
-      case 'aye':
-        return '#00FFB0';
-      case 'nay':
-        return '#FF0055';
-      case 'unknown':
-        return '#FFF800'
-    }
-}
+import position2color from '../../utils/position2color';
 
 class LegislatorAvatar extends Component {
   render () {
@@ -71,7 +61,7 @@ export default class PositionLegislatorGroup extends Component {
     let cubesWrap = {
       width: width * 1.4,
       height: width * 1.4,
-      boxShadow: `0px 0px 0px ${borderWidth}px ${position_eng_to_color(data.position)}`,
+      boxShadow: `0px 0px 0px ${borderWidth}px ${position2color(data.position)}`,
       borderRadius: "50%",
       display: "inline-block",
       verticalAlign: "middle",
