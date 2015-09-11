@@ -63,7 +63,7 @@ export default class Issue extends Component {
 
 
     let positionFigure;
-    switch(issueController.activeOption){
+    switch(issueController.activeView){
         case VIEW_PARTY: 
             positionFigure = partyPositionGroups;
             break;

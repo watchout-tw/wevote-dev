@@ -19,18 +19,20 @@ export default class IssueController extends Component {
     const styles = require('./IssueController.scss');
     const { issueController, setActiveView } = this.props;
    
-    let {options, activeOption} = issueController;
+    let {views, activeView} = issueController;
 
     let bindSetActiveView = setActiveView.bind(this);
 
-    let optionItems = options.map((value,index)=>{
-        let active = (value.id === activeOption) ? true : false;
+    let viewOptionItems = views.map((value,index)=>{
+
+        let active = (value.id === activeView) ? true : false;
         return <OptionItem data={value} active={active} handler={bindSetActiveView} key={index}/>
+
     })
 
     return (
       <div className={styles.wrap}>
-           {optionItems} 
+           {viewOptionItems} 
       </div>
     );
   }

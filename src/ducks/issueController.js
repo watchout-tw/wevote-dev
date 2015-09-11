@@ -4,7 +4,7 @@ const VIEW_POSITION = 'VIEW_POSITION';
 const INCREMENT = 'redux-example/counter/INCREMENT';
 
 const initialState = {
-  options: [
+  views: [
         {
           'title' : '看政黨',
           'id' : VIEW_PARTY
@@ -18,7 +18,7 @@ const initialState = {
           'id' : VIEW_POSITION
         }
   ],
-  activeOption: VIEW_PARTY
+  activeView: VIEW_PARTY
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -26,18 +26,18 @@ export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case VIEW_PARTY:
       return {
-        options: state.options,
-        activeOption: VIEW_PARTY
+        views: state.views,
+        activeView: VIEW_PARTY
       };
     case VIEW_LEGISLATOR:
       return {
-        options: state.options,
-        activeOption: VIEW_LEGISLATOR
+        views: state.views,
+        activeView: VIEW_LEGISLATOR
       };
     case VIEW_POSITION:
       return {
-        options: state.options,
-        activeOption: VIEW_POSITION
+        views: state.views,
+        activeView: VIEW_POSITION
       };
     default:
       return state;

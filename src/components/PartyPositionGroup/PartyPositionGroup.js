@@ -32,7 +32,7 @@ class Record extends Component {
 
     let detailText = (active) ? (
       <div className={styles.activeRecord}>
-           <div>{date.format('YYYY-MM-DD')} / {data.meetingCategory}</div>
+           <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
            <div>{data.content}</div>
       </div>): "";
 
@@ -68,11 +68,7 @@ export default class PartyPositionGroup extends Component {
     const styles = require('./PartyPositionGroup.scss');
     const {data, issueStatement} = this.props;
     
-    
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
-
-
-
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
