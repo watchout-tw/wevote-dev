@@ -14,12 +14,12 @@ export default class Slideshow extends Component {
     this.state = {
         autoplayTimer: "",
         currentIndex: 0,
-        imageLoaded: false
+        imageLoaded: true
     }
   }
 
   _setCurrentIndex(value, event){
-    //console.log("set index");
+   
     var maxIndex =  this.props.data.length - 1;
     if(value > maxIndex){
       value = value % (maxIndex+1);
@@ -64,6 +64,11 @@ export default class Slideshow extends Component {
   componentDidMount() {
       //console.log("I'm mount!");
       this._autoplay();
+  }
+
+  componentWillUnmount(){
+      //console.log("bye! i'm off work!");
+      clearInterval(this.state.autoplayTimer);
   }
 
   componentWillReceiveProps(nextProps) {

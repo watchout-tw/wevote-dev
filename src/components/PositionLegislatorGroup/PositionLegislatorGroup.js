@@ -55,12 +55,6 @@ class LegislatorAvatar extends Component {
 
     let imgActiveStyle = (activeLegislator === name)? styles.avatarImgActive : "";
     
-    if(activeLegislator === name){
-    console.log("****")
-    console.log(activeLegislator);
-    console.log(name);
-    }
-    
     try {
       imgURL = require("./images/avatar/"+name+".png");
     }catch(e){
