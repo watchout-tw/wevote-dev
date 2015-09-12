@@ -1,11 +1,9 @@
-const candidatePositions = {
-    
+const candidatePositions = 
+{
     "黃昭順": {
         "name": "黃昭順",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 1,
@@ -23,11 +21,24 @@ const candidatePositions = {
                         "meeting": "院會",
                         "meetingCategory": "院會書面質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             },
             "recall": {
-                "dominantPosition": "unknown",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 76,
@@ -45,7 +56,22 @@ const candidatePositions = {
                         "meeting": "經濟委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -53,8 +79,6 @@ const candidatePositions = {
         "name": "蕭美琴",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 2,
@@ -152,7 +176,22 @@ const candidatePositions = {
                         "meeting": "外交及國防委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 6
+                    }
+                ],
+                "totalCounts": 6
             }
         }
     },
@@ -160,8 +199,6 @@ const candidatePositions = {
         "name": "尤美女",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 3,
@@ -291,11 +328,24 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 8
+                    }
+                ],
+                "totalCounts": 8
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 100,
@@ -329,7 +379,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -337,8 +402,6 @@ const candidatePositions = {
         "name": "吳秉叡",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 4,
@@ -372,11 +435,24 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "公聽會\n 發言"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 126,
@@ -410,7 +486,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -418,8 +509,6 @@ const candidatePositions = {
         "name": "林佳龍",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 5,
@@ -437,11 +526,24 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 77,
@@ -459,7 +561,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -467,8 +584,6 @@ const candidatePositions = {
         "name": "林淑芬",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 6,
@@ -518,7 +633,22 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 3
+                    }
+                ],
+                "totalCounts": 3
             }
         }
     },
@@ -526,8 +656,6 @@ const candidatePositions = {
         "name": "黃文玲",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 7,
@@ -545,11 +673,24 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 54,
@@ -583,7 +724,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -591,8 +747,6 @@ const candidatePositions = {
         "name": "鄭麗君",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 8,
@@ -642,11 +796,24 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 3
+                    }
+                ],
+                "totalCounts": 3
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 118,
@@ -664,7 +831,22 @@ const candidatePositions = {
                         "meeting": "程序委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -672,8 +854,6 @@ const candidatePositions = {
         "name": "呂學樟",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 50,
                 "records": [
                     {
                         "id": 10,
@@ -707,7 +887,22 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -715,8 +910,6 @@ const candidatePositions = {
         "name": "孔文吉",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 15,
@@ -734,7 +927,22 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -742,8 +950,6 @@ const candidatePositions = {
         "name": "段宜康",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 18,
@@ -809,7 +1015,22 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 4
             }
         }
     },
@@ -817,8 +1038,6 @@ const candidatePositions = {
         "name": "陳其邁",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 19,
@@ -884,11 +1103,24 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 4
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 49,
@@ -970,7 +1202,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 5
+                    }
+                ],
+                "totalCounts": 5
             }
         }
     },
@@ -978,8 +1225,6 @@ const candidatePositions = {
         "name": "羅淑蕾",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 22,
@@ -997,7 +1242,22 @@ const candidatePositions = {
                         "meeting": "院會",
                         "meetingCategory": "院會書面質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1005,8 +1265,6 @@ const candidatePositions = {
         "name": "丁守中",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 23,
@@ -1024,7 +1282,22 @@ const candidatePositions = {
                         "meeting": "院會",
                         "meetingCategory": "院會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1032,8 +1305,6 @@ const candidatePositions = {
         "name": "李俊俋",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 25,
@@ -1067,11 +1338,24 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "預算主決議"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 92,
@@ -1201,7 +1485,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 8
+                    }
+                ],
+                "totalCounts": 8
             }
         }
     },
@@ -1209,8 +1508,6 @@ const candidatePositions = {
         "name": "姚文智",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 27,
@@ -1244,11 +1541,24 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "預算主決議"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 80,
@@ -1314,7 +1624,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 4
             }
         }
     },
@@ -1322,8 +1647,6 @@ const candidatePositions = {
         "name": "邱志偉",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 29,
@@ -1341,11 +1664,24 @@ const candidatePositions = {
                         "meeting": "外交及國防委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             },
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 50,
                 "records": [
                     {
                         "id": 113,
@@ -1379,7 +1715,22 @@ const candidatePositions = {
                         "meeting": "院會",
                         "meetingCategory": "委員會質詢\n 書面質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -1387,8 +1738,6 @@ const candidatePositions = {
         "name": "吳宜臻",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 35,
@@ -1406,7 +1755,22 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1414,8 +1778,6 @@ const candidatePositions = {
         "name": "林鴻池",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 38,
@@ -1433,7 +1795,22 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1441,8 +1818,6 @@ const candidatePositions = {
         "name": "李貴敏",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 43,
@@ -1460,7 +1835,22 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1468,8 +1858,6 @@ const candidatePositions = {
         "name": "廖正井",
         "positions": {
             "marriageEquality": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 44,
@@ -1487,7 +1875,22 @@ const candidatePositions = {
                         "meeting": "司法及法制委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1495,8 +1898,6 @@ const candidatePositions = {
         "name": "紀國棟",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 66.67,
                 "records": [
                     {
                         "id": 48,
@@ -1546,7 +1947,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 2
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 3
             }
         }
     },
@@ -1554,8 +1970,6 @@ const candidatePositions = {
         "name": "吳育昇",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 50,
@@ -1605,7 +2019,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 3
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 3
             }
         }
     },
@@ -1613,8 +2042,6 @@ const candidatePositions = {
         "name": "陳超明",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 53,
@@ -1632,7 +2059,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1640,8 +2082,6 @@ const candidatePositions = {
         "name": "許添財",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 66.67,
                 "records": [
                     {
                         "id": 81,
@@ -1691,7 +2131,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 3
             }
         }
     },
@@ -1699,8 +2154,6 @@ const candidatePositions = {
         "name": "江啟臣",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 98,
@@ -1734,7 +2187,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢\n 書面質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 2
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -1742,8 +2210,6 @@ const candidatePositions = {
         "name": "徐欣瑩",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 59,
@@ -1761,7 +2227,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1769,8 +2250,6 @@ const candidatePositions = {
         "name": "許忠信",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 84,
@@ -1820,7 +2299,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 3
+                    }
+                ],
+                "totalCounts": 3
             }
         }
     },
@@ -1828,8 +2322,6 @@ const candidatePositions = {
         "name": "陳怡潔",
         "positions": {
             "recall": {
-                "dominantPosition": "unknown",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 63,
@@ -1847,7 +2339,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1855,8 +2362,6 @@ const candidatePositions = {
         "name": "周倪安",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 66,
@@ -1874,7 +2379,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1882,8 +2402,6 @@ const candidatePositions = {
         "name": "蔡正元",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 68,
@@ -1901,7 +2419,22 @@ const candidatePositions = {
                         "meeting": "交通委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -1909,8 +2442,6 @@ const candidatePositions = {
         "name": "陳亭妃",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 78,
@@ -1992,7 +2523,22 @@ const candidatePositions = {
                         "meeting": "院會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 5
+                    }
+                ],
+                "totalCounts": 5
             }
         }
     },
@@ -2000,8 +2546,6 @@ const candidatePositions = {
         "name": "張慶忠",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 73,
@@ -2019,7 +2563,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2027,8 +2586,6 @@ const candidatePositions = {
         "name": "莊瑞雄",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 74,
@@ -2046,7 +2603,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "委員會質詢"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2054,8 +2626,6 @@ const candidatePositions = {
         "name": "陳歐珀",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 79,
@@ -2089,7 +2659,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -2097,8 +2682,6 @@ const candidatePositions = {
         "name": "林世嘉",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 82,
@@ -2132,7 +2715,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -2140,8 +2738,6 @@ const candidatePositions = {
         "name": "台灣團結聯盟黨團",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 83,
@@ -2191,7 +2787,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 3
+                    }
+                ],
+                "totalCounts": 3
             }
         }
     },
@@ -2199,8 +2810,6 @@ const candidatePositions = {
         "name": "邱議瑩",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 85,
@@ -2234,7 +2843,22 @@ const candidatePositions = {
                         "meeting": "程序委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -2242,8 +2866,6 @@ const candidatePositions = {
         "name": "葉宜津",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 86,
@@ -2261,7 +2883,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2269,8 +2906,6 @@ const candidatePositions = {
         "name": "許智傑",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 87,
@@ -2288,7 +2923,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2296,8 +2946,6 @@ const candidatePositions = {
         "name": "趙天麟",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 88,
@@ -2315,7 +2963,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2323,8 +2986,6 @@ const candidatePositions = {
         "name": "邱文彥",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 94,
@@ -2342,7 +3003,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2350,8 +3026,6 @@ const candidatePositions = {
         "name": "謝國樑",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 96,
@@ -2369,7 +3043,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2377,8 +3066,6 @@ const candidatePositions = {
         "name": "李慶華",
         "positions": {
             "recall": {
-                "dominantPosition": "nay",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 99,
@@ -2396,7 +3083,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 1
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2404,8 +3106,6 @@ const candidatePositions = {
         "name": "蘇震清",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 103,
@@ -2471,7 +3171,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 4
             }
         }
     },
@@ -2479,8 +3194,6 @@ const candidatePositions = {
         "name": "李昆澤",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 104,
@@ -2514,7 +3227,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -2522,8 +3250,6 @@ const candidatePositions = {
         "name": "蔡其昌",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 110,
@@ -2541,7 +3267,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2549,8 +3290,6 @@ const candidatePositions = {
         "name": "賴振昌",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 112,
@@ -2568,7 +3307,22 @@ const candidatePositions = {
                         "meeting": "內政委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2576,8 +3330,6 @@ const candidatePositions = {
         "name": "李應元",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 115,
@@ -2611,7 +3363,22 @@ const candidatePositions = {
                         "meeting": "程序委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 2
             }
         }
     },
@@ -2619,8 +3386,6 @@ const candidatePositions = {
         "name": "高志鵬",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 119,
@@ -2638,7 +3403,22 @@ const candidatePositions = {
                         "meeting": "程序委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2646,8 +3426,6 @@ const candidatePositions = {
         "name": "柯建銘",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 120,
@@ -2665,7 +3443,22 @@ const candidatePositions = {
                         "meeting": "程序委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2673,8 +3466,6 @@ const candidatePositions = {
         "name": "楊曜",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 122,
@@ -2692,7 +3483,22 @@ const candidatePositions = {
                         "meeting": "程序委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     },
@@ -2700,8 +3506,6 @@ const candidatePositions = {
         "name": "薛凌",
         "positions": {
             "recall": {
-                "dominantPosition": "aye",
-                "dominantPercentage": 100,
                 "records": [
                     {
                         "id": 123,
@@ -2719,11 +3523,25 @@ const candidatePositions = {
                         "meeting": "程序委員會",
                         "meetingCategory": "法律提案"
                     }
-                ]
+                ],
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 1
+                    }
+                ],
+                "totalCounts": 1
             }
         }
     }
-
 }
 
 const initialState = {
