@@ -5,6 +5,199 @@ const initialState = {
         "partyPositions": [],
         "positions": [
             {
+                "position": "nay",
+                "legislators": [
+                    {
+                        "name": "呂學樟",
+                        "party": "KMT",
+                        "records": [
+                            {
+                                "id": 10,
+                                "issue": "婚姻平權",
+                                "legislator": "呂學樟",
+                                "party": "KMT",
+                                "date": 1356451200,
+                                "category": "發言",
+                                "content": "本席認為，就法論法來看，法律上本不應該對同性戀者有所歧視，甚至不給予法律上權益的保障！\n \n 在立法上，則仍需要形成社會上的多數共識，尤其台灣現在少子化問題嚴重，如何增產報國也是重要的國安議題，所以同性婚姻合法化及伴侶權益法制化，在國外經過多年討論仍無法獲得絕對多數的支持，更何況民風保守的台灣，而台灣對此一議題缺乏廣泛的討論，也非我們主法院一場公聽會即可以下定論，仍需進一步廣納社會意見，讓社會多加討論才可以。",
+                                "positionJudgement": "未明確表態，認為同性婚姻合法化需要更多社會共識",
+                                "position": "unknown",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
+                                "meeting": "司法及法制委員會",
+                                "meetingCategory": "公聽會\n 發言"
+                            },
+                            {
+                                "id": 42,
+                                "issue": "婚姻平權",
+                                "legislator": "呂學樟",
+                                "party": "KMT",
+                                "date": 1419177600,
+                                "category": "發言",
+                                "content": "我反對的是為同性戀婚姻過當修法，因為這樣的修法會造成千百年來家庭倫常的淪喪，社會的價值觀也會崩潰。",
+                                "positionJudgement": "反對同性婚姻合法化",
+                                "position": "nay",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/05/LCIDC01_1040501.pdf",
+                                "meeting": "司法及法制委員會",
+                                "meetingCategory": "委員會質詢"
+                            }
+                        ],
+                        "dominantPosition": "nay",
+                        "dominantPercentage": 50
+                    },
+                    {
+                        "name": "孔文吉",
+                        "party": "KMT",
+                        "records": [
+                            {
+                                "id": 15,
+                                "issue": "婚姻平權",
+                                "legislator": "孔文吉",
+                                "party": "KMT",
+                                "date": 1382544000,
+                                "category": "發言",
+                                "content": "本席希望你們能夠仔細審酌這件事情，本席是反對的，因為我是基督徒，幸好尤美女委員的提案，本席沒有連署，連署欄沒有本席的名字，我必須在此表示反對，不然很多宗教團體都會來找我。現在有些學校會請同志團體到學校去分享他們的心得，本席希望法務部能站在中性的立場，多聽取各方的意見，教會團體對於同性戀結婚還是無法容許、無法同意的。",
+                                "positionJudgement": "反對同性婚姻合法化",
+                                "position": "nay",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/63/LCIDC01_1026301.pdf",
+                                "meeting": "司法及法制委員會",
+                                "meetingCategory": "委員會質詢"
+                            }
+                        ],
+                        "dominantPosition": "nay",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "羅淑蕾",
+                        "party": "KMT",
+                        "records": [
+                            {
+                                "id": 22,
+                                "issue": "婚姻平權",
+                                "legislator": "羅淑蕾",
+                                "party": "KMT",
+                                "date": 1383235200,
+                                "category": "發言",
+                                "content": "本院羅委員淑蕾，鑑於近期少數團體基於「同性婚姻」、「伴侶制度」、「多人家屬及收養制度」之三大訴求，執意推動「多元成家法案」，將會為台灣帶來家庭的不穩定性及耗費大量社會成本，兒童的權益得不到保障，衍生更多社會問題，感到憂心。爰此，衡平台灣整體社會發展及少數特殊家庭需求，相關主管機關應在維護法制穩定性的前提下，建立起個案考量及處理之機制，特向行政院提出質詢。",
+                                "positionJudgement": "反對同性婚姻合法化",
+                                "position": "nay",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/61/LCIDC01_1026101.pdf",
+                                "meeting": "院會",
+                                "meetingCategory": "院會書面質詢"
+                            }
+                        ],
+                        "dominantPosition": "nay",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "丁守中",
+                        "party": "KMT",
+                        "records": [
+                            {
+                                "id": 23,
+                                "issue": "婚姻平權",
+                                "legislator": "丁守中",
+                                "party": "KMT",
+                                "date": 1383840000,
+                                "category": "發言",
+                                "content": "我完全同意同性戀者有相愛、同居也有財產自由處分的完全自主權利，但我更支持宗教團體，因為我是國際佛光會的副總會長。我認為對於宗教團體與一般人的傳統認知，也就是對家庭、對夫妻倫理與價值不應該改變。",
+                                "positionJudgement": "反對同性婚姻合法化",
+                                "position": "nay",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/65/LCIDC01_1026501.pdf",
+                                "meeting": "院會",
+                                "meetingCategory": "院會質詢"
+                            }
+                        ],
+                        "dominantPosition": "nay",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "林鴻池",
+                        "party": "KMT",
+                        "records": [
+                            {
+                                "id": 38,
+                                "issue": "婚姻平權",
+                                "legislator": "林鴻池",
+                                "party": "KMT",
+                                "date": 1419177600,
+                                "category": "發言",
+                                "content": "今天要討論的民法親屬編部分條文修正案中針對去性別化，希望透過去性別化，修改民法親屬編，讓同性戀可以結婚。有的人認為這其實是基本人權，他們兩個要結婚並沒有礙著別人，不過，這是一個婚姻制度，也是一個家庭制度，我們幾千年來的家庭制度、倫理在一夕之間要透過民法親屬編改變它，我們也可以很快就讓它出委員會，送院會三讀通過，改文字很簡單，但我們需要考量的是，幾千年來的這個家庭制度、倫理的變化對社會產生的衝擊是什麼？",
+                                "positionJudgement": "反對同性婚姻合法化",
+                                "position": "nay",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/05/LCIDC01_1040501.pdf",
+                                "meeting": "司法及法制委員會",
+                                "meetingCategory": "委員會質詢"
+                            }
+                        ],
+                        "dominantPosition": "nay",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "李貴敏",
+                        "party": "KMT",
+                        "records": [
+                            {
+                                "id": 43,
+                                "issue": "婚姻平權",
+                                "legislator": "李貴敏",
+                                "party": "KMT",
+                                "date": 1419177600,
+                                "category": "發言",
+                                "content": "我們去看看別的國家如何解決這個問題，我剛才特別提到，我到國外蒐集資料，美國的解決方式是在全民尚未達成共識時讓彼此的對立降到最低，可能是透過法院判決或其他方式，而不是在共識尚未達成時硬要撕裂人民之間的情感。",
+                                "positionJudgement": "反對同性婚姻合法化",
+                                "position": "nay",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/05/LCIDC01_1040501.pdf",
+                                "meeting": "司法及法制委員會",
+                                "meetingCategory": "委員會質詢"
+                            }
+                        ],
+                        "dominantPosition": "nay",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "廖正井",
+                        "party": "KMT",
+                        "records": [
+                            {
+                                "id": 44,
+                                "issue": "婚姻平權",
+                                "legislator": "廖正井",
+                                "party": "KMT",
+                                "date": 1419177600,
+                                "category": "發言",
+                                "content": "我贊成你的看法，我們客家人有家族族譜，像我們就常常談起自己是來台第幾代，相關族譜也都會留傳下來，如果照這樣發展，可能就會失去家庭倫理，家庭關係也不復存在，是不是？",
+                                "positionJudgement": "反對同性婚姻合法化",
+                                "position": "nay",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/05/LCIDC01_1040501.pdf",
+                                "meeting": "司法及法制委員會",
+                                "meetingCategory": "委員會質詢"
+                            }
+                        ],
+                        "dominantPosition": "nay",
+                        "dominantPercentage": 100
+                    }
+                ]
+            },
+            {
+                "position": "unknown",
+                "legislators": []
+            },
+            {
                 "position": "aye",
                 "legislators": [
                     {
@@ -81,7 +274,7 @@ const initialState = {
                                 "clarificationLastUpdate": "",
                                 "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
                                 "meeting": "司法及法制委員會",
-                                "meetingCategory": "公聽會\r\n 發言"
+                                "meetingCategory": "公聽會\n 發言"
                             },
                             {
                                 "id": 14,
@@ -169,7 +362,7 @@ const initialState = {
                                 "clarificationLastUpdate": "",
                                 "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
                                 "meeting": "司法及法制委員會",
-                                "meetingCategory": "公聽會\r\n 主辦"
+                                "meetingCategory": "公聽會\n 主辦"
                             },
                             {
                                 "id": 16,
@@ -201,7 +394,7 @@ const initialState = {
                                 "clarificationLastUpdate": "",
                                 "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/103/64/LCIDC01_1036401.pdf",
                                 "meeting": "司法及法制委員會",
-                                "meetingCategory": "公聽會\r\n 主辦"
+                                "meetingCategory": "公聽會\n 主辦"
                             },
                             {
                                 "id": 36,
@@ -298,14 +491,14 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1356451200,
                                 "category": "發言",
-                                "content": "同性婚姻其實是一種人權保障的高度體現，臺灣社會經過這麼久的教育，\r\n 觀念和資訊這麼發達，如果把這個理念闡述出來，我相信絕大多數的人是會同意的。",
+                                "content": "同性婚姻其實是一種人權保障的高度體現，臺灣社會經過這麼久的教育，\n 觀念和資訊這麼發達，如果把這個理念闡述出來，我相信絕大多數的人是會同意的。",
                                 "positionJudgement": "贊成同性婚姻合法化",
                                 "position": "aye",
                                 "clarificationContent": "",
                                 "clarificationLastUpdate": "",
                                 "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
                                 "meeting": "司法及法制委員會",
-                                "meetingCategory": "公聽會\r\n 發言"
+                                "meetingCategory": "公聽會\n 發言"
                             }
                         ],
                         "dominantPosition": "aye",
@@ -744,195 +937,6 @@ const initialState = {
                         "dominantPercentage": 100
                     }
                 ]
-            },
-            {
-                "position": "nay",
-                "legislators": [
-                    {
-                        "name": "呂學樟",
-                        "party": "KMT",
-                        "records": [
-                            {
-                                "id": 10,
-                                "issue": "婚姻平權",
-                                "legislator": "呂學樟",
-                                "party": "KMT",
-                                "date": 1356451200,
-                                "category": "發言",
-                                "content": "本席認為，就法論法來看，法律上本不應該對同性戀者有所歧視，甚至不給予法律上權益的保障！\r\n \r\n 在立法上，則仍需要形成社會上的多數共識，尤其台灣現在少子化問題嚴重，如何增產報國也是重要的國安議題，所以同性婚姻合法化及伴侶權益法制化，在國外經過多年討論仍無法獲得絕對多數的支持，更何況民風保守的台灣，而台灣對此一議題缺乏廣泛的討論，也非我們主法院一場公聽會即可以下定論，仍需進一步廣納社會意見，讓社會多加討論才可以。",
-                                "positionJudgement": "未明確表態，認為同性婚姻合法化需要更多社會共識",
-                                "position": "unknown",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
-                                "meeting": "司法及法制委員會",
-                                "meetingCategory": "公聽會\r\n 發言"
-                            },
-                            {
-                                "id": 42,
-                                "issue": "婚姻平權",
-                                "legislator": "呂學樟",
-                                "party": "KMT",
-                                "date": 1419177600,
-                                "category": "發言",
-                                "content": "我反對的是為同性戀婚姻過當修法，因為這樣的修法會造成千百年來家庭倫常的淪喪，社會的價值觀也會崩潰。",
-                                "positionJudgement": "反對同性婚姻合法化",
-                                "position": "nay",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/05/LCIDC01_1040501.pdf",
-                                "meeting": "司法及法制委員會",
-                                "meetingCategory": "委員會質詢"
-                            }
-                        ],
-                        "dominantPosition": "nay",
-                        "dominantPercentage": 50
-                    },
-                    {
-                        "name": "孔文吉",
-                        "party": "KMT",
-                        "records": [
-                            {
-                                "id": 15,
-                                "issue": "婚姻平權",
-                                "legislator": "孔文吉",
-                                "party": "KMT",
-                                "date": 1382544000,
-                                "category": "發言",
-                                "content": "本席希望你們能夠仔細審酌這件事情，本席是反對的，因為我是基督徒，幸好尤美女委員的提案，本席沒有連署，連署欄沒有本席的名字，我必須在此表示反對，不然很多宗教團體都會來找我。現在有些學校會請同志團體到學校去分享他們的心得，本席希望法務部能站在中性的立場，多聽取各方的意見，教會團體對於同性戀結婚還是無法容許、無法同意的。",
-                                "positionJudgement": "反對同性婚姻合法化",
-                                "position": "nay",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/63/LCIDC01_1026301.pdf",
-                                "meeting": "司法及法制委員會",
-                                "meetingCategory": "委員會質詢"
-                            }
-                        ],
-                        "dominantPosition": "nay",
-                        "dominantPercentage": 100
-                    },
-                    {
-                        "name": "羅淑蕾",
-                        "party": "KMT",
-                        "records": [
-                            {
-                                "id": 22,
-                                "issue": "婚姻平權",
-                                "legislator": "羅淑蕾",
-                                "party": "KMT",
-                                "date": 1383235200,
-                                "category": "發言",
-                                "content": "本院羅委員淑蕾，鑑於近期少數團體基於「同性婚姻」、「伴侶制度」、「多人家屬及收養制度」之三大訴求，執意推動「多元成家法案」，將會為台灣帶來家庭的不穩定性及耗費大量社會成本，兒童的權益得不到保障，衍生更多社會問題，感到憂心。爰此，衡平台灣整體社會發展及少數特殊家庭需求，相關主管機關應在維護法制穩定性的前提下，建立起個案考量及處理之機制，特向行政院提出質詢。",
-                                "positionJudgement": "反對同性婚姻合法化",
-                                "position": "nay",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/61/LCIDC01_1026101.pdf",
-                                "meeting": "院會",
-                                "meetingCategory": "院會書面質詢"
-                            }
-                        ],
-                        "dominantPosition": "nay",
-                        "dominantPercentage": 100
-                    },
-                    {
-                        "name": "丁守中",
-                        "party": "KMT",
-                        "records": [
-                            {
-                                "id": 23,
-                                "issue": "婚姻平權",
-                                "legislator": "丁守中",
-                                "party": "KMT",
-                                "date": 1383840000,
-                                "category": "發言",
-                                "content": "我完全同意同性戀者有相愛、同居也有財產自由處分的完全自主權利，但我更支持宗教團體，因為我是國際佛光會的副總會長。我認為對於宗教團體與一般人的傳統認知，也就是對家庭、對夫妻倫理與價值不應該改變。",
-                                "positionJudgement": "反對同性婚姻合法化",
-                                "position": "nay",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/65/LCIDC01_1026501.pdf",
-                                "meeting": "院會",
-                                "meetingCategory": "院會質詢"
-                            }
-                        ],
-                        "dominantPosition": "nay",
-                        "dominantPercentage": 100
-                    },
-                    {
-                        "name": "林鴻池",
-                        "party": "KMT",
-                        "records": [
-                            {
-                                "id": 38,
-                                "issue": "婚姻平權",
-                                "legislator": "林鴻池",
-                                "party": "KMT",
-                                "date": 1419177600,
-                                "category": "發言",
-                                "content": "今天要討論的民法親屬編部分條文修正案中針對去性別化，希望透過去性別化，修改民法親屬編，讓同性戀可以結婚。有的人認為這其實是基本人權，他們兩個要結婚並沒有礙著別人，不過，這是一個婚姻制度，也是一個家庭制度，我們幾千年來的家庭制度、倫理在一夕之間要透過民法親屬編改變它，我們也可以很快就讓它出委員會，送院會三讀通過，改文字很簡單，但我們需要考量的是，幾千年來的這個家庭制度、倫理的變化對社會產生的衝擊是什麼？",
-                                "positionJudgement": "反對同性婚姻合法化",
-                                "position": "nay",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/05/LCIDC01_1040501.pdf",
-                                "meeting": "司法及法制委員會",
-                                "meetingCategory": "委員會質詢"
-                            }
-                        ],
-                        "dominantPosition": "nay",
-                        "dominantPercentage": 100
-                    },
-                    {
-                        "name": "李貴敏",
-                        "party": "KMT",
-                        "records": [
-                            {
-                                "id": 43,
-                                "issue": "婚姻平權",
-                                "legislator": "李貴敏",
-                                "party": "KMT",
-                                "date": 1419177600,
-                                "category": "發言",
-                                "content": "我們去看看別的國家如何解決這個問題，我剛才特別提到，我到國外蒐集資料，美國的解決方式是在全民尚未達成共識時讓彼此的對立降到最低，可能是透過法院判決或其他方式，而不是在共識尚未達成時硬要撕裂人民之間的情感。",
-                                "positionJudgement": "反對同性婚姻合法化",
-                                "position": "nay",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/05/LCIDC01_1040501.pdf",
-                                "meeting": "司法及法制委員會",
-                                "meetingCategory": "委員會質詢"
-                            }
-                        ],
-                        "dominantPosition": "nay",
-                        "dominantPercentage": 100
-                    },
-                    {
-                        "name": "廖正井",
-                        "party": "KMT",
-                        "records": [
-                            {
-                                "id": 44,
-                                "issue": "婚姻平權",
-                                "legislator": "廖正井",
-                                "party": "KMT",
-                                "date": 1419177600,
-                                "category": "發言",
-                                "content": "我贊成你的看法，我們客家人有家族族譜，像我們就常常談起自己是來台第幾代，相關族譜也都會留傳下來，如果照這樣發展，可能就會失去家庭倫理，家庭關係也不復存在，是不是？",
-                                "positionJudgement": "反對同性婚姻合法化",
-                                "position": "nay",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/05/LCIDC01_1040501.pdf",
-                                "meeting": "司法及法制委員會",
-                                "meetingCategory": "委員會質詢"
-                            }
-                        ],
-                        "dominantPosition": "nay",
-                        "dominantPercentage": 100
-                    }
-                ]
             }
         ]
     },
@@ -1043,7 +1047,7 @@ const initialState = {
                                 "party": "KMT",
                                 "date": 1368374400,
                                 "category": "發言",
-                                "content": "a.「一年」是目前台灣政治文化當中，大家約定俗成而可以接受的概念。部長，你認為罷免的時間如果予以縮短，對台灣的政治會不會有影響？\r\n b.總之，我認為一年的時間是給國家社會一個比較公道喘息的空間，也是給當選人一個執政的表現機會。",
+                                "content": "a.「一年」是目前台灣政治文化當中，大家約定俗成而可以接受的概念。部長，你認為罷免的時間如果予以縮短，對台灣的政治會不會有影響？\n b.總之，我認為一年的時間是給國家社會一個比較公道喘息的空間，也是給當選人一個執政的表現機會。",
                                 "positionJudgement": "反對下修罷免門檻",
                                 "position": "nay",
                                 "clarificationContent": "",
@@ -1067,7 +1071,7 @@ const initialState = {
                                 "party": "KMT",
                                 "date": 1336492800,
                                 "category": "發言",
-                                "content": "A.一年就要把總統罷免，這種事情難道不會影響未來的好壞？才剛開始就反對這樣不太好吧？我認為至少要看兩年才知道好壞\r\n \r\n B.人生的過程很奇怪，當初你做大事情，反對的人很多，但是你把它完成以後，很多人會對你歌功頌德，舉本席的實例，大埔事件中的竹南科學園區是我一手創立，我在選舉的時候被人家攻擊，最後被打下來，但是經過10 年，本席這次東山再起，大家就說我當初那麼厲害，所以當政治人物不要隨便衝動，因為民意如流水，一個大的政策可能在一時看不出好壞，但未來就能看出來，因此總統不應該在一年不到的時間就罷免。副主委覺得我的看法正不正確？",
+                                "content": "A.一年就要把總統罷免，這種事情難道不會影響未來的好壞？才剛開始就反對這樣不太好吧？我認為至少要看兩年才知道好壞\n \n B.人生的過程很奇怪，當初你做大事情，反對的人很多，但是你把它完成以後，很多人會對你歌功頌德，舉本席的實例，大埔事件中的竹南科學園區是我一手創立，我在選舉的時候被人家攻擊，最後被打下來，但是經過10 年，本席這次東山再起，大家就說我當初那麼厲害，所以當政治人物不要隨便衝動，因為民意如流水，一個大的政策可能在一時看不出好壞，但未來就能看出來，因此總統不應該在一年不到的時間就罷免。副主委覺得我的看法正不正確？",
                                 "positionJudgement": "反對下修罷免門檻",
                                 "position": "nay",
                                 "clarificationContent": "",
@@ -1114,7 +1118,7 @@ const initialState = {
                                 "clarificationLastUpdate": "",
                                 "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/35/LCIDC01_1023501.pdf",
                                 "meeting": "內政委員會",
-                                "meetingCategory": "委員會質詢\r\n 書面質詢"
+                                "meetingCategory": "委員會質詢\n 書面質詢"
                             }
                         ],
                         "dominantPosition": "nay",
@@ -1267,6 +1271,59 @@ const initialState = {
                 ]
             },
             {
+                "position": "unknown",
+                "legislators": [
+                    {
+                        "name": "陳怡潔",
+                        "party": "PFP",
+                        "records": [
+                            {
+                                "id": 63,
+                                "issue": "罷免",
+                                "legislator": "陳怡潔",
+                                "party": "PFP",
+                                "date": 1386691200,
+                                "category": "發言",
+                                "content": "(1)關於身分證字號、戶籍地址書寫不明、錯誤的部分，相關規定中並沒有規定不能拿回去補正，即沒有不准提議人拿回不符合的連署書，所以你們是依據什麼規定讓其不能拿回去？ (2)你們的依法行政是依你們的想法在行政，這等於是自打嘴巴，難怪人家都質疑你們是特定政黨的打手，如果你們失去了公信力，那就沒有存在的必要。",
+                                "positionJudgement": "質疑中選會以行政干擾罷免",
+                                "position": "unknown",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/103/01/LCIDC01_1030101.pdf",
+                                "meeting": "內政委員會",
+                                "meetingCategory": "委員會質詢"
+                            }
+                        ],
+                        "dominantPosition": "unknown",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "黃昭順",
+                        "party": "KMT",
+                        "records": [
+                            {
+                                "id": 76,
+                                "issue": "罷免",
+                                "legislator": "黃昭順",
+                                "party": "KMT",
+                                "date": 1411488000,
+                                "category": "發言",
+                                "content": "我每次只要在這裡主持一次會議，我和林國正委員回去高雄就被罷免一次，不僅只被罷免，他們還每天在那裡簽連署書。其實我個人根本不擔心這種事，對我來講那是小兒科，我也不在乎那些人。憑良心講，我知道他們做的事情有很多是違反我們大家所期待的。",
+                                "positionJudgement": "講罷免但不知所云",
+                                "position": "unknown",
+                                "clarificationContent": "",
+                                "clarificationLastUpdate": "",
+                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/103/57/LCIDC01_1035701_00007.pdf",
+                                "meeting": "經濟委員會",
+                                "meetingCategory": "委員會質詢"
+                            }
+                        ],
+                        "dominantPosition": "unknown",
+                        "dominantPercentage": 100
+                    }
+                ]
+            },
+            {
                 "position": "aye",
                 "legislators": [
                     {
@@ -1312,7 +1369,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1386691200,
                                 "category": "發言",
-                                "content": "所以罷免能不能宣傳一事，應該是沒有問題的，如果罷免不宣傳，人家怎麼知道這位主委、民意代表或是\r\n 首長做得好不好？",
+                                "content": "所以罷免能不能宣傳一事，應該是沒有問題的，如果罷免不宣傳，人家怎麼知道這位主委、民意代表或是\n 首長做得好不好？",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -1384,7 +1441,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1336492800,
                                 "category": "發言",
-                                "content": "A.這部分我代林佳龍委員及所有提案委員跟大家報告，希望修正現行條文，使對連任總統的罷免不應受到這一條文的限制，至於其它民選公職代表部分也可併同討論。\r\n \r\n B.因為第二任之後，有可能會以為後面都沒有民意束縛了，之後就能海闊天空、為所欲為，不管民怨再怎麼沸騰，再怎麼向你陳情、懇求，你都一意孤行，如果是這樣，那我們對第二任之後還有一年的保障，這其實是有問題的。",
+                                "content": "A.這部分我代林佳龍委員及所有提案委員跟大家報告，希望修正現行條文，使對連任總統的罷免不應受到這一條文的限制，至於其它民選公職代表部分也可併同討論。\n \n B.因為第二任之後，有可能會以為後面都沒有民意束縛了，之後就能海闊天空、為所欲為，不管民怨再怎麼沸騰，再怎麼向你陳情、懇求，你都一意孤行，如果是這樣，那我們對第二任之後還有一年的保障，這其實是有問題的。",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -1416,7 +1473,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1427212800,
                                 "category": "發言",
-                                "content": "A.張委員應該提早把苦處講出來，應該被罷免的是馬總統，不是你。接下來請陳委員其邁質詢。\r\n \r\n B.今天我們在講，無非是希望能朝向更公平、更開放、更民主，如果對罷免的投票用層層的技術障礙，最後沒有辦法罷免，其實你們就是違憲。憲法既然有規定，你們就應該設計制度，至少讓在一定的社會判準底下的可以逐步實踐。",
+                                "content": "A.張委員應該提早把苦處講出來，應該被罷免的是馬總統，不是你。接下來請陳委員其邁質詢。\n \n B.今天我們在講，無非是希望能朝向更公平、更開放、更民主，如果對罷免的投票用層層的技術障礙，最後沒有辦法罷免，其實你們就是違憲。憲法既然有規定，你們就應該設計制度，至少讓在一定的社會判準底下的可以逐步實踐。",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -1672,7 +1729,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1427212800,
                                 "category": "發言",
-                                "content": "A.選罷法的問題在於罷免的門檻和罷免可不可以宣傳，你知不知道有關罷免可不可以宣傳的問題曾經在我們內政委員會討論過很多次？\r\n \r\n (中略)你們的主席不要說一套、做一套，口頭上說都可以合理地討論，但是行政院的立場卻是從頭到尾擋到底！\r\n \r\n B.最後是因為蔡正元當時被罷免，他說：誰敢給我過，我就杯葛到底！所以就擋下來了。大家都認同、內政委員會也通過的可以宣傳，現在就是蔡正元在擋！有關罷免的門檻，請問現在到底可不可以討論？",
+                                "content": "A.選罷法的問題在於罷免的門檻和罷免可不可以宣傳，你知不知道有關罷免可不可以宣傳的問題曾經在我們內政委員會討論過很多次？\n \n (中略)你們的主席不要說一套、做一套，口頭上說都可以合理地討論，但是行政院的立場卻是從頭到尾擋到底！\n \n B.最後是因為蔡正元當時被罷免，他說：誰敢給我過，我就杯葛到底！所以就擋下來了。大家都認同、內政委員會也通過的可以宣傳，現在就是蔡正元在擋！有關罷免的門檻，請問現在到底可不可以討論？",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -1704,7 +1761,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1428595200,
                                 "category": "提案",
-                                "content": "罷免相關規定視同選舉，罷免可以宣傳\r\n (總統副總統選舉罷免法部分條文修正草案)",
+                                "content": "罷免相關規定視同選舉，罷免可以宣傳\n (總統副總統選舉罷免法部分條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -1775,7 +1832,7 @@ const initialState = {
                                 "clarificationLastUpdate": "",
                                 "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/09/LCIDC01_1040905.pdf",
                                 "meeting": "院會",
-                                "meetingCategory": "委員會質詢\r\n 書面質詢"
+                                "meetingCategory": "委員會質詢\n 書面質詢"
                             }
                         ],
                         "dominantPosition": "aye",
@@ -1808,7 +1865,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1336060800,
                                 "category": "提案",
-                                "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                                "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -1944,7 +2001,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1334851200,
                                 "category": "提案",
-                                "content": "總統副總統連任者不受第一年任期不得罷免之限制\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                                "content": "總統副總統連任者不受第一年任期不得罷免之限制\n (總統副總統選舉罷免法第七十條條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -2104,7 +2161,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1336060800,
                                 "category": "提案",
-                                "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                                "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -2144,7 +2201,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1336060800,
                                 "category": "提案",
-                                "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                                "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -2168,7 +2225,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1336060800,
                                 "category": "提案",
-                                "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                                "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -2192,7 +2249,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1336060800,
                                 "category": "提案",
-                                "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                                "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -2264,7 +2321,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1428595200,
                                 "category": "提案",
-                                "content": "罷免相關規定視同選舉，罷免可以宣傳\r\n (總統副總統選舉罷免法部分條文修正草案)",
+                                "content": "罷免相關規定視同選舉，罷免可以宣傳\n (總統副總統選舉罷免法部分條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -2552,7 +2609,7 @@ const initialState = {
                                 "party": "DPP",
                                 "date": 1428595200,
                                 "category": "提案",
-                                "content": "罷免相關規定視同選舉，罷免可以宣傳\r\n (總統副總統選舉罷免法部分條文修正草案)",
+                                "content": "罷免相關規定視同選舉，罷免可以宣傳\n (總統副總統選舉罷免法部分條文修正草案)",
                                 "positionJudgement": "贊成下修罷免門檻",
                                 "position": "aye",
                                 "clarificationContent": "",
@@ -2563,59 +2620,6 @@ const initialState = {
                             }
                         ],
                         "dominantPosition": "aye",
-                        "dominantPercentage": 100
-                    }
-                ]
-            },
-            {
-                "position": "unknown",
-                "legislators": [
-                    {
-                        "name": "陳怡潔",
-                        "party": "PFP",
-                        "records": [
-                            {
-                                "id": 63,
-                                "issue": "罷免",
-                                "legislator": "陳怡潔",
-                                "party": "PFP",
-                                "date": 1386691200,
-                                "category": "發言",
-                                "content": "(1)關於身分證字號、戶籍地址書寫不明、錯誤的部分，相關規定中並沒有規定不能拿回去補正，即沒有不准提議人拿回不符合的連署書，所以你們是依據什麼規定讓其不能拿回去？ (2)你們的依法行政是依你們的想法在行政，這等於是自打嘴巴，難怪人家都質疑你們是特定政黨的打手，如果你們失去了公信力，那就沒有存在的必要。",
-                                "positionJudgement": "質疑中選會以行政干擾罷免",
-                                "position": "unknown",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/103/01/LCIDC01_1030101.pdf",
-                                "meeting": "內政委員會",
-                                "meetingCategory": "委員會質詢"
-                            }
-                        ],
-                        "dominantPosition": "unknown",
-                        "dominantPercentage": 100
-                    },
-                    {
-                        "name": "黃昭順",
-                        "party": "KMT",
-                        "records": [
-                            {
-                                "id": 76,
-                                "issue": "罷免",
-                                "legislator": "黃昭順",
-                                "party": "KMT",
-                                "date": 1411488000,
-                                "category": "發言",
-                                "content": "我每次只要在這裡主持一次會議，我和林國正委員回去高雄就被罷免一次，不僅只被罷免，他們還每天在那裡簽連署書。其實我個人根本不擔心這種事，對我來講那是小兒科，我也不在乎那些人。憑良心講，我知道他們做的事情有很多是違反我們大家所期待的。",
-                                "positionJudgement": "講罷免但不知所云",
-                                "position": "unknown",
-                                "clarificationContent": "",
-                                "clarificationLastUpdate": "",
-                                "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/103/57/LCIDC01_1035701_00007.pdf",
-                                "meeting": "經濟委員會",
-                                "meetingCategory": "委員會質詢"
-                            }
-                        ],
-                        "dominantPosition": "unknown",
                         "dominantPercentage": 100
                     }
                 ]
