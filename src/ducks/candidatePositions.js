@@ -22,6 +22,7 @@ const candidatePositions =
                         "meetingCategory": "院會書面質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -57,6 +58,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "unknown",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -177,6 +179,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -329,6 +332,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -380,6 +384,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -436,6 +441,7 @@ const candidatePositions =
                         "meetingCategory": "公聽會\n 發言"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -487,6 +493,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -527,6 +534,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -562,6 +570,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -634,6 +643,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -674,6 +684,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -725,6 +736,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -797,6 +809,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -832,6 +845,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -888,6 +902,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -928,6 +943,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1016,6 +1032,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1104,6 +1121,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1203,6 +1221,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1243,6 +1262,7 @@ const candidatePositions =
                         "meetingCategory": "院會書面質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1283,6 +1303,7 @@ const candidatePositions =
                         "meetingCategory": "院會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1339,6 +1360,7 @@ const candidatePositions =
                         "meetingCategory": "預算主決議"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1486,6 +1508,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1542,6 +1565,7 @@ const candidatePositions =
                         "meetingCategory": "預算主決議"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1625,6 +1649,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1665,6 +1690,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1716,6 +1742,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢\n 書面質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1756,6 +1783,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1796,6 +1824,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1836,6 +1865,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1876,6 +1906,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1948,6 +1979,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2020,6 +2052,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2060,6 +2093,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2132,6 +2166,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2188,6 +2223,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢\n 書面質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2228,6 +2264,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2300,6 +2337,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2340,6 +2378,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "unknown",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2380,6 +2419,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2420,6 +2460,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2524,6 +2565,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2564,6 +2606,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2604,6 +2647,7 @@ const candidatePositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2660,6 +2704,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2716,6 +2761,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2788,6 +2834,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2844,6 +2891,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2884,6 +2932,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2924,6 +2973,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -2964,6 +3014,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3004,6 +3055,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3044,6 +3096,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3084,6 +3137,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3172,6 +3226,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3228,6 +3283,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3268,6 +3324,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3308,6 +3365,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3364,6 +3422,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3404,6 +3463,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3444,6 +3504,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3484,6 +3545,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -3524,6 +3586,7 @@ const candidatePositions =
                         "meetingCategory": "法律提案"
                     }
                 ],
+                "dominantPosition": "aye",
                 "positionCounts": [
                     {
                         "position": "nay",
