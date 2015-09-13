@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import {setCandidateFilter} from '../../ducks/candidatePositions';
 
 
-import CandidateAvatar from '../../components/CandidateAvatar/CandidateAvatar.js';
+import CandidateProfile from '../../components/CandidateProfile/CandidateProfile.js';
 import CandidateIssueGroup from '../../components/CandidateIssueGroup/CandidateIssueGroup.js';
 
 @connect(
@@ -56,7 +56,7 @@ export default class Candidate extends Component {
 
     return (
       <div className={styles.wrap}>
-          <CandidateAvatar id={id} />
+          <CandidateProfile id={id} />
           <div className={styles.issueWrap}> 
             {issueGroups}
           </div>

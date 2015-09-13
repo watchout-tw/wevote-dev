@@ -1,0 +1,91 @@
+$themeColor: #006060;
+.wrap {
+	display: inline-block;
+}
+
+.is-KMT {
+    border-color: #3288bd;
+}
+.is-DPP {
+    border-color: #7fbc41;
+}
+.is-PFP {
+    border-color: orange;
+}
+.is-TSU {
+    border-color: #b35806;
+}
+.is-NP {
+    border-color: gray;
+}
+.is-NPU {
+    border-color: rgba(194,15,81,0.9);
+}
+
+.name {
+	vertical-align: top;
+	padding-top: 16px;
+	margin-left: 5px;
+    text-align: center;
+}
+
+.party-ititle, .people-ititle {
+    text-align: center;
+    height: 240px;
+    background: url(./images/intitle-common.png) center bottom;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.inner-title {
+    margin: 0 -9% 30px -9%;
+    height: 200px;
+    position: relative;
+}
+
+.people-basic-info {
+    width: 430px;
+    margin: auto;
+    text-align: left;
+    padding: 25px 0 0 0;
+    height: 150px;
+}
+.people-basic-info h1 {
+    font-size: 30px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+.people-basic-info .party-flag-s {
+    float: left;
+    margin: 0 5px 0 0;
+}
+.people-basic-info .party {
+    float: left;
+    margin: 10px 0 0 0;
+}
+.people-basic-info span {
+    float: left;
+}
+.basic-txt {
+    float: left;
+    width: 290px;
+}
+.basic-txt p {
+    margin: 0 0 3px 0;
+    padding: 0 0 3px 0;
+    font-size: 18px;
+    border-bottom: 1px dotted #ccc;
+}
+.people-pic {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 100px;
+    float: left;
+    border: 5px solid #006060;
+    margin: 0 10px 0 0;
+}
+.people-pic img {
+    width: 100%;
+}
