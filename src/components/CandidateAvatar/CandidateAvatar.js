@@ -33,11 +33,10 @@ export default class CandidateAvatar extends Component {
     }
   
     return (
-        <Link to={`/candidates/${id}`} className={styles.wrap}>
-            <img className={`${styles.wrap}  is-${party}`}
+        <div className={styles.wrap}>
+            <img className={`${styles.avatar}  is-${party}`}
                  src={imgURL} />
-            <div className={styles.name}>{name}</div>
-        </Link>
+        </div>
     );
 
   }

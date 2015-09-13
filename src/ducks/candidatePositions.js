@@ -3613,6 +3613,7 @@ const initialState = {
 }
 
 const SET_CANDIDATE_FILTER = 'SET_CANDIDATE_FILTER';
+const GET_ALL_CANDIDATES = 'GET_ALL_CANDIDATES';
 
 export default function reducer(state = initialState, action = {}) {
   
@@ -3630,15 +3631,25 @@ export default function reducer(state = initialState, action = {}) {
         return [];
       }
 
+    case GET_ALL_CANDIDATES:
+        return {
+            candidateFilter: "",
+            data: candidatePositions
+        };
+
     default:
       return state;
   }
 }
 export function setCandidateFilter(value) {
-  console.log("who's calling mama?"+ value)
   return {
     type: SET_CANDIDATE_FILTER,
     name: value
+  };
+}
+export function getAllCandidates() {
+  return {
+    type: GET_ALL_CANDIDATES
   };
 }
 

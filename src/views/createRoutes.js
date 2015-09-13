@@ -4,6 +4,7 @@ import App from 'views/App';
 import Home from 'views/Home/Home.js';
 import About from 'views/About/About.js';
 import Issue from 'views/Issue/Issue.js';
+import CandidateList from 'views/CandidateList/CandidateList.js';
 import Candidate from 'views/Candidate/Candidate.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
@@ -13,6 +14,7 @@ export default function(store) {
     <Route component={App}>
       <Route path="/" component={Home}/>
       <Route path="/issues/:issueName" component={Issue}/>
+      <Route path="/candidates" component={CandidateList}/>
       <Route path="/candidates/:candidateId" component={Candidate}/>
       <Route path="/about" component={About}/>
       <Route path="*" component={NotFound}/>

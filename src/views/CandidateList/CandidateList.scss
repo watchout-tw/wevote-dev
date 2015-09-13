@@ -1,0 +1,62 @@
+$cubeSize: 20px;
+$ayeColor: #00FFB0;
+$nayColor: #FF0055;
+$unknownColor: #FFF800;
+.wrap {
+	text-align: center;
+	position: relative;
+}
+.item {
+	cursor: pointer;
+	display: inline-block;
+	margin: 20px;
+	border: 2px solid;
+}
+.item:hover {
+	box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2);
+}
+.link, .link:visited {
+	color: rgb(53,55,54);
+	text-decoration: none;
+	display: block;
+}
+.name {
+	vertical-align: top;
+	padding-top: 14px;
+	margin-left: 5px;
+    text-align: center;
+    display: inline-block;
+    width: 60px;
+}
+.issueCubes {
+	border-top: 1px solid;
+	font-size: 20px;
+}
+.issueCube {
+	display: inline-block;
+	padding: 10px;
+	vertical-align: top;
+	color: black;
+	width: 60px;
+	border-right: 1px solid;
+}
+.issueCubeLast {
+	display: inline-block;
+	padding: 10px;
+	vertical-align: top;
+	color: black;
+	width: 60px;
+
+}
+.aye {
+	background: $ayeColor;
+}
+.nay {
+	background: $nayColor;
+}
+.unknown {
+	background: $unknownColor;
+}
+.none {
+	background: gray;
+}
