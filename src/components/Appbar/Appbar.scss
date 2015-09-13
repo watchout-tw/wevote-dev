@@ -4,14 +4,13 @@ $paddingHeight: 15px; /* (50-20)/2 */
 
 .appbar {
 	background: $themeColor;
-	
 	padding: 0px;
 }
 .siteLogo {
 	float: left;
-	width: 220px;
-	margin-top: 5px;
-	margin-left: 10px;
+	height: 36px;
+    margin-top: 8px;
+    margin-left: 16px;
 }
 ul.lists {
 	display: inline-block;
