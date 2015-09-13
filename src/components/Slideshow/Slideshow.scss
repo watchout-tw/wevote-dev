@@ -3,13 +3,9 @@ $break-large: 1000px;
 .wrap {
 	position: relative;
 	width: 100%;
+	margin-bottom: 30px;
 }
-@media screen and (min-width:$break-large){
-	.wrap {
-		width: 1000px;
-		margin: 0 auto;
-	}
-}
+
 .prev {
 	padding: 6px 20px 6px 20px;
 	left: 5px;
@@ -29,18 +25,18 @@ $break-large: 1000px;
 	color: white;
 }
 .slideImgLoading {
-	width: calc( 100% - 10px );
+	width: 100%;
 	opacity: 0.2;
 	
 }
 .slideImg {
-	width: calc( 100% - 10px );
+	width: 100%;
 	opacity: 1;
 	transition: all 0.8s ease-out;
 	
 }
 .pageWrap {
-	text-align: left;
+	
 }
 .page {
 	background: black;
