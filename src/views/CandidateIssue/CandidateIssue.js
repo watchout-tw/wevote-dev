@@ -16,7 +16,8 @@ import url2eng from '../../utils/url2eng';
 @connect(
     state => ({
                   candidates: state.candidates,
-                  candidatePositions: state.candidatePositions
+                  candidatePositions: state.candidatePositions,
+                  issues: state.issues
                }),
     dispatch => bindActionCreators({setCandidateFilter}, dispatch))
 
@@ -24,6 +25,15 @@ export default class CandidateIssue extends Component {
   static propTypes = {
       setCandidateFilter: PropTypes.func.isRequired,
       candidatePositions: PropTypes.object.isRequired
+  }
+  //設定 initial state
+  constructor(props) { super(props)
+      this.state = {
+          showMenu: false,
+      }
+  }
+  _toggleMenu(){  
+    this.setState({ showMenu: !this.state.showMenu });
   }
   componentWillMount(){
       const { candidates, setCandidateFilter } = this.props;
@@ -47,8 +57,8 @@ export default class CandidateIssue extends Component {
     const styles = require('./CandidateIssue.scss');
     const id = this.props.params.candidateId;
     const issueURL = this.props.params.issueName;
-    const {candidatePositions} = this.props;
-    
+    const {candidatePositions, issues} = this.props;
+    const {showMenu} = this.state;
 
     let issueDataName = url2eng(issueURL)
 
@@ -56,6 +66,15 @@ export default class CandidateIssue extends Component {
 
     const position = candidatePositions.data.positions[issueDataName];
 
+    let issueMenu = (showMenu===true) ? (Object.keys(issues).map((currentIssueName,i)=>{
+        let active = (issueURL === currentIssueName) ? styles.menuActive : "";
+        return  <Link className={` ${styles.menu} ${active}`}
+                      to={`/candidates/${id}/${currentIssueName}`} 
+                      key={i}>{issues[currentIssueName].title}</Link>;
+        
+    })) : "";
+    
+   
     return (
       <div className={styles.wrap}> 
           <CandidateProfile id={id} />
@@ -64,11 +83,16 @@ export default class CandidateIssue extends Component {
               <div className={styles.summary}> 
                   <CandidateIssueGroup issueName={issueDataName}
                                        data={position} />
+                  <div className={styles.menuBlock}>
+                      <div className={styles.menuTitle}
+                           onClick={this._toggleMenu.bind(this)}>更換議題</div>
+                      {issueMenu}
+                  </div>
               </div>
               <div className={styles.table}>
                   <RecordTable data={position}/> 
               </div>
-              
+
           </div>
       </div>
     );

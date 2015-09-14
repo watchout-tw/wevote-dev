@@ -7,10 +7,36 @@ $breakLarge: 1000px;
 	
 }
 .summary {
-
+	position: relative;
 }
 .table {
 
+}
+.menuBlock {
+	position: absolute;
+	right: 10px;
+	top: 0;
+
+}
+.menuTitle, .menuTitle:visited {
+	cursor: pointer;
+	color: black;
+	border-bottom: 2px solid;
+	padding: 4px 8px;
+	margin-bottom: 4px;
+}
+.menu, .menu:visited {
+	display: block;
+	padding: 4px 5px;
+	cursor: pointer;
+	color: rgb(153,155,154);
+	text-decoration: none;
+}
+.menu:hover {
+	text-decoration: underline;
+}
+.menu.menuActive {
+	color: black;
 }
 @media screen and (min-width: $breakLarge){
 	.main {
@@ -19,6 +45,14 @@ $breakLarge: 1000px;
 	.summary {
 		display: inline-block;
 		vertical-align: top;
+	}
+	.menuBlock {
+		position: relative;
+		padding: 0 40px;
+		right: 0;
+	}
+	.menu, .menu:visited, .menuTitle, .menuTitle:visited {
+		display: block;
 	}
 	.table {
 		display: inline-block;
