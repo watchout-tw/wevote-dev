@@ -32,17 +32,15 @@ export default class Profile extends Component {
       imgURL = require("./images/default.jpg");
     }
   
-        
-
     return (
         <div className={`$styles["inner-title"] ${styles["people-ititle"]} `}>
           <header>
           <div className={styles["people-basic-info"]}>
-            <div className={styles["people-pic"]}>
+            <Link to={`/candidates/${id}`}className={styles["people-pic"]}>
                 <img className={`${styles.avatar}  is-${party}`}
                      src={imgURL} />
 
-            </div>
+            </Link>
 
             <h1>{name}</h1>
             <div className={styles.party}>

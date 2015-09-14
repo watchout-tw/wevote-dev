@@ -1,0 +1,49 @@
+$cubeSize: 20px;
+$ayeColor: #00FFB0;
+$nayColor: #FF0055;
+$unknownColor: #FFF800;
+
+.wrap {
+	text-align: left;
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.aRecordRow {
+	display: block;
+	padding: 10px;
+	background: white;
+	margin-top: 1px;
+	box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
+}
+.positionCube {
+	width: $cubeSize;
+	height: $cubeSize;
+	display: inline-block;
+	margin: 4px 10px 0 10px;
+}
+.aye {
+	background: $ayeColor;
+}
+.nay {
+	background: $nayColor;
+}
+.unknown {
+	background: $unknownColor;
+}
+.date {
+	display: inline-block;
+	padding: 0 10px;
+	vertical-align: top;
+	margin-top: 2px;
+}
+.category {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+	padding: 0 10px;
+}
+.content {
+	margin-top: 4px;
+	margin-left: 10px;
+}

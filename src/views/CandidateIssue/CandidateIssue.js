@@ -8,6 +8,8 @@ import {setCandidateFilter} from '../../ducks/candidatePositions';
 
 import CandidateProfile from '../../components/CandidateProfile/CandidateProfile.js';
 import CandidateIssueGroup from '../../components/CandidateIssueGroup/CandidateIssueGroup.js';
+import RecordTable from '../../components/RecordTable/RecordTable.js';
+
 
 import url2eng from '../../utils/url2eng';
 
@@ -58,9 +60,9 @@ export default class CandidateIssue extends Component {
           <CandidateProfile id={id} />
           
           <div className={styles.issueWrap}> 
-               <CandidateIssueGroup issueName={issueDataName}
-                                    data={position} />
-
+              <CandidateIssueGroup issueName={issueDataName}
+                                   data={position} />
+              <RecordTable data={position} /> 
           </div>
       </div>
     );

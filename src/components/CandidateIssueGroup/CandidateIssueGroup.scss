@@ -7,6 +7,7 @@ $unknownColor: #FFF800;
 	display: inline-block;
 	margin: 20px;
 	vertical-align: top;
+	
 }
 .title {
 	margin: 5px;
@@ -64,7 +65,7 @@ $unknownColor: #FFF800;
 	padding: 10px;
 	font-size: 14px;
 	line-height: 1.4;
-	top: -100px;
+	bottom: -100px;
 	height:90px;
 	width: 340px;
 	border: 1px solid;

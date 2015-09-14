@@ -51,10 +51,10 @@ export default class Candidate extends Component {
     let issueGroups = Object.keys(positions).map((currentIssue, index)=>{
         //console.log(positions[currentIssue])
         let issueUrl = eng2url(currentIssue);
-        return (<div key={index} >
+        return (<div className={styles.issueBlock} key={index} >
                     <CandidateIssueGroup issueName={currentIssue}
                                          data={positions[currentIssue]}/>
-                    <Link to={`/candidates/${id}/${issueUrl }`}>看更多</Link>
+                    <Link className={styles.seeMore} to={`/candidates/${id}/${issueUrl }`}>看更多</Link>
                </div>)
     })
 
