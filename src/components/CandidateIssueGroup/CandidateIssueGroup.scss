@@ -42,11 +42,11 @@ $unknownColor: #FFF800;
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
-	cursor: pointer;
+	// cursor: pointer;
 }
-.positionCube:hover, .positionCubeActive {
-	border: 3px solid;
-}
+// .positionCube:hover, .positionCubeActive {
+// 	border: 3px solid;
+// }
 .aye {
 	background: $ayeColor;
 }

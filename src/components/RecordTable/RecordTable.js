@@ -65,7 +65,7 @@ export default class RecordTable extends Component {
     const categoryFilters = ['所有','提案','發言','表決'];
     const {ascending, categoryFilter, sortingOption} = this.state;
 
-    const sortingOptions = ['按立場排','按時序排'];
+    const sortingOptions = ['按時序排','按立場排'];
 
 
     ///////
@@ -111,7 +111,10 @@ export default class RecordTable extends Component {
 
     return (
       <div className={styles.wrap}>
-            {options}{sortings}
+            <div className={styles.controls}>
+              {options}
+              <div className={styles.sortingButtons}>{sortings}</div>
+            </div>
             {records}
       </div>
     );

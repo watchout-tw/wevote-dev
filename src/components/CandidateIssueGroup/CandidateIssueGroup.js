@@ -11,40 +11,36 @@ class Record extends Component {
     data : PropTypes.object.isRequired
   }
 
-  // //設定 initial state
-  constructor(props) { super(props)
-      this.state = { active: false}
-  }
+  // // //設定 initial state
+  // constructor(props) { super(props)
+  //     this.state = { active: false}
+  // }
   
-  _setActive(value, event){
-    this.setState({ active: true });
-  }
+  // _setActive(value, event){
+  //   this.setState({ active: true });
+  // }
 
-  _setInactive(){  
-    this.setState({ active: false });
-  }
+  // _setInactive(){  
+  //   this.setState({ active: false });
+  // }
 
   render() {
     const styles = require('./CandidateIssueGroup.scss');
     const {data} = this.props;
-    const {active} = this.state;
+    //const {active} = this.state;
 
     let date = moment.unix(data.date);
 
-    let detailText = (active) ? (
-      <div className={styles.activeCube}>
-           <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
-           <div>{data.content}</div>
-      </div>): "";
+    // let detailText = (active) ? (
+    //   <div className={styles.activeCube}>
+    //        <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
+    //        <div>{data.content}</div>
+    //   </div>): "";
 
     return (
       <div className={styles.postionWrap}>
-           
-           {detailText}
-
-          <div className={` ${styles.positionCube} ${styles[data.position]}`}
-               onMouseEnter={this._setActive.bind(this)}
-               onMouseLeave={this._setInactive.bind(this)}>
+       
+          <div className={` ${styles.positionCube} ${styles[data.position]}`}>
           </div>
 
       </div>

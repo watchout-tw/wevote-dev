@@ -1,5 +1,27 @@
+$breakLarge: 1000px;
 .wrap {
 	text-align: center;
 	position: relative;
+}
+.main {
 	
+}
+.summary {
+
+}
+.table {
+
+}
+@media screen and (min-width: $breakLarge){
+	.main {
+		padding-right: 120px;
+	}
+	.summary {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.table {
+		display: inline-block;
+	}
+
 }

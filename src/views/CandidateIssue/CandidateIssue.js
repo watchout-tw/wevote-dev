@@ -60,10 +60,15 @@ export default class CandidateIssue extends Component {
       <div className={styles.wrap}> 
           <CandidateProfile id={id} />
           
-          <div className={styles.issueWrap}> 
-              <CandidateIssueGroup issueName={issueDataName}
-                                   data={position} />
-              <RecordTable data={position}/> 
+          <div className={styles.main}>
+              <div className={styles.summary}> 
+                  <CandidateIssueGroup issueName={issueDataName}
+                                       data={position} />
+              </div>
+              <div className={styles.table}>
+                  <RecordTable data={position}/> 
+              </div>
+              
           </div>
       </div>
     );

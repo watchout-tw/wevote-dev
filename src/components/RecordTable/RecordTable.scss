@@ -9,6 +9,23 @@ $unknownColor: #FFF800;
 	max-width: 600px;
 	margin: 0 auto;
 }
+.controls {
+	position: relative;
+}
+.sortingButtons {
+	display: none;
+}
+@media screen and (min-width: 500px){
+	.controls {
+		width: 600px;
+	}
+	.sortingButtons {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
 .sortingButton {
     display: block;
     width: auto;
