@@ -25,16 +25,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -44,7 +44,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -52,7 +52,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -85,16 +85,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -104,7 +104,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -112,7 +112,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -155,7 +155,7 @@ const candidatePositions =
                         "clarificationLastUpdate": "",
                         "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
                         "meeting": "司法及法制委員會",
-                        "meetingCategory": "公聽會\n 主辦"
+                        "meetingCategory": "公聽會\r\n 主辦"
                     },
                     {
                         "id": 16,
@@ -187,7 +187,7 @@ const candidatePositions =
                         "clarificationLastUpdate": "",
                         "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/103/64/LCIDC01_1036401.pdf",
                         "meeting": "司法及法制委員會",
-                        "meetingCategory": "公聽會\n 主辦"
+                        "meetingCategory": "公聽會\r\n 主辦"
                     },
                     {
                         "id": 36,
@@ -257,16 +257,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 8
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 8
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 8
@@ -309,16 +309,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -333,7 +333,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -341,7 +341,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -352,7 +352,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -360,7 +360,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -376,7 +376,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -384,7 +384,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -395,7 +395,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -403,7 +403,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -419,7 +419,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -427,7 +427,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -438,7 +438,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -446,7 +446,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -462,7 +462,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -470,7 +470,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -481,7 +481,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -489,7 +489,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -505,7 +505,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -513,7 +513,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -524,7 +524,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -532,7 +532,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -548,7 +548,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -556,7 +556,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -567,7 +567,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -575,7 +575,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -591,7 +591,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -599,7 +599,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -637,22 +637,22 @@ const candidatePositions =
                         "clarificationLastUpdate": "",
                         "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/35/LCIDC01_1023501.pdf",
                         "meeting": "內政委員會",
-                        "meetingCategory": "委員會質詢\n 書面質詢"
+                        "meetingCategory": "委員會質詢\r\n 書面質詢"
                     }
                 ],
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 2
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 2
                     }
                 ],
                 "totalCounts": 2
@@ -667,7 +667,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -675,7 +675,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -686,7 +686,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -694,7 +694,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -710,7 +710,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -718,7 +718,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -729,7 +729,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -737,7 +737,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -753,7 +753,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -761,7 +761,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -772,7 +772,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -780,7 +780,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -796,7 +796,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -804,7 +804,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -851,7 +851,7 @@ const candidatePositions =
                         "party": "KMT",
                         "date": 1368374400,
                         "category": "發言",
-                        "content": "a.「一年」是目前台灣政治文化當中，大家約定俗成而可以接受的概念。部長，你認為罷免的時間如果予以縮短，對台灣的政治會不會有影響？\n b.總之，我認為一年的時間是給國家社會一個比較公道喘息的空間，也是給當選人一個執政的表現機會。",
+                        "content": "a.「一年」是目前台灣政治文化當中，大家約定俗成而可以接受的概念。部長，你認為罷免的時間如果予以縮短，對台灣的政治會不會有影響？\r\n b.總之，我認為一年的時間是給國家社會一個比較公道喘息的空間，也是給當選人一個執政的表現機會。",
                         "positionJudgement": "反對下修罷免門檻",
                         "position": "nay",
                         "clarificationContent": "",
@@ -864,16 +864,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 3
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 3
                     }
                 ],
                 "totalCounts": 3
@@ -905,16 +905,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -924,7 +924,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -932,7 +932,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -968,29 +968,29 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1356451200,
                         "category": "發言",
-                        "content": "同性婚姻其實是一種人權保障的高度體現，臺灣社會經過這麼久的教育，\n 觀念和資訊這麼發達，如果把這個理念闡述出來，我相信絕大多數的人是會同意的。",
+                        "content": "同性婚姻其實是一種人權保障的高度體現，臺灣社會經過這麼久的教育，\r\n 觀念和資訊這麼發達，如果把這個理念闡述出來，我相信絕大多數的人是會同意的。",
                         "positionJudgement": "贊成同性婚姻合法化",
                         "position": "aye",
                         "clarificationContent": "",
                         "clarificationLastUpdate": "",
                         "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
                         "meeting": "司法及法制委員會",
-                        "meetingCategory": "公聽會\n 發言"
+                        "meetingCategory": "公聽會\r\n 發言"
                     }
                 ],
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -1020,7 +1020,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1428595200,
                         "category": "提案",
-                        "content": "罷免相關規定視同選舉，罷免可以宣傳\n (總統副總統選舉罷免法部分條文修正草案)",
+                        "content": "罷免相關規定視同選舉，罷免可以宣傳\r\n (總統副總統選舉罷免法部分條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -1033,16 +1033,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -1057,7 +1057,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1065,7 +1065,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1076,7 +1076,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1084,7 +1084,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1104,14 +1104,14 @@ const candidatePositions =
                         "party": "KMT",
                         "date": 1356451200,
                         "category": "發言",
-                        "content": "本席認為，就法論法來看，法律上本不應該對同性戀者有所歧視，甚至不給予法律上權益的保障！\n \n 在立法上，則仍需要形成社會上的多數共識，尤其台灣現在少子化問題嚴重，如何增產報國也是重要的國安議題，所以同性婚姻合法化及伴侶權益法制化，在國外經過多年討論仍無法獲得絕對多數的支持，更何況民風保守的台灣，而台灣對此一議題缺乏廣泛的討論，也非我們主法院一場公聽會即可以下定論，仍需進一步廣納社會意見，讓社會多加討論才可以。",
+                        "content": "本席認為，就法論法來看，法律上本不應該對同性戀者有所歧視，甚至不給予法律上權益的保障！\r\n \r\n 在立法上，則仍需要形成社會上的多數共識，尤其台灣現在少子化問題嚴重，如何增產報國也是重要的國安議題，所以同性婚姻合法化及伴侶權益法制化，在國外經過多年討論仍無法獲得絕對多數的支持，更何況民風保守的台灣，而台灣對此一議題缺乏廣泛的討論，也非我們主法院一場公聽會即可以下定論，仍需進一步廣納社會意見，讓社會多加討論才可以。",
                         "positionJudgement": "未明確表態，認為同性婚姻合法化需要更多社會共識",
                         "position": "unknown",
                         "clarificationContent": "",
                         "clarificationLastUpdate": "",
                         "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
                         "meeting": "司法及法制委員會",
-                        "meetingCategory": "公聽會\n 發言"
+                        "meetingCategory": "公聽會\r\n 發言"
                     },
                     {
                         "id": 42,
@@ -1133,16 +1133,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 1
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 2
@@ -1152,7 +1152,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1160,7 +1160,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1176,7 +1176,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1184,7 +1184,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1228,16 +1228,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -1285,16 +1285,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -1388,7 +1388,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1427212800,
                         "category": "發言",
-                        "content": "A.選罷法的問題在於罷免的門檻和罷免可不可以宣傳，你知不知道有關罷免可不可以宣傳的問題曾經在我們內政委員會討論過很多次？\n \n (中略)你們的主席不要說一套、做一套，口頭上說都可以合理地討論，但是行政院的立場卻是從頭到尾擋到底！\n \n B.最後是因為蔡正元當時被罷免，他說：誰敢給我過，我就杯葛到底！所以就擋下來了。大家都認同、內政委員會也通過的可以宣傳，現在就是蔡正元在擋！有關罷免的門檻，請問現在到底可不可以討論？",
+                        "content": "A.選罷法的問題在於罷免的門檻和罷免可不可以宣傳，你知不知道有關罷免可不可以宣傳的問題曾經在我們內政委員會討論過很多次？\r\n \r\n (中略)你們的主席不要說一套、做一套，口頭上說都可以合理地討論，但是行政院的立場卻是從頭到尾擋到底！\r\n \r\n B.最後是因為蔡正元當時被罷免，他說：誰敢給我過，我就杯葛到底！所以就擋下來了。大家都認同、內政委員會也通過的可以宣傳，現在就是蔡正元在擋！有關罷免的門檻，請問現在到底可不可以討論？",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -1420,7 +1420,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1428595200,
                         "category": "提案",
-                        "content": "罷免相關規定視同選舉，罷免可以宣傳\n (總統副總統選舉罷免法部分條文修正草案)",
+                        "content": "罷免相關規定視同選舉，罷免可以宣傳\r\n (總統副總統選舉罷免法部分條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -1433,16 +1433,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 8
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 8
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 8
@@ -1457,7 +1457,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1465,7 +1465,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1476,7 +1476,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1484,7 +1484,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1517,16 +1517,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -1536,7 +1536,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1544,7 +1544,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1560,7 +1560,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1568,7 +1568,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1596,16 +1596,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -1620,7 +1620,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1628,7 +1628,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1672,16 +1672,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -1696,7 +1696,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1704,7 +1704,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1715,7 +1715,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1723,7 +1723,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1739,7 +1739,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1747,7 +1747,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1775,16 +1775,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -1799,7 +1799,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1807,7 +1807,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1851,16 +1851,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -1875,7 +1875,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1883,7 +1883,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1894,7 +1894,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -1902,7 +1902,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -1935,16 +1935,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -1958,7 +1958,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1334851200,
                         "category": "提案",
-                        "content": "總統副總統連任者不受第一年任期不得罷免之限制\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                        "content": "總統副總統連任者不受第一年任期不得罷免之限制\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -1971,16 +1971,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -1995,7 +1995,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2003,7 +2003,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2014,7 +2014,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2022,7 +2022,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2038,7 +2038,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2046,7 +2046,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2057,7 +2057,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2065,7 +2065,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2081,7 +2081,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2089,7 +2089,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2100,7 +2100,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2108,7 +2108,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2124,7 +2124,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2132,7 +2132,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2143,7 +2143,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2151,7 +2151,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2216,16 +2216,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 3
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 3
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 3
@@ -2235,7 +2235,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2243,7 +2243,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2259,7 +2259,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2267,7 +2267,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2278,7 +2278,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2286,7 +2286,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2302,7 +2302,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2310,7 +2310,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2321,7 +2321,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2329,7 +2329,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2362,16 +2362,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -2381,7 +2381,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2389,7 +2389,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2405,7 +2405,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2413,7 +2413,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2441,16 +2441,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -2482,16 +2482,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -2528,22 +2528,22 @@ const candidatePositions =
                         "clarificationLastUpdate": "",
                         "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/104/09/LCIDC01_1040905.pdf",
                         "meeting": "院會",
-                        "meetingCategory": "委員會質詢\n 書面質詢"
+                        "meetingCategory": "委員會質詢\r\n 書面質詢"
                     }
                 ],
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 1
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -2558,7 +2558,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2566,7 +2566,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2581,7 +2581,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1336060800,
                         "category": "提案",
-                        "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                        "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -2610,16 +2610,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -2667,16 +2667,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -2706,7 +2706,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1336492800,
                         "category": "發言",
-                        "content": "A.這部分我代林佳龍委員及所有提案委員跟大家報告，希望修正現行條文，使對連任總統的罷免不應受到這一條文的限制，至於其它民選公職代表部分也可併同討論。\n \n B.因為第二任之後，有可能會以為後面都沒有民意束縛了，之後就能海闊天空、為所欲為，不管民怨再怎麼沸騰，再怎麼向你陳情、懇求，你都一意孤行，如果是這樣，那我們對第二任之後還有一年的保障，這其實是有問題的。",
+                        "content": "A.這部分我代林佳龍委員及所有提案委員跟大家報告，希望修正現行條文，使對連任總統的罷免不應受到這一條文的限制，至於其它民選公職代表部分也可併同討論。\r\n \r\n B.因為第二任之後，有可能會以為後面都沒有民意束縛了，之後就能海闊天空、為所欲為，不管民怨再怎麼沸騰，再怎麼向你陳情、懇求，你都一意孤行，如果是這樣，那我們對第二任之後還有一年的保障，這其實是有問題的。",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -2738,7 +2738,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1427212800,
                         "category": "發言",
-                        "content": "A.張委員應該提早把苦處講出來，應該被罷免的是馬總統，不是你。接下來請陳委員其邁質詢。\n \n B.今天我們在講，無非是希望能朝向更公平、更開放、更民主，如果對罷免的投票用層層的技術障礙，最後沒有辦法罷免，其實你們就是違憲。憲法既然有規定，你們就應該設計制度，至少讓在一定的社會判準底下的可以逐步實踐。",
+                        "content": "A.張委員應該提早把苦處講出來，應該被罷免的是馬總統，不是你。接下來請陳委員其邁質詢。\r\n \r\n B.今天我們在講，無非是希望能朝向更公平、更開放、更民主，如果對罷免的投票用層層的技術障礙，最後沒有辦法罷免，其實你們就是違憲。憲法既然有規定，你們就應該設計制度，至少讓在一定的社會判準底下的可以逐步實踐。",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -2751,16 +2751,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 4
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 4
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 4
@@ -2775,7 +2775,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2783,7 +2783,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2811,16 +2811,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -2900,16 +2900,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 4
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 4
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 4
@@ -2919,7 +2919,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2927,7 +2927,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2943,7 +2943,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2951,7 +2951,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2962,7 +2962,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2970,7 +2970,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -2986,7 +2986,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -2994,7 +2994,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3054,16 +3054,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 2
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 1
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 2
                     }
                 ],
                 "totalCounts": 3
@@ -3078,7 +3078,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3086,7 +3086,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3097,7 +3097,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3105,7 +3105,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3121,7 +3121,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3129,7 +3129,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3140,7 +3140,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3148,7 +3148,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3164,7 +3164,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3172,7 +3172,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3183,7 +3183,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3191,7 +3191,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3207,7 +3207,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3215,7 +3215,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3243,16 +3243,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -3267,7 +3267,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3275,7 +3275,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3286,7 +3286,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3294,7 +3294,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3310,7 +3310,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3318,7 +3318,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3329,7 +3329,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3337,7 +3337,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3353,7 +3353,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3361,7 +3361,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3372,7 +3372,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3380,7 +3380,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3396,7 +3396,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3404,7 +3404,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3432,16 +3432,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -3456,7 +3456,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3464,7 +3464,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3475,7 +3475,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3483,7 +3483,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3499,7 +3499,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3507,7 +3507,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3518,7 +3518,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3526,7 +3526,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3542,7 +3542,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3550,7 +3550,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3578,16 +3578,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -3602,7 +3602,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3610,7 +3610,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3621,7 +3621,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3629,7 +3629,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3645,7 +3645,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3653,7 +3653,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3681,16 +3681,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -3705,7 +3705,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3713,7 +3713,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3773,16 +3773,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 3
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 3
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 3
@@ -3797,7 +3797,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3805,7 +3805,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3816,7 +3816,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3824,7 +3824,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3840,7 +3840,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3848,7 +3848,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3908,16 +3908,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 1
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 3
@@ -3932,7 +3932,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -3940,7 +3940,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -3955,7 +3955,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1336060800,
                         "category": "提案",
-                        "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                        "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -3968,16 +3968,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -4057,16 +4057,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 4
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 4
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 4
@@ -4112,7 +4112,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1386691200,
                         "category": "發言",
-                        "content": "所以罷免能不能宣傳一事，應該是沒有問題的，如果罷免不宣傳，人家怎麼知道這位主委、民意代表或是\n 首長做得好不好？",
+                        "content": "所以罷免能不能宣傳一事，應該是沒有問題的，如果罷免不宣傳，人家怎麼知道這位主委、民意代表或是\r\n 首長做得好不好？",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -4157,16 +4157,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 5
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 5
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 5
@@ -4181,7 +4181,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4189,7 +4189,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4217,7 +4217,7 @@ const candidatePositions =
                 "dominantPosition": "unknown",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4225,7 +4225,7 @@ const candidatePositions =
                         "count": 1
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4241,7 +4241,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4249,7 +4249,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4260,7 +4260,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4268,7 +4268,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4284,7 +4284,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4292,7 +4292,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4323,7 +4323,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1336060800,
                         "category": "提案",
-                        "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                        "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -4384,16 +4384,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 5
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 5
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 5
@@ -4408,7 +4408,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4416,7 +4416,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4427,7 +4427,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4435,7 +4435,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4451,7 +4451,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4459,7 +4459,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4470,7 +4470,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4478,7 +4478,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4494,7 +4494,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4502,7 +4502,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4513,7 +4513,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4521,7 +4521,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4537,7 +4537,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4545,7 +4545,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4556,7 +4556,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4564,7 +4564,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4580,7 +4580,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4588,7 +4588,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4599,7 +4599,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4607,7 +4607,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4623,7 +4623,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4631,7 +4631,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4646,7 +4646,7 @@ const candidatePositions =
                         "party": "KMT",
                         "date": 1336492800,
                         "category": "發言",
-                        "content": "A.一年就要把總統罷免，這種事情難道不會影響未來的好壞？才剛開始就反對這樣不太好吧？我認為至少要看兩年才知道好壞\n \n B.人生的過程很奇怪，當初你做大事情，反對的人很多，但是你把它完成以後，很多人會對你歌功頌德，舉本席的實例，大埔事件中的竹南科學園區是我一手創立，我在選舉的時候被人家攻擊，最後被打下來，但是經過10 年，本席這次東山再起，大家就說我當初那麼厲害，所以當政治人物不要隨便衝動，因為民意如流水，一個大的政策可能在一時看不出好壞，但未來就能看出來，因此總統不應該在一年不到的時間就罷免。副主委覺得我的看法正不正確？",
+                        "content": "A.一年就要把總統罷免，這種事情難道不會影響未來的好壞？才剛開始就反對這樣不太好吧？我認為至少要看兩年才知道好壞\r\n \r\n B.人生的過程很奇怪，當初你做大事情，反對的人很多，但是你把它完成以後，很多人會對你歌功頌德，舉本席的實例，大埔事件中的竹南科學園區是我一手創立，我在選舉的時候被人家攻擊，最後被打下來，但是經過10 年，本席這次東山再起，大家就說我當初那麼厲害，所以當政治人物不要隨便衝動，因為民意如流水，一個大的政策可能在一時看不出好壞，但未來就能看出來，因此總統不應該在一年不到的時間就罷免。副主委覺得我的看法正不正確？",
                         "positionJudgement": "反對下修罷免門檻",
                         "position": "nay",
                         "clarificationContent": "",
@@ -4659,16 +4659,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -4683,7 +4683,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4691,7 +4691,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4702,7 +4702,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4710,7 +4710,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4726,7 +4726,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4734,7 +4734,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4745,7 +4745,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4753,7 +4753,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4769,7 +4769,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4777,7 +4777,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4821,16 +4821,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -4845,7 +4845,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4853,7 +4853,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4864,7 +4864,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4872,7 +4872,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4888,7 +4888,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4896,7 +4896,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4907,7 +4907,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4915,7 +4915,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4931,7 +4931,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4939,7 +4939,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4950,7 +4950,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4958,7 +4958,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4974,7 +4974,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -4982,7 +4982,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -4993,7 +4993,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5001,7 +5001,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5034,16 +5034,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -5086,16 +5086,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 2
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 2
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2
@@ -5110,7 +5110,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5118,7 +5118,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5129,7 +5129,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5137,7 +5137,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5170,16 +5170,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -5206,7 +5206,7 @@ const candidatePositions =
                 "dominantPosition": "unknown",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5214,7 +5214,7 @@ const candidatePositions =
                         "count": 1
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5230,7 +5230,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5238,7 +5238,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5249,7 +5249,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5257,7 +5257,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5273,7 +5273,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5281,7 +5281,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5292,7 +5292,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5300,7 +5300,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5316,7 +5316,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5324,7 +5324,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5335,7 +5335,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5343,7 +5343,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5359,7 +5359,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5367,7 +5367,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5378,7 +5378,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5386,7 +5386,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5402,7 +5402,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5410,7 +5410,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5438,16 +5438,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -5462,7 +5462,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5470,7 +5470,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5481,7 +5481,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5489,7 +5489,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5505,7 +5505,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5513,7 +5513,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5524,7 +5524,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5532,7 +5532,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5548,7 +5548,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5556,7 +5556,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5571,7 +5571,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1336060800,
                         "category": "提案",
-                        "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                        "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -5584,16 +5584,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -5608,7 +5608,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5616,7 +5616,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5627,7 +5627,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5635,7 +5635,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5651,7 +5651,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5659,7 +5659,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5670,7 +5670,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5678,7 +5678,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5694,7 +5694,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5702,7 +5702,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5713,7 +5713,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5721,7 +5721,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5754,16 +5754,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -5773,7 +5773,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5781,7 +5781,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5797,7 +5797,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5805,7 +5805,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5816,7 +5816,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5824,7 +5824,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5840,7 +5840,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5848,7 +5848,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5859,7 +5859,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5867,7 +5867,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5883,7 +5883,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5891,7 +5891,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5906,7 +5906,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1336060800,
                         "category": "提案",
-                        "content": "刪除第一年不得罷免之規定\n (總統副總統選舉罷免法第七十條條文修正草案)",
+                        "content": "刪除第一年不得罷免之規定\r\n (總統副總統選舉罷免法第七十條條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -5919,16 +5919,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -5943,7 +5943,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5951,7 +5951,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5962,7 +5962,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5970,7 +5970,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -5986,7 +5986,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -5994,7 +5994,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6005,7 +6005,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6013,7 +6013,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6029,7 +6029,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6037,7 +6037,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6048,7 +6048,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6056,7 +6056,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6072,7 +6072,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6080,7 +6080,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6091,7 +6091,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6099,7 +6099,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6115,7 +6115,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6123,7 +6123,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6151,16 +6151,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -6175,7 +6175,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6183,7 +6183,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6211,16 +6211,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -6235,7 +6235,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6243,7 +6243,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6254,7 +6254,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6262,7 +6262,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6278,7 +6278,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6286,7 +6286,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6297,7 +6297,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6305,7 +6305,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6321,7 +6321,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6329,7 +6329,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6340,7 +6340,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6348,7 +6348,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6364,7 +6364,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6372,7 +6372,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6383,7 +6383,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6391,7 +6391,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6407,7 +6407,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6415,7 +6415,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6426,7 +6426,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6434,7 +6434,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6499,16 +6499,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 3
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 3
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 3
@@ -6535,16 +6535,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -6559,7 +6559,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6567,7 +6567,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6578,7 +6578,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6586,7 +6586,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6602,7 +6602,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6610,7 +6610,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6621,7 +6621,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6629,7 +6629,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6688,7 +6688,7 @@ const candidatePositions =
                         "clarificationLastUpdate": "",
                         "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/102/03/LCIDC01_1020304.pdf",
                         "meeting": "司法及法制委員會",
-                        "meetingCategory": "公聽會\n 發言"
+                        "meetingCategory": "公聽會\r\n 發言"
                     },
                     {
                         "id": 14,
@@ -6742,16 +6742,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 6
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 6
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 6
@@ -6761,7 +6761,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6769,7 +6769,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6785,7 +6785,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6793,7 +6793,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6804,7 +6804,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6812,7 +6812,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6828,7 +6828,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6836,7 +6836,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6864,16 +6864,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -6888,7 +6888,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6896,7 +6896,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6924,16 +6924,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 1
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 1
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
@@ -6948,7 +6948,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -6956,7 +6956,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -6984,16 +6984,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -7008,7 +7008,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7016,7 +7016,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7027,7 +7027,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7035,7 +7035,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7051,7 +7051,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7059,7 +7059,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7070,7 +7070,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7078,7 +7078,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7094,7 +7094,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7102,7 +7102,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7113,7 +7113,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7121,7 +7121,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7137,7 +7137,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7145,7 +7145,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7156,7 +7156,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7164,7 +7164,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7180,7 +7180,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7188,7 +7188,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7199,7 +7199,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7207,7 +7207,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7240,16 +7240,16 @@ const candidatePositions =
                 "dominantPosition": "nay",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 1
+                        "position": "aye",
+                        "count": 0
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 0
+                        "position": "nay",
+                        "count": 1
                     }
                 ],
                 "totalCounts": 1
@@ -7259,7 +7259,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7267,7 +7267,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7283,7 +7283,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7291,7 +7291,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7302,7 +7302,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7310,7 +7310,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7326,7 +7326,7 @@ const candidatePositions =
                 "dominantPosition": "none",
                 "positionCounts": [
                     {
-                        "position": "nay",
+                        "position": "aye",
                         "count": 0
                     },
                     {
@@ -7334,7 +7334,7 @@ const candidatePositions =
                         "count": 0
                     },
                     {
-                        "position": "aye",
+                        "position": "nay",
                         "count": 0
                     }
                 ],
@@ -7397,7 +7397,7 @@ const candidatePositions =
                         "party": "DPP",
                         "date": 1428595200,
                         "category": "提案",
-                        "content": "罷免相關規定視同選舉，罷免可以宣傳\n (總統副總統選舉罷免法部分條文修正草案)",
+                        "content": "罷免相關規定視同選舉，罷免可以宣傳\r\n (總統副總統選舉罷免法部分條文修正草案)",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -7410,16 +7410,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 4
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 4
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 4
@@ -7484,16 +7484,16 @@ const candidatePositions =
                 "dominantPosition": "aye",
                 "positionCounts": [
                     {
-                        "position": "nay",
-                        "count": 0
+                        "position": "aye",
+                        "count": 3
                     },
                     {
                         "position": "unknown",
                         "count": 0
                     },
                     {
-                        "position": "aye",
-                        "count": 3
+                        "position": "nay",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 3
