@@ -67,7 +67,7 @@ export default class CandidateIssueGroup extends Component {
     const styles = require('./CandidateIssueGroup.scss');
     const {data, issueName} = this.props;
     
-    console.log(data);
+    //console.log(data);
     
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{

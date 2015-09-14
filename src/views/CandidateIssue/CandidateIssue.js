@@ -5,18 +5,20 @@ import { connect } from 'react-redux';
 
 import {setCandidateFilter} from '../../ducks/candidatePositions';
 
+
 import CandidateProfile from '../../components/CandidateProfile/CandidateProfile.js';
 import CandidateIssueGroup from '../../components/CandidateIssueGroup/CandidateIssueGroup.js';
 
-import eng2url from '../../utils/eng2url';
+import url2eng from '../../utils/url2eng';
 
 @connect(
-    state => ({candidates: state.candidates,
-               candidatePositions: state.candidatePositions
+    state => ({
+                  candidates: state.candidates,
+                  candidatePositions: state.candidatePositions
                }),
     dispatch => bindActionCreators({setCandidateFilter}, dispatch))
 
-export default class Candidate extends Component {
+export default class CandidateIssue extends Component {
   static propTypes = {
       setCandidateFilter: PropTypes.func.isRequired,
       candidatePositions: PropTypes.object.isRequired
@@ -40,29 +42,25 @@ export default class Candidate extends Component {
 
   }
   render() {
-    const styles = require('./Candidate.scss');
+    const styles = require('./CandidateIssue.scss');
     const id = this.props.params.candidateId;
+    const issueURL = this.props.params.issueName;
     const {candidatePositions} = this.props;
 
-    //console.log(candidatePositions.data)
+    let issueDataName = url2eng(issueURL)
 
-    const positions = candidatePositions.data.positions || {};
-    
-    let issueGroups = Object.keys(positions).map((currentIssue, index)=>{
-        //console.log(positions[currentIssue])
-        let issueUrl = eng2url(currentIssue);
-        return (<div key={index} >
-                    <CandidateIssueGroup issueName={currentIssue}
-                                         data={positions[currentIssue]}/>
-                    <Link to={`/candidates/${id}/${issueUrl }`}>看更多</Link>
-               </div>)
-    })
+    if(!candidatePositions.data.positions) return <div></div>;
+
+    const position = candidatePositions.data.positions[issueDataName];
 
     return (
-      <div className={styles.wrap}>
+      <div className={styles.wrap}> 
           <CandidateProfile id={id} />
+          
           <div className={styles.issueWrap}> 
-            {issueGroups}
+               <CandidateIssueGroup issueName={issueDataName}
+                                    data={position} />
+
           </div>
       </div>
     );

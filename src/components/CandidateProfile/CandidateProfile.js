@@ -47,7 +47,8 @@ export default class Profile extends Component {
             <h1>{name}</h1>
             <div className={styles.party}>
               <div className={`${styles["party-flag-s"]} ${styles.kmt} ${styles["party-flag"]}`}></div>
-              <span>中國國民黨</span> </div>
+              <span>中國國民黨</span> 
+            </div>
             <div className={styles["basic-txt"]}>
               <p>30歲，男</p>
               <p>第8屆 不分區 / 台北第一選區 立委</p>
