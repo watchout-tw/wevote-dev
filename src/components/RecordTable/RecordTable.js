@@ -34,22 +34,84 @@ class Record extends Component {
 }
 
 
-export default class PartyPositionGroup extends Component {
+export default class RecordTable extends Component {
   static propTypes = {
     setToActiveRecord: PropTypes.func.isRequired
   
   }
-
+  //設定 initial state
+  constructor(props) { super(props)
+      this.state = {
+          categoryFilter: '所有',
+          sortingOption: '按時序排',
+          ascending: false,
+      }
+  }
+  _setCategoryFilter(value, event){  
+    this.setState({ categoryFilter: value });
+  }
+  _setSortingOption(value, event){  
+    if(this.state.sortingOption === value){
+      this.setState({ ascending: !this.state.ascending });
+    }else{
+      this.setState({ sortingOption: value });
+    }
+    console.log(this.state)
+  }
   render() {
     const styles = require('./RecordTable.scss');
     const {data} = this.props;
-    
-    let records = data.records.map((item,index)=>{
-      return <Record data={item} key={index}/>
+
+    const categoryFilters = ['所有','提案','發言','表決'];
+    const {ascending, categoryFilter, sortingOption} = this.state;
+
+    const sortingOptions = ['按立場排','按時序排'];
+
+
+    ///////
+    let records = data.records
+    .filter((item, index)=>{
+        if(categoryFilter==='所有'){
+            return item
+        }else{
+            if(item.category === categoryFilter)
+                return item;
+        }
+    })
+    .sort((a,b)=>{
+        let sortBy = (sortingOption === '按立場排') ? "position" : "date";
+        if(ascending){
+            return a[sortBy]-b[sortBy];
+        }else{
+            return b[sortBy]-a[sortBy];
+        }
+    })
+    .map((item,index)=>{
+        return <Record data={item} key={index}/>
     });
+
+
+    //////
+    let options = categoryFilters.map((v,i)=>{
+        let active = (v===categoryFilter) ? styles.controlButtonActive : "";
+        return <div className={`${styles.controlButton} ${active}`}
+                    key={i} 
+                    onClick={this._setCategoryFilter.bind(this,v)}>
+                    {v}</div>
+    });
+
+    ////
+    let sortings = sortingOptions.map((v,i)=>{
+        let active = (v===sortingOption) ? styles.sortingButtonActive : "";
+        return <div className={`${styles.sortingButton} ${active}`}
+                    key={i} 
+                    onClick={this._setSortingOption.bind(this,v)}>
+                    {v}</div> 
+    })
 
     return (
       <div className={styles.wrap}>
+            {options}{sortings}
             {records}
       </div>
     );

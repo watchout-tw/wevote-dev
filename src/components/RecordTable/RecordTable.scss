@@ -9,6 +9,49 @@ $unknownColor: #FFF800;
 	max-width: 600px;
 	margin: 0 auto;
 }
+.sortingButton {
+    display: block;
+    width: auto;
+    color: #999999;
+    background: #ccc;
+    padding: 10px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.sortingButton:hover {
+    color: black;
+}
+.sortingButtonActive {
+    background: black;
+    color: white;
+}
+.sortingButtonActive:hover {
+	color: white;
+}
+/*----control-----*/
+.controlButton {
+    display: block;
+    width: auto;
+    color: #999999;
+    background: #ccc;
+    padding: 10px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.controlButton:hover {
+    color: black;
+}
+.controlButtonActive {
+    background: black;
+    color: white;
+}
+.controlButtonActive:hover {
+	color: white;
+}
+
+/*----data-----*/
 .aRecordRow {
 	display: block;
 	padding: 10px;

@@ -38,7 +38,7 @@ export default class CandidateIssue extends Component {
 
       if(id !== nextId){
           const { candidates, setCandidateFilter } = this.props;
-          const name = candidates[id].name;
+          const name = candidates[nextId].name;
           setCandidateFilter(name);
       }
 
@@ -48,6 +48,7 @@ export default class CandidateIssue extends Component {
     const id = this.props.params.candidateId;
     const issueURL = this.props.params.issueName;
     const {candidatePositions} = this.props;
+    
 
     let issueDataName = url2eng(issueURL)
 
@@ -62,7 +63,7 @@ export default class CandidateIssue extends Component {
           <div className={styles.issueWrap}> 
               <CandidateIssueGroup issueName={issueDataName}
                                    data={position} />
-              <RecordTable data={position} /> 
+              <RecordTable data={position}/> 
           </div>
       </div>
     );

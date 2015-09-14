@@ -14,7 +14,7 @@ class Record extends Component {
   
   }
   
-  // //設定 initial state
+  //設定 initial state
   constructor(props) { super(props)
       this.state = {
           active: false
