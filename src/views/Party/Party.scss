@@ -1,0 +1,24 @@
+.wrap {
+	text-align: center;
+	position: relative;
+	
+}
+.issueBlock {
+	display: inline-block;
+	vertical-align: top;
+	
+}
+.seeMore, .seeMore:visited {
+	display: block;
+    margin: auto;
+    max-width: 100px;
+    background: #006060;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.seeMore:hover {
+	text-decoration: none;
+	background: #119697;
+}

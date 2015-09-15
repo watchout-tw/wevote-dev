@@ -8,7 +8,8 @@ import CandidateList from 'views/CandidateList/CandidateList.js';
 import Candidate from 'views/Candidate/Candidate.js';
 import CandidateIssue from 'views/CandidateIssue/CandidateIssue.js';
 import PartyList from 'views/PartyList/PartyList.js';
-
+import Party from 'views/Party/Party.js';
+import PartyIssue from 'views/PartyIssue/PartyIssue.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
 
@@ -21,6 +22,8 @@ export default function(store) {
       <Route path="/candidates/:candidateId" component={Candidate}/>
       <Route path="/candidates/:candidateId/:issueName" component={CandidateIssue}/>
       <Route path="/parties" component={PartyList}/>
+      <Route path="/parties/:partyId" component={Party}/>
+      <Route path="/parties/:partyId/:issueName" component={PartyIssue}/>
       <Route path="/about" component={About}/>
       <Route path="*" component={NotFound}/>
     </Route>
