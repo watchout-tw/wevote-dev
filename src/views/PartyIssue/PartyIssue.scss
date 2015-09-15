@@ -50,6 +50,8 @@ $breakLarge: 1000px;
 		position: relative;
 		padding: 0 40px;
 		right: 0;
+		max-width: 160px;
+		margin: 0 auto;
 	}
 	.menu, .menu:visited, .menuTitle, .menuTitle:visited {
 		display: block;

@@ -177,7 +177,7 @@ class Record extends Component {
     const styles = require('./PartyList.scss');
     const {data, id, name} = this.props;
     
-    console.log(this.props);
+    
     if(!data.positions) return <div></div>
 
     const {marriageEquality, recall} = data.positions;

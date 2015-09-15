@@ -11,7 +11,7 @@ import Appbar from '../components/Appbar/Appbar.js';
 
 const title = '立委求職中';
 const description = '0.0.1';
-const image = 'https://react-redux.herokuapp.com/logo.jpg';
+const image = './logo.png';
 
 const meta = {
   title,

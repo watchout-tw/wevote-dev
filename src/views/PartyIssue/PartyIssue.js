@@ -79,10 +79,12 @@ export default class PartyIssue extends Component {
               <div className={styles.summary}> 
                   <CandidateIssueGroup issueName={issueDataName}
                                        data={position} />
-                  <div className={styles.menuBlock}>
-                      <div className={styles.menuTitle}
-                           onClick={this._toggleMenu.bind(this)}>更換議題</div>
-                      {issueMenu}
+                  <div>
+                      <div className={styles.menuBlock}>
+                          <div className={styles.menuTitle}
+                               onClick={this._toggleMenu.bind(this)}>更換議題</div>
+                          {issueMenu}
+                      </div>
                   </div>
               </div>
               <div className={styles.table}>

@@ -103,7 +103,20 @@ $unknownColor: #FFF800;
 	margin-top: 2px;
 	padding: 0 10px;
 }
+.avatar, .avatar:visited {
+	float: left;
+	text-decoration: none;
+	color: rgb(53,55,54);
+}
+.avatar:hover {
+	text-decoration: underline;
+}
+.avatarName {
+	font-size: 14px;
+}
 .content {
 	margin-top: 4px;
 	margin-left: 10px;
+	line-height: 1.6;
+	padding-left: 80px;
 }

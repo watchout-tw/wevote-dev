@@ -1,10 +1,15 @@
 import React, {Component, PropTypes} from 'react';
+import { Link } from "react-router";
+
 import moment from 'moment';
 
 import cht2eng from '../../utils/cht2eng';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
+import position2points from '../../utils/position2points';
+import candidates_name2id from '../../utils/candidates_name2id';
 
+import CandidateAvatar from '../../components/CandidateAvatar/CandidateAvatar.js';
 
 class Record extends Component {
   static propTypes = {
@@ -23,6 +28,11 @@ class Record extends Component {
          <div className={` ${styles.positionCube} ${styles[data.position]}`}></div>
          <div className={styles.date}>{date.format('YYYY-MM-DD')}</div>
          <div className={styles.category}>{data.category}</div>
+
+         <Link to={`/candidates/${candidates_name2id(data.legislator)}`} className={styles.avatar}>
+              <CandidateAvatar id={candidates_name2id(data.legislator)}/>
+              <div className={styles.avatarName}>{data.legislator}</div>
+         </Link>
          <div className={styles.content}>{data.content}</div>
       </div>
     )
@@ -66,7 +76,7 @@ export default class RecordTable extends Component {
     const {ascending, categoryFilter, sortingOption} = this.state;
 
     const sortingOptions = ['按時序排','按立場排'];
-
+    
 
     ///////
     let records = data.records
@@ -79,12 +89,24 @@ export default class RecordTable extends Component {
         }
     })
     .sort((a,b)=>{
-        let sortBy = (sortingOption === '按立場排') ? "position" : "date";
-        if(ascending){
-            return a[sortBy]-b[sortBy];
+
+        if(sortingOption === '按立場排'){
+            if(ascending){
+                return position2points(a.position)-position2points(b.position);
+            }else{
+                return position2points(b.position)-position2points(a.position);
+            }
+
         }else{
-            return b[sortBy]-a[sortBy];
+            if(ascending){
+                return a.date-b.date;
+            }else{
+                return b.date-a.date;
+            }
+
         }
+        
+        
     })
     .map((item,index)=>{
         return <Record data={item} key={index}/>
