@@ -10,6 +10,7 @@ import CandidateIssue from 'views/CandidateIssue/CandidateIssue.js';
 import PartyList from 'views/PartyList/PartyList.js';
 import Party from 'views/Party/Party.js';
 import PartyIssue from 'views/PartyIssue/PartyIssue.js';
+import Record from 'views/Record/Record.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
 
@@ -24,6 +25,7 @@ export default function(store) {
       <Route path="/parties" component={PartyList}/>
       <Route path="/parties/:partyId" component={Party}/>
       <Route path="/parties/:partyId/:issueName" component={PartyIssue}/>
+      <Route path="/records/:recordId" component={Record}/>
       <Route path="/about" component={About}/>
       <Route path="*" component={NotFound}/>
     </Route>

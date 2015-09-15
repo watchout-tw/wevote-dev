@@ -2095,7 +2095,7 @@ export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     
     case SET_ID_FILTER:
-      
+      console.log("set id")
       if(positionRecords[action.id]){
         return {
             idFilter: action.id,
