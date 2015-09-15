@@ -3,6 +3,7 @@ import counter from './counter';//// will be removed later
 
 import candidates from './candidates';
 import issues from './issues';
+import parties from './parties';
 
 
 /* For 每個議題表態的三個不同 view */
@@ -21,6 +22,7 @@ export default combineReducers({
   candidates,
   counter,
   issues,
+  parties,
 
   partyView,
   legislatorView,
