@@ -20,6 +20,7 @@ export default class Appbar extends Component {
               <li><Link className={styles.navItem} to={`/issues/marriage-equality`} >婚姻平權</Link></li>
               <li><Link className={styles.navItem} to={`/issues/recall`}  >罷免</Link></li>
               <li><Link className={styles.navItem} to={`/candidates`}  >立委表態</Link></li>
+              <li><Link className={styles.navItem} to={`/parties`}  >政黨表態</Link></li>
               <li><Link className={styles.navItem} to={`/about`}>關於本站</Link></li>
             </ul>
             

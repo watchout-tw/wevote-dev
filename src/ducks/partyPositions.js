@@ -1,6 +1,7 @@
 const partyPositions = 
 {
     "KMT": {
+        "name": "中國國民黨",
         "positions": {
             "marriageEquality": {
                 "name": "中國國民黨",
@@ -447,6 +448,7 @@ const partyPositions =
         }
     },
     "DPP": {
+        "name": "民主進步黨",
         "positions": {
             "marriageEquality": {
                 "name": "民主進步黨",
@@ -1949,6 +1951,7 @@ const partyPositions =
         }
     },
     "TSU": {
+        "name": "台灣團結聯盟",
         "positions": {
             "marriageEquality": {
                 "name": "台灣團結聯盟",
@@ -2203,6 +2206,7 @@ const partyPositions =
         }
     },
     "PFP": {
+        "name": "親民黨",
         "positions": {
             "marriageEquality": {
                 "name": "親民黨",
