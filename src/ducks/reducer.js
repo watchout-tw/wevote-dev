@@ -14,7 +14,8 @@ import issueController from './issueController';
 
 /* 單一立委的各議題表態 */
 import candidatePositions from './candidatePositions';
-
+/* 單一政黨的各議題表態 */
+import partyPositions from './partyPositions';
 
 export default combineReducers({
   candidates,
@@ -27,5 +28,6 @@ export default combineReducers({
 
   issueController,
 
-  candidatePositions
+  candidatePositions,
+  partyPositions
 });
