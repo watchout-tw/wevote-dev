@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import {setPartyFilter} from '../../ducks/partyPositions';
 
 
-import CandidateProfile from '../../components/CandidateProfile/CandidateProfile.js';
+import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import CandidateIssueGroup from '../../components/CandidateIssueGroup/CandidateIssueGroup.js';
 import RecordTable from '../../components/RecordTable/RecordTable.js';
 
@@ -74,7 +74,7 @@ export default class PartyIssue extends Component {
    
     return (
       <div className={styles.wrap}> 
-          
+          <PartyProfile id={id}/>
           <div className={styles.main}>
               <div className={styles.summary}> 
                   <CandidateIssueGroup issueName={issueDataName}

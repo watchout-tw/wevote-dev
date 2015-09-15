@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import {setPartyFilter} from '../../ducks/partyPositions';
 
-import CandidateProfile from '../../components/CandidateProfile/CandidateProfile.js';
+import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import CandidateIssueGroup from '../../components/CandidateIssueGroup/CandidateIssueGroup.js';
 
 import eng2url from '../../utils/eng2url';
@@ -59,7 +59,7 @@ export default class Party extends Component {
 
     return (
       <div className={styles.wrap}>
-          {id}
+          <PartyProfile id={id}/>
           <div className={styles.issueWrap}> 
             {issueGroups}
           </div>

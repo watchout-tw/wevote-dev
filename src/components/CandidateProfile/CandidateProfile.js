@@ -33,10 +33,10 @@ export default class Profile extends Component {
     }
   
     return (
-        <div className={`$styles["inner-title"] ${styles["people-ititle"]} `}>
+        <div className={`$styles["inner-title"] ${styles["people-title"]} `}>
           <header>
           <div className={styles["people-basic-info"]}>
-            <Link to={`/candidates/${id}`}className={styles["people-pic"]}>
+            <Link to={`/candidates/${id}`} className={styles["people-pic"]}>
                 <img className={`${styles.avatar}  is-${party}`}
                      src={imgURL} />
 
