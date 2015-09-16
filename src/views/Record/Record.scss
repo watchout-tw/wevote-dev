@@ -1,0 +1,181 @@
+$cubeSize: 18px;
+$themeColor: #006060;
+$ayeColor: #00FFB0;
+$nayColor: #FF0055;
+$unknownColor: #FFF800;
+
+.wrap {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 40px;
+	text-align: center;
+}
+.form {
+	box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
+	border: 2px solid;
+	background: white;
+	text-align: left;
+}
+.issueRow {
+	border-bottom: 2px solid;
+}
+.issueName {
+	display: inline-block;
+	background: black;
+	color: white;
+	padding: 10px;
+}
+.issueQuestion {
+	display: inline-block;
+	padding: 10px;
+}
+
+.peopleRow {
+	margin: 10px;
+}
+.judegementRow {
+	border-top: 2px solid;
+	padding: 20px;
+}
+.recordRow {
+	border-top: 2px solid;	
+}
+.positionCube {
+	width: $cubeSize;
+	height: $cubeSize;
+	display: inline-block;
+    margin: 0 6px;
+    vertical-align: top;
+}
+.clarifyRow {
+	border-top: 2px solid;
+	position: relative;
+}
+
+
+.aye {
+	background: $ayeColor;
+}
+.nay {
+	background: $nayColor;
+}
+.unknown {
+	background: $unknownColor;
+}
+.avatar, .avatar:visited {
+	float: left;
+	text-decoration: none;
+	color: rgb(53,55,54);
+}
+.avatar:hover {
+	text-decoration: underline;
+}
+.profileBlock {
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 10px;
+	vertical-align: top;
+
+}
+.isCurrent, .isCandidate  {
+	margin-left: 3px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgb(100,100,100);
+
+}
+.avatarName {
+    vertical-align: top;
+    font-size: 34px;
+    font-weight: bold;
+    
+}
+/*黨旗設定*/
+.party-flag {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-top: 6px;
+    margin-right: 6px;
+    vertical-align: top;
+    display: inline-block;
+}
+.party-flag.KMT {
+    background: url(./images/flag-kmt.svg);
+}
+.party-flag.DPP {
+    background: url(./images/flag-dpp.svg);
+}
+.party-flag.GSD {
+    background: url(./images/flag-gsd.svg);
+}
+.party-flag.MKT {
+    background: url(./images/flag-mkt.svg);
+}
+.party-flag.NONE {
+    background: url(./images/flag-none.svg);
+}
+.party-flag.NP {
+    background: url(./images/flag-np.svg);
+}
+.party-flag.NSU {
+    background: url(./images/flag-npp.svg);
+}
+.party-flag.PFP {
+    background: url(./images/flag-pfp.svg);
+}
+.party-flag.TSU {
+    background: url(./images/flag-tsu.svg);
+}
+.content {
+	padding: 20px;
+}
+.contentMeta {
+	margin-top: 10px;
+}
+.date, .category {
+	display: inline-block;
+	margin-right: 10px;
+}
+.contentMain {
+	margin-top: 20px;
+	line-height: 1.6;
+	
+}
+.lyURL {
+	display: block;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: gray;
+}
+.lyURL:hover {
+	background: rgb(220,220,220);
+}
+.clarifyTitle {
+	background: black;
+    color: white;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 0px;
+}
+.clarificationContent {
+	padding: 20px;
+}
+
+.clarifyButton {
+	display: inline-block;
+	cursor: pointer;
+    background: $themeColor;
+    color: white;
+
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.clarifyButton:hover {
+    background: lighten($themeColor, 10%);
+}
+
+

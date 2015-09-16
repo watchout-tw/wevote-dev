@@ -1,0 +1,13 @@
+$themeColor: #006060;
+.people-pic {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 100px;
+    display: inline-block;
+    border: 4px solid rgb(230,230,230);
+    margin: 0 0 0 10px;
+}
+.people-pic img {
+    width: 100%;
+}

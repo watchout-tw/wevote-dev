@@ -22,7 +22,7 @@ export default function eng2cht(input){
         return '罷免';
       
       default:
-      	return '<>找不到<>';///////
+      	return '<>找不到<>'+input;
     }
 }
 

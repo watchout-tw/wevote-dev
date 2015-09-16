@@ -3,7 +3,6 @@ import { Link } from "react-router";
 
 import moment from 'moment';
 
-import cht2eng from '../../utils/cht2eng';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 import position2points from '../../utils/position2points';

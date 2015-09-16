@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
     dispatch => bindActionCreators({}, dispatch))
 
 
-export default class Profile extends Component {
+export default class CandidateProfile extends Component {
   static propTypes = {
     candidates: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired
