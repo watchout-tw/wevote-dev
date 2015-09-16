@@ -124,19 +124,25 @@ export default class Candidate extends Component {
                   <div className={styles.category}>{data.category}</div>
                 </div>
                 <div className={styles.contentMain}>{data.content}</div>
+                <div className={styles.partyThen}>{`（時任${eng2cht(data.party)}立委）`}</div>
             </div>
             <a className={styles.lyURL}
                href={data.lyURL}
-               target="_new" >中華民國立法院原始資料</a>
+               target="_blank" >中華民國立法院原始資料</a>
          </div>
 
          <div className={styles.clarifyRow}>
             <div className={styles.clarifyTitle}>委員澄清</div>
+
          </div>
          {clarification}
+         <div className={styles.clarifyButton}>表態立場如果有解讀錯誤，歡迎委員來函澄清</div>
 
       </div>
-         <div className={styles.clarifyButton}>內容如果有錯誤，歡迎來函澄清</div>
+          <Link className={styles.button}
+                to={`/candidates/${candidates_name2id(data.legislator)}/${cht2url(data.issue)}`}>
+                看{data.legislator}在{data.issue}的所有表態
+          </Link>
       </div>
     );
   }
