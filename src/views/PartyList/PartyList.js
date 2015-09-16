@@ -21,7 +21,8 @@ export default class PartyList extends Component {
       this.state = { 
         userPreference: {
           "marriageEquality" : "none",
-          "recall" : "none"
+          "recall" : "none",
+          "referendum" : "none"
         }
       }
   }
@@ -110,7 +111,8 @@ class Matcher extends Component {
     const {handleSetPref, userPreference} = this.props;
 
     const issues = [{ title:'婚', issue:'marriageEquality'},
-                    { title:'罷', issue:'recall'}];
+                    { title:'罷', issue:'recall'},
+                    { title:'公', issue:'referendum'}];
     const positions = [
       { title:'我贊成',
         position: 'aye'},
