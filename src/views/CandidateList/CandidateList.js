@@ -187,16 +187,29 @@ class Record extends Component {
     
     if(!data.positions) return <div></div>
 
-    const {marriageEquality, recall} = data.positions;
-
-    let marriageEqualityItem = (marriageEquality)?(
-      <div className={`${styles.issueCube} ${styles[marriageEquality.dominantPosition]}`}>婚</div>
-    ):<div className={`${styles.issueCube} ${styles.none}`}>婚</div>;
-
-    let recallItem = (recall)?(
-      <div className={`${styles.issueCubeLast} ${styles[recall.dominantPosition]}`}>罷</div>
-    ):<div className={`${styles.issueCubeLast} ${styles.none}`}>罷</div>;
-
+    //目前有資料的議題
+    const IssueList = [
+         {
+             "id": "marriageEquality",
+             "cht": "婚"
+         },
+         {
+             "id": "recall",
+             "cht": "罷"
+         },
+         {
+             "id": "referendum",
+             "cht": "公"
+         }
+    ]
+  
+    let issueItems = IssueList.map((currentIssue, index)=>{
+        let currentData = data.positions[currentIssue.id];
+        //if(!currentData) return "";
+        return (
+          <div className={`${styles.issueCubeLast} ${styles[currentData.dominantPosition]}`}>{currentIssue.cht}</div>
+        )
+    });
 
     return (
       <div className={styles.item}>
@@ -204,8 +217,7 @@ class Record extends Component {
           <CandidateAvatar id={id}/>
           <div className={styles.name}>{data.name}</div>
           <div className={styles.issueCubes}>
-            {marriageEqualityItem}
-            {recallItem}
+            {issueItems}
           </div>
       </Link>
       </div>

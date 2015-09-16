@@ -13,6 +13,13 @@ const initialState = {
       "question" : "你是否支持下修罷免門檻？",
       "statement" : "下修罷免門檻",
       "slideshows" : [11,12,13,14,15,16,17]
+    },
+    "referendum" : {
+      "title" : "公投",
+      "titleEng" : "referendum",
+      "question" : "你支持公投門檻下修嗎?",
+      "statement" : "下修公投門檻",
+      "slideshows" : [18,19]
     } 
    
 }

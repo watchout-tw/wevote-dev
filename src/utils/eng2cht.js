@@ -20,6 +20,8 @@ export default function eng2cht(input){
         return '婚姻平權';
       case 'recall':
         return '罷免';
+      case 'referendum':
+        return '公投';
       
       default:
       	return '<>找不到<>'+input;

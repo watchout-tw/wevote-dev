@@ -4,6 +4,8 @@ export default function url2eng(input){
         return 'marriageEquality';
       case 'recall':
         return 'recall';
+      case 'referendum':
+        return 'referendum';
       
       default:
       	return '<>找不到<>';///////
