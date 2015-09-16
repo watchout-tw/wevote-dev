@@ -91,11 +91,15 @@ $unknownColor: #FFF800;
 .unknown {
 	background: $unknownColor;
 }
-.date {
+.date, .date:visited {
 	display: inline-block;
 	padding: 0 10px;
 	vertical-align: top;
 	margin-top: 2px;
+	color: rgb(80,80,80);
+}
+.date:hover {
+	color: rgb(120,120,120);
 }
 .category {
 	display: inline-block;

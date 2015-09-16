@@ -25,7 +25,8 @@ class Record extends Component {
     return (
       <div className={styles.aRecordRow}>        
          <div className={` ${styles.positionCube} ${styles[data.position]}`}></div>
-         <div className={styles.date}>{date.format('YYYY-MM-DD')}</div>
+         <Link to={`/records/${data.id}`}
+               className={styles.date}>{date.format('YYYY-MM-DD')}</Link>
          <div className={styles.category}>{data.category}</div>
 
          <Link to={`/candidates/${candidates_name2id(data.legislator)}`} className={styles.avatar}>
