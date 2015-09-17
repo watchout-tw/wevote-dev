@@ -1,31 +1,88 @@
 $themeColor: #006060;
-$navHeight: 50px;
+$navHeight: 54px;
 $paddingHeight: 15px; /* (50-20)/2 */
+$breakLarge: 800px;
 
 .appbar {
 	background: $themeColor;
 	padding: 0px;
+	height: $navHeight;
+}
+.appbar.showMenu {
+	height: auto;
+}
+.inner {
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
 }
 .siteLogo {
-	float: left;
-	height: 36px;
-    margin-top: 8px;
+	display: block;
+    padding: 8px 0;
     margin-left: 16px;
 }
-ul.lists {
-	display: inline-block;
+.lists {
+	max-height: 0px;
+	overflow: hidden;
 	list-style-type: none;
+	padding: 0px;
+	text-align: center;
+	
+}
+.lists.showMenu {
+	max-height: 1000px;
+	-webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 .lists li {
 	margin: 0;
-	display: inline-block;
 }
 .navItem, .navItem:visited {
+	display: block;
 	color: white;
 	text-decoration: none;
 	padding: $paddingHeight;
 	height: $navHeight;
 }
 .navItem:hover {
-	background: lighten( $themeColor, 10% );
+	background: darken( $themeColor, 5% );
 }
+.rightToggle {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 20px;
+	cursor: pointer;
+	color: white;
+}
+@media screen and (min-width: $breakLarge){
+	.appbar, .appbar.showMenu {
+		text-align: right;
+    	padding-right: 50px;
+    	height: $navHeight;
+	}
+	.siteLogo {
+		float: left;
+		height: 36px;
+		padding: 0px;
+		margin-top: 8px;
+    }
+    .lists {
+    	max-height: 1000px;
+   		display: inline-block;
+   		list-style-type: none;
+   		margin-top: 0;
+
+    }
+    .lists li {
+   		margin: 0;
+   		display: inline-block;
+    }
+    .navItem {
+    	display: inline-block;;
+    }
+    .rightToggle {
+    	display: none;
+    }
+}
+

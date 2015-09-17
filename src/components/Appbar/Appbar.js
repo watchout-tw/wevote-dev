@@ -3,28 +3,46 @@ import {Link} from 'react-router';
 
 
 export default class Appbar extends Component {
-  
+  constructor(props){ super(props)
+    this.state = {
+        showMenu: false
+    }
+  }
+  _toggleShowMenu(){
+    console.log("aha")
+    this.setState(
+      {
+        showMenu: !this.state.showMenu
+      }
+    );
+    
+  }
   render() {
     
     const styles = require('./Appbar.scss');
     const siteLogo = require('./images/logo.svg');
+    const {showMenu} = this.state;
+    let showStyle = (showMenu) ? styles.showMenu : "";
 
     return (
-      <nav className={styles.appbar}>
-          
-            <Link to="/">
-              <img src={siteLogo} className={styles.siteLogo}/>
-            </Link>
+      <nav className={`${styles.appbar} ${showStyle}`}>
+          <div className={styles.inner}>
+              <Link to="/">
+                <img src={siteLogo} className={styles.siteLogo}/>
+              </Link>
 
-            <ul className={styles.lists}>
-              <li><Link className={styles.navItem} to={`/issues/marriage-equality`} >婚姻平權</Link></li>
-              <li><Link className={styles.navItem} to={`/issues/recall`}  >罷免</Link></li>
-              <li><Link className={styles.navItem} to={`/issues/referendum`}  >公投</Link></li>
-              <li><Link className={styles.navItem} to={`/parties`}  >政黨表態</Link></li>
-              <li><Link className={styles.navItem} to={`/about`}>關於本站</Link></li>
-            </ul>
-            
-        
+              <ul className={`${styles.lists} ${showStyle}`}>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/marriage-equality`} >婚姻平權</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/recall`}  >罷免</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/referendum`}  >公投</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/parties`}  >政黨表態</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/about`}>關於本站</Link></li>
+              </ul>
+              
+              <div className={styles.rightToggle}
+                   onClick={this._toggleShowMenu.bind(this)}><i className="fa fa-bars"></i>
+          </div>
+          </div>
       </nav>
     );
   }
