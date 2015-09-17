@@ -40,32 +40,13 @@ export default class Issue extends Component {
     this.state = {
         activeRecord: "",
         activeLegislator: "",
-        isLocked: false
     }
   }
  
   _setToActiveRecord(value, event){
-      //console.log("set to active")
-      //console.log(this.state.isLocked);
-      if(this.state.isLocked === false){
-         this.setState({ activeRecord: value });
-      }
+      this.setState({ activeRecord: value });
   }
 
-  _setToLockedRecord(value, event){
-      console.log("LOCK!")
-      if((this.state.activeRecord.id === value.id)&&(this.state.isLocked===true)){
-          this.setState({ 
-            isLocked: false
-          });
-      }else{
-          this.setState({ 
-            activeRecord: value,
-            isLocked: true
-          });
-
-      }
-  }
 
   _resetActive(){  
       
@@ -86,7 +67,6 @@ export default class Issue extends Component {
 
     let bindSetToActiveRecord = this._setToActiveRecord.bind(this);
     let bindResetActive = this._resetActive.bind(this);
-    let bindSetToLockedRecord = this._setToLockedRecord.bind(this);
     let bindSetActiveLegislator = "";
 
     /* 1. 看政黨 */
@@ -95,10 +75,8 @@ export default class Issue extends Component {
         //console.log(value);
         return <PartyPositionGroup data={value} issueStatement={currentPartyView.statement} key={index}
                                    setToActiveRecord={bindSetToActiveRecord}
-                                   setToLockedRecord={bindSetToLockedRecord}
                                    resetActive={bindResetActive}
-                                   activeRecord={activeRecord}
-                                   isLocked={isLocked} />;
+                                   activeRecord={activeRecord} />;
     });
 
 
@@ -118,10 +96,8 @@ export default class Issue extends Component {
         //console.log(value);
         return <PositionPartyGroup data={value} issueStatement={currentPartyView.statement} key={index}
                                    setToActiveRecord={bindSetToActiveRecord}
-                                   setToLockedRecord={bindSetToLockedRecord}
                                    resetActive={bindResetActive}
-                                   activeRecord={activeRecord}
-                                   isLocked={isLocked}/>;
+                                   activeRecord={activeRecord} />;
     });
 
 

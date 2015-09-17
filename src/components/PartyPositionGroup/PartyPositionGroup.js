@@ -16,12 +16,12 @@ class Record extends Component {
  
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, setToActiveRecord, setToLockedRecord, activeRecord, resetActive, isLocked} = this.props;
+    const {data, setToActiveRecord, activeRecord, resetActive} = this.props;
   
     let date = moment.unix(data.date);
   
     let cubeActiveStyle = (activeRecord.id === data.id) ? styles.positionCubeActive : "";
-    let cubeLockedStyle = (isLocked && activeRecord.id === data.id) ? styles.positionCubeLocked : "";
+    
 
     /* active record */    
     let detailText;
@@ -31,8 +31,6 @@ class Record extends Component {
           let preview = (activeRecord.content.length > 60) ? activeRecord.content.slice(0,60)+" ..." : activeRecord.content;
           detailText =  (
           <div className={styles.activeBlock}>
-              <div className={styles.activeBlockClose}
-                   onClick={resetActive.bind(null)}>[關閉]</div>
               <Link to={`/records/${activeRecord.id}`} className={styles.activeCube}>
                   <div className={styles.activeContent}>
                     <div>{date.format('YYYY-MM-DD')} / {activeRecord.legislator} / {activeRecord.meetingCategory}</div>
@@ -47,11 +45,11 @@ class Record extends Component {
       <div className={styles.postionWrap}>
           {detailText}
           
-          <div className={` ${styles.positionCube} ${cubeActiveStyle} ${cubeLockedStyle} ${styles[data.position]}`}
-               onClick={setToLockedRecord.bind(null, data)}
-               onMouseEnter={setToActiveRecord.bind(null, data)}
-               >
-          </div>
+          <Link to={`/records/${data.id}`}
+                className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]}`}
+                onMouseEnter={setToActiveRecord.bind(null, data)}
+                onMouseLeave={resetActive.bind(null)}>
+          </Link>
 
       </div>
     )

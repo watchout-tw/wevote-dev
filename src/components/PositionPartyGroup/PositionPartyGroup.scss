@@ -10,14 +10,15 @@ $unknownColor: #FFF800;
 	position: relative;
 	float: left;
 }
-.positionCube {
+.positionCube, .positionCube:visited {
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
 	cursor: pointer;
+	color: black
 }
 .positionCube:hover, .positionCubeActive {
-	border: 3px solid;
+	border: 3px solid black;
 }
 .aye {
 	background: $ayeColor;

@@ -32,8 +32,7 @@ class Record extends Component {
           let preview = (activeRecord.content.length > 40) ? activeRecord.content.slice(0,40)+"..." : activeRecord.content;
           detailText =  (
           <div className={styles.activeBlock}>
-              <div className={styles.activeBlockClose}
-                   onClick={resetActive.bind(null)}>[關閉]</div>
+              
               <Link to={`/records/${activeRecord.id}`} className={styles.activeCube}>
                   <div className={styles.activeContent}>
                     <div>{date.format('YYYY-MM-DD')} / {activeRecord.legislator} / {activeRecord.meetingCategory}</div>
@@ -48,10 +47,11 @@ class Record extends Component {
            
           {detailText}
           
-          <div className={` ${styles.positionCube}  ${styles[data.party]}`}
-               onClick={setToActiveRecord.bind(null, data)}
-               onMouseEnter={setToActiveRecord.bind(null, data)} >
-          </div>
+          <Link to={`/records/${data.id}`}
+                className={` ${styles.positionCube}  ${styles[data.party]}`}
+                onMouseEnter={setToActiveRecord.bind(null, data)}
+                onMouseLeave={resetActive.bind(null)} >
+          </Link>
       
       </div>
     )
