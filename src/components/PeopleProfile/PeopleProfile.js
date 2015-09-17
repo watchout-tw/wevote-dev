@@ -22,8 +22,24 @@ export default class PeopleProfile extends Component {
     const {legislators, id} = this.props;
     const legislator = legislators[id];
    
-    let {name, party} = legislator;
+    let {name, party, partyCht, gender, age, constituency1, constituency2,
+         isCandidate, candidateConstituency1, candidateConstituency2} = legislator;
     
+    if(constituency2 === "N/A")
+        constituency2 = "";
+    else
+        constituency2 =  `第${constituency2}選區`;
+
+    if(candidateConstituency2 === "N/A")
+        candidateConstituency2 = "";
+    else
+        candidateConstituency2 = `第${candidateConstituency2}選區`;
+
+    let candidateInfo;
+    if(isCandidate === true){
+      candidateInfo = <p>{` 2016 ${candidateConstituency1} ${candidateConstituency2} 立委候選人`}</p>;
+    }
+
     let imgURL;
 
     try {
@@ -44,13 +60,13 @@ export default class PeopleProfile extends Component {
 
             <h1>{name}</h1>
             <div className={styles.party}>
-              <div className={`${styles["party-flag-s"]} ${styles.kmt} ${styles["party-flag"]}`}></div>
-              <span>中國國民黨</span> 
+              <div className={`${styles["party-flag-s"]} ${styles[party]} ${styles["party-flag"]}`}></div>
+              <span>{partyCht}</span> 
             </div>
             <div className={styles["basic-txt"]}>
-              <p>30歲，男</p>
-              <p>第8屆 不分區 / 台北第一選區 立委</p>
-              <p>2016 台北第一選區  立委候選人</p>
+              <p>{`  ${age}歲，${gender}`}</p>
+              <p>{`第8屆 ${constituency1} ${constituency2} 立委`}</p>
+              {candidateInfo}
             </div>
 
           </div>

@@ -3,24 +3,7 @@ $themeColor: #006060;
 	display: inline-block;
 }
 
-.is-KMT {
-    border-color: #3288bd;
-}
-.is-DPP {
-    border-color: #7fbc41;
-}
-.is-PFP {
-    border-color: orange;
-}
-.is-TSU {
-    border-color: #b35806;
-}
-.is-NP {
-    border-color: gray;
-}
-.is-NPU {
-    border-color: rgba(194,15,81,0.9);
-}
+
 
 .name {
 	vertical-align: top;
@@ -72,7 +55,7 @@ $themeColor: #006060;
     width: 290px;
 }
 .basic-txt p {
-    margin: 0 0 3px 0;
+    margin: 4px 0;
     padding: 0 0 3px 0;
     font-size: 18px;
     border-bottom: 1px dotted #ccc;
@@ -88,4 +71,48 @@ $themeColor: #006060;
 }
 .people-pic img {
     width: 100%;
+}
+.party-flag {
+    width: 40px;
+    height: 40px;
+    margin: 20px auto 10px auto;
+    border-radius: 50px;
+    border: 8px solid #000;
+}
+/*黨旗設定*/
+.party-flag.KMT {
+    background: url(./images/flag-kmt.svg);
+}
+
+.party-flag.DPP {
+    background: url(./images/flag-dpp.svg);
+}
+.party-flag.GSD {
+    background: url(./images/flag-gsd.svg);
+}
+
+.party-flag.MKT {
+    background: url(./images/flag-mkt.svg);
+}
+.party-flag.NONE {
+    background: url(./images/flag-none.svg);
+}
+.party-flag.NP {
+    background: url(./images/flag-np.svg);
+}
+.party-flag.NSU {
+    background: url(./images/flag-npp.svg);
+}
+.party-flag.PFP {
+    background: url(./images/flag-pfp.svg);
+}
+.party-flag.TSU {
+    background: url(./images/flag-tsu.svg);
+}
+
+.party-flag-s {
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: 0px;
 }
