@@ -1,4 +1,4 @@
-const candidates = {
+const people = {
     "丁守中": 1,
     "孔文吉": 2,
     "尤美女": 3,
@@ -125,9 +125,9 @@ const candidates = {
     "蘇震清": 124
 }
 
-export default function candidates_name2id(name){
- 	if(candidates[name])
- 		return candidates[name]
+export default function people_name2id(name){
+ 	if(people[name])
+ 		return people[name]
  	else
  		return "1";///// 
 }

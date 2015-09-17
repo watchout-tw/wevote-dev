@@ -6,13 +6,13 @@ import { connect } from 'react-redux';
 import {setPartyFilter} from '../../ducks/partyPositions';
 
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
-import CandidateIssueGroup from '../../components/CandidateIssueGroup/CandidateIssueGroup.js';
+import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 
 import eng2url from '../../utils/eng2url';
 
 @connect(
     state => ({
-                 candidates: state.candidates,
+                 legislators: state.legislators,
                  partyPositions: state.partyPositions
                }),
     dispatch => bindActionCreators({setPartyFilter}, dispatch))
@@ -51,7 +51,7 @@ export default class Party extends Component {
         //console.log(positions[currentIssue])
         let issueUrl = eng2url(currentIssue);
         return (<div className={styles.issueBlock} key={index} >
-                    <CandidateIssueGroup issueName={currentIssue}
+                    <PositionSquare issueName={currentIssue}
                                          data={positions[currentIssue]}/>
                     <Link className={styles.seeMore} to={`/parties/${id}/${issueUrl }`}>看更多</Link>
                </div>)

@@ -7,7 +7,8 @@ import {setPartyFilter} from '../../ducks/partyPositions';
 
 
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
-import CandidateIssueGroup from '../../components/CandidateIssueGroup/CandidateIssueGroup.js';
+
+import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 import RecordTable from '../../components/RecordTable/RecordTable.js';
 
 
@@ -35,7 +36,7 @@ export default class PartyIssue extends Component {
     this.setState({ showMenu: !this.state.showMenu });
   }
   componentWillMount(){
-      const { candidates, setPartyFilter } = this.props;
+      const { legislators, setPartyFilter } = this.props;
       const id = this.props.params.partyId;
       setPartyFilter(id);
   }
@@ -77,7 +78,7 @@ export default class PartyIssue extends Component {
           <PartyProfile id={id}/>
           <div className={styles.main}>
               <div className={styles.summary}> 
-                  <CandidateIssueGroup issueName={issueDataName}
+                  <PositionSquare issueName={issueDataName}
                                        data={position} />
                   <div>
                       <div className={styles.menuBlock}>

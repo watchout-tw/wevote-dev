@@ -6,9 +6,9 @@ import moment from 'moment';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 import position2points from '../../utils/position2points';
-import candidates_name2id from '../../utils/candidates_name2id';
+import people_name2id from '../../utils/people_name2id';
 
-import CandidateAvatar from '../../components/CandidateAvatar/CandidateAvatar.js';
+import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar.js';
 
 class Record extends Component {
   static propTypes = {
@@ -29,8 +29,8 @@ class Record extends Component {
                className={styles.date}>{date.format('YYYY-MM-DD')}</Link>
          <div className={styles.category}>{data.category}</div>
 
-         <Link to={`/candidates/${candidates_name2id(data.legislator)}`} className={styles.avatar}>
-              <CandidateAvatar id={candidates_name2id(data.legislator)}/>
+         <Link to={`/people/${people_name2id(data.legislator)}`} className={styles.avatar}>
+              <PeopleAvatar id={people_name2id(data.legislator)}/>
               <div className={styles.avatarName}>{data.legislator}</div>
          </Link>
          <div className={styles.content}>{data.content}</div>
@@ -66,7 +66,7 @@ export default class RecordTable extends Component {
     }else{
       this.setState({ sortingOption: value });
     }
-    console.log(this.state)
+    
   }
   render() {
     const styles = require('./RecordTable.scss');

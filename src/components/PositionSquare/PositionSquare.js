@@ -24,7 +24,7 @@ class Record extends Component {
   // }
 
   render() {
-    const styles = require('./CandidateIssueGroup.scss');
+    const styles = require('./PositionSquare.scss');
     const {data} = this.props;
     //const {active} = this.state;
 
@@ -52,14 +52,14 @@ class Record extends Component {
 }
 
 
-export default class CandidateIssueGroup extends Component {
+export default class PositionSquare extends Component {
   static propTypes = {
     data : PropTypes.object.isRequired,
     issueName: PropTypes.string.isRequired
   }
 
   render() {
-    const styles = require('./CandidateIssueGroup.scss');
+    const styles = require('./PositionSquare.scss');
     const {data, issueName} = this.props;
     
     //console.log(data);
@@ -104,7 +104,7 @@ export default class CandidateIssueGroup extends Component {
   }
 
   props = {
-    className: 'CandidateIssueGroup'
+    className: 'PositionSquare'
   }
 }
 

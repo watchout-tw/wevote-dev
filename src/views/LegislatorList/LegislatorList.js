@@ -3,21 +3,21 @@ import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
 
-import {getAllCandidates} from '../../ducks/candidatePositions';
+import {getAllLegislators} from '../../ducks/legislatorPositions';
 
-import CandidateAvatar from '../../components/CandidateAvatar/CandidateAvatar.js';
+import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar.js';
 
-import candidates_name2id from '../../utils/candidates_name2id';
+import people_name2id from '../../utils/people_name2id';
 
 @connect(
-    state => ({candidatePositions: state.candidatePositions
+    state => ({legislatorPositions: state.legislatorPositions
                }),
-    dispatch => bindActionCreators({getAllCandidates}, dispatch))
+    dispatch => bindActionCreators({getAllLegislators}, dispatch))
 
-export default class CandidateList extends Component {
+export default class LegislatorList extends Component {
   static propTypes = {
-      candidatePositions: PropTypes.object.isRequired,
-      getAllCandidates: PropTypes.func.isRequired
+      legislatorPositions: PropTypes.object.isRequired,
+      getAllLegislators: PropTypes.func.isRequired
   }
 
   constructor(props) { super(props)
@@ -34,7 +34,6 @@ export default class CandidateList extends Component {
       let currentPref = this.state.userPreference;
       currentPref[value.issue] = value.position;
 
-      console.log(value)
       this.setState({
         userPreference: currentPref
       })
@@ -43,18 +42,18 @@ export default class CandidateList extends Component {
 
 
   componentWillMount(){
-      const { getAllCandidates } = this.props;
-      getAllCandidates();
+      const { getAllLegislators } = this.props;
+      getAllLegislators();
   }
   
   render() {
-    const styles = require('./CandidateList.scss');
-    const id = this.props.params.candidateId;
-    const { candidatePositions} = this.props;
+    const styles = require('./LegislatorList.scss');
+    const id = this.props.params.peopleId;
+    const { legislatorPositions} = this.props;
     const { userPreference } = this.state;
     
 
-    let legislatorItems = Object.keys(candidatePositions.data).map((legislator, index)=>{
+    let legislatorItems = Object.keys(legislatorPositions.data).map((legislator, index)=>{
       let shouldReturn = true;
       //黨團不顯示在此
       if(legislator==="台灣團結聯盟黨團"){
@@ -67,8 +66,8 @@ export default class CandidateList extends Component {
           if(userPreference[currentIssue]!=="none"){
 
               //如果立委有這個議題的表態
-              if(candidatePositions.data[legislator].positions[currentIssue]){
-                let currentLegislatorPosition = candidatePositions.data[legislator].positions[currentIssue].dominantPosition;
+              if(legislatorPositions.data[legislator].positions[currentIssue]){
+                let currentLegislatorPosition = legislatorPositions.data[legislator].positions[currentIssue].dominantPosition;
               
                 //檢查兩者意見是否相同
                 if(userPreference[currentIssue] !== currentLegislatorPosition)
@@ -85,8 +84,8 @@ export default class CandidateList extends Component {
 
 
       if(shouldReturn){
-        return <Record data={candidatePositions.data[legislator]} 
-                       id={candidates_name2id(legislator)}
+        return <Record data={legislatorPositions.data[legislator]} 
+                       id={people_name2id(legislator)}
                        key={index}/>
       }
     })
@@ -114,7 +113,7 @@ class Matcher extends Component {
   }
   
   render() {
-    const styles = require('./CandidateList.scss');
+    const styles = require('./LegislatorList.scss');
     
     const {handleSetPref, userPreference} = this.props;
 
@@ -184,7 +183,7 @@ class Record extends Component {
   }
 
   render() {
-    const styles = require('./CandidateList.scss');
+    const styles = require('./LegislatorList.scss');
     const {data, id} = this.props;
     
     if(!data.positions) return <div></div>
@@ -215,8 +214,8 @@ class Record extends Component {
 
     return (
       <div className={styles.item}>
-      <Link to={`/candidates/${id}`} className={styles.link}>
-          <CandidateAvatar id={id}/>
+      <Link to={`/people/${id}`} className={styles.link}>
+          <PeopleAvatar id={id}/>
           <div className={styles.name}>{data.name}</div>
           <div className={styles.issueCubes}>
             {issueItems}

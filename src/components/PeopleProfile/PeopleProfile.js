@@ -4,25 +4,25 @@ import { Link } from "react-router";
 import { connect } from 'react-redux';
 
 @connect(
-    state => ({candidates: state.candidates}),
+    state => ({legislators: state.legislators}),
     dispatch => bindActionCreators({}, dispatch))
 
 
-export default class CandidateProfile extends Component {
+export default class PeopleProfile extends Component {
   static propTypes = {
-    candidates: PropTypes.object.isRequired,
+    legislators: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired
   
   }
   
   render () {
 
-    const styles = require('./CandidateProfile.scss');
+    const styles = require('./PeopleProfile.scss');
 
-    const {candidates, id} = this.props;
-    const candidate = candidates[id];
+    const {legislators, id} = this.props;
+    const legislator = legislators[id];
    
-    let {name, party} = candidate;
+    let {name, party} = legislator;
     
     let imgURL;
 
@@ -36,7 +36,7 @@ export default class CandidateProfile extends Component {
         <div className={`$styles["inner-title"] ${styles["people-title"]} `}>
           <header>
           <div className={styles["people-basic-info"]}>
-            <Link to={`/candidates/${id}`} className={styles["people-pic"]}>
+            <Link to={`/people/${id}`} className={styles["people-pic"]}>
                 <img className={`${styles.avatar}  is-${party}`}
                      src={imgURL} />
 

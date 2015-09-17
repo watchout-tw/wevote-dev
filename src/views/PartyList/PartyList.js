@@ -46,7 +46,7 @@ export default class PartyList extends Component {
   
   render() {
     const styles = require('./PartyList.scss');
-    const id = this.props.params.candidateId;
+    const id = this.props.params.peopleId;
     const { partyPositions} = this.props;
     const { userPreference } = this.state;
     

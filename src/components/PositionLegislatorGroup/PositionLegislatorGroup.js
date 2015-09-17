@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
-import candidates_name2id from '../../utils/candidates_name2id';
+import people_name2id from '../../utils/people_name2id';
 /*
 {
     "name": "黃昭順",
@@ -53,7 +53,7 @@ class LegislatorAvatar extends Component {
     }
     
     return (
-        <Link to={`/candidates/${candidates_name2id(name)}/${currentIssueName}`}>
+        <Link to={`/people/${people_name2id(name)}/${currentIssueName}`}>
           <img className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}
                src={imgURL}/>
         </Link>

@@ -7,19 +7,19 @@ import moment from 'moment';
 import {setIdFilter} from '../../ducks/records';
 
 import cht2url from '../../utils/cht2url';
-import candidates_name2id from '../../utils/candidates_name2id';
+import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
 
-import CandidatePhoto from '../../components/CandidatePhoto/CandidatePhoto.js';
+import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 
 @connect(
-    state => ({candidates: state.candidates,
+    state => ({legislators: state.legislators,
                issues: state.issues,
                records: state.records
                }),
     dispatch => bindActionCreators({setIdFilter}, dispatch))
 
-export default class Candidate extends Component {
+export default class Record extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired,
       setIdFilter: PropTypes.func.isRequired,
@@ -96,8 +96,8 @@ export default class Candidate extends Component {
          </div>    
          
          <div className={styles.peopleRow}>
-            <Link to={`/candidates/${candidates_name2id(data.legislator)}`} className={styles.avatar}>
-              <CandidatePhoto id={candidates_name2id(data.legislator)}/>
+            <Link to={`/people/${people_name2id(data.legislator)}`} className={styles.avatar}>
+              <PeoplePhoto id={people_name2id(data.legislator)}/>
             </Link>
 
             <div className={styles.profileBlock}>
@@ -140,7 +140,7 @@ export default class Candidate extends Component {
 
       </div>
           <Link className={styles.button}
-                to={`/candidates/${candidates_name2id(data.legislator)}/${cht2url(data.issue)}`}>
+                to={`/people/${people_name2id(data.legislator)}/${cht2url(data.issue)}`}>
                 看{data.legislator}在{data.issue}的所有表態
           </Link>
       </div>

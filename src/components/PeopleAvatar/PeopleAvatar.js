@@ -4,24 +4,26 @@ import { Link } from "react-router";
 import { connect } from 'react-redux';
 
 @connect(
-    state => ({candidates: state.candidates}),
+    state => ({legislators: state.legislators}),
     dispatch => bindActionCreators({}, dispatch))
 
 
-export default class CandidatePhoto extends Component {
+export default class PeopleeAvatar extends Component {
   static propTypes = {
-    candidates: PropTypes.object.isRequired,
+    legislators: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired
   
   }
   
   render () {
 
-    const styles = require('./CandidatePhoto.scss');
-    const {candidates, id} = this.props;
-    const candidate = candidates[id];
+    const styles = require('./PeopleAvatar.scss');
+
+    const {legislators, id} = this.props;
+    const legislator = legislators[id];
    
-    let {name, party} = candidate;
+    let {name, party} = legislator;
+    
     let imgURL;
 
     try {
@@ -31,11 +33,10 @@ export default class CandidatePhoto extends Component {
     }
   
     return (
-        <Link to={`/candidates/${id}`} className={styles["people-pic"]}>
+        <div className={styles.wrap}>
             <img className={`${styles.avatar}  is-${party}`}
                  src={imgURL} />
-        </Link>
-          
+        </div>
     );
 
   }

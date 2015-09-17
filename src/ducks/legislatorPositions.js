@@ -1,4 +1,4 @@
-const candidatePositions = 
+const legislatorPositions = 
 {
     "丁守中": {
         "name": "丁守中",
@@ -12207,48 +12207,48 @@ const candidatePositions =
 }
 
 const initialState = {
-    "candidateFilter": "",
+    "legislatorFilter": "",
     "data" : ""
 }
 
-const SET_CANDIDATE_FILTER = 'SET_CANDIDATE_FILTER';
-const GET_ALL_CANDIDATES = 'GET_ALL_CANDIDATES';
+const SET_LEGISLATOR_FILTER = 'SET_LEGISLATOR_FILTER';
+const GET_ALL_LEGISLATORS = 'GET_ALL_LEGISLATORS';
 
 export default function reducer(state = initialState, action = {}) {
   
   switch (action.type) {
     
-    case SET_CANDIDATE_FILTER:
+    case SET_LEGISLATOR_FILTER:
       
-      if(candidatePositions[action.name]){
+      if(legislatorPositions[action.name]){
         return {
-            candidateFilter: action.name,
-            data: candidatePositions[action.name]
+            legislatorFilter: action.name,
+            data: legislatorPositions[action.name]
         };
 
       }else{
         return [];
       }
 
-    case GET_ALL_CANDIDATES:
+    case GET_ALL_LEGISLATORS:
         return {
-            candidateFilter: "",
-            data: candidatePositions
+            legislatorFilter: "",
+            data: legislatorPositions
         };
 
     default:
       return state;
   }
 }
-export function setCandidateFilter(value) {
+export function setLegislatorFilter(value) {
   return {
-    type: SET_CANDIDATE_FILTER,
+    type: SET_LEGISLATOR_FILTER,
     name: value
   };
 }
-export function getAllCandidates() {
+export function getAllLegislators() {
   return {
-    type: GET_ALL_CANDIDATES
+    type: GET_ALL_LEGISLATORS
   };
 }
 

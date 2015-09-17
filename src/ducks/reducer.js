@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import counter from './counter';//// will be removed later
 
-import candidates from './candidates';
+import legislators from './legislators';
 import issues from './issues';
 import parties from './parties';
 import records from './records';
@@ -14,12 +14,12 @@ import positionView from './positionView';
 import issueController from './issueController';
 
 /* 單一立委的各議題表態 */
-import candidatePositions from './candidatePositions';
+import legislatorPositions from './legislatorPositions';
 /* 單一政黨的各議題表態 */
 import partyPositions from './partyPositions';
 
 export default combineReducers({
-  candidates,
+  legislators,
   counter,
   issues,
   parties,
@@ -31,6 +31,6 @@ export default combineReducers({
 
   issueController,
 
-  candidatePositions,
+  legislatorPositions,
   partyPositions
 });

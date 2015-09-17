@@ -3,11 +3,11 @@ import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
 
-import {setCandidateFilter} from '../../ducks/candidatePositions';
+import {setLegislatorFilter} from '../../ducks/legislatorPositions';
 
+import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 
-import CandidateProfile from '../../components/CandidateProfile/CandidateProfile.js';
-import CandidateIssueGroup from '../../components/CandidateIssueGroup/CandidateIssueGroup.js';
+import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 import RecordTable from '../../components/RecordTable/RecordTable.js';
 
 
@@ -15,16 +15,16 @@ import url2eng from '../../utils/url2eng';
 
 @connect(
     state => ({
-                  candidates: state.candidates,
-                  candidatePositions: state.candidatePositions,
+                  legislators: state.legislators,
+                  legislatorPositions: state.legislatorPositions,
                   issues: state.issues
                }),
-    dispatch => bindActionCreators({setCandidateFilter}, dispatch))
+    dispatch => bindActionCreators({setLegislatorFilter}, dispatch))
 
-export default class CandidateIssue extends Component {
+export default class PeopleIssue extends Component {
   static propTypes = {
-      setCandidateFilter: PropTypes.func.isRequired,
-      candidatePositions: PropTypes.object.isRequired
+      setLegislatorFilter: PropTypes.func.isRequired,
+      legislatorPositions: PropTypes.object.isRequired
   }
   //設定 initial state
   constructor(props) { super(props)
@@ -36,40 +36,40 @@ export default class CandidateIssue extends Component {
     this.setState({ showMenu: !this.state.showMenu });
   }
   componentWillMount(){
-      const { candidates, setCandidateFilter } = this.props;
-      const id = this.props.params.candidateId;
-      const name = candidates[id].name;
-      setCandidateFilter(name);
+      const { legislators, setLegislatorFilter } = this.props;
+      const id = this.props.params.peopleId;
+      const name = legislators[id].name;
+      setLegislatorFilter(name);
   }
   componentWillReceiveProps(nextProps){
       
-      const id = this.props.params.candidateId;
-      const nextId = nextProps.params.candidateId;
+      const id = this.props.params.peopleId;
+      const nextId = nextProps.params.peopleId;
 
       if(id !== nextId){
-          const { candidates, setCandidateFilter } = this.props;
-          const name = candidates[nextId].name;
-          setCandidateFilter(name);
+          const { legislators, setLegislaotrFilter } = this.props;
+          const name = legislators[nextId].name;
+          setLegislatorFilter(name);
       }
 
   }
   render() {
-    const styles = require('./CandidateIssue.scss');
-    const id = this.props.params.candidateId;
+    const styles = require('./PeopleIssue.scss');
+    const id = this.props.params.peopleId;
     const issueURL = this.props.params.issueName;
-    const {candidatePositions, issues} = this.props;
+    const {legislatorPositions, issues} = this.props;
     const {showMenu} = this.state;
 
     let issueDataName = url2eng(issueURL)
 
-    if(!candidatePositions.data.positions) return <div></div>;
+    if(!legislatorPositions.data.positions) return <div></div>;
 
-    const position = candidatePositions.data.positions[issueDataName];
+    const position = legislatorPositions.data.positions[issueDataName];
 
     let issueMenu = (showMenu===true) ? (Object.keys(issues).map((currentIssueName,i)=>{
         let active = (issueURL === currentIssueName) ? styles.menuActive : "";
         return  <Link className={` ${styles.menu} ${active}`}
-                      to={`/candidates/${id}/${currentIssueName}`} 
+                      to={`/people/${id}/${currentIssueName}`} 
                       key={i}>{issues[currentIssueName].title}</Link>;
         
     })) : "";
@@ -77,11 +77,11 @@ export default class CandidateIssue extends Component {
    
     return (
       <div className={styles.wrap}> 
-          <CandidateProfile id={id} />
+          <PeopleProfile id={id} />
           
           <div className={styles.main}>
               <div className={styles.summary}> 
-                  <CandidateIssueGroup issueName={issueDataName}
+                  <PositionSquare issueName={issueDataName}
                                        data={position} />
                   <div className={styles.menuBlock}>
                       <div className={styles.menuTitle}
