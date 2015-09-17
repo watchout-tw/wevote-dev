@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import {Link} from 'react-router';
 import moment from 'moment';
 
 import eng2cht from '../../utils/eng2cht';
@@ -7,46 +8,40 @@ import position2color from '../../utils/position2color';
 
 class Record extends Component {
   static propTypes = {
-    activeRecords: PropTypes.array,
+    activeRecord: PropTypes.object,
     data: PropTypes.object.isRequired,
     setToActiveRecord: PropTypes.func.isRequired
   
   }
   
-  //設定 initial state
-  constructor(props) { super(props)
-      this.state = {
-          active: false
-      }
-  }
-  
-  _setActive(value, event){
-    this.setState({ active: true });
-  }
-
-  _setInactive(){  
-    this.setState({ active: false });
-  }
 
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, activeRecords, setToActiveRecord} = this.props;
-    const {active} = this.state;
-
+    const {data, activeRecord, setToActiveRecord, resetActive} = this.props;
+   
     let date = moment.unix(data.date);
-
-    let detailText = (active) ? (
-      <div className={styles.activeCube}>
-           <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
-           <div>{data.content}</div>
-      </div>): "";
-
-
     let cubeActiveStyle = "";
-    activeRecords.map((record, index)=>{
-      if(record.id === data.id)
-        cubeActiveStyle = styles.positionCubeActive;
-    });
+    if(activeRecord.id === data.id)
+       cubeActiveStyle = styles.positionCubeActive;
+
+    /* active record */    
+    let detailText;
+    if((activeRecord.id === data.id)){
+          let date = moment.unix(activeRecord.date);
+          
+          let preview = (activeRecord.content.length > 40) ? activeRecord.content.slice(0,40)+"..." : activeRecord.content;
+          detailText =  (
+          <div className={styles.activeBlock}>
+              <div className={styles.activeBlockClose}
+                   onClick={resetActive.bind(null)}>[關閉]</div>
+              <Link to={`/records/${activeRecord.id}`} className={styles.activeCube}>
+                  <div className={styles.activeContent}>
+                    <div>{date.format('YYYY-MM-DD')} / {activeRecord.legislator} / {activeRecord.meetingCategory}</div>
+                    <div>{preview}</div>
+                  </div>
+              </Link>
+          </div>);
+    }
 
     return (
       <div className={styles.positionWrap}>
@@ -54,9 +49,8 @@ class Record extends Component {
           {detailText}
           
           <div className={` ${styles.positionCube}  ${styles[data.party]}`}
-               onClick={setToActiveRecord.bind(null, [data])}
-               onMouseEnter={this._setActive.bind(this)}
-               onMouseLeave={this._setInactive.bind(this)} >
+               onClick={setToActiveRecord.bind(null, data)}
+               onMouseEnter={setToActiveRecord.bind(null, data)} >
           </div>
       
       </div>
@@ -80,25 +74,25 @@ export default class PositionPartyGroup extends Component {
 
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, issueStatement, activeRecords, setToActiveRecord} = this.props;
+    const {data, issueStatement, activeRecord, setToActiveRecord, resetActive} = this.props;
 
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
       return <Record data={item} key={index} 
-                     setToActiveRecord={setToActiveRecord} activeRecords={activeRecords}/>
+                     setToActiveRecord={setToActiveRecord} 
+                     activeRecord={activeRecord}
+                     resetActive={resetActive} />
     });
 
-    /*
-     * 計算外面的圓圈大小，跟裡面框框集合的寬度
-     */
+    /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */
 
-    /* 寬度是 record 數=> 開根號，round up 到整數 */
-    /* $cubeSize: 20px; */
+    // 寬度是 record 數=> 開根號，round up 到整數
+    // $cubeSize: 20px
     let width = Math.ceil(Math.sqrt(records.length))*20;
 
-    /* 外面是一個兩倍大的 div，然後做圓弧 */
-    /* boder 目前是 ad-hoc 的兩種寬度，需要再調整 */ ////////////
+    // 外面是一個兩倍大的 div，然後做圓弧
+    // boder 目前是 ad-hoc 的兩種寬度，需要再調整
     let borderWidth = (width>140)? 6:4;
 
     // 依照不同的立場設定框框的顏色

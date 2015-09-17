@@ -4,10 +4,10 @@ export default function cht2url(input){
         	return 'marriage-equality';
      	case '罷免':
         	return 'recall';
-        case '公投':
+      case '公投':
         	return 'referendum';
       
-      	default:
+      default:
       		return '<>找不到<>';
     }
 }

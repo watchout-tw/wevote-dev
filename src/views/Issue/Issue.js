@@ -38,41 +38,67 @@ export default class Issue extends Component {
 
   constructor(props) { super(props)
     this.state = {
-        activeRecords: [],
-        activeLegislator: ""
+        activeRecord: "",
+        activeLegislator: "",
+        isLocked: false
     }
   }
-  
-  _setActiveRecord(records, event){
-    this.setState({ activeRecords: records});
+ 
+  _setToActiveRecord(value, event){
+      //console.log("set to active")
+      //console.log(this.state.isLocked);
+      if(this.state.isLocked === false){
+         this.setState({ activeRecord: value });
+      }
   }
 
-  _setActiveLegislator(name, event){
-    this.setState({ activeLegislator: name});
+  _setToLockedRecord(value, event){
+      console.log("LOCK!")
+      if((this.state.activeRecord.id === value.id)&&(this.state.isLocked===true)){
+          this.setState({ 
+            isLocked: false
+          });
+      }else{
+          this.setState({ 
+            activeRecord: value,
+            isLocked: true
+          });
+
+      }
+  }
+
+  _resetActive(){  
+      
+      this.setState({ activeRecord: "" });
+     
   }
 
   render() {
     const styles = require('./Issue.scss');
 
     const {issues, partyView, legislatorView, positionView, issueController} = this.props;
-    const {activeRecords, activeLegislator} = this.state;
+    const {activeRecord, activeLegislator, isLocked} = this.state;
    
     const currentIssueName = this.props.params.issueName;/* 從 URL 知道現在讀的議題頁面 */
 
     const currentIssue = issues[currentIssueName]//只拿目前頁面議題的議題基本資料，maybe refine to ducks/select later on
   
 
-
-    let bindSetActiveRecord = this._setActiveRecord.bind(this);
-    let bindSetActiveLegislator = this._setActiveLegislator.bind(this);
+    let bindSetToActiveRecord = this._setToActiveRecord.bind(this);
+    let bindResetActive = this._resetActive.bind(this);
+    let bindSetToLockedRecord = this._setToLockedRecord.bind(this);
+    let bindSetActiveLegislator = "";
 
     /* 1. 看政黨 */
     const currentPartyView = partyView[currentIssue.titleEng];
     let partyPositionGroups = currentPartyView.partyPositions.map((value, index)=>{
         //console.log(value);
         return <PartyPositionGroup data={value} issueStatement={currentPartyView.statement} key={index}
-                                   setToActiveRecord={bindSetActiveRecord}
-                                   activeRecords={activeRecords} />;
+                                   setToActiveRecord={bindSetToActiveRecord}
+                                   setToLockedRecord={bindSetToLockedRecord}
+                                   resetActive={bindResetActive}
+                                   activeRecord={activeRecord}
+                                   isLocked={isLocked} />;
     });
 
 
@@ -81,9 +107,9 @@ export default class Issue extends Component {
     let positionLegislatorGroups = currentLegislatorView.positions.map((value, index)=>{
         //console.log(value);
         return <PositionLegislatorGroup data={value} issueStatement={currentPartyView.statement} key={index}
-                                        setToActiveRecord={bindSetActiveRecord}
-                                        setToActiveLegislator={bindSetActiveLegislator}
-                                        activeLegislator={activeLegislator}/>;
+                                        setToActiveRecord={bindSetToActiveRecord}
+                                        activeLegislator={activeLegislator}
+                                        currentIssueName={currentIssueName}/>;
     });
 
     /* 3. 看表態 */
@@ -91,8 +117,11 @@ export default class Issue extends Component {
     let positionPartyGroups = currentPositionView.positions.map((value, index)=>{
         //console.log(value);
         return <PositionPartyGroup data={value} issueStatement={currentPartyView.statement} key={index}
-                                   setToActiveRecord={bindSetActiveRecord}
-                                   activeRecords={activeRecords}/>;
+                                   setToActiveRecord={bindSetToActiveRecord}
+                                   setToLockedRecord={bindSetToLockedRecord}
+                                   resetActive={bindResetActive}
+                                   activeRecord={activeRecord}
+                                   isLocked={isLocked}/>;
     });
 
 
@@ -112,10 +141,6 @@ export default class Issue extends Component {
         
     }
 
-    /* 顯示目前 active 的 records */
-    let activeRecordItems = activeRecords.map((record, index)=>{
-        return <PositionRecord data={record} key={index} />
-    });
 
     return (
       <div className={styles.masthead}>
@@ -126,7 +151,7 @@ export default class Issue extends Component {
           <div className={styles.records}>
             {positionFigure}
           </div>
-          {activeRecordItems}
+          
       </div>
     );
   }

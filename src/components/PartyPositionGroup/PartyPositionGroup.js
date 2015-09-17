@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import {Link} from 'react-router';
 import moment from 'moment';
 
 import eng2cht from '../../utils/eng2cht';
@@ -7,52 +8,49 @@ import position2color from '../../utils/position2color';
 
 class Record extends Component {
   static propTypes = {
-    activeRecords: PropTypes.array,
+    activeRecordId: PropTypes.string,
     data : PropTypes.object.isRequired,
-    setToActiveRecord: PropTypes.func.isRequired
+    setToActiveRecord: PropTypes.func.isRequired,
+    resetActive: PropTypes.func.isRequired
   }
-
-  // //設定 initial state
-  constructor(props) { super(props)
-      this.state = { active: false}
-  }
-  
-  _setActive(value, event){
-    this.setState({ active: true });
-  }
-
-  _setInactive(){  
-    this.setState({ active: false });
-  }
-
+ 
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, setToActiveRecord, activeRecords} = this.props;
-    const {active} = this.state;
-
+    const {data, setToActiveRecord, setToLockedRecord, activeRecord, resetActive, isLocked} = this.props;
+  
     let date = moment.unix(data.date);
+  
+    let cubeActiveStyle = (activeRecord.id === data.id) ? styles.positionCubeActive : "";
+    let cubeLockedStyle = (isLocked && activeRecord.id === data.id) ? styles.positionCubeLocked : "";
 
-    let detailText = (active) ? (
-      <div className={styles.activeCube}>
-           <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
-           <div>{data.content}</div>
-      </div>): "";
-
-    let cubeActiveStyle = "";
-    activeRecords.map((record, index)=>{
-      if(record.id === data.id)
-        cubeActiveStyle = styles.positionCubeActive;
-    });
-
+    /* active record */    
+    let detailText;
+    if((activeRecord.id === data.id)){
+          let date = moment.unix(activeRecord.date);
+          
+          let preview = (activeRecord.content.length > 60) ? activeRecord.content.slice(0,60)+" ..." : activeRecord.content;
+          detailText =  (
+          <div className={styles.activeBlock}>
+              <div className={styles.activeBlockClose}
+                   onClick={resetActive.bind(null)}>[關閉]</div>
+              <Link to={`/records/${activeRecord.id}`} className={styles.activeCube}>
+                  <div className={styles.activeContent}>
+                    <div>{date.format('YYYY-MM-DD')} / {activeRecord.legislator} / {activeRecord.meetingCategory}</div>
+                    <div>{preview}</div>
+                  </div>
+              </Link>
+          </div>);
+    }
+       
+ 
     return (
       <div className={styles.postionWrap}>
-           
-           {detailText}
-
-          <div className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]}`}
-               onClick={setToActiveRecord.bind(null, [data])}
-               onMouseEnter={this._setActive.bind(this)}
-               onMouseLeave={this._setInactive.bind(this)}>
+          {detailText}
+          
+          <div className={` ${styles.positionCube} ${cubeActiveStyle} ${cubeLockedStyle} ${styles[data.position]}`}
+               onClick={setToLockedRecord.bind(null, data)}
+               onMouseEnter={setToActiveRecord.bind(null, data)}
+               >
           </div>
 
       </div>
@@ -70,28 +68,39 @@ export default class PartyPositionGroup extends Component {
     setToActiveRecord: PropTypes.func.isRequired
   
   }
+  
 
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, issueStatement, setToActiveRecord, activeRecords} = this.props;
+    const {data, issueStatement, setToActiveRecord,
+           activeRecord, resetActive, setToLockedRecord,
+           isLocked} = this.props;
+   
     
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
+
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
-      return <Record data={item} key={index} setToActiveRecord={setToActiveRecord} activeRecords={activeRecords}/>
+      return <Record data={item} 
+                     key={index} 
+                     setToActiveRecord={setToActiveRecord} 
+                     setToLockedRecord={setToLockedRecord}
+                     resetActive={resetActive}
+                     activeRecord={activeRecord}
+                     isLocked={isLocked}/>
     });
 
-    /*
-     * 計算外面的圓圈大小，跟裡面框框集合的寬度
-     */
+    
 
-    /* 寬度是 record 數=> 開根號，round up 到整數 */
-    /* $cubeSize: 20px; */
+    /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */
+
+    // 寬度是 record 數=> 開根號，round up 到整數
+    // $cubeSize: 20px; 
     let width = Math.ceil(Math.sqrt(records.length))*20;
 
-    /* 外面是一個兩倍大的 div，然後做圓弧 */
-    /* boder 目前是 ad-hoc 的兩種寬度，需要再調整 */ ////////////
+    // 外面是一個兩倍大的 div，然後做圓弧
+    // boder 目前是 ad-hoc 的兩種寬度，需要再調整
     let borderWidth = (width>140)? 6:4;
 
     // 依照不同的立場設定框框的顏色
@@ -115,6 +124,9 @@ export default class PartyPositionGroup extends Component {
       left: width/2
     }
 
+
+    
+
     return (
       <div className={styles.wrap}>
         <div>{partyTitle}</div>
@@ -123,6 +135,7 @@ export default class PartyPositionGroup extends Component {
         <div style={cubesWrap}>
           <div style={cubes}>{records}</div>
         </div>
+       
       </div>
     );
   }

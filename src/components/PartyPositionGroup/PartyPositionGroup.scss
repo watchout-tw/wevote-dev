@@ -15,10 +15,15 @@ $unknownColor: #FFF800;
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
+	position:relative;
 	cursor: pointer;
+
 }
 .positionCube:hover, .positionCubeActive {
-	border: 3px solid;
+	border: 3px solid black;
+}
+.positionCubeLocked, .positionCube.positionCubeLocked:hover {
+	border-color: white;
 }
 .aye {
 	background: $ayeColor;
@@ -30,19 +35,38 @@ $unknownColor: #FFF800;
 	background: $unknownColor;
 }
 /* hover 上的時候顯示的文字 */
-.activeCube {
+.activeBlock {
+	position: absolute;
+	top: -160px;
+	z-index: 10;
+}
+.activeBlockClose {
+	position: absolute;
+	top: -20px;
+	right: 5px;
+	cursor: pointer;
+}
+.activeCube, .activeCube:visited {
 	width: 100%;
 	background: white;
-	position: absolute;
 	text-align: left;
 	padding: 10px;
 	font-size: 14px;
 	line-height: 1.4;
-	top: -100px;
-	height:90px;
+
 	width: 340px;
 	border: 1px solid;
-  	overflow: hidden;
-	z-index: 1;
+  	
 	box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
+
+	cursor: pointer;
+	display: block;
+	color: black;
+	text-decoration: none;
+
+}
+.activeContent {
+	height: 100px;
+	overflow: hidden;
+	margin: 5px 0;
 }

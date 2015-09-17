@@ -1,7 +1,8 @@
 import React, {Component, PropTypes} from 'react';
+import {Link} from 'react-router';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
-
+import candidates_name2id from '../../utils/candidates_name2id';
 /*
 {
     "name": "黃昭順",
@@ -36,19 +37,10 @@ class LegislatorAvatar extends Component {
     setToActiveLegislator: PropTypes.func.isRequired
   }
 
-  _onClickHandler(){
-    
-    const { data, setToActiveRecord, setToActiveLegislator } = this.props;
-   
-    setToActiveLegislator(data.name);
-    setToActiveRecord(data.records);
-
-  }
-
   render () {
-    const {data, activeLegislator} = this.props;
+    const {data, activeLegislator, currentIssueName} = this.props;
     const styles = require('./PositionLegislatorGroup.scss');
-
+    
     let {party, name} = data;
     let imgURL;
 
@@ -61,9 +53,10 @@ class LegislatorAvatar extends Component {
     }
     
     return (
-        <img className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}
-             src={imgURL}
-             onClick={this._onClickHandler.bind(this)} />
+        <Link to={`/candidates/${candidates_name2id(name)}/${currentIssueName}`}>
+          <img className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}
+               src={imgURL}/>
+        </Link>
     );
 
   }
@@ -97,13 +90,19 @@ export default class PositionLegislatorGroup extends Component {
 
   render() {
     const styles = require('./PositionLegislatorGroup.scss');
-    const {data, issueStatement, setToActiveRecord, setToActiveLegislator, activeLegislator} = this.props;
+    const {data, issueStatement, setToActiveRecord, setToActiveLegislator, activeLegislator, currentIssueName} = this.props;
     const {active} = this.state;
+
+
     
     /* 這裡是立委們 */
     let legislators = data.legislators.map((item,index)=>{
-      return <LegislatorAvatar data={item} key={index} 
-              setToActiveRecord={setToActiveRecord} setToActiveLegislator={setToActiveLegislator} activeLegislator={activeLegislator}/>
+      return <LegislatorAvatar 
+              data={item} key={index} 
+              setToActiveRecord={setToActiveRecord}
+              setToActiveLegislator={setToActiveLegislator} 
+              activeLegislator={activeLegislator}
+              currentIssueName={currentIssueName}/>
     });
 
     /*
