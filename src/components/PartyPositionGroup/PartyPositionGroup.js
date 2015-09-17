@@ -16,7 +16,7 @@ class Record extends Component {
  
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, setToActiveRecord, activeRecord, resetActive} = this.props;
+    const {data, setToActiveRecord, activeRecord, resetActiveRecord} = this.props;
   
     let date = moment.unix(data.date);
   
@@ -48,7 +48,7 @@ class Record extends Component {
           <Link to={`/records/${data.id}`}
                 className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]}`}
                 onMouseEnter={setToActiveRecord.bind(null, data)}
-                onMouseLeave={resetActive.bind(null)}>
+                onMouseLeave={resetActiveRecord.bind(null)}>
           </Link>
 
       </div>
@@ -71,7 +71,7 @@ export default class PartyPositionGroup extends Component {
   render() {
     const styles = require('./PartyPositionGroup.scss');
     const {data, issueStatement, setToActiveRecord,
-           activeRecord, resetActive, setToLockedRecord,
+           activeRecord, resetActiveRecord, setToLockedRecord,
            isLocked} = this.props;
    
     
@@ -84,7 +84,7 @@ export default class PartyPositionGroup extends Component {
                      key={index} 
                      setToActiveRecord={setToActiveRecord} 
                      setToLockedRecord={setToLockedRecord}
-                     resetActive={resetActive}
+                     resetActiveRecord={resetActiveRecord}
                      activeRecord={activeRecord}
                      isLocked={isLocked}/>
     });

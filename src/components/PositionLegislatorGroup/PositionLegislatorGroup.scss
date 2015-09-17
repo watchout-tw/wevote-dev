@@ -5,6 +5,10 @@
 .title {
 	text-align: center;
 }
+.avatarItem {
+    position: relative;
+    display: inline-block;
+}
 .avatarImg {
     width: 40px;
     height: 40px;
@@ -40,4 +44,31 @@
 .NPU {
     border-color: rgba(194,15,81,0.9);
 }
+/* hover 上的時候顯示的文字 */
+.activeCube {
+    position: absolute;
+    z-index: 10;
+
+    display: block;
+    top: -60px;
+    left: -35px;
+    width: 120px;
+    height: 54px;
+    line-height: 1.4;
+    text-align: center;
+    
+    color: black;
+    background: white;
+    
+    padding: 8px;
+    font-size: 14px;
+    
+    border: 2px solid rgb(80,80,80);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.12);
+    
+    cursor: pointer; 
+    
+}
+
+
 

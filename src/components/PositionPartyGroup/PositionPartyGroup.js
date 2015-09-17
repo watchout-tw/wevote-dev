@@ -17,7 +17,7 @@ class Record extends Component {
 
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, activeRecord, setToActiveRecord, resetActive} = this.props;
+    const {data, activeRecord, setToActiveRecord, resetActiveRecord} = this.props;
    
     let date = moment.unix(data.date);
     let cubeActiveStyle = "";
@@ -50,7 +50,7 @@ class Record extends Component {
           <Link to={`/records/${data.id}`}
                 className={` ${styles.positionCube}  ${styles[data.party]}`}
                 onMouseEnter={setToActiveRecord.bind(null, data)}
-                onMouseLeave={resetActive.bind(null)} >
+                onMouseLeave={resetActiveRecord.bind(null)} >
           </Link>
       
       </div>
@@ -74,7 +74,7 @@ export default class PositionPartyGroup extends Component {
 
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, issueStatement, activeRecord, setToActiveRecord, resetActive} = this.props;
+    const {data, issueStatement, activeRecord, setToActiveRecord, resetActiveRecord} = this.props;
 
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
@@ -82,7 +82,7 @@ export default class PositionPartyGroup extends Component {
       return <Record data={item} key={index} 
                      setToActiveRecord={setToActiveRecord} 
                      activeRecord={activeRecord}
-                     resetActive={resetActive} />
+                     resetActiveRecord={resetActiveRecord} />
     });
 
     /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */

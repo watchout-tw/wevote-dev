@@ -46,12 +46,15 @@ export default class Issue extends Component {
   _setToActiveRecord(value, event){
       this.setState({ activeRecord: value });
   }
+  _resetActiveRecord(){  
+      this.setState({ activeRecord: "" });  
+  }
 
-
-  _resetActive(){  
-      
-      this.setState({ activeRecord: "" });
-     
+  _setToActiveLegislator(value, event){
+      this.setState({ activeLegislator: value });
+  }
+  _resetActiveLegislator(){  
+      this.setState({ activeLegislator: "" });  
   }
 
   render() {
@@ -66,8 +69,10 @@ export default class Issue extends Component {
   
 
     let bindSetToActiveRecord = this._setToActiveRecord.bind(this);
-    let bindResetActive = this._resetActive.bind(this);
-    let bindSetActiveLegislator = "";
+    let bindResetActiveRecord = this._resetActiveRecord.bind(this);
+    
+    let bindSetToActiveLegislator = this._setToActiveLegislator.bind(this);
+    let bindResetActiveLegislator = this._resetActiveLegislator.bind(this);
 
     /* 1. 看政黨 */
     const currentPartyView = partyView[currentIssue.titleEng];
@@ -75,7 +80,7 @@ export default class Issue extends Component {
         //console.log(value);
         return <PartyPositionGroup data={value} issueStatement={currentPartyView.statement} key={index}
                                    setToActiveRecord={bindSetToActiveRecord}
-                                   resetActive={bindResetActive}
+                                   resetActiveRecord={bindResetActiveRecord}
                                    activeRecord={activeRecord} />;
     });
 
@@ -85,7 +90,8 @@ export default class Issue extends Component {
     let positionLegislatorGroups = currentLegislatorView.positions.map((value, index)=>{
         //console.log(value);
         return <PositionLegislatorGroup data={value} issueStatement={currentPartyView.statement} key={index}
-                                        setToActiveRecord={bindSetToActiveRecord}
+                                        setToActiveLegislator={bindSetToActiveLegislator}
+                                        resetActiveLegislator={bindResetActiveLegislator}
                                         activeLegislator={activeLegislator}
                                         currentIssueName={currentIssueName}/>;
     });
@@ -96,7 +102,7 @@ export default class Issue extends Component {
         //console.log(value);
         return <PositionPartyGroup data={value} issueStatement={currentPartyView.statement} key={index}
                                    setToActiveRecord={bindSetToActiveRecord}
-                                   resetActive={bindResetActive}
+                                   resetActiveRecord={bindResetActiveRecord}
                                    activeRecord={activeRecord} />;
     });
 

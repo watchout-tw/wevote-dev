@@ -33,15 +33,17 @@ class LegislatorAvatar extends Component {
 
     data: PropTypes.object.isRequired,
     activeLegislator: PropTypes.string,
-    setToActiveRecord: PropTypes.func.isRequired,
-    setToActiveLegislator: PropTypes.func.isRequired
+    setToActiveLegislator: PropTypes.func.isRequired,
+    resetActiveLegislator: PropTypes.func.isRequired
   }
 
   render () {
-    const {data, activeLegislator, currentIssueName} = this.props;
+    const { data, currentIssueName,
+            setToActiveLegislator, resetActiveLegislator, activeLegislator, 
+          } = this.props;
     const styles = require('./PositionLegislatorGroup.scss');
     
-    let {party, name} = data;
+    let {id, name, party, records} = data;
     let imgURL;
 
     let imgActiveStyle = (activeLegislator === name)? styles.avatarImgActive : "";
@@ -51,11 +53,30 @@ class LegislatorAvatar extends Component {
     }catch(e){
       imgURL = require("./images/default.jpg");
     }
+
+     /* active record */    
+    let detailText;
+    if((activeLegislator === name)){
+          detailText = ( 
+              <div className={styles.activeCube}>
+                  <div>{name}</div>
+                  {records.length} 筆表態資料  
+              </div>
+          );
+    }
+    //onMouseLeave={resetActiveLegislator.bind(null)}
     
     return (
-        <Link to={`/people/${people_name2id(name)}/${currentIssueName}`}>
+        <Link to={`/people/${people_name2id(name)}/${currentIssueName}`}
+              onMouseEnter={setToActiveLegislator.bind(null, name)}
+              
+              className={styles.avatarItem}>
+         
+          {detailText}
+          
           <img className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}
                src={imgURL}/>
+          
         </Link>
     );
 
@@ -66,11 +87,12 @@ class LegislatorAvatar extends Component {
 export default class PositionLegislatorGroup extends Component {
   static propTypes = {
     
-    activeLegislator: PropTypes.string,
     data: PropTypes.object.isRequired,
     issueStatement: PropTypes.string.isRequired,
-    setToActiveRecord: PropTypes.func.isRequired,
-    setToActiveLegislator: PropTypes.func.isRequired
+
+    activeLegislator: PropTypes.string,
+    setToActiveLegislator: PropTypes.func.isRequired,
+    resetActiveLegislator: PropTypes.func.isRequired
     
   }
 
@@ -90,7 +112,8 @@ export default class PositionLegislatorGroup extends Component {
 
   render() {
     const styles = require('./PositionLegislatorGroup.scss');
-    const {data, issueStatement, setToActiveRecord, setToActiveLegislator, activeLegislator, currentIssueName} = this.props;
+    const {data, currentIssueName, issueStatement, 
+           setToActiveLegislator, activeLegislator, resetActiveLegislator} = this.props;
     const {active} = this.state;
 
 
@@ -99,44 +122,42 @@ export default class PositionLegislatorGroup extends Component {
     let legislators = data.legislators.map((item,index)=>{
       return <LegislatorAvatar 
               data={item} key={index} 
-              setToActiveRecord={setToActiveRecord}
               setToActiveLegislator={setToActiveLegislator} 
+              resetActiveLegislator={resetActiveLegislator} 
               activeLegislator={activeLegislator}
               currentIssueName={currentIssueName}/>
     });
 
-    /*
-     * 計算外面的圓圈大小，跟裡面框框集合的寬度
-     */
+    /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */
+     
+    // 寬度是 record 數=> 開根號，round up 到整數
+    // $cubeSize: 20px; 
+    let width = Math.ceil(Math.sqrt(data.legislators.length))*50;//51 = 40 + 4 + 6, i.e. width + margin + border-width*2
 
-     /* 寬度是 record 數=> 開根號，round up 到整數 */
-     /* $cubeSize: 20px; */
-     let width = Math.ceil(Math.sqrt(data.legislators.length))*50;//51 = 40 + 4 + 6, i.e. width + margin + border-width*2
-
-     /* 外面是一個兩倍大的 div，然後做圓弧 */
-     /* boder 目前是 ad-hoc 的兩種寬度，需要再調整 */ ////////////
-     let borderWidth = (width>140)? 6:4;
+    // 外面是一個兩倍大的 div，然後做圓弧
+    // boder 目前是 ad-hoc 的兩種寬度，需要再調整 NEEDFIX
+    let borderWidth = (width>140)? 6:4;
 
     // 依照不同的立場設定框框的顏色
     let cubesWrap = {
-      width: width * 1.4,
-      height: width * 1.4,
-      boxShadow: `0px 0px 0px ${borderWidth}px ${position2color(data.position)}`,
-      borderRadius: "50%",
-      display: "inline-block",
-      verticalAlign: "middle",
-      position: "relative",
-      margin: "20px 20px"
+        width: width * 1.4,
+        height: width * 1.4,
+        boxShadow: `0px 0px 0px ${borderWidth}px ${position2color(data.position)}`,
+        borderRadius: "50%",
+        display: "inline-block",
+        verticalAlign: "middle",
+        position: "relative",
+        margin: "20px 20px"
     }
 
     // 依照紀錄筆數，設定內圈的寬度
-    /* /5 是什麼 ad-hoc 的數字⋯⋯ */
+    // 5 是什麼 ad-hoc 的數字....... NEEDFIX
     let cubes = {
-      width: width,
-      height: width,
-      position: "absolute",
-      top: width/5,
-      left: width/5
+        width: width,
+        height: width,
+        position: "absolute",
+        top: width/5,
+        left: width/5
     }
 
     let title = `我${eng2cht(data.position)}${issueStatement}`;
