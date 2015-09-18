@@ -22,6 +22,9 @@ class Record extends Component {
   
     let cubeActiveStyle = (activeRecord.id === data.id) ? styles.positionCubeActive : "";
     
+    //是否為黨團
+    let isCaucus = (data.legislator.indexOf("黨團")!== -1);
+    let caucusStyle = isCaucus ? styles.caucus : "";
 
     /* active record */    
     let detailText;
@@ -46,7 +49,7 @@ class Record extends Component {
           {detailText}
           
           <Link to={`/records/${data.id}`}
-                className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]}`}
+                className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]} ${caucusStyle }`}
                 onMouseEnter={setToActiveRecord.bind(null, data)}
                 onMouseLeave={resetActiveRecord.bind(null)}>
           </Link>

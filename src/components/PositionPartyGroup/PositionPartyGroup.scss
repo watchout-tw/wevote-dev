@@ -14,11 +14,15 @@ $unknownColor: #FFF800;
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
+	position:relative;
 	cursor: pointer;
-	color: black
+	color: black;
+	text-decoration: none;
+
 }
 .positionCube:hover, .positionCubeActive {
-	border: 3px solid black;
+	box-shadow: 0 0 0 2px black;
+	z-index: 10;
 }
 .aye {
 	background: $ayeColor;
@@ -82,4 +86,13 @@ $unknownColor: #FFF800;
 	height: 100px;
 	overflow: hidden;
 	margin: 5px 0;
+}
+.caucus:after {
+	content: '令';
+	color: #FFFF1B;
+	border: 1px solid #FFFF1B;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 2px);
 }

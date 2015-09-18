@@ -21,9 +21,14 @@ class Record extends Component {
    
     let date = moment.unix(data.date);
     let cubeActiveStyle = "";
+
+    //是否為黨團
+    let isCaucus = (data.legislator.indexOf("黨團")!== -1);
+    let caucusStyle = isCaucus ? styles.caucus : "";
+
     if(activeRecord.id === data.id)
        cubeActiveStyle = styles.positionCubeActive;
-
+    
     /* active record */    
     let detailText;
     if((activeRecord.id === data.id)){
@@ -48,7 +53,7 @@ class Record extends Component {
           {detailText}
           
           <Link to={`/records/${data.id}`}
-                className={` ${styles.positionCube}  ${styles[data.party]}`}
+                className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.party]} ${caucusStyle} `}
                 onMouseEnter={setToActiveRecord.bind(null, data)}
                 onMouseLeave={resetActiveRecord.bind(null)} >
           </Link>
@@ -67,7 +72,7 @@ export default class PositionPartyGroup extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     issueStatement: PropTypes.string.isRequired,
-    activeRecords: PropTypes.array,
+    activeRecord: PropTypes.array,
     setToActiveRecord: PropTypes.func.isRequired
   
   }
