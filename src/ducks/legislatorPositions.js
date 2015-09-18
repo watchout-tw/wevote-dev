@@ -1375,7 +1375,7 @@ const legislatorPositions =
                         "id": 176,
                         "issue": "公投",
                         "legislator": "吳育昇",
-                        "party": "DPP",
+                        "party": "KMT",
                         "date": 1427212800,
                         "category": "發言",
                         "content": "今天召委安排報告主題是「補正公投法、修改選罷法，以落實國民主權之立法倡議」。本席剛好想到行政院版《總統副總統選舉罷免法》修正草案，未來總統大選，因在外地工作、就學無法回戶籍所在地投票的軍警、上班族、學生，選民可以申請跨縣市移轉投票，節省返鄉投票所花費的時間與金錢，對於全國公民行使參政權有很大幫助。各界絞盡腦汁提升青年返鄉意願，但事實上，解決返鄉投票問題的根本，在於「不在籍投票」制度。目前大多數的民主國家都擁有不在籍投票規定，以此維護《憲法》權利，然而，一向以民主制度自傲的台灣，卻遲遲未能建立機制，外地遊子表達聲音的管道，希望朝野應該一起努力保障選舉人參政權行使！",
@@ -3883,7 +3883,7 @@ const legislatorPositions =
                         "id": 180,
                         "issue": "公投",
                         "legislator": "邱文彥",
-                        "party": "DPP",
+                        "party": "KMT",
                         "date": 1427212800,
                         "category": "發言",
                         "content": "我的意思是，你們一直說要凝聚社會共識，也希望這個議題可以討論。不管是門檻的問題、條文的問題，還是公投審議委員會要不要存在的問題，社會上都可以公開討論。",
@@ -5818,7 +5818,7 @@ const legislatorPositions =
                         "id": 181,
                         "issue": "公投",
                         "legislator": "張慶忠",
-                        "party": "DPP",
+                        "party": "KMT",
                         "date": 1427212800,
                         "category": "發言",
                         "content": "對，這是我們所擔心的，所以本席認為公投法應採較高門檻，因為做成決定之後，後續沒有人可以來負責，所以會擔心這只是一時的社會氛圍，或是少數人的情緒。",
@@ -10842,7 +10842,7 @@ const legislatorPositions =
                         "id": 179,
                         "issue": "公投",
                         "legislator": "盧嘉辰",
-                        "party": "DPP",
+                        "party": "KMT",
                         "date": 1427212800,
                         "category": "發言",
                         "content": "為具體回應補正公投法、修改選罷法以落實國民主權之立法倡議降低提案、連署門檻、建立電子提案及連署門檻、延長罷免連署期間，檢討現行法律對於罷免權行使之諸多不當限制等，內政部舉辦完公聽會後，如有修法共識，應儘速提出公民投票法及公職人員選舉罷免法修正草案，以落實民主，鞏固民權。\n 提案人：盧嘉辰 邱文彥 吳育昇 鄭天財",
@@ -11960,10 +11960,152 @@ const legislatorPositions =
             }
         }
     },
+    "國民黨黨團": {
+        "name": "國民黨黨團",
+        "positions": {
+            "marriageEquality": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "recall": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            }
+        }
+    },
+    "民進黨黨團": {
+        "name": "民進黨黨團",
+        "positions": {
+            "marriageEquality": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "recall": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            }
+        }
+    },
     "台灣團結聯盟黨團": {
         "name": "台灣團結聯盟黨團",
         "positions": {
-            "marriageEquality": {},
+            "marriageEquality": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
             "recall": {
                 "records": [
                     {
@@ -12086,47 +12228,12 @@ const legislatorPositions =
             }
         }
     },
-    "鄭天財": {
-        "name": "鄭天財",
+    "親民黨黨團": {
+        "name": "親民黨黨團",
         "positions": {
-            "marriageEquality": {},
-            "recall": {},
-            "referendum": {
-                "records": [
-                    {
-                        "id": 178,
-                        "issue": "公投",
-                        "legislator": "鄭天財",
-                        "party": "DPP",
-                        "date": 1427212800,
-                        "category": "發言",
-                        "content": "為具體回應補正公投法、修改選罷法以落實國民主權之立法倡議降低提案、連署門檻、建立電子提案及連署門檻、延長罷免連署期間，檢討現行法律對於罷免權行使之諸多不當限制等，內政部舉辦完公聽會後，如有修法共識，應儘速提出公民投票法及公職人員選舉罷免法修正草案，以落實民主，鞏固民權。\n 提案人：盧嘉辰 邱文彥 吳育昇 鄭天財",
-                        "positionJudgement": "要求內政部提出修正草案",
-                        "position": "unknown",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10402101;0427;0486",
-                        "meeting": "內政委員會",
-                        "meetingCategory": "委員會質詢"
-                    },
-                    {
-                        "id": 240,
-                        "issue": "公投",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1428422400,
-                        "category": "發言",
-                        "content": "秘書長知不知道總統及副總統選舉實施不在籍投票案送到立法院多久了？你不知道？你們都沒有計算！...我說的是總統副總統選罷法，這個還沒有付委啦！被誰擋住了？你們要去說明、溝通，甚至可以拜託公民團體，說為什麼不付委。實施不在籍投票有這麼困難嗎？全世界的先進國家都在做，所以這部分應該多溝通、多協調。",
-                        "positionJudgement": "「不在籍投票」不在公投法修法討論內容",
-                        "position": "unknown",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10402801;0378;0380",
-                        "meeting": "內政委員會",
-                        "meetingCategory": "委員會質詢"
-                    }
-                ],
-                "dominantPosition": "unknown",
+            "marriageEquality": {
+                "records": [],
+                "dominantPosition": "none",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -12134,22 +12241,34 @@ const legislatorPositions =
                     },
                     {
                         "position": "unknown",
-                        "count": 2
+                        "count": 0
                     },
                     {
                         "position": "aye",
                         "count": 0
                     }
                 ],
-                "totalCounts": 2
-            }
-        }
-    },
-    "親民黨黨團": {
-        "name": "親民黨黨團",
-        "positions": {
-            "marriageEquality": {},
-            "recall": {},
+                "totalCounts": 0
+            },
+            "recall": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
             "referendum": {
                 "records": [
                     {
@@ -12198,6 +12317,65 @@ const legislatorPositions =
                     {
                         "position": "aye",
                         "count": 2
+                    }
+                ],
+                "totalCounts": 2
+            }
+        }
+    },
+    "鄭天財": {
+        "name": "鄭天財",
+        "positions": {
+            "marriageEquality": {},
+            "recall": {},
+            "referendum": {
+                "records": [
+                    {
+                        "id": 178,
+                        "issue": "公投",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1427212800,
+                        "category": "發言",
+                        "content": "為具體回應補正公投法、修改選罷法以落實國民主權之立法倡議降低提案、連署門檻、建立電子提案及連署門檻、延長罷免連署期間，檢討現行法律對於罷免權行使之諸多不當限制等，內政部舉辦完公聽會後，如有修法共識，應儘速提出公民投票法及公職人員選舉罷免法修正草案，以落實民主，鞏固民權。\n 提案人：盧嘉辰 邱文彥 吳育昇 鄭天財",
+                        "positionJudgement": "要求內政部提出修正草案",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10402101;0427;0486",
+                        "meeting": "內政委員會",
+                        "meetingCategory": "委員會質詢"
+                    },
+                    {
+                        "id": 240,
+                        "issue": "公投",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1428422400,
+                        "category": "發言",
+                        "content": "秘書長知不知道總統及副總統選舉實施不在籍投票案送到立法院多久了？你不知道？你們都沒有計算！...我說的是總統副總統選罷法，這個還沒有付委啦！被誰擋住了？你們要去說明、溝通，甚至可以拜託公民團體，說為什麼不付委。實施不在籍投票有這麼困難嗎？全世界的先進國家都在做，所以這部分應該多溝通、多協調。",
+                        "positionJudgement": "「不在籍投票」不在公投法修法討論內容",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10402801;0378;0380",
+                        "meeting": "內政委員會",
+                        "meetingCategory": "委員會質詢"
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
                     }
                 ],
                 "totalCounts": 2

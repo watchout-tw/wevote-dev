@@ -1610,6 +1610,58 @@ const initialState = {
         "isCandidate": true,
         "candidateConstituency1": "屏東縣",
         "candidateConstituency2": "1"
+    },
+    "125": {
+        "id": 125,
+        "name": "國民黨黨團",
+        "party": "KMT",
+        "partyCht": "中國國民黨",
+        "gender": "",
+        "age": "",
+        "constituency1": "",
+        "constituency2": "",
+        "isCandidate": "unknown",
+        "candidateConstituency1": "",
+        "candidateConstituency2": ""
+    },
+    "126": {
+        "id": 126,
+        "name": "民進黨黨團",
+        "party": "DPP",
+        "partyCht": "民主進步黨",
+        "gender": "",
+        "age": "",
+        "constituency1": "",
+        "constituency2": "",
+        "isCandidate": "unknown",
+        "candidateConstituency1": "",
+        "candidateConstituency2": ""
+    },
+    "127": {
+        "id": 127,
+        "name": "台灣團結聯盟黨團",
+        "party": "TSU",
+        "partyCht": "台聯",
+        "gender": "",
+        "age": "",
+        "constituency1": "",
+        "constituency2": "",
+        "isCandidate": "unknown",
+        "candidateConstituency1": "",
+        "candidateConstituency2": ""
+    },
+    "128": {
+        "id": 128,
+        "name": "親民黨黨團",
+        "party": "PFP",
+        "partyCht": "親民黨",
+        "gender": "",
+        "age": "",
+        "constituency1": "",
+        "constituency2": "",
+        "isCandidate": "unknown",
+        "candidateConstituency1": "",
+        "candidateConstituency2": ""
     }
 }
 
