@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
 
+import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 @connect(
     state => ({legislators: state.legislators}),
     dispatch => bindActionCreators({}, dispatch))
@@ -25,38 +26,47 @@ export default class PeopleProfile extends Component {
     let {name, party, partyCht, gender, age, constituency1, constituency2,
          isCandidate, candidateConstituency1, candidateConstituency2} = legislator;
     
-    if(constituency2 === "N/A")
+    
+    //處理選區顯示方式
+    if(constituency2 === "N/A"){
         constituency2 = "";
-    else
+    
+    }else{
         constituency2 =  `第${constituency2}選區`;
+    }
 
-    if(candidateConstituency2 === "N/A")
+    if(candidateConstituency2 === "N/A"){
         candidateConstituency2 = "";
-    else
+    
+    }else{
         candidateConstituency2 = `第${candidateConstituency2}選區`;
+
+    }
+    let ageInfo = <p>{`  ${age}歲，${gender}`}</p>;
+    let legislationInfo = <p>{`第8屆 ${constituency1} ${constituency2} 立委`}</p>;
+
+ 
+    
+    //處理黨團的資訊顯示方式
+    if(name.indexOf("黨團")!== -1){
+       ageInfo = "";
+       legislationInfo = <p>第8屆黨團</p>
+    }
 
     let candidateInfo;
     if(isCandidate === true){
-      candidateInfo = <p>{` 2016 ${candidateConstituency1} ${candidateConstituency2} 立委候選人`}</p>;
+        candidateInfo = <p>{` 2016 ${candidateConstituency1} ${candidateConstituency2} 立委候選人`}</p>;
     }
 
-    let imgURL;
-
-    try {
-      imgURL = require("./images/avatar/"+name+".png");
-    }catch(e){
-      imgURL = require("./images/default.jpg");
-    }
+   
   
     return (
         <div className={`$styles["inner-title"] ${styles["people-title"]} `}>
           <header>
           <div className={styles["people-basic-info"]}>
-            <Link to={`/people/${id}`} className={styles["people-pic"]}>
-                <img className={`${styles.avatar}  is-${party}`}
-                     src={imgURL} />
-
-            </Link>
+            <div className={styles["people-pic"]}>
+                <PeoplePhoto id={id}/>
+            </div>
 
             <h1>{name}</h1>
             <div className={styles.party}>
@@ -64,8 +74,8 @@ export default class PeopleProfile extends Component {
               <span>{partyCht}</span> 
             </div>
             <div className={styles["basic-txt"]}>
-              <p>{`  ${age}歲，${gender}`}</p>
-              <p>{`第8屆 ${constituency1} ${constituency2} 立委`}</p>
+              {ageInfo}
+              {legislationInfo}
               {candidateInfo}
             </div>
 

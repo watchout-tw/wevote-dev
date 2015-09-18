@@ -124,9 +124,9 @@ export default class Record extends Component {
          </div>    
          
          <div className={styles.peopleRow}>
-            <Link to={`/people/${people_name2id(data.legislator)}`} className={styles.avatar}>
+            <div className={styles.avatar}>
               <PeoplePhoto id={people_name2id(data.legislator)}/>
-            </Link>
+            </div>
 
             <div className={styles.profileBlock}>
                 {currentInfo}

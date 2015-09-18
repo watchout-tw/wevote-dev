@@ -75,6 +75,7 @@ $unknownColor: #FFF800;
 	background: white;
 	margin-top: 1px;
 	box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
+	min-height: 100px;
 }
 .positionCube {
 	width: $cubeSize;
@@ -111,16 +112,21 @@ $unknownColor: #FFF800;
 	float: left;
 	text-decoration: none;
 	color: rgb(53,55,54);
+	text-align: center;
+	width: 90px;
+	overflow: hidden;
 }
 .avatar:hover {
 	text-decoration: underline;
 }
 .avatarName {
 	font-size: 14px;
+	width: 90px;
+    line-height: 1.2;
 }
 .content {
 	margin-top: 4px;
-	margin-left: 10px;
+	margin-left: 18px;
 	line-height: 1.6;
 	padding-left: 80px;
 }

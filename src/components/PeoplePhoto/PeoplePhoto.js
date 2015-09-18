@@ -27,9 +27,10 @@ export default class PeoplePhoto extends Component {
     try {
       imgURL = require("./images/avatar/"+name+".png");
     }catch(e){
+      console.log(e);
       imgURL = require("./images/default.jpg");
     }
-  
+   
     return (
         <Link to={`/people/${id}`} className={styles["people-pic"]}>
             <img className={`${styles.avatar}  is-${party}`}
