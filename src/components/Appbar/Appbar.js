@@ -9,7 +9,6 @@ export default class Appbar extends Component {
     }
   }
   _toggleShowMenu(){
-    console.log("aha")
     this.setState(
       {
         showMenu: !this.state.showMenu

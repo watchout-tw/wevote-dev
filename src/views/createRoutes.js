@@ -33,6 +33,7 @@ export default function(store) {
       <Route path="/parties/:partyId/:issueName" component={PartyIssue}/>
       <Route path="/records/:recordId" component={Record}/>
       <Route path="/about" component={About}/>
+      <Route path="/about/:tabName" component={About}/>
       <Route path="*" component={NotFound}/>
     </Route>
   );
