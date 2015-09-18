@@ -36,7 +36,7 @@ export default class Appbar extends Component {
                 <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/recall`}  >罷免</Link></li>
                 <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/referendum`}  >公投</Link></li>
                 <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/parties`}  >政黨表態</Link></li>
-                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/about`}>關於本站</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/about`}>關於我們</Link></li>
               </ul>
               
               <div className={styles.rightToggle}
