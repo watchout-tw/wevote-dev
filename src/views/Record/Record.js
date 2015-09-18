@@ -43,15 +43,19 @@ export default class Record extends Component {
   }
   render() {
     const styles = require('./Record.scss');
-    const {records, issues} = this.props;
+    const {records, issues, legislators} = this.props;
     const data = records.data;
+
+    const legislatorId = people_name2id(data.legislator);
+    const legislator = legislators[legislatorId];
+
     let date = moment.unix(data.date);
 
     /*
     category: "發言"
     clarificationContent: ""
     clarificationLastUpdate: ""
-    content: "本院黃委員昭順，針對近日同性婚姻合法化爭議，認為人生而平等，同性婚姻權益等同於異性之婚姻權，應與其享婚姻中相同的權利與義務，亦應受憲法婚姻自由之保障，對於同性婚姻也應採取理解並尊重之態度，儘速修正相關法令，以期落實平等原則，特向行政院提出質詢。"
+    content: "本院黃委員昭順，針對近日同性婚姻合法化爭議，xxxx"
     date: 1336665600
     id: 1
     issue: "婚姻平權"
@@ -84,6 +88,30 @@ export default class Record extends Component {
         )
     }
 
+    /* 立委個人資料 */
+    let {name, party, partyCht, gender, age, isCurrent, constituency1, constituency2,
+         isCandidate, candidateConstituency1, candidateConstituency2} = legislator;
+    
+    if(constituency2 === "N/A")
+        constituency2 = "";
+    else
+        constituency2 =  `第${constituency2}選區`;
+
+    if(candidateConstituency2 === "N/A")
+        candidateConstituency2 = "";
+    else
+        candidateConstituency2 = `第${candidateConstituency2}選區`;
+    
+    let currentInfo;
+    if(isCurrent){
+      currentInfo = <div className={styles.isCurrent}>第八屆立委</div>;
+    }
+
+    let candidateInfo;
+    if(isCandidate === true){
+      candidateInfo = <div className={styles.isCandidate}>{` 2016 ${candidateConstituency1} ${candidateConstituency2} 立委候選人`}</div>;
+    }
+
     return (
       <div className={styles.wrap}>
       
@@ -101,8 +129,8 @@ export default class Record extends Component {
             </Link>
 
             <div className={styles.profileBlock}>
-                <div className={styles.isCurrent}>第八屆立委</div>
-                <div className={styles.isCandidate}>2016 參選人：新北市第十一選區</div>
+                {currentInfo}
+                {candidateInfo}
                 <div className={styles.avatarName}>
                       <div className={` ${styles["party-flag"]} ${styles[data.party]} `}></div>
                       {data.legislator}
