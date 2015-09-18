@@ -2,6 +2,7 @@ $cubeSize: 20px;
 $ayeColor: #00FFB0;
 $nayColor: #FF0055;
 $unknownColor: #FFF800;
+$evadingColor: black;
 
 .wrap {
 	display: inline-block;
@@ -42,11 +43,8 @@ $unknownColor: #FFF800;
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
-	// cursor: pointer;
 }
-// .positionCube:hover, .positionCubeActive {
-// 	border: 3px solid;
-// }
+
 .aye {
 	background: $ayeColor;
 }

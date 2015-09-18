@@ -933,6 +933,107 @@ const initialState = {
                         "dominantPercentage": 100
                     }
                 ]
+            },
+            {
+                "position": "evading",
+                "legislators": [
+                    {
+                        "name": "王廷升",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "王惠美",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "林正二",
+                        "party": "PFP",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "林國正",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "林滄敏",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "柯建銘",
+                        "party": "DPP",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "高志鵬",
+                        "party": "DPP",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "曾巨威",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "詹滿容",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "潘孟安",
+                        "party": "DPP",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "潘維剛",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "蔡其昌",
+                        "party": "DPP",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "鄭天財Sra．Kacaw",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "賴士葆",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "謝國樑",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "顏寬恒",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    }
+                ]
             }
         ]
     },
@@ -2616,6 +2717,41 @@ const initialState = {
                             }
                         ],
                         "dominantPosition": "nay",
+                        "dominantPercentage": 100
+                    }
+                ]
+            },
+            {
+                "position": "evading",
+                "legislators": [
+                    {
+                        "name": "林滄敏",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "段宜康",
+                        "party": "DPP",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "徐志榮",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "高金素梅",
+                        "party": "NONE",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "張曉風",
+                        "party": "PFP",
+                        "dominantPosition": "evading",
                         "dominantPercentage": 100
                     }
                 ]
@@ -5287,6 +5423,35 @@ const initialState = {
                         ],
                         "dominantPosition": "nay",
                         "dominantPercentage": 50
+                    }
+                ]
+            },
+            {
+                "position": "evading",
+                "legislators": [
+                    {
+                        "name": "林滄敏",
+                        "party": "KMT",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "邱議瑩",
+                        "party": "DPP",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "高金素梅",
+                        "party": "NONE",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
+                    },
+                    {
+                        "name": "張曉風",
+                        "party": "PFP",
+                        "dominantPosition": "evading",
+                        "dominantPercentage": 100
                     }
                 ]
             }

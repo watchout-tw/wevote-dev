@@ -4,6 +4,8 @@
 }
 .title {
 	text-align: center;
+    white-space: pre;
+    line-height: 1.4;
 }
 .avatarItem {
     position: relative;
@@ -38,7 +40,7 @@
 .TSU {
     border-color: #A25B09;
 }
-.NP {
+.NP, .NONE {
     border-color: gray;
 }
 .NPU {
@@ -53,7 +55,7 @@
     top: -60px;
     left: -35px;
     width: 120px;
-    height: 54px;
+    min-height: 54px;
     line-height: 1.4;
     text-align: center;
     

@@ -56,11 +56,15 @@ class LegislatorAvatar extends Component {
 
      /* active record */    
     let detailText;
+    let recordCount = 0;
+    if(records)
+        recordCount = records.length;
+
     if((activeLegislator === name)){
           detailText = ( 
               <div className={styles.activeCube}>
                   <div>{name}</div>
-                  {records.length} 筆表態資料  
+                   {recordCount} 筆表態資料  
               </div>
           );
     }
@@ -163,6 +167,8 @@ export default class PositionLegislatorGroup extends Component {
     let title = `我${eng2cht(data.position)}${issueStatement}`;
     if(data.position === "unknown")
       title = "我立場模糊";
+    if(data.position === "evading")
+      title = "我該有立場\n可是卻沒有立場"
 
 
     return (
