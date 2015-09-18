@@ -5,6 +5,8 @@ import legislators from './legislators';
 import issues from './issues';
 import parties from './parties';
 import records from './records';
+import FAQ from './FAQ';
+
 
 /* For 每個議題表態的三個不同 view */
 import partyView from './partyView';
@@ -32,5 +34,7 @@ export default combineReducers({
   issueController,
 
   legislatorPositions,
-  partyPositions
+  partyPositions,
+
+  FAQ
 });

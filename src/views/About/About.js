@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
+import FAQ from '../../components/FAQ/FAQ.js';
 
 export default class About extends Component {
   render() {
@@ -25,12 +26,13 @@ export default class About extends Component {
     );
     let FAQBlock = (
       <div className={styles.content}>
-          FAQ
+          <FAQ />
       </div>  
     );
     let termsBlock = (
       <div className={styles.content}>
-          terms
+          <h2>使用條款</h2>
+          <p>依據個資法，關於個人資料蒐集、處理及利用聲明： 使用本電子報訂閱視為瞭解及同意沃草公司進行您個人資料（email資訊）之蒐集、處理及利用，除非取得您的同意或其他法令之特別規定，絕不會將您的個人資料提供給第三方或使用於電子報訂閱以外之其它用途。您隨時可來信取消此訂閱服務，經取消訂閱後，相關資料立即從訂閱資料庫中刪除。</p>
       </div>  
     );
 
