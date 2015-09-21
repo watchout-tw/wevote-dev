@@ -28,7 +28,7 @@ export default class People extends Component {
       setLegislatorFilter(name);
   }
   componentWillReceiveProps(nextProps){
-      
+
       const id = this.props.params.peopleId;
       const nextId = nextProps.params.peopleId;
 
@@ -44,10 +44,11 @@ export default class People extends Component {
     const id = this.props.params.peopleId;
     const {legislatorPositions} = this.props;
 
-    const positions = legislatorPositions.data.positions || {};
-    
+    const name = this.props.legislators[id].name;
+    const positions = legislatorPositions.data[name].positions;
+
     let issueGroups = Object.keys(positions).map((currentIssue, index)=>{
-        
+
         let issueUrl = eng2url(currentIssue);
         return (<div className={styles.issueBlock} key={index} >
                     <PositionSquare issueName={currentIssue}
@@ -59,7 +60,7 @@ export default class People extends Component {
     return (
       <div className={styles.wrap}>
           <PeopleProfile id={id} />
-          <div className={styles.issueWrap}> 
+          <div className={styles.issueWrap}>
             {issueGroups}
           </div>
       </div>

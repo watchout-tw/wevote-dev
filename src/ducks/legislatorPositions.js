@@ -1,4 +1,4 @@
-const legislatorPositions = 
+const legislatorPositions =
 {
     "丁守中": {
         "name": "丁守中",
@@ -12386,18 +12386,18 @@ const legislatorPositions =
 
 const initialState = {
     "legislatorFilter": "",
-    "data" : ""
+    "data" : legislatorPositions
 }
 
 const SET_LEGISLATOR_FILTER = 'SET_LEGISLATOR_FILTER';
 const GET_ALL_LEGISLATORS = 'GET_ALL_LEGISLATORS';
 
 export default function reducer(state = initialState, action = {}) {
-  
+
   switch (action.type) {
-    
+
     case SET_LEGISLATOR_FILTER:
-      
+
       if(legislatorPositions[action.name]){
         return {
             legislatorFilter: action.name,
@@ -12429,4 +12429,3 @@ export function getAllLegislators() {
     type: GET_ALL_LEGISLATORS
   };
 }
-
