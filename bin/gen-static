@@ -1,5 +1,5 @@
 #!/bin/bash
 
-wget -r -F -k -np http://localhost:8080
+wget -r -F -k -np -E http://localhost:8080
 mv localhost\:8080/ build/
 cp -r static/dist build/
