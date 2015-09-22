@@ -73,10 +73,10 @@ export default class PartyPositionGroup extends Component {
 
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, issueStatement, setToActiveRecord,
+    const {data, issueId, issueStatement, setToActiveRecord,
            activeRecord, resetActiveRecord, setToLockedRecord,
            isLocked} = this.props;
-   
+    
     
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
@@ -130,7 +130,7 @@ export default class PartyPositionGroup extends Component {
 
     return (
       <div className={styles.wrap}>
-        <div>{partyTitle}</div>
+        <Link to={`/parties/${data.party}/${issueId}`}>{partyTitle}</Link>
         <div>{`${data.dominantPercentage}% ${eng2cht(data.dominantPosition)}`}</div>
         <div>{issueStatement}</div>
         <div style={cubesWrap}>

@@ -83,7 +83,8 @@ export default class Issue extends Component {
     const currentPartyView = partyView[currentIssue.titleEng];
     let partyPositionGroups = currentPartyView.partyPositions.map((value, index)=>{
         //console.log(value);
-        return <PartyPositionGroup data={value} issueStatement={currentPartyView.statement} key={index}
+        return <PartyPositionGroup data={value} issueId={currentIssueName}
+                                   issueStatement={currentPartyView.statement} key={index}
                                    setToActiveRecord={bindSetToActiveRecord}
                                    resetActiveRecord={bindResetActiveRecord}
                                    activeRecord={activeRecord} />;
@@ -93,7 +94,6 @@ export default class Issue extends Component {
     /* 2. 看立委 */
     const currentLegislatorView = legislatorView[currentIssue.titleEng];
     let positionLegislatorGroups = currentLegislatorView.positions.map((value, index)=>{
-        //console.log(value);
         return <PositionLegislatorGroup data={value} issueStatement={currentPartyView.statement} key={index}
                                         setToActiveLegislator={bindSetToActiveLegislator}
                                         resetActiveLegislator={bindResetActiveLegislator}
