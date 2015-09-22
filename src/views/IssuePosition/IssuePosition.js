@@ -58,7 +58,7 @@ export default class Issue extends Component {
   }
 
   render() {
-    const styles = require('./Issue.scss');
+    const styles = require('../Issue/Issue.scss');
 
     const {issues, partyView, legislatorView, positionView, issueController} = this.props;
     const {activeRecord, activeLegislator, isLocked} = this.state;
@@ -74,37 +74,16 @@ export default class Issue extends Component {
     let bindSetToActiveLegislator = this._setToActiveLegislator.bind(this);
     let bindResetActiveLegislator = this._resetActiveLegislator.bind(this);
 
-    /* 1. 看政黨 */
-    const currentPartyView = partyView[currentIssue.titleEng];
-    let partyPositionGroups = currentPartyView.partyPositions.map((value, index)=>{
-        //console.log(value);
-        return <PartyPositionGroup data={value} issueStatement={currentPartyView.statement} key={index}
-                                   setToActiveRecord={bindSetToActiveRecord}
-                                   resetActiveRecord={bindResetActiveRecord}
-                                   activeRecord={activeRecord} />;
-    });
-
-
-    /* 2. 看立委 */
-    const currentLegislatorView = legislatorView[currentIssue.titleEng];
-    let positionLegislatorGroups = currentLegislatorView.positions.map((value, index)=>{
-        //console.log(value);
-        return <PositionLegislatorGroup data={value} issueStatement={currentPartyView.statement} key={index}
-                                        setToActiveLegislator={bindSetToActiveLegislator}
-                                        resetActiveLegislator={bindResetActiveLegislator}
-                                        activeLegislator={activeLegislator}
-                                        currentIssueName={currentIssueName}/>;
-    });
-
     /* 3. 看表態 */
     const currentPositionView = positionView[currentIssue.titleEng];//只拿: 目前頁面議題的表態資料
     let positionPartyGroups = currentPositionView.positions.map((value, index)=>{
         //console.log(value);
-        return <PositionPartyGroup data={value} issueStatement={currentPartyView.statement} key={index}
+        return <PositionPartyGroup data={value} issueStatement={currentPositionView.statement} key={index}
                                    setToActiveRecord={bindSetToActiveRecord}
                                    resetActiveRecord={bindResetActiveRecord}
                                    activeRecord={activeRecord} />;
     });
+
 
 
     return (
@@ -114,7 +93,7 @@ export default class Issue extends Component {
           <IssueController currentIssue={currentIssue} />
 
           <div className={styles.records}>
-            {partyPositionGroups}
+            {positionPartyGroups}
           </div>
 
       </div>

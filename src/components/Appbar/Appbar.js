@@ -14,10 +14,10 @@ export default class Appbar extends Component {
         showMenu: !this.state.showMenu
       }
     );
-    
+
   }
   render() {
-    
+
     const styles = require('./Appbar.scss');
     const siteLogo = require('./images/logo.svg');
     const {showMenu} = this.state;
@@ -31,13 +31,13 @@ export default class Appbar extends Component {
               </Link>
 
               <ul className={`${styles.lists} ${showStyle}`}>
-                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/marriage-equality`} >婚姻平權</Link></li>
-                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/recall`}  >罷免</Link></li>
-                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/referendum`}  >公投</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/marriage-equality/parties`} >婚姻平權</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/recall/parties`}  >罷免</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/issues/referendum/parties`}  >公投</Link></li>
                 <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/parties`}  >政黨表態</Link></li>
                 <li onClick={this._toggleShowMenu.bind(this)}><Link className={styles.navItem} to={`/about`}>關於我們</Link></li>
               </ul>
-              
+
               <div className={styles.rightToggle}
                    onClick={this._toggleShowMenu.bind(this)}><i className="fa fa-bars"></i>
           </div>
@@ -48,6 +48,5 @@ export default class Appbar extends Component {
 
 
 
- 
-}
 
+}

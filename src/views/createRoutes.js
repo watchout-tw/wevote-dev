@@ -4,6 +4,8 @@ import App from 'views/App';
 import Home from 'views/Home/Home.js';
 import About from 'views/About/About.js';
 import Issue from 'views/Issue/Issue.js';
+import IssueLegislators from 'views/IssueLegislators/IssueLegislators.js';
+import IssuePosition from 'views/IssuePosition/IssuePosition.js';
 
 import LegislatorList from 'views/LegislatorList/LegislatorList.js';
 
@@ -23,9 +25,11 @@ export default function(store) {
     <Route component={App}>
       <Route path="/" component={Home}/>
       <Route path="/issues/:issueName" component={Issue}/>
-      
+      <Route path="/issues/:issueName/parties" component={Issue}/>
+      <Route path="/issues/:issueName/legislators" component={IssueLegislators}/>
+      <Route path="/issues/:issueName/positions" component={IssuePosition}/>
       <Route path="/8th-legislators" component={LegislatorList}/>
-      
+
       <Route path="/people/:peopleId" component={People}/>
       <Route path="/people/:peopleId/:issueName" component={PeopleIssue}/>
       <Route path="/parties" component={PartyList}/>
@@ -38,4 +42,3 @@ export default function(store) {
     </Route>
   );
 }
-

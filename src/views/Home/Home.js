@@ -15,9 +15,9 @@ export default class Home extends Component {
     const {issues} = this.props;
 
     let issueCovers = Object.keys(issues).map((currentIssue, index)=>{
-        
+
         let imgURL;
-        
+
         try {
           imgURL = require(`./images/${issues[currentIssue].titleEng}.jpg`);
         }catch(e){
@@ -25,7 +25,7 @@ export default class Home extends Component {
         }
 
         return (
-          <Link to={`/issues/${currentIssue}`} key={index} className={styles.coverItem}>
+          <Link to={`/issues/${currentIssue}/parties`} key={index} className={styles.coverItem}>
               <img src={imgURL} className={styles.coverImg}/>
               <div className={styles.coverTitle }>{issues[currentIssue].title}</div>
               <div>{issues[currentIssue].question}</div>
