@@ -63,7 +63,11 @@ export default class Issue extends Component {
     const {issues, partyView, legislatorView, positionView, issueController} = this.props;
     const {activeRecord, activeLegislator, isLocked} = this.state;
 
-    const currentIssueName = this.props.params.issueName;/* 從 URL 知道現在讀的議題頁面 */
+    /* 從 URL 知道現在讀的議題頁面 */
+    const currentIssueName = this.props.params.issueName;
+    const currentView = this.props.params.view || "parties";
+    // parties, legislators, positions
+    // default set to parties
 
     const currentIssue = issues[currentIssueName]//只拿目前頁面議題的議題基本資料，maybe refine to ducks/select later on
 
@@ -73,6 +77,7 @@ export default class Issue extends Component {
 
     let bindSetToActiveLegislator = this._setToActiveLegislator.bind(this);
     let bindResetActiveLegislator = this._resetActiveLegislator.bind(this);
+
 
     /* 1. 看政黨 */
     const currentPartyView = partyView[currentIssue.titleEng];
@@ -106,6 +111,23 @@ export default class Issue extends Component {
                                    activeRecord={activeRecord} />;
     });
 
+    let currentViewGroups;
+    switch(currentView){
+      case 'parties': 
+        currentViewGroups = partyPositionGroups;
+        break;
+      case 'legislators':
+        currentViewGroups = positionLegislatorGroups;
+        break;
+      case 'positions':
+        currentViewGroups = positionPartyGroups;
+        break;
+      
+      default:
+        currentViewGroups = partyPositionGroups;
+      
+    }
+
 
     return (
       <div className={styles.masthead}>
@@ -114,7 +136,7 @@ export default class Issue extends Component {
           <IssueController currentIssue={currentIssue} />
 
           <div className={styles.records}>
-            {partyPositionGroups}
+            {currentViewGroups}
           </div>
 
       </div>
