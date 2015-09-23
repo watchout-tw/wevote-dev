@@ -23,7 +23,7 @@
     "watch-client": "node ./node_modules/better-npm-run watch-client",
     "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run start-dev\"",
     "test": "karma start",
-    "deploy": "cp CNAME build/ && babel-node script/gh-pages.es6"
+    "deploy": "babel-node script/gh-pages.es6"
   },
   "betterScripts": {
     "start": {
