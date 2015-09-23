@@ -51,11 +51,13 @@ export default class Party extends Component {
     let issueGroups = Object.keys(positions).map((currentIssue, index)=>{
         //console.log(positions[currentIssue])
         let issueUrl = eng2url(currentIssue);
-        return (<div className={styles.issueBlock} key={index} >
+        return (
+                <Link to={`/parties/${id}/${issueUrl }`}
+                      className={styles.issueBlock} 
+                      key={index} >
                     <PositionSquare issueName={currentIssue}
-                                         data={positions[currentIssue]}/>
-                    <Link className={styles.seeMore} to={`/parties/${id}/${issueUrl }`}>看更多</Link>
-               </div>)
+                                    data={positions[currentIssue]}/>
+                </Link>)
     })
 
     const metaData = {

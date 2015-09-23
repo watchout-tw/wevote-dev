@@ -1,15 +1,16 @@
+@import '../../common.scss';
 $breakLarge: 1400px;
-$themeColor: #006060;
 .wrap {
 	margin: 0;
 }
 .about {
-	height: 300px;
-	background: url(./images/about.png) top center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	height: 240px;
+	// background: url(./images/about.png) top center;
+	// background-size: cover;
+	// background-repeat: no-repeat;
 	margin-bottom: 60px;
 	position: relative;
+	background: white;
 }
 .title {
 	text-align: center;
@@ -20,19 +21,20 @@ $themeColor: #006060;
 }
 
 @media all and (min-width: $breakLarge){
-	.about {
-		height: 400px;
-	}
 	.title {
 		margin-top: 100px;
 	}
 }
 
 .innerTag {
-	text-align: center;
 	width: 100%;
 	position: absolute;
 	bottom: 10px;
+}
+@media all and (min-width: 600px){
+	.innerTag {
+		text-align: center;
+	}
 }
 .innerTag li {
 	display: inline-block;
@@ -46,14 +48,14 @@ $themeColor: #006060;
 	padding: 10px;
 	text-decoration: none;
 }
-.innerTag li:first-child a {
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-.innerTag li:last-child a {
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
+// .innerTag li:first-child a {
+// 	border-top-left-radius: 5px;
+// 	border-bottom-left-radius: 5px;
+// }
+// .innerTag li:last-child a {
+// 	border-top-right-radius: 5px;
+// 	border-bottom-right-radius: 5px;
+// }
 .innerTag a:hover {
 	background: #3c3c3c;
 	text-decoration: none;
@@ -74,37 +76,47 @@ $themeColor: #006060;
    		width: 80px;
     }
     .about .innerTag a {
-    	height: 40px;
+    	height: 50px;
+    	text-align: center;
     }
 }
 /* main content */
 .content {
 	max-width: 800px;
-	margin: 0 auto;
+	margin: 0 5px 100px 5px;
 	
-	line-height: 1.5;
+	line-height: 1.6;
     font-size: 18px;
 
-    padding: 0 10px;
-    
+    padding: 30px;
+    background: #e6e6e6;
 
+}
+@media all and (min-width: 800px){
+	.content {
+		margin: 0 auto 100px auto;
+	}
 }
 /* License */
 .licenseBlock {
-	
 	line-height: 2;
 }
 .licenseImg {
 	max-width: 320px;
-    padding-left: 45px;
+    width: 100%;
     margin: 0 auto;
     display: block;
     margin-bottom: 50px;
 }
+@media all and (min-width: 800px){
+	.licenseImg {
+		padding-left: 45px;
+	}
+}
+
 .link, .link:visited {
-	color: $themeColor;
-	text-decoration: none;
+	color: black;
 }
 .link:hover {
-	text-decoration: underline;
+	color: rgb(80,80,80);
 }

@@ -1,8 +1,9 @@
+@import '../../common.scss';
 $redColor: #D65A5A;
 $breakSmall: 450px;
 $breakMedium: 800px;
 .wrap {
-	background: #006060;
+	background: rgba(40,40,40,0.8);
     padding: 20px;
     color: rgb(240,240,240);
 	padding: 20px;
@@ -47,14 +48,14 @@ $breakMedium: 800px;
     height: 40px;
     border: none;
     padding: 0 8px;
-    color: white;
+    color: $textColor;
     border: 1px solid white;
-    background: #006060;
+    background: $themeColor;
     margin-top: 10px;
 }
 .submit:hover {
-	background: white;
-	color: rgb(53,55,54);
+	background: rgb(53,55,54);
+	color: white;
 	border: 1px solid white;
 }
 @media all and (min-width: $breakSmall){
@@ -69,11 +70,12 @@ $breakMedium: 800px;
 	line-height: 1.4;
 }
 .lawInfoTitle {
-	
     margin-bottom: 10px;
 }
 .lawInfoContent {
-	color: #97B5B5;
+	color: $secondaryColor;
+	background: rgba(230,230,230,0.4);
+	padding: 10px;
 }
 /* footer links */
 .bottomInfo {
@@ -81,7 +83,7 @@ $breakMedium: 800px;
 	margin-top: 20px;
 	padding: 10px 0;
 	line-height: 1.5;
-	color: #97B5B5;
+	color: $secondaryColor;
 }
 .rightFooterLinks {
 	width: 100%;

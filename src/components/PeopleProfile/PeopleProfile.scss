@@ -1,10 +1,8 @@
-$themeColor: #006060;
+
+@import '../../common.scss';
 .wrap {
 	display: inline-block;
 }
-
-
-
 .name {
 	vertical-align: top;
 	padding-top: 16px;
@@ -14,10 +12,13 @@ $themeColor: #006060;
 
 .people-title {
     text-align: center;
-    height: 240px;
-    background: url(./images/intitle-common.png) center bottom;
-    background-size: cover;
-    overflow: hidden;
+    // height: 240px;
+    // background: url(./images/intitle-common.png) center bottom;
+    // background-size: cover;
+    // overflow: hidden;
+    margin-bottom: 0px;
+    background: white;
+    padding: 30px 0 50px 0;
     margin-bottom: 0px;
 }
 
@@ -26,7 +27,6 @@ $themeColor: #006060;
     height: 200px;
     position: relative;
 }
-
 .people-basic-info {
     width: 430px;
     margin: auto;
@@ -34,10 +34,16 @@ $themeColor: #006060;
     padding: 25px 0 0 0;
     height: 150px;
 }
-.people-basic-info h1 {
+.name, .name:visited {
     font-size: 30px;
     float: left;
-    margin: 0 10px 0 0;
+    margin: 0 10px 0 7px;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+}
+.name:hover {
+    text-decoration: underline;
 }
 .people-basic-info .party-flag-s {
     float: left;
@@ -54,20 +60,23 @@ $themeColor: #006060;
     float: left;
     width: 290px;
 }
-.basic-txt p {
-    margin: 4px 0;
-    padding: 0 0 3px 0;
+.infoP {
     font-size: 18px;
     border-bottom: 1px dotted #ccc;
+    margin: 8px 0;
+    padding: 0 0 5px 5px;
+}
+.infoP.engStart {
+    padding-left: 8px;
 }
 .people-pic {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     overflow: hidden;
-    border-radius: 120px;
+    border-radius: 100%;
     float: left;
-    border: 5px solid #006060;
     margin: 0 10px 0 0;
+    //border: 5px solid rgb(250,250,250);
 }
 .people-pic img {
     width: 100%;

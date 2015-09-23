@@ -4,7 +4,8 @@ $breakLarge: 1000px;
 	position: relative;
 }
 .main {
-	
+	padding: 30px 5px;
+	background: #e6e6e6;
 }
 .summary {
 	position: relative;
@@ -40,7 +41,7 @@ $breakLarge: 1000px;
 }
 @media screen and (min-width: $breakLarge){
 	.main {
-		padding-right: 120px;
+		padding: 40px 120px 100px 0;
 	}
 	.summary {
 		display: inline-block;

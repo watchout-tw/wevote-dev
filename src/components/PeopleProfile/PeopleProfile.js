@@ -42,20 +42,20 @@ export default class PeopleProfile extends Component {
         candidateConstituency2 = `第${candidateConstituency2}選區`;
 
     }
-    let ageInfo = <p>{`  ${age}歲，${gender}`}</p>;
-    let legislationInfo = <p>{`第8屆 ${constituency1} ${constituency2} 立委`}</p>;
+    let ageInfo = <p className={`${styles.infoP} ${styles.engStart}`}>{`${age}歲，${gender}`}</p>;
+    let legislationInfo = <p className={styles.infoP}>{`第8屆 ${constituency1} ${constituency2} 立委`}</p>;
 
  
     
     //處理黨團的資訊顯示方式
     if(name.indexOf("黨團")!== -1){
        ageInfo = "";
-       legislationInfo = <p>第8屆黨團</p>
+       legislationInfo = <p className={styles.infoP}>第8屆黨團</p>
     }
 
     let candidateInfo;
     if(isCandidate === true){
-        candidateInfo = <p>{` 2016 ${candidateConstituency1} ${candidateConstituency2} 立委候選人`}</p>;
+        candidateInfo = <p className={`${styles.infoP} ${styles.engStart}`}>{` 2016 ${candidateConstituency1} ${candidateConstituency2} 立委候選人`}</p>;
     }
 
    
@@ -68,7 +68,8 @@ export default class PeopleProfile extends Component {
                 <PeoplePhoto id={id}/>
             </div>
 
-            <h1>{name}</h1>
+            <Link to={`/people/${id}`}
+                  className={styles.name}>{name}</Link>
             <div className={styles.party}>
               <div className={`${styles["party-flag-s"]} ${styles[party]} ${styles["party-flag"]}`}></div>
               <span>{partyCht}</span> 

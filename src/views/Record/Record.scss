@@ -1,5 +1,5 @@
+@import '../../common.scss';
 $cubeSize: 18px;
-$themeColor: #006060;
 $ayeColor: #00FFB0;
 $nayColor: #FF0055;
 $unknownColor: #FFF800;
@@ -135,6 +135,13 @@ $unknownColor: #FFF800;
 }
 .party-flag.TSU {
     background: url(./images/flag-tsu.svg);
+}
+.name, .name:visited {
+	text-decoration: none;
+	color: black;
+}
+.name:hover {
+	text-decoration: underline;
 }
 .content {
 	padding: 20px;

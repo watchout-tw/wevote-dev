@@ -1,4 +1,4 @@
-$themeColor: #006060;
+@import '../../common.scss';
 $navHeight: 54px;
 $paddingHeight: 15px; /* (50-20)/2 */
 $breakLarge: 800px;
@@ -7,6 +7,8 @@ $breakLarge: 800px;
 	background: $themeColor;
 	padding: 0px;
 	height: $navHeight;
+	border-bottom: 1px solid rgb(10,10,10);
+    box-shadow: 2px 8px 0px 0px rgba(0,0,0,0.01);
 }
 .appbar.showMenu {
 	height: auto;
@@ -39,13 +41,14 @@ $breakLarge: 800px;
 }
 .navItem, .navItem:visited {
 	display: block;
-	color: white;
+	color: $textColor;
 	text-decoration: none;
 	padding: $paddingHeight;
 	height: $navHeight;
 }
 .navItem:hover {
 	background: darken( $themeColor, 5% );
+	border-bottom: 4px solid;
 }
 .rightToggle {
 	position: absolute;
@@ -53,7 +56,11 @@ $breakLarge: 800px;
 	right: 20px;
 	font-size: 20px;
 	cursor: pointer;
-	color: white;
+	color: $textColor;
+}
+.icon {
+	display: inline-block;
+	margin-right: 3px;
 }
 @media screen and (min-width: $breakLarge){
 	.appbar, .appbar.showMenu {

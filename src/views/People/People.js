@@ -54,11 +54,13 @@ export default class People extends Component {
     let issueGroups = Object.keys(positions).map((currentIssue, index)=>{
 
         let issueUrl = eng2url(currentIssue);
-        return (<div className={styles.issueBlock} key={index} >
+        return (
+                <Link to={`/people/${id}/${issueUrl }`}
+                      className={styles.issueBlock} 
+                      key={index} >
                     <PositionSquare issueName={currentIssue}
                                          data={positions[currentIssue]}/>
-                    <Link className={styles.seeMore} to={`/people/${id}/${issueUrl }`}>看更多</Link>
-               </div>)
+                </Link>)
     })
 
     const metaData = {
