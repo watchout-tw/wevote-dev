@@ -22,8 +22,7 @@ const VIEW_POSITION = 'VIEW_POSITION';
                 issues: state.issues,
                 partyView: state.partyView,
                 legislatorView: state.legislatorView,
-                positionView: state.positionView,
-                issueController: state.issueController
+                positionView: state.positionView
               }),
     dispatch => bindActionCreators({}, dispatch))
 
@@ -32,8 +31,7 @@ export default class Issue extends Component {
      issues: PropTypes.object.isRequired,
      partyView: PropTypes.object.isRequired,
      legislatorView: PropTypes.object.isRequired,
-     positionView: PropTypes.object.isRequired,
-     issueController: PropTypes.object.isRequired
+     positionView: PropTypes.object.isRequired
   }
 
   constructor(props) { super(props)
@@ -60,7 +58,7 @@ export default class Issue extends Component {
   render() {
     const styles = require('./Issue.scss');
 
-    const {issues, partyView, legislatorView, positionView, issueController} = this.props;
+    const {issues, partyView, legislatorView, positionView} = this.props;
     const {activeRecord, activeLegislator, isLocked} = this.state;
 
     /* 從 URL 知道現在讀的議題頁面 */
@@ -133,7 +131,7 @@ export default class Issue extends Component {
       <div className={styles.masthead}>
           <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
 
-          <IssueController currentIssue={currentIssue} />
+          <IssueController currentIssue={currentIssue} currentView={currentView}/>
 
           <div className={styles.records}>
             {currentViewGroups}

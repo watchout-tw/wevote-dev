@@ -13,8 +13,6 @@ import partyView from './partyView';
 import legislatorView from './legislatorView';
 import positionView from './positionView';
 
-import issueController from './issueController';
-
 /* 單一立委的各議題表態 */
 import legislatorPositions from './legislatorPositions';
 /* 單一政黨的各議題表態 */
@@ -30,8 +28,6 @@ export default combineReducers({
   partyView,
   legislatorView,
   positionView,
-
-  issueController,
 
   legislatorPositions,
   partyPositions,

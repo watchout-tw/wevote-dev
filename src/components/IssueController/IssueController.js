@@ -2,35 +2,40 @@ import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
-import {setActiveView} from '../../ducks/issueController';
 
+const views = [
+    {
+      'title' : '看政黨',
+      'id' : 'VIEW_PARTY',
+      'view' : 'parties'
+    },
+    {
+      'title' : '看委員',
+      'id' : 'VIEW_LEGISLATOR',
+      'view' : 'legislators'
+    },
+    {
+      'title' : '看表態',
+      'id' : 'VIEW_POSITION',
+      'view' : 'positions'
+    }
+];
 @connect(
-    state => ({ issueController: state.issueController}),
-    dispatch => bindActionCreators({setActiveView}, dispatch))
+    state => ({}),
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class IssueController extends Component {
-
-  /* 一定要寫，因為要把滑鼠動作 bind 到 function，如果沒寫，component 可能還沒 mount，就無法 bind */
-
-  static propTypes = {
-    issueController: PropTypes.object.isRequired,
-    setActiveView: PropTypes.func.isRequired
-  }
-
+ 
   render() {
 
     const styles = require('./IssueController.scss');
-    const { issueController, setActiveView, currentIssue } = this.props;
-
-    let {views, activeView} = issueController;
-
-    let bindSetActiveView = setActiveView.bind(this);
+    const { currentIssue, currentView} = this.props;
 
     let viewOptionItems = views.map((value,index)=>{
 
-        let active = (value.id === activeView) ? true : false;
-        return <OptionItem data={value} active={active} handler={bindSetActiveView} key={index}
-                           currentIssue={currentIssue} />
+        return <OptionItem data={value} key={index}
+                           currentIssue={currentIssue}
+                           currentView={currentView} />
     })
 
     return (
@@ -47,21 +52,18 @@ export default class IssueController extends Component {
 
 class OptionItem extends Component {
   static propTypes = {
-    data: PropTypes.object.isRequired,
-    active: PropTypes.bool.isRequired,
-    handler: PropTypes.func.isRequired
+    data: PropTypes.object.isRequired
   }
   render() {
     const styles = require('./IssueController.scss');
-    const {data, active, handler} = this.props;
+    const {data, currentIssue, currentView} = this.props;
 
     let imgURL = require(`./images/${data.id}.svg`);
-
-    let itemActive = (active === true) ? styles.optionItemActive : "";
-    let imgActive  = (active === true) ? styles.optionImgActive : "";
+    let active = false;
+    
 
     let link = "", issue = "";
-    switch(this.props.currentIssue.title) {
+    switch(currentIssue.title) {
       case "罷免":
         issue = "recall";
         break;
@@ -71,24 +73,16 @@ class OptionItem extends Component {
       default:
         issue = "marriage-equality";
     }
-    switch(data.title) {
-      case "看委員":
-        link = `/issues/${issue}/legislators`;
-        break;
-      case "看表態":
-        link = `/issues/${issue}/positions`;
-        break;
-      default:
-        link = `/issues/${issue}/parties`;
-    }
+    
+    let itemActive = (data.view === currentView) ? styles.optionItemActive : styles.optionItemInactive;
+    let imgActive  = (data.view === currentView) ? styles.optionImgActive : styles.optionImgInactive;
 
     return (
-      <div className={`${styles.optionItem} ${itemActive}`}>
-        <Link to={link}>
+        <Link to={`/issues/${issue}/${data.view}`}
+              className={`${styles.optionItem} ${itemActive}`}>
           <img className={`${styles.optionImg} ${imgActive}`} src={imgURL} />
           {data.title}
-        </Link>
-      </div>
+        </Link>  
     )
   }
 

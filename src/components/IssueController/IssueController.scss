@@ -1,18 +1,21 @@
 .wrap {
 	position: relative;
 }
-.optionImg {
-	opacity: 0.3;
-}
 .optionItem:hover .optionImg, .optionImg:hover, .optionImgActive {
 	opacity: 1;
 }
-.optionItem {
+.optionItem, .optionItem:visited {
 	display: inline-block;
 	cursor: pointer;
-	color: #cccccc;
 	margin: 10px;
+	text-decoration: none;
 }
-.optionItem:hover, .optionItemActive {
+.optionItemInactive, .optionItemInactive:visited {
+	color: #cccccc;
+}
+.optionItem:hover, .optionItemActive, .optionItemActive:visited, .optionItemInactive:hover {
 	color: rgb(53,55,54);
+}
+.optionImgInactive {
+	opacity: 0.3;
 }

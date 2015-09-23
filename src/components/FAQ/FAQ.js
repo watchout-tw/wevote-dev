@@ -2,7 +2,6 @@ import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
-import {setActiveView} from '../../ducks/issueController';
 
 class Item extends Component {
   static propTypes = {
@@ -15,8 +14,7 @@ class Item extends Component {
     }
   }
   _toggleShow(){
-    console.log("show me babe!")
-    console.log(this.state.showAnswer)
+    
     this.setState({
         showAnswer: !this.state.showAnswer
     })
@@ -55,7 +53,7 @@ class Item extends Component {
 
 @connect(
     state => ({ FAQ: state.FAQ}),
-    dispatch => bindActionCreators({setActiveView}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class FAQ extends Component {
   static propTypes = {
