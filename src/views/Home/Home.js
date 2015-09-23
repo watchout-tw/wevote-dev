@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
+import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
 @connect(
@@ -33,8 +34,20 @@ export default class Home extends Component {
         )
     });
 
+    const metaData = {
+      title: '立委求職中-2016立委投票資訊站',
+      description: '2016立委選舉票該投給誰？每四年一次的立委選舉，就像是立委的大型求職博覽會。「2016立委求職中」是一個提供選民了解立委候選人議題表態的網站，分析立委及政黨針對重大議題的表態立場。想透過議題更了解你的選區立委嗎？請上「2016立委求職中」！',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          keywords: '立委選舉, 台灣立委, 台灣立法院, 2016選舉'
+        }
+      }
+    };
+
     return (
       <div className={styles.home}>
+          <DocumentMeta {...metaData}/>
           <div className={styles.pageTitle}>想知道這些議題有哪些立委關心嗎？</div>
           {issueCovers}
           <div className={styles.coverItem}>

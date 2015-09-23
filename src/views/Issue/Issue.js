@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
+import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
 import Slideshow from '../../components/Slideshow/Slideshow.js';
@@ -126,9 +127,17 @@ export default class Issue extends Component {
       
     }
 
+    const metaData = {
+      title: `${currentIssue.title}-${currentIssue.question}-2016立委求職中`,
+      description: currentIssue.description
+     
+    };
+
 
     return (
       <div className={styles.masthead}>
+          <DocumentMeta {...metaData}/>
+          
           <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
 
           <IssueController currentIssue={currentIssue} currentView={currentView}/>

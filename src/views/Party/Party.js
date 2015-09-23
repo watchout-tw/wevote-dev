@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
+import DocumentMeta from 'react-document-meta';
 import { connect } from 'react-redux';
 
 import {setPartyFilter} from '../../ducks/partyPositions';
@@ -43,7 +44,7 @@ export default class Party extends Component {
     const id = this.props.params.partyId;
     const {partyPositions} = this.props;
 
-    console.log(partyPositions)
+    
 
     const positions = partyPositions.data.positions || {};
     
@@ -57,8 +58,15 @@ export default class Party extends Component {
                </div>)
     })
 
+    const metaData = {
+      title: `${partyPositions.data.name}議題表態分析-2016立委求職中`,
+      description: `${partyPositions.data.name}對於各項重大議題的表態大解析！趕快來看看${partyPositions.data.name}委員在立法院針對下列重大議題有哪些發言！`
+     
+    };
+
     return (
       <div className={styles.wrap}>
+          <DocumentMeta {...metaData}/>
           <PartyProfile id={id}/>
           <div className={styles.issueWrap}> 
             {issueGroups}

@@ -18,6 +18,10 @@ export default function eng2cht(input){
 
       case 'marriageEquality': 
         return '婚姻平權';
+      
+      case 'marriage-equality': 
+        return '婚姻平權';
+
       case 'recall':
         return '罷免';
       case 'referendum':

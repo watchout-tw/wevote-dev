@@ -48,25 +48,41 @@ export default class About extends Component {
       </div>  
     );
 
-
+    let metaData = {};
+    
     switch(tabName){
 
       case 'FAQ':
           mainContent = FAQBlock;
+          metaData = {
+            title: `資料來源說明-立委求職中-2016立委投票資訊站`,
+            description: `「2016立委求職中」的資料來源、整理方式、議題挑選，以及小編們整理「2016立委求職中」資料的種種血淚。`
+          };
           break;
       
       case 'statement':
           mainContent = termsBlock;
+          metaData = {
+            title: `著作權聲明-立委求職中-2016立委投票資訊站`,
+            description: `關於「2016立委求職中」內容資料之著作權聲明。`
+          };
           break;
       
       default: 
           mainContent = aboutBlock;
+          metaData = {
+            title: `關於立委求職中-立委求職中-2016立委投票資訊站`,
+            description: `「2016立委求職中」是一個提供選民了解立委候選人議題表態的網站。我們整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委求職中」希望能夠做到更多的資訊揭露，改變台灣民主政治。`
+          };
           break;
 
     }
+
+    
+
     return (
       <div className={styles.wrap}>
-          <DocumentMeta title="關於我們"/>
+          <DocumentMeta {...metaData}/>
           <div className={styles.about}>
               <h1 className={styles.title}>關於我們</h1>
               <ul className={styles.innerTag}>

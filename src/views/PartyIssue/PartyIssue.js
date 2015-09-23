@@ -1,18 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
+import DocumentMeta from 'react-document-meta';
 import { connect } from 'react-redux';
 
 import {setPartyFilter} from '../../ducks/partyPositions';
-
 
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 import RecordTable from '../../components/RecordTable/RecordTable.js';
 
-
 import url2eng from '../../utils/url2eng';
+import eng2cht from '../../utils/eng2cht';
 
 @connect(
     state => ({
@@ -72,9 +72,15 @@ export default class PartyIssue extends Component {
         
     })) : "";
     
-   
+    let issueTitle = eng2cht(issueURL)
+    const metaData = {
+      title: `${partyPositions.data.name}對於${issueTitle}的表態-2016立委求職中`,
+      description: `想知道${partyPositions.data.name}對於${issueTitle}的表態嗎？趕快來看看${partyPositions.data.name}委員在立法院針對${issueTitle }有哪些發言！`
+     
+    };
     return (
       <div className={styles.wrap}> 
+          <DocumentMeta {...metaData}/>
           <PartyProfile id={id}/>
           <div className={styles.main}>
               <div className={styles.summary}> 

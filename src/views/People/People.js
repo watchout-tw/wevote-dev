@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
+import DocumentMeta from 'react-document-meta';
 import { connect } from 'react-redux';
 
 import {setLegislatorFilter} from '../../ducks/legislatorPositions';
@@ -45,7 +46,10 @@ export default class People extends Component {
     const {legislatorPositions} = this.props;
 
     const name = this.props.legislators[id].name;
-    const positions = legislatorPositions.data[name].positions;
+    const positions = legislatorPositions.data.positions;
+    
+    if(!positions)
+        return <div></div>
 
     let issueGroups = Object.keys(positions).map((currentIssue, index)=>{
 
@@ -57,8 +61,15 @@ export default class People extends Component {
                </div>)
     })
 
+    const metaData = {
+      title: `${name}議題表態分析-立委求職中`,
+      description: `${name}對於各項重大議題的表態大解析！趕快來看看${name}在立法院針對下列重大議題有哪些發言！`
+     
+    };
+
     return (
       <div className={styles.wrap}>
+          <DocumentMeta {...metaData}/>
           <PeopleProfile id={id} />
           <div className={styles.issueWrap}>
             {issueGroups}
