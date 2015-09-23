@@ -129,7 +129,14 @@ export default class Issue extends Component {
 
     const metaData = {
       title: `${currentIssue.title}-${currentIssue.question}-2016立委求職中`,
-      description: currentIssue.description
+      description: currentIssue.description,
+      meta: {
+          charSet: 'utf-8',
+          property: {
+            'og:title': `${currentIssue.title}-${currentIssue.question}-2016立委求職中`,
+            'og:description': currentIssue.description
+          }
+      }
      
     };
 

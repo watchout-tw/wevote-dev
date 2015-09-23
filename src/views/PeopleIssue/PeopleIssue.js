@@ -105,7 +105,14 @@ export default class PeopleIssue extends Component {
 
     const metaData = {
       title: `${name}對於${issueName}的表態-立委求職中`,
-      description: description
+      description: description,
+      meta: {
+          charSet: 'utf-8',
+          property: {
+            'og:title': `${name}對於${issueName}的表態-立委求職中`,
+            'og:description': description
+          }
+      }
      
     };
     

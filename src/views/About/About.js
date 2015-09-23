@@ -56,7 +56,14 @@ export default class About extends Component {
           mainContent = FAQBlock;
           metaData = {
             title: `資料來源說明-立委求職中-2016立委投票資訊站`,
-            description: `「2016立委求職中」的資料來源、整理方式、議題挑選，以及小編們整理「2016立委求職中」資料的種種血淚。`
+            description: `關於「2016立委求職中」內容資料之著作權聲明。`,
+            meta: {
+                charSet: 'utf-8',
+                property: {
+                  'og:title': `資料來源說明-立委求職中-2016立委投票資訊站`,
+                  'og:description': `關於「2016立委求職中」內容資料之著作權聲明。`
+                }
+            }
           };
           break;
       
@@ -64,7 +71,14 @@ export default class About extends Component {
           mainContent = termsBlock;
           metaData = {
             title: `著作權聲明-立委求職中-2016立委投票資訊站`,
-            description: `關於「2016立委求職中」內容資料之著作權聲明。`
+            description: `關於「2016立委求職中」內容資料之著作權聲明。`,
+            meta: {
+                charSet: 'utf-8',
+                property: {
+                  'og:title': `著作權聲明-立委求職中-2016立委投票資訊站`,
+                  'og:description': `關於「2016立委求職中」內容資料之著作權聲明。`
+                }
+            }
           };
           break;
       
@@ -72,7 +86,14 @@ export default class About extends Component {
           mainContent = aboutBlock;
           metaData = {
             title: `關於立委求職中-立委求職中-2016立委投票資訊站`,
-            description: `「2016立委求職中」是一個提供選民了解立委候選人議題表態的網站。我們整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委求職中」希望能夠做到更多的資訊揭露，改變台灣民主政治。`
+            description: `「2016立委求職中」是一個提供選民了解立委候選人議題表態的網站。我們整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委求職中」希望能夠做到更多的資訊揭露，改變台灣民主政治。`,
+            meta: {
+                charSet: 'utf-8',
+                property: {
+                  'og:title': `關於立委求職中-立委求職中-2016立委投票資訊站`,
+                  'og:description': `「2016立委求職中」是一個提供選民了解立委候選人議題表態的網站。我們整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委求職中」希望能夠做到更多的資訊揭露，改變台灣民主政治。`
+                }
+            }
           };
           break;
 

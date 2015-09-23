@@ -22,7 +22,7 @@ const meta = {
     property: {
       'og:site_name': title,
       'og:image': image,
-      'og:locale': 'za_TW',
+      'og:locale': 'zh_TW',
       'og:title': title,
       'og:description': description
     }
