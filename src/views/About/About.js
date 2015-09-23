@@ -31,8 +31,20 @@ export default class About extends Component {
     );
     let termsBlock = (
       <div className={styles.content}>
-          <h2>使用條款</h2>
-          <p>依據個資法，關於個人資料蒐集、處理及利用聲明： 使用本電子報訂閱視為瞭解及同意沃草公司進行您個人資料（email資訊）之蒐集、處理及利用，除非取得您的同意或其他法令之特別規定，絕不會將您的個人資料提供給第三方或使用於電子報訂閱以外之其它用途。您隨時可來信取消此訂閱服務，經取消訂閱後，相關資料立即從訂閱資料庫中刪除。</p>
+          <div className={styles.licenseBlock}>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Cc-by-nc-sa_euro_icon.svg/1024px-Cc-by-nc-sa_euro_icon.svg.png"
+               className={styles.licenseImg} />
+          <p>如非特別註名，本站內容統一採用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+                                          target="_blank"
+                                          className={styles.link}>創用 CC 姓名標示─非商業性─相同方式分享 4.0 國際 授權條款</a>釋出。</p>
+          <p>需要注意部分如下：</p>
+          <ol>
+            <li>從立法院網站來源的資料，如立委照片、公報內容等，必須在遵守立法院的<a href="http://www.ly.gov.tw/14_others/copyright.jsp"
+                                                                             target="_blank"
+                                                                             className={styles.link}>著作權規範</a>之下取用。</li>
+            <li>如果在著作權方面有疑慮、建議或是想取得更進一步授權，請來信 wevote@watchout.tw 。</li>
+          </ol>
+          </div>
       </div>  
     );
 

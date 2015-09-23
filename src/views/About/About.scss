@@ -1,4 +1,5 @@
 $breakLarge: 1400px;
+$themeColor: #006060;
 .wrap {
 	margin: 0;
 }
@@ -76,10 +77,34 @@ $breakLarge: 1400px;
     	height: 40px;
     }
 }
+/* main content */
 .content {
 	max-width: 800px;
 	margin: 0 auto;
+	
 	line-height: 1.5;
     font-size: 18px;
+
     padding: 0 10px;
+    
+
+}
+/* License */
+.licenseBlock {
+	
+	line-height: 2;
+}
+.licenseImg {
+	max-width: 320px;
+    padding-left: 45px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 50px;
+}
+.link, .link:visited {
+	color: $themeColor;
+	text-decoration: none;
+}
+.link:hover {
+	text-decoration: underline;
 }
