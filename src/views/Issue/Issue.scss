@@ -1,10 +1,42 @@
 $main: #006060;
-
-.masthead {
-  
+$breakLarge: 800px;
+.wrap{
+  padding-bottom: 200px;/* for scrolling */  
+}
+.innerWrap {
   text-align: center;
-  padding-bottom: 200px;/* for scrolling */
+}
+.figHeader {
+  min-height: 80px;
+  max-width: 800px;
+  margin: 50px auto 0 auto;
+
+}
+.issueBlock {
+  border: 2px solid;
   
+  font-size: 20px;
+  display: inline-block;
+}
+@media all and (min-width: $breakLarge){
+	.issueBlock {
+		float: left;
+		margin-top: 10px;
+	}
+	.issueController {
+		float: right;
+	}
+}
+.issueTitle {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+.issueStatement {
+  display: inline-block;
+  background: white;
+  padding: 10px;
 }
 .records {
   margin: 60px auto;
@@ -12,5 +44,6 @@ $main: #006060;
   position: relative;
   text-align: center;
 }
+
 
 

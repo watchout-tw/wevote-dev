@@ -110,15 +110,19 @@ export default class Issue extends Component {
                                    activeRecord={activeRecord} />;
     });
 
-    let currentViewGroups;
+    let currentViewGroups, currentViewStatement;
+
     switch(currentView){
       case 'parties': 
+        currentViewStatement = `${currentIssue.statement}，政黨的態度是？`;
         currentViewGroups = partyPositionGroups;
         break;
       case 'legislators':
+        currentViewStatement = `${currentIssue.statement}，委員的態度是？`;
         currentViewGroups = positionLegislatorGroups;
         break;
       case 'positions':
+        currentViewStatement = `${currentIssue.statement}，委員有哪些具體表態行動？`;
         currentViewGroups = positionPartyGroups;
         break;
       
@@ -142,15 +146,27 @@ export default class Issue extends Component {
 
 
     return (
-      <div className={styles.masthead}>
+      <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
           
           <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
 
-          <IssueController currentIssue={currentIssue} currentView={currentView}/>
+          <div className={styles.innerWrap}>
+              <div className={styles.figHeader}>
+                  <div className={styles.issueBlock}>
+                      <div className={styles.issueTitle}>{currentIssue.title}</div>
+                      <div className={styles.issueStatement}>{currentViewStatement}</div>
+                  </div>
+                  
+                  <div className={styles.issueController}>
+                    <IssueController currentIssue={currentIssue} currentView={currentView}/>
+                  </div>
+              </div>
+    
+              <div className={styles.records}>
+                  {currentViewGroups}
+              </div>
 
-          <div className={styles.records}>
-            {currentViewGroups}
           </div>
 
       </div>
