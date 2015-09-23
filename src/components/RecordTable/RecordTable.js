@@ -30,7 +30,9 @@ class Record extends Component {
          <div className={styles.category}>{data.category}</div>
 
          <Link to={`/people/${people_name2id(data.legislator)}`} className={styles.avatar}>
-              <PeopleAvatar id={people_name2id(data.legislator)}/>
+              <div className={styles.avatarImg}>
+                  <PeopleAvatar id={people_name2id(data.legislator)}/>
+              </div>
               <div className={styles.avatarName}>{data.legislator}</div>
          </Link>
          <div className={styles.content}>{data.content}</div>

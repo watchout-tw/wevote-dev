@@ -3,6 +3,8 @@ import {Link} from 'react-router';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 import people_name2id from '../../utils/people_name2id';
+
+import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar.js';
 /*
 {
     "name": "黃昭順",
@@ -44,16 +46,8 @@ class LegislatorAvatar extends Component {
     const styles = require('./PositionLegislatorGroup.scss');
     
     let {id, name, party, records} = data;
-    let imgURL;
-
     let imgActiveStyle = (activeLegislator === name)? styles.avatarImgActive : "";
-    
-    try {
-      imgURL = require("./images/avatar/"+name+".png");
-    }catch(e){
-      imgURL = require("./images/default.jpg");
-    }
-
+  
      /* active record */    
     let detailText;
     let recordCount = 0;
@@ -61,25 +55,27 @@ class LegislatorAvatar extends Component {
         recordCount = records.length;
 
     if((activeLegislator === name)){
-          detailText = ( 
-              <div className={styles.activeCube}>
-                  <div>{name}</div>
-                   {recordCount} 筆表態資料  
-              </div>
-          );
+        detailText = ( 
+            <div className={styles.activeCube}>
+                <div>{name}</div>
+                 {recordCount} 筆表態資料  
+            </div>
+        );
     }
     //onMouseLeave={resetActiveLegislator.bind(null)}
+    // <img className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}
+    //      src={imgURL}/>
     
     return (
         <Link to={`/people/${people_name2id(name)}/${currentIssueName}`}
               onMouseEnter={setToActiveLegislator.bind(null, name)}
-              
               className={styles.avatarItem}>
          
           {detailText}
           
-          <img className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}
-               src={imgURL}/>
+          <div className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}>
+            <PeopleAvatar id={people_name2id(name)} />
+          </div>
           
         </Link>
     );

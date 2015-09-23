@@ -54,6 +54,12 @@ $unknownColor: #FFF800;
 
 
 /* 立委表態 */
+.avatar {
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	display: inline-block;
+}
 .item {
 	cursor: pointer;
 	display: inline-block;

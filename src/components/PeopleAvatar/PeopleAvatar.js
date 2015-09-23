@@ -22,8 +22,10 @@ export default class PeopleeAvatar extends Component {
     const {legislators, id} = this.props;
     const legislator = legislators[id];
    
+    if(!legislator) return <div></div>
+
+
     let {name, party} = legislator;
-    
     let imgURL;
 
     try {

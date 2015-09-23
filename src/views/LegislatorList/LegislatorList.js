@@ -215,7 +215,7 @@ class Record extends Component {
     return (
       <div className={styles.item}>
       <Link to={`/people/${id}`} className={styles.link}>
-          <PeopleAvatar id={id}/>
+          <div className={styles.avatar}><PeopleAvatar id={id}/></div>
           <div className={styles.name}>{data.name}</div>
           <div className={styles.issueCubes}>
             {issueItems}
