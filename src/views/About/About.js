@@ -43,7 +43,7 @@ export default class About extends Component {
           mainContent = FAQBlock;
           break;
       
-      case 'terms':
+      case 'statement':
           mainContent = termsBlock;
           break;
       
@@ -60,7 +60,7 @@ export default class About extends Component {
               <ul className={styles.innerTag}>
                   <li><Link to={`/about`} className = { tabName==="about" ? styles.active : ""}>關於立委求職中</Link></li>
                   <li><Link to={`/about/FAQ`} className = { tabName==="FAQ" ? styles.active : ""}>資料來源說明</Link></li>
-                  <li><Link to={`/about/terms`} className = { tabName==="terms" ? styles.active : ""}>使用條款</Link></li>
+                  <li><Link to={`/about/statement`} className = { tabName==="statement" ? styles.active : ""}>著作權聲明</Link></li>
               </ul>
           </div>
           {mainContent}

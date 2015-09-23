@@ -1,0 +1,94 @@
+$redColor: #D65A5A;
+$breakSmall: 450px;
+$breakMedium: 800px;
+.wrap {
+	background: lightgray;	
+	padding: 20px;
+}
+.innerWrap {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+.title {
+	font-size: 20px;
+	margin: 20px 0;
+}
+.emailLabel {
+	margin: 0 0 5px 2px;
+    display: block;
+
+}
+.red {
+	color: $redColor;
+}
+.showAlert  {
+	display: inline-block;
+	color: $redColor;
+}
+.hideAlert {
+	display: none;
+}
+.emailInput {
+	display: inline-block;
+	height: 40px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+.emailInput:focus {
+    outline-width: 0;
+}
+.submit {
+	display: block;
+    height: 40px;
+    border: none;
+    padding: 0 8px;
+    color: white;
+    background: rgb(0, 96, 96);
+    margin-top: 10px;
+}
+@media all and (min-width: $breakSmall){
+	.submit {
+		display: inline-block;
+		margin: 0 10px;
+	}
+}
+.lawInfo {
+	font-size: 14px;
+	margin: 10px 0;
+	line-height: 1.4;
+}
+.lawInfoTitle {
+	color: #2E2828;
+    margin-bottom: 10px;
+}
+.lawInfoContent {
+	color: gray;
+}
+/* footer links */
+.bottomInfo {
+	border-top: 1px dashed rgb(53,55,54);
+	margin-top: 20px;
+	padding: 10px 0;
+	line-height: 1.5;
+}
+.rightFooterLinks {
+	width: 100%;
+	margin-top: 50px;
+}
+@media all and (min-width: $breakMedium){
+	.rightFooterLinks {
+		text-align: right;
+	}
+}
+.linkItem, .linkItem:visited {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	padding: 10px;
+}
+.linkItem:hover {
+	background: rgb(180,180,180);
+	border-radius: 4px;
+}
+
