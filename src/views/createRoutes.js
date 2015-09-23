@@ -15,6 +15,7 @@ import Party from 'views/Party/Party.js';
 import PartyIssue from 'views/PartyIssue/PartyIssue.js';
 
 import Record from 'views/Record/Record.js';
+import Clarify from 'views/Clarify/Clarify.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
 
@@ -34,6 +35,8 @@ export default function(store) {
       <Route path="/records/:recordId" component={Record}/>
       <Route path="/about" component={About}/>
       <Route path="/about/:tabName" component={About}/>
+      
+      <Route path="/clarify" component={Clarify}/>
       <Route path="*" component={NotFound}/>
     </Route>
   );

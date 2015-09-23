@@ -193,11 +193,13 @@ $unknownColor: #FFF800;
 .clarificationContent {
 	padding: 20px;
 }
-.clarifyButton {
+.clarifyButton, .clarifyButton:visited {
 	cursor: pointer;
 	text-decoration: underline;
 	padding: 20px;
 	font-size: 14px;
+	color: rgb(53,55,54);
+	display: block;
 }
 .clarifyButton:hover {
 	color: gray;

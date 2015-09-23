@@ -164,7 +164,7 @@ export default class Record extends Component {
 
          </div>
          {clarification}
-         <div className={styles.clarifyButton}>表態立場如果有解讀錯誤，歡迎委員來函澄清</div>
+         <Link to={`/clarify`} className={styles.clarifyButton}>表態立場如果有解讀錯誤，歡迎委員來函澄清</Link>
 
       </div>
           <Link className={styles.button}

@@ -69,6 +69,7 @@ export default class Footer extends Component {
                       <Link to={`/about/`} className={styles.linkItem}>關於立委求職中</Link>
                       <Link to={`/about/FAQ`} className={styles.linkItem}>資料來源說明</Link>
                       <Link to={`/about/statement`} className={styles.linkItem}>著作權聲明</Link>
+                      <Link to={`/clarify`} className={styles.linkItem}>立委澄清</Link>
                       <Link to={`/`} className={styles.linkItem}>回首頁</Link>
                   </div>
               </div>
