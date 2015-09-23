@@ -11,7 +11,7 @@ import Appbar from '../components/Appbar/Appbar.js';
 import Footer from '../components/Footer/Footer.js';
 
 const title = '立委求職中';
-const description = '0.0.1';
+const description = '「2016立委求職中」是一個提供選民了解立委候選人議題表態的網站。我們整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委求職中」希望能夠做到更多的資訊揭露，改變台灣民主政治。'
 const image = './logo.png';
 
 const meta = {
@@ -22,17 +22,9 @@ const meta = {
     property: {
       'og:site_name': title,
       'og:image': image,
-      'og:locale': 'en_US',
+      'og:locale': 'za_TW',
       'og:title': title,
-      'og:description': description,
-      'twitter:card': 'summary',
-      'twitter:site': '@erikras',
-      'twitter:creator': '@erikras',
-      'twitter:title': title,
-      'twitter:description': description,
-      'twitter:image': image,
-      'twitter:image:width': '200',
-      'twitter:image:height': '200'
+      'og:description': description
     }
   }
 };
