@@ -144,6 +144,25 @@ export default class Issue extends Component {
      
     };
 
+    /* 協力 NGO */
+    const { collaborators } = currentIssue;
+    let collaboratorItems = collaborators.map((ngo, index)=>{
+        return <a className={styles.link}
+                  href={ngo.link}
+                  target="_blank"
+                  key={index}>{ngo.name}</a>
+    });
+
+
+    /* 其他議題列表 */
+    let otherIssues = Object.keys(issues).map((current_issue, index)=>{
+      if(currentIssue.title !== issues[current_issue].title){
+      return <Link to={`/issues/${current_issue}`}
+                   key={index}
+                   className={styles.linkButton}>{issues[current_issue].title}</Link>
+      }
+    })
+
 
     return (
       <div className={styles.wrap}>
@@ -165,6 +184,18 @@ export default class Issue extends Component {
     
               <div className={styles.records}>
                   {currentViewGroups}
+              </div>
+
+              <div className={styles.collaboratorInfo}>
+                本議題協力NGO：{collaboratorItems}
+              </div>
+              
+              <div className={styles.moreInfo}>
+                <div className={styles.moreInfoInner}>
+                    <div>想了解其他議題嗎？{otherIssues}</div>
+                    <div>想知道2016你的選區候選人對這個議題的表態嗎？<div className={styles.comingButton}>coming soon</div></div>
+                    <div>想知道各政黨對其他議題的表態嗎？<div className={styles.comingButton}>coming soon</div></div>
+                </div>
               </div>
 
           </div>

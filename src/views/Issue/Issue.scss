@@ -1,7 +1,7 @@
 $main: #006060;
 $breakLarge: 800px;
 .wrap{
-  padding-bottom: 200px;/* for scrolling */  
+  position: relative; 
 }
 .innerWrap {
   text-align: center;
@@ -43,6 +43,58 @@ $breakLarge: 800px;
   max-width: 1000px;
   position: relative;
   text-align: center;
+  padding-bottom: 100px;
+}
+.collaboratorInfo {
+	text-align: center;
+    margin: 0 -9%;
+    background: #d3d3d3;
+}
+.link, .link:visited {
+  color: #b88234;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+}
+.link:hover {
+  color: #b88234;
+  text-decoration: underline;
+
+}
+.moreInfo {
+	background: white;
+	line-height: 2;
+	text-align: left;
+	padding-bottom: 50px;
+}
+.moreInfoInner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px 0;
+	font-size: 22px;
+    color: rgb(53,55,54);
+}
+.linkButton, .linkButton:visited {
+	color: #D6A051;
+    border: 2px solid #D6A051;
+    padding: 0px 10px;
+    font-size: 18px;
+    margin: 0 10px 0px 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+.linkButton:hover {
+	background: #D6A051;
+	color: white;
+}
+.comingButton {
+	color: #D6A051;
+    border: 2px dotted #D6A051;
+    padding: 0px 10px;
+    font-size: 18px;
+    margin: 0 10px 0px 10px;
+    display: inline-block;
+    text-decoration: none;
 }
 
 

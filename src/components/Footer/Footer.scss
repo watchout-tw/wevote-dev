@@ -2,9 +2,11 @@ $redColor: #D65A5A;
 $breakSmall: 450px;
 $breakMedium: 800px;
 .wrap {
-	background: lightgray;	
+	background: #006060;
+    padding: 20px;
+    color: rgb(240,240,240);
 	padding: 20px;
-	margin-top: 200px;
+	
 }
 .innerWrap {
 	margin: 0 auto;
@@ -35,6 +37,7 @@ $breakMedium: 800px;
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
+    color: black;
 }
 .emailInput:focus {
     outline-width: 0;
@@ -45,8 +48,14 @@ $breakMedium: 800px;
     border: none;
     padding: 0 8px;
     color: white;
-    background: rgb(0, 96, 96);
+    border: 1px solid white;
+    background: #006060;
     margin-top: 10px;
+}
+.submit:hover {
+	background: white;
+	color: rgb(53,55,54);
+	border: 1px solid white;
 }
 @media all and (min-width: $breakSmall){
 	.submit {
@@ -60,11 +69,11 @@ $breakMedium: 800px;
 	line-height: 1.4;
 }
 .lawInfoTitle {
-	color: #2E2828;
+	
     margin-bottom: 10px;
 }
 .lawInfoContent {
-	color: gray;
+	color: #97B5B5;
 }
 /* footer links */
 .bottomInfo {
@@ -72,6 +81,7 @@ $breakMedium: 800px;
 	margin-top: 20px;
 	padding: 10px 0;
 	line-height: 1.5;
+	color: #97B5B5;
 }
 .rightFooterLinks {
 	width: 100%;
@@ -84,12 +94,12 @@ $breakMedium: 800px;
 }
 .linkItem, .linkItem:visited {
 	display: inline-block;
-	color: black;
+	color: white;
 	text-decoration: none;
 	padding: 10px;
 }
 .linkItem:hover {
-	background: rgb(180,180,180);
+	text-decoration: underline;
 	border-radius: 4px;
 }
 .hideLinks {
