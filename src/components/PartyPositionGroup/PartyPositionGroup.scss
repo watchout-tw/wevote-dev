@@ -2,10 +2,23 @@ $cubeSize: 20px;
 $ayeColor: #00FFB0;
 $nayColor: #FF0055;
 $unknownColor: #FFF800;
+$themeColor: #006060;
 
 .wrap {
 	display: inline-block;
 	position: relative;
+}
+.partyTitle, .partyTitle:visited {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    display: inline-block;
+    border-bottom: 1px solid rgb(53,55,54);
+}
+.partyTitle:hover {
+	color: $themeColor;
+	border-bottom: 1px solid $themeColor;
 }
 .positionWrap {
 	position: relative;

@@ -130,7 +130,8 @@ export default class PartyPositionGroup extends Component {
 
     return (
       <div className={styles.wrap}>
-        <Link to={`/parties/${data.party}/${issueId}`}>{partyTitle}</Link>
+        <Link to={`/parties/${data.party}/${issueId}`}
+              className={styles.partyTitle}>{partyTitle}</Link>
         <div>{`${data.dominantPercentage}% ${eng2cht(data.dominantPosition)}`}</div>
         <div>{issueStatement}</div>
         <div style={cubesWrap}>
