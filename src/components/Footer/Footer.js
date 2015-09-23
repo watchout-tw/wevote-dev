@@ -59,6 +59,10 @@ export default class Footer extends Component {
             <div className={styles.lawInfo}>
                 <div className={styles.lawInfoTitle}>請放心，你隨時可以取消。</div>
                 <div className={styles.lawInfoContent}>依據個資法，關於個人資料蒐集、處理及利用聲明：使用本電子報訂閱視為瞭解及同意沃草公司進行您個人資料（email 資訊）之蒐集、處理及利用，除非取得您的同意或其他法令之特別規定，絕不會將您的個人資料提供給第三方或使用於電子報訂閱以外之其它用途。您隨時可來信取消此訂閱服務，經取消訂閱後，相關資料立即從訂閱資料庫中刪除。</div>
+                <div className={styles.hideLinks}>
+                  <Link to={`/subscribe/succeed`}>訂閱成功</Link>
+                  <Link to={`/subscribe/error`}>訂閱失敗</Link>
+                </div>
             </div>
                 
               </form>

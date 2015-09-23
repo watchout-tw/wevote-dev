@@ -92,4 +92,8 @@ $breakMedium: 800px;
 	background: rgb(180,180,180);
 	border-radius: 4px;
 }
+.hideLinks {
+	max-height: 0px;
+	overflow: hidden;
+}
 
