@@ -78,7 +78,7 @@ class OptionItem extends Component {
     let imgActive  = (data.view === currentView) ? styles.optionImgActive : styles.optionImgInactive;
 
     return (
-        <Link to={`/issues/${issue}/${data.view}`}
+        <Link to={`/issues/${issue}/${data.view}#view`}
               className={`${styles.optionItem} ${itemActive}`}>
           <img className={`${styles.optionImg} ${imgActive}`} src={imgURL} />
           {data.title}

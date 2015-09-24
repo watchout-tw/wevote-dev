@@ -42,6 +42,27 @@ export default class Issue extends Component {
     }
   }
 
+  _scrollToView(){
+     let y = document.getElementById("view").getBoundingClientRect().top;
+     window.scrollTo(0,y)
+     
+  }
+
+  componentDidMount(){
+      const { focusPart } = this.props.params;
+      if(focusPart){
+          this._scrollToView();
+      }  
+      
+  }
+  componentWillReceiveProps(nextProps){
+      const { focusPart } = nextProps.params;
+      if(focusPart){
+        this._scrollToView(); 
+      }
+
+  }
+
   _setToActiveRecord(value, event){
       this.setState({ activeRecord: value });
   }
@@ -163,7 +184,6 @@ export default class Issue extends Component {
       }
     })
 
-
     return (
       <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
@@ -171,7 +191,7 @@ export default class Issue extends Component {
           <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
 
           <div className={styles.innerWrap}>
-              <div className={styles.figHeader}>
+              <div className={styles.figHeader} id="view">
                   <div className={styles.issueBlock}>
                       <div className={styles.issueTitle}>{currentIssue.title}</div>
                       <div className={styles.issueStatement}>{currentViewStatement}</div>
