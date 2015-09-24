@@ -67,18 +67,22 @@ export default class PeopleProfile extends Component {
             <div className={styles["people-pic"]}>
                 <PeoplePhoto id={id}/>
             </div>
-
-            <Link to={`/people/${id}`}
-                  className={styles.name}>{name}</Link>
-            <div className={styles.party}>
-              <div className={`${styles["party-flag-s"]} ${styles[party]} ${styles["party-flag"]}`}></div>
-              <span>{partyCht}</span> 
+            
+            <div className={styles.nameAndParty}>
+                <Link to={`/people/${id}`}
+                      className={styles.name}>{name}</Link>
+                <div className={styles.party}>
+                  <div className={`${styles["party-flag-s"]} ${styles[party]} ${styles["party-flag"]}`}></div>
+                  <span>{partyCht}</span> 
+                </div>
             </div>
+
             <div className={styles["basic-txt"]}>
               {ageInfo}
               {legislationInfo}
               {candidateInfo}
             </div>
+           
 
           </div>
          

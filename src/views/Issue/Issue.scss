@@ -1,4 +1,5 @@
 $main: #006060;
+$breakSmall: 440px;
 $breakLarge: 800px;
 .wrap{
   position: relative; 
@@ -15,7 +16,7 @@ $breakLarge: 800px;
 }
 .issueBlock {
   border: 2px solid;
-  
+  margin: 0 5px;
   font-size: 20px;
   display: inline-block;
 }
@@ -29,15 +30,22 @@ $breakLarge: 800px;
 	}
 }
 .issueTitle {
-  display: inline-block;
   background: black;
   color: white;
   padding: 10px;
 }
 .issueStatement {
-  display: inline-block;
   background: white;
   padding: 10px;
+}
+@media all and (min-width: $breakSmall){
+  .issueTitle {
+    display: inline-block;
+  }
+  .issueStatement {
+    display: inline-block;
+  }
+
 }
 .records {
   margin: 60px auto;
@@ -71,9 +79,9 @@ $breakLarge: 800px;
 .moreInfoInner {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 40px 0;
+	padding: 40px 10px;
 	font-size: 22px;
-    color: rgb(53,55,54);
+  color: rgb(53,55,54);
 }
 .linkButton, .linkButton:visited {
 	color: #D6A051;
