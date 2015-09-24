@@ -2,9 +2,17 @@
 $breakMedium: 600px;
 $breakLarge: 800px;
 .home {
+  position: relative;
+}
+.innerWrap {
   max-width: 1200px;
   margin: 0 auto;
 }
+.alignCenter {
+  text-align: center;
+}
+
+
 .pageTitle {
   text-align: center;
   font-size: 34px;
@@ -67,4 +75,26 @@ a.coverItem:hover {
   border-radius: 5px;
   font-size: 28px;
   color: #797979;
+}
+h2 {
+  font-size: 34px;
+}
+.roadmapBlock {
+  background: #FAF4EC;
+  padding: 30px 0;
+}
+.roadmap {
+  width: 100%;
+}
+.aboutUsBlock {
+  padding-top: 50px;
+  background: rgb(220,220,220);
+}
+.aboutUsText {
+  text-align: left;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 30px 10px 100px 10px;
+  font-size: 18px;
+
 }
