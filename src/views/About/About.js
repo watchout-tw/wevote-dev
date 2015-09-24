@@ -105,7 +105,6 @@ export default class About extends Component {
       <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
           <div className={styles.about}>
-              <h1 className={styles.title}>關於我們</h1>
               <ul className={styles.innerTag}>
                   <li><Link to={`/about`} className = { tabName==="about" ? styles.active : ""}>關於立委求職中</Link></li>
                   <li><Link to={`/about/FAQ`} className = { tabName==="FAQ" ? styles.active : ""}>資料來源說明</Link></li>
