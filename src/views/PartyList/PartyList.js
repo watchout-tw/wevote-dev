@@ -22,7 +22,8 @@ export default class PartyList extends Component {
         userPreference: {
           "marriageEquality" : "none",
           "recall" : "none",
-          "referendum" : "none"
+          "referendum" : "none",
+          "nuclearPower" : "none"
         }
       }
   }
@@ -112,7 +113,8 @@ class Matcher extends Component {
 
     const issues = [{ title:'婚', issue:'marriageEquality'},
                     { title:'罷', issue:'recall'},
-                    { title:'公', issue:'referendum'}];
+                    { title:'公', issue:'referendum'},
+                    { title:'核', issue:'nuclearPower'}];
     const positions = [
       { title:'我贊成',
         position: 'aye'},
@@ -195,6 +197,10 @@ class Record extends Component {
          {
              "id": "referendum",
              "cht": "公"
+         },
+         {
+             "id": "nuclearPower",
+             "cht": "核"
          }
     ]
   

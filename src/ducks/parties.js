@@ -15,6 +15,14 @@ const initialState = {
         "id": "PFP",
         "name": "親民黨"
     },
+    "NSU": {
+        "id": "NSU",
+        "name": "無黨團結聯盟"
+    },
+    "NONE": {
+        "id": "NONE",
+        "name": "無黨籍"
+    }
     
 };
 

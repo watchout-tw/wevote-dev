@@ -60,7 +60,8 @@ export default class PartyIssue extends Component {
 
     let issueDataName = url2eng(issueURL)
 
-    if(!partyPositions.data.positions) return <div></div>;
+    if(!partyPositions.data || !partyPositions.data.positions || !partyPositions.data.name) 
+        return <div></div>;
 
     const position = partyPositions.data.positions[issueDataName];
 

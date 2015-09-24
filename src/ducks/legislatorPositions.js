@@ -76,6 +76,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1219,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1059,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1026,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 939,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 726,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 582,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 621,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 289,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 403,
+                        "issue": "核四",
+                        "legislator": "丁守中",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 4
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -155,6 +319,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1169,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1148,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1014,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 927,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 815,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 571,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 682,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 336,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 452,
+                        "issue": "核四",
+                        "legislator": "孔文吉",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 8
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -364,7 +692,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 202,
+                        "id": 203,
                         "issue": "公投",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -380,7 +708,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 214,
+                        "id": 215,
                         "issue": "公投",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -396,7 +724,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 159,
+                        "id": 160,
                         "issue": "公投",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -412,7 +740,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 225,
+                        "id": 226,
                         "issue": "公投",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -428,7 +756,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 174,
+                        "id": 175,
                         "issue": "公投",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -444,7 +772,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 252,
+                        "id": 253,
                         "issue": "公投",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -460,7 +788,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 269,
+                        "id": 270,
                         "issue": "公投",
                         "legislator": "尤美女",
                         "party": "DPP",
@@ -492,6 +820,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 7
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1207,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1076,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 971,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 858,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 746,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 528,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 639,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 280,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 392,
+                        "issue": "核四",
+                        "legislator": "尤美女",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 7
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -554,6 +1046,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1229,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1113,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1044,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 891,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 778,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 600,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 712,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 372,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 489,
+                        "issue": "核四",
+                        "legislator": "王廷升",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -601,7 +1257,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 268,
+                        "id": 269,
                         "issue": "公投",
                         "legislator": "王育敏",
                         "party": "KMT",
@@ -633,6 +1289,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1258,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1141,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1005,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 917,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 805,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 563,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 674,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 381,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 444,
+                        "issue": "核四",
+                        "legislator": "王育敏",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -695,6 +1515,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1170,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1057,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 945,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 832,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 723,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 500,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 614,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 271,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 384,
+                        "issue": "核四",
+                        "legislator": "王金平",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 9
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -757,6 +1741,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1273,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1154,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1020,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 934,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 821,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 577,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 687,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 342,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 458,
+                        "issue": "核四",
+                        "legislator": "王惠美",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -819,6 +1967,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1242,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1126,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1046,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 837,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 790,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 604,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 702,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 364,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 481,
+                        "issue": "核四",
+                        "legislator": "王進士",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 8
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -866,7 +2178,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 227,
+                        "id": 228,
                         "issue": "公投",
                         "legislator": "田秋堇",
                         "party": "DPP",
@@ -882,7 +2194,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 231,
+                        "id": 232,
                         "issue": "公投",
                         "legislator": "田秋堇",
                         "party": "DPP",
@@ -898,7 +2210,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 247,
+                        "id": 248,
                         "issue": "公投",
                         "legislator": "田秋堇",
                         "party": "DPP",
@@ -930,6 +2242,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 3
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1191,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1080,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 975,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 862,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 750,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 532,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 643,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 303,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 415,
+                        "issue": "核四",
+                        "legislator": "田秋堇",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1010,7 +2486,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 136,
+                        "id": 137,
                         "issue": "公投",
                         "legislator": "江啟臣",
                         "party": "KMT",
@@ -1042,6 +2518,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1244,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1127,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1048,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 903,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 792,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 606,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 700,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 379,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 479,
+                        "issue": "核四",
+                        "legislator": "江啟臣",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1104,6 +2744,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1247,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1130,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1050,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 906,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 795,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 553,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 717,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 378,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 476,
+                        "issue": "核四",
+                        "legislator": "江惠貞",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1166,6 +2970,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1195,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1084,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 992,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 866,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 754,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 535,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 646,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 306,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 418,
+                        "issue": "核四",
+                        "legislator": "何欣純",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1228,6 +3196,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1275,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1156,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1022,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 936,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 822,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 578,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 688,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 344,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 460,
+                        "issue": "核四",
+                        "legislator": "吳育仁",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1324,7 +3456,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 139,
+                        "id": 140,
                         "issue": "公投",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1340,7 +3472,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會書面質詢"
                     },
                     {
-                        "id": 150,
+                        "id": 151,
                         "issue": "公投",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1356,7 +3488,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 157,
+                        "id": 158,
                         "issue": "公投",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1372,7 +3504,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 176,
+                        "id": 177,
                         "issue": "公投",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1388,7 +3520,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 241,
+                        "id": 242,
                         "issue": "公投",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1404,7 +3536,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 264,
+                        "id": 265,
                         "issue": "公投",
                         "legislator": "吳育昇",
                         "party": "KMT",
@@ -1436,6 +3568,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 6
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1239,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1123,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1037,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 899,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 787,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 592,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 705,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 366,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 483,
+                        "issue": "核四",
+                        "legislator": "吳育昇",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1515,6 +3811,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1177,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1103,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 961,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 848,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 737,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 511,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 659,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 317,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 429,
+                        "issue": "核四",
+                        "legislator": "吳宜臻",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1628,7 +4088,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 209,
+                        "id": 210,
                         "issue": "公投",
                         "legislator": "吳秉叡",
                         "party": "DPP",
@@ -1660,6 +4120,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1197,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1086,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 969,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 868,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 756,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 539,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 650,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 310,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 422,
+                        "issue": "核四",
+                        "legislator": "吳秉叡",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1722,6 +4346,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1268,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1149,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1015,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 928,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 816,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 572,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 683,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 337,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 453,
+                        "issue": "核四",
+                        "legislator": "呂玉玲",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1817,6 +4605,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1246,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1129,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1051,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 905,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 794,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 552,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 716,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 377,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 477,
+                        "issue": "核四",
+                        "legislator": "呂學樟",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -1897,7 +4849,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 187,
+                        "id": 188,
                         "issue": "公投",
                         "legislator": "李昆澤",
                         "party": "DPP",
@@ -1913,7 +4865,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 211,
+                        "id": 212,
                         "issue": "公投",
                         "legislator": "李昆澤",
                         "party": "DPP",
@@ -1945,6 +4897,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1188,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1077,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 972,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 859,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 747,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 529,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 640,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 300,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 412,
+                        "issue": "核四",
+                        "legislator": "李昆澤",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -2076,7 +5192,7 @@ const legislatorPositions =
                         "party": "DPP",
                         "date": 1420560000,
                         "category": "發言",
-                        "content": "各位委員，我跟大家報告一下，因為第八十六條跟第一百十條的修正，原則上大家都沒有意見，現在是有一些相關配套必須做文字上的處理，如果現在要做文字處理，可能會來不及，所以我們用協商的方式，兩個禮拜內請內政部、中選會處理好相關條文，跟我這邊配合起來，然後我們在兩個禮拜內進行協商，把這個案子定案，這樣可不可以？原則上我們就這樣處理。",
+                        "content": "第八十六條有關罷免不得宣傳的部分，今天確定廢掉這個原則，至於相關需要補足的部分，可否授權行政單位去作業？我當召委，我來跟他們討論，討論完畢就再次追認通過，這樣處理會比較清楚，就是追認他們有修正配套的相關條文，我們還是要開會審查，就是給行政部門一些作業時間，然後我們再安排會議來處理，但是第八十六條確定刪除罷免不得宣傳的部分，這樣可不可以？",
                         "positionJudgement": "贊成下修罷免門檻",
                         "position": "aye",
                         "clarificationContent": "",
@@ -2154,7 +5270,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 134,
+                        "id": 135,
                         "issue": "公投",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -2170,7 +5286,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 144,
+                        "id": 145,
                         "issue": "公投",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -2186,7 +5302,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 154,
+                        "id": 155,
                         "issue": "公投",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -2202,7 +5318,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 169,
+                        "id": 170,
                         "issue": "公投",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -2218,7 +5334,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 242,
+                        "id": 243,
                         "issue": "公投",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -2234,7 +5350,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 256,
+                        "id": 257,
                         "issue": "公投",
                         "legislator": "李俊俋",
                         "party": "DPP",
@@ -2266,6 +5382,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 6
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1196,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1085,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 993,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 867,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 755,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 519,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 630,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 325,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 437,
+                        "issue": "核四",
+                        "legislator": "李俊俋",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -2313,7 +5593,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 205,
+                        "id": 206,
                         "issue": "公投",
                         "legislator": "李桐豪",
                         "party": "PFP",
@@ -2329,7 +5609,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 208,
+                        "id": 209,
                         "issue": "公投",
                         "legislator": "李桐豪",
                         "party": "PFP",
@@ -2345,7 +5625,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 153,
+                        "id": 154,
                         "issue": "公投",
                         "legislator": "李桐豪",
                         "party": "PFP",
@@ -2361,7 +5641,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 243,
+                        "id": 244,
                         "issue": "公投",
                         "legislator": "李桐豪",
                         "party": "PFP",
@@ -2377,7 +5657,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 266,
+                        "id": 267,
                         "issue": "公投",
                         "legislator": "李桐豪",
                         "party": "PFP",
@@ -2409,6 +5689,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 5
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1175,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1111,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 996,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 883,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 771,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 507,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 620,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 329,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 442,
+                        "issue": "核四",
+                        "legislator": "李桐豪",
+                        "party": "PFP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 3
+                    },
+                    {
+                        "position": "aye",
+                        "count": 6
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -2473,7 +5917,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 166,
+                        "id": 167,
                         "issue": "公投",
                         "legislator": "李貴敏",
                         "party": "KMT",
@@ -2489,7 +5933,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 260,
+                        "id": 261,
                         "issue": "公投",
                         "legislator": "李貴敏",
                         "party": "KMT",
@@ -2521,6 +5965,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1256,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1139,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1003,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 915,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 803,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 561,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 672,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 375,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 494,
+                        "issue": "核四",
+                        "legislator": "李貴敏",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -2600,6 +6208,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1167,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1064,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 943,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 836,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 721,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 510,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 625,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 292,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 404,
+                        "issue": "核四",
+                        "legislator": "李慶華",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 5
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -2680,7 +6452,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 201,
+                        "id": 202,
                         "issue": "公投",
                         "legislator": "李應元",
                         "party": "DPP",
@@ -2696,7 +6468,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 253,
+                        "id": 254,
                         "issue": "公投",
                         "legislator": "李應元",
                         "party": "DPP",
@@ -2728,6 +6500,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1181,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1066,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 965,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 852,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 740,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 522,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 633,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 295,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 407,
+                        "issue": "核四",
+                        "legislator": "李應元",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 8
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -2790,6 +6726,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1249,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1132,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1053,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 908,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 722,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 555,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 667,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 362,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 474,
+                        "issue": "核四",
+                        "legislator": "李鴻鈞",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 8
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -2854,7 +6954,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 170,
+                        "id": 171,
                         "issue": "公投",
                         "legislator": "周倪安",
                         "party": "TSU",
@@ -2870,7 +6970,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 258,
+                        "id": 259,
                         "issue": "公投",
                         "legislator": "周倪安",
                         "party": "TSU",
@@ -2902,6 +7002,90 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 550,
+                        "issue": "核四",
+                        "legislator": "周倪安",
+                        "party": "TSU",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 663,
+                        "issue": "核四",
+                        "legislator": "周倪安",
+                        "party": "TSU",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 288,
+                        "issue": "核四",
+                        "legislator": "周倪安",
+                        "party": "TSU",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 400,
+                        "issue": "核四",
+                        "legislator": "周倪安",
+                        "party": "TSU",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 4
             }
         }
     },
@@ -2982,7 +7166,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 213,
+                        "id": 214,
                         "issue": "公投",
                         "legislator": "林世嘉",
                         "party": "TSU",
@@ -3014,6 +7198,25 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
             }
         }
     },
@@ -3059,6 +7262,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -3157,7 +7379,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 193,
+                        "id": 194,
                         "issue": "公投",
                         "legislator": "林佳龍",
                         "party": "DPP",
@@ -3189,6 +7411,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1213,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1099,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 957,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 844,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 733,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 504,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 616,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 322,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 434,
+                        "issue": "核四",
+                        "legislator": "林佳龍",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 7
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3251,6 +7637,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1210,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1097,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 987,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 841,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 730,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 513,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 661,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 319,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 431,
+                        "issue": "核四",
+                        "legislator": "林岱樺",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3313,6 +7863,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1267,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1061,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1013,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 926,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 814,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 570,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 681,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 272,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 383,
+                        "issue": "核四",
+                        "legislator": "林明溱",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 6
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 3
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3375,6 +8089,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1259,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1062,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1006,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 918,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 806,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 564,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 675,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 382,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 445,
+                        "issue": "核四",
+                        "legislator": "林郁方",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 8
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3437,6 +8315,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1251,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1134,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 998,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 910,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 798,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 557,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 624,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 360,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 405,
+                        "issue": "核四",
+                        "legislator": "林國正",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 7
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 2
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3533,7 +8575,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 199,
+                        "id": 200,
                         "issue": "公投",
                         "legislator": "林淑芬",
                         "party": "DPP",
@@ -3549,7 +8591,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 206,
+                        "id": 207,
                         "issue": "公投",
                         "legislator": "林淑芬",
                         "party": "DPP",
@@ -3581,6 +8623,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1208,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1095,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 985,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 839,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 728,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 512,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 660,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 318,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 430,
+                        "issue": "核四",
+                        "legislator": "林淑芬",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3643,6 +8849,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1245,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1128,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1049,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 904,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 793,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 551,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 710,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 376,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 478,
+                        "issue": "核四",
+                        "legislator": "林滄敏",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3705,6 +9075,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1230,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1114,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1043,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 892,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 779,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 565,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 676,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 330,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 446,
+                        "issue": "核四",
+                        "legislator": "林德福",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3784,6 +9318,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1231,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1115,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1042,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 893,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 780,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 599,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 711,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 371,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 488,
+                        "issue": "核四",
+                        "legislator": "林鴻池",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -3848,7 +9546,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 143,
+                        "id": 144,
                         "issue": "公投",
                         "legislator": "邱文彥",
                         "party": "KMT",
@@ -3864,7 +9562,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 162,
+                        "id": 163,
                         "issue": "公投",
                         "legislator": "邱文彥",
                         "party": "KMT",
@@ -3880,7 +9578,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 180,
+                        "id": 181,
                         "issue": "公投",
                         "legislator": "邱文彥",
                         "party": "KMT",
@@ -3896,7 +9594,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 238,
+                        "id": 239,
                         "issue": "公投",
                         "legislator": "邱文彥",
                         "party": "KMT",
@@ -3912,7 +9610,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 259,
+                        "id": 260,
                         "issue": "公投",
                         "legislator": "邱文彥",
                         "party": "KMT",
@@ -3944,6 +9642,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 5
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1271,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1152,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 947,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 932,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 819,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 576,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 686,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 340,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 456,
+                        "issue": "核四",
+                        "legislator": "邱文彥",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 8
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -4041,7 +9903,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 200,
+                        "id": 201,
                         "issue": "公投",
                         "legislator": "邱志偉",
                         "party": "DPP",
@@ -4057,7 +9919,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 219,
+                        "id": 220,
                         "issue": "公投",
                         "legislator": "邱志偉",
                         "party": "DPP",
@@ -4073,7 +9935,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 173,
+                        "id": 174,
                         "issue": "公投",
                         "legislator": "邱志偉",
                         "party": "DPP",
@@ -4105,6 +9967,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 3
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1206,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1093,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 983,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 877,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 766,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 547,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 658,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 316,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 428,
+                        "issue": "核四",
+                        "legislator": "邱志偉",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -4200,6 +10226,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1204,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1091,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 982,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 875,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 764,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 546,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 657,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 315,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 427,
+                        "issue": "核四",
+                        "legislator": "邱議瑩",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -4345,7 +10535,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 186,
+                        "id": 187,
                         "issue": "公投",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -4361,7 +10551,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 138,
+                        "id": 139,
                         "issue": "公投",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -4377,7 +10567,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 146,
+                        "id": 147,
                         "issue": "公投",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -4393,7 +10583,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 156,
+                        "id": 157,
                         "issue": "公投",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -4409,7 +10599,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 175,
+                        "id": 176,
                         "issue": "公投",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -4425,7 +10615,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 230,
+                        "id": 231,
                         "issue": "公投",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -4441,7 +10631,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 246,
+                        "id": 247,
                         "issue": "公投",
                         "legislator": "姚文智",
                         "party": "DPP",
@@ -4473,6 +10663,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 7
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1187,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1094,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 984,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 878,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 767,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 525,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 636,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 297,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 409,
+                        "issue": "核四",
+                        "legislator": "姚文智",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -4537,7 +10891,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 251,
+                        "id": 252,
                         "issue": "公投",
                         "legislator": "柯建銘",
                         "party": "DPP",
@@ -4569,6 +10923,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1198,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1087,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 977,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 869,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 757,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 540,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 651,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 311,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 423,
+                        "issue": "核四",
+                        "legislator": "柯建銘",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -4681,7 +11199,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 189,
+                        "id": 190,
                         "issue": "公投",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -4697,7 +11215,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 135,
+                        "id": 136,
                         "issue": "公投",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -4713,7 +11231,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 147,
+                        "id": 148,
                         "issue": "公投",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -4729,7 +11247,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 198,
+                        "id": 199,
                         "issue": "公投",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -4745,7 +11263,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 163,
+                        "id": 164,
                         "issue": "公投",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -4761,7 +11279,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 237,
+                        "id": 238,
                         "issue": "公投",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -4777,7 +11295,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 255,
+                        "id": 256,
                         "issue": "公投",
                         "legislator": "段宜康",
                         "party": "DPP",
@@ -4809,6 +11327,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 7
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1183,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1073,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 967,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 854,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 742,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 524,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 635,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 296,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 408,
+                        "issue": "核四",
+                        "legislator": "段宜康",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -4871,6 +11553,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1171,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1063,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 944,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 831,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 720,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 499,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 611,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 275,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 389,
+                        "issue": "核四",
+                        "legislator": "洪秀柱",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 9
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -4967,15 +11813,15 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 137,
+                        "id": 138,
                         "issue": "公投",
                         "legislator": "紀國棟",
                         "party": "KMT",
                         "date": 1337702400,
                         "category": "發言",
-                        "content": "公投法的門檻，就在野黨的看法，本席認為他們要的是門檻再降低一點，所以其實你們很簡單，只要回去討論一次大概可以降低多少門檻，就降一點點，大家來討論趕快將這件事敲定，也讓這些執政黨委員不會陷於兩邊作戰，站在民眾的考量，認為應該讓公投法通過，為什麼我們不贊成？其實我們也不是反對，只是感覺那種規劃的節奏感似乎沒有那麼快，本席認為該做就趕快做，次長有什麼看法？",
-                        "positionJudgement": "贊成下修公投門檻",
-                        "position": "aye",
+                        "content": "基本上這個審議委員會的存在，本席是贊成繼續存在，如果將其廢掉，但是公投通過，ECFA 是立法院通過，公投卻否決，你可以說人民最大，本席也可以承認人民最大，這樣卻會造成法律的不安定性，有些就變成民粹了。",
+                        "positionJudgement": "反對廢除公投審議委員會",
+                        "position": "nay",
                         "clarificationContent": "",
                         "clarificationLastUpdate": "",
                         "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10104201;0117;0150",
@@ -4983,11 +11829,11 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     }
                 ],
-                "dominantPosition": "aye",
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
-                        "count": 0
+                        "count": 1
                     },
                     {
                         "position": "unknown",
@@ -4995,10 +11841,174 @@ const legislatorPositions =
                     },
                     {
                         "position": "aye",
-                        "count": 1
+                        "count": 0
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1225,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1165,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1033,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 887,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 774,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 589,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 698,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 354,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 470,
+                        "issue": "核四",
+                        "legislator": "紀國棟",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5061,6 +12071,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1228,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1060,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1045,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 890,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 777,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 602,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 714,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 277,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 390,
+                        "issue": "核四",
+                        "legislator": "孫大千",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 6
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 3
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5123,6 +12297,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1255,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1138,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1002,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 914,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 802,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 560,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 671,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 356,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 493,
+                        "issue": "核四",
+                        "legislator": "徐少萍",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5170,7 +12508,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 183,
+                        "id": 184,
                         "issue": "公投",
                         "legislator": "徐志榮",
                         "party": "KMT",
@@ -5202,6 +12540,25 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
             }
         }
     },
@@ -5266,7 +12623,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 140,
+                        "id": 141,
                         "issue": "公投",
                         "legislator": "徐欣瑩",
                         "party": "KMT",
@@ -5282,7 +12639,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會書面質詢"
                     },
                     {
-                        "id": 155,
+                        "id": 156,
                         "issue": "公投",
                         "legislator": "徐欣瑩",
                         "party": "KMT",
@@ -5314,6 +12671,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1248,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1131,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1052,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 907,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 796,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 554,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 666,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 363,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 475,
+                        "issue": "核四",
+                        "legislator": "徐欣瑩",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5376,6 +12897,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1266,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1055,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1012,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 925,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 813,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 569,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 680,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 335,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 451,
+                        "issue": "核四",
+                        "legislator": "徐耀昌",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 8
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5438,6 +13123,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1237,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1121,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 946,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 833,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 785,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 501,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 607,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 273,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 386,
+                        "issue": "核四",
+                        "legislator": "翁重鈞",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 3
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 6
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5500,6 +13349,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1274,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1155,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1021,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 935,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 724,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 495,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 610,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 343,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 459,
+                        "issue": "核四",
+                        "legislator": "馬文君",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 6
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 3
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5579,6 +13592,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1199,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1090,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 978,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 870,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 758,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 541,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 652,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 312,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 424,
+                        "issue": "核四",
+                        "legislator": "高志鵬",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5641,6 +13818,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1172,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1068,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 953,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 838,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 725,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 506,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 618,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 286,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 398,
+                        "issue": "核四",
+                        "legislator": "高金素梅",
+                        "party": "NSU",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 9
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5703,6 +14044,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1253,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1136,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1000,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 912,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 800,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 496,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 609,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 358,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 487,
+                        "issue": "核四",
+                        "legislator": "張嘉郡",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 7
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5767,7 +14272,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 133,
+                        "id": 134,
                         "issue": "公投",
                         "legislator": "張慶忠",
                         "party": "KMT",
@@ -5783,7 +14288,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會書面質詢"
                     },
                     {
-                        "id": 145,
+                        "id": 146,
                         "issue": "公投",
                         "legislator": "張慶忠",
                         "party": "KMT",
@@ -5799,7 +14304,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 161,
+                        "id": 162,
                         "issue": "公投",
                         "legislator": "張慶忠",
                         "party": "KMT",
@@ -5815,7 +14320,7 @@ const legislatorPositions =
                         "meetingCategory": "書面質詢"
                     },
                     {
-                        "id": 181,
+                        "id": 182,
                         "issue": "公投",
                         "legislator": "張慶忠",
                         "party": "KMT",
@@ -5831,7 +14336,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 248,
+                        "id": 249,
                         "issue": "公投",
                         "legislator": "張慶忠",
                         "party": "KMT",
@@ -5863,6 +14368,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 5
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1263,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1145,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1010,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 922,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 810,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 567,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 678,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 333,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 449,
+                        "issue": "核四",
+                        "legislator": "張慶忠",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -5908,6 +14577,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -5989,7 +14677,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 168,
+                        "id": 169,
                         "issue": "公投",
                         "legislator": "莊瑞雄",
                         "party": "DPP",
@@ -6005,7 +14693,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 261,
+                        "id": 262,
                         "issue": "公投",
                         "legislator": "莊瑞雄",
                         "party": "DPP",
@@ -6037,6 +14725,25 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
             }
         }
     },
@@ -6133,7 +14840,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 195,
+                        "id": 196,
                         "issue": "公投",
                         "legislator": "許忠信",
                         "party": "TSU",
@@ -6165,6 +14872,106 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1216,
+                        "issue": "核四",
+                        "legislator": "許忠信",
+                        "party": "TSU",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1109,
+                        "issue": "核四",
+                        "legislator": "許忠信",
+                        "party": "TSU",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 955,
+                        "issue": "核四",
+                        "legislator": "許忠信",
+                        "party": "TSU",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 879,
+                        "issue": "核四",
+                        "legislator": "許忠信",
+                        "party": "TSU",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 768,
+                        "issue": "核四",
+                        "legislator": "許忠信",
+                        "party": "TSU",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 5
             }
         }
     },
@@ -6210,6 +15017,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -6323,7 +15149,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 165,
+                        "id": 166,
                         "issue": "公投",
                         "legislator": "許添財",
                         "party": "DPP",
@@ -6339,7 +15165,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 182,
+                        "id": 183,
                         "issue": "公投",
                         "legislator": "許添財",
                         "party": "DPP",
@@ -6371,6 +15197,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1176,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1102,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 960,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 847,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 736,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 518,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 629,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 324,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 436,
+                        "issue": "核四",
+                        "legislator": "許添財",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -6435,7 +15425,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 215,
+                        "id": 216,
                         "issue": "公投",
                         "legislator": "許智傑",
                         "party": "DPP",
@@ -6451,7 +15441,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 224,
+                        "id": 225,
                         "issue": "公投",
                         "legislator": "許智傑",
                         "party": "DPP",
@@ -6483,6 +15473,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1184,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1065,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 968,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 855,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 743,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 538,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 649,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 309,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 421,
+                        "issue": "核四",
+                        "legislator": "許智傑",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 8
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -6676,7 +15830,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 149,
+                        "id": 150,
                         "issue": "公投",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -6692,7 +15846,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 164,
+                        "id": 165,
                         "issue": "公投",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -6708,7 +15862,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 226,
+                        "id": 227,
                         "issue": "公投",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -6724,7 +15878,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 177,
+                        "id": 178,
                         "issue": "公投",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -6740,7 +15894,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 229,
+                        "id": 230,
                         "issue": "公投",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -6756,7 +15910,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 249,
+                        "id": 250,
                         "issue": "公投",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -6772,7 +15926,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 263,
+                        "id": 264,
                         "issue": "公投",
                         "legislator": "陳其邁",
                         "party": "DPP",
@@ -6804,6 +15958,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 7
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1201,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1105,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 980,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 872,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 761,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 543,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 654,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 313,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 425,
+                        "issue": "核四",
+                        "legislator": "陳其邁",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -6868,7 +16186,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 167,
+                        "id": 168,
                         "issue": "公投",
                         "legislator": "陳怡潔",
                         "party": "PFP",
@@ -6884,7 +16202,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 171,
+                        "id": 172,
                         "issue": "公投",
                         "legislator": "陳怡潔",
                         "party": "PFP",
@@ -6900,7 +16218,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 250,
+                        "id": 251,
                         "issue": "公投",
                         "legislator": "陳怡潔",
                         "party": "PFP",
@@ -6916,7 +16234,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 267,
+                        "id": 268,
                         "issue": "公投",
                         "legislator": "陳怡潔",
                         "party": "PFP",
@@ -6948,6 +16266,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 4
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1174,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1110,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 997,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 882,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 772,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 508,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 619,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 328,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 441,
+                        "issue": "核四",
+                        "legislator": "陳怡潔",
+                        "party": "PFP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 3
+                    },
+                    {
+                        "position": "aye",
+                        "count": 6
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7010,6 +16492,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1186,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1075,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 970,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 857,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 745,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 527,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 638,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 299,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 411,
+                        "issue": "核四",
+                        "legislator": "陳明文",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7138,7 +16784,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 218,
+                        "id": 219,
                         "issue": "公投",
                         "legislator": "陳亭妃",
                         "party": "DPP",
@@ -7154,7 +16800,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 160,
+                        "id": 161,
                         "issue": "公投",
                         "legislator": "陳亭妃",
                         "party": "DPP",
@@ -7170,7 +16816,7 @@ const legislatorPositions =
                         "meetingCategory": "書面質詢"
                     },
                     {
-                        "id": 228,
+                        "id": 229,
                         "issue": "公投",
                         "legislator": "陳亭妃",
                         "party": "DPP",
@@ -7202,6 +16848,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 3
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1212,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1098,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 956,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 843,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 732,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 515,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 626,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 321,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 433,
+                        "issue": "核四",
+                        "legislator": "陳亭妃",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7249,7 +17059,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 196,
+                        "id": 197,
                         "issue": "公投",
                         "legislator": "陳唐山",
                         "party": "DPP",
@@ -7281,6 +17091,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1211,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1067,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 988,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 842,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 731,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 514,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 662,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 320,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 432,
+                        "issue": "核四",
+                        "legislator": "陳唐山",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 8
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7343,6 +17317,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1277,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1157,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1024,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 937,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 824,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 580,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 690,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 346,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 462,
+                        "issue": "核四",
+                        "legislator": "陳根德",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7388,6 +17526,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -7452,7 +17609,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 262,
+                        "id": 263,
                         "issue": "公投",
                         "legislator": "陳淑慧",
                         "party": "KMT",
@@ -7484,6 +17641,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1223,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1163,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1031,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 885,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 829,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 587,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 696,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 352,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 468,
+                        "issue": "核四",
+                        "legislator": "陳淑慧",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7546,6 +17867,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1173,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "NONE",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1069,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "NONE",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 954,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "NONE",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 942,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "NONE",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 830,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 509,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "NONE",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "棄權",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 718,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "NONE",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 287,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "NONE",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 399,
+                        "issue": "核四",
+                        "legislator": "陳雪生",
+                        "party": "NONE",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 3
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 6
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7610,7 +18095,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 141,
+                        "id": 142,
                         "issue": "公投",
                         "legislator": "陳超明",
                         "party": "KMT",
@@ -7626,7 +18111,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會書面質詢"
                     },
                     {
-                        "id": 142,
+                        "id": 143,
                         "issue": "公投",
                         "legislator": "陳超明",
                         "party": "KMT",
@@ -7642,7 +18127,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 265,
+                        "id": 266,
                         "issue": "公投",
                         "legislator": "陳超明",
                         "party": "KMT",
@@ -7674,6 +18159,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 3
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1276,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1058,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1023,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 835,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 823,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 579,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 689,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 345,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 461,
+                        "issue": "核四",
+                        "legislator": "陳超明",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 7
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7736,6 +18385,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1189,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1078,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 973,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 860,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 748,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 530,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 641,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 301,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 413,
+                        "issue": "核四",
+                        "legislator": "陳節如",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7798,6 +18611,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1254,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1137,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1001,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 913,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 801,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 559,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 670,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 357,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 492,
+                        "issue": "核四",
+                        "legislator": "陳碧涵",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7878,7 +18855,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 192,
+                        "id": 193,
                         "issue": "公投",
                         "legislator": "陳歐珀",
                         "party": "DPP",
@@ -7894,7 +18871,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 235,
+                        "id": 236,
                         "issue": "公投",
                         "legislator": "陳歐珀",
                         "party": "DPP",
@@ -7926,6 +18903,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1182,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1072,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 966,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 853,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 741,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 523,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 634,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 304,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 416,
+                        "issue": "核四",
+                        "legislator": "陳歐珀",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -7988,6 +19129,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1221,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1160,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1028,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 889,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 827,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 584,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 693,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 349,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 465,
+                        "issue": "核四",
+                        "legislator": "陳學聖",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8050,6 +19355,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1222,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1162,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1030,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 884,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 828,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 586,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 695,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 351,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 467,
+                        "issue": "核四",
+                        "legislator": "陳鎮湘",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8112,6 +19581,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1232,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1116,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1041,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 894,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 781,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 603,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 715,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 370,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 491,
+                        "issue": "核四",
+                        "legislator": "曾巨威",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8174,6 +19807,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1260,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1142,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1007,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 919,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 807,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 601,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 713,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 373,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 490,
+                        "issue": "核四",
+                        "legislator": "費鴻泰",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8271,7 +20068,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 132,
+                        "id": 133,
                         "issue": "公投",
                         "legislator": "黃文玲",
                         "party": "TSU",
@@ -8287,7 +20084,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 148,
+                        "id": 149,
                         "issue": "公投",
                         "legislator": "黃文玲",
                         "party": "TSU",
@@ -8303,7 +20100,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 158,
+                        "id": 159,
                         "issue": "公投",
                         "legislator": "黃文玲",
                         "party": "TSU",
@@ -8335,6 +20132,106 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 3
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1218,
+                        "issue": "核四",
+                        "legislator": "黃文玲",
+                        "party": "TSU",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1108,
+                        "issue": "核四",
+                        "legislator": "黃文玲",
+                        "party": "TSU",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 994,
+                        "issue": "核四",
+                        "legislator": "黃文玲",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 881,
+                        "issue": "核四",
+                        "legislator": "黃文玲",
+                        "party": "TSU",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 770,
+                        "issue": "核四",
+                        "legislator": "黃文玲",
+                        "party": "TSU",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 5
+                    }
+                ],
+                "totalCounts": 5
             }
         }
     },
@@ -8397,6 +20294,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1264,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1146,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1011,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 923,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 811,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 568,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 679,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 274,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 388,
+                        "issue": "核四",
+                        "legislator": "黃志雄",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 7
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8493,6 +20554,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1235,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1119,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1039,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 896,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 783,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 595,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 707,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 368,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 485,
+                        "issue": "核四",
+                        "legislator": "黃昭順",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8540,7 +20765,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 244,
+                        "id": 245,
                         "issue": "公投",
                         "legislator": "黃偉哲",
                         "party": "DPP",
@@ -8572,6 +20797,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1194,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1083,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 991,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 865,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 753,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 536,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 647,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 307,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 419,
+                        "issue": "核四",
+                        "legislator": "黃偉哲",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8617,6 +21006,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -8696,6 +21104,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1257,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1140,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1004,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 916,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 804,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 562,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 673,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 380,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 443,
+                        "issue": "核四",
+                        "legislator": "楊玉欣",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8758,6 +21330,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1261,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1143,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1008,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 920,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 808,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 566,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 677,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 331,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 447,
+                        "issue": "核四",
+                        "legislator": "楊應雄",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8822,7 +21558,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 221,
+                        "id": 222,
                         "issue": "公投",
                         "legislator": "楊曜",
                         "party": "DPP",
@@ -8838,7 +21574,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 233,
+                        "id": 234,
                         "issue": "公投",
                         "legislator": "楊曜",
                         "party": "DPP",
@@ -8870,6 +21606,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1214,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1100,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 958,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 845,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 734,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 516,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 627,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 283,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 395,
+                        "issue": "核四",
+                        "legislator": "楊曜",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 7
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8932,6 +21832,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1236,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1120,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 950,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 897,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 784,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 594,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 706,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 367,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 484,
+                        "issue": "核四",
+                        "legislator": "楊瓊瓔",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 8
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -8994,6 +22058,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1265,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1147,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 949,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 924,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 812,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 497,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 613,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 334,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 450,
+                        "issue": "核四",
+                        "legislator": "楊麗環",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 6
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 3
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9058,7 +22286,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 184,
+                        "id": 185,
                         "issue": "公投",
                         "legislator": "葉宜津",
                         "party": "DPP",
@@ -9074,7 +22302,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 151,
+                        "id": 152,
                         "issue": "公投",
                         "legislator": "葉宜津",
                         "party": "DPP",
@@ -9106,6 +22334,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1203,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1088,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 952,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 874,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 763,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 545,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 656,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 314,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 426,
+                        "issue": "核四",
+                        "legislator": "葉宜津",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 1
+                    },
+                    {
+                        "position": "aye",
+                        "count": 8
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9153,7 +22545,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 236,
+                        "id": 237,
                         "issue": "公投",
                         "legislator": "葉津鈴",
                         "party": "TSU",
@@ -9185,6 +22577,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1217,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "TSU",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1107,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "TSU",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 995,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 880,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "TSU",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 769,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "TSU",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 549,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "TSU",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 665,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "TSU",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 327,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "TSU",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 440,
+                        "issue": "核四",
+                        "legislator": "葉津鈴",
+                        "party": "TSU",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9247,6 +22803,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1226,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1166,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1034,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 888,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 775,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 590,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 699,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 355,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 471,
+                        "issue": "核四",
+                        "legislator": "詹凱臣",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9292,6 +23012,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -9388,6 +23127,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1262,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1144,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1009,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 921,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 809,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 502,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 608,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 332,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 448,
+                        "issue": "核四",
+                        "legislator": "廖正井",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 7
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9450,6 +23353,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1241,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1125,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1035,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 901,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 789,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 598,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 703,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 278,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 387,
+                        "issue": "核四",
+                        "legislator": "廖國棟",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 7
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9497,7 +23564,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 191,
+                        "id": 192,
                         "issue": "公投",
                         "legislator": "管碧玲",
                         "party": "DPP",
@@ -9513,7 +23580,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 203,
+                        "id": 204,
                         "issue": "公投",
                         "legislator": "管碧玲",
                         "party": "DPP",
@@ -9545,6 +23612,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1185,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1074,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 976,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 856,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 744,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 526,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 637,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 298,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 410,
+                        "issue": "核四",
+                        "legislator": "管碧玲",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9609,7 +23840,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 185,
+                        "id": 186,
                         "issue": "公投",
                         "legislator": "趙天麟",
                         "party": "DPP",
@@ -9625,7 +23856,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 131,
+                        "id": 132,
                         "issue": "公投",
                         "legislator": "趙天麟",
                         "party": "DPP",
@@ -9657,6 +23888,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1178,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1104,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 962,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 849,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 738,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 520,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 631,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 279,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 391,
+                        "issue": "核四",
+                        "legislator": "趙天麟",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 7
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9704,7 +24099,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 216,
+                        "id": 217,
                         "issue": "公投",
                         "legislator": "劉建國",
                         "party": "DPP",
@@ -9720,7 +24115,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 232,
+                        "id": 233,
                         "issue": "公投",
                         "legislator": "劉建國",
                         "party": "DPP",
@@ -9752,6 +24147,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1200,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1089,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 979,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 851,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 760,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 542,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 653,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 284,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 396,
+                        "issue": "核四",
+                        "legislator": "劉建國",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 7
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9799,7 +24358,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 190,
+                        "id": 191,
                         "issue": "公投",
                         "legislator": "劉櫂豪",
                         "party": "DPP",
@@ -9831,6 +24390,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1209,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1096,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 986,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 840,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 729,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 505,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 615,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 285,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 397,
+                        "issue": "核四",
+                        "legislator": "劉櫂豪",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 4
+                    },
+                    {
+                        "position": "aye",
+                        "count": 5
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9878,7 +24601,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 197,
+                        "id": 198,
                         "issue": "公投",
                         "legislator": "潘孟安",
                         "party": "DPP",
@@ -9894,7 +24617,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 152,
+                        "id": 153,
                         "issue": "公投",
                         "legislator": "潘孟安",
                         "party": "DPP",
@@ -9926,6 +24649,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1205,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1092,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 951,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 876,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 765,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 503,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 617,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 281,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 393,
+                        "issue": "核四",
+                        "legislator": "潘孟安",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 5
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -9988,6 +24875,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1224,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1164,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1032,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 886,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 773,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 588,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 697,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 353,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 469,
+                        "issue": "核四",
+                        "legislator": "潘維剛",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10016,6 +25067,22 @@ const legislatorPositions =
             "recall": {
                 "records": [
                     {
+                        "id": 131,
+                        "issue": "罷免",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1406649600,
+                        "category": "發言",
+                        "content": "我是所謂割「藍尾」名單第一名，我告訴你，我不怕，上次我們為了吳育昇討論的時候，你們說連署罷免如果要附身分證的話不好、不公平，這是不是你們中選會講的？...如果是要附的話，但民進黨黨團霸占立法院，這個案子就不過了？結果那個案子不過，這個案子可以過？笑話！天大的笑話！...同樣的道理，就把無黨籍總統候選人的參選限制取消，要不就把罷免立法委員及總統的連署方法加上附身分證的規定，否則其他一概別談，不公平！",
+                        "positionJudgement": "罷免增加附身分證的限制",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10305001;0138;0140;0157;0168",
+                        "meeting": "內政委員會",
+                        "meetingCategory": "委員會質詢"
+                    },
+                    {
                         "id": 68,
                         "issue": "罷免",
                         "legislator": "蔡正元",
@@ -10036,7 +25103,7 @@ const legislatorPositions =
                 "positionCounts": [
                     {
                         "position": "nay",
-                        "count": 1
+                        "count": 2
                     },
                     {
                         "position": "unknown",
@@ -10047,7 +25114,7 @@ const legislatorPositions =
                         "count": 0
                     }
                 ],
-                "totalCounts": 1
+                "totalCounts": 2
             },
             "referendum": {
                 "records": [],
@@ -10067,6 +25134,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1233,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1117,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 948,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 834,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 719,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 597,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 709,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 276,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 385,
+                        "issue": "核四",
+                        "legislator": "蔡正元",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "unknown",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 4
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 5
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10131,7 +25362,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 210,
+                        "id": 211,
                         "issue": "公投",
                         "legislator": "蔡其昌",
                         "party": "DPP",
@@ -10147,7 +25378,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 217,
+                        "id": 218,
                         "issue": "公投",
                         "legislator": "蔡其昌",
                         "party": "DPP",
@@ -10163,7 +25394,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 234,
+                        "id": 235,
                         "issue": "公投",
                         "legislator": "蔡其昌",
                         "party": "DPP",
@@ -10179,7 +25410,7 @@ const legislatorPositions =
                         "meetingCategory": "院會發言"
                     },
                     {
-                        "id": 223,
+                        "id": 224,
                         "issue": "公投",
                         "legislator": "蔡其昌",
                         "party": "DPP",
@@ -10211,6 +25442,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 4
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1180,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1071,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 964,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 871,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 759,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 533,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 644,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 294,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 406,
+                        "issue": "核四",
+                        "legislator": "蔡其昌",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10273,6 +25668,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1192,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1081,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 989,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 863,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 751,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 534,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 645,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 305,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 417,
+                        "issue": "核四",
+                        "legislator": "蔡煌瑯",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10335,6 +25894,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1250,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1133,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1054,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 909,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 797,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 556,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 668,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 361,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 473,
+                        "issue": "核四",
+                        "legislator": "蔡錦隆",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10397,6 +26120,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1269,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1150,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1016,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 929,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 817,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 573,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 684,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 338,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 454,
+                        "issue": "核四",
+                        "legislator": "蔣乃辛",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10442,6 +26329,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -10521,6 +26427,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1243,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1112,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1047,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 902,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 791,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 605,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 701,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 374,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 480,
+                        "issue": "核四",
+                        "legislator": "鄭汝芬",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10634,7 +26704,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 188,
+                        "id": 189,
                         "issue": "公投",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -10650,7 +26720,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 222,
+                        "id": 223,
                         "issue": "公投",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -10666,7 +26736,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 172,
+                        "id": 173,
                         "issue": "公投",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -10682,7 +26752,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 245,
+                        "id": 246,
                         "issue": "公投",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -10698,7 +26768,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 257,
+                        "id": 258,
                         "issue": "公投",
                         "legislator": "鄭麗君",
                         "party": "DPP",
@@ -10730,6 +26800,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 5
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1190,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1079,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 974,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 861,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 749,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 531,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 642,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 302,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 414,
+                        "issue": "核四",
+                        "legislator": "鄭麗君",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10792,6 +27026,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1270,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1151,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1018,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 931,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 818,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 575,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 685,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 339,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 455,
+                        "issue": "核四",
+                        "legislator": "盧秀燕",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -10839,7 +27237,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 179,
+                        "id": 180,
                         "issue": "公投",
                         "legislator": "盧嘉辰",
                         "party": "KMT",
@@ -10855,7 +27253,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 239,
+                        "id": 240,
                         "issue": "公投",
                         "legislator": "盧嘉辰",
                         "party": "KMT",
@@ -10887,6 +27285,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1240,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1124,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1036,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 900,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 788,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 591,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 704,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 365,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 482,
+                        "issue": "核四",
+                        "legislator": "盧嘉辰",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11046,6 +27608,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1179,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1070,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 963,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 850,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 739,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 521,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 632,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 293,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 438,
+                        "issue": "核四",
+                        "legislator": "蕭美琴",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11108,6 +27834,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1278,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1158,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1025,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 938,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 825,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 581,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 691,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 347,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 463,
+                        "issue": "核四",
+                        "legislator": "賴士葆",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11172,7 +28062,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 254,
+                        "id": 255,
                         "issue": "公投",
                         "legislator": "賴振昌",
                         "party": "TSU",
@@ -11204,6 +28094,90 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 548,
+                        "issue": "核四",
+                        "legislator": "賴振昌",
+                        "party": "TSU",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 664,
+                        "issue": "核四",
+                        "legislator": "賴振昌",
+                        "party": "TSU",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 326,
+                        "issue": "核四",
+                        "legislator": "賴振昌",
+                        "party": "TSU",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 439,
+                        "issue": "核四",
+                        "legislator": "賴振昌",
+                        "party": "TSU",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 4
             }
         }
     },
@@ -11283,6 +28257,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1193,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1082,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 990,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 864,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 752,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 537,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 648,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 308,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 420,
+                        "issue": "核四",
+                        "legislator": "薛凌",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11362,6 +28500,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1272,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1153,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1019,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 933,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 820,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 498,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 612,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 341,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 457,
+                        "issue": "核四",
+                        "legislator": "謝國樑",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 7
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11424,6 +28726,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1220,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1159,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1027,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 940,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 826,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 583,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 692,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 348,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 464,
+                        "issue": "核四",
+                        "legislator": "簡東明",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11469,6 +28935,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -11548,6 +29033,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1234,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1118,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1040,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 895,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 782,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 596,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 708,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 369,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 486,
+                        "issue": "核四",
+                        "legislator": "顏寬恒",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11610,6 +29259,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1202,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1106,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 981,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 873,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 762,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 544,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 655,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 282,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 394,
+                        "issue": "核四",
+                        "legislator": "魏明谷",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "沒有投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 7
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11672,6 +29485,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1168,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1056,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "沒投票",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1017,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 930,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 727,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 574,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 622,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 291,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 402,
+                        "issue": "核四",
+                        "legislator": "羅明才",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 3
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 2
+                    },
+                    {
+                        "position": "aye",
+                        "count": 4
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11751,6 +29728,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1238,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1122,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1038,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 898,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 786,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 593,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 623,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 290,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 401,
+                        "issue": "核四",
+                        "legislator": "羅淑蕾",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 6
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 3
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11813,6 +29954,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1252,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1135,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 999,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 911,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 799,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 558,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 669,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 359,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 472,
+                        "issue": "核四",
+                        "legislator": "蘇清泉",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -11925,7 +30230,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 220,
+                        "id": 221,
                         "issue": "公投",
                         "legislator": "蘇震清",
                         "party": "DPP",
@@ -11957,6 +30262,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1215,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1101,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 959,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 846,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 735,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 517,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 628,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 323,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "贊成停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 435,
+                        "issue": "核四",
+                        "legislator": "蘇震清",
+                        "party": "DPP",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "贊成刪預算讓行政院停建核四",
+                        "position": "aye",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "aye",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 9
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     },
@@ -12019,6 +30488,25 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 0
+            },
+            "nuclearPower": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
             }
         }
     },
@@ -12064,6 +30552,25 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
+            },
+            "nuclearPower": {
                 "records": [],
                 "dominantPosition": "none",
                 "positionCounts": [
@@ -12177,7 +30684,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 194,
+                        "id": 195,
                         "issue": "公投",
                         "legislator": "台灣團結聯盟黨團",
                         "party": "TSU",
@@ -12193,7 +30700,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 212,
+                        "id": 213,
                         "issue": "公投",
                         "legislator": "台灣團結聯盟黨團",
                         "party": "TSU",
@@ -12225,6 +30732,25 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
             }
         }
     },
@@ -12272,7 +30798,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 204,
+                        "id": 205,
                         "issue": "公投",
                         "legislator": "親民黨黨團",
                         "party": "PFP",
@@ -12288,7 +30814,7 @@ const legislatorPositions =
                         "meetingCategory": "法律提案"
                     },
                     {
-                        "id": 207,
+                        "id": 208,
                         "issue": "公投",
                         "legislator": "親民黨黨團",
                         "party": "PFP",
@@ -12320,6 +30846,25 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [],
+                "dominantPosition": "none",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 0
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 0
             }
         }
     },
@@ -12331,7 +30876,7 @@ const legislatorPositions =
             "referendum": {
                 "records": [
                     {
-                        "id": 178,
+                        "id": 179,
                         "issue": "公投",
                         "legislator": "鄭天財",
                         "party": "KMT",
@@ -12347,7 +30892,7 @@ const legislatorPositions =
                         "meetingCategory": "委員會質詢"
                     },
                     {
-                        "id": 240,
+                        "id": 241,
                         "issue": "公投",
                         "legislator": "鄭天財",
                         "party": "KMT",
@@ -12379,6 +30924,170 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 2
+            },
+            "nuclearPower": {
+                "records": [
+                    {
+                        "id": 1227,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1161,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 1029,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 941,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 776,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 585,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 694,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 350,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    },
+                    {
+                        "id": 466,
+                        "issue": "核四",
+                        "legislator": "鄭天財",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": ""
+                    }
+                ],
+                "dominantPosition": "nay",
+                "positionCounts": [
+                    {
+                        "position": "nay",
+                        "count": 9
+                    },
+                    {
+                        "position": "unknown",
+                        "count": 0
+                    },
+                    {
+                        "position": "aye",
+                        "count": 0
+                    }
+                ],
+                "totalCounts": 9
             }
         }
     }

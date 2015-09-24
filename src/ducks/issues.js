@@ -41,6 +41,20 @@ const initialState = {
           "link" : "http://taiwanmarch.tw/"
         }
       ]
+    },
+    "nuclear-power" : {
+      "title" : "核四",
+      "titleEng" : "nuclearPower",
+      "question" : "你支持核四停建嗎?",
+      "statement" : "核四停建",
+      "slideshows" : [18,19],
+      "description" : "你支持停建核四嗎？你知道核四蓋了十六年嗎？關於核能來看看還有哪些你知道或不知道的。",
+      "collaborators" : [
+        {
+          "name" : "綠盟?",
+          "link" : "http://www.gcaa.org.tw/"
+        }
+      ]
     } 
    
 }

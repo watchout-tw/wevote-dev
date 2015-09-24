@@ -16,6 +16,11 @@ export default function eng2cht(input){
       case 'TSU':
         return '台灣團結聯盟';
 
+      case 'NSU':
+        return '無黨團結聯盟';
+      case 'NONE':
+        return '無黨籍';
+
       case 'marriageEquality': 
         return '婚姻平權';
       
@@ -26,6 +31,12 @@ export default function eng2cht(input){
         return '罷免';
       case 'referendum':
         return '公投';
+
+      case 'nuclearPower':
+        return '核四';
+        
+      case 'nuclear-power':
+        return '核四';
       
       default:
       	return '<>找不到<>'+input;

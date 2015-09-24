@@ -45,6 +45,10 @@ export default class Appbar extends Component {
                           <i className={`fa fa-gavel ${styles.icon}`}></i>公投</Link></li>
                 <li onClick={this._toggleShowMenu.bind(this)}>
                     <Link className={styles.navItem} 
+                          to={`/issues/nuclear-power/parties`}  >
+                          <i className={`fa fa-gavel ${styles.icon}`}></i>核四</Link></li>
+                <li onClick={this._toggleShowMenu.bind(this)}>
+                    <Link className={styles.navItem} 
                           to={`/parties`}  >
                           <i className={`fa fa-file-text-o ${styles.icon}`}></i>政黨表態</Link></li>
                 <li onClick={this._toggleShowMenu.bind(this)}>

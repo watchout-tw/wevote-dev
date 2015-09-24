@@ -8,6 +8,8 @@ export default function eng2party_short(input){
         return '親民黨';
       case 'TSU':
         return '台聯';
+      case 'NSU':
+        return '無黨團結聯盟';
 
       case 'NONE':
       case 'NP': 

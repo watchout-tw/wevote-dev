@@ -6,6 +6,8 @@ export default function url2eng(input){
         return 'recall';
       case 'referendum':
         return 'referendum';
+      case 'nuclear-power':
+        return 'nuclearPower';
       
       default:
       	return '<>找不到<>';///////
