@@ -4,13 +4,13 @@ $breakLarge: 1400px;
 	margin: 0;
 }
 .about {
-	height: 240px;
-	// background: url(./images/about.png) top center;
-	// background-size: cover;
-	// background-repeat: no-repeat;
+	height: 300px;
+	background: url(./images/about.png) top center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	margin-bottom: 60px;
 	position: relative;
-	background: white;
+	
 }
 .title {
 	text-align: center;
@@ -21,6 +21,9 @@ $breakLarge: 1400px;
 }
 
 @media all and (min-width: $breakLarge){
+	.about {
+		height: 400px;
+	}
 	.title {
 		margin-top: 100px;
 	}
