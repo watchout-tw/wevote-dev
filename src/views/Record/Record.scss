@@ -212,21 +212,10 @@ $unknownColor: #FFF800;
 	color: gray;
 }
 
-.button {
-	display: inline-block;
-	cursor: pointer;
-    background: $themeColor;
-    color: white;
-
-    padding: 10px;
-    margin-top: 30px;
-    border-radius: 10px;
-
-    text-decoration: none;
+.seeOtherIssue {
+	padding: 10px;
+	font-size: 20px;
+    margin-top: 40px;
 }
-.button:hover {
-    background: lighten($themeColor, 5%);
-}
-
 
 

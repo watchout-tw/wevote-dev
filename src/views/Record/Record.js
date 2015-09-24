@@ -11,6 +11,7 @@ import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
+import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 
 @connect(
     state => ({legislators: state.legislators,
@@ -168,10 +169,8 @@ export default class Record extends Component {
          <Link to={`/clarify`} className={styles.clarifyButton}>表態立場如果有解讀錯誤，歡迎委員來函澄清</Link>
 
       </div>
-          <Link className={styles.button}
-                to={`/people/${people_name2id(data.legislator)}/${cht2url(data.issue)}`}>
-                看{data.legislator}在{data.issue}的所有表態
-          </Link>
+         <div className={styles.seeOtherIssue}>看看{data.legislator}在各個議題有什麼表態：</div>
+         <IssueGroup id={legislatorId}/>
       </div>
     );
   }
