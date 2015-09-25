@@ -22,12 +22,13 @@ export default class Appbar extends Component {
     const siteLogo = require('./images/logo.svg');
     const {showMenu} = this.state;
     let showStyle = (showMenu) ? styles.showMenu : "";
-
+    
     return (
       <nav className={`${styles.appbar} ${showStyle}`}>
           <div className={styles.inner}>
-              <Link to="/">
+              <Link to="/" className={styles.siteName}>
                 <img src={siteLogo} className={styles.siteLogo}/>
+                <div className={styles.siteNameAdhoc}>立委<br/>出任務_</div>
               </Link>
 
               <ul className={`${styles.lists} ${showStyle}`}>
