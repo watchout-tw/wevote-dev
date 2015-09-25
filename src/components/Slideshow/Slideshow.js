@@ -1,7 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 
-
-
 export default class Slideshow extends Component {
   static propTypes = {
       data: PropTypes.array,
@@ -52,7 +50,7 @@ export default class Slideshow extends Component {
     let timer = setInterval(()=>{
         let nextIndex = (this.state.currentIndex + 1)%(this.props.data.length);
         this._setCurrentIndex(nextIndex);
-    }, 5000); 
+    }, 10000); 
     
     this.setState(
       { 
@@ -94,6 +92,7 @@ export default class Slideshow extends Component {
     const {data, topic} = this.props;
 
     let {currentIndex, imageLoaded} = this.state;
+    let currentSlide = data[currentIndex];
     
     return (
       <div className={styles.wrap}>
@@ -101,12 +100,12 @@ export default class Slideshow extends Component {
                onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>Prev</div>
           <div className={styles.next}
                onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>Next</div>
-          <img alt="to-be-add"
+          <img alt={currentSlide.alt}
                className={imageLoaded===true ? styles.slideImg : styles.slideImgLoading}
                onLoad={this._setImageLoaded.bind(this,true)}
                onMouseEnter={this._imageOnHover.bind(this, true)}
                onMouseLeave={this._imageOnHover.bind(this, false)}
-               src={require(`./images/${data[currentIndex]}.jpg`)} />
+               src={require(`./images/${currentSlide.filename}`)} />
           
           <div className={styles.pageWrap}>
           {
