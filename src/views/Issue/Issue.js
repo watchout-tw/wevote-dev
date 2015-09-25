@@ -5,222 +5,443 @@ import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
 import Slideshow from '../../components/Slideshow/Slideshow.js';
-
-import PartyPositionGroup from '../../components/PartyPositionGroup/PartyPositionGroup.js';
-import PositionLegislatorGroup from '../../components/PositionLegislatorGroup/PositionLegislatorGroup.js';
-import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPartyGroup.js';
-
-import IssueController from '../../components/IssueController/IssueController.js';
-
-import PositionRecord from '../../components/PositionRecord/PositionRecord.js';
-
-const VIEW_PARTY = 'VIEW_PARTY';
-const VIEW_LEGISLATOR = 'VIEW_LEGISLATOR';
-const VIEW_POSITION = 'VIEW_POSITION';
+import IssueView from '../../components/IssueView/IssueView.js';
 
 @connect(
     state => ({
-                issues: state.issues,
-                partyView: state.partyView,
-                legislatorView: state.legislatorView,
-                positionView: state.positionView
+                issues: state.issues
               }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Issue extends Component {
   static propTypes = {
-     issues: PropTypes.object.isRequired,
-     partyView: PropTypes.object.isRequired,
-     legislatorView: PropTypes.object.isRequired,
-     positionView: PropTypes.object.isRequired
+     issues: PropTypes.object.isRequired
   }
 
-  constructor(props) { super(props)
+  constructor(props) { super(props)   
+    const {issues} = this.props;
+    // 從 URL 知道現在讀的議題頁面
+    const currentIssueName = this.props.params.issueName;
+    // 拿該議題的資料
+    const currentIssue = issues[currentIssueName];
+
+    let preservedLines = this._generatePreservedLines(currentIssue);
+
     this.state = {
-        activeRecord: "",
-        activeLegislator: "",
+        stage: "intro", 
+        currentLineIndex: 0,
+        preservedLines : preservedLines,
+        lines : [`嘿！歡迎來到${currentIssue.title}城堡。`],
+        showSlides: "",
+        userPosition: "" //贊成, 反對, 不確定
+    }
+  
+  }
+  _generatePreservedLines(issue){
+    return [
+        `在這個國度裡，每一座城堡，`,
+        `都有不同的人馬駐守著。`,
+        `駐守者可以決定城堡的相關制度及未來發展。`,
+        `甚至，要自我毀滅，讓${issue.title}完全消失，`,
+        `也不是完全不可能。`,
+        `嗯⋯⋯`,
+        `目前${issue.title}城堡是由反方佔領。`,
+        `有一群人正準備攻擊，想要奪下這個城堡，`,
+        `他們的目標是：${issue.statement}。`,
+        `現在兩方人馬即將對戰！`
+        
+    ];
+  }
+
+  componentDidMount(){ 
+      window.addEventListener('keydown', this._handleKeyDown.bind(this));
+  }
+  componentWillUnmount() {
+      window.removeEventListener('keydown', this._handleKeyDown.bind(this));  
+  }
+
+  _handleAddLine(){
+    let {currentLineIndex, preservedLines, lines} = this.state;
+    if( currentLineIndex + 1 <= preservedLines.length ){
+        //預設台詞還沒說完
+        lines.push(preservedLines[currentLineIndex]);
+        currentLineIndex++;
+
+        this.setState({
+          currentLineIndex: currentLineIndex,
+          lines: lines
+        })
+
+    }else{
+        //台詞說完了，開始選擇
+         this.setState({
+          stage: "chooseSlides"
+        })
     }
   }
-
-  _scrollToView(){
-     let y = document.getElementById("view").getBoundingClientRect().top;
-     window.scrollTo(0,y)
-     
+  _handleChooseSlides(value, event){
+      this.setState({
+        showSlides: value,
+        stage: "slides"
+      })
+  }
+  _handleChoosePosition(value, event){
+    this.setState({
+        userPosition: value,
+        stage: "userPosition"
+    })  
+  }
+  _handleSeeOthers(){
+    this.setState({
+        stage: "others"
+    })  
+  }
+  _handleBackStage(){
+    const stages = ['intro', 'chooseSlides','slides','userPosition','results','others'];
+    const {stage} = this.state;
+    let index = stages.indexOf(stage) - 1;
+    if(index < 0)
+       index = 0;
+    this.setState({
+      stage: stages[index]
+    })
   }
 
-  componentDidMount(){
-      const { focusPart } = this.props.params;
-      if(focusPart){
-          this._scrollToView();
-      }  
-      
+
+  _handleKeyDown(e){
+
+    const SPACE = 32,
+          Y = 89,
+          y = 121,
+          N = 78,
+          n = 110,
+          S = 83,
+          s = 115;
+    
+    const { stage } = this.state;
+    switch(stage){
+      case 'intro':
+          if( e.keyCode === SPACE ) {
+            e.preventDefault();
+            this._handleAddLine(); 
+          }
+          break;
+
+      case 'chooseSlides':
+          if( e.keyCode === Y || e.keyCode === y) {
+            e.preventDefault();
+            this._handleChooseSlides(true);
+            
+          }
+          if( e.keyCode === N || e.keyCode === n ) {
+            e.preventDefault();
+            this._handleChooseSlides(false);
+          }
+          break;
+      case 'slides':
+          if( e.keyCode === Y || e.keyCode === y) {
+            e.preventDefault();
+            this._handleChoosePosition("贊成"); 
+           
+          }
+          if( e.keyCode === N || e.keyCode === n ) {
+            e.preventDefault();
+            this._handleChoosePosition("反對");
+            
+          }
+          if( e.keyCode === S || e.keyCode === s ) {
+            e.preventDefault();
+            this._handleChoosePosition("不確定"); 
+            
+          }
+          break;
+      case 'userPosition':
+          if( e.keyCode === SPACE ) {
+            e.preventDefault();
+            this.setState({
+              stage: "results"
+            }) 
+          }
+          break;
+
+       case 'results':
+          if( e.keyCode === Y || e.keyCode === y) {
+            e.preventDefault();
+            this.setState({
+              stage: "others"
+            }) 
+          }
+          break;
+
+      default:
+      //no op
+    }
+    
   }
   componentWillReceiveProps(nextProps){
-      const { focusPart } = nextProps.params;
-      if(focusPart){
-        this._scrollToView(); 
-      }
-
-  }
-
-  _setToActiveRecord(value, event){
-      this.setState({ activeRecord: value });
-  }
-  _resetActiveRecord(){
-      this.setState({ activeRecord: "" });
-  }
-
-  _setToActiveLegislator(value, event){
-      this.setState({ activeLegislator: value });
-  }
-  _resetActiveLegislator(){
-      this.setState({ activeLegislator: "" });
-  }
-
-  render() {
-    const styles = require('./Issue.scss');
-
-    const {issues, partyView, legislatorView, positionView} = this.props;
-    const {activeRecord, activeLegislator, isLocked} = this.state;
-
-    /* 從 URL 知道現在讀的議題頁面 */
-    const currentIssueName = this.props.params.issueName;
-    const currentView = this.props.params.view || "parties";
-    // parties, legislators, positions
-    // default set to parties
-
-    const currentIssue = issues[currentIssueName]//只拿目前頁面議題的議題基本資料，maybe refine to ducks/select later on
-
-
-    let bindSetToActiveRecord = this._setToActiveRecord.bind(this);
-    let bindResetActiveRecord = this._resetActiveRecord.bind(this);
-
-    let bindSetToActiveLegislator = this._setToActiveLegislator.bind(this);
-    let bindResetActiveLegislator = this._resetActiveLegislator.bind(this);
-
-
-    /* 1. 看政黨 */
-    const currentPartyView = partyView[currentIssue.titleEng];
-    let partyPositionGroups = currentPartyView.partyPositions.map((value, index)=>{
-        //console.log(value);
-        return <PartyPositionGroup data={value} issueId={currentIssueName}
-                                   issueStatement={currentPartyView.statement} key={index}
-                                   setToActiveRecord={bindSetToActiveRecord}
-                                   resetActiveRecord={bindResetActiveRecord}
-                                   activeRecord={activeRecord} />;
-    });
-
-
-    /* 2. 看立委 */
-    const currentLegislatorView = legislatorView[currentIssue.titleEng];
-    let positionLegislatorGroups = currentLegislatorView.positions.map((value, index)=>{
-        return <PositionLegislatorGroup data={value} issueStatement={currentPartyView.statement} key={index}
-                                        setToActiveLegislator={bindSetToActiveLegislator}
-                                        resetActiveLegislator={bindResetActiveLegislator}
-                                        activeLegislator={activeLegislator}
-                                        currentIssueName={currentIssueName}/>;
-    });
-
-    /* 3. 看表態 */
-    const currentPositionView = positionView[currentIssue.titleEng];//只拿: 目前頁面議題的表態資料
-    let positionPartyGroups = currentPositionView.positions.map((value, index)=>{
-        //console.log(value);
-        return <PositionPartyGroup data={value} issueStatement={currentPartyView.statement} key={index}
-                                   setToActiveRecord={bindSetToActiveRecord}
-                                   resetActiveRecord={bindResetActiveRecord}
-                                   activeRecord={activeRecord} />;
-    });
-
-    let currentViewGroups, currentViewStatement;
-
-    switch(currentView){
-      case 'parties': 
-        currentViewStatement = `${currentIssue.statement}，政黨的態度是？`;
-        currentViewGroups = partyPositionGroups;
-        break;
-      case 'legislators':
-        currentViewStatement = `${currentIssue.statement}，委員的態度是？`;
-        currentViewGroups = positionLegislatorGroups;
-        break;
-      case 'positions':
-        currentViewStatement = `${currentIssue.statement}，委員有哪些具體表態行動？`;
-        currentViewGroups = positionPartyGroups;
-        break;
-      
-      default:
-        currentViewGroups = partyPositionGroups;
-      
-    }
-
-    const metaData = {
-      title: `${currentIssue.title}-${currentIssue.question}-2016立委出任務`,
-      description: currentIssue.description,
-      meta: {
-          charSet: 'utf-8',
-          property: {
-            'og:title': `${currentIssue.title}-${currentIssue.question}-2016立委出任務`,
-            'og:description': currentIssue.description
-          }
-      }
-     
-    };
-
-    /* 協力 NGO */
-    const { collaborators } = currentIssue;
-    let collaboratorItems = collaborators.map((ngo, index)=>{
-        return <a className={styles.link}
-                  href={ngo.link}
-                  target="_blank"
-                  key={index}>{ngo.name}</a>
-    });
-
-
-    /* 其他議題列表 */
-    let otherIssues = Object.keys(issues).map((current_issue, index)=>{
-      if(currentIssue.title !== issues[current_issue].title){
-      return <Link to={`/issues/${current_issue}`}
-                   key={index}
-                   className={styles.linkButton}>{issues[current_issue].title}</Link>
-      }
-    })
-
-    return (
-      <div className={styles.wrap}>
-          <DocumentMeta {...metaData}/>
-          
-          <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
-
-          <div className={styles.innerWrap}>
-              <div className={styles.figHeader} id="view">
-                  <div className={styles.issueBlock}>
-                      <div className={styles.issueTitle}>{currentIssue.title}</div>
-                      <div className={styles.issueStatement}>{currentViewStatement}</div>
-                  </div>
-                  
-                  <div className={styles.issueController}>
-                    <IssueController currentIssue={currentIssue} currentView={currentView}/>
-                  </div>
-              </div>
     
-              <div className={styles.records}>
-                  {currentViewGroups}
-              </div>
+    const {issues} = this.props;
+    const currentIssueName = this.props.params.issueName;
+    const nextIssueName = nextProps.params.issueName
 
-              <div className={styles.collaboratorInfo}>
-                本議題協力NGO：{collaboratorItems}
-              </div>
-              
-              <div className={styles.moreInfo}>
-                <div className={styles.moreInfoInner}>
-                    <div>想了解其他議題嗎？{otherIssues}</div>
-                    <div>想知道2016你的選區候選人對這個議題的表態嗎？<div className={styles.comingButton}>coming soon</div></div>
-                    <div>想知道各政黨對其他議題的表態嗎？<div className={styles.comingButton}>coming soon</div></div>
+    if(currentIssueName !== nextIssueName){
+        const nextIssue = issues[nextIssueName];
+        let preservedLines = this._generatePreservedLines(nextIssue);
+        this.state = {
+            stage: "intro",
+            showSlides: "",
+            userPosition: "",
+            currentLineIndex: 0,
+            preservedLines : preservedLines,
+            lines : [`嘿！歡迎來到${nextIssue.title}城堡。`]
+        }
+    }
+  }
+
+
+  render(){
+    
+      const styles = require('./Issue.scss');
+      const {issues} = this.props;
+      const {stage, currentLineIndex, lines, showSlides, userPosition} = this.state;
+  
+      // 從 URL 知道現在讀的議題頁面
+      const currentIssueName = this.props.params.issueName;
+      // 拿該議題的資料
+      const currentIssue = issues[currentIssueName];
+      // 設定一開始看到的圖表 view，共有 parties, legislators, positions 三種 
+      const currentView = this.props.params.view || "parties";
+
+      console.log("==== RENDER:"+stage+"=====")
+      let introItem = (
+            <Intro currentLineIndex={currentLineIndex}
+                   lines={lines}
+                   handleAddLine={this._handleAddLine.bind(this)}
+                   handleBackStage={this._handleBackStage.bind(this)} />
+      )
+      let chooseSlidesItem = (
+            <ChooseSlides handleChooseSlides={this._handleChooseSlides.bind(this)}
+                          handleBackStage={this._handleBackStage.bind(this)} />
+      )
+      let slidesItem = (
+            <Slides showSlides={showSlides}
+                    handleChoosePosition={this._handleChoosePosition.bind(this)}
+                    currentIssue={currentIssue}
+                    handleBackStage={this._handleBackStage.bind(this)}/>
+      )
+      let userPositionItem = (
+            <UserPosition userPosition={userPosition}
+                          currentIssue={currentIssue}
+                          handleBackStage={this._handleBackStage.bind(this)} />
+      )
+      let resultsItem = (
+            <IssueView currentView={currentView}
+                       currentIssue={currentIssue}
+                       currentIssueName={currentIssueName}
+                       handleSeeOthers={this._handleSeeOthers.bind(this)}
+                       handleBackStage={this._handleBackStage.bind(this)} /> 
+      )
+
+      let othersItem = (
+            <div>
+                <div className={styles.backStage}
+                     onClick={this._handleBackStage.bind(this)}>回到上一步
                 </div>
-              </div>
+    
+                <div className={styles.storyBlock}>
+                      
+                      <div className={`${styles.cssTyping} ${ styles[`animation12`] }`}>
+                          了解其他城堡的戰況
+                          <span className={styles.blinkingCursor}></span>
+                      </div>
+                </div>
+            </div>
+      )
+      
+      let currentStage;
+      switch(stage){
+        case 'intro':
+          currentStage = introItem;
+          break;
 
-          </div>
+        case 'chooseSlides':
+          currentStage = chooseSlidesItem;
+          break;
 
-      </div>
-    );
+        case 'slides':
+          currentStage = slidesItem;
+          break;
+
+        case 'userPosition': 
+          currentStage = userPositionItem;
+          break;
+
+        case 'results':
+          currentStage = resultsItem;
+          break;
+
+        case 'others':
+          currentStage = othersItem;
+          break;
+
+        default:
+          //op
+      }
+      return (
+        <div className={styles.wrap}>
+            <div className={styles.innerWrap}>
+               {currentStage}
+            </div>
+        </div>
+      )
   }
 }
+class UserPosition extends Component {
+  
+  render(){
+      const styles = require('./Issue.scss');  
+      const { userPosition, currentIssue, handleBackStage } = this.props;
+     
+      let positionChoice; 
+      if(userPosition === "贊成"){
+        positionChoice = `你決定加入贊成方陣營，努力推動${currentIssue.statement}。`;
+      }
+      if(userPosition === "反對"){
+        positionChoice = `你決定加入反對方陣營，堅決反對${currentIssue.statement}。`;
+      }
+      if(userPosition === "不確定"){
+        positionChoice = `目前為止，你還無法下決定。你決定再想想⋯`;
+      }
+
+      return (
+        <div>
+            <div className={styles.backStage}
+                 onClick={handleBackStage.bind(null)}>回到上一步
+            </div>
+            <div className={styles.storyBlock}>
+              <div className={`${styles.cssTyping} ${ styles[`animation12`] }`}>{positionChoice}</div>
+            </div>
+        </div>
+      )
+  }
+}
+
+
+class Slides extends Component {
+   
+    render(){
+      const styles = require('./Issue.scss');  
+      const { handleChoosePosition, currentIssue, showSlides, handleBackStage } = this.props;
+      
+      let slideshowBlock;
+      if(showSlides === true){
+        slideshowBlock = <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
+      }
+
+      let userPositionBlock = (showSlides==="undecided") ? "":(
+          <div>
+              <div className={styles.backStage}
+                   onClick={handleBackStage.bind(null)}>回到上一步
+              </div>
+              <div className={styles.storyBlock}>
+                <div className={`${styles.cssTyping} ${ styles[`animation14`] }`}>{currentIssue.statement}，你選擇的陣營是？（Y/n/s）
+                    <span className={styles.blinkingCursor}></span>
+                </div>
+              </div>
+              <div className={styles.actionButtons}>
+                  <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,"贊成")}>贊成</div>
+                  <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,"反對")}>反對</div>
+                  <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,"不確定")}>跳過</div>
+              </div>
+          </div>
+      );
+
+      return (
+        <div>
+          {slideshowBlock}
+          {userPositionBlock}
+        </div>
+      )
+    }
+
+
+}
+class ChooseSlides extends Component {
+   
+    render(){
+      const styles = require('./Issue.scss');  
+      const { handleChooseSlides, handleBackStage } = this.props;
+    
+      return (
+          <div>
+              <div className={styles.backStage}
+                 onClick={handleBackStage.bind(null)}>回到上一步
+              </div>
+              <div className={styles.storyBlock}>
+                  <div className={`${styles.cssTyping} ${ styles[`animation14`] }`}>
+                      選邊站前，想先聽聽背景介紹嗎？（Y/n）
+                      <span className={styles.blinkingCursor}></span>
+                  </div>
+              </div>
+              <div className={styles.actionButtons}>
+                <div className={styles.actionButton}
+                     onClick={handleChooseSlides.bind(this, true)}>好</div>
+                <div className={styles.actionButton}
+                     onClick={handleChooseSlides.bind(this, false)}>不要</div>
+              </div>
+          </div>
+      )
+    }
+
+
+}
+class Intro extends Component {
+ 
+
+  render(){
+    const styles = require('./Issue.scss');     
+    const { lines, currentLineIndex, handleAddLine, handleBackStage }  = this.props;
+    const breakLines = [1, 3, 6, 9];
+
+    let lineItems = lines.map((value, index)=>{
+        
+        let blink = (index === currentLineIndex)? <span className={styles.blinkingCursor}></span> : "";
+        let data = lines[index];
+        let animationClass = styles[`animation${data.length}`] ? styles[`animation${data.length}`] : styles[`animation12`];
+        let paragraphBreaks = (breakLines.indexOf(index)!==-1)? <div><br/></div> : "";
+        return(
+          <div>
+            {paragraphBreaks}
+            <div className={`${styles.cssTyping} ${ animationClass }`} key={index}>
+              <div className={`${styles.cssText} `}>
+                {data}
+              </div>
+              {blink}
+            </div>
+          </div>
+
+        )
+    });
+
+    let optionButton = (
+      <div className={styles.actionButtons}>
+        <div className={styles.arrowRight}
+             onClick={handleAddLine.bind(this)}></div>
+      </div>
+    )
+
+    return( 
+        <div className={styles.withMargin}>
+            
+            <div className={styles.storyBlock}>
+                {lineItems}
+                {optionButton}
+            </div>
+            
+        </div>
+        
+    )
+      
+  }
+}
+

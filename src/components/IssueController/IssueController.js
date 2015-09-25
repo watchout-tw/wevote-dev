@@ -61,14 +61,19 @@ class OptionItem extends Component {
     let imgURL = require(`./images/${data.id}.svg`);
     let active = false;
     
-
     let link = "", issue = "";
     switch(currentIssue.title) {
+      case "婚姻平權":
+        issue = "marriage-equality";
+        break;
       case "罷免":
         issue = "recall";
         break;
       case "公投":
         issue = "referendum";
+        break;
+       case "核四":
+        issue = "nuclear-power";
         break;
       default:
         issue = "marriage-equality";

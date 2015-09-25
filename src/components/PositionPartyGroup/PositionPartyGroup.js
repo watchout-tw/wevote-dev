@@ -8,17 +8,24 @@ import position2color from '../../utils/position2color';
 
 class Record extends Component {
   static propTypes = {
-    activeRecord: PropTypes.object,
-    data: PropTypes.object.isRequired,
-    setToActiveRecord: PropTypes.func.isRequired
-  
+    data: PropTypes.object.isRequired
   }
-  
+  constructor(props){super(props)
+    this.state = {
+      active: false
+    }
+  }
+  _toggleActive(value, event){
+    this.setState({
+      active: value
+    })
+  }
 
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, activeRecord, setToActiveRecord, resetActiveRecord} = this.props;
-   
+    const {data} = this.props;
+    const {active} = this.state;
+
     let date = moment.unix(data.date);
     let cubeActiveStyle = "";
 
@@ -26,21 +33,21 @@ class Record extends Component {
     let isCaucus = (data.legislator.indexOf("黨團")!== -1);
     let caucusStyle = isCaucus ? styles.caucus : "";
 
-    if(activeRecord.id === data.id)
+    if(active)
        cubeActiveStyle = styles.positionCubeActive;
     
     /* active record */    
     let detailText;
-    if((activeRecord.id === data.id)){
-          let date = moment.unix(activeRecord.date);
+    if(active){
+          let date = moment.unix(data.date);
           
-          let preview = (activeRecord.content.length > 40) ? activeRecord.content.slice(0,40)+"..." : activeRecord.content;
+          let preview = (data.content.length > 40) ? data.content.slice(0,40)+"..." : data.content;
           detailText =  (
           <div className={styles.activeBlock}>
               
-              <Link to={`/records/${activeRecord.id}`} className={styles.activeCube}>
+              <Link to={`/records/${data.id}`} className={styles.activeCube}>
                   <div className={styles.activeContent}>
-                    <div>{date.format('YYYY-MM-DD')} / {activeRecord.legislator} / {activeRecord.meetingCategory}</div>
+                    <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
                     <div>{preview}</div>
                   </div>
               </Link>
@@ -54,8 +61,8 @@ class Record extends Component {
           
           <Link to={`/records/${data.id}`}
                 className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.party]} ${caucusStyle} `}
-                onMouseEnter={setToActiveRecord.bind(null, data)}
-                onMouseLeave={resetActiveRecord.bind(null)} >
+                onMouseEnter={this._toggleActive.bind(this, true)}
+                onMouseLeave={this._toggleActive.bind(this, false)} >
           </Link>
       
       </div>
@@ -71,23 +78,18 @@ class Record extends Component {
 export default class PositionPartyGroup extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
-    issueStatement: PropTypes.string.isRequired,
-    activeRecord: PropTypes.array,
-    setToActiveRecord: PropTypes.func.isRequired
+    issueStatement: PropTypes.string.isRequired
   
   }
 
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, issueStatement, activeRecord, setToActiveRecord, resetActiveRecord} = this.props;
+    const {data, issueStatement} = this.props;
 
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
-      return <Record data={item} key={index} 
-                     setToActiveRecord={setToActiveRecord} 
-                     activeRecord={activeRecord}
-                     resetActiveRecord={resetActiveRecord} />
+      return <Record data={item} key={index} />
     });
 
     /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */

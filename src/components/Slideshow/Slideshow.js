@@ -16,6 +16,30 @@ export default class Slideshow extends Component {
     }
   }
 
+  _handleKeyDown(e){
+    e.preventDefault();
+
+    const SPACE = 32,
+          LEFT = 37,
+          RIGHT = 39;
+    const { currentIndex } = this.state;
+    if( e.keyCode === SPACE || e.keyCode == RIGHT ) {
+        this._setCurrentIndex(currentIndex + 1);
+    }
+    if( e.keyCode == LEFT ) {
+        this._setCurrentIndex(currentIndex - 1);
+    }
+    
+  }
+  componentDidMount(){
+    window.addEventListener('keydown', this._handleKeyDown.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this._handleKeyDown.bind(this));
+      
+  }
+
   _setCurrentIndex(value, event){
    
     var maxIndex =  this.props.data.length - 1;
@@ -26,14 +50,12 @@ export default class Slideshow extends Component {
       value = maxIndex;
     }
 
-
     this._setImageLoaded(false);
 
     this.setState({
       currentIndex: value
     })
 
-    this._autoplay();
   }
 
   _setImageLoaded(value, event){
@@ -43,31 +65,7 @@ export default class Slideshow extends Component {
     })
   }
 
-  _autoplay(){
-
-    clearInterval(this.state.autoplayTimer);
-
-    let timer = setInterval(()=>{
-        let nextIndex = (this.state.currentIndex + 1)%(this.props.data.length);
-        this._setCurrentIndex(nextIndex);
-    }, 10000); 
-    
-    this.setState(
-      { 
-        autoplayTimer:  timer
-      }
-    )
-  }
-
-  componentDidMount() {
-      //console.log("I'm mount!");
-      this._autoplay();
-  }
-
-  componentWillUnmount(){
-      //console.log("bye! i'm off work!");
-      clearInterval(this.state.autoplayTimer);
-  }
+  
 
   componentWillReceiveProps(nextProps) {
       const {topic} = this.props;
@@ -78,14 +76,7 @@ export default class Slideshow extends Component {
        
   }
 
-  _imageOnHover(value, event){
-    //console.log("* hover * "+value)
-    if(value){
-      clearInterval(this.state.autoplayTimer);
-    }else{
-      this._autoplay();
-    }
-  }
+  
 
   render() {
     const styles = require('./Slideshow.scss');
@@ -101,10 +92,7 @@ export default class Slideshow extends Component {
           <div className={styles.next}
                onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>Next</div>
           <img alt={currentSlide.alt}
-               className={imageLoaded===true ? styles.slideImg : styles.slideImgLoading}
-               onLoad={this._setImageLoaded.bind(this,true)}
-               onMouseEnter={this._imageOnHover.bind(this, true)}
-               onMouseLeave={this._imageOnHover.bind(this, false)}
+               className={styles.slideImg}
                src={require(`./images/${currentSlide.filename}`)} />
           
           <div className={styles.pageWrap}>
@@ -121,6 +109,7 @@ export default class Slideshow extends Component {
               )
             })
           }
+              <div>（空白鍵換頁）</div>
           </div>
       </div>
     );

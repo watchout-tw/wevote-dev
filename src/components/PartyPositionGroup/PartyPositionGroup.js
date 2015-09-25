@@ -8,19 +8,27 @@ import position2color from '../../utils/position2color';
 
 class Record extends Component {
   static propTypes = {
-    activeRecordId: PropTypes.string,
-    data : PropTypes.object.isRequired,
-    setToActiveRecord: PropTypes.func.isRequired,
-    resetActive: PropTypes.func.isRequired
+    data : PropTypes.object.isRequired
+  }
+  constructor(props){super(props)
+    this.state = {
+      active: false
+    }
+  }
+  _toggleActive(value, event){
+    this.setState({
+      active: value
+    })
   }
  
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, setToActiveRecord, activeRecord, resetActiveRecord} = this.props;
+    const {data} = this.props;
+    const {active} = this.state;
   
     let date = moment.unix(data.date);
   
-    let cubeActiveStyle = (activeRecord.id === data.id) ? styles.positionCubeActive : "";
+    let cubeActiveStyle = (active) ? styles.positionCubeActive : "";
     
     //是否為黨團
     let isCaucus = (data.legislator.indexOf("黨團")!== -1);
@@ -28,7 +36,7 @@ class Record extends Component {
 
     /* active record */    
     let detailText;
-    if((activeRecord.id === data.id)){
+    if(active){
           let date = moment.unix(activeRecord.date);
           
           let preview = (activeRecord.content.length > 60) ? activeRecord.content.slice(0,60)+" ..." : activeRecord.content;
@@ -50,8 +58,8 @@ class Record extends Component {
           
           <Link to={`/records/${data.id}`}
                 className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]} ${caucusStyle }`}
-                onMouseEnter={setToActiveRecord.bind(null, data)}
-                onMouseLeave={resetActiveRecord.bind(null)}>
+                onMouseEnter={this._toggleActive.bind(this, true)}
+                onMouseLeave={this._toggleActive.bind(this, false)}>
           </Link>
 
       </div>
@@ -66,34 +74,22 @@ class Record extends Component {
 
 export default class PartyPositionGroup extends Component {
   static propTypes = {
-    setToActiveRecord: PropTypes.func.isRequired
-  
+   
   }
-  
-
+ 
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, issueId, issueStatement, setToActiveRecord,
-           activeRecord, resetActiveRecord, setToLockedRecord,
-           isLocked} = this.props;
-    
+    const {data, issueId, issueStatement} = this.props;
     
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
-
 
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
       return <Record data={item} 
-                     key={index} 
-                     setToActiveRecord={setToActiveRecord} 
-                     setToLockedRecord={setToLockedRecord}
-                     resetActiveRecord={resetActiveRecord}
-                     activeRecord={activeRecord}
-                     isLocked={isLocked}/>
+                     key={index} />
     });
 
     
-
     /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */
 
     // 寬度是 record 數=> 開根號，round up 到整數

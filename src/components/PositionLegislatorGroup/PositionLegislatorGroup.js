@@ -32,29 +32,34 @@ import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar.js';
 },*/
 class LegislatorAvatar extends Component {
   static propTypes = {
-
-    data: PropTypes.object.isRequired,
-    activeLegislator: PropTypes.string,
-    setToActiveLegislator: PropTypes.func.isRequired,
-    resetActiveLegislator: PropTypes.func.isRequired
+    data: PropTypes.object.isRequired
+  }
+  constructor(props){super(props)
+    this.state = {
+      active: false
+    }
+  }
+  _toggleActive(value, event){
+    this.setState({
+      active: value
+    })
   }
 
   render () {
-    const { data, currentIssueName,
-            setToActiveLegislator, resetActiveLegislator, activeLegislator, 
-          } = this.props;
+    const { data, currentIssueName } = this.props;
+    const { active } = this.state;
     const styles = require('./PositionLegislatorGroup.scss');
     
     let {id, name, party, records} = data;
-    let imgActiveStyle = (activeLegislator === name)? styles.avatarImgActive : "";
-  
+    let imgActiveStyle = (active)? styles.avatarImgActive : "";
+    
      /* active record */    
     let detailText;
     let recordCount = 0;
     if(records)
         recordCount = records.length;
 
-    if((activeLegislator === name)){
+    if(active){
         detailText = ( 
             <div className={styles.activeCube}>
                 <div>{name}</div>
@@ -62,14 +67,12 @@ class LegislatorAvatar extends Component {
             </div>
         );
     }
-    //onMouseLeave={resetActiveLegislator.bind(null)}
-    // <img className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}
-    //      src={imgURL}/>
-    
+
     return (
         <Link to={`/people/${people_name2id(name)}/${currentIssueName}`}
-              onMouseEnter={setToActiveLegislator.bind(null, name)}
-              className={styles.avatarItem}>
+              className={styles.avatarItem}
+              onMouseEenter={this._toggleActive.bind(this, true)}
+              onMouseLeave={this._toggleActive.bind(this, false)}>
          
           {detailText}
           
@@ -88,43 +91,19 @@ export default class PositionLegislatorGroup extends Component {
   static propTypes = {
     
     data: PropTypes.object.isRequired,
-    issueStatement: PropTypes.string.isRequired,
-
-    activeLegislator: PropTypes.string,
-    setToActiveLegislator: PropTypes.func.isRequired,
-    resetActiveLegislator: PropTypes.func.isRequired
+    issueStatement: PropTypes.string.isRequired
     
-  }
-
-  constructor(props) { super(props)
-      this.state = {
-          active: false
-      }
-  }
-  
-  _setActive(value, event){
-    this.setState({ active: true });
-  }
-
-  _setInactive(){  
-    this.setState({ active: false });
   }
 
   render() {
     const styles = require('./PositionLegislatorGroup.scss');
-    const {data, currentIssueName, issueStatement, 
-           setToActiveLegislator, activeLegislator, resetActiveLegislator} = this.props;
-    const {active} = this.state;
-
-
+    const {data, currentIssueName, issueStatement} = this.props;
+   
     
     /* 這裡是立委們 */
     let legislators = data.legislators.map((item,index)=>{
       return <LegislatorAvatar 
               data={item} key={index} 
-              setToActiveLegislator={setToActiveLegislator} 
-              resetActiveLegislator={resetActiveLegislator} 
-              activeLegislator={activeLegislator}
               currentIssueName={currentIssueName}/>
     });
 
