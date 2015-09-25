@@ -34,9 +34,10 @@ export default class About extends Component {
           <div className={styles.licenseBlock}>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Cc-by-nc-sa_euro_icon.svg/1024px-Cc-by-nc-sa_euro_icon.svg.png"
                className={styles.licenseImg} />
-          <p>如非特別註名，本站內容統一採用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
-                                          target="_blank"
-                                          className={styles.link}>創用 CC 姓名標示─非商業性─相同方式分享 4.0 國際 授權條款</a>釋出。</p>
+          <p>如非特別註明，本站資料及原始碼統一採用
+              <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+                 arget="_blank"
+                 className={styles.link}>創用 CC 姓名標示─非商業性─相同方式分享 4.0 國際 授權條款</a>釋出。</p>
           <p>需要注意部分如下：</p>
           <ol>
             <li>從立法院網站來源的資料，如立委照片、公報內容等，必須在遵守立法院的<a href="http://www.ly.gov.tw/14_others/copyright.jsp"
@@ -44,6 +45,7 @@ export default class About extends Component {
                                                                              className={styles.link}>著作權規範</a>之下取用。</li>
             <li>如果在著作權方面有疑慮、建議或是想取得更進一步授權，請來信 wevote@watchout.tw 。</li>
           </ol>
+          <p>特別感謝：《隸辨》作者厉向晨</p>
           </div>
       </div>  
     );
