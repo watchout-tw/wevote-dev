@@ -7,6 +7,9 @@ import {connect} from 'react-redux';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueView from '../../components/IssueView/IssueView.js';
 
+const issueOrder = ['婚姻平權','罷免','公投','核四'];
+const chapterOrder = ['一','二','三','四'];
+
 @connect(
     state => ({
                 issues: state.issues
@@ -25,13 +28,16 @@ export default class Issue extends Component {
     // 拿該議題的資料
     const currentIssue = issues[currentIssueName];
 
+    const index = issueOrder.indexOf(currentIssue.title);
+    const chapter = chapterOrder[index];
+
     let preservedLines = this._generatePreservedLines(currentIssue);
 
     this.state = {
         stage: "intro", 
         currentLineIndex: 0,
         preservedLines : preservedLines,
-        lines : [`嘿！歡迎來到${currentIssue.title}城堡。`],
+        lines : [`任務${chapter}：${currentIssue.title}城堡`],
         showSlides: "",
         userPosition: "" //贊成, 反對, 不確定
     }
@@ -39,33 +45,45 @@ export default class Issue extends Component {
   }
   _generatePreservedLines(issue){
     return [
-          `在這個國度裡，每一座城堡，`,
-          `都有不同的人馬駐守著。`,
-          `駐守者可以決定城堡的相關制度及未來發展。`,
-          `甚至，要自我毀滅，讓${issue.title}完全消失，`,
-          `也不是完全不可能。`,
-          `嗯⋯⋯`,
-          `目前${issue.title}城堡是由反方佔領。`,
-          `有一群人正準備攻擊，想要奪下這個城堡，`,
-          `他們的目標是：${issue.statement}。`,
-          `現在兩方人馬即將對戰！`
+          `${issue.title}城堡荒煙瀰漫，壟罩迷霧。`,
+          `島民都不太清楚這個城堡的內部，`,
+          `也因此被怪獸佔據，`,
+          `黑暗的力量持續造成諸多問題。`,
+          `為了創造美好家園，大家都知道必須驅逐怪獸。`,
+          `現在有三方勇者要前往驅逐怪獸，`,
+          `完成島嶼主人交付的任務。`,
+          `正方勇者提出使用${issue.statement}的方式戰鬥，`,
+          `但反方勇者卻不贊同。`,
+          `另外則有一些模糊意見的勇者，`,
+          `還拿不定主意⋯⋯`
     ];
 
   }
+  _generateSlidesLines(){
+      return [
+        `身為島嶼主人的你，在決定要選任哪一方的勇士前，`,
+        `要先看看戰役簡介嗎？（Y/n）`
+      ];
+  }
   _generateDecisionLines(userPosition, issue){
-      let positionChoice; 
+      let positionChoice1, positionChoice2; 
       if(userPosition === "贊成"){
-        positionChoice = `你決定加入贊成方陣營，努力推動${issue.statement}。`;
+        positionChoice1 = `你決定選任贊成方的勇士，`;
+        positionChoice2 = `使用${issue.statement}的方式戰鬥。`;
       }
       if(userPosition === "反對"){
-        positionChoice = `你決定加入反對方陣營，堅決反對${issue.statement}。`;
+        positionChoice1 = `你決定選任反對方的勇士，`;
+        positionChoice2 = `反對用${issue.statement}的方式戰鬥。`;
       }
       if(userPosition === "不確定"){
-        positionChoice = `目前為止，你還無法下決定。你決定再想想⋯`;
+        positionChoice1 = `目前為止，你還無法下決定。`;
+        positionChoice2 = `你決定再想想⋯`;
       }
       return [
-        positionChoice,
-        `以下是雙方過去的交戰紀錄`
+        positionChoice1,
+        positionChoice2,
+        `Fighto!!!`,
+        `這是雙方過去的交戰紀錄：`
       ]
   }
   componentDidMount(){ 
@@ -101,10 +119,39 @@ export default class Issue extends Component {
         });
 
     }else{
-        //台詞說完了，開始選擇
-         this.setState({
-          stage: "slides"
+        //台詞說完了，開始選擇要不要看 slides
+        
+        let preservedLines = this._generateSlidesLines();
+        let lines = [];
+        lines.push(preservedLines[0]);
+
+        this.setState({
+          stage: "slides",
+          lines: lines,
+          currentLineIndex: 0
         })
+
+        let {currentLineIndex} = this.state;
+        preservedLines.map((value, index)=>{
+            
+            if(index !== 0){
+                currentLineIndex++;
+                setTimeout(()=>{
+                  
+                    console.log(">"+value)
+                    lines.push(value);
+                    this.setState({
+                      lines: lines
+                    });
+  
+                }, 500*index);
+
+            }
+            this.setState({
+                currentLineIndex: currentLineIndex
+            });
+        })
+
     }
   }
   _handleChooseSlides(value, event){
@@ -259,6 +306,8 @@ export default class Issue extends Component {
 
     if(currentIssueName !== nextIssueName){
         const nextIssue = issues[nextIssueName];
+        const index = issueOrder.indexOf(nextIssue.title);
+        const chapter = chapterOrder[index];
         let preservedLines = this._generatePreservedLines(nextIssue);
         this.state = {
             stage: "intro",
@@ -266,7 +315,7 @@ export default class Issue extends Component {
             userPosition: "",
             currentLineIndex: 0,
             preservedLines : preservedLines,
-            lines : [`嘿！歡迎來到${nextIssue.title}城堡。`]
+            lines : [`任務${chapter}：${nextIssue.title}城堡`]
         }
     }
   }
@@ -297,6 +346,8 @@ export default class Issue extends Component {
             <Slides handleChooseSlides={this._handleChooseSlides.bind(this)}
                     showSlides={showSlides}
                     currentIssue={currentIssue}
+                    lines={lines}
+                    currentLineIndex={currentLineIndex}
                     handleBackStage={this._handleBackStage.bind(this)}
                     handleSetStage={this._handleSetStage.bind(this)}/>
       )
@@ -457,7 +508,27 @@ class Slides extends Component {
 
       // 選擇要不要顯示 slides
       const { handleChooseSlides, handleBackStage, showSlides, 
-              currentIssue, handleChoosePosition, handleSetStage } = this.props;
+              currentIssue, handleChoosePosition, handleSetStage, 
+              lines, currentLineIndex } = this.props;
+
+      let lineItems = lines.map((value, index)=>{
+      
+          let blink = (index === currentLineIndex)? <span className={styles.blinkingCursor}></span> : "";
+          let data = lines[index];
+          let animationClass = styles[`animation${data.length}`] ? styles[`animation${data.length}`] : styles[`animation12`];
+          return(
+            <div>
+              <div className={` ${styles.cssTyping} ${animationClass} `} 
+                   key={index}>
+                   <div className={`${styles.cssText} `}>
+                     {data}
+                   </div>
+                   {blink}
+              </div>
+            </div>
+      
+          )
+      });
 
       let chooseSlidesBlock = (
         <div>
@@ -465,10 +536,7 @@ class Slides extends Component {
                    onClick={handleBackStage.bind(null)}>回到上一步
               </div>
               <div className={styles.storyBlock}>
-                  <div className={`${styles.cssTyping} ${ styles[`animation14`] }`}>
-                      選邊站前，想先聽聽背景介紹嗎？（Y/n）
-                      <span className={styles.blinkingCursor}></span>
-                  </div>
+                  {lineItems}
               </div>
               <div className={styles.actionButtons}>
                   <div className={styles.actionButton}
@@ -522,7 +590,7 @@ class Intro extends Component {
   render(){
     const styles = require('./Issue.scss');     
     const { lines, currentLineIndex, handleAddLine, handleBackStage }  = this.props;
-    const breakLines = [1, 3, 6, 9];
+    const breakLines = [1, 5, 6, 8, 10];
 
     let lineItems = lines.map((value, index)=>{
         

@@ -9,44 +9,54 @@ $break-large: 1000px;
 
 .prev {
 	padding: 6px 20px 6px 20px;
-	left: 5px;
+	left: 0px;
 }
 .next {
 	padding: 6px 20px 6px 20px;
-	right: 5px;
+	right: 0px;
 }
 .prev, .next {
 	cursor: pointer;
-	position: absolute;
-	top: 40%;
-	z-index: 1;
+    position: absolute;
+   
+    padding-top: 20%;
+    z-index: 222;
+    font-size: 40px;
+    width: 60px;
+    height: calc( 100% - 50px );
+    
+    background: rgba(220,220,220,0.6);
+
+    color: #523F3F;
 }
 .prev:hover, .next:hover {
-	background: black;
-	color: white;
+	background: rgba(220,220,220,0.8);
 }
 .slideImgLoading {
 	width: 100%;
-	opacity: 0.2;
+	opacity: 0.5;
 	
 }
 .slideImg {
 	width: 100%;
 	opacity: 1;
-	transition: all 0.8s ease-out;
+	transition: all 0.4s ease-out;
 	
 }
 .pageWrap {
 	
 }
 .page {
-	background: black;
-	color: white;
 	display: inline-block;
-	margin: 3px;
-	padding: 4px 10px;
 	cursor: pointer;
+	background: rgb(240,237,233);
+    display: inline-block;
+    margin: 3px;
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
 }
 .page:hover, .activePage {
-	background: gray;
+	color: white;
+    background: #523F3F;
 }

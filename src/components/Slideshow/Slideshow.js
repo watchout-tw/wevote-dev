@@ -87,14 +87,6 @@ export default class Slideshow extends Component {
     
     return (
       <div className={styles.wrap}>
-          <div className={styles.prev}
-               onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>Prev</div>
-          <div className={styles.next}
-               onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>Next</div>
-          <img alt={currentSlide.alt}
-               className={styles.slideImg}
-               src={require(`./images/${currentSlide.filename}`)} />
-          
           <div className={styles.pageWrap}>
           {
             data.map((value,index)=>{
@@ -109,8 +101,23 @@ export default class Slideshow extends Component {
               )
             })
           }
-              <div>（◄ ► 換頁）</div>
+              
           </div>
+
+          <div className={styles.prev}
+               onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>
+               <i className="fa fa-chevron-left"></i> 
+          </div>
+          <div className={styles.next}
+               onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
+               <i className="fa fa-chevron-right"></i> 
+          </div>
+          <img alt={currentSlide.alt}
+               src={require(`./images/${currentSlide.filename}`)}
+               className={imageLoaded===true ? styles.slideImg : styles.slideImgLoading}
+               onLoad={this._setImageLoaded.bind(this,true)} />
+          
+          
       </div>
     );
   }
