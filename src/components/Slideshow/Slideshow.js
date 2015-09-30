@@ -19,11 +19,11 @@ export default class Slideshow extends Component {
   _handleKeyDown(e){
     e.preventDefault();
 
-    const SPACE = 32,
-          LEFT = 37,
+    const LEFT = 37,
           RIGHT = 39;
+          
     const { currentIndex } = this.state;
-    if( e.keyCode === SPACE || e.keyCode == RIGHT ) {
+    if( e.keyCode == RIGHT ) {
         this._setCurrentIndex(currentIndex + 1);
     }
     if( e.keyCode == LEFT ) {
@@ -109,7 +109,7 @@ export default class Slideshow extends Component {
               )
             })
           }
-              <div>（空白鍵換頁）</div>
+              <div>（◄ ► 換頁）</div>
           </div>
       </div>
     );

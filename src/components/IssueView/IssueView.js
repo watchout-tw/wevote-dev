@@ -31,6 +31,7 @@ export default class IssueView extends Component {
              handleSeeOthers,
              handleBackStage} = this.props;
 
+     
 
       // 結果圖表
 
@@ -96,24 +97,6 @@ export default class IssueView extends Component {
 
       return (
           <div>
-              <div className={styles.backStage}
-                   onClick={handleBackStage.bind(null)}>回到上一步
-              </div>
-
-              <div className={styles.storyBlock}>
-                  <div className={`${styles.cssTyping} ${ styles[`animation12`] }`}>
-                      這是雙方過去的交戰紀錄：
-                  </div>
-                  <br/>
-                  <div className={`${styles.cssTyping} ${ styles[`animation12`] }`}>
-                      繼續了解其他城堡的戰況？(Y)
-                  </div>
-
-                  <div className={styles.actionButtons}>
-                      <div className={styles.arrowRight}
-                           onClick={handleSeeOthers.bind(null)}></div>
-                  </div>
-              </div>
               
               <div className={styles.figHeader} id="view">
                   <div className={styles.issueBlock}>

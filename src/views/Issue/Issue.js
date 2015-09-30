@@ -52,7 +52,22 @@ export default class Issue extends Component {
     ];
 
   }
-
+  _generateDecisionLines(userPosition, issue){
+      let positionChoice; 
+      if(userPosition === "贊成"){
+        positionChoice = `你決定加入贊成方陣營，努力推動${issue.statement}。`;
+      }
+      if(userPosition === "反對"){
+        positionChoice = `你決定加入反對方陣營，堅決反對${issue.statement}。`;
+      }
+      if(userPosition === "不確定"){
+        positionChoice = `目前為止，你還無法下決定。你決定再想想⋯`;
+      }
+      return [
+        positionChoice,
+        `以下是雙方過去的交戰紀錄`
+      ]
+  }
   componentDidMount(){ 
       window.addEventListener('keydown', this._handleKeyDown.bind(this));
   }
@@ -88,21 +103,57 @@ export default class Issue extends Component {
     }else{
         //台詞說完了，開始選擇
          this.setState({
-          stage: "chooseSlides"
+          stage: "slides"
         })
     }
   }
   _handleChooseSlides(value, event){
+      let nextStage = "slides";
+      if(value === false)
+        nextStage = "choosePosition";
+      
       this.setState({
         showSlides: value,
-        stage: "slides"
+        stage: nextStage 
+        
       })
+
   }
-  _handleChoosePosition(value, event){
+  _handleChoosePosition(action, event){
+    let preservedLines = this._generateDecisionLines(action.value, action.issue);
+    let lines = [];
+    lines.push(preservedLines[0]);
+
     this.setState({
-        userPosition: value,
-        stage: "userPosition"
-    })  
+      userPosition: action.value,
+      stage: "results",
+      lines: lines,
+      currentLineIndex: 0
+    })
+
+    let {currentLineIndex} = this.state;
+    preservedLines.map((value, index)=>{
+        
+        if(index !== 0){
+            currentLineIndex++;
+            setTimeout(()=>{
+              
+                console.log(">"+value)
+                lines.push(value);
+                this.setState({
+                  lines: lines
+                });
+  
+            }, 500*index);
+
+        }
+        this.setState({
+            currentLineIndex: currentLineIndex
+        });
+    })
+
+    
+   
   }
   _handleSeeOthers(){
     this.setState({
@@ -110,7 +161,7 @@ export default class Issue extends Component {
     })  
   }
   _handleBackStage(){
-    const stages = ['intro', 'chooseSlides','slides','userPosition','results','others'];
+    const stages = ['intro', 'slides', 'choosePosition','results','others'];
     const {stage} = this.state;
     let index = stages.indexOf(stage) - 1;
     if(index < 0)
@@ -118,6 +169,11 @@ export default class Issue extends Component {
     this.setState({
       stage: stages[index]
     })
+  }
+  _handleSetStage(value, event){
+    this.setState({
+        stage: value
+    })  
   }
 
 
@@ -140,7 +196,7 @@ export default class Issue extends Component {
           }
           break;
 
-      case 'chooseSlides':
+      case 'slides':
           if( e.keyCode === Y || e.keyCode === y) {
             e.preventDefault();
             this._handleChooseSlides(true);
@@ -150,35 +206,38 @@ export default class Issue extends Component {
             e.preventDefault();
             this._handleChooseSlides(false);
           }
-          break;
-      case 'slides':
-          if( e.keyCode === Y || e.keyCode === y) {
-            e.preventDefault();
-            this._handleChoosePosition("贊成"); 
-           
-          }
-          if( e.keyCode === N || e.keyCode === n ) {
-            e.preventDefault();
-            this._handleChoosePosition("反對");
-            
-          }
-          if( e.keyCode === S || e.keyCode === s ) {
-            e.preventDefault();
-            this._handleChoosePosition("不確定"); 
-            
-          }
-          break;
-      case 'userPosition':
+
           if( e.keyCode === SPACE ) {
             e.preventDefault();
             this.setState({
-              stage: "results"
+              stage: "choosePosition"
             }) 
           }
           break;
 
-       case 'results':
+      case 'choosePosition':
+          const {issues} = this.props;
+          const currentIssueName = this.props.params.issueName;
+          const currentIssue = issues[currentIssueName];
+
           if( e.keyCode === Y || e.keyCode === y) {
+            e.preventDefault();
+            this._handleChoosePosition({value:"贊成", issue:currentIssue}); 
+
+          }
+          if( e.keyCode === N || e.keyCode === n ) {
+            e.preventDefault();
+            this._handleChoosePosition({value:"反對", issue:currentIssue});
+          }
+          if( e.keyCode === S || e.keyCode === s ) {
+            e.preventDefault();
+            this._handleChoosePosition({value:"不確定", issue:currentIssue}); 
+            
+          }
+          break;
+          
+      case 'results': 
+          if( e.keyCode === SPACE ) {
             e.preventDefault();
             this.setState({
               stage: "others"
@@ -194,6 +253,7 @@ export default class Issue extends Component {
   componentWillReceiveProps(nextProps){
     
     const {issues} = this.props;
+    const {stage} = this.state;
     const currentIssueName = this.props.params.issueName;
     const nextIssueName = nextProps.params.issueName
 
@@ -232,27 +292,27 @@ export default class Issue extends Component {
                    handleAddLine={this._handleAddLine.bind(this)}
                    handleBackStage={this._handleBackStage.bind(this)} />
       )
-      let chooseSlidesItem = (
-            <ChooseSlides handleChooseSlides={this._handleChooseSlides.bind(this)}
-                          handleBackStage={this._handleBackStage.bind(this)} />
-      )
+      
       let slidesItem = (
-            <Slides showSlides={showSlides}
-                    handleChoosePosition={this._handleChoosePosition.bind(this)}
+            <Slides handleChooseSlides={this._handleChooseSlides.bind(this)}
+                    showSlides={showSlides}
                     currentIssue={currentIssue}
-                    handleBackStage={this._handleBackStage.bind(this)}/>
+                    handleBackStage={this._handleBackStage.bind(this)}
+                    handleSetStage={this._handleSetStage.bind(this)}/>
       )
-      let userPositionItem = (
-            <UserPosition userPosition={userPosition}
-                          currentIssue={currentIssue}
-                          handleBackStage={this._handleBackStage.bind(this)} />
-      )
+     
       let resultsItem = (
-            <IssueView currentView={currentView}
-                       currentIssue={currentIssue}
-                       currentIssueName={currentIssueName}
-                       handleSeeOthers={this._handleSeeOthers.bind(this)}
-                       handleBackStage={this._handleBackStage.bind(this)} /> 
+            <Results handleChoosePosition={this._handleChoosePosition.bind(this)}
+                     stage={stage}
+                     lines={lines}
+                     currentLineIndex={currentLineIndex}
+                     currentIssue={currentIssue}
+                     currentIssueName={currentIssueName}
+                     currentView={currentView}
+                     userPosition={userPosition}
+                     handleBackStage={this._handleBackStage.bind(this)}
+                     handleSeeOthers={this._handleSeeOthers.bind(this)}
+                     handleSetStage={this._handleSetStage.bind(this)}/>
       )
 
       let othersItem = (
@@ -267,6 +327,7 @@ export default class Issue extends Component {
                           了解其他城堡的戰況
                           <span className={styles.blinkingCursor}></span>
                       </div>
+                      
                 </div>
             </div>
       )
@@ -277,18 +338,11 @@ export default class Issue extends Component {
           currentStage = introItem;
           break;
 
-        case 'chooseSlides':
-          currentStage = chooseSlidesItem;
-          break;
-
         case 'slides':
           currentStage = slidesItem;
           break;
 
-        case 'userPosition': 
-          currentStage = userPositionItem;
-          break;
-
+        case 'choosePosition':
         case 'results':
           currentStage = resultsItem;
           break;
@@ -309,31 +363,87 @@ export default class Issue extends Component {
       )
   }
 }
-class UserPosition extends Component {
+class Results extends Component {
   
   render(){
       const styles = require('./Issue.scss');  
-      const { userPosition, currentIssue, handleBackStage } = this.props;
-     
-      let positionChoice; 
-      if(userPosition === "贊成"){
-        positionChoice = `你決定加入贊成方陣營，努力推動${currentIssue.statement}。`;
-      }
-      if(userPosition === "反對"){
-        positionChoice = `你決定加入反對方陣營，堅決反對${currentIssue.statement}。`;
-      }
-      if(userPosition === "不確定"){
-        positionChoice = `目前為止，你還無法下決定。你決定再想想⋯`;
-      }
+       // 選擇立場
+      const { handleChoosePosition, currentIssue, currentView, currentIssueName } = this.props;
+      
+      const { userPosition, handleBackStage, handleSeeOthers, stage, handleSetStage, lines, currentLineIndex } = this.props;
+      
+      let userPositionBlock;
+      let resultBlock;
+      if( stage === "choosePosition" ){
+          userPositionBlock = (
+              <div>
+                  <div className={styles.storyBlock}>
+                      <div className={`${styles.cssTyping} ${ styles[`animation14`] }`}>{currentIssue.statement}，你選擇的陣營是？（Y/n/s）
+                          <span className={styles.blinkingCursor}></span>
+                      </div>
+                  </div>
+                  <div className={styles.actionButtons}>
+                      <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,{value:"贊成", issue:currentIssue} )}>贊成</div>
+                      <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,{value:"反對", issue:currentIssue} )}>反對</div>
+                      <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,{value:"不確定", issue:currentIssue} )}>跳過</div>
+                  </div>
+              </div>
+          );
 
+          
+      }else{
+          
+          let lineItems = lines.map((value, index)=>{
+        
+              let blink = (index === currentLineIndex)? <span className={styles.blinkingCursor}></span> : "";
+              let data = lines[index];
+              let animationClass = styles[`animation${data.length}`] ? styles[`animation${data.length}`] : styles[`animation12`];
+              return(
+                <div>
+                  <div className={` ${styles.cssTyping} ${animationClass} `} 
+                       key={index}>
+                       <div className={`${styles.cssText} `}>
+                         {data}
+                       </div>
+                       {blink}
+                  </div>
+                </div>
+      
+              )
+          });
+
+          
+
+          userPositionBlock = (
+            <div className={styles.storyBlock}>
+              
+              {lineItems}
+              
+              <div className={styles.actionButtons}>
+                <div className={styles.arrowRight}
+                     onClick={handleSetStage.bind(this, "others")}></div>
+              </div>
+            </div>
+          )
+
+          resultBlock = (
+            <IssueView userPosition={userPosition}
+                       currentView={currentView}
+                       currentIssue={currentIssue}
+                       currentIssueName={currentIssueName}
+                       handleSeeOthers={handleSeeOthers}
+                       handleBackStage={handleBackStage} /> 
+          )
+          
+      }
+     
       return (
         <div>
             <div className={styles.backStage}
                  onClick={handleBackStage.bind(null)}>回到上一步
             </div>
-            <div className={styles.storyBlock}>
-              <div className={`${styles.cssTyping} ${ styles[`animation12`] }`}>{positionChoice}</div>
-            </div>
+            {userPositionBlock}
+            {resultBlock}
         </div>
       )
   }
@@ -344,51 +454,15 @@ class Slides extends Component {
    
     render(){
       const styles = require('./Issue.scss');  
-      const { handleChoosePosition, currentIssue, showSlides, handleBackStage } = this.props;
-      
-      let slideshowBlock;
-      if(showSlides === true){
-        slideshowBlock = <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
-      }
 
-      let userPositionBlock = (showSlides==="undecided") ? "":(
-          <div>
+      // 選擇要不要顯示 slides
+      const { handleChooseSlides, handleBackStage, showSlides, 
+              currentIssue, handleChoosePosition, handleSetStage } = this.props;
+
+      let chooseSlidesBlock = (
+        <div>
               <div className={styles.backStage}
                    onClick={handleBackStage.bind(null)}>回到上一步
-              </div>
-              <div className={styles.storyBlock}>
-                <div className={`${styles.cssTyping} ${ styles[`animation14`] }`}>{currentIssue.statement}，你選擇的陣營是？（Y/n/s）
-                    <span className={styles.blinkingCursor}></span>
-                </div>
-              </div>
-              <div className={styles.actionButtons}>
-                  <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,"贊成")}>贊成</div>
-                  <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,"反對")}>反對</div>
-                  <div className={styles.actionButton} onClick={handleChoosePosition.bind(this,"不確定")}>跳過</div>
-              </div>
-          </div>
-      );
-
-      return (
-        <div>
-          {slideshowBlock}
-          {userPositionBlock}
-        </div>
-      )
-    }
-
-
-}
-class ChooseSlides extends Component {
-   
-    render(){
-      const styles = require('./Issue.scss');  
-      const { handleChooseSlides, handleBackStage } = this.props;
-    
-      return (
-          <div>
-              <div className={styles.backStage}
-                 onClick={handleBackStage.bind(null)}>回到上一步
               </div>
               <div className={styles.storyBlock}>
                   <div className={`${styles.cssTyping} ${ styles[`animation14`] }`}>
@@ -397,12 +471,46 @@ class ChooseSlides extends Component {
                   </div>
               </div>
               <div className={styles.actionButtons}>
-                <div className={styles.actionButton}
-                     onClick={handleChooseSlides.bind(this, true)}>好</div>
-                <div className={styles.actionButton}
-                     onClick={handleChooseSlides.bind(this, false)}>不要</div>
+                  <div className={styles.actionButton}
+                       onClick={handleChooseSlides.bind(this, true)}>好</div>
+                  <div className={styles.actionButton}
+                       onClick={handleChooseSlides.bind(this, false)}>不要</div>
               </div>
-          </div>
+         </div>
+      );
+
+      let afterChooseSlides = (
+        <div>
+              <div className={styles.backStage}
+                   onClick={handleBackStage.bind(null)}>回到上一步
+              </div>
+              <div className={styles.storyBlock}>
+                  <div className={`${styles.cssTyping} ${ styles[`animation14`] }`}>
+                      以下是{currentIssue.title}的背景資訊
+                      <span className={styles.blinkingCursor}></span>
+                  </div>
+                  <div className={styles.actionButtons}>
+                    <div className={styles.arrowRight}
+                         onClick={ handleSetStage.bind(this, "results")}></div>
+                  </div>
+              </div>
+        </div>
+      );
+      
+      let mainItem = (showSlides) ? afterChooseSlides : chooseSlidesBlock;
+
+      let slideshowBlock;
+      if(showSlides === true){
+        slideshowBlock = <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/>
+      }
+
+     
+
+      return (
+        <div>
+          {mainItem}
+          {slideshowBlock}
+        </div>
       )
     }
 
