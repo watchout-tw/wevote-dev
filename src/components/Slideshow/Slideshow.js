@@ -112,11 +112,18 @@ export default class Slideshow extends Component {
                onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
                <i className="fa fa-chevron-right"></i> 
           </div>
-          <img alt={currentSlide.alt}
-               src={require(`./images/${currentSlide.filename}`)}
-               className={imageLoaded===true ? styles.slideImg : styles.slideImgLoading}
-               onLoad={this._setImageLoaded.bind(this,true)} />
-          
+
+          {
+              data.map((value,index)=>{
+                
+                return (
+                  <img alt={value.alt}
+                       src={require(`./images/${value.filename}`)}
+                       className={(index===currentIndex) ? styles.activeSlideImg : styles.inactiveSlideImg} />
+                )
+              })
+
+          }
           
       </div>
     );

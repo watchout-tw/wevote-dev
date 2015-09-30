@@ -28,23 +28,33 @@ export default class Issue extends Component {
     // 拿該議題的資料
     const currentIssue = issues[currentIssueName];
 
-    const index = issueOrder.indexOf(currentIssue.title);
-    const chapter = chapterOrder[index];
-
-    let preservedLines = this._generatePreservedLines(currentIssue);
-
+    let preservedLines = this._generateIntroLines();
+   
     this.state = {
         stage: "intro", 
-        currentLineIndex: 0,
+        
         preservedLines : preservedLines,
-        lines : [`任務${chapter}：${currentIssue.title}城堡`],
+        currentLineIndex: 0,
+        lines : [preservedLines[0]],
+
+        currentScript: "",
+        
         showSlides: "",
-        userPosition: "" //贊成, 反對, 不確定
+        userPosition: "", //贊成, 反對, 不確定
+
+        resetScript: false
     }
   
   }
-  _generatePreservedLines(issue){
+  _generateIntroLines(){
+    const {issues} = this.props;
+    const currentIssueName = this.props.params.issueName;
+    const issue = issues[currentIssueName];
+    const index = issueOrder.indexOf(issue.title);
+    const chapter = chapterOrder[index];
+
     return [
+          `任務${chapter}：${issue.title}城堡`,
           `${issue.title}城堡荒煙瀰漫，壟罩迷霧。`,
           `島民都不太清楚這個城堡的內部，`,
           `也因此被怪獸佔據，`,
@@ -86,121 +96,110 @@ export default class Issue extends Component {
         `這是雙方過去的交戰紀錄：`
       ]
   }
+
   componentDidMount(){ 
       window.addEventListener('keydown', this._handleKeyDown.bind(this));
   }
   componentWillUnmount() {
       window.removeEventListener('keydown', this._handleKeyDown.bind(this));  
   }
+  _resetScript(){
+    console.log("STOP-")
+    const {currentScript} = this.state;
+    if(currentScript){
+      currentScript.map((script, index)=>{
+        clearTimeout(script);
+      })
+    }
+    this.setState({
+      resetScript: true
+    })
 
-  _handleAddLine(){
-    let {currentLineIndex, preservedLines, lines} = this.state;
+  }
+  _runScript(preservedLines){
 
-    if( currentLineIndex + 1 <= preservedLines.length ){
-        //台詞還沒說完
+    console.log("RUN-")
+    //reset current lines & index
+    let adjustLines = (this.state.resetScript) ? [] : this.state.lines;
+    this.setState({
+        currentLineIndex: 0,
+        lines: adjustLines,
+        resetScript: false
+    });
+
+    let {currentLineIndex, lines} = this.state;
+    this._resetScript();
+    
+    let newScript = [];
+
+    preservedLines.map((value,index)=>{
         
-        preservedLines.map((value,index)=>{
-            currentLineIndex++;
-            setTimeout(()=>{
-              
-                console.log(">"+value)
-                lines.push(value);
-                this.setState({
-                  lines: lines
-                });
+        let script = setTimeout(()=>{
+          
+            console.log(">"+value)
+
+            lines.push(value);
+
+            this.setState({
+              lines: lines,
+              currentLineIndex: this.state.currentLineIndex+1
+            });
   
-            }, 500*index);
+        }, 500*index);
 
-        });
+        newScript.push(script);
+    });
 
-        this.setState({
-            currentLineIndex: currentLineIndex,
-            lines: lines
-        });
+    this.setState({
+        currentScript: newScript,
+    });
+
+  }
+
+  _handleShowIntro(issue){
+    const {currentLineIndex} = this.state;
+    if(currentLineIndex === 0){
+        let preservedLines = this._generateIntroLines(issue);
+        preservedLines.shift();
+
+        this._runScript(preservedLines);
 
     }else{
-        //台詞說完了，開始選擇要不要看 slides
-        
+        this._resetScript();
+
         let preservedLines = this._generateSlidesLines();
-        let lines = [];
-        lines.push(preservedLines[0]);
-
+        this._runScript(preservedLines);
+        
         this.setState({
-          stage: "slides",
-          lines: lines,
-          currentLineIndex: 0
-        })
-
-        let {currentLineIndex} = this.state;
-        preservedLines.map((value, index)=>{
-            
-            if(index !== 0){
-                currentLineIndex++;
-                setTimeout(()=>{
-                  
-                    console.log(">"+value)
-                    lines.push(value);
-                    this.setState({
-                      lines: lines
-                    });
-  
-                }, 500*index);
-
-            }
-            this.setState({
-                currentLineIndex: currentLineIndex
-            });
-        })
+           stage: "chooseSlides"
+        });
 
     }
+
   }
+
   _handleChooseSlides(value, event){
-      let nextStage = "slides";
-      if(value === false)
-        nextStage = "choosePosition";
+      let nextStage;
       
+      if(value === true){
+        nextStage = "slides";
+
+      }else{
+        nextStage = "choosePosition";
+      }
+    
       this.setState({
         showSlides: value,
         stage: nextStage 
-        
       })
-
   }
   _handleChoosePosition(action, event){
     let preservedLines = this._generateDecisionLines(action.value, action.issue);
-    let lines = [];
-    lines.push(preservedLines[0]);
+    this._runScript(preservedLines);
 
     this.setState({
-      userPosition: action.value,
-      stage: "results",
-      lines: lines,
-      currentLineIndex: 0
+      stage: "results"
     })
-
-    let {currentLineIndex} = this.state;
-    preservedLines.map((value, index)=>{
-        
-        if(index !== 0){
-            currentLineIndex++;
-            setTimeout(()=>{
-              
-                console.log(">"+value)
-                lines.push(value);
-                this.setState({
-                  lines: lines
-                });
-  
-            }, 500*index);
-
-        }
-        this.setState({
-            currentLineIndex: currentLineIndex
-        });
-    })
-
-    
-   
   }
   _handleSeeOthers(){
     this.setState({
@@ -208,13 +207,14 @@ export default class Issue extends Component {
     })  
   }
   _handleBackStage(){
-    const stages = ['intro', 'slides', 'choosePosition','results','others'];
+    const stages = ['intro', 'chooseSlides', 'slides', 'choosePosition','results','others'];
     const {stage} = this.state;
     let index = stages.indexOf(stage) - 1;
     if(index < 0)
        index = 0;
     this.setState({
-      stage: stages[index]
+      stage: stages[index],
+      currentLineIndex: 0
     })
   }
   _handleSetStage(value, event){
@@ -239,11 +239,12 @@ export default class Issue extends Component {
       case 'intro':
           if( e.keyCode === SPACE ) {
             e.preventDefault();
-            this._handleAddLine(); 
+            this._handleShowIntro(); 
           }
           break;
-
-      case 'slides':
+      
+      
+      case 'chooseSlides':
           if( e.keyCode === Y || e.keyCode === y) {
             e.preventDefault();
             this._handleChooseSlides(true);
@@ -256,9 +257,14 @@ export default class Issue extends Component {
 
           if( e.keyCode === SPACE ) {
             e.preventDefault();
-            this.setState({
-              stage: "choosePosition"
-            }) 
+            if(!this.state.showSlides){
+              
+            }else{
+              this.setState({
+                stage: "choosePosition"
+              }) 
+            }
+            
           }
           break;
 
@@ -306,16 +312,13 @@ export default class Issue extends Component {
 
     if(currentIssueName !== nextIssueName){
         const nextIssue = issues[nextIssueName];
-        const index = issueOrder.indexOf(nextIssue.title);
-        const chapter = chapterOrder[index];
-        let preservedLines = this._generatePreservedLines(nextIssue);
+        let preservedLines = this._generateIntroLines(nextIssue);
         this.state = {
             stage: "intro",
             showSlides: "",
             userPosition: "",
-            currentLineIndex: 0,
-            preservedLines : preservedLines,
-            lines : [`任務${chapter}：${nextIssue.title}城堡`]
+            lines : preservedLines[0],
+            resetScript: false
         }
     }
   }
@@ -334,11 +337,13 @@ export default class Issue extends Component {
       // 設定一開始看到的圖表 view，共有 parties, legislators, positions 三種 
       const currentView = this.props.params.view || "parties";
 
-      console.log("==== RENDER:"+stage+"=====")
+      console.log("==== RENDER:"+stage+"=====");
+      console.log("currentLineIndex:"+currentLineIndex);
+
       let introItem = (
             <Intro currentLineIndex={currentLineIndex}
                    lines={lines}
-                   handleAddLine={this._handleAddLine.bind(this)}
+                   handleShowIntro={this._handleShowIntro}
                    handleBackStage={this._handleBackStage.bind(this)} />
       )
       
@@ -389,6 +394,7 @@ export default class Issue extends Component {
           currentStage = introItem;
           break;
 
+        case 'chooseSlides':
         case 'slides':
           currentStage = slidesItem;
           break;
@@ -589,8 +595,10 @@ class Intro extends Component {
 
   render(){
     const styles = require('./Issue.scss');     
-    const { lines, currentLineIndex, handleAddLine, handleBackStage }  = this.props;
+    const { lines, currentLineIndex, handleShowIntro, handleBackStage }  = this.props;
     const breakLines = [1, 5, 6, 8, 10];
+    
+    if(!lines) return <div></div>
 
     let lineItems = lines.map((value, index)=>{
         
@@ -617,7 +625,7 @@ class Intro extends Component {
     let optionButton = (
       <div className={styles.actionButtons}>
         <div className={styles.arrowRight}
-             onClick={handleAddLine.bind(this)}></div>
+             onClick={handleShowIntro.bind(this)}></div>
       </div>
     )
 
