@@ -39,18 +39,18 @@ export default class Issue extends Component {
   }
   _generatePreservedLines(issue){
     return [
-        `在這個國度裡，每一座城堡，`,
-        `都有不同的人馬駐守著。`,
-        `駐守者可以決定城堡的相關制度及未來發展。`,
-        `甚至，要自我毀滅，讓${issue.title}完全消失，`,
-        `也不是完全不可能。`,
-        `嗯⋯⋯`,
-        `目前${issue.title}城堡是由反方佔領。`,
-        `有一群人正準備攻擊，想要奪下這個城堡，`,
-        `他們的目標是：${issue.statement}。`,
-        `現在兩方人馬即將對戰！`
-        
+          `在這個國度裡，每一座城堡，`,
+          `都有不同的人馬駐守著。`,
+          `駐守者可以決定城堡的相關制度及未來發展。`,
+          `甚至，要自我毀滅，讓${issue.title}完全消失，`,
+          `也不是完全不可能。`,
+          `嗯⋯⋯`,
+          `目前${issue.title}城堡是由反方佔領。`,
+          `有一群人正準備攻擊，想要奪下這個城堡，`,
+          `他們的目標是：${issue.statement}。`,
+          `現在兩方人馬即將對戰！`
     ];
+
   }
 
   componentDidMount(){ 
@@ -62,15 +62,28 @@ export default class Issue extends Component {
 
   _handleAddLine(){
     let {currentLineIndex, preservedLines, lines} = this.state;
+
     if( currentLineIndex + 1 <= preservedLines.length ){
-        //預設台詞還沒說完
-        lines.push(preservedLines[currentLineIndex]);
-        currentLineIndex++;
+        //台詞還沒說完
+        
+        preservedLines.map((value,index)=>{
+            currentLineIndex++;
+            setTimeout(()=>{
+              
+                console.log(">"+value)
+                lines.push(value);
+                this.setState({
+                  lines: lines
+                });
+  
+            }, 500*index);
+
+        });
 
         this.setState({
-          currentLineIndex: currentLineIndex,
-          lines: lines
-        })
+            currentLineIndex: currentLineIndex,
+            lines: lines
+        });
 
     }else{
         //台詞說完了，開始選擇
@@ -408,15 +421,17 @@ class Intro extends Component {
         let blink = (index === currentLineIndex)? <span className={styles.blinkingCursor}></span> : "";
         let data = lines[index];
         let animationClass = styles[`animation${data.length}`] ? styles[`animation${data.length}`] : styles[`animation12`];
+        
         let paragraphBreaks = (breakLines.indexOf(index)!==-1)? <div><br/></div> : "";
         return(
           <div>
             {paragraphBreaks}
-            <div className={`${styles.cssTyping} ${ animationClass }`} key={index}>
-              <div className={`${styles.cssText} `}>
-                {data}
-              </div>
-              {blink}
+            <div className={` ${styles.cssTyping} ${animationClass} `} 
+                 key={index}>
+                 <div className={`${styles.cssText} `}>
+                   {data}
+                 </div>
+                 {blink}
             </div>
           </div>
 
@@ -436,6 +451,9 @@ class Intro extends Component {
             <div className={styles.storyBlock}>
                 {lineItems}
                 {optionButton}
+            </div>
+            <div className={styles.keyboardHint}>
+              （按空白鍵繼續）
             </div>
             
         </div>
