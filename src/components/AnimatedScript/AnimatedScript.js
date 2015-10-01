@@ -48,6 +48,7 @@ export default class AnimatedScript extends Component {
     let newScript = [];
 
     let callback = ()=>{
+      console.log("timeout!!!")
       this.setState({
         currentScript:{
           scripts: this.state.currentScript.scripts,
@@ -67,8 +68,10 @@ export default class AnimatedScript extends Component {
               lines: lines,
               currentLineIndex: this.state.currentLineIndex+1
             });
+
+            callback();
   
-        }, 500*index, callback);
+        }, 500*index);
 
         newScript.push(script);
     });
@@ -118,7 +121,7 @@ export default class AnimatedScript extends Component {
      // }
   }
   _setStage(props){
-    const {stage, shouldAnimated, issue} = props;
+    const {stage, shouldAnimated, issue, handleNext} = props;
     const {currentScript} = this.state;
     console.log("[set stage]");
     let data;
@@ -133,17 +136,23 @@ export default class AnimatedScript extends Component {
           break;
 
       case 'introStory':
+
           // Roll the script
           let data = this._generateIntroLines(issue);
           if(shouldAnimated){
             this._runScript(data);
 
           }else{
+            //看看是否所有的腳本都跑完了
             let allTimedOut = true;
+            console.log("timeout script length:"+currentScript.scripts.length);
+            console.log("timeout count:"+currentScript.timedOutCount);
+
             if(currentScript.scripts.length > currentScript.timedOutCount)
                allTimedOut = false;
              
             if(allTimedOut === false){
+              //讓腳本停止
               console.log("!stop - [stop current script]")
               this._clearTimeoutScript();
               this.setState({
@@ -151,18 +160,32 @@ export default class AnimatedScript extends Component {
                 currentLineIndex: data.preservedLines.length-1
               })
 
+            }else{
+              //到下一個頁面
+              handleNext();
             }
             
 
           }
+
           break;
 
       case 'chooseSlides':
           console.log("-chooseSlides")
-          data = this._generateSlidesLines();
+          this.setState({
+              firstLine: ""
+          })
+          data = this._generateChooseSlidesLines();
           this._runScript(data);
-          
-          
+          break;
+
+      case 'slides':
+          console.log("-slides")
+          this.setState({
+              firstLine: ""
+          })
+          data = this._generateSlidesLines(issue);
+          this._runScript(data);
           break;
 
       default:
@@ -261,30 +284,40 @@ export default class AnimatedScript extends Component {
     const chapter = chapterOrder[index];
 
     return {
-        firstLine: `任務${chapter}：${issue.title}城堡`,
+        firstLine: `任務${chapter}：${issue.title}之城`,
         preservedLines: [
-          `${issue.title}城堡荒煙瀰漫，壟罩迷霧。`,
-          `島民都不太清楚這個城堡的內部，`,
-          `也因此被怪獸佔據，`,
-          `黑暗的力量持續造成諸多問題。`,
-          `為了創造美好家園，大家都知道必須驅逐怪獸。`,
-          `現在有三方勇者要前往驅逐怪獸，`,
-          `完成島嶼主人交付的任務。`,
-          `正方勇者提出使用${issue.statement}的方式戰鬥，`,
-          `但反方勇者卻不贊同。`,
-          `另外則有一些模糊意見的勇者，`,
-          `還拿不定主意⋯⋯`
+        
+          `${issue.title}之城周遭荒煙蔓草，迷霧籠罩。`,
+          `島上的人們鮮少踏足此地，也不清楚城堡裡面的樣子。`,
+          `因此，城堡被未知的怪獸佔據，`,
+          `威脅著人們的幸福。`,
+
+          `現在有一群勇者要前往驅逐怪獸，`,
+          `完成島上人們交付的任務。`,
+
+          `有一群勇者提出的戰鬥策略是：${issue.statement}，`,
+          `但也有勇者不贊同，`,
+          `還有一些勇者拿不定主意⋯⋯`
       ],
-      breakLines: [0, 5, 6, 8, 10]
+      breakLines: [0, 4, 6]
     };
 
   }
-  _generateSlidesLines(){
+  _generateChooseSlidesLines(){
       return {
         firstLine:"",
         preservedLines: [
-        `身為島嶼主人的你，在決定要選任哪一方的勇士前，`,
+        `身為島嶼主人的你，在決定作戰策略前，`,
         `要先看看戰役簡介嗎？（Y/n）`
+        ],
+        breakLines:[]
+      };
+  }
+  _generateSlidesLines(issue){
+      return {
+        firstLine:"",
+        preservedLines: [
+        `以下是${issue.title}之城的戰役介紹：`
         ],
         breakLines:[]
       };

@@ -8,6 +8,17 @@ import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueView from '../../components/IssueView/IssueView.js';
 import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
 
+//handle key down event, key code
+const SPACE = 32,
+          Y = 89,
+          y = 121,
+          N = 78,
+          n = 110,
+          S = 83,
+          s = 115,
+          B = 66,
+          b = 98;
+
 @connect(
     state => ({
                 issues: state.issues
@@ -40,15 +51,7 @@ export default class Issue extends Component {
  
   _handleKeyDown(e){
 
-    const SPACE = 32,
-          Y = 89,
-          y = 121,
-          N = 78,
-          n = 110,
-          S = 83,
-          s = 115,
-          B = 66,
-          b = 98;
+    
     
     if(e.keyCode === b || e.keyCode === B){
       e.preventDefault();
@@ -56,12 +59,33 @@ export default class Issue extends Component {
       return;
     }
 
-
+    // continue
     const { stage } = this.state;
     if( e.keyCode === SPACE ) {
         e.preventDefault();
         this._handleNext();
+        return;
     }
+
+    // choice
+    if( e.keyCode === Y || e.keyCode === y) {
+      e.preventDefault();
+      this._handleChoice(Y);
+      return;
+    }
+    if( e.keyCode === N || e.keyCode === n ) {
+      e.preventDefault();
+      this._handleChoice(N);
+      return;
+    }
+    if( e.keyCode === S || e.keyCode === s ) {
+      e.preventDefault();
+      this._handleChoice(S);
+      return;
+    }
+   
+
+
 
 
     // switch(stage){
@@ -142,29 +166,46 @@ export default class Issue extends Component {
   }
   _handleNext(){
      
-     const {stage, shouldAnimated} = this.state;
-     console.log("[ handle next ], shouldAnimated="+shouldAnimated)
+    const {stage, shouldAnimated} = this.state;
+    console.log("[ handle next ], shouldAnimated="+shouldAnimated)
 
-     switch(stage){
-          case 'intro':
-            this._handleSetStageForward("introStory");
-            break;
+    switch(stage){
+        case 'intro':
+          this._handleSetStageForward("introStory");
+          break;
 
-          case 'introStory':
-            if(shouldAnimated){
-              console.log("> SET TO STATIC")
-              this.setState({
-                 shouldAnimated: false 
-              })
-            }else{
-              this.setState({
-                 shouldAnimated: true
-              })
-              this._handleSetStageForward("chooseSlides");
-            }
-            
-            break;
-     }
+        case 'introStory':
+          if(shouldAnimated){
+            console.log("> SET TO STATIC")
+            this.setState({
+               shouldAnimated: false 
+            })
+          }else{
+            this.setState({
+               shouldAnimated: true
+            })
+            this._handleSetStageForward("chooseSlides");
+          }
+          break;
+    }
+  }
+  _handleChoice(choice){
+    const {stage} = this.state;
+    console.log("[ handle choice ]")
+
+    switch(stage){
+        case 'chooseSlides':
+          let showSlides = (choice === Y) ? true : false ;
+          let nextStage = (choice === Y) ? "slides" : "choosePosition" ;
+          this.setState({
+            showSlides: showSlides
+          })
+          this._handleSetStageForward(nextStage);
+
+          break;
+
+         
+    }
   }
   _handleSetStageForward(value, event){// Forward
 
@@ -228,21 +269,22 @@ export default class Issue extends Component {
             </div>
       )
      
+      let slideshowBlock = (showSlides === true) ? <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/> : "";
+      let slidesItem = (
+          <div>
+              <AnimatedScript stage={stage}
+                              issue={currentIssue}
+                              shouldAnimated={shouldAnimated}
+                              showNext={showNext}
+                              handleNext={this._handleNext.bind(this)}/>
+              {slideshowBlock}
+          </div>
+      )
+
+
       let resultsItem;
       let othersItem;
-
-      let chooseSlidesItem = (
-            <div>
-                <AnimatedScript stage={stage}
-                                issue={currentIssue}
-                                shouldAnimated={shouldAnimated}
-                                showNext={showNext}
-                                handleNext={this._handleNext.bind(this)}/>
-                <div className={styles.keyboardHint}>
-                  （按空白鍵繼續）
-                </div>
-            </div>
-      )
+     
      
       // let resultsItem = (
       //       <Results handleChoosePosition={this._handleChoosePosition.bind(this)}
@@ -283,9 +325,6 @@ export default class Issue extends Component {
           break;
 
         case 'chooseSlides':
-          stageItem = chooseSlidesItem;
-          break;
-
         case 'slides':
           stageItem = slidesItem;
           break;
