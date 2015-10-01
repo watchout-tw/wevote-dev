@@ -1,0 +1,155 @@
+/* ------------------------------------------------ */
+/* Typing Animaiton */
+/* ------------------------------------------------ */
+.storyBlock {
+    text-align: left;
+    margin: 0 auto 30px auto;
+
+    max-width: 480px;
+    padding: 30px;
+    
+    background: white;
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.05);
+
+    font-size: 20px;
+    position: relative;
+
+}
+.withMargin {
+    margin-top: 30px;
+}
+/* # of steps = # of characters  */
+@-webkit-keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@-moz-keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+.cssTyping { 
+    font-family: Consolas, monospace;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+/*
+$animation-list: (
+  12,14,21,24,26
+);
+@each $value in $animation-list {
+
+  #animation{nth($value, 1)}{
+      -webkit-animation: typing 400ms steps(nth($value, 1), end);
+      -moz-animation: typing 400ms steps(nth($value, 1), end);
+
+  }
+
+}
+*/
+
+.animation12 { 
+    -webkit-animation: typing 400ms steps(12, end);
+    -moz-animation: typing 400ms steps(12, end);
+}
+.animation14 { 
+    -webkit-animation: typing 500ms steps(14, end);
+    -moz-animation: typing 500ms steps(14, end);
+}
+.animation21 { 
+    -webkit-animation: typing 1200ms steps(21, end);
+    -moz-animation: typing 1200ms steps(21, end);
+}
+.animation24 { 
+    -webkit-animation: typing 1450ms steps(24, end);
+    -moz-animation: typing 1450ms steps(24, end);
+}
+.animation26 { 
+    -webkit-animation: typing 1600ms steps(26, end);
+    -moz-animation: typing 1600ms steps(26, end);
+}
+
+.cssText {
+    display: inline-block;
+}
+.blinkingCursor {
+    vertical-align: top;
+    border-right: 2px solid;
+    animation: blink-caret 1s step-end infinite;
+    -webkit-animation: blink-caret 1s step-end infinite;
+    -moz-animation: blink-caret 1s step-end infinite;
+}
+/*
+你好，歡迎來到公投城堡。12
+你好，歡迎來到婚姻平權城堡。14
+在這個國度裡，每一座城堡，都有不同的人馬駐守著。24
+駐守的人可以決定城堡的相關制度及未來發展。21
+甚至，要自我毀滅，讓公投完全消失，也不是完全不可能。26
+要不要先聽聽兩邊說法？（Y/n）
+請問你要支持哪一個陣營？（Y/n/s）
+嗯，你決定加入支持方陣營
+這是雙方過去的交戰紀錄
+嗯⋯⋯2
+*/
+
+.actionButtons {
+  font-size: 24px;
+  position: relative;
+  text-align: center;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.actionButton {
+  display: inline-block;
+  font-size: 24px;
+  position: relative; 
+  margin: 4px 10px;
+  padding: 3px 20px;
+  background: #6F6F78;
+  box-shadow: 1px 2px 1px 1px rgba(0,0,0,0.12);
+  color: #FDFDF5;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.actionButton:hover {
+  box-shadow: 1px 2px 1px 1px rgba(0,0,0,0.22);
+}
+
+.arrowRight {
+  width: 0; 
+  height: 0; 
+  position: absolute;
+  right: -10px;
+  display: inline-block;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #CC2C2C;
+  cursor: pointer;
+}
+.backStage {
+  cursor: pointer;
+  text-align: left;
+  max-width: 480px;
+  margin: 30px auto 4px auto;
+  color: #6D6868;
+  padding-left: 4px;
+}
+.backStage:hover {
+  text-decoration: underline;
+}
+.keyboardHint {
+  margin: 40px 10px;
+}

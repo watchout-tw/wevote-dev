@@ -37,14 +37,13 @@ class Record extends Component {
     /* active record */    
     let detailText;
     if(active){
-          let date = moment.unix(activeRecord.date);
           
-          let preview = (activeRecord.content.length > 60) ? activeRecord.content.slice(0,60)+" ..." : activeRecord.content;
+          let preview = (data.content.length > 60) ? data.content.slice(0,60)+" ..." : data.content;
           detailText =  (
           <div className={styles.activeBlock}>
-              <Link to={`/records/${activeRecord.id}`} className={styles.activeCube}>
+              <Link to={`/records/${data.id}`} className={styles.activeCube}>
                   <div className={styles.activeContent}>
-                    <div>{date.format('YYYY-MM-DD')} / {activeRecord.legislator} / {activeRecord.meetingCategory}</div>
+                    <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
                     <div>{preview}</div>
                   </div>
               </Link>
