@@ -184,7 +184,7 @@ export default class Issue extends Component {
   _handleSetStage(value, event){// Forward
 
     console.log("[handle set stage forward]")
-    const hasNext = ["intro", "introStory", "slides", "results", "others"];
+    const hasNext = ["intro", "introStory", "slides", "results"];
     let shouldShowNext = (hasNext.indexOf(value) !== -1) ? true : false ;
 
     // reset 'showSlides' state, otherwise it will show according to previous choice

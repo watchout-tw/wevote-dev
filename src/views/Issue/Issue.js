@@ -25,7 +25,8 @@ export default class Issue extends Component {
         localInteractivePrefCheck: false,
 
         hasPlayedVersion1: false, 
-        showNotification: true
+        showNotification: true,
+        hasPlayed: false
       }
   }
   _setCurrentView(value){
@@ -62,8 +63,11 @@ export default class Issue extends Component {
   }
 
   _hasPlayed(){
-      this._markLocalStoragePlayed();
-      this._handleSetInteractive(false);
+      // Interactive 通知使用者已經玩完一輪了
+      // 等到換議題的時候再更新料
+      this.setState({
+        hasPlayed: true
+      })
   }
   _skipInteractive(){
       this._handleSetInteractive(false);
@@ -144,7 +148,18 @@ export default class Issue extends Component {
   }
   componentDidUpdate(prevProps, prevState){//Only runs in client side
       this._checkLocalStorage();
+      if(this.props.params.issueName !== prevProps.params.issueName){
+          if(this.state.hasPlayed){
+              this._markLocalStoragePlayed();
+              this._handleSetInteractive(false);
+              this.setState({
+                 hasPlayed: false 
+              })
+     
+          }
+      }
   }
+
   
   render(){
     
