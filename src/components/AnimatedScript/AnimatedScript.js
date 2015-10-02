@@ -85,43 +85,8 @@ export default class AnimatedScript extends Component {
 
   }
   
-  _handleNext(){
-     const {stage, shouldAnimated, issue, handleSetStageForward} = this.props;
-     const {scriptRolled} = this.state;
-     console.log("[ handle next ], shouldAnimated="+shouldAnimated)
-
-     // switch(stage){
-     //      case 'intro':
-     //        //if(shouldAnimated){
-     //          // Roll the script
-     //          // let data = this._generateIntroLines(issue);
-     //          // this._runScript(data);
-     //          // this.setState({
-     //          //     scriptRolled: true
-     //          // })
-     //          handleSetStageForward("introStory");
-     //          break;
-
-     //      case 'introStory':
-     //        //}else{
-     //          // Go to next stage
-     //          console.log("- Go to next stage")
-     //          //Reset
-     //          this.setState({
-     //              firstLine: "",
-     //              currentLineIndex: 0,
-     //              lines: [],
-     //              preservedLines: [],
-     //              scriptRolled: false
-     //          })
-     //          handleSetStageForward("chooseSlides");
-
-            
-     //      break;
-     // }
-  }
   _setStage(props){
-    const {stage, shouldAnimated, issue, handleNext} = props;
+    const {stage, shouldAnimated, issue, handleNext, userPosition} = props;
     const {currentScript} = this.state;
     console.log("[set stage]");
     let data;
@@ -143,31 +108,28 @@ export default class AnimatedScript extends Component {
             this._runScript(data);
 
           }else{
-            //看看是否所有的腳本都跑完了
-            let allTimedOut = true;
-            console.log("timeout script length:"+currentScript.scripts.length);
-            console.log("timeout count:"+currentScript.timedOutCount);
-
-            if(currentScript.scripts.length > currentScript.timedOutCount)
-               allTimedOut = false;
-             
-            if(allTimedOut === false){
-              //讓腳本停止
-              console.log("!stop - [stop current script]")
-              this._clearTimeoutScript();
-              this.setState({
-                lines: data.preservedLines,
-                currentLineIndex: data.preservedLines.length-1
-              })
-
-            }else{
-              //到下一個頁面
-              handleNext();
-            }
-            
-
+                //看看是否所有的腳本都跑完了
+                let allTimedOut = true;
+                console.log("timeout script length:"+currentScript.scripts.length);
+                console.log("timeout count:"+currentScript.timedOutCount);
+    
+                if(currentScript.scripts.length > currentScript.timedOutCount)
+                   allTimedOut = false;
+                 
+                if(allTimedOut === false){
+                  //讓腳本停止
+                  console.log("!stop - [stop current script]")
+                  this._clearTimeoutScript();
+                  this.setState({
+                    lines: data.preservedLines,
+                    currentLineIndex: data.preservedLines.length-1
+                  })
+    
+                }else{
+                  //到下一個頁面
+                  handleNext();
+                }
           }
-
           break;
 
       case 'chooseSlides':
@@ -188,8 +150,36 @@ export default class AnimatedScript extends Component {
           this._runScript(data);
           break;
 
+      case 'choosePosition':
+          console.log("-choosePosition")
+          this.setState({
+              firstLine: ""
+          })
+          data = this._generateChoosePositionLines(issue);
+          this._runScript(data);
+          break;
+
+      case 'results':
+          console.log("-results")
+          this.setState({
+              firstLine: ""
+          })
+          data = this._generateResultsLines(userPosition, issue);
+          this._runScript(data);
+          break;
+
+      case 'others':
+          console.log("-ohters")
+          this.setState({
+            firstLine: ""
+          })
+          data = this._generateSeeOtherLines();
+          this._runScript(data);
+          break;
+
       default:
           console.log("-default x")
+          break;
 
     }
   }
@@ -288,7 +278,9 @@ export default class AnimatedScript extends Component {
         preservedLines: [
         
           `${issue.title}之城周遭荒煙蔓草，迷霧籠罩。`,
-          `島上的人們鮮少踏足此地，也不清楚城堡裡面的樣子。`,
+          `島上的人們鮮少踏足此地，`,
+          `也不清楚城堡裡面的樣子。`,
+          
           `因此，城堡被未知的怪獸佔據，`,
           `威脅著人們的幸福。`,
 
@@ -299,7 +291,7 @@ export default class AnimatedScript extends Component {
           `但也有勇者不贊同，`,
           `還有一些勇者拿不定主意⋯⋯`
       ],
-      breakLines: [0, 4, 6]
+      breakLines: [0, 3, 5, 7]
     };
 
   }
@@ -322,43 +314,51 @@ export default class AnimatedScript extends Component {
         breakLines:[]
       };
   }
-  _generateDecisionLines(userPosition, issue){
-      let positionChoice1, positionChoice2; 
+  _generateChoosePositionLines(issue){
+       return {
+        firstLine:"",
+        preservedLines: [
+          `你贊成「${issue.statement}」這個戰鬥策略嗎？`,
+          `（Y/n/s）`
+        ],
+        breakLines:[]
+      };
+  }
+  _generateResultsLines(userPosition, issue){
+      let lines = [];
       if(userPosition === "贊成"){
-        positionChoice1 = `你決定選任贊成方的勇士，`;
-        positionChoice2 = `使用${issue.statement}的方式戰鬥。`;
+        lines.push(`你決定贊成使用「${issue.statement}」的戰鬥策略。`);
+        lines.push(`Fighto!!!`);
+        lines.push(`這是雙方過去的交戰紀錄：`);
       }
       if(userPosition === "反對"){
-        positionChoice1 = `你決定選任反對方的勇士，`;
-        positionChoice2 = `反對用${issue.statement}的方式戰鬥。`;
+        lines.push(`你決定反對使用「${issue.statement}」的戰鬥策略。`);
+        lines.push(`Fighto!!!`);
+        lines.push(`這是雙方過去的交戰紀錄：`);
       }
       if(userPosition === "不確定"){
-        positionChoice1 = `目前為止，你還無法下決定。`;
-        positionChoice2 = `你決定再想想⋯`;
+        lines.push(`你決定再想想⋯`);
+        lines.push(`這是雙方過去的交戰紀錄：`);
+      }
+      console.log("*****")
+      console.log(lines)
+    
+      return { 
+
+          firstLine:"",
+          preservedLines: lines,
+          breakLines:[] 
       }
 
-      if(userPosition){
-          return { 
-            firstLine:"",
-            preservedLines: [
-              positionChoice1,
-              positionChoice2,
-              `Fighto!!!`,
-              `這是雙方過去的交戰紀錄：`
-            ],
-            breakLines:[] 
-          }
+  }
+  _generateSeeOtherLines(userPosition, issue){
+      return { 
 
-      }else{
-          return {
-            firstLine:"",
-            preservedLines: [
-              `這是雙方過去的交戰紀錄：`
-            ],
-            breakLines:[]
-          }
+          firstLine:"",
+          preservedLines: [`選擇其他任務：`],
+          breakLines:[] 
+      }
 
-      }   
   }
 }
 

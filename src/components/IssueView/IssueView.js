@@ -27,9 +27,7 @@ export default class IssueView extends Component {
     render(){
       const styles = require('./IssueView.scss');  
       const {currentView, currentIssue, currentIssueName, 
-             partyView, legislatorView, positionView,
-             handleSeeOthers,
-             handleBackStage} = this.props;
+             partyView, legislatorView, positionView} = this.props;
 
      
 
