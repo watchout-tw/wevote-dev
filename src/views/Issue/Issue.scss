@@ -9,13 +9,83 @@ $breakLarge: 800px;
 }
 .interactiveControl {
     position: fixed;
-    top: 100px;
-    left: 30px;
-    background: blue;
-    color: yellow;
-    padding: 20px;
+    top: 86px;
+    left: 10px;
+    width: 80px;
+    background: white;
+    padding: 10px;
     z-index: 100;
     cursor: pointer;
-    border: 4px solid white;
+    border: 1px solid;
+}
+.headerNotification {
+  background: #523F3F;
+  color: white;
+  text-align: center;
+  padding: 10px 40px 10px 10px;
+  line-height: 1.6;
+  will-change: max-height;
+}
+@media all and (min-width: $breakLarge){
+  .headerNotification {
+    padding: 10px;
+  }
+}
+.headerNotification.isHide {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 800ms;
+  padding: 0;
+
+}
+.playAgain {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(230,230,230);
+}
+.playAgain:hover {
+  color: white;
+}
+.settingPanel {
+  width: 100%;
+  z-index: 100;
+  position: relative;
+  min-height: 5px;
+}
+.settingButtons {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+}
+.settingButton {
+  display: inline-block;
+  font-size: 28px;
+  cursor: pointer;
+  color: #837878;
+  text-align: center;
+}
+.settingButton:hover {
+  color: rgb(53,55,54);
+}
+.settingText {
+  font-size: 14px;
+  color: transparent;
+}
+.settingButton:hover .settingText {
+  color: black;
+}
+.removeButton {
+  position: absolute;
+  right: 18px;
+  top: 2px;
+  cursor: pointer;
+  font-size: 24px;
+  color: rgb(240,240,240);
+}
+.removeButton:hover {
+  color: white;
+  font-size:26px;
+  top: 1px;
 }
 

@@ -144,6 +144,15 @@ $breakLarge: 800px;
 }
 .keyboardHint {
   margin: 20px 10px 100px 10px;
+  color: rgb(80,80,80);
+}
+.skipInteractive {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.skipInteractive:hover {
+  color: black;
 }
 
 

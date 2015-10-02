@@ -1,6 +1,10 @@
 .wrap {
 	display: inline-block;
 }
+.optionImg {
+	width: 50px;
+    display: block;
+}
 .optionItem:hover .optionImg, .optionImg:hover, .optionImgActive {
 	opacity: 1;
 }

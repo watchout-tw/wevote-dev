@@ -1,7 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
-import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
 import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
@@ -198,8 +197,8 @@ export default class Issue extends Component {
   componentWillReceiveProps(nextProps){
     
     const {issues} = this.props;
-    const currentIssueName = this.props.params.issueName;
-    const nextIssueName = nextProps.params.issueName
+    const currentIssueName = this.props.issueName;
+    const nextIssueName = nextProps.issueName
     const {stage} = this.state;
 
     if(currentIssueName !== nextIssueName || (stage !== "intro")){
@@ -218,7 +217,7 @@ export default class Issue extends Component {
   render(){
     
       const styles = require('./InteractiveIssue.scss');
-      const {issues, currentIssueName, currentView} = this.props;
+      const {issues, currentIssueName, currentView, markLocalStoragePlayed, skipInteractive} = this.props;
       const {stage, shouldAnimated, showNext, showSlides, userPosition} = this.state;
   
       // 拿該議題的資料
@@ -236,7 +235,8 @@ export default class Issue extends Component {
 
       let introItem = (
             <div className={styles.keyboardHint}>
-                  （按空白鍵繼續）
+                  （按空白鍵繼續）或是 <div className={styles.skipInteractive}
+                                         onClick={skipInteractive.bind(null)}>直接看結果</div>
             </div>
       )
      
@@ -285,6 +285,7 @@ export default class Issue extends Component {
 
         case 'results':
           stageItem = resultsItem;
+          markLocalStoragePlayed();
           break;
 
         case 'others':
