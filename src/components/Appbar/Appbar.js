@@ -40,7 +40,7 @@ export default class Appbar extends Component {
 
               <div className={styles.devButton}
                    onClick={this._handleDevClear.bind(this)}>清除紀錄
-                   <span className={styles.devButtonInfo}>測試時使用，正式上線不會有</span>
+                   <span className={styles.devButtonInfo}>測試時使用</span>
                    </div>
 
               <ul className={`${styles.lists} ${showStyle}`}>
