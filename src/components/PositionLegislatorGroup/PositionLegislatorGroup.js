@@ -59,7 +59,7 @@ class LegislatorAvatar extends Component {
     if(records)
         recordCount = records.length;
 
-    if(active){
+    if(active===true){
         detailText = ( 
             <div className={styles.activeCube}>
                 <div>{name}</div>
@@ -71,7 +71,7 @@ class LegislatorAvatar extends Component {
     return (
         <Link to={`/people/${people_name2id(name)}/${currentIssueName}`}
               className={styles.avatarItem}
-              onMouseEenter={this._toggleActive.bind(this, true)}
+              onMouseEnter={this._toggleActive.bind(this, true)}
               onMouseLeave={this._toggleActive.bind(this, false)}>
          
           {detailText}

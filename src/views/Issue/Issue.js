@@ -219,7 +219,7 @@ export default class Issue extends Component {
 
 
       // 畫面右上方的控制鍵
-      let alternative = (interactive) ? (
+      let alternative = (interactive === true) ? (
               <div className={styles.settingButton}
                    onClick={this._handleSetInteractive.bind(this,false)}>
                    <i className="fa fa-rocket"></i>

@@ -67,9 +67,16 @@ export default class PartyIssue extends Component {
 
     let issueMenu = (showMenu===true) ? (Object.keys(issues).map((currentIssueName,i)=>{
         let active = (issueURL === currentIssueName) ? styles.menuActive : "";
+        
+        /// Refine 拿數字的方法
+        let dataName = issues[currentIssueName].titleEng;
+        let recordsCount = partyPositions.data.positions[dataName].totalCounts;
+
         return  <Link className={` ${styles.menu} ${active}`}
                       to={`/parties/${id}/${currentIssueName}`} 
-                      key={i}>{issues[currentIssueName].title}</Link>;
+                      key={i}>
+                     {` ${issues[currentIssueName].title}(${recordsCount}) `}
+                </Link>;
         
     })) : "";
     

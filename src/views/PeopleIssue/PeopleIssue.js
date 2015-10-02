@@ -73,13 +73,19 @@ export default class PeopleIssue extends Component {
     if(!legislatorPositions.data.positions) return <div></div>;
 
     const position = legislatorPositions.data.positions[issueDataName];
+    const currentLegislatorPosition = legislatorPositions.data.positions;
     const dominantPosition = legislatorPositions.data.positions[issueDataName].dominantPosition;
 
     let issueMenu = (showMenu===true) ? (Object.keys(issues).map((currentIssueName,i)=>{
         let active = (issueURL === currentIssueName) ? styles.menuActive : "";
+        /// Refine 拿數字的方法
+        let dataName = issues[currentIssueName].titleEng;
+        let recordsCount = currentLegislatorPosition[dataName].totalCounts;
         return  <Link className={` ${styles.menu} ${active}`}
                       to={`/people/${id}/${currentIssueName}`} 
-                      key={i}>{issues[currentIssueName].title}</Link>;
+                      key={i}>
+                {`${issues[currentIssueName].title}(${recordsCount})`}
+                </Link>;
         
     })) : "";
 
