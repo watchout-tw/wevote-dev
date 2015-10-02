@@ -7,145 +7,15 @@ $breakLarge: 800px;
   min-height: 500px;
 
 }
-.innerWrap {
-  text-align: center;
+.interactiveControl {
+    position: fixed;
+    top: 100px;
+    left: 30px;
+    background: blue;
+    color: yellow;
+    padding: 20px;
+    z-index: 100;
+    cursor: pointer;
+    border: 4px solid white;
 }
-.figHeader {
-  min-height: 80px;
-  max-width: 800px;
-  margin: 50px auto 0 auto;
-
-}
-.issueBlock {
-  border: 2px solid;
-  margin: 0 5px;
-  font-size: 20px;
-  display: inline-block;
-}
-@media all and (min-width: $breakLarge){
-	.issueBlock {
-		float: left;
-		margin-top: 10px;
-	}
-	.issueController {
-		float: right;
-	}
-}
-.issueTitle {
-  background: black;
-  color: white;
-  padding: 10px;
-}
-.issueStatement {
-  background: white;
-  padding: 10px;
-}
-@media all and (min-width: $breakSmall){
-  .issueTitle {
-    display: inline-block;
-  }
-  .issueStatement {
-    display: inline-block;
-  }
-
-}
-.records {
-  margin: 60px auto;
-  max-width: 1000px;
-  position: relative;
-  text-align: center;
-  padding-bottom: 100px;
-}
-.collaboratorInfo {
-	text-align: center;
-    margin: 0 -9%;
-    background: #d3d3d3;
-}
-.link, .link:visited {
-  color: #b88234;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px;
-}
-.link:hover {
-  color: #b88234;
-  text-decoration: underline;
-
-}
-.moreInfo {
-	background: white;
-	line-height: 2;
-	text-align: left;
-	padding-bottom: 50px;
-}
-.moreInfoInner {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 40px 10px;
-	font-size: 22px;
-  color: rgb(53,55,54);
-}
-.linkButton, .linkButton:visited {
-	color: #D6A051;
-  border: 2px solid #D6A051;
-  padding: 0px 10px;
-  font-size: 18px;
-  margin: 0 10px 0px 10px;
-  display: inline-block;
-  text-decoration: none;
-}
-.linkButton:hover {
-	background: #D6A051;
-	color: white;
-}
-.comingButton {
-	color: #D6A051;
-    border: 2px dotted #D6A051;
-    padding: 0px 10px;
-    font-size: 18px;
-    margin: 0 10px 0px 10px;
-    display: inline-block;
-    text-decoration: none;
-}
-.actionButtons {
-  font-size: 24px;
-  position: relative;
-  text-align: center;
-  max-width: 420px;
-  margin: 20px auto 30px auto;
-}
-.actionButton {
-  display: inline-block;
-  font-size: 24px;
-  position: relative; 
-  margin: 4px 10px;
-  padding: 3px 20px;
-  background: #6F6F78;
-  box-shadow: 1px 2px 1px 1px rgba(0,0,0,0.12);
-  color: #FDFDF5;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.actionButton:hover {
-  box-shadow: 1px 2px 1px 1px rgba(0,0,0,0.22);
-}
-
-.backStage {
-  cursor: pointer;
-  text-align: left;
-  max-width: 480px;
-  margin: 30px auto 4px auto;
-  color: #6D6868;
-  padding-left: 4px;
-  min-height: 30px;
-}
-.backStage:hover {
-  text-decoration: underline;
-}
-.keyboardHint {
-  margin: 20px 10px 100px 10px;
-}
-
-
-
 
