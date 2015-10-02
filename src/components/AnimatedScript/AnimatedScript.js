@@ -356,7 +356,7 @@ export default class AnimatedScript extends Component {
 
           firstLine:"",
           preservedLines: [
-            `${issue.statement}之城任務完成了！`,
+            `【${issue.title}】之城任務完成了！`,
             `選擇其他任務：`
           ],
           breakLines:[] 
