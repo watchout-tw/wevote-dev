@@ -118,9 +118,7 @@ export default class Issue extends Component {
         case 'results':
             this._handleSetStage("others");
             break;
-        case 'others':
-            this.props.hasPlayed();
-            break;
+       
     }
   }
   _handleChoice(choice){
