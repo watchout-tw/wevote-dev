@@ -118,6 +118,9 @@ export default class Issue extends Component {
         case 'results':
             this._handleSetStage("others");
             break;
+        case 'others':
+            this.props.hasPlayed();
+            break;
     }
   }
   _handleChoice(choice){
@@ -181,7 +184,7 @@ export default class Issue extends Component {
   _handleSetStage(value, event){// Forward
 
     console.log("[handle set stage forward]")
-    const hasNext = ["intro", "introStory", "slides", "results"];
+    const hasNext = ["intro", "introStory", "slides", "results", "others"];
     let shouldShowNext = (hasNext.indexOf(value) !== -1) ? true : false ;
 
     // reset 'showSlides' state, otherwise it will show according to previous choice
@@ -211,13 +214,14 @@ export default class Issue extends Component {
             userPosition: "" //贊成, 反對, 不確定
         }
     }
-  }
 
+
+  }
 
   render(){
     
       const styles = require('./InteractiveIssue.scss');
-      const {issues, currentIssueName, currentView, markLocalStoragePlayed, skipInteractive, setCurrentView} = this.props;
+      const {issues, currentIssueName, currentView, skipInteractive, setCurrentView} = this.props;
       const {stage, shouldAnimated, showNext, showSlides, userPosition} = this.state;
   
       // 拿該議題的資料
@@ -286,7 +290,6 @@ export default class Issue extends Component {
 
         case 'results':
           stageItem = resultsItem;
-          markLocalStoragePlayed();
           break;
 
         case 'others':
@@ -315,5 +318,7 @@ export default class Issue extends Component {
         </div>
       )
   }
+  //
+          
 }
 

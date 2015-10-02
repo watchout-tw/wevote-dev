@@ -173,7 +173,7 @@ export default class AnimatedScript extends Component {
           this.setState({
             firstLine: ""
           })
-          data = this._generateSeeOtherLines();
+          data = this._generateSeeOtherLines(issue);
           this._runScript(data);
           break;
 
@@ -351,11 +351,14 @@ export default class AnimatedScript extends Component {
       }
 
   }
-  _generateSeeOtherLines(userPosition, issue){
+  _generateSeeOtherLines(issue){
       return { 
 
           firstLine:"",
-          preservedLines: [`選擇其他任務：`],
+          preservedLines: [
+            `${issue.statement}之城任務完成了！`,
+            `選擇其他任務：`
+          ],
           breakLines:[] 
       }
 
