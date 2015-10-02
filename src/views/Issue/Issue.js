@@ -4,9 +4,10 @@ import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
-import Slideshow from '../../components/Slideshow/Slideshow.js';
-import IssueView from '../../components/IssueView/IssueView.js';
 import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
+import Slideshow from '../../components/Slideshow/Slideshow.js';
+import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
+
 
 //handle key down event, key code
 const SPACE = 32,
@@ -245,9 +246,9 @@ export default class Issue extends Component {
       let slidesItem = (showSlides === true) ? <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/> : "";
     
       let resultsItem = (stage === "results") ? (
-        <IssueView currentView={currentView}
-                   currentIssue={currentIssue}
-                   currentIssueName={currentIssueName} /> 
+        <IssueFigure currentView={currentView}
+                     currentIssue={currentIssue}
+                     currentIssueName={currentIssueName} /> 
       ):"";
 
 

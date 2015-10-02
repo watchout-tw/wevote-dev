@@ -17,7 +17,7 @@ import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPart
               }),
     dispatch => bindActionCreators({}, dispatch))
 
-export default class IssueView extends Component {
+export default class IssueFigure extends Component {
     static propTypes = {
       partyView: PropTypes.object.isRequired,
       legislatorView: PropTypes.object.isRequired,
@@ -25,7 +25,7 @@ export default class IssueView extends Component {
     }
    
     render(){
-      const styles = require('./IssueView.scss');  
+      const styles = require('./IssueFigure.scss');  
       const {currentView, currentIssue, currentIssueName, 
              partyView, legislatorView, positionView} = this.props;
 
