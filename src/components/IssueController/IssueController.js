@@ -29,13 +29,14 @@ export default class IssueController extends Component {
   render() {
 
     const styles = require('./IssueController.scss');
-    const { currentIssue, currentView} = this.props;
+    const { currentIssue, currentView, setCurrentView} = this.props;
 
     let viewOptionItems = views.map((value,index)=>{
 
         return <OptionItem data={value} key={index}
                            currentIssue={currentIssue}
-                           currentView={currentView} />
+                           currentView={currentView}
+                           setCurrentView={setCurrentView} />
     })
 
     return (
@@ -56,7 +57,7 @@ class OptionItem extends Component {
   }
   render() {
     const styles = require('./IssueController.scss');
-    const {data, currentIssue, currentView} = this.props;
+    const {data, currentIssue, currentView, setCurrentView} = this.props;
 
     let imgURL = require(`./images/${data.id}.svg`);
     let active = false;
@@ -83,11 +84,11 @@ class OptionItem extends Component {
     let imgActive  = (data.view === currentView) ? styles.optionImgActive : styles.optionImgInactive;
 
     return (
-        <Link to={`/issues/${issue}/${data.view}#view`}
-              className={`${styles.optionItem} ${itemActive}`}>
+        <div className={`${styles.optionItem} ${itemActive}`}
+             onClick={setCurrentView.bind(null, data.view)}>
           <img className={`${styles.optionImg} ${imgActive}`} src={imgURL} />
           {data.title}
-        </Link>  
+        </div>  
     )
   }
 

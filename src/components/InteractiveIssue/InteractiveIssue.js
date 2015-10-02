@@ -217,7 +217,7 @@ export default class Issue extends Component {
   render(){
     
       const styles = require('./InteractiveIssue.scss');
-      const {issues, currentIssueName, currentView, markLocalStoragePlayed, skipInteractive} = this.props;
+      const {issues, currentIssueName, currentView, markLocalStoragePlayed, skipInteractive, setCurrentView} = this.props;
       const {stage, shouldAnimated, showNext, showSlides, userPosition} = this.state;
   
       // 拿該議題的資料
@@ -245,7 +245,8 @@ export default class Issue extends Component {
       let resultsItem = (stage === "results") ? (
         <IssueFigure currentView={currentView}
                      currentIssue={currentIssue}
-                     currentIssueName={currentIssueName} /> 
+                     currentIssueName={currentIssueName}
+                     setCurrentView={setCurrentView} /> 
       ):"";
 
 

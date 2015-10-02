@@ -27,7 +27,8 @@ export default class IssueFigure extends Component {
     render(){
       const styles = require('./IssueFigure.scss');  
       const {currentView, currentIssue, currentIssueName, 
-             partyView, legislatorView, positionView} = this.props;
+             partyView, legislatorView, positionView,
+             setCurrentView} = this.props;
 
      
 
@@ -103,7 +104,8 @@ export default class IssueFigure extends Component {
                   </div>
                   
                   <div className={styles.issueController}>
-                    <IssueController currentIssue={currentIssue} currentView={currentView}/>
+                    <IssueController currentIssue={currentIssue} currentView={currentView}
+                                     setCurrentView={setCurrentView}/>
                   </div>
               </div>
     

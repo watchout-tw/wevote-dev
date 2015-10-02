@@ -26,6 +26,12 @@ export default class Issue extends Component {
         showNotification: true
       }
   }
+  _setCurrentView(value){
+      console.log("set current view to:"+value);
+      this.setState({
+          currentView: value
+      })
+  }
   _toggleInteractive(){
       this.setState({
           interactive: !this.state.interactive
@@ -114,10 +120,12 @@ export default class Issue extends Component {
           <InteractiveIssue currentIssueName={currentIssueName}
                             currentView={currentView}
                             markLocalStoragePlayed={this._markLocalStoragePlayed.bind(this)}
-                            skipInteractive={this._skipInteractive.bind(this)} />
+                            skipInteractive={this._skipInteractive.bind(this)}
+                            setCurrentView={this._setCurrentView.bind(this)} />
       ):(
           <StaticIssue currentIssueName={currentIssueName}
-                       currentView={currentView}/>
+                       currentView={currentView}
+                       setCurrentView={this._setCurrentView.bind(this)}/>
         );
       
       // 已經玩過的提示

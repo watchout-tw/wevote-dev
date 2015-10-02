@@ -24,7 +24,7 @@ export default class StaticIssue extends Component {
   render(){
     
       const styles = require('./StaticIssue.scss');
-      const {issues, currentView, currentIssueName} = this.props;
+      const {issues, currentView, currentIssueName, setCurrentView} = this.props;
       const currentIssue = issues[currentIssueName];
       
       return (
@@ -32,7 +32,8 @@ export default class StaticIssue extends Component {
             <div className={styles.innerWrap}>
                 <IssueFigure currentView={currentView}
                              currentIssue={currentIssue}
-                             currentIssueName={currentIssueName} /> 
+                             currentIssueName={currentIssueName}
+                             setCurrentView={setCurrentView} /> 
              </div>
         </div>
       )
