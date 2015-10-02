@@ -16,6 +16,13 @@ export default class Appbar extends Component {
     );
 
   }
+  _handleDevClear(){
+    if(window){
+        window.localStorage.clear();
+        console.log("cleared.");
+        window.location.href = "/";
+    }
+  }
   render() {
 
     const styles = require('./Appbar.scss');
@@ -30,6 +37,11 @@ export default class Appbar extends Component {
                 <img src={siteLogo} className={styles.siteLogo}/>
                 <div className={styles.siteNameAdhoc}>立委<br/>出任務_</div>
               </Link>
+
+              <div className={styles.devButton}
+                   onClick={this._handleDevClear.bind(this)}>清除紀錄
+                   <span className={styles.devButtonInfo}>測試時使用，正式上線不會有</span>
+                   </div>
 
               <ul className={`${styles.lists} ${showStyle}`}>
                 <li onClick={this._toggleShowMenu.bind(this)}>
