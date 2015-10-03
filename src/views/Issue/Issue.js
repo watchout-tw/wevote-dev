@@ -53,6 +53,13 @@ export default class Issue extends Component {
           chooseSkip: true
       })
   }
+  _undoSkip(){
+      this._handleSetInteractive(true);
+      this.setState({
+          chooseSkip: false
+      })
+
+  }
 
   _markLocalStorageHide(){
       if(window){
@@ -136,6 +143,8 @@ export default class Issue extends Component {
       let skipNotification =  (
          <div className={styles.headerNotification}>
               {`你選擇跳過互動腳本，將直接顯示對戰紀錄。`}
+              <div className={styles.undo}
+                   onClick={this._undoSkip.bind(this)}>Undo</div>
               <div className={styles.removeButton}
                    onClick={this._hideNotification.bind(this)}><i className="fa fa-times"></i></div>
          </div>
@@ -143,7 +152,7 @@ export default class Issue extends Component {
 
       // 判斷是否要顯示提示通知
       let headerNotification;
-      if(chooseSkip===true && showNotification){
+      if(chooseSkip===true && showNotification && interactive===false){
          headerNotification = skipNotification;
       } 
 
@@ -151,7 +160,7 @@ export default class Issue extends Component {
       // 畫面右上方的控制鍵
       let alternative = (interactive === true) ? (
               <div className={styles.settingButton}
-                   onClick={this._handleSetInteractive.bind(this,false)}>
+                   onClick={this._skipInteractive.bind(this,false)}>
                    <i className="fa fa-rocket"></i>
                    <div className={styles.settingText}>跳過互動</div>
               </div>) : (

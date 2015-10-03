@@ -326,6 +326,7 @@ export default class AnimatedScript extends Component {
   }
   _generateResultsLines(userPosition, issue){
       let lines = [];
+      let breakLines = [2];
       if(userPosition === "贊成"){
         lines.push(`你決定贊成使用「${issue.statement}」的戰鬥策略。`);
         lines.push(`Fighto!!!`);
@@ -339,6 +340,7 @@ export default class AnimatedScript extends Component {
       if(userPosition === "不確定"){
         lines.push(`你決定再想想⋯`);
         lines.push(`這是雙方過去的交戰紀錄：`);
+        breakLines = [1];
       }
       console.log("*****")
       console.log(lines)
@@ -347,7 +349,7 @@ export default class AnimatedScript extends Component {
 
           firstLine:"",
           preservedLines: lines,
-          breakLines:[] 
+          breakLines: breakLines
       }
 
   }
@@ -359,7 +361,7 @@ export default class AnimatedScript extends Component {
             `【${issue.title}】之城任務完成了！`,
             `選擇其他任務：`
           ],
-          breakLines:[] 
+          breakLines:[1] 
       }
 
   }
