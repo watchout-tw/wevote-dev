@@ -22,38 +22,24 @@ export default class Issue extends Component {
       this.state = {
         currentView: 'parties',
         interactive: false,
-        localInteractivePrefCheck: false,
+        localInteractivePrefChecked: false,
 
-        hasPlayedVersion1: false, 
-        showNotification: true,
-        hasPlayed: false
+        chooseSkip: false, 
+        showNotification: true
       }
   }
   _setCurrentView(value){
-      console.log("set current view to:"+value);
       this.setState({
           currentView: value
       })
   }
-  _toggleInteractive(){
-      this.setState({
-          interactive: !this.state.interactive
-      })
-  }
+  
   _handleSetInteractive(value){
-      console.log("x 設定互動模式："+value)
+      console.log("設定互動模式："+value)
       this.setState({
           interactive: value
       })
       this._setLocalStorageInteractivePref(value);
-  }
-  _handleReplay(){
-      this._handleSetInteractive(true);
-      this._markLocalStorageHide();
-  }
-  _handleTryInteractive(){
-      this._handleSetInteractive(true);
-      this._markLocalStorageHide();
   }
   _hideNotification(){
       this._markLocalStorageHide();
@@ -61,57 +47,27 @@ export default class Issue extends Component {
         showNotification: false
       })
   }
-
-  _hasPlayed(){
-      // Interactive 通知使用者已經玩完一輪了
-      // 等到換議題的時候再更新料
-      this.setState({
-        hasPlayed: true
-      })
-  }
   _skipInteractive(){
       this._handleSetInteractive(false);
       this.setState({
-          hasPlayedVersion1: "skip"
+          chooseSkip: true
       })
   }
 
-  // 處理寫入 localStorage 的部分
-  _markLocalStoragePlayed(){
-      if(window){
-          //console.log(" ▨ ▨ MARKED ")
-          window.localStorage.setItem("hasPlayedVersion1", true);
-      }
-  }
   _markLocalStorageHide(){
       if(window){
-          //console.log(" ▨ Hide ME!")
           window.localStorage.setItem("hideNotification", true);
       }
   }
   _setLocalStorageInteractivePref(value){
       if(window){
-          //console.log(" ▨ Hide ME!")
           window.localStorage.setItem("interactivePref", value);
       }
-
   }
 
   // 取得 localStorage
   _checkLocalStorage(){
-      if(!this.state.hasPlayedVersion1){
-          
-          let hasPlayed = window.localStorage.getItem("hasPlayedVersion1");
-          if(hasPlayed){
-              console.log(" ▨ ▨ You've played! ▨ ▨")
-              this.setState({
-                 hasPlayedVersion1: true
-              })
-          }  
-
-      }
-
-      if(this.state.showNotification){
+      if(this.state.showNotification===true){
           let shouldHide = window.localStorage.getItem("hideNotification");
           if(shouldHide){
               console.log(" ▨ 你選擇隱藏訊息")
@@ -122,21 +78,21 @@ export default class Issue extends Component {
 
       }
       
-      const {interactive, localInteractivePrefCheck} = this.state;
+      const {interactive, localInteractivePrefChecked} = this.state;
       
 
-      if(localInteractivePrefCheck===false){
+      if(localInteractivePrefChecked===false){
           let interactivePref = window.localStorage.getItem("interactivePref");
           console.log(" ▨▨▨  更新 interactive pref ")
           if(interactivePref){
               console.log("▨ 瀏覽器存的設定："+interactivePref)
               this.setState({
-                  localInteractivePrefCheck: true,
+                  localInteractivePrefChecked: true,
                   interactive: interactivePref
               })
           }else{
              this.setState({
-                  localInteractivePrefCheck: true,
+                  localInteractivePrefChecked: true,
                   interactive: true
               })
 
@@ -148,16 +104,6 @@ export default class Issue extends Component {
   }
   componentDidUpdate(prevProps, prevState){//Only runs in client side
       this._checkLocalStorage();
-      if(this.props.params.issueName !== prevProps.params.issueName){
-          if(this.state.hasPlayed){
-              this._markLocalStoragePlayed();
-              this._handleSetInteractive(false);
-              this.setState({
-                 hasPlayed: false 
-              })
-     
-          }
-      }
   }
 
   
@@ -166,18 +112,17 @@ export default class Issue extends Component {
       const styles = require('./Issue.scss');
       const {issues} = this.props;
       const currentIssueName = this.props.params.issueName;
-      const {currentView, interactive, hasPlayedVersion1, showNotification, localInteractivePrefCheck} = this.state; //this.props.params.view || "parties";
+      const {currentView, interactive, chooseSkip, showNotification, localInteractivePrefChecked} = this.state; //this.props.params.view || "parties";
       const currentIssue = issues[currentIssueName];
 
       console.log("ＯＯＯ render ＯＯＯ")
       console.log("interactive:"+interactive);
-      console.log("localInteractivePrefCheck:"+localInteractivePrefCheck);
+      console.log("localInteractivePrefChecked:"+localInteractivePrefChecked);
 
       // 主畫面
       let main = (interactive === true) ? (
           <InteractiveIssue currentIssueName={currentIssueName}
                             currentView={currentView}
-                            hasPlayed={this._hasPlayed.bind(this)}
                             skipInteractive={this._skipInteractive.bind(this)}
                             setCurrentView={this._setCurrentView.bind(this)} />
       ):(
@@ -186,34 +131,19 @@ export default class Issue extends Component {
                        setCurrentView={this._setCurrentView.bind(this)}/>
         );
       
-      // 已經玩過的提示
-      let hasPlayedNotification =  (
-         <div className={styles.headerNotification}>
-              {`你已經玩過互動腳本了，以下將直接顯示${currentIssue.title}之城的對戰紀錄。`}
-              <div className={styles.playAgain}
-                   onClick={this._handleReplay.bind(this)}>再玩一次</div>
-              <div className={styles.removeButton}
-                   onClick={this._hideNotification.bind(this)}><i className="fa fa-times"></i></div>
-         </div>
-      );
-
-      // 第一次就選擇跳過的提示
+    
+      // 選擇跳過的提示
       let skipNotification =  (
          <div className={styles.headerNotification}>
-              {`你選擇跳過互動腳本，以下將直接顯示${currentIssue.title}之城的對戰紀錄。`}
-              <div className={styles.playAgain}
-                   onClick={this._handleTryInteractive.bind(this,true)}>玩玩看互動腳本</div>
+              {`你選擇跳過互動腳本，將直接顯示對戰紀錄。`}
               <div className={styles.removeButton}
                    onClick={this._hideNotification.bind(this)}><i className="fa fa-times"></i></div>
          </div>
       );
 
-      // 判斷要顯示哪一則提示
-      let headerNotification = <div className={`${styles.headerNotification} ${styles.isHide}`}></div>
-      if(hasPlayedVersion1===true && showNotification){
-         headerNotification = hasPlayedNotification;
-      }
-      if(hasPlayedVersion1==="skip" && showNotification){
+      // 判斷是否要顯示提示通知
+      let headerNotification;
+      if(chooseSkip===true && showNotification){
          headerNotification = skipNotification;
       } 
 
@@ -241,8 +171,6 @@ export default class Issue extends Component {
       )
 
 
-      
-
       return (
         <div className={styles.wrap}>
              {headerNotification}
@@ -253,8 +181,5 @@ export default class Issue extends Component {
   }
 }
 
-// let devTool = (
-//         <div className={styles.interactiveControl}
-//              onClick={this._toggleInteractive.bind(this)}>清</div>
-// )
+
 

@@ -37,7 +37,8 @@ export default class Issue extends Component {
         shouldAnimated: true,
         showNext: true,
         showSlides: false,
-        userPosition: "" //贊成, 反對, 不確定
+        userPosition: "", //贊成, 反對, 不確定
+        completed: false
     }
   
   }
@@ -89,12 +90,13 @@ export default class Issue extends Component {
   }
   _handleNext(){
      
-    const {stage, shouldAnimated} = this.state;
+    const {stage, shouldAnimated, completed} = this.state;
     console.log("[ handle next ], shouldAnimated="+shouldAnimated)
 
     switch(stage){
         case 'intro':
           this._handleSetStage("introStory");
+          
           break;
 
         case 'introStory':
@@ -117,7 +119,13 @@ export default class Issue extends Component {
 
         case 'results':
             this._handleSetStage("others");
+            this.setState({
+              completed: true
+            })
             break;
+
+        case 'others':
+        break;
        
     }
   }
@@ -149,9 +157,11 @@ export default class Issue extends Component {
           }
 
           this.setState({
-            userPosition:userPosition
+            userPosition:userPosition,
+            completed: true
           })
           this._handleSetStage("results");
+
           break;
 
         default:
