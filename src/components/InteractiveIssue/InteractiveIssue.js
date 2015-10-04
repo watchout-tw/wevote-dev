@@ -37,8 +37,8 @@ export default class Issue extends Component {
         shouldAnimated: true,
         showNext: true,
         showSlides: false,
-        userPosition: "", //贊成, 反對, 不確定
-        completed: false
+        userPosition: "" //贊成, 反對, 不確定
+        
     }
   
   }
@@ -91,17 +91,16 @@ export default class Issue extends Component {
   _handleNext(){
      
     const {stage, shouldAnimated, completed} = this.state;
-    console.log("[ handle next ], shouldAnimated="+shouldAnimated)
+    //console.log("[ handle next ], shouldAnimated="+shouldAnimated)
 
     switch(stage){
         case 'intro':
           this._handleSetStage("introStory");
-          
           break;
 
         case 'introStory':
           if(shouldAnimated){
-            console.log("> SET TO STATIC")
+            //console.log("> 跳過動態打字")
             this.setState({
                shouldAnimated: false 
             })
@@ -119,9 +118,8 @@ export default class Issue extends Component {
 
         case 'results':
             this._handleSetStage("others");
-            this.setState({
-              completed: true
-            })
+
+            
             break;
 
         case 'others':
@@ -148,20 +146,30 @@ export default class Issue extends Component {
 
         case 'choosePosition':
 
-          let userPosition = "贊成";
+          if(choice===Y){
+              this.setState({
+                  userPosition: "贊成"
+              })
+              let {currentIssueName} = this.props;
+              this.props.handleCompleted(currentIssueName);
+              this._handleSetStage("results");
+          }
           if(choice===N){
-            userPosition = "反對";
+              this.setState({
+                  userPosition: "反對"
+              })
+              let {currentIssueName} = this.props;
+              this.props.handleCompleted(currentIssueName);
+              this._handleSetStage("results");
           }
           if(choice===S){
-            userPosition = "不確定";
+              this.setState({
+                  userPosition: "不確定"
+              })
+  
+              this._handleSetStage("results");
+
           }
-
-          this.setState({
-            userPosition:userPosition,
-            completed: true
-          })
-          this._handleSetStage("results");
-
           break;
 
         default:
@@ -179,8 +187,8 @@ export default class Issue extends Component {
 
     let backTo = stages[index];
 
-    console.log("<>"+backTo);
-    console.log("<><>"+showSlides);
+    // console.log("<>"+backTo);
+    // console.log("<><>"+showSlides);
 
     if(backTo === "slides" && showSlides === false){
        backTo = "chooseSlides";
@@ -189,9 +197,9 @@ export default class Issue extends Component {
 
     this._handleSetStage(backTo);
   }
-  _handleSetStage(value, event){// Forward
+  _handleSetStage(value, event){
 
-    console.log("[handle set stage forward]")
+    //console.log("[handle set stage]")
     const hasNext = ["intro", "introStory", "slides", "results"];
     let shouldShowNext = (hasNext.indexOf(value) !== -1) ? true : false ;
 
@@ -203,17 +211,25 @@ export default class Issue extends Component {
         lines: [],
         showNext: shouldShowNext, 
         showSlides: resetSlideChoiceTo
-    })  
+    })
+    this.props.handleUpdateStage(value);  
   }
   componentWillReceiveProps(nextProps){
     
     const {issues} = this.props;
-    const currentIssueName = this.props.issueName;
-    const nextIssueName = nextProps.issueName
-    const {stage} = this.state;
+    const currentIssueName = this.props.currentIssueName;
+    const nextIssueName = nextProps.currentIssueName
+    
 
-    if(currentIssueName !== nextIssueName || (stage !== "intro")){
+    if(currentIssueName !== nextIssueName){
+        
         const nextIssue = issues[nextIssueName];
+        console.log("RESET STAGE PARAMETERS")
+        console.log("currentIssue:"+currentIssueName);
+        console.log("nextIssue:"+nextIssueName);
+        
+        this.props.handleUpdateStage("intro"); 
+
         this.state = {
             stage: "intro", 
             shouldAnimated: true,
@@ -222,6 +238,7 @@ export default class Issue extends Component {
             userPosition: "" //贊成, 反對, 不確定
         }
     }
+  
 
 
   }
@@ -236,7 +253,7 @@ export default class Issue extends Component {
       const currentIssue = issues[currentIssueName];
      
 
-      console.log("==== RENDER:"+stage+"=====");
+      //console.log("==== RENDER:"+stage+"=====");
       
       let backItem = ((stage !== "intro") && (stage !=="introStory")) ? (
               <div className={styles.backStage}

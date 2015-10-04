@@ -24,7 +24,7 @@ export default class AnimatedScript extends Component {
   
   }
   _clearTimeoutScript(){
-    console.log("CLEAR TIMEOUT SCRIPT")
+    //console.log("CLEAR TIMEOUT SCRIPT")
     const {currentScript} = this.state;
     if(currentScript.scripts){
         currentScript.scripts.map((script, index)=>{
@@ -34,7 +34,7 @@ export default class AnimatedScript extends Component {
   }
   _runScript(data){
     
-    console.log("RUN SCRIPT-")
+    //console.log("RUN SCRIPT-")
     
     //clear timeout script and previous lines
     this._clearTimeoutScript();
@@ -48,7 +48,7 @@ export default class AnimatedScript extends Component {
     let newScript = [];
 
     let callback = ()=>{
-      console.log("timeout!!!")
+      //console.log("timeout!!!")
       this.setState({
         currentScript:{
           scripts: this.state.currentScript.scripts,
@@ -61,7 +61,7 @@ export default class AnimatedScript extends Component {
         
         let script = setTimeout(()=>{
           
-            console.log(">"+value) 
+            //console.log(">"+value) 
 
             lines.push(value);
             this.setState({
@@ -88,7 +88,7 @@ export default class AnimatedScript extends Component {
   _setStage(props){
     const {stage, shouldAnimated, issue, handleNext, userPosition} = props;
     const {currentScript} = this.state;
-    console.log("[set stage]");
+    //console.log("[set stage]");
     let data;
     switch(stage){
        case 'intro':
@@ -110,15 +110,15 @@ export default class AnimatedScript extends Component {
           }else{
                 //看看是否所有的腳本都跑完了
                 let allTimedOut = true;
-                console.log("timeout script length:"+currentScript.scripts.length);
-                console.log("timeout count:"+currentScript.timedOutCount);
+                //console.log("timeout script length:"+currentScript.scripts.length);
+                //console.log("timeout count:"+currentScript.timedOutCount);
     
                 if(currentScript.scripts.length > currentScript.timedOutCount)
                    allTimedOut = false;
                  
                 if(allTimedOut === false){
                   //讓腳本停止
-                  console.log("!stop - [stop current script]")
+                  //console.log("!stop - [stop current script]")
                   this._clearTimeoutScript();
                   this.setState({
                     lines: data.preservedLines,
@@ -197,9 +197,9 @@ export default class AnimatedScript extends Component {
     const { lines, currentLineIndex, firstLine, breakLines }  = this.state;
     const { shouldAnimated, showNext, stage, handleNext } = this.props;
     
-    console.log("=== render ====")
-    console.log("firstLine > "+firstLine)
-    console.log("stage > "+stage)
+    // console.log("=== render ====")
+    // console.log("firstLine > "+firstLine)
+    // console.log("stage > "+stage)
     
     let firstLineItem;
     if(firstLine){
@@ -342,8 +342,8 @@ export default class AnimatedScript extends Component {
         lines.push(`這是雙方過去的交戰紀錄：`);
         breakLines = [1];
       }
-      console.log("*****")
-      console.log(lines)
+      // console.log("*****")
+      // console.log(lines)
     
       return { 
 
