@@ -26,7 +26,7 @@ export default class Appbar extends Component {
   render() {
 
     const styles = require('./Appbar.scss');
-    const siteLogo = require('./images/logo.svg');
+    const siteLogo = require('./images/logo.png');
     const {showMenu} = this.state;
     const {currentIssueName, issues, firstPathName} = this.props;
     let showStyle = (showMenu) ? styles.showMenu : "";
@@ -52,7 +52,6 @@ export default class Appbar extends Component {
           <div className={styles.inner}>
               <Link to="/" className={styles.siteName}>
                 <img src={siteLogo} className={styles.siteLogo}/>
-                <div className={styles.siteNameAdhoc}>立委<br/>出任務_</div>
               </Link>
 
               <div className={styles.devButton}
