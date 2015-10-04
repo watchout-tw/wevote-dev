@@ -33,7 +33,7 @@ export default class Footer extends Component {
             name="Edit" 
             id="Edit">
         
-            <div className={styles.title}>在新議題上線時，收到第一手的通知</div>
+            <div className={styles.title}>在有新任務時，收到第一手的通知</div>
             <input name="postURL" type="hidden" value=""/>
             <input name="cancelURL" type="hidden" value="http://crm.watchout.tw/civicrm/profile?reset=1&amp;gid=10"/>
             <input name="add_to_group" type="hidden" value="10"/>
