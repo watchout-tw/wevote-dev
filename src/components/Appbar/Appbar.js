@@ -34,8 +34,7 @@ export default class Appbar extends Component {
     let issueItems = Object.keys(issues).map((issueId, index)=>{
       let activeStyle = (currentIssueName===issueId) ? styles.active : "";
       return (
-        <li onClick={this._toggleShowMenu.bind(this)}
-            key={index}>
+        <li key={index}>
             <Link className={` ${styles.navItem} ${activeStyle} `}
                   to={`/issues/${issueId}/parties`} >
                   <i className={`fa ${issues[issueId].icon} ${styles.icon}`}></i>
@@ -65,11 +64,11 @@ export default class Appbar extends Component {
                 
                 {issueItems}
                 
-                <li onClick={this._toggleShowMenu.bind(this)}>
+                <li>
                     <Link className={`${styles.navItem} ${partiesActive}`}
                           to={`/parties`}  >
                           <i className={`fa fa-file-text-o ${styles.icon}`}></i>政黨表態</Link></li>
-                <li onClick={this._toggleShowMenu.bind(this)}>
+                <li>
                     <Link className={`${styles.navItem} ${aboutActive}`}
                           to={`/about`}>
                           <i className={`fa fa-smile-o ${styles.icon}`}></i>關於我們</Link></li>
