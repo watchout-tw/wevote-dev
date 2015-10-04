@@ -5,6 +5,33 @@ $breakLarge: 800px;
 	max-width: 1000px;
 	margin: 0 auto;
 }
+@media all and (min-width: 600px) and (max-width: 723px){
+  .wrap{
+    text-align: center;
+  }
+}
+@media all and (min-width: 733px) and (max-width: 999px){
+  .wrap{
+    text-align: center;
+  }
+}
+.missionStatusBlock {
+  display: block;
+  padding-right: 10px;
+}
+.star {
+  color: #b88234;
+  font-size: 30px;
+  margin-right: 4px;
+}
+.missionStatusText {
+  color: #b88234;
+  font-weight: 800;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 6px;
+}
+
 .coverItem, .coverItem:visited {
   text-decoration: none;
   display: block;
@@ -35,16 +62,6 @@ a.coverItem, a.coverItem:visited {
     }
 
 }
-// @media all and (min-width: $breakMedium) and (max-width: $breakLarge){
-//   .coverItem, .coverItem:visited {
-//       width: 47%;    
-//   }
-// }
-// @media all and (min-width: $breakLarge){
-//   .coverItem, .coverItem:visited {
-//       width: 30%;
-//   }
-// }
 a.coverItem:hover {
   //background: #d9d9d9;
   box-shadow: 0 0 0 1px rgba(217, 183, 135, 0.76),0 0px 20px rgb(214, 164, 92);
@@ -66,6 +83,10 @@ a.coverItem:hover {
   font-size: 24px;
   margin: 0 4px 8px 10px;
   font-weight: 800;
+  display: inline-block;
+}
+.completedCoverTitle {
+  color: #7F7979;
   display: inline-block;
 }
 .comingText {

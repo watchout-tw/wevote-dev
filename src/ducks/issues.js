@@ -102,7 +102,7 @@ const initialState = {
     },
     "referendum" : {
       "title" : "公投",
-      "icno" : "fa-gavel",
+      "icon" : "fa-gavel",
       "titleEng" : "referendum",
       "question" : "你支持公投門檻下修嗎?",
       "statement" : "下修公投門檻",
