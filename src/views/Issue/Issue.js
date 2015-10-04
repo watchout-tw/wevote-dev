@@ -162,9 +162,13 @@ export default class Issue extends Component {
           console.log(" ▨▨▨  更新 interactive pref ")
           if(interactivePref){
               console.log("▨ 瀏覽器存的設定："+interactivePref)
+              let booleanPref = true;
+              if(interactivePref === "false"){
+                booleanPref = false;
+              }
               this.setState({
                   localInteractivePrefChecked: true,
-                  interactive: interactivePref
+                  interactive: booleanPref
               })
           }else{
              this.setState({
@@ -194,13 +198,12 @@ export default class Issue extends Component {
              completed} = this.state; //this.props.params.view || "parties";
       const currentIssue = issues[currentIssueName];
 
-      // console.log("ＯＯＯ render ＯＯＯ")
-      // console.log("interactive:"+interactive);
-      // console.log("localInteractivePrefChecked:"+localInteractivePrefChecked);
-      let isInteractiveMode = (interactive === true && completed[currentIssueName]===false);
+      let isInteractiveMode = (interactive === true && completed[currentIssueName]===false)? true : false;
+      //console.log("<><> isInteractiveMode:"+isInteractiveMode)
+
 
       // 主畫面
-      let main = (isInteractiveMode) ? (
+      let main = (isInteractiveMode === true) ? (
           <InteractiveIssue currentIssueName={currentIssueName}
                             currentView={currentView}
                             skipInteractive={this._skipInteractive.bind(this)}
@@ -246,7 +249,7 @@ export default class Issue extends Component {
 
 
       // 畫面右上方的控制鍵
-      let alternative = (isInteractiveMode) ? (
+      let alternative = (isInteractiveMode === true) ? (
               <div className={styles.settingButton}
                    onClick={this._skipInteractive.bind(this,false)}>
                    <i className="fa fa-rocket"></i>
