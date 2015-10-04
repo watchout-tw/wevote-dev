@@ -18,7 +18,8 @@ export default class AnimatedScript extends Component {
           "scripts": "",
           "timedOutCount": 0
         },
-        scriptRolled: false
+        scriptRolled: false,
+        resultLinePlayed: false
     }
      
   
@@ -153,7 +154,8 @@ export default class AnimatedScript extends Component {
       case 'choosePosition':
           console.log("-choosePosition")
           this.setState({
-              firstLine: ""
+              firstLine: "",
+              resultLinePlayed: false
           })
           data = this._generateChoosePositionLines(issue);
           this._runScript(data);
@@ -164,14 +166,24 @@ export default class AnimatedScript extends Component {
           this.setState({
               firstLine: ""
           })
-          data = this._generateResultsLines(userPosition, issue);
-          this._runScript(data);
+          if(this.state.resultLinePlayed === false){
+            data = this._generateResultsLines(userPosition, issue);
+            this._runScript(data);
+            this.setState({
+              firstLine: "", 
+              resultLinePlayed: true
+            })
+
+          }
+          
           break;
 
       case 'others':
           console.log("-ohters")
           this.setState({
-            firstLine: ""
+            firstLine: "",
+            resultLinePlayed: false
+
           })
           data = this._generateSeeOtherLines(issue);
           this._runScript(data);

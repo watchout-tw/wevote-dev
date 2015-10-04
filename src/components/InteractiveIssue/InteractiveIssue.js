@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
-
+import Missions from '../../components/Missions/Missions.js';
 
 //handle key down event, key code
 const SPACE = 32,
@@ -279,7 +279,11 @@ export default class Issue extends Component {
       ):"";
 
 
-      let othersItem;
+      let othersItem = (
+        <Missions issues={issues}
+                  skipIssue={currentIssueName}
+                  showComingMission={false}/>
+      );
 
       let choiceItems;
       

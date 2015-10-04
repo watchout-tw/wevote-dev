@@ -33,7 +33,8 @@ export default class Home extends Component {
           
           <div className={styles.innerWrap}>
               <div className={styles.pageTitle}>請選擇任務：</div>
-              <Missions issues={issues}/>
+              <Missions issues={issues}
+                        showComingMission={true}/>
               
           </div>
 
