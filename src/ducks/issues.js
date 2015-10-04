@@ -2,6 +2,7 @@ const initialState = {
     /* 從 url 對應的議題資料 */
     "marriage-equality" : {
       "title" : "婚姻平權",
+      "icon" : "fa-heart",
       "titleEng" : "marriageEquality",
       "question" : "你是否支持同性婚姻合法化？",
       "statement" : "同性婚姻合法化",
@@ -57,6 +58,7 @@ const initialState = {
     },
     "recall" : {
       "title" : "罷免",
+      "icon" : "fa-thumbs-down",
       "titleEng" : "recall",
       "question" : "你是否支持下修罷免門檻？",
       "statement" : "下修罷免門檻",
@@ -100,6 +102,7 @@ const initialState = {
     },
     "referendum" : {
       "title" : "公投",
+      "icno" : "fa-gavel",
       "titleEng" : "referendum",
       "question" : "你支持公投門檻下修嗎?",
       "statement" : "下修公投門檻",
@@ -155,6 +158,7 @@ const initialState = {
     },
     "nuclear-power" : {
       "title" : "核四",
+      "icon" : "fa-industry",
       "titleEng" : "nuclearPower",
       "question" : "你支持停建核四嗎?",
       "statement" : "停建核四",

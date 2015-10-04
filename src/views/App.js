@@ -30,6 +30,11 @@ const meta = {
 };
 
 
+@connect(
+    state => ({
+                issues: state.issues
+              }),
+    dispatch => bindActionCreators({}, dispatch))
 export default class App extends Component {
   static propTypes = {
     children: PropTypes.object.isRequired
@@ -53,12 +58,16 @@ export default class App extends Component {
   }
 
   render() {
-    const {user} = this.props;
+    const {issues} = this.props;
     const styles = require('./App.scss');
+    const firstPathName = this.context.router.state.location.pathname.split("/")[1];
+    
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
-        <Appbar/>
+        <Appbar currentIssueName={this.props.params.issueName}
+                issues={issues}
+                firstPathName={firstPathName}/>
         <div className={styles.appContent}>
           {this.props.children}
         </div>

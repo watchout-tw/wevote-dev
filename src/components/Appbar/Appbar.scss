@@ -62,7 +62,7 @@ $breakLarge: 800px;
 	padding: $paddingHeight;
 	height: $navHeight;
 }
-.navItem:hover {
+.navItem:hover, .navItem.active {
 	background: darken( $themeColor, 5% );
 	border-bottom: 4px solid;
 }

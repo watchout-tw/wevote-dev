@@ -28,8 +28,26 @@ export default class Appbar extends Component {
     const styles = require('./Appbar.scss');
     const siteLogo = require('./images/logo.svg');
     const {showMenu} = this.state;
+    const {currentIssueName, issues, firstPathName} = this.props;
     let showStyle = (showMenu) ? styles.showMenu : "";
+
+    let issueItems = Object.keys(issues).map((issueId, index)=>{
+      let activeStyle = (currentIssueName===issueId) ? styles.active : "";
+      return (
+        <li onClick={this._toggleShowMenu.bind(this)}
+            key={index}>
+            <Link className={` ${styles.navItem} ${activeStyle} `}
+                  to={`/issues/${issueId}/parties`} >
+                  <i className={`fa ${issues[issueId].icon} ${styles.icon}`}></i>
+                  {issues[issueId].title}
+            </Link>
+        </li>
+      )
+    })
+
     
+    let partiesActive = (firstPathName === "parties") ? styles.active : "";
+    let aboutActive = (firstPathName === "about") ? styles.active : "";
     return (
       <nav className={`${styles.appbar} ${showStyle}`}>
           <div className={styles.inner}>
@@ -44,28 +62,15 @@ export default class Appbar extends Component {
                    </div>
 
               <ul className={`${styles.lists} ${showStyle}`}>
+                
+                {issueItems}
+                
                 <li onClick={this._toggleShowMenu.bind(this)}>
-                    <Link className={styles.navItem} 
-                          to={`/issues/marriage-equality/parties`} >
-                          <i className={`fa fa-heart ${styles.icon}`}></i>婚姻平權</Link></li>
-                <li onClick={this._toggleShowMenu.bind(this)}>
-                    <Link className={styles.navItem} 
-                          to={`/issues/recall/parties`}  >
-                          <i className={`fa fa-thumbs-down ${styles.icon}`}></i>罷免</Link></li>
-                <li onClick={this._toggleShowMenu.bind(this)}>
-                    <Link className={styles.navItem} 
-                          to={`/issues/referendum/parties`}  >
-                          <i className={`fa fa-gavel ${styles.icon}`}></i>公投</Link></li>
-                <li onClick={this._toggleShowMenu.bind(this)}>
-                    <Link className={styles.navItem} 
-                          to={`/issues/nuclear-power/parties`}  >
-                          <i className={`fa fa-industry ${styles.icon}`}></i>核四</Link></li>
-                <li onClick={this._toggleShowMenu.bind(this)}>
-                    <Link className={styles.navItem} 
+                    <Link className={`${styles.navItem} ${partiesActive}`}
                           to={`/parties`}  >
                           <i className={`fa fa-file-text-o ${styles.icon}`}></i>政黨表態</Link></li>
                 <li onClick={this._toggleShowMenu.bind(this)}>
-                    <Link className={styles.navItem} 
+                    <Link className={`${styles.navItem} ${aboutActive}`}
                           to={`/about`}>
                           <i className={`fa fa-smile-o ${styles.icon}`}></i>關於我們</Link></li>
               </ul>

@@ -25,7 +25,34 @@ export default class Issue extends Component {
         localInteractivePrefChecked: false,
 
         chooseSkip: false, 
-        showNotification: true
+        showNotification: true,
+        showCompleteNotification: true,
+        stage: "",
+        completed: {
+          "marriage-equality" :false,
+          "recall" : false,
+          "referendum" : false,
+          "nuclear-power" : false
+        }
+      }
+  }
+  _handleUpdateStage(stage){
+      this.setState({
+        stage: stage
+      })
+      if(this.state.stage === "intro"){
+          if(window){
+              const currentIssueName = this.props.params.issueName;
+              let current =  window.localStorage.getItem(currentIssueName);
+
+              if(current === "true"){
+                  let {completed} = this.state;
+                  completed[currentIssueName] = true;
+                  this.setState({
+                      completed: completed
+                  })
+              }
+          }
       }
   }
   _setCurrentView(value){
@@ -36,15 +63,25 @@ export default class Issue extends Component {
   
   _handleSetInteractive(value){
       console.log("設定互動模式："+value)
+      if(value === true){
+         this._handleClearCompleted();
+      }
       this.setState({
           interactive: value
       })
       this._setLocalStorageInteractivePref(value);
+
   }
   _hideNotification(){
       this._markLocalStorageHide();
       this.setState({
         showNotification: false
+      })
+  }
+  _hideCompleteNotification(){
+      this._markLocalStorageCompleteHide();
+      this.setState({
+        showCompleteNotification: false
       })
   }
   _skipInteractive(){
@@ -58,12 +95,38 @@ export default class Issue extends Component {
       this.setState({
           chooseSkip: false
       })
+  }
+  _handleCompleted(issueName){
+      this._markLocalStorageCompleted(issueName);
+  }
+  _handleClearCompleted(){
+      console.log("[handle clear completed]")
+      const issueName = this.props.params.issueName;
+         
+      let {completed} = this.state;
+      completed[issueName] = false;
+      this.setState({
+        completed: completed
+      })
+      if(window){
+          window.localStorage.setItem(issueName, false);
+      }
+  }
 
+  _markLocalStorageCompleted(issueName){
+      if(window){
+          window.localStorage.setItem(issueName, true);
+      }
   }
 
   _markLocalStorageHide(){
       if(window){
           window.localStorage.setItem("hideNotification", true);
+      }
+  }
+  _markLocalStorageCompleteHide(){
+      if(window){
+          window.localStorage.setItem("hideCompleteNotification", true);
       }
   }
   _setLocalStorageInteractivePref(value){
@@ -77,12 +140,18 @@ export default class Issue extends Component {
       if(this.state.showNotification===true){
           let shouldHide = window.localStorage.getItem("hideNotification");
           if(shouldHide){
-              console.log(" ▨ 你選擇隱藏訊息")
               this.setState({
                  showNotification: false
               })
           }  
-
+      }
+      if(this.state.showCompleteNotification===true){
+          let shouldCompleteHide = window.localStorage.getItem("hideCompleteNotification");
+          if(shouldCompleteHide){
+              this.setState({
+                 showNotification: false
+              })
+          }  
       }
       
       const {interactive, localInteractivePrefChecked} = this.state;
@@ -119,19 +188,25 @@ export default class Issue extends Component {
       const styles = require('./Issue.scss');
       const {issues} = this.props;
       const currentIssueName = this.props.params.issueName;
-      const {currentView, interactive, chooseSkip, showNotification, localInteractivePrefChecked} = this.state; //this.props.params.view || "parties";
+      const {currentView, interactive, chooseSkip, 
+             showNotification, showCompleteNotification,
+             localInteractivePrefChecked,
+             completed} = this.state; //this.props.params.view || "parties";
       const currentIssue = issues[currentIssueName];
 
-      console.log("ＯＯＯ render ＯＯＯ")
-      console.log("interactive:"+interactive);
-      console.log("localInteractivePrefChecked:"+localInteractivePrefChecked);
+      // console.log("ＯＯＯ render ＯＯＯ")
+      // console.log("interactive:"+interactive);
+      // console.log("localInteractivePrefChecked:"+localInteractivePrefChecked);
+      let isInteractiveMode = (interactive === true && completed[currentIssueName]===false);
 
       // 主畫面
-      let main = (interactive === true) ? (
+      let main = (isInteractiveMode) ? (
           <InteractiveIssue currentIssueName={currentIssueName}
                             currentView={currentView}
                             skipInteractive={this._skipInteractive.bind(this)}
-                            setCurrentView={this._setCurrentView.bind(this)} />
+                            setCurrentView={this._setCurrentView.bind(this)}
+                            handleCompleted={this._handleCompleted.bind(this)}
+                            handleUpdateStage={this._handleUpdateStage.bind(this)} />
       ):(
           <StaticIssue currentIssueName={currentIssueName}
                        currentView={currentView}
@@ -149,16 +224,29 @@ export default class Issue extends Component {
                    onClick={this._hideNotification.bind(this)}><i className="fa fa-times"></i></div>
          </div>
       );
+      // completed notification
+      let completedNotification =  (
+         <div className={styles.headerNotification}>
+              {`你已完成此任務，將直接顯示對戰紀錄。`}
+              <div className={styles.undo}
+                   onClick={this._handleClearCompleted.bind(this)}>Reply</div>
+              <div className={styles.removeButton}
+                   onClick={this._hideCompleteNotification.bind(this)}><i className="fa fa-times"></i></div>
+         </div>
+      );``
 
       // 判斷是否要顯示提示通知
       let headerNotification;
-      if(chooseSkip===true && showNotification && interactive===false){
-         headerNotification = skipNotification;
+      if(chooseSkip===true && showNotification && interactive===false && !completed[currentIssueName]){
+          headerNotification = skipNotification;
       } 
+      if(completed[currentIssueName]===true && showCompleteNotification){
+          headerNotification = completedNotification;
+      }
 
 
       // 畫面右上方的控制鍵
-      let alternative = (interactive === true) ? (
+      let alternative = (isInteractiveMode) ? (
               <div className={styles.settingButton}
                    onClick={this._skipInteractive.bind(this,false)}>
                    <i className="fa fa-rocket"></i>
