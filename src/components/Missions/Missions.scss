@@ -45,12 +45,11 @@ a.coverItem, a.coverItem:visited {
 //       width: 30%;
 //   }
 // }
-
 a.coverItem:hover {
   //background: #d9d9d9;
-  box-shadow: 0 0 0 1px #D2B894, 0 0 20px rgb(184, 130, 52), 2px 2px 40px #CB984E, -2px -2px 30px rgba(184, 130, 52, 0.49);
+  box-shadow: 0 0 0 1px rgba(217, 183, 135, 0.76),0 0px 20px rgb(214, 164, 92);
   color: #464242;
-  transition: all 400ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 .coverImg {
   height: calc(100% - 50px );
