@@ -36,7 +36,6 @@ $breakLarge: 800px;
   text-decoration: none;
   display: block;
 
-  padding: 24px 4px 34px 7px;
   margin: 10px;
   height: 220px;
   width: calc(100% - 20px);
@@ -51,6 +50,7 @@ a.coverItem, a.coverItem:visited {
   background: #fff;
   cursor: pointer;
   box-shadow: 3px 3px 0px #ccc;
+  padding: 24px 4px 34px 7px;
   vertical-align: top;
   color: #7F7979;
   text-align: center;
@@ -90,7 +90,7 @@ a.coverItem:hover {
   display: inline-block;
 }
 .comingText {
-  padding: 30% 0;
+  padding: 76px 0;
   text-align: center;
   border: 6px dotted #ccc;
   border-radius: 5px;

@@ -37,16 +37,18 @@ export default class Issue extends Component {
       }
   }
   _handleUpdateStage(stage){
+      console.log("[issue] stage:"+stage)
       this.setState({
         stage: stage
       })
-      if(this.state.stage === "intro"){
-          if(window){
-              const currentIssueName = this.props.params.issueName;
-              let current =  window.localStorage.getItem(currentIssueName);
+      const currentIssueName = this.props.params.issueName;
+      let {completed} = this.state;
 
+      if((stage === "intro")&&(completed[currentIssueName]===false)){
+          // without (completed[currentIssueName]===false), it will check over and over
+          if(window){
+              let current =  window.localStorage.getItem(currentIssueName);
               if(current === "true"){
-                  let {completed} = this.state;
                   completed[currentIssueName] = true;
                   this.setState({
                       completed: completed
@@ -184,6 +186,12 @@ export default class Issue extends Component {
   }
   componentDidUpdate(prevProps, prevState){//Only runs in client side
       this._checkLocalStorage();
+  }
+  componentWillReceiveProps(nextProps){
+      console.log("*")
+      console.log("*")
+      console.log(nextProps)
+
   }
 
   

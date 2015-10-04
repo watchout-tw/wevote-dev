@@ -40,6 +40,7 @@ export default class Issue extends Component {
         userPosition: "" //贊成, 反對, 不確定
         
     }
+    this.props.handleUpdateStage("intro");
   
   }
   
@@ -219,15 +220,14 @@ export default class Issue extends Component {
     const {issues} = this.props;
     const currentIssueName = this.props.currentIssueName;
     const nextIssueName = nextProps.currentIssueName
-    
+    console.log("currentIssueName:"+currentIssueName)
+    console.log("nextIssueName:"+nextIssueName)
 
     if(currentIssueName !== nextIssueName){
         
         const nextIssue = issues[nextIssueName];
         console.log("RESET STAGE PARAMETERS")
-        console.log("currentIssue:"+currentIssueName);
-        console.log("nextIssue:"+nextIssueName);
-        
+       
         this.props.handleUpdateStage("intro"); 
 
         this.state = {

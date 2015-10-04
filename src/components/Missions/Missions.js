@@ -68,9 +68,6 @@ export default class Missions extends Component {
         
         let titleStyle = (completed[currentIssue] === true) ? styles.completedCoverTitle : styles.coverTitle;
 
-        console.log("*")
-        console.log(currentIssue)
-        console.log(completed[currentIssue])
         if(skipIssue !== currentIssue){
             return (
               <Link to={`/issues/${currentIssue}/parties`} key={index} className={styles.coverItem}>
