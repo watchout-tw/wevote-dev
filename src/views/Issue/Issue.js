@@ -207,7 +207,7 @@ export default class Issue extends Component {
           
           console.log(" ▨▨▨  更新 interactive pref ")
           
-          if(interactivePref){
+          if(interactivePref==="false"){
               
               console.log("▨ 瀏覽器存的設定："+interactivePref)
               
@@ -225,12 +225,14 @@ export default class Issue extends Component {
       }
   }
   componentDidMount(){//Only runs in client side
+      console.log("[Issue Mount]")
       this._checkLocalInteractive();
       this._checkLocalNotificationPref();
       this.setState({
         isClientSide: true
       })
   }
+
   
   render(){
       const styles = require('./Issue.scss');

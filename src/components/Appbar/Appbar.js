@@ -6,8 +6,7 @@ export default class Appbar extends Component {
   constructor(props){ super(props)
     this.state = {
         showMenu: false,
-        location: "", 
-        locationChecked: false
+        location: ""
     }
   }
   _toggleShowMenu(){
@@ -27,19 +26,12 @@ export default class Appbar extends Component {
           location: value
       });
   }
-  _updateLocation(){
+  _updateLocation(value, event){
     
-       console.log("_updateLocation");
-       try{
-           let location = window.location.pathname.split('/')[1];
-           console.log("Location:" + location)
-           this.setState({
-               location: location,
-               locationChecked: true
-           })
-       }catch(e){
-           console.log(e)
-       }
+      console.log("_updateLocation");
+      this.setState({
+          location: value
+      })
     
   }
   componentDidMount(){//Only runs in client side
@@ -65,7 +57,8 @@ export default class Appbar extends Component {
         <li key={index}
             onClick={this._hideMenu.bind(this)}>
             <Link className={` ${styles.navItem} ${activeStyle} `}
-                  to={`/issues/${issueId}`} >
+                  to={`/issues/${issueId}`}
+                  onClick={this._updateLocation.bind(this,'')} >
                   <i className={`fa ${issues[issueId].icon} ${styles.icon}`}></i>
                   {issues[issueId].title}
             </Link>
