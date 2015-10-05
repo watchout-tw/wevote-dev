@@ -1,6 +1,63 @@
+$breakLarge: 800px;
+
 .wrap {
-	max-width: 1200px;
 	margin: 0 auto;
-	padding: 50px 10px 400px 10px;
 	text-align: center;
+	position: relative;
+	color: white;
+    background: #2B2B2B;
+    min-height: 100vh;
 }
+.imgBlock {
+	position: relative;
+}
+.notFoundText {
+	position: relative;
+	padding: 40px;
+}
+.title {
+	font-size: 24px;
+}
+.meta {
+	font-size: 16px;
+	padding: 2px;
+    color: #7D7575;
+}
+.doorText {
+	position: absolute;
+}
+.door {
+    width: 100%;
+    cursor: pointer;
+}
+.hoverArea {
+	height: 100%;
+    border: 2px solid blue;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.light {
+    opacity: 0;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.light:hover {
+	opacity: 1; 
+}
+
+@media all and (min-width:$breakLarge){
+	.notFoundText {
+		position: absolute;
+    	left: 22%;
+    	top: 140px;
+	}
+
+}
+
+

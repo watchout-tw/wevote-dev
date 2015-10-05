@@ -8,7 +8,6 @@ import {createTransitionHook} from '../universalRouter';
 import './normalize.scss';
 
 import Appbar from '../components/Appbar/Appbar.js';
-import Footer from '../components/Footer/Footer.js';
 
 const title = '立委出任務';
 const description = '「2016立委出任務」是一個提供選民了解立委候選人議題表態的網站。我們整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委出任務」希望能夠做到更多的資訊揭露，改變台灣民主政治。'
@@ -74,7 +73,7 @@ export default class App extends Component {
         <div className={styles.appContent}>
           {this.props.children}
         </div>
-        <Footer/>
+        
       </div>
     );
   }

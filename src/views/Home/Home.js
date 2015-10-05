@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 import Missions from '../../components/Missions/Missions.js';
+import Footer from '../../components/Footer/Footer.js';
 @connect(
     state => ({
                 issues: state.issues
@@ -37,7 +38,7 @@ export default class Home extends Component {
                         showComingMission={true}/>
               
           </div>
-
+          <Footer/>
           
           
       </div>
