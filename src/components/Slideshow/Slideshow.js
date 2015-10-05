@@ -87,32 +87,48 @@ export default class Slideshow extends Component {
     let {currentIndex, imageLoaded} = this.state;
     let currentSlide = data[currentIndex];
     let currentImage = require(`./images/${currentSlide.filename}`);
-    
+    let pageItems =  data.map((value,index)=>{
+        let activePageClass = (index===currentIndex) ? styles.activePage : "";
+        return (
+          <div className={`${styles.page} ${activePageClass}`}
+               key={index}
+               onClick={this._setCurrentIndex.bind(this, index)}>
+          </div>
+        )
+    });
+
+    let slideImages = data.map((value,index)=>{
+      let imageClass = styles.inactiveSlideImg;
+
+      if(index===currentIndex){
+         imageClass = styles.activeSlideImg
+      }
+      
+      return (
+        <img alt={value.alt}
+             src={require(`./images/${value.filename}`)}
+             className={imageClass}/>
+      )
+    });
+
     return (
       <div className={styles.wrap}>
         
-          <div className={styles.menuBlock}>
-          {
-              data.map((value,index)=>{
-                let activeStyle = (index===currentIndex)? styles.activeMenuItem : "";
-                return (
-                  <div className={` ${styles.menuItem} ${activeStyle} `}
-                       key={index}
-                       onClick={this._setCurrentIndex.bind(this, index)}>{value.alt.split('-')[0]}</div>
-                )
-              })
-          
-          }
+          <div className={styles.pageWrap}>
+              {pageItems}
           </div>
 
           <div className={styles.slideBlock}>
-              <img alt={currentSlide.alt}
-                   src={currentImage}
-                   className={styles.activeSlideImg} />
-              <div className={styles.nextPageButton}
-                   onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
-                   下一頁
+              {slideImages}
+              <div className={styles.prev}
+                   onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>
+                   <i className="fa fa-chevron-left"></i> 
               </div>
+              <div className={styles.next}
+                   onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
+                   <i className="fa fa-chevron-right"></i> 
+              </div>
+              
           </div>
           
       </div>
@@ -125,40 +141,9 @@ export default class Slideshow extends Component {
      
 }
 
-// {
-//     data.map((value,index)=>{
-      
-//       return (
-//         <img alt={value.alt}
-//              src={require(`./images/${value.filename}`)}
-//              className={(index===currentIndex) ? styles.activeSlideImg : styles.inactiveSlideImg} />
-//       )
-//     })
 
-// }
 
-// <div className={styles.pageWrap}>
-// {
-//   data.map((value,index)=>{
-//     let activePageClass = (index===currentIndex) ? styles.activePage : "";
-   
-//     return (
-//       <div className={`${styles.page} ${activePageClass}`}
-//            key={index}
-//            onClick={this._setCurrentIndex.bind(this, index)}>
-//            {index+1}
-//       </div>
-//     )
-//   })
-// }
-// </div>
 
-// <div className={styles.prev}
-//      onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>
-//      <i className="fa fa-chevron-left"></i> 
-// </div>
-// <div className={styles.next}
-//      onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
-//      <i className="fa fa-chevron-right"></i> 
-// </div>
+
+
 

@@ -4,7 +4,7 @@ import {Link} from 'react-router';
 import {connect} from 'react-redux';
 
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
-
+import Slideshow from '../../components/Slideshow/Slideshow.js';
 
 @connect(
     state => ({
@@ -30,10 +30,14 @@ export default class StaticIssue extends Component {
       return (
         <div className={styles.wrap}>
             <div className={styles.innerWrap}>
+                <Slideshow data={currentIssue.slideshows} 
+                           topic={currentIssue.title}/>
+                           
                 <IssueFigure currentView={currentView}
                              currentIssue={currentIssue}
                              currentIssueName={currentIssueName}
                              setCurrentView={setCurrentView} /> 
+
              </div>
         </div>
       )
