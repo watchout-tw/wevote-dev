@@ -33,25 +33,35 @@ export default class Issue extends Component {
           "recall" : false,
           "referendum" : false,
           "nuclear-power" : false
+        },
+        localChecked: {
+          "marriage-equality" :false,
+          "recall" : false,
+          "referendum" : false,
+          "nuclear-power" : false
         }
       }
   }
   _handleUpdateStage(stage){
-      console.log("[issue] stage:"+stage)
+      console.log("[ handleUpdateStage ]"+stage)
       this.setState({
         stage: stage
       })
       const currentIssueName = this.props.params.issueName;
-      let {completed} = this.state;
+      let {completed, localChecked} = this.state;
 
-      if((stage === "intro")&&(completed[currentIssueName]===false)){
-          // without (completed[currentIssueName]===false), it will check over and over
+      if((stage === "intro")&&(completed[currentIssueName]===false)&&localChecked[currentIssueName]===false){
+          // add 'checked' to avoid overly checked local storage
+          console.log("<> check local complete info.")
+
           if(window){
               let current =  window.localStorage.getItem(currentIssueName);
               if(current === "true"){
                   completed[currentIssueName] = true;
+                  localChecked[currentIssueName] = true;
                   this.setState({
-                      completed: completed
+                      completed: completed,
+                      localChecked: localChecked
                   })
               }
           }
@@ -105,10 +115,12 @@ export default class Issue extends Component {
       console.log("[handle clear completed]")
       const issueName = this.props.params.issueName;
          
-      let {completed} = this.state;
+      let {completed, localChecked} = this.state;
       completed[issueName] = false;
+      localChecked[issueName] = false;
       this.setState({
-        completed: completed
+        completed: completed,
+        localChecked: localChecked
       })
       if(window){
           window.localStorage.setItem(issueName, false);
