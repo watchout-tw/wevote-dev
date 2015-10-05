@@ -1,4 +1,6 @@
 import React, {Component, PropTypes} from 'react';
+import Swipeable from 'react-swipeable';
+
 
 export default class Slideshow extends Component {
   static propTypes = {
@@ -35,11 +37,11 @@ export default class Slideshow extends Component {
   componentDidMount(){
     window.addEventListener('keydown', this._handleKeyDown.bind(this));
     window.addEventListener('resize', this._handleResize.bind(this));
-    if(window.innerWidth >= 500){
-       this.setState({
-         data: this.props.currentIssue.slideshows
-       })
-    }
+    // if(window.innerWidth >= 500){
+    //    this.setState({
+    //      data: this.props.currentIssue.slideshows
+    //    })
+    // }
   }
   _handleResize(e){
     console.log("resize event:"+e);
@@ -104,13 +106,22 @@ export default class Slideshow extends Component {
       )
     });
 
+    let swipeableSlides = (
+      <Swipeable onSwipingLeft={this._setCurrentIndex.bind(this, currentIndex-1)}
+                 onSwipedRight={this._setCurrentIndex.bind(this, currentIndex+1)}>
+        <div>
+          {slideImages}
+        </div>
+      </Swipeable>
+    )
+
 
 
     return (
       <div className={styles.wrap}>
         
           <div className={styles.slideBlock}>
-              {slideImages}
+              {swipeableSlides}
 
               <div className={styles.prev}
                    onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>
