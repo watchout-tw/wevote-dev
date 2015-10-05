@@ -30,7 +30,7 @@ export default class StaticIssue extends Component {
       return (
         <div className={styles.wrap}>
             <div className={styles.innerWrap}>
-                <Slideshow data={currentIssue.slideshows} 
+                <Slideshow currentIssue={currentIssue} 
                            topic={currentIssue.title}/>
                            
                 <IssueFigure currentView={currentView}

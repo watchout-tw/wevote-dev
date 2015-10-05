@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 
 export default class Slideshow extends Component {
   static propTypes = {
-      data: PropTypes.array,
+      data: PropTypes.object,
       topic: PropTypes.string,
       className: PropTypes.string
   }
@@ -10,9 +10,8 @@ export default class Slideshow extends Component {
   //initial state
   constructor(props) { super(props)
     this.state = {
-        autoplayTimer: "",
         currentIndex: 0,
-        imageLoaded: true
+        data: props.currentIssue.slideshowsMobile
     }
   }
 
@@ -35,58 +34,51 @@ export default class Slideshow extends Component {
   }
   componentDidMount(){
     window.addEventListener('keydown', this._handleKeyDown.bind(this));
+    window.addEventListener('resize', this._handleResize.bind(this));
+    if(window.innerWidth >= 500){
+       this.setState({
+         data: this.props.currentIssue.slideshows
+       })
+    }
   }
-
+  _handleResize(e){
+    console.log("resize event:"+e);
+  }
   componentWillUnmount() {
-    window.removeEventListener('keydown', this._handleKeyDown.bind(this));
-      
+    window.removeEventListener('keydown', this._handleKeyDown.bind(this));   
+    window.addEventListener('resize', this._handleResize.bind(this));
   }
-
   _setCurrentIndex(value, event){
    
-    var maxIndex =  this.props.data.length - 1;
+    var maxIndex =  this.state.data.length - 1;
     if(value > maxIndex){
       value = value % (maxIndex+1);
     }
     if(value < 0){
       value = maxIndex;
     }
-
-    this._setImageLoaded(false);
-
     this.setState({
       currentIndex: value
     })
 
   }
-
-  _setImageLoaded(value, event){
-    //console.log("set loaded " + value);
-    this.setState({
-      imageLoaded: value
-    })
-  }
-
-  
-
   componentWillReceiveProps(nextProps) {
       const {topic} = this.props;
       const nextTopic = nextProps.topic;
       if(topic !== nextTopic){
         this._setCurrentIndex(0)
-      }
-       
+      } 
   }
 
   
 
   render() {
     const styles = require('./Slideshow.scss');
-    const {data, topic} = this.props;
+    const {currentIssue, topic} = this.props;
 
-    let {currentIndex, imageLoaded} = this.state;
-    let currentSlide = data[currentIndex];
-    let currentImage = require(`./images/${currentSlide.filename}`);
+    let {currentIndex, data} = this.state;
+    
+
     let pageItems =  data.map((value,index)=>{
         let activePageClass = (index===currentIndex) ? styles.activePage : "";
         return (
@@ -103,19 +95,23 @@ export default class Slideshow extends Component {
       if(index===currentIndex){
          imageClass = styles.activeSlideImg
       }
-      
+      let url = require(`./images/${value.filename}`)
       return (
         <img alt={value.alt}
-             src={require(`./images/${value.filename}`)}
-             className={imageClass}/>
+             src={url}
+             className={imageClass}
+             key={index}/>
       )
     });
+
+
 
     return (
       <div className={styles.wrap}>
         
           <div className={styles.slideBlock}>
               {slideImages}
+
               <div className={styles.prev}
                    onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>
                    <i className="fa fa-chevron-left"></i> 

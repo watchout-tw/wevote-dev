@@ -266,7 +266,7 @@ export default class InteractiveIssue extends Component {
             </div>
       )
      
-      let slidesItem = (showSlides === true) ? <Slideshow data={currentIssue.slideshows} topic={currentIssue.title}/> : "";
+      let slidesItem = (showSlides === true) ? <Slideshow currentIssue={currentIssue} topic={currentIssue.title}/> : "";
     
       let resultsItem = (stage === "results") ? (
         <IssueFigure currentView={currentView}
