@@ -25,8 +25,6 @@ export default function(store) {
     <Route component={App}>
       <Route path="/" component={Home}/>
       <Route path="/issues/:issueName" component={Issue}/>
-      <Route path="/issues/:issueName/:view" component={Issue}/>
-      <Route path="/issues/:issueName/:view#:focusPart" component={Issue}/>
       <Route path="/8th-legislators" component={LegislatorList}/>
 
       <Route path="/people/:peopleId" component={People}/>

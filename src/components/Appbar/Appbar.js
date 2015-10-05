@@ -65,7 +65,7 @@ export default class Appbar extends Component {
         <li key={index}
             onClick={this._hideMenu.bind(this)}>
             <Link className={` ${styles.navItem} ${activeStyle} `}
-                  to={`/issues/${issueId}/parties`} >
+                  to={`/issues/${issueId}`} >
                   <i className={`fa ${issues[issueId].icon} ${styles.icon}`}></i>
                   {issues[issueId].title}
             </Link>
