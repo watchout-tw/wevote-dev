@@ -3,7 +3,6 @@ $break-large: 1000px;
 .wrap {
 	position: relative;
 	width: 100%;
-	margin-top: 30px;
 	margin-bottom: 30px;
 	text-align: center;
 }
@@ -21,13 +20,13 @@ $break-large: 1000px;
 .prev, .next {
 	cursor: pointer;
     position: absolute;
-    top: 20px;
-    padding-top: 20%;
+    top: 0px;
+    padding-top: 18vw;
     z-index: 222;
     font-size: 40px;
     width: 45%;
     height: calc( 100% - 23px);
-    color: #523F3F;
+    color: #CCC;
 }
 .prev:hover, .next:hover {
 	color: black;

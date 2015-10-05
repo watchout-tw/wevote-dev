@@ -49,9 +49,10 @@ $breakLarge: 800px;
 }
 .settingPanel {
   width: 100%;
-  z-index: 100;
-  position: relative;
   min-height: 5px;
+  position: absolute;
+  top: 0;
+  z-index: 2200;
 }
 .settingButtons {
   position: absolute;

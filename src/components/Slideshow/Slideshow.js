@@ -114,10 +114,6 @@ export default class Slideshow extends Component {
     return (
       <div className={styles.wrap}>
         
-          <div className={styles.pageWrap}>
-              {pageItems}
-          </div>
-
           <div className={styles.slideBlock}>
               {slideImages}
               <div className={styles.prev}
@@ -127,8 +123,11 @@ export default class Slideshow extends Component {
               <div className={styles.next}
                    onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
                    <i className="fa fa-chevron-right"></i> 
-              </div>
-              
+              </div>  
+          </div>
+
+          <div className={styles.pageWrap}>
+              {pageItems}
           </div>
           
       </div>
