@@ -10,6 +10,7 @@ export default class Missions extends Component {
   }
   constructor(props){ super(props)
       this.state = {
+        checkedLocal: false,
         completed: {
           "marriage-equality" :false,
           "recall" : false,
@@ -22,14 +23,23 @@ export default class Missions extends Component {
 
   // 取得 localStorage
   _checkLocalStorage(){
-      if(window){
+      console.log("check local storage!!");
+      const {checkedLocal} = this.state;
+      if(window && checkedLocal === false){
           const {issues} = this.props;
           const {completed} = this.state;
+          console.log("has window")
           Object.keys(issues).map((currentIssueName, index)=>{
               let local = window.localStorage.getItem(currentIssueName);
+              console.log("local value")
+              console.log(local)
               if(local === "true"){
                   completed[currentIssueName] = true;
               }
+          })
+          this.setState({
+            checkedLocal: true,
+            completed: completed
           })
       
           
@@ -41,7 +51,7 @@ export default class Missions extends Component {
       this._checkLocalStorage();
   }
   componentDidUpdate(prevProps, prevState){//Only runs in client side
-      this._checkLocalStorage();
+      //this._checkLocalStorage();
   }
   
   render() {
@@ -70,7 +80,7 @@ export default class Missions extends Component {
 
         if(skipIssue !== currentIssue){
             return (
-              <Link to={`/issues/${currentIssue}/parties`} key={index} className={styles.coverItem}>
+              <Link to={`/issues/${currentIssue}`} key={index} className={styles.coverItem}>
                   <img src={imgURL} className={styles.coverImg}/>
                   <div className={styles.coverTitleBlock}>
                       <div className={titleStyle}>{issues[currentIssue].title}</div>之城

@@ -89,8 +89,8 @@ export default class AnimatedScript extends Component {
   _setStage(props){
     const {stage, shouldAnimated, issue, handleNext, userPosition} = props;
     const {currentScript} = this.state;
-    console.log("[set stage]");
-    console.log(issue)
+    console.log("[AnimatedScript - set stage]");
+    
     let data;
     switch(stage){
        case 'intro':
@@ -217,9 +217,9 @@ export default class AnimatedScript extends Component {
     const { lines, currentLineIndex, firstLine, breakLines }  = this.state;
     const { shouldAnimated, showNext, stage, handleNext } = this.props;
     
-    // console.log("=== render ====")
-    // console.log("firstLine > "+firstLine)
-    // console.log("stage > "+stage)
+    console.log("=== render ====")
+    console.log("firstLine > "+firstLine)
+    console.log("stage > "+stage)
     
     let firstLineItem;
     if(firstLine){

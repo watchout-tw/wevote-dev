@@ -250,7 +250,7 @@ export default class InteractiveIssue extends Component {
       const currentIssue = issues[currentIssueName];
      
 
-      //console.log("==== RENDER:"+stage+"=====");
+      console.log("==== RENDER:"+stage+"=====");
       
       let backItem = ((stage !== "intro") && (stage !=="introStory")) ? (
               <div className={styles.backStage}

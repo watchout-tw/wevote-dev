@@ -26,7 +26,7 @@ export default class StaticIssue extends Component {
       const styles = require('./StaticIssue.scss');
       const {issues, currentView, currentIssueName, setCurrentView} = this.props;
       const currentIssue = issues[currentIssueName];
-      
+      console.log("static issues")
       return (
         <div className={styles.wrap}>
             <div className={styles.innerWrap}>
