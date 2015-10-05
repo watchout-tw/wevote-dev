@@ -107,6 +107,10 @@ export default class AnimatedScript extends Component {
           // Roll the script
           let data = this._generateIntroLines(issue);
           if(shouldAnimated){
+            this.setState({
+              firstLine: data.firstLine,
+              lines: []
+            })
             this._runScript(data);
 
           }else{
@@ -200,12 +204,12 @@ export default class AnimatedScript extends Component {
      this._setStage(this.props); 
   }
   componentWillReceiveProps(nextProps){
+      console.log("componentWillReceiveProps");
       if(this.props.issue !== nextProps.issue){
          this._clearTimeoutScript();
       }
-      if(this.props.stage !== nextProps.stage){
-         this._setStage(nextProps);  
-      }
+      this._setStage(nextProps);  
+     
      
   }
   render(){

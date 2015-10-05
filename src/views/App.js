@@ -37,14 +37,17 @@ const meta = {
     dispatch => bindActionCreators({}, dispatch))
 export default class App extends Component {
   static propTypes = {
-    children: PropTypes.object.isRequired
-    
+    children: PropTypes.object.isRequired 
   }
-
   static contextTypes = {
     router: PropTypes.object.isRequired,
     store: PropTypes.object.isRequired
   };
+  constructor(props){ super(props)
+    this.state = {
+      location: ""
+    }
+  }
 
   componentWillMount() {
     const {router, store} = this.context;
@@ -56,18 +59,18 @@ export default class App extends Component {
     const {router} = this.context;
     router.removeTransitionHook(this.transitionHook);
   }
-
+ 
   render() {
     const {issues} = this.props;
+    const {location} = this.state;
     const styles = require('./App.scss');
-    const firstPathName = this.context.router.state.location.pathname.split("/")[1];
-    
+  
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
         <Appbar currentIssueName={this.props.params.issueName}
                 issues={issues}
-                firstPathName={firstPathName}/>
+                firstPathName={location}/>
         <div className={styles.appContent}>
           {this.props.children}
         </div>

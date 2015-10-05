@@ -203,6 +203,7 @@ export default class Issue extends Component {
       console.log("*")
       console.log("*")
       console.log(nextProps)
+      this._checkLocalStorage();
 
   }
 
@@ -223,19 +224,25 @@ export default class Issue extends Component {
 
 
       // 主畫面
-      let main = (isInteractiveMode === true) ? (
+      let main;
+      if(isInteractiveMode === true){
+        main = (
           <InteractiveIssue currentIssueName={currentIssueName}
                             currentView={currentView}
                             skipInteractive={this._skipInteractive.bind(this)}
                             setCurrentView={this._setCurrentView.bind(this)}
                             handleCompleted={this._handleCompleted.bind(this)}
                             handleUpdateStage={this._handleUpdateStage.bind(this)} />
-      ):(
+        )
+      }
+      if(isInteractiveMode === false) {
+        main = (
           <StaticIssue currentIssueName={currentIssueName}
                        currentView={currentView}
                        setCurrentView={this._setCurrentView.bind(this)}/>
-        );
-      
+        )
+      }
+          
     
       // 選擇跳過的提示
       let skipNotification =  (

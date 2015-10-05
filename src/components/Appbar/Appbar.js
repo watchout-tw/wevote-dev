@@ -5,7 +5,9 @@ import {Link} from 'react-router';
 export default class Appbar extends Component {
   constructor(props){ super(props)
     this.state = {
-        showMenu: false
+        showMenu: false,
+        location: "", 
+        locationChecked: false
     }
   }
   _toggleShowMenu(){
@@ -16,19 +18,42 @@ export default class Appbar extends Component {
     );
 
   }
-  _handleDevClear(){
-    if(window){
-        window.localStorage.clear();
-        console.log("cleared.");
-        window.location.href = "/";
+  _setLocation(value){
+      console.log("_setLocation");
+      this.setState({
+          location: value
+      });
+  }
+  _updateLocation(){
+    
+       console.log("_updateLocation");
+       try{
+           let location = window.location.pathname.split('/')[1];
+           console.log("Location:" + location)
+           this.setState({
+               location: location,
+               locationChecked: true
+           })
+       }catch(e){
+           console.log(e)
+       }
+    
+  }
+  componentDidMount(){//Only runs in client side
+    const {locationChecked} = this.state;
+    if(locationChecked === false){
+      this._updateLocation();
     }
   }
+ 
+
   render() {
 
     const styles = require('./Appbar.scss');
     const siteLogo = require('./images/logo.png');
-    const {showMenu} = this.state;
-    const {currentIssueName, issues, firstPathName} = this.props;
+    const {showMenu, location} = this.state;
+    const {currentIssueName, issues} = this.props;
+    
     let showStyle = (showMenu) ? styles.showMenu : "";
 
     let issueItems = Object.keys(issues).map((issueId, index)=>{
@@ -45,8 +70,8 @@ export default class Appbar extends Component {
     })
 
     
-    let partiesActive = (firstPathName === "parties") ? styles.active : "";
-    let aboutActive = (firstPathName === "about") ? styles.active : "";
+    let partiesActive = (location === "parties") ? styles.active : "";
+    let aboutActive = (location === "about") ? styles.active : "";
     return (
       <nav className={`${styles.appbar} ${showStyle}`}>
           <div className={styles.inner}>
@@ -54,20 +79,15 @@ export default class Appbar extends Component {
                 <img src={siteLogo} className={styles.siteLogo}/>
               </Link>
 
-              <div className={styles.devButton}
-                   onClick={this._handleDevClear.bind(this)}>清除紀錄
-                   <span className={styles.devButtonInfo}>測試時使用</span>
-              </div>
-
               <ul className={`${styles.lists} ${showStyle}`}>
                 
                 {issueItems}
                 
-                <li>
+                <li onClick={this._updateLocation.bind(this,'parties')}>
                     <Link className={`${styles.navItem} ${partiesActive}`}
                           to={`/parties`}  >
                           <i className={`fa fa-file-text-o ${styles.icon}`}></i>政黨表態</Link></li>
-                <li>
+                <li onClick={this._updateLocation.bind(this,'about')}>
                     <Link className={`${styles.navItem} ${aboutActive}`}
                           to={`/about`}>
                           <i className={`fa fa-smile-o ${styles.icon}`}></i>關於我們</Link></li>

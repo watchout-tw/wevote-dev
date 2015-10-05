@@ -25,7 +25,7 @@ const SPACE = 32,
               }),
     dispatch => bindActionCreators({}, dispatch))
 
-export default class Issue extends Component {
+export default class InteractiveIssue extends Component {
   static propTypes = {
      issues: PropTypes.object.isRequired
   }
@@ -216,7 +216,7 @@ export default class Issue extends Component {
     this.props.handleUpdateStage(value);  
   }
   componentWillReceiveProps(nextProps){
-    
+    //取消這個的話，結束一個任務，再選擇時，不會重load。
     const {issues} = this.props;
     const currentIssueName = this.props.currentIssueName;
     const nextIssueName = nextProps.currentIssueName
@@ -238,9 +238,6 @@ export default class Issue extends Component {
             userPosition: "" //贊成, 反對, 不確定
         }
     }
-  
-
-
   }
 
   render(){
