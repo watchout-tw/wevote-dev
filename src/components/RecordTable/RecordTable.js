@@ -147,7 +147,7 @@ export default class RecordTable extends Component {
           <div className={styles.evadingItem}>
                <div>我應該有立場，可是我沒有立場。</div>
                <Link className={styles.evadingFAQ}
-                     to={`/about/FAQ/1`}>我們如何統計的？</Link>
+                     to={`/about/FAQ`}>我們如何統計的？</Link>
 
           </div>)
     }
