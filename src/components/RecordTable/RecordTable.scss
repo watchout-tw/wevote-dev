@@ -136,3 +136,20 @@ $unknownColor: #FFF800;
 	line-height: 1.6;
 	padding-left: 80px;
 }
+.evadingItem {
+	padding: 30px 20px;
+    text-align: center;
+    margin: 50px;
+    color: #8E8D8D;
+    font-size: 20px;
+    border: 5px dotted #CCCCCC;
+}
+a.evadingFAQ, a.evadingFAQ:visited {
+	color: black;
+	font-size: 18px;
+	margin: 10px;
+	display: block;
+}
+a.evadingFAQ:hover {
+	color: #FF0055;
+}

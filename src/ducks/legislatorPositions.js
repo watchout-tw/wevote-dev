@@ -992,7 +992,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -1687,7 +1687,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -7225,7 +7225,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -8261,7 +8261,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -8795,7 +8795,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -8814,7 +8814,7 @@ const legislatorPositions =
             },
             "recall": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -8833,7 +8833,7 @@ const legislatorPositions =
             },
             "referendum": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -10210,7 +10210,7 @@ const legislatorPositions =
             },
             "referendum": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -10835,7 +10835,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -11179,7 +11179,7 @@ const legislatorPositions =
             },
             "recall": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -12488,7 +12488,7 @@ const legislatorPositions =
             },
             "recall": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -13521,7 +13521,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -13783,7 +13783,7 @@ const legislatorPositions =
             },
             "recall": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -13802,7 +13802,7 @@ const legislatorPositions =
             },
             "referendum": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -14559,7 +14559,7 @@ const legislatorPositions =
             },
             "recall": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -14578,7 +14578,7 @@ const legislatorPositions =
             },
             "referendum": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -19527,7 +19527,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -22975,7 +22975,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -24562,7 +24562,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -24821,7 +24821,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -25306,7 +25306,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -26292,7 +26292,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -27780,7 +27780,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -28429,7 +28429,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -28979,7 +28979,7 @@ const legislatorPositions =
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "none",
+                "dominantPosition": "evading",
                 "positionCounts": [
                     {
                         "position": "nay",

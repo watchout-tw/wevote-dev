@@ -944,12 +944,6 @@ const initialState = {
                         "dominantPercentage": 100
                     },
                     {
-                        "name": "王金平",
-                        "party": "KMT",
-                        "dominantPosition": "evading",
-                        "dominantPercentage": 100
-                    },
-                    {
                         "name": "王惠美",
                         "party": "KMT",
                         "dominantPosition": "evading",
@@ -976,12 +970,6 @@ const initialState = {
                     {
                         "name": "柯建銘",
                         "party": "DPP",
-                        "dominantPosition": "evading",
-                        "dominantPercentage": 100
-                    },
-                    {
-                        "name": "洪秀柱",
-                        "party": "KMT",
                         "dominantPosition": "evading",
                         "dominantPercentage": 100
                     },
@@ -22548,7 +22536,6 @@ const initialState = {
         ]
     }
 }
-
 
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {

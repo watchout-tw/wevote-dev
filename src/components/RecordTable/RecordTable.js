@@ -132,13 +132,30 @@ export default class RecordTable extends Component {
                     onClick={this._setSortingOption.bind(this,v)}>
                     {v}</div> 
     })
+    ///
+
+    let controPanelItem = (records.length > 0) ? (
+        <div className={styles.controls}>
+              {options}
+              <div className={styles.sortingButtons}>{sortings}</div>
+        </div>
+    ):"";
+
+    let evadingItem;
+    if(data.dominantPosition === "evading" && records.length === 0){
+       evadingItem = (
+          <div className={styles.evadingItem}>
+               <div>我應該有立場，可是我沒有立場。</div>
+               <Link className={styles.evadingFAQ}
+                     to={`/about/FAQ/1`}>我們如何統計的？</Link>
+
+          </div>)
+    }
 
     return (
       <div className={styles.wrap}>
-            <div className={styles.controls}>
-              {options}
-              <div className={styles.sortingButtons}>{sortings}</div>
-            </div>
+            {controPanelItem}
+            {evadingItem}
             {records}
       </div>
     );

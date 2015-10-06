@@ -35,6 +35,7 @@ export default function(store) {
       <Route path="/records/:recordId" component={Record}/>
       <Route path="/about" component={About}/>
       <Route path="/about/:tabName" component={About}/>
+      <Route path="/about/:tabName/:focus" component={About}/>
       
       <Route path="/clarify" component={Clarify}/>
       <Route path="/subscribe" component={Subscribe}/>
