@@ -1,0 +1,31 @@
+.socialWrap {
+	position: fixed;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+}
+
+
+.watchoutLogo {
+	background: url(./images/watchout-logo-w.png);
+	background-size: cover;
+	display: block;
+	overflow: hidden;
+	text-indent: -500px;
+	float: left;
+   	background-position: right top;
+   	width: 50px;
+   	height: 26px;
+   	margin: 8px;
+   	position: absolute;
+   	top: 5px;
+   	cursor: pointer;
+}
+ @media all and (min-width: 960px) {
+    .watchoutLogo {
+		width: 155px;
+		height: 22px;
+		top: 8px;
+		left: 10px;
+    }
+}

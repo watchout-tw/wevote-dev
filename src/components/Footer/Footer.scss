@@ -3,10 +3,9 @@ $redColor: #D65A5A;
 $breakSmall: 450px;
 $breakMedium: 800px;
 .wrap {
-	background: #2b2b2b;
-    padding: 20px;
+	background: #B88234;
     color: rgb(240,240,240);
-	padding: 20px;
+	padding: 20px 20px 80px 20px;
 	
 }
 .innerWrap {
@@ -79,7 +78,7 @@ $breakMedium: 800px;
 }
 /* footer links */
 .bottomInfo {
-	border-top: 1px dashed rgb(53,55,54);
+	border-top: 1px dashed #E6E6E6;
 	margin-top: 20px;
 	padding: 10px 0;
 	line-height: 1.5;
@@ -108,4 +107,5 @@ $breakMedium: 800px;
 	max-height: 0px;
 	overflow: hidden;
 }
+
 
