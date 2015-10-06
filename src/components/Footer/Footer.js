@@ -70,7 +70,7 @@ export default class Footer extends Component {
                 
               </form>
               <div className={styles.bottomInfo}>
-                  <div>本網站採 CC-BY-NC-SA 授權</div>
+                  <div>本網站採資料及原始碼 CC-BY-NC-SA 授權</div>
                   <div>網站使用問題與合作建議，請聯絡：wevote@watchout.tw</div>
                   <div className={styles.rightFooterLinks}>
                       <Link to={`/about/`} className={styles.linkItem}>關於立委出任務</Link>
