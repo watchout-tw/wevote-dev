@@ -1,4 +1,4 @@
-$break-large: 1000px;
+$break-large: 500px;
 
 .wrap {
 	position: relative;
@@ -6,31 +6,40 @@ $break-large: 1000px;
 	margin-bottom: 30px;
 	text-align: center;
 }
-
-.prev {
-	padding: 6px 20px 6px 20px;
-	left: 0px;
-	text-align: left;
-}
-.next {
-	padding: 6px 20px 6px 20px;
-	right: 0px;
-	text-align: right;
-}
 .prev, .next {
-	cursor: pointer;
-    position: absolute;
-    top: 0px;
-    padding-top: 18vw;
-    z-index: 222;
-    font-size: 40px;
-    width: 45%;
-    height: calc( 100% - 23px);
-    color: #CCC;
+    display: inline-block;
+    width: 50%;
+    font-size: 26px;
 }
-.prev:hover, .next:hover {
-	color: black;
+@media all and (min-width: $break-large){
+    .prev {
+    	padding: 6px 20px 6px 20px;
+    	left: 0px;
+    	text-align: left;
+    }
+    .next {
+    	padding: 6px 20px 6px 20px;
+    	right: 0px;
+    	text-align: right;
+    }
+    .prev, .next {
+    	cursor: pointer;
+        position: absolute;
+        top: 0px;
+        padding-top: 18vw;
+        z-index: 222;
+        font-size: 40px;
+        width: 45%;
+        height: calc( 100% - 23px);
+        color: #CCC;
+    }
+    .prev:hover, .next:hover {
+    	color: black;
+    }
 }
+
+
+
 .inactiveSlideImg {
 	position: absolute;
 	width: 100%;

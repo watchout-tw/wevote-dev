@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import Swipeable from 'react-swipeable';
-
+import ReactSwipe from 'react-swipe';
 
 export default class Slideshow extends Component {
   static propTypes = {
@@ -13,7 +12,7 @@ export default class Slideshow extends Component {
   constructor(props) { super(props)
     this.state = {
         currentIndex: 0,
-        data: props.currentIssue.slideshowsMobile
+        mobile: true //default
     }
   }
 
@@ -37,22 +36,45 @@ export default class Slideshow extends Component {
   componentDidMount(){
     window.addEventListener('keydown', this._handleKeyDown.bind(this));
     window.addEventListener('resize', this._handleResize.bind(this));
-    // if(window.innerWidth >= 500){
-    //    this.setState({
-    //      data: this.props.currentIssue.slideshows
-    //    })
-    // }
+
+    if(window.innerWidth >= 500){
+       console.log("[mount] -> change to web version. current width:")
+       console.log(window.innerWidth);
+
+       this.setState({
+         data: this.props.currentIssue.slideshows,
+         mobile: false
+       })
+    }
   }
   _handleResize(e){
-    console.log("resize event:"+e);
+    console.log("resize event.");
+    const {mobile} = this.state;
+    if(window.innerWidth >= 500){
+        if(mobile === true){
+           this.setState({
+              mobile: false,
+              currentIndex: 0
+           })
+        }
+    }else{
+        if(mobile === false){
+           this.setState({
+              mobile: true
+           })
+        }
+    }
   }
   componentWillUnmount() {
     window.removeEventListener('keydown', this._handleKeyDown.bind(this));   
     window.addEventListener('resize', this._handleResize.bind(this));
   }
   _setCurrentIndex(value, event){
-   
-    var maxIndex =  this.state.data.length - 1;
+    const {currentIssue} = this.props;
+    const {mobile} = this.state;
+
+    let maxIndex = (mobile===true) ? currentIssue.slideshowsMobile.length - 1 : currentIssue.slideshows.length - 1;
+
     if(value > maxIndex){
       value = value % (maxIndex+1);
     }
@@ -62,7 +84,15 @@ export default class Slideshow extends Component {
     this.setState({
       currentIndex: value
     })
+    console.log(this)
 
+
+  }
+  _next() {
+    this.refs.ReactSwipe.swipe.next();
+  }
+  _prev() {
+    this.refs.ReactSwipe.swipe.prev();
   }
   componentWillReceiveProps(nextProps) {
       const {topic} = this.props;
@@ -72,16 +102,23 @@ export default class Slideshow extends Component {
       } 
   }
 
-  
+  _onSlideChange(index, elem){
+      console.log(index);
+      console.log(elem)
+  }
 
   render() {
     const styles = require('./Slideshow.scss');
     const {currentIssue, topic} = this.props;
+    const dataWeb = currentIssue.slideshows;
+    const dataMobile = currentIssue.slideshowsMobile;
 
-    let {currentIndex, data} = this.state;
+    let {currentIndex, mobile} = this.state;
+
+    console.log("--- render (slideshow) ---, mobile:")
+    console.log(mobile)
     
-
-    let pageItems =  data.map((value,index)=>{
+    let pageItems =  (mobile === false) ? dataWeb.map((value,index)=>{
         let activePageClass = (index===currentIndex) ? styles.activePage : "";
         return (
           <div className={`${styles.page} ${activePageClass}`}
@@ -89,31 +126,65 @@ export default class Slideshow extends Component {
                onClick={this._setCurrentIndex.bind(this, index)}>
           </div>
         )
+    }) : "" ;
+
+    //web version
+    let slideImages = dataWeb.map((value,index)=>{
+        let imageClass = styles.inactiveSlideImg;
+
+        if(index===currentIndex){
+           imageClass = styles.activeSlideImg
+        }
+        let url = require(`./images/${value.filename}`)
+        return (
+          <img alt={value.alt}
+               src={url}
+               className={imageClass}
+               key={index}/>
+        )
     });
 
-    let slideImages = data.map((value,index)=>{
-      let imageClass = styles.inactiveSlideImg;
-
-      if(index===currentIndex){
-         imageClass = styles.activeSlideImg
-      }
-      let url = require(`./images/${value.filename}`)
-      return (
-        <img alt={value.alt}
-             src={url}
-             className={imageClass}
-             key={index}/>
-      )
+    //mobile version
+    let slideImagesMobile = dataMobile.map((value,index)=>{
+        let url = require(`./images/${value.filename}`)
+        return (
+          <div><img alt={value.alt}
+               src={url}
+               className={styles.activeSlideImg}
+               key={index}/></div>
+        )
     });
 
-    let swipeableSlides = (
-      <Swipeable onSwipingLeft={this._setCurrentIndex.bind(this, currentIndex-1)}
-                 onSwipedRight={this._setCurrentIndex.bind(this, currentIndex+1)}>
+    //decide show mobile version or web version
+    let slides = (mobile === true) ? (
+      <ReactSwipe continuous={true} callback={this._onSlideChange.bind(this)} ref='ReactSwipe'>
+         {slideImagesMobile}
+      </ReactSwipe>
+    ) : slideImages;
+
+    let preNextButton = (mobile === true) ? (
         <div>
-          {slideImages}
+            <div className={styles.prev}
+                 onClick={this._prev.bind(this)}>
+                 <i className="fa fa-chevron-left"></i> 
+            </div>
+            <div className={styles.next}
+                 onClick={this._next.bind(this)}>
+                 <i className="fa fa-chevron-right"></i> 
+            </div>  
         </div>
-      </Swipeable>
-    )
+    ) : (
+        <div>
+            <div className={styles.prev}
+                 onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>
+                 <i className="fa fa-chevron-left"></i> 
+            </div>
+            <div className={styles.next}
+                 onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
+                 <i className="fa fa-chevron-right"></i> 
+            </div>  
+        </div>
+    );
 
 
 
@@ -121,16 +192,8 @@ export default class Slideshow extends Component {
       <div className={styles.wrap}>
         
           <div className={styles.slideBlock}>
-              {swipeableSlides}
-
-              <div className={styles.prev}
-                   onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>
-                   <i className="fa fa-chevron-left"></i> 
-              </div>
-              <div className={styles.next}
-                   onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
-                   <i className="fa fa-chevron-right"></i> 
-              </div>  
+              {slides}
+              {preNextButton}
           </div>
 
           <div className={styles.pageWrap}>
@@ -146,6 +209,7 @@ export default class Slideshow extends Component {
   }
      
 }
+
 
 
 

@@ -56,8 +56,14 @@ $breakLarge: 800px;
 }
 .settingButtons {
   position: absolute;
-  right: 20px;
-  top: 14px;
+  right: 4px;
+  top: 10px;
+}
+@media all and (min-width: 500px){
+  .settingButtons {
+    right: 20px;
+    top: 14px;
+  }
 }
 .settingButton {
   display: inline-block;
