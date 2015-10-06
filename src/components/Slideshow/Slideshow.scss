@@ -10,6 +10,7 @@ $break-large: 500px;
     display: inline-block;
     width: 50%;
     font-size: 26px;
+    cursor: pointer;
 }
 @media all and (min-width: $break-large){
     .prev {

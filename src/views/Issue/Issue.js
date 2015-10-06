@@ -273,7 +273,7 @@ export default class Issue extends Component {
       // 選擇跳過的提示
       let skipNotification =  (
          <div className={styles.headerNotification}>
-              {`你選擇跳過互動腳本，將直接顯示對戰紀錄。`}
+              <div className={styles.headerNotificationText}>你選擇跳過互動腳本，將直接顯示對戰紀錄。</div>
               <div className={styles.undo}
                    onClick={this._undoSkip.bind(this)}>Undo</div>
               <div className={styles.removeButton}
@@ -283,7 +283,7 @@ export default class Issue extends Component {
       // completed notification
       let completedNotification =  (
          <div className={styles.headerNotification}>
-              {`你已完成此任務，將直接顯示對戰紀錄。`}
+              <div className={styles.headerNotificationText}>你已完成此任務，將直接顯示對戰紀錄。</div>
               <div className={styles.undo}
                    onClick={this._handleClearCompleted.bind(this)}>Reply</div>
               <div className={styles.removeButton}
@@ -292,12 +292,15 @@ export default class Issue extends Component {
       );``
 
       // 判斷是否要顯示提示通知
+      let notificationShowed = false;
       let headerNotification;
       if(chooseSkip===true && showNotification && interactive===false && !completed[currentIssueName]){
           headerNotification = skipNotification;
+          notificationShowed = true;
       } 
       if(completed[currentIssueName]===true && showCompleteNotification){
           headerNotification = completedNotification;
+          notificationShowed = true;
       }
 
 
@@ -315,13 +318,13 @@ export default class Issue extends Component {
               </div>
               );
 
-      let interactionControlPanel = (
+      let interactionControlPanel = (notificationShowed === false) ? (
         <div className={styles.settingPanel}>
           <div className={styles.settingButtons}>
               {alternative}
           </div>
         </div>
-      )
+      ):"";
 
       const metaData = {
           title: `議題表態分析-2016立委出任務`,

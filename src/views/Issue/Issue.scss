@@ -31,6 +31,10 @@ $breakLarge: 800px;
     padding: 10px;
   }
 }
+.headerNotificationText {
+  text-align: left;
+  display: inline-block;
+}
 .headerNotification.isHide {
   max-height: 0;
   overflow: hidden;
