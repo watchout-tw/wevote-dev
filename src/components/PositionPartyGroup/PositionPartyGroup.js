@@ -178,7 +178,9 @@ export default class PositionPartyGroup extends Component {
       verticalAlign: "middle",
       position: "relative",
       margin: "20px 0px",
-      transform: layoutMath.translateParams
+      transform: layoutMath.translateParams,
+      "-ms-transform": layoutMath.translateParams,
+      "-webkit-transform": layoutMath.translateParams
     }
     // 包著小方塊的內圈
     let innerWrap = {

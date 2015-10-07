@@ -195,7 +195,9 @@ export default class PositionLegislatorGroup extends Component {
       verticalAlign: "middle",
       position: "relative",
       margin: "20px 0px",
-      transform: layoutMath.translateParams
+      transform: layoutMath.translateParams,
+      "-ms-transform": layoutMath.translateParams,
+      "-webkit-transform": layoutMath.translateParams
     }
     // 包著單一立委的內圈
     let innerWrap = {
