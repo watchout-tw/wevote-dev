@@ -67,7 +67,7 @@ export default class Slideshow extends Component {
   }
   componentWillUnmount() {
     window.removeEventListener('keydown', this._handleKeyDown.bind(this));   
-    window.addEventListener('resize', this._handleResize.bind(this));
+    window.removeEventListener('resize', this._handleResize.bind(this));
   }
   _setCurrentIndex(value, event){
     const {currentIssue} = this.props;
