@@ -82,60 +82,124 @@ export default class PositionPartyGroup extends Component {
   
   }
 
+  constructor(props){ super(props)
+    this.state = {
+       viewWidth: ""
+    }
+  }
+  _updateViewWidth(){
+    if(window){
+        this.setState({
+           viewWidth: window.innerWidth
+        })
+    }
+  }
+
+  componentDidMount(){
+    this._updateViewWidth();
+    window.addEventListener('resize', this._updateViewWidth.bind(this));
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._updateViewWidth.bind(this));
+  }
+  _calculateLayout(){
+    let viewWidth = this.state.viewWidth;
+    let recordCount = this.props.data.records.length;
+    let cubeSize = 20;
+
+    // 依照資料數量，應該有的大小
+    // record 數=> 開根號，round up 到整數
+    // 盡量排成正方形
+    let originalWidth = Math.ceil(Math.sqrt(recordCount))*cubeSize;
+    
+    // boder 目前是 ad-hoc 的兩種寬度，需要再調整
+    let borderWidth = (originalWidth>140)? 6:4;
+
+    let translateParams;
+
+    // 在畫面夠大的時候，結果的預設值
+    let finalWidth = originalWidth;
+    let top = originalWidth/2;
+    let left = originalWidth/2;
+
+    // 在畫面不夠大的時候，把 viewWidth 算到整數倍的 cubeSize
+    // 算到剛好 cubeSize 的倍數是為了之後要 translate 到中間時，比較準確
+    viewWidth = (viewWidth/cubeSize)*cubeSize;
+
+    // 超過畫面大小，最外圈要 translate
+    if(originalWidth*2 > viewWidth){
+        let translateValue = Math.ceil(((originalWidth * 2) - viewWidth ) / 2 / cubeSize) * cubeSize;
+        translateParams = `translate3d(-${translateValue}px,0,0)`;
+    }
+
+    // 需要變成長方形，需要重新計算 top
+    if(viewWidth < originalWidth){
+       finalWidth = Math.min(viewWidth, originalWidth);
+       
+       let height = ( recordCount * cubeSize / viewWidth ) * cubeSize;
+       top = originalWidth - (height/2);
+       left = originalWidth - (finalWidth/2);
+    }
+
+    let result = {
+       originalWidth: originalWidth,
+       finalWidth: finalWidth,
+       top: top,
+       left: left,
+       borderWidth: borderWidth,
+       translateParams: translateParams
+    };
+    //console.log(result)
+
+    return result;
+  }
+ 
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, issueStatement} = this.props;
-
-
-    /* 這裡是一筆一筆的資料，方框顏色表示立場 */
-    let records = data.records.map((item,index)=>{
-      return <Record data={item} key={index} />
-    });
-
-    /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */
-
-    // 寬度是 record 數=> 開根號，round up 到整數
-    // $cubeSize: 20px
-    let width = Math.ceil(Math.sqrt(records.length))*20;
-
-    // 外面是一個兩倍大的 div，然後做圓弧
-    // boder 目前是 ad-hoc 的兩種寬度，需要再調整
-    let borderWidth = (width>140)? 6:4;
-
-    // 依照不同的立場設定框框的顏色
-    let cubesWrap = {
-      width: width * 2,
-      height: width * 2,
-      boxShadow: `0px 0px 0px ${borderWidth}px ${position2color(data.position)}`,
-      borderRadius: "50%",
-      display: "inline-block",
-      verticalAlign: "middle",
-      position: "relative",
-      margin: "20px 20px"
-    }
-
-    // 依照紀錄筆數，設定內圈的寬度
-    let cubes = {
-      width: width,
-      height: width,
-      position: "absolute",
-      top: width/2,
-      left: width/2
-    }
-
+    const {data, issueId, issueStatement} = this.props;
+    const layoutMath = this._calculateLayout();
+    
     let title = `我${eng2cht(data.position)}${issueStatement}`;
     if(data.position === "unknown")
       title = "我立場模糊";
 
+    let records = data.records.map((item,index)=>{
+      return <Record data={item} 
+                     key={index} />
+    });
 
+    // 外部的大圈
+    let outerCircle = {
+      width: layoutMath.originalWidth * 2,
+      height: layoutMath.originalWidth * 2,
+      boxShadow: `0px 0px 0px ${layoutMath.borderWidth}px ${position2color(data.position)}`,
+      borderRadius: "50%",
+      display: "inline-block",
+      verticalAlign: "middle",
+      position: "relative",
+      margin: "20px 0px",
+      transform: layoutMath.translateParams
+    }
+    // 包著小方塊的內圈
+    let innerWrap = {
+      width: layoutMath.finalWidth,
+      height: layoutMath.finalWidth,
+      position: "absolute",
+      top: layoutMath.top,
+      left: layoutMath.left
+    }
+    
+  
     return (
-      <div className={styles.wrap}>
-        <div>{title}</div>
-      
-        <div style={cubesWrap}>
-          <div style={cubes}>{records}</div>
+        <div className={styles.wrap}>
+            <div className={styles.header}>
+                {title}
+            </div>
+            <div style={outerCircle}>
+                <div style={innerWrap}>{records}</div>
+            </div>
+            
         </div>
-      </div>
     );
   }
 

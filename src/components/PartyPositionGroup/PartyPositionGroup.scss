@@ -11,9 +11,13 @@ $unknownColor: #FFF800;
 }
 .header {
 	display: block;
-	border: 1px solid gold;
 	max-width: 100vw;
 	padding-right: 20px;
+}
+@media all and (min-width: 800px){
+	.header {
+		padding-right: 0px;
+	}
 }
 .partyTitle, .partyTitle:visited {
     color: black;
@@ -24,8 +28,8 @@ $unknownColor: #FFF800;
     border-bottom: 1px solid rgb(53,55,54);
 }
 .partyTitle:hover {
-	color: $themeColor;
-	border-bottom: 1px solid $themeColor;
+	color: #B88234;
+	border-bottom: 1px solid #B88234;
 }
 .positionWrap {
 	position: relative;

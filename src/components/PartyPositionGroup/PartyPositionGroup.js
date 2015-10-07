@@ -5,7 +5,6 @@ import moment from 'moment';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 
-
 class Record extends Component {
   static propTypes = {
     data : PropTypes.object.isRequired
@@ -73,118 +72,115 @@ class Record extends Component {
 
 export default class PartyPositionGroup extends Component {
   static propTypes = {
-   
   }
   constructor(props){ super(props)
     this.state = {
-       viewWidth: ''
+       viewWidth: ""
     }
   }
   _updateViewWidth(){
-    console.log("[_updateViewWidth]")
     if(window){
-       this.setState({
-          viewWidth: window.innerWidth
-       })
+        this.setState({
+           viewWidth: window.innerWidth
+        })
     }
   }
+
   componentDidMount(){
     this._updateViewWidth();
-     window.addEventListener('resize', this._handleResize.bind(this));
-  }
-  _handleResize(e){
-    this._updateViewWidth();
+    window.addEventListener('resize', this._updateViewWidth.bind(this));
   }
   componentWillUnmount() {
-    window.removeEventListener('resize', this._handleResize.bind(this));
+    window.removeEventListener('resize', this._updateViewWidth.bind(this));
+  }
+  _calculateLayout(){
+    let viewWidth = this.state.viewWidth;
+    let recordCount = this.props.data.records.length;
+    let cubeSize = 20;
+
+    // 依照資料數量，應該有的大小
+    // record 數=> 開根號，round up 到整數
+    // 盡量排成正方形
+    let originalWidth = Math.ceil(Math.sqrt(recordCount))*cubeSize;
+    
+    // boder 目前是 ad-hoc 的兩種寬度，需要再調整
+    let borderWidth = (originalWidth>140)? 6:4;
+
+    let translateParams;
+
+    // 在畫面夠大的時候，結果的預設值
+    let finalWidth = originalWidth;
+    let top = originalWidth/2;
+    let left = originalWidth/2;
+
+    // 在畫面不夠大的時候，把 viewWidth 算到整數倍的 cubeSize
+    // 算到剛好 cubeSize 的倍數是為了之後要 translate 到中間時，比較準確
+    viewWidth = (viewWidth/cubeSize)*cubeSize;
+
+    // 超過畫面大小，最外圈要 translate
+    if(originalWidth*2 > viewWidth){
+        let translateValue = Math.ceil(((originalWidth * 2) - viewWidth ) / 2 / cubeSize) * cubeSize;
+        translateParams = `translate3d(-${translateValue}px,0,0)`;
+    }
+
+    // 需要變成長方形，需要重新計算 top
+    if(viewWidth < originalWidth){
+       finalWidth = Math.min(viewWidth, originalWidth);
+       
+       let height = ( recordCount * cubeSize / viewWidth ) * cubeSize;
+       top = originalWidth - (height/2);
+       left = originalWidth - (finalWidth/2);
+    }
+
+    let result = {
+       originalWidth: originalWidth,
+       finalWidth: finalWidth,
+       top: top,
+       left: left,
+       borderWidth: borderWidth,
+       translateParams: translateParams
+    };
+    //console.log(result)
+
+    return result;
   }
  
   render() {
     const styles = require('./PartyPositionGroup.scss');
     const {data, issueId, issueStatement} = this.props;
-    const {viewWidth} = this.state;
-    const cubeSize = 20;
+    const layoutMath = this._calculateLayout();
     
+  
+
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
-    /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
       return <Record data={item} 
                      key={index} />
     });
 
-    
-    /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */
-
-    // 寬度是 record 數=> 開根號，round up 到整數
-    let width = Math.ceil(Math.sqrt(records.length))*cubeSize;
-
-    // 外面是一個兩倍大的 div，然後做圓弧
-    // boder 目前是 ad-hoc 的兩種寬度，需要再調整
-    let borderWidth = (width>140)? 6:4;
-
-    
-
-   
-
-    // 如果圈圈超過畫面寬度，做 translate
-    // 同時內部的寬度改成畫面寬度
-     
-    let translateParams;
-    let cubeGroupWidth = width;
-    let top = width/2;
-    let left = width/2;
-    if(width*2 > viewWidth){
-        console.log("------------- PartyPositionGroup width > viewWidth ---------------")
-        console.log("widht: "+width)
-        console.log("viewWidth: "+viewWidth)
-        let translateValue = ((width * 2) - viewWidth ) /2;
-        translateParams = `translate3d(-${translateValue}px,0,0)`;
-        cubeGroupWidth = Math.min(viewWidth, width);// - Math.min(viewWidth, width)%cubeSize;// e.g. 346-6 = 240
-    }
-    if(viewWidth < width){
-       // 變成長方形，需要重新計算 top
-       let height = ( records.length / (cubeGroupWidth / cubeSize) ) * 20;
-       console.log("*")
-       console.log("*")
-       console.log("NEW HEIGHT: "+height)
-       top = width - (height/2);
-       left = width - (cubeGroupWidth/2) - 10;
-       console.log("cubeGroupWidth:"+cubeGroupWidth)
-       console.log("width:"+width)
-       console.log("NEW TOP: "+top)
-       console.log("NEW LEFT: "+left)
-
-
-    }
-
-
-    // 依照不同的立場設定框框的顏色
     // 外部的大圈
     let outerCircle = {
-      width: width * 2,
-      height: width * 2,
-      boxShadow: `0px 0px 0px ${borderWidth}px ${position2color(data.dominantPosition)}`,
+      width: layoutMath.originalWidth * 2,
+      height: layoutMath.originalWidth * 2,
+      boxShadow: `0px 0px 0px ${layoutMath.borderWidth}px ${position2color(data.dominantPosition)}`,
       borderRadius: "50%",
       display: "inline-block",
       verticalAlign: "middle",
       position: "relative",
       margin: "20px 0px",
-      transform: translateParams
+      transform: layoutMath.translateParams
     }
-    
-
     // 包著小方塊的內圈
     let innerWrap = {
-      width: cubeGroupWidth,
-      height: cubeGroupWidth,
+      width: layoutMath.finalWidth,
+      height: layoutMath.finalWidth,
       position: "absolute",
-      top: top,
-      left: left,
-      paddingRight: "20px"
+      top: layoutMath.top,
+      left: layoutMath.left
     }
     
-
+  
     return (
         <div className={styles.wrap}>
             <div className={styles.header}>
