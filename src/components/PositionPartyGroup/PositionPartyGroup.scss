@@ -45,11 +45,11 @@ $unknownColor: #FFF800;
 .TSU {
     background: #A25B09;
 }
-.NP {
-    border-color: gray;
+.NP, .NONE {
+    background: gray;
 }
-.NPU {
-    border-color: rgba(194,15,81,0.9);
+.NSU {
+    background: rgba(194,15,81,0.9);
 }
 /* hover 上的時候顯示的文字 */
 .activeBlock {
