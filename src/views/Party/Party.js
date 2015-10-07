@@ -67,7 +67,8 @@ export default class Party extends Component {
           charSet: 'utf-8',
           property: {
             'og:title': `${partyPositions.data.name}議題表態分析-2016立委出任務`,
-            'og:description': `${partyPositions.data.name}對於各項重大議題的表態大解析！趕快來看看${partyPositions.data.name}委員在立法院針對下列重大議題有哪些發言！`
+            'og:description': `${partyPositions.data.name}對於各項重大議題的表態大解析！趕快來看看${partyPositions.data.name}委員在立法院針對下列重大議題有哪些發言！`,
+            'og:type' : 'website'
           }
       }
      

@@ -333,7 +333,8 @@ export default class Issue extends Component {
               charSet: 'utf-8',
               property: {
                 'og:title': `議題表態分析-2016立委出任務`,
-                'og:description': `對於各項重大議題的表態大解析！趕快來看看委員在立法院針對下列重大議題有哪些發言！`
+                'og:description': `對於各項重大議題的表態大解析！趕快來看看委員在立法院針對下列重大議題有哪些發言！`,
+                'og:type' : 'website'
               }
           }
      

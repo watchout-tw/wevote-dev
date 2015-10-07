@@ -25,7 +25,8 @@ const meta = {
       'og:image': image,
       'og:locale': 'zh_TW',
       'og:title': title,
-      'og:description': description
+      'og:description': description,
+      'og:type' : 'website'
     }
   }
 };

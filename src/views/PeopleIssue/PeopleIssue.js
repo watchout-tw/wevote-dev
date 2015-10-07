@@ -116,7 +116,8 @@ export default class PeopleIssue extends Component {
           charSet: 'utf-8',
           property: {
             'og:title': `${name}對於${issueName}的表態-立委出任務`,
-            'og:description': description
+            'og:description': description,
+            'og:type' : 'website'
           }
       }
      
