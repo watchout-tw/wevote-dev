@@ -63,16 +63,17 @@ export default class App extends Component {
   }
  
   render() {
-    const {issues} = this.props;
+    const {issues, params} = this.props;
     const {location} = this.state;
     const styles = require('./App.scss');
   
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
-        <Appbar currentIssueName={this.props.params.issueName}
+        <Appbar currentIssueName={params.issueName}
                 issues={issues}
-                firstPathName={location}/>
+                firstPathName={location}
+                params={params}/>
         <div className={styles.appContent}>
           {this.props.children}
         </div>

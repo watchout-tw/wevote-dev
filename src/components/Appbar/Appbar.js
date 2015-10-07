@@ -1,64 +1,61 @@
 import React, {Component, PropTypes} from 'react';
-import {Link} from 'react-router';
+import {Router, Link} from 'react-router';
 
 
 export default class Appbar extends Component {
   constructor(props){ super(props)
+    const {params} = props;
+    let issueName = (params.issueName) ? params.issueName : '';
+
     this.state = {
         showMenu: false,
-        location: ""
+        location: "",
+        issueName: issueName
     }
   }
   _toggleShowMenu(){
     this.setState({
         showMenu: !this.state.showMenu
     });
-
   }
   _hideMenu(){
     this.setState({
         showMenu: false
     });
   }
-  _setLocation(value){
-      console.log("_setLocation");
-      this.setState({
-          location: value
-      });
-  }
   _updateLocation(value, event){
-    
-      console.log("_updateLocation");
-      this.setState({
-          location: value
-      })
-    
+    this.setState({
+        location: value
+    })
   }
-  componentDidMount(){//Only runs in client side
-    const {locationChecked} = this.state;
-    if(locationChecked === false){
-      this._updateLocation();
-    }
+  componentWillReceiveProps(nextProps){
+    const {params} = nextProps;
+    let issueName = (params.issueName) ? params.issueName : '';
+    this.setState({
+        issueName: issueName
+    })
   }
- 
 
   render() {
 
     const styles = require('./Appbar.scss');
     const siteLogo = require('./images/logo.png');
-    const {showMenu, location} = this.state;
+    const {showMenu, location, issueName} = this.state;
     const {currentIssueName, issues} = this.props;
     
     let showStyle = (showMenu) ? styles.showMenu : "";
 
     let issueItems = Object.keys(issues).map((issueId, index)=>{
-      let activeStyle = (currentIssueName===issueId) ? styles.active : "";
+      
+      //let activeStyle = (currentIssueName===issueId) ? styles.active : "";
+      let activeStyle = (issueName===issueId) ? styles.active : "";
+
       return (
         <li key={index}
-            onClick={this._hideMenu.bind(this)}>
+            onClick={this._updateLocation.bind(this,issueId)}>
             <Link className={` ${styles.navItem} ${activeStyle} `}
                   to={`/issues/${issueId}`}
-                  onClick={this._updateLocation.bind(this,'')} >
+                  onClick={this._hideMenu.bind(this)} >
                   <i className={`fa ${issues[issueId].icon} ${styles.icon}`}></i>
                   {issues[issueId].title}
             </Link>
@@ -66,9 +63,9 @@ export default class Appbar extends Component {
       )
     })
 
-    
     let partiesActive = (location === "parties") ? styles.active : "";
     let aboutActive = (location === "about") ? styles.active : "";
+
     return (
       <nav className={`${styles.appbar} ${showStyle}`}>
           <div className={styles.inner}>
