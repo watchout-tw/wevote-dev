@@ -142,14 +142,38 @@ $breakLarge: 800px;
 .backStage:hover {
   text-decoration: underline;
 }
-.keyboardHint {
-  margin: 20px 10px 100px 10px;
-  color: rgb(80,80,80);
+
+.mobileHint {
+  position: relative;
 }
+@media all and (min-width: 800px){
+  .mobileHint {
+    display: none;
+  }
+}
+.keyboardHint {
+  display: none;
+}
+@media all and (min-width: 800px){
+  .keyboardHint {
+    display: block;
+    margin: 20px 10px 100px 10px;
+    color: rgb(80,80,80);
+  }
+}
+
 .skipInteractive {
-  display: inline-block;
   cursor: pointer;
   text-decoration: underline;
+  margin: 30px;
+  color: gray;
+}
+@media all and (min-width: 800px){
+  .skipInteractive {
+     display: inline-block;
+     margin: 10px;
+  }
+
 }
 .skipInteractive:hover {
   color: black;

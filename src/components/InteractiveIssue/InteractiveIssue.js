@@ -252,20 +252,37 @@ export default class InteractiveIssue extends Component {
 
       console.log("==== RENDER:"+stage+"=====");
       
-      let backItem = ((stage !== "intro") && (stage !=="introStory")) ? (
+      let notFirstPage = ((stage !== "intro") && (stage !=="introStory"));
+      //back
+      let backItem = (notFirstPage) ? (
               <div className={styles.backStage}
                    onClick={this._handleBackStage.bind(this)}>回到上一步 (b)
               </div>)
               :(<div className={styles.backStage}></div>);
 
+      //nextButton, only used in mobile & pad
+      let nextButton = (showNext && notFirstPage) ? (<div className={styles.actionButton} onClick={this._handleNext.bind(this)}>繼續</div>) : "";
 
-      let introItem = (
-            <div className={styles.keyboardHint}>
-                  （按空白鍵繼續）或是 <div className={styles.skipInteractive}
-                                         onClick={skipInteractive.bind(null)}>直接看結果</div>
-            </div>
+
+
+      /*----- INTRO -----*/
+      // Used in mobile & pad (<800px)
+      let introItemMobile = (
+          <div className={styles.mobileHint}>
+               <div className={styles.actionButton} onClick={this._handleNext.bind(this)}>繼續</div>
+               <div className={styles.skipInteractive} onClick={skipInteractive.bind(null)}>直接看結果</div>
+          </div>
+      );
+      // Only used in web (>800px)
+      let introItemWeb = (
+          <div className={styles.keyboardHint}>
+                （按空白鍵繼續）或是 <div className={styles.skipInteractive}
+                                        onClick={skipInteractive.bind(null)}>直接看結果</div>
+          </div>
       )
-     
+      
+      /*----- RESULTS -----*/
+      // slides
       let slidesItem = (showSlides === true) ? <Slideshow currentIssue={currentIssue} topic={currentIssue.title}/> : "";
       
       // 協力 NGO
@@ -296,13 +313,16 @@ export default class InteractiveIssue extends Component {
                   showComingMission={false}/>
       );
 
+
+
+
       let choiceItems;
       
       let stageItem;
       switch(stage){
         case 'intro':
         case 'introStory':
-          stageItem = introItem;
+          stageItem = <div>{introItemMobile}{introItemWeb}</div>;
           break;
 
         case 'chooseSlides':
@@ -350,6 +370,7 @@ export default class InteractiveIssue extends Component {
                                     showNext={showNext}
                                     handleNext={this._handleNext.bind(this)}
                                     userPosition={userPosition}/>
+                    {nextButton}
                     {choiceItems}
                 </div>
 
