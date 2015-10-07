@@ -58,13 +58,11 @@ a.coverItem, a.coverItem:visited {
 @media all and (min-width: $breakMedium) {
 	.coverItem, .coverItem:visited {
       width: 220px;
-      
     }
-
 }
 a.coverItem:hover {
-  //background: #d9d9d9;
-  box-shadow: 0 0 0 1px rgba(217, 183, 135, 0.76),0 0px 20px rgb(214, 164, 92);
+  /* box-shadow: 0 0 0 1px rgba(217, 183, 135, 0.76),0 0px 20px rgb(214, 164, 92); */
+  box-shadow: 0 0 0 1px rgb(171, 234, 243), 0 0px 20px #3FB8EC;
   color: #464242;
   transition: all 100ms ease-in-out;
 }
