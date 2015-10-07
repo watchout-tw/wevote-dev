@@ -94,50 +94,82 @@ export default class PositionLegislatorGroup extends Component {
     issueStatement: PropTypes.string.isRequired
     
   }
+  constructor(props){ super(props)
+    this.state = {
+       viewWidth: ""
+    }
+  }
+  _updateViewWidth(){
+    if(window){
+        this.setState({
+           viewWidth: window.innerWidth
+        })
+    }
+  }
+
+  componentDidMount(){
+    this._updateViewWidth();
+    window.addEventListener('resize', this._updateViewWidth.bind(this));
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._updateViewWidth.bind(this));
+  }
+  _calculateLayout(){
+    let viewWidth = this.state.viewWidth;
+    let recordCount = this.props.data.legislators.length;
+    let cubeSize = 50;
+
+    // 依照資料數量，應該有的大小
+    // record 數=> 開根號，round up 到整數
+    // 盡量排成正方形
+    let originalWidth = Math.ceil(Math.sqrt(recordCount))*cubeSize;
+    
+    // boder 目前是 ad-hoc 的兩種寬度，需要再調整
+    let borderWidth = (originalWidth>140)? 6:4;
+
+    let translateParams;
+
+    // 在畫面夠大的時候，結果的預設值
+    let finalWidth = originalWidth;
+    let top = originalWidth/5;///5 is ad-hoc /// NeedFix
+    let left = originalWidth/5;
+
+    // 在畫面不夠大的時候，把 viewWidth 算到整數倍的 cubeSize
+    // 算到剛好 cubeSize 的倍數是為了之後要 translate 到中間時，比較準確
+    viewWidth = (viewWidth/cubeSize)*cubeSize;
+
+    // 超過畫面大小，最外圈要 translate
+    if(originalWidth*1.4 > viewWidth){
+        let translateValue = Math.ceil(((originalWidth * 1.4) - viewWidth ) / 2 / cubeSize) * cubeSize;
+        translateParams = `translate3d(-${translateValue}px,0,0)`;
+    }
+
+    // 需要變成長方形，需要重新計算 top
+    if(viewWidth < originalWidth){
+       finalWidth = Math.min(viewWidth, originalWidth);
+       
+       let height = ( recordCount * cubeSize / viewWidth ) * cubeSize;
+       top = originalWidth - (height/2);
+       left = originalWidth - (finalWidth/2);
+    }
+
+    let result = {
+       originalWidth: originalWidth,
+       finalWidth: finalWidth,
+       top: top,
+       left: left,
+       borderWidth: borderWidth,
+       translateParams: translateParams
+    };
+    //console.log(result)
+
+    return result;
+  }
 
   render() {
     const styles = require('./PositionLegislatorGroup.scss');
     const {data, currentIssueName, issueStatement} = this.props;
-   
-    
-    /* 這裡是立委們 */
-    let legislators = data.legislators.map((item,index)=>{
-      return <LegislatorAvatar 
-              data={item} key={index} 
-              currentIssueName={currentIssueName}/>
-    });
-
-    /* 計算外面的圓圈大小，跟裡面框框集合的寬度 */
-     
-    // 寬度是 record 數=> 開根號，round up 到整數
-    // $cubeSize: 20px; 
-    let width = Math.ceil(Math.sqrt(data.legislators.length))*50;//51 = 40 + 4 + 6, i.e. width + margin + border-width*2
-
-    // 外面是一個兩倍大的 div，然後做圓弧
-    // boder 目前是 ad-hoc 的兩種寬度，需要再調整 NEEDFIX
-    let borderWidth = (width>140)? 6:4;
-
-    // 依照不同的立場設定框框的顏色
-    let cubesWrap = {
-        width: width * 1.4,
-        height: width * 1.4,
-        boxShadow: `0px 0px 0px ${borderWidth}px ${position2color(data.position)}`,
-        borderRadius: "50%",
-        display: "inline-block",
-        verticalAlign: "middle",
-        position: "relative",
-        margin: "20px 20px"
-    }
-
-    // 依照紀錄筆數，設定內圈的寬度
-    // 5 是什麼 ad-hoc 的數字....... NEEDFIX
-    let cubes = {
-        width: width,
-        height: width,
-        position: "absolute",
-        top: width/5,
-        left: width/5
-    }
+    const layoutMath = this._calculateLayout();
 
     let title = `我${eng2cht(data.position)}${issueStatement}`;
     if(data.position === "unknown")
@@ -145,13 +177,43 @@ export default class PositionLegislatorGroup extends Component {
     if(data.position === "evading")
       title = "我該有立場\n可是卻沒有立場"
 
+    /* 這裡是立委們 */
+    let legislators = data.legislators.map((item,index)=>{
+      return <LegislatorAvatar 
+              data={item} key={index} 
+              currentIssueName={currentIssueName}/>
+    });
+
+   
+    // 外部的大圈
+    let outerCircle = {
+      width: layoutMath.originalWidth * 1.4,
+      height: layoutMath.originalWidth * 1.4,
+      boxShadow: `0px 0px 0px ${layoutMath.borderWidth}px ${position2color(data.position)}`,
+      borderRadius: "50%",
+      display: "inline-block",
+      verticalAlign: "middle",
+      position: "relative",
+      margin: "20px 0px",
+      transform: layoutMath.translateParams
+    }
+    // 包著單一立委的內圈
+    let innerWrap = {
+      width: layoutMath.finalWidth,
+      height: layoutMath.finalWidth,
+      position: "absolute",
+      top: layoutMath.top,
+      left: layoutMath.left
+    }
 
     return (
       <div className={styles.wrap}>
-         <div className={styles.title}>{title}</div>
-         <div style={cubesWrap}>
-            <div style={cubes}>{legislators}</div>
-         </div>
+            <div className={styles.header}>
+                {title}
+            </div>
+            <div style={outerCircle}>
+                <div style={innerWrap}>{legislators}</div>
+            </div>    
       </div>
     );
   }
