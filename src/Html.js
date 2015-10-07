@@ -40,7 +40,8 @@ export default class Html extends Component {
           )}
 
           {/* shareaholic */}
-          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
+          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='ee9e58db815746ed0289a30d43e9d636' data-cfasync='false' async='async'></script>
+
 
         </head>
         <body>
