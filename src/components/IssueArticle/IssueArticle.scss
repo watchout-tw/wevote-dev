@@ -1,0 +1,116 @@
+.articleWrap {
+	position: relative;
+	max-width: 800px;
+	margin: 0 10px 150px 10px;
+}
+@media all and (min-width: 800px){
+	.articleWrap {
+		margin: 0 auto 150px auto;
+	}
+}
+
+.article {
+	text-align: left;
+	background: white;
+	padding: 20px;
+	background: rgb(250,250,250);
+    box-shadow: 4px 2px 7px 0 rgba(0,0,0,0.12);
+    border: 6px solid #B4AEA3;
+}
+.article:before {
+	content: '';
+    position: absolute;
+    bottom: -100px;
+    left: calc(50% - 7px);
+    border-top: 100px solid #B4AEA3;
+    border-left: 10px solid #B4AEA3;
+    border-right: 40px solid transparent;
+}
+.article:after {
+	content: '';
+	position: absolute;
+	bottom: -80px;
+    left: 50%;
+    border-top: 100px solid white;
+    border-left: 0px solid transparent;
+    border-right: 40px solid transparent;
+}
+
+/* header, preview */
+.articleHeader {
+    margin: 10px;
+    text-align: left;
+    color: #6C5E5E;
+    
+}
+@media all and (min-width: 800px){
+	.articleHeader {
+		padding: 20px;
+	}
+}
+
+.img {
+    position: absolute;
+    width: 100px;
+    top: -80px;
+    float: left;
+}
+
+.articleTitle {
+	font-size: 24px;
+	color: #594949;
+}
+.articleSubtitle {
+	font-size: 20px;
+    color: rgb(53,55,54);
+    padding: 4px 10px 4px 0;
+}
+.hintList {
+	padding: 0 0 0 20px;
+}
+.hint {
+	line-height: 1.5;
+	margin: 10px 0;
+}
+@media all and (min-width: 800px){
+	.hint {
+		margin: 0;
+	}
+}
+/* 繼續閱讀 */
+.button {
+	cursor: pointer;
+	display: inline-block;
+	padding: 4px;
+	border-bottom: 3px solid transparent;
+	color: #6C5E5E;
+}
+.button:hover {
+	border-bottom: 3px solid #B4AEA3;
+	color: #594949;
+}
+
+/* 段落 */
+.mainArticle {
+	max-height: 0;
+	overflow: hidden;
+}
+.mainArticle.active {
+    max-height: 10000px;
+}
+.section {
+	margin: 10px auto;
+	margin-bottom: 80px;
+}
+.sectionTitle {
+	font-size: 22px;
+}
+.paragraph {
+	line-height: 1.6;
+}
+.list {
+	line-height: 2;
+}
+.peopleLink, .peopleLink:visited {
+	color: #FF0055;
+}

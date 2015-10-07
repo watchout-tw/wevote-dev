@@ -3,8 +3,10 @@ import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
 
-import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
+import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
+import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
+
 
 @connect(
     state => ({
@@ -27,6 +29,16 @@ export default class StaticIssue extends Component {
       const {issues, currentView, currentIssueName, setCurrentView} = this.props;
       const currentIssue = issues[currentIssueName];
       console.log("static issues")
+
+       // 協力 NGO
+      const { collaborators } = currentIssue;
+      let collaboratorItems = collaborators.map((ngo, index)=>{
+          return <a className={styles.link}
+                    href={ngo.link}
+                    target="_blank"
+                    key={index}>{ngo.name}</a>
+      });
+
       return (
         <div className={styles.wrap}>
             <div className={styles.innerWrap}>
@@ -37,6 +49,11 @@ export default class StaticIssue extends Component {
                              currentIssue={currentIssue}
                              currentIssueName={currentIssueName}
                              setCurrentView={setCurrentView} /> 
+
+                <IssueArticle issue={currentIssue.titleEng} />
+                <div className={styles.collaboratorInfo}>
+                    本議題協力NGO：{collaboratorItems}
+                </div>
 
              </div>
         </div>

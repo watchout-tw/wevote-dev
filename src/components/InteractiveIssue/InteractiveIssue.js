@@ -267,12 +267,26 @@ export default class InteractiveIssue extends Component {
       )
      
       let slidesItem = (showSlides === true) ? <Slideshow currentIssue={currentIssue} topic={currentIssue.title}/> : "";
-    
+      
+      // 協力 NGO
+      const { collaborators } = currentIssue;
+      let collaboratorItems = collaborators.map((ngo, index)=>{
+          return <a className={styles.link}
+                    href={ngo.link}
+                    target="_blank"
+                    key={index}>{ngo.name}</a>
+      });
+
       let resultsItem = (stage === "results") ? (
-        <IssueFigure currentView={currentView}
-                     currentIssue={currentIssue}
-                     currentIssueName={currentIssueName}
-                     setCurrentView={setCurrentView} /> 
+        <div>
+            <IssueFigure currentView={currentView}
+                         currentIssue={currentIssue}
+                         currentIssueName={currentIssueName}
+                         setCurrentView={setCurrentView} /> 
+            <div className={styles.collaboratorInfo}>
+                  本議題協力NGO：{collaboratorItems}
+            </div>
+        </div>
       ):"";
 
 

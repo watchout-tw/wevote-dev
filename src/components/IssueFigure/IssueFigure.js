@@ -85,14 +85,7 @@ export default class IssueFigure extends Component {
         
       }
 
-      // 協力 NGO
-      const { collaborators } = currentIssue;
-      let collaboratorItems = collaborators.map((ngo, index)=>{
-          return <a className={styles.link}
-                    href={ngo.link}
-                    target="_blank"
-                    key={index}>{ngo.name}</a>
-      });
+     
 
       return (
           <div>
@@ -112,12 +105,7 @@ export default class IssueFigure extends Component {
               <div className={styles.records}>
                   {currentViewGroups}
               </div>
-
-              <div className={styles.collaboratorInfo}>
-                本議題協力NGO：{collaboratorItems}
-              </div>
-
-              
+          
           </div>
           );
 

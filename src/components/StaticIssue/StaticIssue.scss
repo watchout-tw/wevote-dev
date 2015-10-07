@@ -1,7 +1,22 @@
 .wrap {
-	position: relative;
-	
+	position: relative;	
 }
 .innerWrap {
     text-align: center;
+}
+.collaboratorInfo {
+	text-align: center;
+    margin: 0 -9%;
+    background: #d3d3d3;
+}
+.link, .link:visited {
+  color: #b88234;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+}
+.link:hover {
+  color: #b88234;
+  text-decoration: underline;
+
 }
