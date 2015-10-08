@@ -301,7 +301,7 @@ export default class InteractiveIssue extends Component {
                          currentIssueName={currentIssueName}
                          setCurrentView={setCurrentView} /> 
             <div className={styles.collaboratorInfo}>
-                  本議題協力NGO：{collaboratorItems}
+                  特別感謝{collaboratorItems}協助議題資料
             </div>
         </div>
       ):"";

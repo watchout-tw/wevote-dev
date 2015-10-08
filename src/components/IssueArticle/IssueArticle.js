@@ -51,6 +51,11 @@ export default class IssueArticle extends Component {
                     <li className={styles.hint}>迷思三：看起來支持方的表態次數比反對方多，那法案應該很容易通過吧？</li>
                   </ul>
               </div>
+
+              <div className={styles.section}>
+                <p className={styles.paragraph}>你可能聽過婚姻平權，也可能聽過每年盛大的同志遊行，甚至看過新聞大篇幅報導今年6月美國邁向同性婚姻合法化的消息。那麼，在台灣立法院內又是怎麼討論這個議題呢？看完上面圖表之後，你真的看懂了嗎？</p>
+                <p className={styles.paragraph}>讓阿草用數據破解你對於立法院的迷思！</p>
+              </div>
               
               <div className={` ${styles.mainArticle} ${activeArticle}`}>{mainArticle}</div>
               <div className={styles.button}
@@ -65,10 +70,6 @@ class MarriageEquality extends Component {
     const styles = require('./IssueArticle.scss');
     return (
       <div>
-          <div className={styles.section}>
-             <p className={styles.paragraph}>你可能聽過婚姻平權，也可能聽過每年盛大的同志遊行，甚至看過新聞大篇幅報導今年6月美國邁向同性婚姻合法化的消息。那麼，在台灣立法院內又是怎麼討論這個議題呢？看完上面圖表之後，你真的看懂了嗎？</p>
-             <p className={styles.paragraph}>讓阿草用數據破解你對於立法院的迷思！</p>
-          </div>
           <div className={styles.section}>
             <h1 className={styles.sectionTitle}>迷思一：民進黨就是支持婚姻平權，國民黨就是反對？</h1>
             <p className={styles.paragraph}>圖表中可以看到民進黨共有37筆表態紀錄，全都是支持，而國民黨則有9筆表態紀錄，以反對居多。這樣看起來標題的說法似乎沒錯？</p>

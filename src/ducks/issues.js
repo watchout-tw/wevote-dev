@@ -162,8 +162,8 @@ const initialState = {
       "title" : "罷免",
       "icon" : "fa-thumbs-down",
       "titleEng" : "recall",
-      "question" : "你是否支持下修罷免門檻？",
-      "statement" : "下修罷免門檻",
+      "question" : "你是否支持罷免門檻下修？",
+      "statement" : "罷免門檻下修",
       "slideshows" : [
         {
             filename: "slides-11.png",
@@ -277,7 +277,7 @@ const initialState = {
       "icon" : "fa-gavel",
       "titleEng" : "referendum",
       "question" : "你支持公投門檻下修嗎?",
-      "statement" : "下修公投門檻",
+      "statement" : "公投門檻下修",
       "slideshows" : [
         {
             filename: "slides-26.png",
@@ -439,125 +439,125 @@ const initialState = {
       ]
     },
     "nuclear-power" : {
-      "title" : "核四",
+      "title" : "核能",
       "icon" : "fa-industry",
       "titleEng" : "nuclearPower",
-      "question" : "你支持停建核四嗎?",
-      "statement" : "停建核四",
+      "question" : "你支持核四停建嗎?",
+      "statement" : "核四停建",
       "slideshows" : [
         {
             filename: "slides-18.png",
-            alt: "你支持停建核四嗎？-核四"
+            alt: "你支持核四停建嗎？-核能"
         },
         {
             filename: "slides-19.png",
-            alt: "數字看核四-核四"
+            alt: "數字看核四-核能"
         },
         {
             filename: "slides-20.png",
-            alt: "核四三十五年-核四"
+            alt: "核四三十五年-核能"
         },
         {
             filename: "slides-21.png",
-            alt: "核廢料、環保-核四"
+            alt: "核廢料、環保-核能"
         },
         {
             filename: "slides-22.png",
-            alt: "能源自主、能源需求-核四"
+            alt: "能源自主、能源需求-核能"
         },
         {
             filename: "slides-23.png",
-            alt: "發電成本、興建預算-核四"
+            alt: "發電成本、興建預算-核能"
         },
         {
             filename: "slides-24.png",
-            alt: "工程品質、核災風險-核四"
+            alt: "工程品質、核災風險-核能"
         },
         {
             filename: "slides-25.png",
-            alt: "核四目前封存中，未來仍有可能解凍運轉。你的一票，決定台灣能源未來-核四"
+            alt: "核四目前封存中，未來仍有可能解凍運轉。你的一票，決定台灣能源未來-核能"
         }
       ],
       "slideshowsMobile" : [
         {
             filename: "slides-mobile-43.png",
-            alt: "你支持停建核四嗎？-核四"
+            alt: "你支持核四停建嗎？-核能"
         },
         {
             filename: "slides-mobile-44.png",
-            alt: "數字看核四-核四"
+            alt: "數字看核四-核能"
         },
         {
             filename: "slides-mobile-45.png",
-            alt: "數字看核四-核四"
+            alt: "數字看核四-核能"
         },
         {
             filename: "slides-mobile-46.png",
-            alt: "數字看核四-核四"
+            alt: "數字看核四-核能"
         },
         {
             filename: "slides-mobile-47.png",
-            alt: "核四三十五年-核四"
+            alt: "核四三十五年-核能"
         },
         {
             filename: "slides-mobile-48.png",
-            alt: "核四三十五年-核四"
+            alt: "核四三十五年-核能"
         },
         {
             filename: "slides-mobile-49.png",
-            alt: "核四三十五年-核四"
+            alt: "核四三十五年-核能"
         },
         {
             filename: "slides-mobile-50.png",
-            alt: "擁核反核怎麼說？-核四"
+            alt: "擁核反核怎麼說？-核能"
         },
         {
             filename: "slides-mobile-51.png",
-            alt: "核廢料-核四"
+            alt: "核廢料-核能"
         },
         {
             filename: "slides-mobile-52.png",
-            alt: "環保-核四"
+            alt: "環保-核能"
         },
         {
             filename: "slides-mobile-53.png",
-            alt: "能源自主-核四"
+            alt: "能源自主-核能"
         },
         {
             filename: "slides-mobile-54.png",
-            alt: "能源需求-核四"
+            alt: "能源需求-核能"
         },
         {
             filename: "slides-mobile-55.png",
-            alt: "發電成本-核四"
+            alt: "發電成本-核能"
         },
         {
             filename: "slides-mobile-56.png",
-            alt: "興建預算-核四"
+            alt: "興建預算-核能"
         },
         {
             filename: "slides-mobile-57.png",
-            alt: "工程品質-核四"
+            alt: "工程品質-核能"
         },
         {
             filename: "slides-mobile-58.png",
-            alt: "核災風險-核四"
+            alt: "核災風險-核能"
         },
         {
             filename: "slides-mobile-59.png",
-            alt: "核四目前封存中，未來仍有可能解凍運轉。"
+            alt: "核四目前封存中，未來仍有可能解凍運轉。-核能"
         },
         {
             filename: "slides-mobile-60.png",
-            alt: "核四目前封存中，未來仍有可能解凍運轉。"
+            alt: "核四目前封存中，未來仍有可能解凍運轉。-核能"
         },
         {
             filename: "slides-mobile-61.png",
-            alt: "你的一票，決定台灣能源未來-核四"
+            alt: "你的一票，決定台灣能源未來-核能"
         },
         {
             filename: "slides-mobile-62.png",
-            alt: "你的一票，決定台灣能源未來-核四"
+            alt: "你的一票，決定台灣能源未來-核能"
         }
       ],
       "description" : "你支持停建核四嗎？你知道核四蓋了十六年嗎？關於核能來看看還有哪些你知道或不知道的。",

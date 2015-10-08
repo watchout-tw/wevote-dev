@@ -52,7 +52,7 @@ export default class StaticIssue extends Component {
 
                 <IssueArticle issue={currentIssue.titleEng} />
                 <div className={styles.collaboratorInfo}>
-                    本議題協力NGO：{collaboratorItems}
+                    特別感謝{collaboratorItems}協助議題資料
                 </div>
 
              </div>
