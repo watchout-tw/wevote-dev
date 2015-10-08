@@ -1,6 +1,6 @@
 @import '../../common.scss';
 $redColor: #D65A5A;
-$breakSmall: 450px;
+$breakSmall: 480px;
 $breakMedium: 800px;
 .wrap {
 	background: $awesomeColor;
@@ -33,7 +33,6 @@ $breakMedium: 800px;
 	display: inline-block;
 	height: 40px;
   border: none;
-  border-radius: 4px;
   padding: 5px 10px;
 	background: $white;
   color: $black;

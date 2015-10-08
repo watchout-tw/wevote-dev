@@ -34,7 +34,7 @@ export default class Footer extends Component {
                 name="Edit"
                 id="Edit">
 
-                <div className={styles.title}>在有新任務時，收到第一手的通知</div>
+                <div className={styles.title}>想收到新任務的第一手通知嗎？</div>
                 <input name="postURL" type="hidden" value=""/>
                 <input name="cancelURL" type="hidden" value="http://crm.watchout.tw/civicrm/profile?reset=1&amp;gid=10"/>
                 <input name="add_to_group" type="hidden" value="10"/>
@@ -43,9 +43,7 @@ export default class Footer extends Component {
                 <script type="text/javascript" src="http://crm.watchout.tw/sites/all/modules/civicrm/js/Common.js"></script>
                 <div id="crm-container" lang="zh" xmlLang="zh">
                       <label className={styles.emailLabel}>e-mail<span className={styles.red}>*</span><span className={alertStyle}>必填資訊</span></label>
-                      <input maxLength="64"
-                             size="30"
-                             name="email-Primary"
+                      <input name="email-Primary"
                              type="email" id="email-Primary"
                              ref="emailInput"
                              className={styles.emailInput}
@@ -64,7 +62,7 @@ export default class Footer extends Component {
               </form>
               <div className={styles.lawInfo}>
                 <div className={styles.lawInfoTitle}>最多隔週發信一次，請放心，你隨時可以取消訂閱。</div>
-                <div className={styles.lawInfoContent}>依據《個人資料保護法》，關於個人資料蒐集、處理及利用聲明：使用本電子報訂閱視為瞭解及同意沃草公司進行您個人資料（email 資訊）之蒐集、處理及利用，除非取得您的同意或其他法令之特別規定，絕不會將您的個人資料提供給第三方或使用於電子報訂閱以外之其它用途。您隨時可來信取消此訂閱服務，經取消訂閱後，相關資料立即從訂閱資料庫中刪除。</div>
+                <div className={styles.lawInfoContent}>依據《個人資料保護法》，關於個人資料蒐集、處理及利用聲明：使用本電子報訂閱視為瞭解及同意沃草公司進行您個人資料（email資訊）之蒐集、處理及利用，除非取得您的同意或其他法令之特別規定，絕不會將您的個人資料提供給第三方或使用於電子報訂閱以外之其它用途。您隨時可來信取消此訂閱服務，經取消訂閱後，相關資料立即從訂閱資料庫中刪除。</div>
               </div>
               <div className={styles.bottomInfo}>
                 <div>本網站資料及原始碼採創用CC授權。</div>
