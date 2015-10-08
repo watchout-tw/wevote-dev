@@ -105,6 +105,7 @@ export default class PartyPositionGroup extends Component {
     
     // boder 目前是 ad-hoc 的兩種寬度，需要再調整
     let borderWidth = (originalWidth>140)? 6:4;
+    let outerCircleSize = originalWidth*2;
 
     let translateParams;
 
@@ -115,21 +116,22 @@ export default class PartyPositionGroup extends Component {
 
     // 在畫面不夠大的時候，把 viewWidth 算到整數倍的 cubeSize
     // 算到剛好 cubeSize 的倍數是為了之後要 translate 到中間時，比較準確
-    viewWidth = (viewWidth/cubeSize)*cubeSize;
+    viewWidth =  Math.floor(viewWidth/cubeSize)*cubeSize;
 
     // 超過畫面大小，最外圈要 translate
-    if(originalWidth*2 > viewWidth){
-        let translateValue = Math.ceil(((originalWidth * 2) - viewWidth ) / 2 / cubeSize) * cubeSize;
+    if(outerCircleSize > viewWidth){
+        let translateValue = outerCircleSize/2 - viewWidth/2 + (20-borderWidth/2);//因為最外面的 wrap 有 20 的 margin;
         translateParams = `translate3d(-${translateValue}px,0,0)`;
     }
 
     // 需要變成長方形，需要重新計算 top
     if(viewWidth < originalWidth){
-       finalWidth = Math.min(viewWidth, originalWidth);
+       finalWidth = viewWidth;
        
-       let height = ( recordCount * cubeSize / viewWidth ) * cubeSize;
-       top = originalWidth - (height/2);
-       left = originalWidth - (finalWidth/2);
+       let rowCount = viewWidth / cubeSize;
+       let height = ( recordCount / rowCount ) * cubeSize;
+       top = outerCircleSize/2 - (height/2);
+       left = outerCircleSize/2 - (finalWidth/2);
     }
 
     let result = {
@@ -184,17 +186,18 @@ export default class PartyPositionGroup extends Component {
     
   
     return (
-        <div className={styles.wrap}>
+        <div div className={styles.wrap}>
             <div className={styles.header}>
                 <Link to={`/parties/${data.party}/${issueId}`}
                       className={styles.partyTitle}>{partyTitle}</Link>
                 <div>{`${data.dominantPercentage}% ${eng2cht(data.dominantPosition)}`}</div>
                 <div>{issueStatement}</div>
             </div>
-            <div style={outerCircle}>
-                <div style={innerWrap}>{records}</div>
+            <div className={styles.margin}>
+                <div style={outerCircle}>
+                    <div style={innerWrap}>{records}</div>
+                </div>      
             </div>
-            
         </div>
     );
   }
