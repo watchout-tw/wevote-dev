@@ -41,11 +41,11 @@ export default class Missions extends Component {
             checkedLocal: true,
             completed: completed
           })
-      
-          
+
+
       }
-      
-      
+
+
   }
   componentDidMount(){//Only runs in client side
       this._checkLocalStorage();
@@ -53,29 +53,31 @@ export default class Missions extends Component {
   componentDidUpdate(prevProps, prevState){//Only runs in client side
       //this._checkLocalStorage();
   }
-  
+
   render() {
     const styles = require('./Missions.scss');
     const {issues, skipIssue, showComingMission} = this.props;
     const {completed} = this.state;
+    const castle_default = require("./images/castles_default.svg");
+    const symbol_star = require('./images/symbols_star.svg');
 
     let missonItems = Object.keys(issues).map((currentIssue, index)=>{
 
         let imgURL;
 
         try {
-          imgURL = require(`./images/${issues[currentIssue].titleEng}.png`);
-        }catch(e){
-          imgURL = require("./images/default.png");
+          imgURL = require(`./images/castles_${issues[currentIssue].titleEng}.svg`);
+        } catch (e){
+          imgURL = castle_default;
         }
 
         let completedOrStatement = (completed[currentIssue] === true) ? (
           <div className={styles.missionStatusBlock}>
-            <i className={`fa fa-star ${styles.star}`}></i>
-            <div className={styles.missionStatusText}>COMPLETED</div>
+            <img src={symbol_star} className={`${styles.symbol} ${styles.star}`}/>
+            <div className={styles.missionStatusText}>任務完成</div>
           </div>
         ) : (<div>{issues[currentIssue].question}</div>);
-        
+
         let titleStyle = (completed[currentIssue] === true) ? styles.completedCoverTitle : styles.coverTitle;
 
         if(skipIssue !== currentIssue){
@@ -83,9 +85,9 @@ export default class Missions extends Component {
               <Link to={`/issues/${currentIssue}`} key={index} className={styles.coverItem}>
                   <img src={imgURL} className={styles.coverImg}/>
                   <div className={styles.coverTitleBlock}>
-                      <div className={titleStyle}>{issues[currentIssue].title}</div>之城
+                      <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
                   </div>
-                  {completedOrStatement}
+                  <div className={styles.coverQuestion}>{completedOrStatement}</div>
               </Link>
             )
         }
@@ -93,7 +95,8 @@ export default class Missions extends Component {
 
     let comingMissionItem = (showComingMission === true) ? (
         <div className={styles.coverItem}>
-                <div className={styles.comingText}>更多任務<br/>coming soon</div>
+          <img src={castle_default} className={styles.coverImg}/>
+          <div className={styles.comingText}>更多任務<br/>即將揭曉</div>
         </div>
     ) : "";
 

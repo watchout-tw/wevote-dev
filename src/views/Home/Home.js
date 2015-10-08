@@ -31,16 +31,16 @@ export default class Home extends Component {
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
-          
+
           <div className={styles.innerWrap}>
-              <div className={styles.pageTitle}>請選擇任務：</div>
+              <div className={styles.pageTitle}>立即選擇任務</div>
               <Missions issues={issues}
                         showComingMission={true}/>
-              
+
           </div>
-          
-          
-          
+
+
+
       </div>
     );
   }
@@ -70,4 +70,3 @@ export default class Home extends Component {
 //       </div>
 //     </div>
 // </div>
-
