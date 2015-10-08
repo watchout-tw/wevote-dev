@@ -1485,7 +1485,7 @@ const initialState = {
     },
     "107": {
         "id": 107,
-        "name": "鄭天財Sra．Kacaw",
+        "name": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "partyCht": "中國國民黨",
         "gender": "男",

@@ -123,9 +123,11 @@ export default class PositionLegislatorGroup extends Component {
     // record 數=> 開根號，round up 到整數
     // 盡量排成正方形
     let originalWidth = Math.ceil(Math.sqrt(recordCount))*cubeSize;
-    
+    let outerCircleSize = originalWidth*1.4;
+
     // boder 目前是 ad-hoc 的兩種寬度，需要再調整
     let borderWidth = (originalWidth>140)? 6:4;
+
 
     let translateParams;
 
@@ -139,18 +141,24 @@ export default class PositionLegislatorGroup extends Component {
     viewWidth = (viewWidth/cubeSize)*cubeSize;
 
     // 超過畫面大小，最外圈要 translate
-    if(originalWidth*1.4 > viewWidth){
+    if(outerCircleSize > viewWidth){
         let translateValue = Math.ceil(((originalWidth * 1.4) - viewWidth ) / 2 / cubeSize) * cubeSize;
         translateParams = `translate3d(-${translateValue}px,0,0)`;
     }
 
-    // 需要變成長方形，需要重新計算 top
+    // 需要變成長方形，需要重新計算 top, left
     if(viewWidth < originalWidth){
-       finalWidth = Math.min(viewWidth, originalWidth);
+       finalWidth = Math.floor(viewWidth / cubeSize) * cubeSize;
        
-       let height = ( recordCount * cubeSize / viewWidth ) * cubeSize;
-       top = originalWidth - (height/2);
-       left = originalWidth - (finalWidth/2);
+       let rowCount = Math.floor(viewWidth / cubeSize);
+       let height = Math.ceil(recordCount / rowCount) * cubeSize;
+
+       top = outerCircleSize/2 - (height/2);
+
+       //left 另外要加上「放不下的空間 / 2」
+       let unusedSpace = viewWidth - (Math.floor(viewWidth / cubeSize) * cubeSize);
+       left = outerCircleSize/2 - (viewWidth/2) + (unusedSpace/2);
+       
     }
 
     let result = {
