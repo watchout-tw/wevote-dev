@@ -26,9 +26,6 @@ $itemSize: 240px;
 		margin: 0 2%;
 	}
 }
-a.coverItem:hover {
-//  color: #464242;
-}
 .coverImg {
   display: block;
 	width: 100%;
@@ -42,7 +39,7 @@ a.coverItem:hover {
 	line-height: 24px;
 }
 .coverTitle {
-  color: $awesomeColor; //#b88234;
+  color: $awesomeColor;
   font-size: 24px;
   margin: 0 2px;
   font-weight: bold;
@@ -61,14 +58,15 @@ a.coverItem:hover {
 	}
 }
 .missionStatusText {
-  color: $awesomeColor;//#b88234;
+  color: $awesomeColor;
   font-weight: bold;
 }
 .star {
   transition: transform 0.5s ease-in-out;
 }
-.coverItem:hover .star{
-	transform:rotate(180deg);
+.coverItem:hover .star {
+	@include prefix(filter, drop-shadow(0 0 3px gold));
+	transform: rotate(180deg);
 }
 .comingText {
   text-align: center;
