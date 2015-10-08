@@ -1,13 +1,12 @@
 @import '../../common.scss';
 $redColor: #D65A5A;
-$breakSmall: 450px;
+$breakSmall: 480px;
 $breakMedium: 800px;
 .wrap {
-	//background: #B88234;
-	background: rgba(94, 181, 194, 0.96);
-    color: rgb(240,240,240);
-	padding: 20px 20px 80px 20px;
-	
+	background: $awesomeColor;
+  color: $white;
+	margin-top: 20px;
+	padding: 20px 40px 55px;
 }
 .innerWrap {
 	margin: 0 auto;
@@ -15,12 +14,10 @@ $breakMedium: 800px;
 }
 .title {
 	font-size: 20px;
-	margin: 20px 0;
+	padding: 20px 0;
 }
 .emailLabel {
-	margin: 0 0 5px 2px;
-    display: block;
-
+	display: none;
 }
 .red {
 	color: $redColor;
@@ -35,27 +32,27 @@ $breakMedium: 800px;
 .emailInput {
 	display: inline-block;
 	height: 40px;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    color: black;
+  border: none;
+  padding: 5px 10px;
+	background: $white;
+  color: $black;
+	line-height: 1;
 }
 .emailInput:focus {
-    outline-width: 0;
+  outline: none;
 }
 .submit {
 	display: block;
-    height: 40px;
-    border: none;
-    padding: 0 8px;
-    color: $textColor;
-    border: 1px solid white;
-    background: $themeColor;
-    margin-top: 10px;
+	height: 40px;
+	margin-top: 10px; // 當submit按鈕在第二行時
+	padding: 0 8px;
+	border: 1px solid $white;
+	color: $black;
+	background: $white;
 }
 .submit:hover {
-	background: rgb(53,55,54);
-	color: white;
+	background: $awesomeColor;
+	color: $white;
 	border: 1px solid white;
 }
 @media all and (min-width: $breakSmall){
@@ -65,48 +62,46 @@ $breakMedium: 800px;
 	}
 }
 .lawInfo {
-	font-size: 14px;
-	margin: 10px 0;
-	line-height: 1.4;
+	line-height: 1.5;
+	font-size: 12px;
 }
-.lawInfoTitle {
-    margin-bottom: 10px;
-}
-.lawInfoContent {
-	color: $secondaryColor;
-	background: rgba(230,230,230,0.4);
-	padding: 10px;
+.lawInfoTitle, .lawInfoContent {
 }
 /* footer links */
 .bottomInfo {
-	border-top: 1px dashed #E6E6E6;
-	margin-top: 20px;
-	padding: 10px 0;
 	line-height: 1.5;
-	color: $secondaryColor;
+	font-size: 12px;
+}
+.lawInfo, .lawInfoTitle, .lawInfoContent, .bottomInfo {
+	margin: 12px 0;
+}
+.lawInfo, .bottomInfo {
+	opacity: 0.5;
 }
 .rightFooterLinks {
 	width: 100%;
-	margin-top: 50px;
+	padding: 10px 0 20px;
+	text-align: center;
 }
 @media all and (min-width: $breakMedium){
 	.rightFooterLinks {
 		text-align: right;
 	}
 }
-.linkItem, .linkItem:visited {
+@media all and (min-width: $breakSmall){
+	.lawInfo, .bottomInfo {
+		width: 50%;
+	}
+}
+.linkItem {
 	display: inline-block;
-	color: white;
-	text-decoration: none;
-	padding: 10px;
+	margin: 10px;
+	font-size: 16px;
 }
-.linkItem:hover {
-	text-decoration: underline;
-	border-radius: 4px;
-}
-.hideLinks {
+
+.hiddenLinks {
 	max-height: 0px;
 	overflow: hidden;
 }
-
-
+.alertLinkItem {
+}

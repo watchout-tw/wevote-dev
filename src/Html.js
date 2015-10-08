@@ -3,6 +3,9 @@ import serialize from 'serialize-javascript';
 import DocumentMeta from 'react-document-meta';
 const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
+// This is me cheating.
+const cheatCSS = 'i.shareaholic-service-icon { border: none !important; background: none !important; color: white !important; box-shadow: none !important; }';
+
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
  * Used in server-side code only to wrap the string output of the
@@ -29,7 +32,6 @@ export default class Html extends Component {
           {DocumentMeta.rewind({asReact: true})}
 
           <link rel="shortcut icon" href="/favicon.ico" />
-          
           <link href={cdn + 'font-awesome/4.4.0/css/font-awesome.min.css'}
                 media="screen, projection" rel="stylesheet" type="text/css" />
 
@@ -41,8 +43,7 @@ export default class Html extends Component {
 
           {/* shareaholic */}
           <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='ee9e58db815746ed0289a30d43e9d636' data-cfasync='false' async='async'></script>
-
-
+          <style>{cheatCSS}</style>
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: React.renderToString(component)}}/>

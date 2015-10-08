@@ -2,10 +2,10 @@ $main: #006060;
 $breakSmall: 440px;
 $breakLarge: 800px;
 .wrap{
-  position: relative; 
-  background: #e6e6e6;
+  position: relative;
+//  background: #e6e6e6;
   min-height: 500px;
-  border: 1px solid transparent;
+//  border: 1px solid transparent;
 }
 .interactiveControl {
     position: fixed;
@@ -99,4 +99,3 @@ $breakLarge: 800px;
   font-size:26px;
   top: 1px;
 }
-

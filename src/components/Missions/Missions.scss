@@ -1,97 +1,75 @@
-$breakMedium: 600px;
-$breakLarge: 800px;
+@import '../../common.scss';
+
+$itemSize: 240px;
 .wrap {
 	position: relative;
-	max-width: 1000px;
-	margin: 0 auto;
+	max-width: 720px; // 3 castles
+	margin: 0 auto 60px;
+	text-align: center;
 }
-@media all and (min-width: 600px) and (max-width: 723px){
-  .wrap{
-    text-align: center;
-  }
-}
-@media all and (min-width: 733px) and (max-width: 999px){
-  .wrap{
-    text-align: center;
-  }
-}
-.missionStatusBlock {
-  display: block;
-  padding-right: 10px;
-}
-.star {
-  color: #b88234;
-  font-size: 30px;
-  margin-right: 4px;
-}
-.missionStatusText {
-  color: #b88234;
-  font-weight: 800;
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 6px;
-}
-
 .coverItem, .coverItem:visited {
-  text-decoration: none;
-  display: block;
-
-  margin: 10px;
-  height: 220px;
-  width: calc(100% - 20px);
-
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+	width: 240px;
+	margin: 0;
+	padding: 0;
   overflow: hidden;
-
-  display: inline-block;  
-  margin: 2.5% 1.5%;
-  color: black;
+  color: $black;
+	text-align: center;
+	cursor: pointer;
+	transition: color 100ms ease-in-out;
 }
-a.coverItem, a.coverItem:visited {
-  background: #fff;
-  cursor: pointer;
-  box-shadow: 3px 3px 0px #ccc;
-  padding: 24px 4px 34px 7px;
-  vertical-align: top;
-  color: #7F7979;
-  text-align: center;
-}
-@media all and (min-width: $breakMedium) {
+@media all and (max-width: ($itemSize - 1px)) {
 	.coverItem, .coverItem:visited {
-      width: 220px;
-    }
-}
-a.coverItem:hover {
-  /* box-shadow: 0 0 0 1px rgba(217, 183, 135, 0.76),0 0px 20px rgb(214, 164, 92); */
-  box-shadow: 0 0 0 1px rgb(171, 234, 243), 0 0px 20px #3FB8EC;
-  color: #464242;
-  transition: all 100ms ease-in-out;
+		width: 96%;
+		margin: 0 2%;
+	}
 }
 .coverImg {
-  height: calc(100% - 50px );
   display: block;
-  margin: 0 auto 8px auto;
-  border-radius: 5px;
+	width: 100%;
+
+	&:hover {
+		@include prefix(filter, drop-shadow(0 0 15px rgba(0, 255, 255, 0.75)));
+	}
 }
 .coverTitleBlock {
   text-align: center;
-
+	line-height: 24px;
 }
 .coverTitle {
-  color: #b88234;
+  color: $awesomeColor;
   font-size: 24px;
-  margin: 0 4px 8px 10px;
-  font-weight: 800;
+  margin: 0 2px;
+  font-weight: bold;
   display: inline-block;
 }
 .completedCoverTitle {
-  color: #7F7979;
-  display: inline-block;
+	color: $black;
+}
+.coverQuestion {
+	line-height: 32px;
+}
+.missionStatusBlock {
+  display: block;
+	> * {
+		@include inline-middle;
+	}
+}
+.missionStatusText {
+  color: $awesomeColor;
+  font-weight: bold;
+}
+.star {
+  transition: transform 0.5s ease-in-out;
+}
+.coverItem:hover .star {
+	@include prefix(filter, drop-shadow(0 0 3px gold));
+	transform: rotate(180deg);
 }
 .comingText {
-  padding: 76px 0;
   text-align: center;
-  border: 6px dotted #ccc;
-  border-radius: 5px;
-  font-size: 22px;
-  color: #797979;
+  font-size: 20px;
+  color: $grey;
 }

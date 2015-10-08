@@ -276,7 +276,7 @@ const initialState = {
       "title" : "公投",
       "icon" : "fa-gavel",
       "titleEng" : "referendum",
-      "question" : "你支持公投門檻下修嗎?",
+      "question" : "你支持公投門檻下修嗎？",
       "statement" : "公投門檻下修",
       "slideshows" : [
         {
@@ -442,7 +442,7 @@ const initialState = {
       "title" : "核能",
       "icon" : "fa-industry",
       "titleEng" : "nuclearPower",
-      "question" : "你支持核四停建嗎?",
+      "question" : "你支持核四停建嗎？",
       "statement" : "核四停建",
       "slideshows" : [
         {
@@ -567,8 +567,8 @@ const initialState = {
           "link" : "http://www.gcaa.org.tw/"
         }
       ]
-    } 
-   
+    }
+
 }
 //你支持停建核四嗎？你知道核四蓋了十六年嗎？關於核能來看看還有哪些你知道或不知道的。
 
@@ -583,4 +583,3 @@ export default function reducer(state = initialState, action = {}) {
       return state;
   }
 }
-
