@@ -57,8 +57,8 @@ $breakLarge: 800px;
 	height: $navHeight;
 }
 .navItem:hover, .navItem.active {
-	background: darken( $themeColor, 5% );
-	border-bottom: 4px solid;
+	background: rgba(0, 255, 255, 0.15); //darken($themeColor, 5%);
+	border-bottom: 4px solid aqua;
 }
 .navItem > * {
 	display: inline-block;
