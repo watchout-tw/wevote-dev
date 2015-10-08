@@ -34,26 +34,25 @@ $breakMedium: 800px;
 	height: 40px;
   border: none;
   padding: 5px 10px;
-	background: $white;
+	background: rgba($white, 0.75);
   color: $black;
 	line-height: 1;
 }
 .emailInput:focus {
   outline: none;
+	background: $white;
 }
 .submit {
 	display: block;
 	height: 40px;
 	margin-top: 10px; // 當submit按鈕在第二行時
 	padding: 0 8px;
-	border: 1px solid $white;
+	border: none;
 	color: $black;
-	background: $white;
+	background: rgba($white, 0.75);
 }
 .submit:hover {
-	background: $awesomeColor;
-	color: $white;
-	border: 1px solid white;
+	background: $white;
 }
 @media all and (min-width: $breakSmall){
 	.submit {
