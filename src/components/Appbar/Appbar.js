@@ -39,25 +39,26 @@ export default class Appbar extends Component {
   render() {
 
     const styles = require('./Appbar.scss');
-    const siteLogo = require('./images/logo.png');
+    const siteLogo = require('./images/logo-1.svg');
     const {showMenu, location, issueName} = this.state;
     const {currentIssueName, issues} = this.props;
-    
+
     let showStyle = (showMenu) ? styles.showMenu : "";
 
     let issueItems = Object.keys(issues).map((issueId, index)=>{
-      
+
       //let activeStyle = (currentIssueName===issueId) ? styles.active : "";
       let activeStyle = (issueName===issueId) ? styles.active : "";
+      let symbol = require('./images/symbols_' + issues[issueId].titleEng + '.svg');
 
       return (
         <li key={index}
             onClick={this._updateLocation.bind(this,issueId)}>
-            <Link className={` ${styles.navItem} ${activeStyle} `}
+            <Link className={`${styles.navItem} ${activeStyle}`}
                   to={`/issues/${issueId}`}
-                  onClick={this._hideMenu.bind(this)} >
-                  <i className={`fa ${issues[issueId].icon} ${styles.icon}`}></i>
-                  {issues[issueId].title}
+                  onClick={this._hideMenu.bind(this)}>
+                    <img src={symbol} className={styles.symbol}/>
+                    <span>{issues[issueId].title}</span>
             </Link>
         </li>
       )
@@ -65,6 +66,8 @@ export default class Appbar extends Component {
 
     let partiesActive = (location === "parties") ? styles.active : "";
     let aboutActive = (location === "about") ? styles.active : "";
+    let symbol_parties = require('./images/symbols_parties.svg');
+    let symbol_about = require('./images/symbols_about.svg');
 
     return (
       <nav className={`${styles.appbar} ${showStyle}`}>
@@ -74,19 +77,23 @@ export default class Appbar extends Component {
               </Link>
 
               <ul className={`${styles.lists} ${showStyle}`}>
-                
+
                 {issueItems}
-                
+
                 <li onClick={this._updateLocation.bind(this,'parties')}>
                     <Link className={`${styles.navItem} ${partiesActive}`}
                           to={`/parties`}
                           onClick={this._hideMenu.bind(this)}  >
-                          <i className={`fa fa-file-text-o ${styles.icon}`}></i>政黨表態</Link></li>
+                            <img src={symbol_parties} className={styles.symbol}/>
+                            <span>政黨表態</span>
+                    </Link></li>
                 <li onClick={this._updateLocation.bind(this,'about')}>
                     <Link className={`${styles.navItem} ${aboutActive}`}
                           to={`/about`}
                           onClick={this._hideMenu.bind(this)}>
-                          <i className={`fa fa-smile-o ${styles.icon}`}></i>關於我們</Link></li>
+                            <img src={symbol_about} className={styles.symbol}/>
+                            <span>關於我們</span>
+                    </Link></li>
               </ul>
 
               <div className={styles.rightToggle}

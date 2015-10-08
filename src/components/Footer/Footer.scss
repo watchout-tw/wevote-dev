@@ -4,10 +4,10 @@ $breakSmall: 450px;
 $breakMedium: 800px;
 .wrap {
 	//background: #B88234;
-	background: rgba(94, 181, 194, 0.96);
-    color: rgb(240,240,240);
+	background: $awesomeColor;//rgba(94, 181, 194, 0.96);
+  color: $white;
 	padding: 20px 20px 80px 20px;
-	
+
 }
 .innerWrap {
 	margin: 0 auto;
@@ -108,5 +108,3 @@ $breakMedium: 800px;
 	max-height: 0px;
 	overflow: hidden;
 }
-
-
