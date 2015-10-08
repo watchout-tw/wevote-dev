@@ -47,3 +47,14 @@ a.ia {
     border-bottom-width: 3px;
   }
 }
+
+@mixin inline-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin prefix($key, $val) {
+  -webkit-#{$key}: $val;
+	-ms-#{$key}: $val;
+	#{$key}: $val;
+}
