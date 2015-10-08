@@ -723,7 +723,7 @@ const partyPositions =
                     {
                         "id": 179,
                         "issue": "公投",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1427212800,
                         "category": "發言",
@@ -819,7 +819,7 @@ const partyPositions =
                     {
                         "id": 241,
                         "issue": "公投",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1428422400,
                         "category": "發言",
@@ -6216,7 +6216,7 @@ const partyPositions =
                     {
                         "id": 1518,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1380211200,
                         "category": "表決",
@@ -6456,7 +6456,7 @@ const partyPositions =
                     {
                         "id": 275,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1381852800,
                         "category": "發言",
@@ -6632,7 +6632,7 @@ const partyPositions =
                     {
                         "id": 1452,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1382630400,
                         "category": "表決",
@@ -8200,7 +8200,7 @@ const partyPositions =
                     {
                         "id": 1320,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1385049600,
                         "category": "表決",
@@ -8840,7 +8840,7 @@ const partyPositions =
                     {
                         "id": 1232,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1386259200,
                         "category": "表決",
@@ -10520,7 +10520,7 @@ const partyPositions =
                     {
                         "id": 1067,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1388678400,
                         "category": "表決",
@@ -11192,7 +11192,7 @@ const partyPositions =
                     {
                         "id": 401,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1399392000,
                         "category": "發言",
@@ -12072,7 +12072,7 @@ const partyPositions =
                     {
                         "id": 876,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1431100800,
                         "category": "表決",
@@ -13176,7 +13176,7 @@ const partyPositions =
                     {
                         "id": 985,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1431100800,
                         "category": "表決",
@@ -14328,7 +14328,7 @@ const partyPositions =
                     {
                         "id": 641,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1432310400,
                         "category": "表決",
@@ -14952,7 +14952,7 @@ const partyPositions =
                     {
                         "id": 757,
                         "issue": "核能",
-                        "legislator": "鄭天財",
+                        "legislator": "鄭天財Sra·Kacaw",
                         "party": "KMT",
                         "date": 1432310400,
                         "category": "表決",

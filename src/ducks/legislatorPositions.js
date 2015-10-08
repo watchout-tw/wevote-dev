@@ -35458,12 +35458,12 @@ const legislatorPositions =
             }
         }
     },
-    "鄭天財Sra．Kacaw": {
-        "name": "鄭天財Sra．Kacaw",
+    "鄭天財Sra·Kacaw": {
+        "name": "鄭天財Sra·Kacaw",
         "positions": {
             "marriageEquality": {
                 "records": [],
-                "dominantPosition": "evading",
+                "dominantPosition": "none",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -35500,8 +35500,41 @@ const legislatorPositions =
                 "totalCounts": 0
             },
             "referendum": {
-                "records": [],
-                "dominantPosition": "none",
+                "records": [
+                    {
+                        "id": 179,
+                        "issue": "公投",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1427212800,
+                        "category": "發言",
+                        "content": "為具體回應補正公投法、修改選罷法以落實國民主權之立法倡議降低提案、連署門檻、建立電子提案及連署門檻、延長罷免連署期間，檢討現行法律對於罷免權行使之諸多不當限制等，內政部舉辦完公聽會後，如有修法共識，應儘速提出公民投票法及公職人員選舉罷免法修正草案，以落實民主，鞏固民權。\n 提案人：盧嘉辰 邱文彥 吳育昇 鄭天財",
+                        "positionJudgement": "要求內政部提出修正草案",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10402101;0427;0486",
+                        "meeting": "內政委員會",
+                        "meetingCategory": "委員會質詢"
+                    },
+                    {
+                        "id": 241,
+                        "issue": "公投",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1428422400,
+                        "category": "發言",
+                        "content": "秘書長知不知道總統及副總統選舉實施不在籍投票案送到立法院多久了？你不知道？你們都沒有計算！...我說的是總統副總統選罷法，這個還沒有付委啦！被誰擋住了？你們要去說明、溝通，甚至可以拜託公民團體，說為什麼不付委。實施不在籍投票有這麼困難嗎？全世界的先進國家都在做，所以這部分應該多溝通、多協調。",
+                        "positionJudgement": "「不在籍投票」不在公投法修法討論內容",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10402801;0378;0380",
+                        "meeting": "內政委員會",
+                        "meetingCategory": "委員會質詢"
+                    }
+                ],
+                "dominantPosition": "unknown",
                 "positionCounts": [
                     {
                         "position": "nay",
@@ -35509,33 +35542,210 @@ const legislatorPositions =
                     },
                     {
                         "position": "unknown",
-                        "count": 0
+                        "count": 2
                     },
                     {
                         "position": "aye",
                         "count": 0
                     }
                 ],
-                "totalCounts": 0
+                "totalCounts": 2
             },
             "nuclearPower": {
-                "records": [],
-                "dominantPosition": "none",
+                "records": [
+                    {
+                        "id": 1518,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1380211200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    },
+                    {
+                        "id": 275,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1381852800,
+                        "category": "發言",
+                        "content": "核一、核二、核三，包括未來的核四的核廢料不會放在蘭嶼，也不會放在原住民族地區，至於要不要放在達仁鄉則要經過公民投票，而且\n 根據這個條例第十一條規定，必須在 30 天內舉辦公投，現在早就超過時間，已經一年多都沒有舉辦，因此不可能放在達仁鄉，也不可能放在原住民族地區，不要用騙原住民的方式說，核廢料會放在原住民地區，包括以前放的已經想辦法遷走，未來也不會放在那裡，所以我今天才會一直建議，趕快找境外貯存的地方。今天討論的條文涉及整個國家的能源政策，到底是不是由50 公里內的居民來決定？未來核四運轉之後，它的影響是不是只涉及 50 公里之內，還是會涉及到 50 公里之外？如果核四不運轉，用電造成的影響是不是只有這 50 公里之內，還是 50 公里之外都會受到影響，這不但涉及整個國家的能源政策，也會涉及整個國家的經濟。鄭委員等所提的非核家園，但非核家園有沒有說是哪個縣市？還是全臺灣都是非核家園？怎麼會涉及到 50 公里以內呢？難道整個國家的能源政策只涉及到 50 公里之內，我們可能要考量及探討這個部分，而非只是安全不安全的問題，大家都知道安全是絕對需要考量的。",
+                        "positionJudgement": "核廢要境外儲存，核四廠運轉要考量全國用電和經濟，不能只考慮安全",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10205802;0168;0171;0222;0224;0229;0230;0235;0237",
+                        "meeting": "教育文化委員會",
+                        "meetingCategory": "委員會質詢"
+                    },
+                    {
+                        "id": 1452,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1382630400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    },
+                    {
+                        "id": 1320,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1385049600,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    },
+                    {
+                        "id": 1232,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1386259200,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    },
+                    {
+                        "id": 1067,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1388678400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    },
+                    {
+                        "id": 401,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1399392000,
+                        "category": "發言",
+                        "content": "我從前年就一直提到(核廢料)境外處理，台灣非常小，要在台灣找到最終處置場址是絕對不可能的，一定要全力往境外方式處理。對台灣而言，最靠近的就是大陸，大陸有很多核電廠，土地也很大，所以最終處置場址及技術等方面都沒有問題，你們是否曾思考過？進行過？",
+                        "positionJudgement": "核廢料境外處理",
+                        "position": "unknown",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10303801;0418;0421",
+                        "meeting": "經濟委員會",
+                        "meetingCategory": "委員會質詢"
+                    },
+                    {
+                        "id": 876,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    },
+                    {
+                        "id": 985,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1431100800,
+                        "category": "表決",
+                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    },
+                    {
+                        "id": 641,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
+                        "positionJudgement": "反對停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    },
+                    {
+                        "id": 757,
+                        "issue": "核能",
+                        "legislator": "鄭天財Sra·Kacaw",
+                        "party": "KMT",
+                        "date": 1432310400,
+                        "category": "表決",
+                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
+                        "positionJudgement": "反對刪預算讓行政院停建核四",
+                        "position": "nay",
+                        "clarificationContent": "",
+                        "clarificationLastUpdate": "",
+                        "lyURL": "",
+                        "meeting": "院會",
+                        "meetingCategory": "投票表決"
+                    }
+                ],
+                "dominantPosition": "nay",
                 "positionCounts": [
                     {
                         "position": "nay",
-                        "count": 0
+                        "count": 9
                     },
                     {
                         "position": "unknown",
-                        "count": 0
+                        "count": 2
                     },
                     {
                         "position": "aye",
                         "count": 0
                     }
                 ],
-                "totalCounts": 0
+                "totalCounts": 11
             }
         }
     },
@@ -41335,261 +41545,6 @@ const legislatorPositions =
                     }
                 ],
                 "totalCounts": 1
-            }
-        }
-    },
-    "鄭天財": {
-        "name": "鄭天財",
-        "positions": {
-            "marriageEquality": {},
-            "recall": {},
-            "referendum": {
-                "records": [
-                    {
-                        "id": 179,
-                        "issue": "公投",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1427212800,
-                        "category": "發言",
-                        "content": "為具體回應補正公投法、修改選罷法以落實國民主權之立法倡議降低提案、連署門檻、建立電子提案及連署門檻、延長罷免連署期間，檢討現行法律對於罷免權行使之諸多不當限制等，內政部舉辦完公聽會後，如有修法共識，應儘速提出公民投票法及公職人員選舉罷免法修正草案，以落實民主，鞏固民權。\n 提案人：盧嘉辰 邱文彥 吳育昇 鄭天財",
-                        "positionJudgement": "要求內政部提出修正草案",
-                        "position": "unknown",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10402101;0427;0486",
-                        "meeting": "內政委員會",
-                        "meetingCategory": "委員會質詢"
-                    },
-                    {
-                        "id": 241,
-                        "issue": "公投",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1428422400,
-                        "category": "發言",
-                        "content": "秘書長知不知道總統及副總統選舉實施不在籍投票案送到立法院多久了？你不知道？你們都沒有計算！...我說的是總統副總統選罷法，這個還沒有付委啦！被誰擋住了？你們要去說明、溝通，甚至可以拜託公民團體，說為什麼不付委。實施不在籍投票有這麼困難嗎？全世界的先進國家都在做，所以這部分應該多溝通、多協調。",
-                        "positionJudgement": "「不在籍投票」不在公投法修法討論內容",
-                        "position": "unknown",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10402801;0378;0380",
-                        "meeting": "內政委員會",
-                        "meetingCategory": "委員會質詢"
-                    }
-                ],
-                "dominantPosition": "unknown",
-                "positionCounts": [
-                    {
-                        "position": "nay",
-                        "count": 0
-                    },
-                    {
-                        "position": "unknown",
-                        "count": 2
-                    },
-                    {
-                        "position": "aye",
-                        "count": 0
-                    }
-                ],
-                "totalCounts": 2
-            },
-            "nuclearPower": {
-                "records": [
-                    {
-                        "id": 1518,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1380211200,
-                        "category": "表決",
-                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
-                        "positionJudgement": "反對停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    },
-                    {
-                        "id": 275,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1381852800,
-                        "category": "發言",
-                        "content": "核一、核二、核三，包括未來的核四的核廢料不會放在蘭嶼，也不會放在原住民族地區，至於要不要放在達仁鄉則要經過公民投票，而且\n 根據這個條例第十一條規定，必須在 30 天內舉辦公投，現在早就超過時間，已經一年多都沒有舉辦，因此不可能放在達仁鄉，也不可能放在原住民族地區，不要用騙原住民的方式說，核廢料會放在原住民地區，包括以前放的已經想辦法遷走，未來也不會放在那裡，所以我今天才會一直建議，趕快找境外貯存的地方。今天討論的條文涉及整個國家的能源政策，到底是不是由50 公里內的居民來決定？未來核四運轉之後，它的影響是不是只涉及 50 公里之內，還是會涉及到 50 公里之外？如果核四不運轉，用電造成的影響是不是只有這 50 公里之內，還是 50 公里之外都會受到影響，這不但涉及整個國家的能源政策，也會涉及整個國家的經濟。鄭委員等所提的非核家園，但非核家園有沒有說是哪個縣市？還是全臺灣都是非核家園？怎麼會涉及到 50 公里以內呢？難道整個國家的能源政策只涉及到 50 公里之內，我們可能要考量及探討這個部分，而非只是安全不安全的問題，大家都知道安全是絕對需要考量的。",
-                        "positionJudgement": "核廢要境外儲存，核四廠運轉要考量全國用電和經濟，不能只考慮安全",
-                        "position": "unknown",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10205802;0168;0171;0222;0224;0229;0230;0235;0237",
-                        "meeting": "教育文化委員會",
-                        "meetingCategory": "委員會質詢"
-                    },
-                    {
-                        "id": 1452,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1382630400,
-                        "category": "表決",
-                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
-                        "positionJudgement": "反對停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    },
-                    {
-                        "id": 1320,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1385049600,
-                        "category": "表決",
-                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
-                        "positionJudgement": "反對停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    },
-                    {
-                        "id": 1232,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1386259200,
-                        "category": "表決",
-                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
-                        "positionJudgement": "反對停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    },
-                    {
-                        "id": 1067,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1388678400,
-                        "category": "表決",
-                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
-                        "positionJudgement": "反對停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    },
-                    {
-                        "id": 401,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1399392000,
-                        "category": "發言",
-                        "content": "我從前年就一直提到(核廢料)境外處理，台灣非常小，要在台灣找到最終處置場址是絕對不可能的，一定要全力往境外方式處理。對台灣而言，最靠近的就是大陸，大陸有很多核電廠，土地也很大，所以最終處置場址及技術等方面都沒有問題，你們是否曾思考過？進行過？",
-                        "positionJudgement": "核廢料境外處理",
-                        "position": "unknown",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "http://lis.ly.gov.tw/lgcgi/lypdftxt?10303801;0418;0421",
-                        "meeting": "經濟委員會",
-                        "meetingCategory": "委員會質詢"
-                    },
-                    {
-                        "id": 876,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1431100800,
-                        "category": "表決",
-                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
-                        "positionJudgement": "反對停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    },
-                    {
-                        "id": 985,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1431100800,
-                        "category": "表決",
-                        "content": "除已發包之安檢費外，應全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
-                        "positionJudgement": "反對刪預算讓行政院停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    },
-                    {
-                        "id": 641,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1432310400,
-                        "category": "表決",
-                        "content": "核四弊端叢生，「政府應立即停止繼續興建核四廠，並依環境基本法規定推動台灣成為非核家園」，請公決案",
-                        "positionJudgement": "反對停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    },
-                    {
-                        "id": 757,
-                        "issue": "核能",
-                        "legislator": "鄭天財",
-                        "party": "KMT",
-                        "date": 1432310400,
-                        "category": "表決",
-                        "content": "全數刪除核能四廠第一、二號機發電工程計畫預算81億2,327萬9,000元，使行政院立即停建核四，以符合民意。",
-                        "positionJudgement": "反對刪預算讓行政院停建核四",
-                        "position": "nay",
-                        "clarificationContent": "",
-                        "clarificationLastUpdate": "",
-                        "lyURL": "",
-                        "meeting": "院會",
-                        "meetingCategory": "投票表決"
-                    }
-                ],
-                "dominantPosition": "nay",
-                "positionCounts": [
-                    {
-                        "position": "nay",
-                        "count": 9
-                    },
-                    {
-                        "position": "unknown",
-                        "count": 2
-                    },
-                    {
-                        "position": "aye",
-                        "count": 0
-                    }
-                ],
-                "totalCounts": 11
             }
         }
     }
