@@ -26,13 +26,12 @@ $itemSize: 240px;
 		margin: 0 2%;
 	}
 }
+.coverItem:hover .coverImg {
+	@include prefix(filter, drop-shadow(0 0 15px rgba(0, 255, 255, 0.75)));
+}
 .coverImg {
   display: block;
 	width: 100%;
-
-	&:hover {
-		@include prefix(filter, drop-shadow(0 0 15px rgba(0, 255, 255, 0.75)));
-	}
 }
 .coverTitleBlock {
   text-align: center;
