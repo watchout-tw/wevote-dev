@@ -7,7 +7,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var strip = require('strip-loader');
 
 var relativeAssetsPath = '../static/dist';
-var assetsPath = path.join(__dirname, relativeAssetsPath);
+//var assetsPath = path.join(__dirname, relativeAssetsPath);
+var assetsPath = '../static/dist';
 
 // https://github.com/halt-hammerzeit/webpack-isomorphic-tools
 var WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin');
