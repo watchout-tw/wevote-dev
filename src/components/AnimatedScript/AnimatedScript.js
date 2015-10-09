@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-const issueOrder = ['婚姻平權','罷免','公投','核四'];
+const issueOrder = ['婚姻平權','罷免','公投','核能'];
 const chapterOrder = ['一','二','三','四'];
 
 
@@ -291,7 +291,7 @@ export default class AnimatedScript extends Component {
   _generateIntroLines(issue){
     //first line
     const index = issueOrder.indexOf(issue.title);
-    const chapter = chapterOrder[index];
+    const chapter = chapterOrder[index] || "";
 
     return {
         firstLine: `任務${chapter}：${issue.title}之城`,

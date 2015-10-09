@@ -130,7 +130,7 @@ export default class PositionPartyGroup extends Component {
     
     // 超過畫面大小，最外圈要 translate
     if(outerCircleSize > viewWidth){
-        let translateValue = outerCircleSize/2 - viewWidth/2 + (20-borderWidth/2);//因為最外面的 wrap 有 20 的 margin;
+        let translateValue = outerCircleSize/2 - viewWidth/2 + (20);//因為最外面的 wrap 有 20 的 margin;
         translateParams = `translate3d(-${translateValue}px,0,0)`;
     }
 
