@@ -29,7 +29,7 @@ export default class PeoplePhoto extends Component {
       imgURL = require("./images/avatar/"+name+".png");
     }catch(e){
       console.log(e);
-      imgURL = require("./images/default.jpg");
+      imgURL = require("./images/default.png");
     }
    
     return (

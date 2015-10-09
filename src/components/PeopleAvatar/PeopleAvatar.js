@@ -31,7 +31,7 @@ export default class PeopleeAvatar extends Component {
     try {
       imgURL = require("./images/avatar/"+name+".png");
     }catch(e){
-      imgURL = require("./images/default.jpg");
+      imgURL = require("./images/default.png");
     }
   
     return (
