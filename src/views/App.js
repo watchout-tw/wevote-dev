@@ -70,6 +70,10 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
+        <div className={styles.invisible}>
+            <Link to={`/404`}>404</Link>
+            <Link to={`/8th-legislators`}>8th-legislators</Link>
+        </div>
         <Appbar currentIssueName={params.issueName}
                 issues={issues}
                 firstPathName={location}
