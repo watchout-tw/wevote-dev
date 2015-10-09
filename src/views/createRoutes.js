@@ -25,8 +25,10 @@ export default function(store) {
     <Route component={App}>
       <Route path="/" component={Home}/>
       <Route path="/issues/:issueName" component={Issue}/>
+      <Route path="/issues/:issueName/:viewName" component={Issue}/>
+      
       <Route path="/8th-legislators" component={LegislatorList}/>
-
+      
       <Route path="/people/:peopleId" component={People}/>
       <Route path="/people/:peopleId/:issueName" component={PeopleIssue}/>
       <Route path="/parties" component={PartyList}/>
@@ -40,6 +42,8 @@ export default function(store) {
       <Route path="/clarify" component={Clarify}/>
       <Route path="/subscribe" component={Subscribe}/>
       <Route path="/subscribe/:state" component={Subscribe}/>
+      
+      <Route path="/404" component={NotFound}/>
       <Route path="*" component={NotFound}/>
     </Route>
   );

@@ -3,9 +3,11 @@ $breakSmall: 440px;
 $breakLarge: 800px;
 .wrap{
   position: relative;
-//  background: #e6e6e6;
   min-height: 500px;
-//  border: 1px solid transparent;
+}
+.invisibleBlock {
+  max-height: 0px;
+  overflow: hidden;
 }
 .interactiveControl {
     position: fixed;
