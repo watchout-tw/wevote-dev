@@ -20,15 +20,46 @@ export default class StaticIssue extends Component {
   }
 
   constructor(props) { super(props)   
-      
+     this.state = {
+        currentIssueName: props.currentIssueName, //URL
+        currentView: props.currentView
+     }
+  }
+  componentDidMount(){
+      console.log("mount - static issue")
+      if(window){
+        let pathname = window.location.pathname;
+        console.log(pathname) 
+        if(pathname.indexOf(".html")!==-1){
+           pathname = pathname.split(".html")[0]
+        }
+        pathname = pathname.split("/");
+        console.log(pathname)
+        this.setState({
+          currentIssueName: pathname[2],
+          currentView: pathname[3] || "parties"
+
+        })
+        console.log("*")
+        console.log(this.state)
+      }
+  }
+  componentWillReceiveProps(nextProps){
+      this.setState({
+          currentIssueName: nextProps.currentIssueName,
+          currentView: nextProps.currentView
+      })
   }
   
   render(){
     
       const styles = require('./StaticIssue.scss');
-      const {issues, currentView, currentIssueName, setCurrentView} = this.props;
+      const {issues, setCurrentView} = this.props;
+      const {currentView, currentIssueName} = this.state;
       const currentIssue = issues[currentIssueName];
-      console.log("static issues")
+      console.log("static issues render")
+
+      if(!currentIssue) return <div></div>;
 
        // 協力 NGO
       const { collaborators } = currentIssue;
