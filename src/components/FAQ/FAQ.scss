@@ -1,24 +1,27 @@
+@import '../../common.scss';
+
 .wrap {
 	position: relative;
 }
 .qaBox {
-	border-bottom: 1px dotted #000;
-    padding-bottom: 25px;
+  padding-bottom: 25px;
+	border-bottom: 1px solid #ccc;
 }
 .qaQuestion {
 	margin: 40px 0 10px 0;
-    font-size: 22px;
-    cursor: pointer;
+  font-size: 20px;
+  cursor: pointer;
 }
 .index {
 	float: left;
 	display: inline-block;
+	font-weight: bold;
 }
 .mainQuestion {
 	padding-left: 30px;
 }
 .qaQuestion:hover {
-	color: #b7813c;
+	color: $awesomeColor;
 }
 .qaAnswer {
 	display: block;

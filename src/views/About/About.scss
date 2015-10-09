@@ -5,19 +5,20 @@ $breakLarge: 1400px;
 }
 .about {
 	height: 300px;
-	background: url(./images/about.png) top center;
-	background-size: auto 100% ;
-	background-repeat: no-repeat;
+	background-color: $awesomeColor;
+	background-image: url('./images/about-background.svg');
+	background-position: center center;
+	background-size: auto 100%;
+	background-repeat: repeat-x;
 	margin-bottom: 60px;
 	position: relative;
-	
 }
 .title {
 	text-align: center;
-    font-size: 40px;
-    width: 100%;
-    margin: 70px auto 0 auto;
-    display: inline-block;
+	font-size: 40px;
+	width: 100%;
+	margin: 70px auto 0 auto;
+	display: inline-block;
 }
 
 @media all and (min-width: $breakLarge){
@@ -32,12 +33,12 @@ $breakLarge: 1400px;
 .innerTag {
 	width: 100%;
 	position: absolute;
-	bottom: 10px;
+	top: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 @media all and (min-width: 600px){
-	.innerTag {
-		text-align: center;
-	}
 }
 .innerTag li {
 	display: inline-block;
@@ -45,81 +46,74 @@ $breakLarge: 1400px;
 	cursor: pointer;
 }
 .innerTag a, .innerTag a:visited {
-	background: #ccc;
-	color: #000;
 	display: block;
 	padding: 10px;
+	background: #ccc;
+	color: $black;
 	text-decoration: none;
 }
-// .innerTag li:first-child a {
-// 	border-top-left-radius: 5px;
-// 	border-bottom-left-radius: 5px;
-// }
-// .innerTag li:last-child a {
-// 	border-top-right-radius: 5px;
-// 	border-bottom-right-radius: 5px;
-// }
-.innerTag a:hover {
-	background: #3c3c3c;
-	text-decoration: none;
-	color: #fff;
-}
-.innerTag a.active {
-	background: #000;
-	color: #fff;
-}
-.about .innerTag {
-	bottom: -35px;
+.innerTag a:hover, .innerTag a.active {
+	background: $black;
+	color: $white;
 }
 @media (max-width: 420px) {
-    .innerTag li {
-    	font-size: 13px;
-    }
-    .innerTag li {
-   		width: 80px;
-    }
-    .about .innerTag a {
-    	height: 50px;
-    	text-align: center;
-    }
+  .innerTag li {
+  	font-size: 13px;
+  }
+  .innerTag li {
+ 		width: 80px;
+  }
+  .about .innerTag a {
+  	height: 50px;
+  	text-align: center;
+  }
 }
 /* main content */
 .content {
-	max-width: 800px;
-	margin: 0 5px 100px 5px;
-	
-	line-height: 1.6;
-    font-size: 18px;
+	max-width: 560px;
+	padding: 40px;
+	margin: 0 auto 40px;
+	line-height: 1.5;
 
-    padding: 30px;
-    background: #e6e6e6;
-
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+	}
+	p {
+		font-size: 16px;
+	}
 }
 @media all and (min-width: 800px){
 	.content {
-		margin: 0 auto 100px auto;
+		width: 100%;
 	}
 }
-/* License */
-.licenseBlock {
-	line-height: 2;
-}
-.licenseImg {
-	max-width: 320px;
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 50px;
-}
-@media all and (min-width: 800px){
-	.licenseImg {
-		padding-left: 45px;
+// reminder
+.reminderCard {
+	border: 3px solid $black;
+	background: $trueWhite;
+	margin: 40px 0;
+	padding: 20px;
+
+	> :first-child, > :last-child {
+		margin: 0;
+		text-align: center;
 	}
 }
 
-.link, .link:visited {
-	color: black;
+/* License */
+.licenseBlock {
+//	line-height: 1.5;
 }
-.link:hover {
-	color: rgb(80,80,80);
+.licenseImg {
+	max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 50px;
+}
+@media all and (min-width: 800px){
+	.licenseImg {
+	}
 }
