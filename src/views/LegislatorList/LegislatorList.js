@@ -13,19 +13,23 @@ import people_name2id from '../../utils/people_name2id';
 const IssueList = [
      {
          "id": "marriageEquality",
-         "cht": "婚"
+         "cht": "婚",
+         "url": "marriage-equality"
      },
      {
          "id": "recall",
-         "cht": "罷"
+         "cht": "罷",
+         "url": "recall"
      },
      {
          "id": "referendum",
-         "cht": "公"
+         "cht": "公",
+         "url": "referendum"
      },
      {
          "id": "nuclearPower",
-         "cht": "核"
+         "cht": "核",
+         "url": "nuclear-power"
      }
 ]
 @connect(
@@ -211,19 +215,22 @@ class Record extends Component {
         let currentData = data.positions[currentIssue.id];
         //if(!currentData) return "";
         return (
-          <div className={`${styles.issueCubeLast} ${styles[currentData.dominantPosition]}`}>{currentIssue.cht}</div>
+          <Link to={`/people/${id}/${currentIssue.url}`}
+                className={`${styles.issueCube} ${styles[currentData.dominantPosition]}`}>{currentIssue.cht}</Link>
         )
     });
 
     return (
       <div className={styles.item}>
-      <Link to={`/people/${id}`} className={styles.link}>
+      
           <div className={styles.avatar}><PeopleAvatar id={id}/></div>
-          <div className={styles.name}>{data.name}</div>
+          <Link to={`/people/${id}`} div className={styles.name}>
+              {data.name}
+          </Link>
           <div className={styles.issueCubes}>
             {issueItems}
           </div>
-      </Link>
+     
       </div>
     )
   }
