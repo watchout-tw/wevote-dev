@@ -32,7 +32,7 @@ export default class IssueArticle extends Component {
           //no op
     }
     
-    let imgURL = require("./images/didyouknow.png");
+    let imgURL = require("./images/flying.png");
     let activeArticle = (active === true) ? styles.active : "";
     let buttonText = (active === true) ? "隱藏文章" : "繼續閱讀";
 

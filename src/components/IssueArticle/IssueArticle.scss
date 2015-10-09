@@ -22,19 +22,19 @@
 	content: '';
     position: absolute;
     top: -50px;
-    left: 40px;
+    left: 162px;
     border-bottom: 50px solid #B4AEA3;
-    border-left: 40px solid transparent;
-    border-right: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
 }
 .article:after {
 	content: '';
     position: absolute;
-    top: -30px;
-    left: 35px;
+    top: -32px;
+    left: 167px;
     border-bottom: 50px solid white;
-    border-left: 38px solid transparent;
-    border-right: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
 }
 
 
@@ -53,9 +53,11 @@
 
 .img {
     position: absolute;
-    width: 100px;
-    top: -80px;
+    width: 200px;
+    top: -160px;
+    left: -10px;
     float: left;
+    z-index: 100;
 }
 
 .articleTitle {
