@@ -73,7 +73,7 @@ class OptionItem extends Component {
       case "公投":
         issue = "referendum";
         break;
-       case "核四":
+       case "核能":
         issue = "nuclear-power";
         break;
       default:
@@ -88,6 +88,8 @@ class OptionItem extends Component {
              onClick={setCurrentView.bind(null, data.view)}>
           <img className={`${styles.optionImg} ${imgActive}`} src={imgURL} />
           {data.title}
+          <Link className={styles.invisible}
+                to={`/issues/${issue}/${data.view}`}>link</Link>
         </div>  
     )
   }

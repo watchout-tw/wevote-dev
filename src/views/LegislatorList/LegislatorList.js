@@ -9,6 +9,25 @@ import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar.js';
 
 import people_name2id from '../../utils/people_name2id';
 
+//目前有資料的議題
+const IssueList = [
+     {
+         "id": "marriageEquality",
+         "cht": "婚"
+     },
+     {
+         "id": "recall",
+         "cht": "罷"
+     },
+     {
+         "id": "referendum",
+         "cht": "公"
+     },
+     {
+         "id": "nuclearPower",
+         "cht": "核"
+     }
+]
 @connect(
     state => ({legislatorPositions: state.legislatorPositions
                }),
@@ -25,7 +44,8 @@ export default class LegislatorList extends Component {
         userPreference: {
           "marriageEquality" : "none",
           "recall" : "none",
-          "referendum" : "none"
+          "referendum" : "none",
+          "nuclearPower" : "none"
         }
       }
   }
@@ -55,11 +75,10 @@ export default class LegislatorList extends Component {
 
     let legislatorItems = Object.keys(legislatorPositions.data).map((legislator, index)=>{
       let shouldReturn = true;
-      //黨團不顯示在此
-      if(legislator==="台灣團結聯盟黨團"){
-          shouldReturn = false;
-
-      }
+      // //黨團不顯示在此
+      // if(legislator.indexOf("黨團")!==-1){
+      //     shouldReturn = false;
+      // }
 
       //只顯示相同立場的立委
       Object.keys(userPreference).map((currentIssue, index)=>{
@@ -117,9 +136,7 @@ class Matcher extends Component {
     
     const {handleSetPref, userPreference} = this.props;
 
-    const issues = [{ title:'婚', issue:'marriageEquality'},
-                    { title:'罷', issue:'recall'},
-                    { title:'公', issue:'referendum'}];
+   
     const positions = [
       { title:'我贊成',
         position: 'aye'},
@@ -130,19 +147,19 @@ class Matcher extends Component {
    
     ];
 
-    let matchControlls = issues.map((value,index)=>{
+    let matchControlls = IssueList.map((value,index)=>{
         return (
           <div className={styles.matchItem} key={index}>
-              {value.title}
+              {value.cht}
               {
                   positions.map((position, i)=>{
                     let styleIndex = `option_${position.position}`;
-                    let activeStyle = (userPreference[value.issue] === position.position)? "active" : "";
+                    let activeStyle = (userPreference[value.id] === position.position)? "active" : "";
 
                     return <div className={` ${styles.matchOption} ${styles[styleIndex]} ${styles[activeStyle]}`} 
                                 key={i}
                                 onClick={handleSetPref.bind(null,{
-                                  issue: value.issue,
+                                  issue: value.id,
                                   position: position.position
                                 })}>
                                 {position.title}
@@ -188,21 +205,7 @@ class Record extends Component {
     
     if(!data.positions) return <div></div>
 
-    //目前有資料的議題
-    const IssueList = [
-         {
-             "id": "marriageEquality",
-             "cht": "婚"
-         },
-         {
-             "id": "recall",
-             "cht": "罷"
-         },
-         {
-             "id": "referendum",
-             "cht": "公"
-         }
-    ]
+    
   
     let issueItems = IssueList.map((currentIssue, index)=>{
         let currentData = data.positions[currentIssue.id];

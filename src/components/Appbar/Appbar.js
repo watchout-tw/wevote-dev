@@ -80,20 +80,14 @@ export default class Appbar extends Component {
 
                 {issueItems}
 
-                <li onClick={this._updateLocation.bind(this,'parties')}>
-                    <Link className={`${styles.navItem} ${partiesActive}`}
-                          to={`/parties`}
-                          onClick={this._hideMenu.bind(this)}  >
-                            <img src={symbol_parties} className={styles.symbol}/>
-                            <span>政黨表態</span>
-                    </Link></li>
                 <li onClick={this._updateLocation.bind(this,'about')}>
                     <Link className={`${styles.navItem} ${aboutActive}`}
                           to={`/about`}
                           onClick={this._hideMenu.bind(this)}>
                             <img src={symbol_about} className={styles.symbol}/>
                             <span>關於我們</span>
-                    </Link></li>
+                    </Link>
+                </li>
               </ul>
 
               <div className={styles.rightToggle}

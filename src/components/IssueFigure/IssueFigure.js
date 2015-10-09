@@ -97,7 +97,8 @@ export default class IssueFigure extends Component {
                   </div>
                   
                   <div className={styles.issueController}>
-                    <IssueController currentIssue={currentIssue} currentView={currentView}
+                    <IssueController currentIssue={currentIssue} 
+                                     currentView={currentView}
                                      setCurrentView={setCurrentView}/>
                   </div>
               </div>

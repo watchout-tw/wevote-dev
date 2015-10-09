@@ -23,3 +23,8 @@
 .optionImgInactive {
 	opacity: 0.3;
 }
+.invisible {
+	display: block;
+	max-height: 0;
+	overflow: hidden;
+}

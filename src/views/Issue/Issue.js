@@ -20,8 +20,8 @@ export default class Issue extends Component {
 
   constructor(props) { super(props)   
       this.state = {
-        currentView: 'parties',
-        interactive: true,
+        currentView: props.params.viewName || 'parties',
+        interactive: false,
         localInteractivePrefChecked: false,
 
         chooseSkip: false, 
@@ -76,6 +76,7 @@ export default class Issue extends Component {
       }
   }
   _setCurrentView(value){
+      history.pushState({}, "", `/issues/${this.props.params.issueName}/${value}`);
       this.setState({
           currentView: value
       })
@@ -260,12 +261,17 @@ export default class Issue extends Component {
                             handleCompleted={this._handleCompleted.bind(this)}
                             handleUpdateStage={this._handleUpdateStage.bind(this)} />
         )
-      }
-      if(isInteractiveMode === false) {
+      }else{
+        // if we use (isInteractiveMode === false) here, it would not shown the static version at first
+        // default mode has to be non-interactive, so that can generate static pages of all.
+        // use 'invisibleStyle' to hide the 1-sec flash from real-person user
+        let invisibleStyle = (isInteractiveMode === false) ? "" : styles.invisibleBlock;
         main = (
+          <div className={styles.invisibleStyle}>
           <StaticIssue currentIssueName={currentIssueName}
                        currentView={currentView}
                        setCurrentView={this._setCurrentView.bind(this)}/>
+          </div>
         )
       }
           
