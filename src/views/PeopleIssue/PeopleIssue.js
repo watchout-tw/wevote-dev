@@ -4,63 +4,45 @@ import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
 import { connect } from 'react-redux';
 
-import {setLegislatorFilter} from '../../ducks/legislatorPositions';
-
 import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
-
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 import RecordTable from '../../components/RecordTable/RecordTable.js';
 
 import url2eng from '../../utils/url2eng';
 import eng2cht from '../../utils/eng2cht';
+import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 
 @connect(
     state => ({
                   legislators: state.legislators,
-                  legislatorPositions: state.legislatorPositions,
+                  records: state.records,
                   issues: state.issues
-               }),
-    dispatch => bindActionCreators({setLegislatorFilter}, dispatch))
+              }),
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class PeopleIssue extends Component {
   static propTypes = {
-      setLegislatorFilter: PropTypes.func.isRequired,
-      legislatorPositions: PropTypes.object.isRequired
+      legislators: PropTypes.object.isRequired,
+      records: PropTypes.object.isRequired,
+      issues: PropTypes.object.isRequired
   }
   //設定 initial state
   constructor(props) { super(props)
       this.state = {
           showMenu: false,
+          legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
       }
   }
   _toggleMenu(){  
     this.setState({ showMenu: !this.state.showMenu });
   }
-  componentWillMount(){
-      const { legislators, setLegislatorFilter } = this.props;
-      const id = this.props.params.peopleId;
-      const name = legislators[id].name;
-      setLegislatorFilter(name);
-  }
-  componentWillReceiveProps(nextProps){
-      
-      const id = this.props.params.peopleId;
-      const nextId = nextProps.params.peopleId;
-
-      if(id !== nextId){
-          const { legislators, setLegislaotrFilter } = this.props;
-          const name = legislators[nextId].name;
-          setLegislatorFilter(name);
-      }
-
-  }
+ 
   render() {
     const styles = require('./PeopleIssue.scss');
     const id = this.props.params.peopleId;
     const issueURL = this.props.params.issueName;
 
-
-    const {legislatorPositions, issues, legislators} = this.props;
+    const {issues, legislators} = this.props;
     const issue = issues[issueURL];
     const {showMenu} = this.state;
 
@@ -70,17 +52,18 @@ export default class PeopleIssue extends Component {
     const legislator = legislators[id];
     const {name, partyCht} = legislator;
 
-    if(!legislatorPositions.data.positions) return <div></div>;
+    const {legislatorPositions} = this.state;
+    const currentLegislatorPosition = legislatorPositions[name];
 
-    const position = legislatorPositions.data.positions[issueDataName];
-    const currentLegislatorPosition = legislatorPositions.data.positions;
-    const dominantPosition = legislatorPositions.data.positions[issueDataName].dominantPosition;
-
+    const positions = currentLegislatorPosition.positions[issueDataName];
+    const {dominantPosition} = positions;
+  
     let issueMenu = (showMenu===true) ? (Object.keys(issues).map((currentIssueName,i)=>{
         let active = (issueURL === currentIssueName) ? styles.menuActive : "";
+        
         /// Refine 拿數字的方法
         let dataName = issues[currentIssueName].titleEng;
-        let recordsCount = currentLegislatorPosition[dataName].totalCounts;
+        let recordsCount = currentLegislatorPosition.positions[dataName].totalCounts;
         return  <Link className={` ${styles.menu} ${active}`}
                       to={`/people/${id}/${currentIssueName}`} 
                       key={i}>
@@ -122,7 +105,7 @@ export default class PeopleIssue extends Component {
       }
      
     };
-    
+   
    
     return (
       <div className={styles.wrap}> 
@@ -132,7 +115,7 @@ export default class PeopleIssue extends Component {
           <div className={styles.main}>
               <div className={styles.summary}> 
                   <PositionSquare issueName={issueDataName}
-                                       data={position} />
+                                  data={positions} />
                   <div className={styles.menuBlock}>
                       <div className={styles.menuTitle}
                            onClick={this._toggleMenu.bind(this)}>更換議題</div>
@@ -140,7 +123,7 @@ export default class PeopleIssue extends Component {
                   </div>
               </div>
               <div className={styles.table}>
-                  <RecordTable data={position}/> 
+                  <RecordTable data={positions}/> 
               </div>
 
           </div>

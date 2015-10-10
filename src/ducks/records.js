@@ -1,4 +1,4 @@
-const positionRecords = 
+const initialState = 
 {
     "1": {
         "id": 1,
@@ -30946,49 +30946,14 @@ const positionRecords =
     }
 }
 
-const initialState = {
-    "idFilter": "",
-    "data" : ""
-}
 
-const SET_ID_FILTER = 'SET_ID_FILTER';
-const GET_ALL_RECORDS = 'GET_ALL_RECORDS';
 
 export default function reducer(state = initialState, action = {}) {
   
   switch (action.type) {
-    
-    case SET_ID_FILTER:
-      console.log("set id")
-      if(positionRecords[action.id]){
-        return {
-            idFilter: action.id,
-            data: positionRecords[action.id]
-        };
-
-      }else{
-        return [];
-      }
-
-    case GET_ALL_RECORDS:
-        return {
-            idFilter: "",
-            data: positionRecords
-        };
-
     default:
       return state;
   }
 }
-export function setIdFilter(value) {
-  return {
-    type: SET_ID_FILTER,
-    id: value
-  };
-}
-export function getAllRecords() {
-  return {
-    type: GET_ALL_RECORDS
-  };
-}
+
 

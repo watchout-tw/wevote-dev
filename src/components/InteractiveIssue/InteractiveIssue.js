@@ -37,14 +37,35 @@ export default class InteractiveIssue extends Component {
         shouldAnimated: true,
         showNext: true,
         showSlides: false,
-        userPosition: "" //贊成, 反對, 不確定
+        userPosition: "", //贊成, 反對, 不確定
+        currentIssueName: props.currentIssueName, //URL
+        currentView: props.currentView
+        
 
     }
     this.props.handleUpdateStage("intro");
 
   }
+  
+  componentDidMount(){ 
+      console.log("mount - InteractiveIssue")
+      if(window){
+        let pathname = window.location.pathname;
+        console.log(pathname) 
+        if(pathname.indexOf(".html")!==-1){
+           pathname = pathname.split(".html")[0]
+        }
+        pathname = pathname.split("/");
+        console.log(pathname)
+        this.setState({
+          currentIssueName: pathname[2],
+          currentView: pathname[3] || "parties"
 
-  componentDidMount(){
+        })
+        console.log("*")
+        console.log(this.state)
+      }
+
       window.addEventListener('keydown', this._handleKeyDown.bind(this));
   }
   componentWillUnmount() {
@@ -215,6 +236,7 @@ export default class InteractiveIssue extends Component {
     })
     this.props.handleUpdateStage(value);
   }
+ 
   componentWillReceiveProps(nextProps){
     //取消這個的話，結束一個任務，再選擇時，不會重load。
     const {issues} = this.props;
@@ -235,7 +257,10 @@ export default class InteractiveIssue extends Component {
             shouldAnimated: true,
             showNext: true,
             showSlides: false,
-            userPosition: "" //贊成, 反對, 不確定
+            userPosition: "", //贊成, 反對, 不確定
+
+            currentIssueName: nextProps.currentIssueName,
+            currentView: nextProps.currentView
         }
     }
   }
@@ -243,8 +268,11 @@ export default class InteractiveIssue extends Component {
   render(){
 
       const styles = require('./InteractiveIssue.scss');
-      const {issues, currentIssueName, currentView, skipInteractive, setCurrentView} = this.props;
-      const {stage, shouldAnimated, showNext, showSlides, userPosition} = this.state;
+
+      const {issues, skipInteractive, setCurrentView} = this.props;
+      const {stage, shouldAnimated, showNext, showSlides, userPosition,
+             currentIssueName, currentView } = this.state;
+  
 
       // 拿該議題的資料
       const currentIssue = issues[currentIssueName];

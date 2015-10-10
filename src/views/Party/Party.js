@@ -4,49 +4,39 @@ import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
 import { connect } from 'react-redux';
 
-import {setPartyFilter} from '../../ducks/partyPositions';
-
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 
 import eng2url from '../../utils/eng2url';
+import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
 @connect(
     state => ({
                  legislators: state.legislators,
-                 partyPositions: state.partyPositions
+                 records: state.records,
+                 issues: state.issues
                }),
-    dispatch => bindActionCreators({setPartyFilter}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class Party extends Component {
   static propTypes = {
-      setPartyFilter: PropTypes.func.isRequired,
-      partyPositions: PropTypes.object.isRequired
+      legislators: PropTypes.object.isRequired,
+      records: PropTypes.object.isRequired,
+      issues: PropTypes.object.isRequired
   }
-  componentWillMount(){
-      const { setPartyFilter } = this.props;
-      const id = this.props.params.partyId;
-      console.log(id)
-      setPartyFilter(id);
-  }
-  componentWillReceiveProps(nextProps){
-      
-      const id = this.props.params.partyId;
-      const nextId = nextProps.params.partyId;
-
-      if(id !== nextId){
-          setPartyFilter(id);
+  constructor(props){ super(props)
+      this.state = {
+        partyPositions: parseToPartyPosition(props.records, props.issues)
       }
-
   }
+  
   render() {
     const styles = require('./Party.scss');
     const id = this.props.params.partyId;
-    const {partyPositions} = this.props;
+    const {partyPositions} = this.state;
 
-    
-
-    const positions = partyPositions.data.positions || {};
+    const currentPartyPositions = partyPositions[id];
+    const positions = currentPartyPositions.positions || {};
     
     let issueGroups = Object.keys(positions).map((currentIssue, index)=>{
         //console.log(positions[currentIssue])
@@ -61,13 +51,13 @@ export default class Party extends Component {
     })
 
     const metaData = {
-      title: `${partyPositions.data.name}議題表態分析-2016立委出任務`,
-      description: `${partyPositions.data.name}對於各項重大議題的表態大解析！趕快來看看${partyPositions.data.name}委員在立法院針對下列重大議題有哪些發言！`,
+      title: `${currentPartyPositions.name}議題表態分析-2016立委出任務`,
+      description: `${currentPartyPositions.name}對於各項重大議題的表態大解析！趕快來看看${currentPartyPositions.name}委員在立法院針對下列重大議題有哪些發言！`,
       meta: {
           charSet: 'utf-8',
           property: {
-            'og:title': `${partyPositions.data.name}議題表態分析-2016立委出任務`,
-            'og:description': `${partyPositions.data.name}對於各項重大議題的表態大解析！趕快來看看${partyPositions.data.name}委員在立法院針對下列重大議題有哪些發言！`,
+            'og:title': `${currentPartyPositions.name}議題表態分析-2016立委出任務`,
+            'og:description': `${currentPartyPositions.name}對於各項重大議題的表態大解析！趕快來看看${currentPartyPositions.name}委員在立法院針對下列重大議題有哪些發言！`,
             'og:type' : 'website'
           }
       }

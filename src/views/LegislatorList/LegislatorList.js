@@ -3,40 +3,47 @@ import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
 
-import {getAllLegislators} from '../../ducks/legislatorPositions';
-
 import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar.js';
 
 import people_name2id from '../../utils/people_name2id';
+import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 
 //目前有資料的議題
 const IssueList = [
      {
          "id": "marriageEquality",
-         "cht": "婚"
+         "cht": "婚",
+         "url": "marriage-equality"
      },
      {
          "id": "recall",
-         "cht": "罷"
+         "cht": "罷",
+         "url": "recall"
      },
      {
          "id": "referendum",
-         "cht": "公"
+         "cht": "公",
+         "url": "referendum"
      },
      {
          "id": "nuclearPower",
-         "cht": "核"
+         "cht": "核",
+         "url": "nuclear-power"
      }
 ]
 @connect(
-    state => ({legislatorPositions: state.legislatorPositions
+    state => ({
+                  legislators: state.legislators,
+                  records: state.records,
+                  issues: state.issues
                }),
-    dispatch => bindActionCreators({getAllLegislators}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class LegislatorList extends Component {
   static propTypes = {
-      legislatorPositions: PropTypes.object.isRequired,
-      getAllLegislators: PropTypes.func.isRequired
+      legislators: PropTypes.object.isRequired,
+      records: PropTypes.object.isRequired,
+      issues: PropTypes.object.isRequired
   }
 
   constructor(props) { super(props)
@@ -46,7 +53,8 @@ export default class LegislatorList extends Component {
           "recall" : "none",
           "referendum" : "none",
           "nuclearPower" : "none"
-        }
+        },
+        legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
       }
   }
 
@@ -60,20 +68,14 @@ export default class LegislatorList extends Component {
 
   }
 
-
-  componentWillMount(){
-      const { getAllLegislators } = this.props;
-      getAllLegislators();
-  }
-  
   render() {
     const styles = require('./LegislatorList.scss');
     const id = this.props.params.peopleId;
-    const { legislatorPositions} = this.props;
-    const { userPreference } = this.state;
+    
+    const { userPreference, legislatorPositions } = this.state;
     
 
-    let legislatorItems = Object.keys(legislatorPositions.data).map((legislator, index)=>{
+    let legislatorItems = Object.keys(legislatorPositions).map((legislator, index)=>{
       let shouldReturn = true;
       // //黨團不顯示在此
       // if(legislator.indexOf("黨團")!==-1){
@@ -85,8 +87,8 @@ export default class LegislatorList extends Component {
           if(userPreference[currentIssue]!=="none"){
 
               //如果立委有這個議題的表態
-              if(legislatorPositions.data[legislator].positions[currentIssue]){
-                let currentLegislatorPosition = legislatorPositions.data[legislator].positions[currentIssue].dominantPosition;
+              if(legislatorPositions[legislator].positions[currentIssue]){
+                let currentLegislatorPosition = legislatorPositions[legislator].positions[currentIssue].dominantPosition;
               
                 //檢查兩者意見是否相同
                 if(userPreference[currentIssue] !== currentLegislatorPosition)
@@ -103,7 +105,7 @@ export default class LegislatorList extends Component {
 
 
       if(shouldReturn){
-        return <Record data={legislatorPositions.data[legislator]} 
+        return <Record data={legislatorPositions[legislator]} 
                        id={people_name2id(legislator)}
                        key={index}/>
       }
@@ -211,19 +213,22 @@ class Record extends Component {
         let currentData = data.positions[currentIssue.id];
         //if(!currentData) return "";
         return (
-          <div className={`${styles.issueCubeLast} ${styles[currentData.dominantPosition]}`}>{currentIssue.cht}</div>
+          <Link to={`/people/${id}/${currentIssue.url}`}
+                className={`${styles.issueCube} ${styles[currentData.dominantPosition]}`}>{currentIssue.cht}</Link>
         )
     });
 
     return (
       <div className={styles.item}>
-      <Link to={`/people/${id}`} className={styles.link}>
+      
           <div className={styles.avatar}><PeopleAvatar id={id}/></div>
-          <div className={styles.name}>{data.name}</div>
+          <Link to={`/people/${id}`} div className={styles.name}>
+              {data.name}
+          </Link>
           <div className={styles.issueCubes}>
             {issueItems}
           </div>
-      </Link>
+     
       </div>
     )
   }

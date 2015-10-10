@@ -61,48 +61,44 @@ $unknownColor: #FFF800;
 	display: inline-block;
 }
 .item {
-	cursor: pointer;
 	display: inline-block;
 	margin: 20px;
 	border: 2px solid;
 	background: white;
 }
-.item:hover {
-	box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2);
-}
-.link, .link:visited {
-	color: rgb(53,55,54);
-	text-decoration: none;
-	display: block;
-}
-.name {
+
+.name, .name:visited {
 	vertical-align: top;
 	padding-top: 14px;
 	margin-left: 5px;
     text-align: center;
     display: inline-block;
     width: 60px;
+    color: black;
+    text-decoration: none;
+}
+.name:hover {
+	text-decoration: underline;
 }
 .issueCubes {
 	border-top: 1px solid;
 	font-size: 20px;
 }
-.issueCube {
+.issueCube, .issueCube:visited {
 	display: inline-block;
 	padding: 10px;
 	vertical-align: top;
 	color: black;
 	width: 60px;
-	border-right: 1px solid;
+	text-decoration: none;
+	cursor: pointer;
+	border: 3px solid transparent;
 }
-.issueCubeLast {
-	display: inline-block;
-	padding: 10px;
-	vertical-align: top;
-	color: black;
-	width: 60px;
+.issueCube:hover{
+	border: 3px solid black;
+	
+}
 
-}
 .aye {
 	background: $ayeColor;
 }
