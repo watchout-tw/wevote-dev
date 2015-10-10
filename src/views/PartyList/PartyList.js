@@ -3,28 +3,32 @@ import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
 
-import {getAllParties} from '../../ducks/partyPositions';
-
+import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
 @connect(
-    state => ({partyPositions: state.partyPositions
+    state => ({
+                legislators: state.legislators,
+                records: state.records,
+                issues: state.issues
                }),
-    dispatch => bindActionCreators({getAllParties}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class PartyList extends Component {
   static propTypes = {
-      partyPositions: PropTypes.object.isRequired,
-      getAllParties: PropTypes.func.isRequired
+      legislators: PropTypes.object.isRequired,
+      records: PropTypes.object.isRequired,
+      issues: PropTypes.object.isRequired
   }
 
   constructor(props) { super(props)
       this.state = { 
         userPreference: {
-          "marriageEquality" : "none",
-          "recall" : "none",
-          "referendum" : "none",
-          "nuclearPower" : "none"
-        }
+            "marriageEquality" : "none",
+            "recall" : "none",
+            "referendum" : "none",
+            "nuclearPower" : "none"
+        },
+        partyPositions: parseToPartyPosition(props.records, props.issues)
       }
   }
 
@@ -32,56 +36,44 @@ export default class PartyList extends Component {
       let currentPref = this.state.userPreference;
       currentPref[value.issue] = value.position;
 
-      console.log(value)
       this.setState({
         userPreference: currentPref
       })
-
   }
 
-
-  componentWillMount(){
-      const { getAllParties } = this.props;
-      getAllParties();
-  }
-  
   render() {
     const styles = require('./PartyList.scss');
-    const id = this.props.params.peopleId;
-    const { partyPositions} = this.props;
-    const { userPreference } = this.state;
+    const { userPreference, partyPositions } = this.state;
     
-
-    let partyItems = Object.keys(partyPositions.data).map((party, index)=>{
-      let shouldReturn = true;
-      
-
-      //只顯示相同立場的政黨
-      Object.keys(userPreference).map((currentIssue, index)=>{
-          if(userPreference[currentIssue]!=="none"){
-
-              //如果立委有這個議題的表態
-              if(partyPositions.data[party].positions[currentIssue]){
-                let currentPartyPosition = partyPositions.data[party].positions[currentIssue].dominantPosition;
-              
-                //檢查兩者意見是否相同
-                if(userPreference[currentIssue] !== currentPartyPosition)
-                   shouldReturn = false;
-
-              
-              }else{
-                //沒有在這個議題表態的立委也不符合需求
-                shouldReturn = false;
-              }
-          }
-      })
-
-      if(shouldReturn){
-        return <Record data={partyPositions.data[party]} 
-                       name={partyPositions.data[party].name}
-                       id={party}
-                       key={index}/>
-      }
+    let partyItems = Object.keys(partyPositions).map((party, index)=>{
+        let shouldReturn = true;
+        
+        //只顯示相同立場的政黨
+        Object.keys(userPreference).map((currentIssue, index)=>{
+            if(userPreference[currentIssue]!=="none"){
+  
+                //如果立委有這個議題的表態
+                if(partyPositions[party].positions[currentIssue]){
+                  let currentPartyPosition = partyPositions[party].positions[currentIssue].dominantPosition;
+                
+                  //檢查兩者意見是否相同
+                  if(userPreference[currentIssue] !== currentPartyPosition)
+                     shouldReturn = false;
+  
+                
+                }else{
+                  //沒有在這個議題表態的立委也不符合需求
+                  shouldReturn = false;
+                }
+            }
+        })
+  
+        if(shouldReturn){
+          return <Record data={partyPositions[party]} 
+                         name={partyPositions[party].name}
+                         id={party}
+                         key={index}/>
+        }
     })
 
     return (

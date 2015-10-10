@@ -4,73 +4,59 @@ import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
 import { connect } from 'react-redux';
 
-import {setPartyFilter} from '../../ducks/partyPositions';
-
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
-
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 import RecordTable from '../../components/RecordTable/RecordTable.js';
 
 import url2eng from '../../utils/url2eng';
 import eng2cht from '../../utils/eng2cht';
+import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
 @connect(
     state => ({
-                  partyPositions: state.partyPositions,
-                  issues: state.issues
+                 legislators: state.legislators,
+                 records: state.records,
+                 issues: state.issues
                }),
-    dispatch => bindActionCreators({setPartyFilter}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class PartyIssue extends Component {
   static propTypes = {
-      setPartyFilter: PropTypes.func.isRequired,
-      partyPositions: PropTypes.object.isRequired
+      legislators: PropTypes.object.isRequired,
+      records: PropTypes.object.isRequired,
+      issues: PropTypes.object.isRequired
   }
   //設定 initial state
   constructor(props) { super(props)
       this.state = {
           showMenu: false,
+          partyPositions: parseToPartyPosition(props.records, props.issues)
       }
   }
   _toggleMenu(){  
     this.setState({ showMenu: !this.state.showMenu });
   }
-  componentWillMount(){
-      const { legislators, setPartyFilter } = this.props;
-      const id = this.props.params.partyId;
-      setPartyFilter(id);
-  }
-  componentWillReceiveProps(nextProps){
-      
-      const id = this.props.params.partyId;
-      const nextId = nextProps.params.partyId;
-
-      if(id !== nextId){
-          const { setPartyFilter } = this.props;
-          setPartyFilter(nextId);
-      }
-
-  }
+  
   render() {
     const styles = require('./PartyIssue.scss');
     const id = this.props.params.partyId;
     const issueURL = this.props.params.issueName;
-    const {partyPositions, issues} = this.props;
-    const {showMenu} = this.state;
+    const {issues} = this.props;
+    const {showMenu, partyPositions} = this.state;
+    const currentPartyPositions = partyPositions[id];
+    const positions = currentPartyPositions.positions || {};
+    
 
     let issueDataName = url2eng(issueURL)
 
-    if(!partyPositions.data || !partyPositions.data.positions || !partyPositions.data.name) 
-        return <div></div>;
-
-    const position = partyPositions.data.positions[issueDataName];
+    const position = positions[issueDataName];
 
     let issueMenu = (showMenu===true) ? (Object.keys(issues).map((currentIssueName,i)=>{
         let active = (issueURL === currentIssueName) ? styles.menuActive : "";
         
         /// Refine 拿數字的方法
         let dataName = issues[currentIssueName].titleEng;
-        let recordsCount = partyPositions.data.positions[dataName].totalCounts;
+        let recordsCount = partyPositions.positions[dataName].totalCounts;
 
         return  <Link className={` ${styles.menu} ${active}`}
                       to={`/parties/${id}/${currentIssueName}`} 
@@ -82,13 +68,13 @@ export default class PartyIssue extends Component {
     
     let issueTitle = eng2cht(issueURL)
     const metaData = {
-      title: `${partyPositions.data.name}對於${issueTitle}的表態-2016立委出任務`,
-      description: `想知道${partyPositions.data.name}對於${issueTitle}的表態嗎？趕快來看看${partyPositions.data.name}委員在立法院針對${issueTitle }有哪些發言！`,
+      title: `${currentPartyPositions.name}對於${issueTitle}的表態-2016立委出任務`,
+      description: `想知道${currentPartyPositions.name}對於${issueTitle}的表態嗎？趕快來看看${currentPartyPositions.name}委員在立法院針對${issueTitle}有哪些發言！`,
       meta: {
           charSet: 'utf-8',
           property: {
-            'og:title': `${partyPositions.data.name}對於${issueTitle}的表態-2016立委出任務`,
-            'og:description': `想知道${partyPositions.data.name}對於${issueTitle}的表態嗎？趕快來看看${partyPositions.data.name}委員在立法院針對${issueTitle }有哪些發言！`
+            'og:title': `${currentPartyPositions.name}對於${issueTitle}的表態-2016立委出任務`,
+            'og:description': `想知道${currentPartyPositions.name}對於${issueTitle}的表態嗎？趕快來看看${currentPartyPositions.name}委員在立法院針對${issueTitle}有哪些發言！`
           }
       }
      
