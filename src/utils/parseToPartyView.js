@@ -1,7 +1,7 @@
 import cht2eng from "./cht2eng";
 
 export default function parseToPartyView(records, issues){
- 	const PositionRecords = records.data;
+ 	const PositionRecords = records;
     
     const PartyView = {};
 

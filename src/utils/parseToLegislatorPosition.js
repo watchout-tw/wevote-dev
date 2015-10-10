@@ -3,7 +3,7 @@ import evadingList from './evadingList';
 
 
 export default function parseToLegislatorPosition(records, issues, legislators){
-	const PositionRecords = records.data;
+	const PositionRecords = records;
 	const LegislatorPosition = {};
 
     /* 依照不同議題分類，然後把每個議題的資料丟進去 */

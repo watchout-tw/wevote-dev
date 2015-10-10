@@ -4,11 +4,10 @@ import { Link } from "react-router";
 import { connect } from 'react-redux';
 import moment from 'moment';
 
-import {setIdFilter} from '../../ducks/records';
-
 import cht2url from '../../utils/cht2url';
 import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
+import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
@@ -18,57 +17,35 @@ import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
                issues: state.issues,
                records: state.records
                }),
-    dispatch => bindActionCreators({setIdFilter}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class Record extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired,
-      setIdFilter: PropTypes.func.isRequired,
-      records: PropTypes.object.isRequired
+      records: PropTypes.object.isRequired,
+      legislators: PropTypes.object.isRequired
   }
-  componentWillMount(){
-      const id = this.props.params.recordId;
-      const { setIdFilter } = this.props;
-      setIdFilter(id);
-  }
-  componentWillReceiveProps(nextProps){
-      
-      const id = this.props.params.recordId;
-      const nextId = nextProps.params.recordId;
-
-      if(id !== nextId){
-          const { setIdFilter } = this.props;
-          setIdFilter(id);
+  constructor(props){ super(props)
+      this.state = {
+        legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
       }
-
   }
+ 
   render() {
     const styles = require('./Record.scss');
     const {records, issues, legislators} = this.props;
-    const data = records.data;
+    const recordId = this.props.params.recordId;
+
+    const data = records[recordId];
 
     const legislatorId = people_name2id(data.legislator);
     const legislator = legislators[legislatorId];
 
+    const {legislatorPositions} = this.state;
+    const currentLegislatorPosition = legislatorPositions[legislator.name];
+    
+
     let date = moment.unix(data.date);
-
-    /*
-    category: "發言"
-    clarificationContent: ""
-    clarificationLastUpdate: ""
-    content: "本院黃委員昭順，針對近日同性婚姻合法化爭議，xxxx"
-    date: 1336665600
-    id: 1
-    issue: "婚姻平權"
-    legislator: "黃昭順"
-    lyURL: "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/101/32/LCIDC01_1013201.pdf"
-    meeting: "院會"
-    meetingCategory: "院會書面質詢"
-    party: "KMT"
-    position: "aye"
-    positionJudgement: "贊成同性婚姻合法化"
-    */
-
     let question;
     if(issues[cht2url(data.issue)])
        question = issues[cht2url(data.issue)].question;
@@ -170,8 +147,25 @@ export default class Record extends Component {
 
       </div>
          <div className={styles.seeOtherIssue}>看看{data.legislator}在各個議題有什麼表態：</div>
-         <IssueGroup id={legislatorId}/>
+         <IssueGroup id={legislatorId} currentLegislatorPosition={currentLegislatorPosition}/>
       </div>
     );
   }
 }
+
+ /*
+    category: "發言"
+    clarificationContent: ""
+    clarificationLastUpdate: ""
+    content: "本院黃委員昭順，針對近日同性婚姻合法化爭議，xxxx"
+    date: 1336665600
+    id: 1
+    issue: "婚姻平權"
+    legislator: "黃昭順"
+    lyURL: "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/101/32/LCIDC01_1013201.pdf"
+    meeting: "院會"
+    meetingCategory: "院會書面質詢"
+    party: "KMT"
+    position: "aye"
+    positionJudgement: "贊成同性婚姻合法化"
+    */

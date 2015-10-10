@@ -1,7 +1,7 @@
 import cht2eng from "./cht2eng";
 export default function parseToPartyPosition (records, issues) {// records: [], currentIssue: marriageEquality (e.g.)
 	let PartyPosition = {};
-	const PositionRecords = records.data;
+	const PositionRecords = records;
 
    	/* 依照不同議題分類，然後把每個議題的資料丟進去 */
   	let PositionRecords_Issue = {};

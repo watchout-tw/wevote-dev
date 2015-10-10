@@ -1,7 +1,7 @@
 import cht2eng from "./cht2eng";
 import evadingList from './evadingList';
 export default function parseToPartyView(records, issues){
-	const PositionRecords = records.data;
+	const PositionRecords = records;
 	const LegislatorView = {};
 
     Object.keys(issues).map((key, index)=>{
