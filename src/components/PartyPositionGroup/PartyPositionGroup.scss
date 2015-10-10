@@ -11,12 +11,15 @@ $unknownColor: #FFF800;
 .header {
 	display: block;
 	max-width: 100vw;
-	font-size: 18px;
+	font-size: 16px;
 }
 .margin {
 	display: inline-block;
 	margin: 20px;
 }
+.partyTitle {
+}
+/*
 .partyTitle, .partyTitle:visited {
     color: black;
     text-decoration: none;
@@ -28,7 +31,7 @@ $unknownColor: #FFF800;
 .partyTitle:hover {
 	color: #B88234;
 	border-bottom: 1px solid #B88234;
-}
+}*/
 .positionWrap {
 	position: relative;
 	float: left;
@@ -72,7 +75,7 @@ $unknownColor: #FFF800;
 
 	width: 340px;
 	border: 1px solid;
-  	
+
 	box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
 
 	cursor: pointer;
@@ -86,6 +89,11 @@ $unknownColor: #FFF800;
 	overflow: hidden;
 	margin: 5px 0;
 }
+.caucus {
+	background-image: url('./images/command.svg');
+	background-size: cover;
+}
+/*
 .caucus:after {
 	content: '令';
 	color: #FFFF1B;
@@ -94,6 +102,4 @@ $unknownColor: #FFF800;
 	top: 0;
 	left: 0;
 	width: calc(100% - 2px);
-}
-
-
+}*/

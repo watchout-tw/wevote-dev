@@ -82,7 +82,7 @@ $unknownColor: #FFF800;
 
 	width: 340px;
 	border: 1px solid;
-  	
+
 	box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
 
 	cursor: pointer;
@@ -96,6 +96,11 @@ $unknownColor: #FFF800;
 	overflow: hidden;
 	margin: 5px 0;
 }
+.caucus {
+	background-image: url('./images/command-white.svg');
+	background-size: cover;
+}
+/*
 .caucus:after {
 	content: '令';
 	color: #FFFF1B;
@@ -104,4 +109,4 @@ $unknownColor: #FFF800;
 	top: 0;
 	left: 0;
 	width: calc(100% - 2px);
-}
+}*/

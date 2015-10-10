@@ -35,16 +35,16 @@ class Record extends Component {
 
     if(active)
        cubeActiveStyle = styles.positionCubeActive;
-    
-    /* active record */    
+
+    /* active record */
     let detailText;
     if(active){
           let date = moment.unix(data.date);
-          
+
           let preview = (data.content.length > 40) ? data.content.slice(0,40)+"..." : data.content;
           detailText =  (
           <div className={styles.activeBlock}>
-              
+
               <Link to={`/records/${data.id}`} className={styles.activeCube}>
                   <div className={styles.activeContent}>
                     <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
@@ -56,15 +56,15 @@ class Record extends Component {
 
     return (
       <div className={styles.positionWrap}>
-           
+
           {detailText}
-          
+
           <Link to={`/records/${data.id}`}
                 className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.party]} ${caucusStyle} `}
                 onMouseEnter={this._toggleActive.bind(this, true)}
                 onMouseLeave={this._toggleActive.bind(this, false)} >
           </Link>
-      
+
       </div>
     )
   }
@@ -79,7 +79,7 @@ export default class PositionPartyGroup extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     issueStatement: PropTypes.string.isRequired
-  
+
   }
 
   constructor(props){ super(props)
@@ -111,9 +111,9 @@ export default class PositionPartyGroup extends Component {
     // record 數=> 開根號，round up 到整數
     // 盡量排成正方形
     let originalWidth = Math.ceil(Math.sqrt(recordCount))*cubeSize;
-    
+
     // boder 目前是 ad-hoc 的兩種寬度，需要再調整
-    let borderWidth = (originalWidth>140)? 6:4;
+    let borderWidth = Math.ceil(originalWidth/14 < 2 ? 2 : originalWidth/14);//(originalWidth>140)? 6:4;
     let outerCircleSize = originalWidth*2;
 
     let translateParams;
@@ -127,7 +127,7 @@ export default class PositionPartyGroup extends Component {
     // 算到剛好 cubeSize 的倍數是為了之後要 translate 到中間時，比較準確
     viewWidth = Math.floor(viewWidth/cubeSize)*cubeSize;
 
-    
+
     // 超過畫面大小，最外圈要 translate
     if(outerCircleSize > viewWidth){
         let translateValue = outerCircleSize/2 - viewWidth/2 + (20);//因為最外面的 wrap 有 20 的 margin;
@@ -137,7 +137,7 @@ export default class PositionPartyGroup extends Component {
     // 需要變成長方形，需要重新計算 top
     if(viewWidth < originalWidth){
        finalWidth = viewWidth;
-       
+
        let rowCount = viewWidth / cubeSize;
        let height = ( recordCount / rowCount ) * cubeSize;
        top = outerCircleSize/2 - (height/2);
@@ -156,18 +156,18 @@ export default class PositionPartyGroup extends Component {
 
     return result;
   }
- 
+
   render() {
     const styles = require('./PositionPartyGroup.scss');
     const {data, issueId, issueStatement} = this.props;
     const layoutMath = this._calculateLayout();
-    
+
     let title = `我${eng2cht(data.position)}${issueStatement}`;
     if(data.position === "unknown")
       title = "我立場模糊";
 
     let records = data.records.map((item,index)=>{
-      return <Record data={item} 
+      return <Record data={item}
                      key={index} />
     });
 
@@ -180,7 +180,7 @@ export default class PositionPartyGroup extends Component {
       display: "inline-block",
       verticalAlign: "middle",
       position: "relative",
-      margin: "20px 0px",
+      margin: '' + (layoutMath.borderWidth) + 'px 0',//"20px 0px",
       transform: layoutMath.translateParams,
       "-ms-transform": layoutMath.translateParams,
       "-webkit-transform": layoutMath.translateParams
@@ -193,8 +193,8 @@ export default class PositionPartyGroup extends Component {
       top: layoutMath.top,
       left: layoutMath.left
     }
-    
-  
+
+
     return (
         <div className={styles.wrap}>
             <div className={styles.header}>
@@ -205,7 +205,7 @@ export default class PositionPartyGroup extends Component {
                     <div style={innerWrap}>{records}</div>
                 </div>
             </div>
-            
+
         </div>
     );
   }
@@ -214,4 +214,3 @@ export default class PositionPartyGroup extends Component {
     className: ''
   }
 }
-
