@@ -183,7 +183,7 @@ export default class PositionLegislatorGroup extends Component {
     if(data.position === "unknown")
       title = "我立場模糊";
     if(data.position === "evading")
-      title = "我該有立場\n可是卻沒有立場"
+      title = "我應該表態\n卻沒有表態"
 
     /* 這裡是立委們 */
     let legislators = data.legislators.map((item,index)=>{

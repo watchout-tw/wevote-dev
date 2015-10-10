@@ -145,7 +145,7 @@ export default class RecordTable extends Component {
     if(data.dominantPosition === "evading" && records.length === 0){
        evadingItem = (
           <div className={styles.evadingItem}>
-               <div>我應該有立場，可是我沒有立場。</div>
+               <div>我應該表態，卻沒有表態。</div>
                <Link className={styles.evadingFAQ}
                      to={`/about/FAQ`}>我們如何統計的？</Link>
 
