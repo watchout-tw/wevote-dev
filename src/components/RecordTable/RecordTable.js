@@ -134,12 +134,12 @@ export default class RecordTable extends Component {
     })
     ///
 
-    let controPanelItem = (records.length > 0) ? (
+    let controPanelItem = (
         <div className={styles.controls}>
               {options}
               <div className={styles.sortingButtons}>{sortings}</div>
         </div>
-    ):"";
+    );
 
     let evadingItem;
     if(data.dominantPosition === "evading" && records.length === 0){

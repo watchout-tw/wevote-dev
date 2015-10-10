@@ -10,8 +10,8 @@ export default class NotFound extends Component {
     return (
         <div className={styles.wrap}>
             <div className={styles.notFoundText}>
-            	<div className={styles.title}>404! 這裡沒有任務!</div>
-            	<div className={styles.meta}>（但是有一個任務傳送門）</div>
+            	<div className={styles.title}>這裡發生的事，很恐怖～不要問～</div>
+            	<div className={styles.meta}>快點傳送門，回到冒險的一開始吧！</div>
             </div>
             <div className={styles.imgBlock}>
                 <Link to={`/`}>

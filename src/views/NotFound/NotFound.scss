@@ -16,11 +16,12 @@ $breakLarge: 800px;
 	padding: 40px;
 }
 .title {
-	font-size: 24px;
+	font-size: 16px;
 }
 .meta {
-	font-size: 16px;
+	font-size: 14px;
 	padding: 2px;
+    margin-top: 10px;
     color: #7D7575;
 }
 .doorText {
@@ -54,10 +55,16 @@ $breakLarge: 800px;
 @media all and (min-width:$breakLarge){
 	.notFoundText {
 		position: absolute;
-    	left: 22%;
-    	top: 140px;
+    	left: 12%;
+    	top: 100px;
 	}
-
+    .title {
+        font-size: 24px;
+    }
+    .meta {
+        font-size: 16px; 
+    }
+    
 }
 
 

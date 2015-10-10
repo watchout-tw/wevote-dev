@@ -72,7 +72,8 @@ export default class Appbar extends Component {
     return (
       <nav className={`${styles.appbar} ${showStyle}`}>
           <div className={styles.inner}>
-              <Link to="/" className={styles.siteName}>
+              <Link to="/" className={styles.siteName}
+                    onClick={this._hideMenu.bind(this)}>
                 <img src={siteLogo} className={styles.siteLogo}/>
               </Link>
 
