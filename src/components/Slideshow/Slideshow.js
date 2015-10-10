@@ -23,7 +23,7 @@ export default class Slideshow extends Component {
           TOP = 38,
           RIGHT = 39,
           DOWN = 40;
-          
+
     const { currentIndex } = this.state;
     if( e.keyCode === RIGHT || e.keyCode === DOWN ) {
         this._setCurrentIndex(currentIndex + 1);
@@ -31,7 +31,7 @@ export default class Slideshow extends Component {
     if( e.keyCode === LEFT || e.keyCode === TOP ) {
         this._setCurrentIndex(currentIndex - 1);
     }
-    
+
   }
   componentDidMount(){
     window.addEventListener('keydown', this._handleKeyDown.bind(this));
@@ -66,7 +66,7 @@ export default class Slideshow extends Component {
     }
   }
   componentWillUnmount() {
-    window.removeEventListener('keydown', this._handleKeyDown.bind(this));   
+    window.removeEventListener('keydown', this._handleKeyDown.bind(this));
     window.removeEventListener('resize', this._handleResize.bind(this));
   }
   _setCurrentIndex(value, event){
@@ -99,7 +99,7 @@ export default class Slideshow extends Component {
       const nextTopic = nextProps.topic;
       if(topic !== nextTopic){
         this._setCurrentIndex(0)
-      } 
+      }
   }
 
   _onSlideChange(index, elem){
@@ -117,7 +117,7 @@ export default class Slideshow extends Component {
 
     console.log("--- render (slideshow) ---, mobile:")
     console.log(mobile)
-    
+
     let pageItems =  (mobile === false) ? dataWeb.map((value,index)=>{
         let activePageClass = (index===currentIndex) ? styles.activePage : "";
         return (
@@ -162,44 +162,27 @@ export default class Slideshow extends Component {
       </ReactSwipe>
     ) : slideImages;
 
+    let prev_next = require('./images/prev-next.svg');
     let preNextButton = (mobile === true) ? (
-        <div>
-            <div className={styles.prev}
-                 onClick={this._prev.bind(this)}>
-                 <i className="fa fa-chevron-left"></i> 
-            </div>
-            <div className={styles.next}
-                 onClick={this._next.bind(this)}>
-                 <i className="fa fa-chevron-right"></i> 
-            </div>  
-        </div>
+      <div className={styles.prevNextWrap}>
+        <div className={styles.prev}
+             onClick={this._prev.bind(this)}><img src={prev_next} className={styles.prev_next}/></div>
+        <div className={styles.next}
+             onClick={this._next.bind(this)}><img src={prev_next} className={styles.prev_next}/></div>
+      </div>
     ) : (
-        <div>
-            <div className={styles.prev}
-                 onClick={this._setCurrentIndex.bind(this, currentIndex-1)}>
-                 <i className="fa fa-chevron-left"></i> 
-            </div>
-            <div className={styles.next}
-                 onClick={this._setCurrentIndex.bind(this, currentIndex+1)}>
-                 <i className="fa fa-chevron-right"></i> 
-            </div>  
-        </div>
+      <div className={styles.prevNextWrap} styles="background: blue;">
+        <div className={styles.prev}
+             onClick={this._setCurrentIndex.bind(this, currentIndex-1)}><img src={prev_next} className={styles.prev_next}/></div>
+        <div className={styles.next}
+             onClick={this._setCurrentIndex.bind(this, currentIndex+1)}><img src={prev_next} className={styles.prev_next}/></div>
+      </div>
     );
-
-
 
     return (
       <div className={styles.wrap}>
-        
-          <div className={styles.slideBlock}>
-              {slides}
-              {preNextButton}
-          </div>
-
-          <div className={styles.pageWrap}>
-              {pageItems}
-          </div>
-          
+          <div className={styles.slideBlock}>{slides}{preNextButton}</div>
+          <div className={styles.pageWrap}>{pageItems}</div>
       </div>
     );
   }
@@ -207,13 +190,5 @@ export default class Slideshow extends Component {
   props = {
     className: 'Slideshow'
   }
-     
+
 }
-
-
-
-
-
-
-
-
