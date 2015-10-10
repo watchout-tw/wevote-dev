@@ -7,16 +7,19 @@ const views = [
     {
       'title' : '看政黨',
       'id' : 'VIEW_PARTY',
+      'icon': 'IssueController_party',
       'view' : 'parties'
     },
     {
       'title' : '看委員',
       'id' : 'VIEW_LEGISLATOR',
+      'icon': 'IssueController_person',
       'view' : 'legislators'
     },
     {
       'title' : '看表態',
       'id' : 'VIEW_POSITION',
+      'icon': 'IssueController_position',
       'view' : 'positions'
     }
 ];
@@ -25,7 +28,7 @@ const views = [
     dispatch => bindActionCreators({}, dispatch))
 
 export default class IssueController extends Component {
- 
+
   render() {
 
     const styles = require('./IssueController.scss');
@@ -59,9 +62,9 @@ class OptionItem extends Component {
     const styles = require('./IssueController.scss');
     const {data, currentIssue, currentView, setCurrentView} = this.props;
 
-    let imgURL = require(`./images/${data.id}.svg`);
+    let imgURL = require(`./images/${data.icon}.svg`);
     let active = false;
-    
+
     let link = "", issue = "";
     switch(currentIssue.title) {
       case "婚姻平權":
@@ -79,7 +82,7 @@ class OptionItem extends Component {
       default:
         issue = "marriage-equality";
     }
-    
+
     let itemActive = (data.view === currentView) ? styles.optionItemActive : styles.optionItemInactive;
     let imgActive  = (data.view === currentView) ? styles.optionImgActive : styles.optionImgInactive;
 
@@ -90,7 +93,7 @@ class OptionItem extends Component {
           {data.title}
           <Link className={styles.invisible}
                 to={`/issues/${issue}/${data.view}`}>link</Link>
-        </div>  
+        </div>
     )
   }
 

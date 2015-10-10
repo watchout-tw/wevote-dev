@@ -49,10 +49,11 @@ export default class StaticIssue extends Component {
           currentIssueName: nextProps.currentIssueName,
           currentView: nextProps.currentView
       })
+
   }
-  
+
   render(){
-    
+
       const styles = require('./StaticIssue.scss');
       const {issues, setCurrentView} = this.props;
       const {currentView, currentIssueName} = this.state;
@@ -64,7 +65,7 @@ export default class StaticIssue extends Component {
        // 協力 NGO
       const { collaborators } = currentIssue;
       let collaboratorItems = collaborators.map((ngo, index)=>{
-          return <a className={styles.link}
+          return <a className={`${styles.ia} ${styles.bright}`}
                     href={ngo.link}
                     target="_blank"
                     key={index}>{ngo.name}</a>
@@ -73,13 +74,13 @@ export default class StaticIssue extends Component {
       return (
         <div className={styles.wrap}>
             <div className={styles.innerWrap}>
-                <Slideshow currentIssue={currentIssue} 
+                <Slideshow currentIssue={currentIssue}
                            topic={currentIssue.title}/>
-                           
+
                 <IssueFigure currentView={currentView}
                              currentIssue={currentIssue}
                              currentIssueName={currentIssueName}
-                             setCurrentView={setCurrentView} /> 
+                             setCurrentView={setCurrentView} />
 
                 <IssueArticle issue={currentIssue.titleEng} />
                 <div className={styles.collaboratorInfo}>
@@ -91,4 +92,3 @@ export default class StaticIssue extends Component {
       )
   }
 }
-

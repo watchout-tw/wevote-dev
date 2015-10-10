@@ -1,3 +1,5 @@
+@import '../../common.scss';
+
 $main: #006060;
 $breakSmall: 440px;
 $breakLarge: 800px;
@@ -55,38 +57,52 @@ $breakLarge: 800px;
 }
 .settingPanel {
   width: 100%;
-  min-height: 5px;
-  position: absolute;
-  top: 0;
-  z-index: 2200;
+  //min-height: 5px;
+  //position: absolute;
 }
 .settingButtons {
-  position: absolute;
-  right: 4px;
-  top: 10px;
+  width: 100%;
+  padding: 4px 0;
+  text-align: center;
+  //right: 4px;
+  //top: 10px;
 }
 @media all and (min-width: 500px){
+  .settingPanel {
+    position: absolute;
+    top: 0;
+    z-index: 2200;
+  }
   .settingButtons {
-    right: 20px;
-    top: 14px;
+    position: absolute;
+    text-align: right;
+    //right: 20px;
+    //top: 14px;
+  }
+  .settingText {
+    opacity: 0;
+  }
+  .settingButton {
+    opacity: 0.15;
+  }
+  .settingButton:hover {
+    color: 1;
+  }
+  .settingButton:hover .settingText {
+    opacity: 1;
   }
 }
 .settingButton {
   display: inline-block;
+  margin: 0 4px;
   font-size: 28px;
   cursor: pointer;
-  color: #837878;
+  color: $black;
   text-align: center;
-}
-.settingButton:hover {
-  color: rgb(53,55,54);
 }
 .settingText {
   font-size: 14px;
-  color: transparent;
-}
-.settingButton:hover .settingText {
-  color: black;
+  color: $black;
 }
 .removeButton {
   position: absolute;

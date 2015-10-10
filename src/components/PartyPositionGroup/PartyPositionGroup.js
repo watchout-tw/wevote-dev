@@ -19,24 +19,24 @@ class Record extends Component {
       active: value
     })
   }
- 
+
   render() {
     const styles = require('./PartyPositionGroup.scss');
     const {data} = this.props;
     const {active} = this.state;
-  
+
     let date = moment.unix(data.date);
-  
+
     let cubeActiveStyle = (active) ? styles.positionCubeActive : "";
-    
+
     //是否為黨團
     let isCaucus = (data.legislator.indexOf("黨團")!== -1);
     let caucusStyle = isCaucus ? styles.caucus : "";
 
-    /* active record */    
+    /* active record */
     let detailText;
     if(active){
-          
+
           let preview = (data.content.length > 60) ? data.content.slice(0,60)+" ..." : data.content;
           detailText =  (
           <div className={styles.activeBlock}>
@@ -48,12 +48,12 @@ class Record extends Component {
               </Link>
           </div>);
     }
-       
- 
+
+
     return (
       <div className={styles.postionWrap}>
           {detailText}
-          
+
           <Link to={`/records/${data.id}`}
                 className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]} ${caucusStyle }`}
                 onMouseEnter={this._toggleActive.bind(this, true)}
@@ -102,9 +102,9 @@ export default class PartyPositionGroup extends Component {
     // record 數=> 開根號，round up 到整數
     // 盡量排成正方形
     let originalWidth = Math.ceil(Math.sqrt(recordCount))*cubeSize;
-    
+
     // boder 目前是 ad-hoc 的兩種寬度，需要再調整
-    let borderWidth = (originalWidth>140)? 6:4;
+    let borderWidth = Math.ceil(originalWidth/14 < 2 ? 2 : originalWidth/14);//(originalWidth>140)? 6:4;
     let outerCircleSize = originalWidth*2;
 
     let translateParams;
@@ -127,7 +127,7 @@ export default class PartyPositionGroup extends Component {
     // 需要變成長方形，需要重新計算 top
     if(viewWidth < originalWidth){
        finalWidth = viewWidth;
-       
+
        let rowCount = viewWidth / cubeSize;
        let height = ( recordCount / rowCount ) * cubeSize;
        top = outerCircleSize/2 - (height/2);
@@ -146,18 +146,18 @@ export default class PartyPositionGroup extends Component {
 
     return result;
   }
- 
+
   render() {
     const styles = require('./PartyPositionGroup.scss');
     const {data, issueId, issueStatement} = this.props;
     const layoutMath = this._calculateLayout();
-    
-  
+
+
 
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
     let records = data.records.map((item,index)=>{
-      return <Record data={item} 
+      return <Record data={item}
                      key={index} />
     });
 
@@ -170,7 +170,7 @@ export default class PartyPositionGroup extends Component {
       display: "inline-block",
       verticalAlign: "middle",
       position: "relative",
-      margin: "20px 0px",
+      margin: '' + (layoutMath.borderWidth) + 'px 0', //"20px 0px",
       transform: layoutMath.translateParams,
       "-ms-transform": layoutMath.translateParams,
       "-webkit-transform": layoutMath.translateParams
@@ -183,20 +183,20 @@ export default class PartyPositionGroup extends Component {
       top: layoutMath.top,
       left: layoutMath.left
     }
-    
-  
+
+
     return (
         <div div className={styles.wrap}>
             <div className={styles.header}>
                 <Link to={`/parties/${data.party}/${issueId}`}
-                      className={styles.partyTitle}>{partyTitle}</Link>
+                      className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}>{partyTitle}</Link>
                 <div>{`${data.dominantPercentage}% ${eng2cht(data.dominantPosition)}`}</div>
                 <div>{issueStatement}</div>
             </div>
             <div className={styles.margin}>
                 <div style={outerCircle}>
                     <div style={innerWrap}>{records}</div>
-                </div>      
+                </div>
             </div>
         </div>
     );
@@ -206,4 +206,3 @@ export default class PartyPositionGroup extends Component {
     className: ''
   }
 }
-

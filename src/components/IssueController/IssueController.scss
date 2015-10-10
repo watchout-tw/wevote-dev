@@ -1,9 +1,11 @@
+@import '../../common.scss';
+
 .wrap {
 	display: inline-block;
 }
 .optionImg {
 	width: 50px;
-    display: block;
+	display: block;
 }
 .optionItem:hover .optionImg, .optionImg:hover, .optionImgActive {
 	opacity: 1;
@@ -11,17 +13,15 @@
 .optionItem, .optionItem:visited {
 	display: inline-block;
 	cursor: pointer;
-	margin: 10px;
+	margin: 0 10px;
 	text-decoration: none;
+	color: $black;
 }
 .optionItemInactive, .optionItemInactive:visited {
-	color: #cccccc;
+	opacity: 0.25;
 }
 .optionItem:hover, .optionItemActive, .optionItemActive:visited, .optionItemInactive:hover {
-	color: rgb(53,55,54);
-}
-.optionImgInactive {
-	opacity: 0.3;
+	opacity: 1;
 }
 .invisible {
 	display: block;
