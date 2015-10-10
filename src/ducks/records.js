@@ -30948,7 +30948,7 @@ const positionRecords =
 
 const initialState = {
     "idFilter": "",
-    "data" : ""
+    "data" : positionRecords
 }
 
 const SET_ID_FILTER = 'SET_ID_FILTER';

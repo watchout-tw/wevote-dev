@@ -8,30 +8,43 @@ import PartyPositionGroup from '../../components/PartyPositionGroup/PartyPositio
 import PositionLegislatorGroup from '../../components/PositionLegislatorGroup/PositionLegislatorGroup.js';
 import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPartyGroup.js';
 
+import {getAllRecords} from '../../ducks/records';
+import parseToPartyView from '../../utils/parseToPartyView';
+import parseToLegislatorView from '../../utils/parseToLegislatorView';
+import parseToPositionView from '../../utils/parseToPositionView';
 
 @connect(
-    state => ({
-                partyView: state.partyView,
-                legislatorView: state.legislatorView,
-                positionView: state.positionView
+    state => ({ issues: state.issues,
+                records: state.records
               }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class IssueFigure extends Component {
     static propTypes = {
-      partyView: PropTypes.object.isRequired,
-      legislatorView: PropTypes.object.isRequired,
-      positionView: PropTypes.object.isRequired
+        records: PropTypes.object.isRequired
     }
+
+    constructor(props){ super(props)
+      
+        this.state = {
+           partyView: parseToPartyView(props.records, props.issues),
+           legislatorView: parseToLegislatorView(props.records, props.issues),
+           positionView: parseToPositionView(props.records, props.issues)
+        }
+    }
+
    
     render(){
       const styles = require('./IssueFigure.scss');  
-      const {currentView, currentIssue, currentIssueName, 
-             partyView, legislatorView, positionView,
-             setCurrentView} = this.props;
+      const {currentView, currentIssue, currentIssueName, setCurrentView} = this.props;
 
+      const {partyView, legislatorView, positionView} = this.state;
+
+
+      if(!partyView[currentIssue.titleEng]) return <div>partyView 還沒算好</div>
+      if(!legislatorView[currentIssue.titleEng]) return <div>legislatorView 還沒算好</div>
+      if(!positionView[currentIssue.titleEng]) return <div>positionView 還沒算好</div>
      
-
       // 結果圖表
 
       // 1. 看政黨

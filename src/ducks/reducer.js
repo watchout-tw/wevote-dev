@@ -8,10 +8,7 @@ import records from './records';
 import FAQ from './FAQ';
 
 
-/* For 每個議題表態的三個不同 view */
-import partyView from './partyView';
-import legislatorView from './legislatorView';
-import positionView from './positionView';
+
 
 /* 單一立委的各議題表態 */
 import legislatorPositions from './legislatorPositions';
@@ -24,10 +21,6 @@ export default combineReducers({
   issues,
   parties,
   records,
-
-  partyView,
-  legislatorView,
-  positionView,
 
   legislatorPositions,
   partyPositions,
