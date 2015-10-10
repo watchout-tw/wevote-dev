@@ -18,14 +18,14 @@ export default class Issue extends Component {
      issues: PropTypes.object.isRequired
   }
 
-  constructor(props) { super(props)   
+  constructor(props) { super(props)
       this.state = {
         currentView: props.params.viewName || 'parties',
         interactive: false,
         localInteractivePrefChecked: false,
 
-        chooseSkip: false, 
-        
+        chooseSkip: false,
+
         showNotification: true,
         showCompleteNotification: true,
         hasCheckNotificationPref: false,
@@ -56,11 +56,11 @@ export default class Issue extends Component {
           })
           const currentIssueName = this.props.params.issueName;
           let {completed, localChecked} = this.state;
-    
+
           if((stage === "intro")&&(completed[currentIssueName]===false)&&localChecked[currentIssueName]===false){
               // add 'checked' to avoid overly checked local storage
               console.log("<> check local complete info.")
-    
+
               if(window){
                   let current =  window.localStorage.getItem(currentIssueName);
                   if(current === "true"){
@@ -81,7 +81,7 @@ export default class Issue extends Component {
           currentView: value
       })
   }
-  
+
   _handleSetInteractive(value){
       console.log("設定互動模式："+value)
       if(value === true){
@@ -123,7 +123,7 @@ export default class Issue extends Component {
   _handleClearCompleted(){
       console.log("[handle clear completed]")
       const issueName = this.props.params.issueName;
-         
+
       let {completed, localChecked} = this.state;
       completed[issueName] = false;
       localChecked[issueName] = false;
@@ -161,20 +161,20 @@ export default class Issue extends Component {
   _checkLocalNotificationPref(){
       console.log("check local storage (issue - notification)")
       if(this.state.hasCheckNotificationPref===false){
-          
+
           const {showNotification, showCompleteNotification} = this.state;
           if(showNotification === true){
 
                 let shouldHide = window.localStorage.getItem("hideNotification");
                 console.log("shouldHideNitification")
                 console.log(shouldHide)
-                
-      
+
+
                 if(shouldHide){
                     this.setState({
                        showNotification: false
                     })
-                }  
+                }
 
           }
           if(showCompleteNotification===true){
@@ -185,33 +185,33 @@ export default class Issue extends Component {
                     this.setState({
                        showNotification: false
                     })
-                }  
+                }
           }
           this.setState({
               hasCheckNotificationPref: true
           })
-          
+
       }
-      
+
   }
 
   // 取得 localStorage
   _checkLocalInteractive(){
-      
+
       console.log("checkLocalInteractive");
-     
+
       const {interactive, localInteractivePrefChecked} = this.state;
-      
+
 
       if(localInteractivePrefChecked===false){
           let interactivePref = window.localStorage.getItem("interactivePref");
-          
+
           console.log(" ▨▨▨  更新 interactive pref ")
-          
+
           if(interactivePref==="false"){
-              
+
               console.log("▨ 瀏覽器存的設定："+interactivePref)
-              
+
               this.setState({
                   localInteractivePrefChecked: true,
                   interactive: false
@@ -222,7 +222,7 @@ export default class Issue extends Component {
                   localInteractivePrefChecked: true,
                   interactive: true
               });
-          }   
+          }
       }
   }
   componentDidMount(){//Only runs in client side
@@ -234,19 +234,19 @@ export default class Issue extends Component {
       })
   }
 
-  
+
   render(){
       const styles = require('./Issue.scss');
       const {issues} = this.props;
       const currentIssueName = this.props.params.issueName;
-      const {currentView, interactive, chooseSkip, 
+      const {currentView, interactive, chooseSkip,
              showNotification, showCompleteNotification,
              localInteractivePrefChecked,
-             completed} = this.state; 
+             completed} = this.state;
       const currentIssue = issues[currentIssueName];
 
       let isInteractiveMode = (interactive === true && completed[currentIssueName]===false)? true : false;
-      
+
       console.log("<><> isInteractiveMode:"+isInteractiveMode)
 
 
@@ -274,8 +274,8 @@ export default class Issue extends Component {
           </div>
         )
       }
-          
-    
+
+
       // 選擇跳過的提示
       let skipNotification =  (
          <div className={styles.headerNotification}>
@@ -303,7 +303,7 @@ export default class Issue extends Component {
       if(chooseSkip===true && showNotification && interactive===false && !completed[currentIssueName]){
           headerNotification = skipNotification;
           notificationShowed = true;
-      } 
+      }
       if(completed[currentIssueName]===true && showCompleteNotification){
           headerNotification = completedNotification;
           notificationShowed = true;
@@ -343,7 +343,7 @@ export default class Issue extends Component {
                 'og:type' : 'website'
               }
           }
-     
+
       };
 
 
@@ -357,6 +357,3 @@ export default class Issue extends Component {
       )
   }
 }
-
-
-
