@@ -66,15 +66,18 @@ export default class PartyIssue extends Component {
         
     })) : "";
     
-    let issueTitle = eng2cht(issueURL)
+    let issueTitle = eng2cht(issueURL);
+
+    const title = `${currentPartyPositions.name}對於${issueTitle}的表態-2016立委出任務`;
+    const description = `想知道${currentPartyPositions.name}對於${issueTitle}使用什麽攻城策略嗎？趕快來看看${currentPartyPositions.name}委員在立法院針對${issueTitle}說了些什麽！`
     const metaData = {
-      title: `${currentPartyPositions.name}對於${issueTitle}的表態-2016立委出任務`,
-      description: `想知道${currentPartyPositions.name}對於${issueTitle}的表態嗎？趕快來看看${currentPartyPositions.name}委員在立法院針對${issueTitle}有哪些發言！`,
+      title: title ,
+      description: description,
       meta: {
           charSet: 'utf-8',
           property: {
-            'og:title': `${currentPartyPositions.name}對於${issueTitle}的表態-2016立委出任務`,
-            'og:description': `想知道${currentPartyPositions.name}對於${issueTitle}的表態嗎？趕快來看看${currentPartyPositions.name}委員在立法院針對${issueTitle}有哪些發言！`
+            'og:title': title,
+            'og:description': description
           }
       }
      

@@ -11,8 +11,8 @@ import Appbar from '../components/Appbar/Appbar.js';
 import Footer from '../components/Footer/Footer.js';
 import Social from '../components/Social/Social.js';
 
-const title = '立委出任務';
-const description = '「2016立委出任務」是一個提供選民了解立委候選人議題表態的網站。我們整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委出任務」希望能夠做到更多的資訊揭露，改變台灣民主政治。'
+const title = "立委出任務-2016立委投票資訊站";
+const description = "2016立委選舉票該投給誰？「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委與下任候選人立場，並分析政黨針對議題的整體立場。想透過議題更了解你的選區立委嗎？請上「立委出任務」！";
 const image = './images/logo.png';
 
 const meta = {

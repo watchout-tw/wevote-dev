@@ -35,15 +35,17 @@ export default class People extends Component {
     const name = this.props.legislators[id].name;
     const {legislatorPositions} = this.state;
     const currentLegislatorPosition = legislatorPositions[name];
-  
+    
+    const title = `${name}攻城策略分析-2016立委出任務`;
+    const description = `${name}對於各項重大議題之城的攻城策略大解析！趕快來看看${name}在立法院針對下列重大議題說了些什麽！`;
     const metaData = {
-      title: `${name}議題表態分析-立委出任務`,
-      description: `${name}對於各項重大議題的表態大解析！趕快來看看${name}在立法院針對下列重大議題有哪些發言！`,
+      title: title,
+      description: description,
       meta: {
           charSet: 'utf-8',
           property: {
-            'og:title': `${name}議題表態分析-立委出任務`,
-            'og:description': `${name}對於各項重大議題的表態大解析！趕快來看看${name}在立法院針對下列重大議題有哪些發言！`,
+            'og:title': title,
+            'og:description': description,
             'og:type' : 'website'
           }
       }
