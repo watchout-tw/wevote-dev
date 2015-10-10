@@ -62,7 +62,6 @@ export default class PositionSquare extends Component {
     const styles = require('./PositionSquare.scss');
     const {data, issueName} = this.props;
     
-    //console.log(data);
     
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
