@@ -56,16 +56,13 @@ $breakLarge: 800px;
   color: white;
 }
 .settingPanel {
-  width: 100%;
-  //min-height: 5px;
-  //position: absolute;
+  width: 100px;
+  right: 0;
 }
 .settingButtons {
   width: 100%;
   padding: 4px 0;
   text-align: center;
-  //right: 4px;
-  //top: 10px;
 }
 @media all and (min-width: 500px){
   .settingPanel {
@@ -76,8 +73,6 @@ $breakLarge: 800px;
   .settingButtons {
     position: absolute;
     text-align: right;
-    //right: 20px;
-    //top: 14px;
   }
   .settingText {
     opacity: 0;
