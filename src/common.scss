@@ -1,18 +1,4 @@
-// $themeColor: #006060;
-// $secondaryColor: #97B5B5; /* 用在 Footer，搭配作為較不強調色 */
-
-// $themeColor: #444444;
-// $secondaryColor: #E4E4E4;
-
-/* http://colorhunt.co/#e8e3c7d4ceb0b85b3fa65238 */
-// $themeColor: #A65238;
-// $secondaryColor: #E8E3C7;
-// $textColor: white;
-
-$themeColor: rgb(250,250,250);
-$secondaryColor: black;
-$textColor: rgb(53,55,54);
-
+// colors
 $trueWhite: #fff;
 $trueBlack: #000;
 $white: #f5f5f5;
@@ -21,11 +7,20 @@ $lightGrey: #ddd;
 $black: #0f0f0f;
 $awesomeColor: #005060;
 $defaultBackgroundColor: #eee;
+$textColor: $black; // deprecating textColor
+$glow: aqua;
 
+// typography
+$defaultFontSize: 16px;
+$smallerFontSize: 14px;
+
+$defaultLineHeight: 1.25;
+
+$symbolSize: 32px;
 .symbol {
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: $symbolSize;
+  height: $symbolSize;
   margin: 0;
   padding: 0;
 }
@@ -37,7 +32,7 @@ $defaultBackgroundColor: #eee;
   }
 }
 a.ia {
-  line-height: 1.2;
+  line-height: $defaultLineHeight;
   text-decoration: none;
   border-bottom: 1px solid transparent;
 
@@ -49,6 +44,7 @@ a.ia {
   }
 }
 
+// css common mixins
 @mixin inline-middle {
   display: inline-block;
   vertical-align: middle;
@@ -59,3 +55,13 @@ a.ia {
 	-ms-#{$key}: $val;
 	#{$key}: $val;
 }
+
+// dimensions
+$contentMaxWidth: 1200px;
+
+$appBarBreakLarge: 720px;
+$appBarHeight: 54px;
+$appBarHeightExtended: 82px;
+
+// z-index
+$zAppBar: 99999;
