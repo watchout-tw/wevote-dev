@@ -190,7 +190,7 @@ export default class PartyPositionGroup extends Component {
             <div className={styles.header}>
                 <Link to={`/parties/${data.party}/${issueId}`}
                       className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}>{partyTitle}</Link>
-                <div>{`${data.dominantPercentage}% ${eng2cht(data.dominantPosition)}`}</div>
+                <div>{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
                 <div>{issueStatement}</div>
             </div>
             <div className={styles.margin}>
