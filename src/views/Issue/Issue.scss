@@ -2,7 +2,7 @@
 
 $breakSmall: 400px;
 $breakMedium: 600px;
-$breakLarge: 800px;
+$breakLarge: 900px;
 .wrap {
   position: relative;
   min-height: 500px;
@@ -31,11 +31,6 @@ $breakLarge: 800px;
   padding: 1em;
   line-height: 1.5;
   will-change: max-height;
-}
-@media all and (min-width: $breakLarge){
-  .headerNotification {
-    //padding: 10px;
-  }
 }
 .headerNotificationText {
   width: 100%;
@@ -68,7 +63,7 @@ $breakLarge: 800px;
     width: auto;
   }
 }
-@media all and (min-width: $breakMedium) {
+@media all and (min-width: $breakLarge) {
   .headerNotificationText {
     display: inline-block;
     width: auto;
