@@ -19,8 +19,12 @@ export default class Issue extends Component {
   }
 
   constructor(props) { super(props)
+      let value = props.params.viewName || 'parties';
+      if(["parties","legislators","positions"].indexOf(value)===-1){
+           value = "parties";
+      }
       this.state = {
-        currentView: props.params.viewName || 'parties',
+        currentView: value,
         interactive: false,
         localInteractivePrefChecked: false,
 
@@ -229,6 +233,7 @@ export default class Issue extends Component {
       console.log("[Issue Mount]")
       this._checkLocalInteractive();
       this._checkLocalNotificationPref();
+      
       this.setState({
         isClientSide: true
       })
