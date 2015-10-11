@@ -289,7 +289,10 @@ export default class InteractiveIssue extends Component {
               :(<div className={styles.backStage}></div>);
 
       //nextButton, only used in mobile & pad
-      let nextButton = (showNext && notFirstPage) ? (<div className={styles.actionButton} onClick={this._handleNext.bind(this)}>繼續</div>) : "";
+      let nextButton = (showNext && notFirstPage) ? (
+        <div className={styles.mobilePadOnly}>
+          <div className={styles.actionButton} onClick={this._handleNext.bind(this)}>繼續</div>
+        </div>) : "";
 
 
 
