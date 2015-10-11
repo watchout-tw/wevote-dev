@@ -39,7 +39,7 @@ const meta = {
     dispatch => bindActionCreators({}, dispatch))
 export default class App extends Component {
   static propTypes = {
-    children: PropTypes.object.isRequired 
+    children: PropTypes.object.isRequired
   }
   static contextTypes = {
     router: PropTypes.object.isRequired,
@@ -61,12 +61,12 @@ export default class App extends Component {
     const {router} = this.context;
     router.removeTransitionHook(this.transitionHook);
   }
- 
+
   render() {
     const {issues, params} = this.props;
     const {location} = this.state;
     const styles = require('./App.scss');
-  
+
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
@@ -74,22 +74,21 @@ export default class App extends Component {
             <Link to={`/404`}>404</Link>
             <Link to={`/8th-legislators`}>8th-legislators</Link>
         </div>
-        <Appbar currentIssueName={params.issueName}
-                issues={issues}
-                firstPathName={location}
-                params={params}/>
+        <div className={styles.spaceBar}></div>
         <div className={styles.appContent}>
           {this.props.children}
         </div>
         <Footer/>
         <Social />
-        
+        <Appbar currentIssueName={params.issueName}
+                issues={issues}
+                firstPathName={location}
+                params={params}/>
       </div>
     );
   }
 
 
 
- 
-}
 
+}

@@ -5,10 +5,10 @@ const chapterOrder = ['一','二','三','四'];
 
 
 export default class AnimatedScript extends Component {
- 
-  constructor(props) { super(props)   
+
+  constructor(props) { super(props)
     const {issue} = this.props;
-    
+
     this.state = {
         preservedLines : [],
         currentLineIndex: 0,
@@ -21,8 +21,8 @@ export default class AnimatedScript extends Component {
         scriptRolled: false,
         resultLinePlayed: false
     }
-     
-  
+
+
   }
   _clearTimeoutScript(){
     //console.log("CLEAR TIMEOUT SCRIPT")
@@ -34,9 +34,9 @@ export default class AnimatedScript extends Component {
     }
   }
   _runScript(data){
-    
+
     //console.log("RUN SCRIPT-")
-    
+
     //clear timeout script and previous lines
     this._clearTimeoutScript();
     this.setState({
@@ -59,10 +59,10 @@ export default class AnimatedScript extends Component {
     }
 
     data.preservedLines.map((value,index)=>{
-        
+
         let script = setTimeout(()=>{
-          
-            //console.log(">"+value) 
+
+            //console.log(">"+value)
 
             lines.push(value);
             this.setState({
@@ -71,7 +71,7 @@ export default class AnimatedScript extends Component {
             });
 
             callback();
-  
+
         }, 500*index);
 
         newScript.push(script);
@@ -85,12 +85,12 @@ export default class AnimatedScript extends Component {
     });
 
   }
-  
+
   _setStage(props){
     const {stage, shouldAnimated, issue, handleNext, userPosition} = props;
     const {currentScript} = this.state;
     console.log("[AnimatedScript - set stage]");
-    
+
     let data;
     switch(stage){
        case 'intro':
@@ -118,10 +118,10 @@ export default class AnimatedScript extends Component {
                 let allTimedOut = true;
                 //console.log("timeout script length:"+currentScript.scripts.length);
                 //console.log("timeout count:"+currentScript.timedOutCount);
-    
+
                 if(currentScript.scripts.length > currentScript.timedOutCount)
                    allTimedOut = false;
-                 
+
                 if(allTimedOut === false){
                   //讓腳本停止
                   //console.log("!stop - [stop current script]")
@@ -130,7 +130,7 @@ export default class AnimatedScript extends Component {
                     lines: data.preservedLines,
                     currentLineIndex: data.preservedLines.length-1
                   })
-    
+
                 }else{
                   //到下一個頁面
                   handleNext();
@@ -175,12 +175,12 @@ export default class AnimatedScript extends Component {
             data = this._generateResultsLines(userPosition, issue);
             this._runScript(data);
             this.setState({
-              firstLine: "", 
+              firstLine: "",
               resultLinePlayed: true
             })
 
           }
-          
+
           break;
 
       case 'others':
@@ -201,29 +201,29 @@ export default class AnimatedScript extends Component {
     }
   }
   componentWillMount(){
-     this._setStage(this.props); 
+     this._setStage(this.props);
   }
   componentWillReceiveProps(nextProps){
       console.log("componentWillReceiveProps");
       if(this.props.issue !== nextProps.issue){
          this._clearTimeoutScript();
       }
-      this._setStage(nextProps);  
-     
-     
+      this._setStage(nextProps);
+
+
   }
   render(){
-    const styles = require('./AnimatedScript.scss');     
+    const styles = require('./AnimatedScript.scss');
     const { lines, currentLineIndex, firstLine, breakLines }  = this.state;
     const { shouldAnimated, showNext, stage, handleNext } = this.props;
-    
+
     console.log("=== render ====")
     console.log("firstLine > "+firstLine)
     console.log("stage > "+stage)
-    
+
     let firstLineItem;
     if(firstLine){
-        
+
         let blink = (lines.length===0)? <span className={styles.blinkingCursor}></span> : "";
 
         firstLineItem = (
@@ -233,28 +233,28 @@ export default class AnimatedScript extends Component {
             </div>
         );
 
-        
+
     }
     let lineItems = lines.map((value, index)=>{
-        
+
         let blink;
         if(shouldAnimated){
           blink = (index+1 === currentLineIndex) ? <span className={styles.blinkingCursor}></span> : "";
-        }else{
+        } else {
           blink = (index+1 === lines.length) ? <span className={styles.blinkingCursor}></span> : "";
         }
 
         let data = lines[index];
         let animationClass = styles[`animation${data.length}`] ? styles[`animation${data.length}`] : styles[`animation12`];
-        
+
         let paragraphBreaks;
         if(breakLines)
           paragraphBreaks = (breakLines.indexOf(index)!==-1)? <div><br/></div> : "";
-        
+
         return(
           <div>
             {paragraphBreaks}
-            <div className={` ${styles.cssTyping} ${animationClass} `} 
+            <div className={` ${styles.cssTyping} ${animationClass} `}
                  key={index}>
                  <div className={`${styles.cssText} `}>
                    {data}
@@ -277,16 +277,16 @@ export default class AnimatedScript extends Component {
     // const chapter = chapterOrder[index];
     // let firstLine = `任務${chapter}：${currentIssue.title}城堡`;
 
-    return( 
+    return(
         <div className={styles.storyBlock}>
             {firstLineItem}
             {lineItems}
             {optionButton}
         </div>
-       
-        
+
+
     )
-      
+
   }
   _generateIntroLines(issue){
     //first line
@@ -296,20 +296,21 @@ export default class AnimatedScript extends Component {
     return {
         firstLine: `任務${chapter}：${issue.title}之城`,
         preservedLines: [
-        
+
           `${issue.title}之城周遭荒煙蔓草，迷霧籠罩。`,
           `島上的人們鮮少踏足此地，`,
           `也不清楚城堡裡面的樣子。`,
-          
+
           `因此，城堡被未知的怪獸佔據，`,
           `威脅著人們的幸福。`,
 
           `現在有一群勇者要前往驅逐怪獸，`,
           `完成島上人們交付的任務。`,
 
-          `有一群勇者提出的戰鬥策略是：${issue.statement}，`,
+          `有一群勇者提出的戰鬥策略是`,
+          `「${issue.statement}」`,
           `但也有勇者不贊同，`,
-          `還有一些勇者拿不定主意⋯⋯`
+          `還有一些勇者拿不定主意⋯`
       ],
       breakLines: [0, 3, 5, 7]
     };
@@ -319,8 +320,10 @@ export default class AnimatedScript extends Component {
       return {
         firstLine:"",
         preservedLines: [
-        `身為島嶼主人的你，在決定作戰策略前，`,
-        `要先看看戰役簡介嗎？（Y/n）`
+          `身為島嶼主人的你，`,
+          `在決定戰鬥策略前`,
+          `要先看看戰役簡介嗎？`,
+          `(Y/n)`
         ],
         breakLines:[]
       };
@@ -329,7 +332,7 @@ export default class AnimatedScript extends Component {
       return {
         firstLine:"",
         preservedLines: [
-        `以下是${issue.title}之城的戰役介紹：`
+          `以下是${issue.title}之城的戰役介紹⋯`
         ],
         breakLines:[]
       };
@@ -338,35 +341,40 @@ export default class AnimatedScript extends Component {
        return {
         firstLine:"",
         preservedLines: [
-          `你贊成「${issue.statement}」這個戰鬥策略嗎？`,
-          `（Y/n/s）`
+          `你贊成`,
+          `「${issue.statement}」`,
+          `這個戰鬥策略嗎？`,
+          `(Y/n/s)`
         ],
         breakLines:[]
       };
   }
   _generateResultsLines(userPosition, issue){
       let lines = [];
-      let breakLines = [2];
+      let breakLines = [3];
       if(userPosition === "贊成"){
-        lines.push(`你決定贊成使用「${issue.statement}」的戰鬥策略。`);
-        lines.push(`Fighto!!!`);
-        lines.push(`這是雙方過去的交戰紀錄：`);
+        lines.push(`你決定贊成使用`);
+        lines.push(`「${issue.statement}」`);
+        lines.push(`這個戰鬥策略。`);
+        lines.push(`ファイト！`);
+        lines.push(`這是過去的戰役紀錄⋯`);
       }
       if(userPosition === "反對"){
-        lines.push(`你決定反對使用「${issue.statement}」的戰鬥策略。`);
-        lines.push(`Fighto!!!`);
-        lines.push(`這是雙方過去的交戰紀錄：`);
+        lines.push(`你決定反對使用`);
+        lines.push(`「${issue.statement}」`);
+        lines.push(`這個戰鬥策略。`);
+        lines.push(`ファイト！`);
+        lines.push(`這是過去的戰役紀錄⋯`);
       }
       if(userPosition === "不確定"){
         lines.push(`你決定再想想⋯`);
-        lines.push(`這是雙方過去的交戰紀錄：`);
-        breakLines = [1];
+        lines.push(`這是過去的戰役紀錄⋯`);
+        breakLines = [];
       }
       // console.log("*****")
       // console.log(lines)
-    
-      return { 
 
+      return {
           firstLine:"",
           preservedLines: lines,
           breakLines: breakLines
@@ -374,18 +382,14 @@ export default class AnimatedScript extends Component {
 
   }
   _generateSeeOtherLines(issue){
-      return { 
+      return {
 
           firstLine:"",
           preservedLines: [
-            `【${issue.title}】之城任務完成了！`,
-            `選擇其他任務：`
+            `${issue.title}之城任務完成了！`,
+            `選擇其他任務吧！`
           ],
-          breakLines:[1] 
       }
 
   }
 }
-
-
-

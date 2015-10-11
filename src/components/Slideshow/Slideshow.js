@@ -14,6 +14,7 @@ export default class Slideshow extends Component {
         currentIndex: 0,
         mobile: true //default
     }
+    this.mobileDesktopBreak = 600;
   }
 
   _handleKeyDown(e){
@@ -37,7 +38,7 @@ export default class Slideshow extends Component {
     window.addEventListener('keydown', this._handleKeyDown.bind(this));
     window.addEventListener('resize', this._handleResize.bind(this));
 
-    if(window.innerWidth >= 500){
+    if(window.innerWidth >= this.mobileDesktopBreak){
        console.log("[mount] -> change to web version. current width:")
        console.log(window.innerWidth);
 
@@ -50,7 +51,7 @@ export default class Slideshow extends Component {
   _handleResize(e){
     console.log("resize event.");
     const {mobile} = this.state;
-    if(window.innerWidth >= 500){
+    if(window.innerWidth >= this.mobileDesktopBreak){
         if(mobile === true){
            this.setState({
               mobile: false,
@@ -171,7 +172,7 @@ export default class Slideshow extends Component {
              onClick={this._next.bind(this)}><img src={prev_next} className={styles.prev_next}/></div>
       </div>
     ) : (
-      <div className={styles.prevNextWrap} styles="background: blue;">
+      <div className={styles.prevNextWrap}>
         <div className={styles.prev}
              onClick={this._setCurrentIndex.bind(this, currentIndex-1)}><img src={prev_next} className={styles.prev_next}/></div>
         <div className={styles.next}
@@ -190,5 +191,4 @@ export default class Slideshow extends Component {
   props = {
     className: 'Slideshow'
   }
-
 }

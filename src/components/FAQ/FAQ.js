@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 class Item extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired
-    
+
   }
   constructor(props){ super(props)
     this.state = {
@@ -14,24 +14,24 @@ class Item extends Component {
     }
   }
   _toggleShow(){
-    
+
     this.setState({
         showAnswer: !this.state.showAnswer
     })
   }
   render() {
-    
+
     const styles = require('./FAQ.scss');
     const {data, index} = this.props;
     const {showAnswer} = this.state;
-    
+
     let answerParagraphs = data.answer.map((p, i)=>{
         return (
             <p key={i}>{p}</p>
         )
     })
     let answerShowHideStyle = (showAnswer) ? styles.show : styles.hide;
-  
+
     return (
         <div className={styles.qaBox}>
              <div className={styles.qaQuestion}
@@ -42,7 +42,7 @@ class Item extends Component {
              <div className={` ${styles.qaAnswer} ${answerShowHideStyle}`}>
                   {answerParagraphs}
              </div>
-        </div> 
+        </div>
     );
   }
 
@@ -58,10 +58,10 @@ class Item extends Component {
 export default class FAQ extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired
-    
+
   }
   render() {
-    
+
     const styles = require('./FAQ.scss');
     const {data} = this.props.FAQ;
 
@@ -73,7 +73,7 @@ export default class FAQ extends Component {
       <div>
            {QItems}
       </div>
-      
+
     )
   }
 
@@ -81,4 +81,3 @@ export default class FAQ extends Component {
     className: 'FAQ'
   }
 }
-

@@ -1,9 +1,9 @@
 @import '../../common.scss';
 
-$main: #006060;
-$breakSmall: 440px;
+$breakSmall: 400px;
+$breakMedium: 600px;
 $breakLarge: 800px;
-.wrap{
+.wrap {
   position: relative;
   min-height: 500px;
 }
@@ -23,92 +23,86 @@ $breakLarge: 800px;
     border: 1px solid;
 }
 .headerNotification {
-  background: #523F3F;
-  color: white;
+  background: $awesomeColor;
+  font-size: 14px;
+  color: $white;
   text-align: center;
-  padding: 10px 40px 10px 10px;
-  line-height: 1.6;
+  margin: 0;
+  padding: 1em;
+  line-height: 1.5;
   will-change: max-height;
 }
 @media all and (min-width: $breakLarge){
   .headerNotification {
-    padding: 10px;
+    //padding: 10px;
   }
 }
 .headerNotificationText {
-  text-align: left;
-  display: inline-block;
+  width: 100%;
+  margin-bottom: 1em;
+  text-align: center;
 }
 .headerNotification.isHide {
   max-height: 0;
   overflow: hidden;
   transition: all 800ms;
   padding: 0;
-
+}
+.undo, .removeButton {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25em 0.5em;
+  width: calc(50% - 2px);
+  background: rgba($trueWhite, 0.5);
+  color: $black;
+  cursor: pointer;
+}
+.undo:hover, .removeButton:hover {
+  background: $trueWhite;
 }
 .undo {
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: underline;
-  color: rgb(230,230,230);
+  margin-right: 4px;
 }
-.undo:hover {
-  color: white;
+@media all and (min-width: $breakSmall) {
+  .undo, .removeButton {
+    width: auto;
+  }
+}
+@media all and (min-width: $breakMedium) {
+  .headerNotificationText {
+    display: inline-block;
+    width: auto;
+    margin: 0 1em 0 0;
+  }
 }
 .settingPanel {
-  width: 100px;
-  right: 0;
+
+  width: 100%;
+  padding-top: 8px;
+  background: none;
+  font-size: $smallerFontSize;
+
+  &.withBackground {
+    background: $trueWhite;
+  }
 }
 .settingButtons {
   width: 100%;
-  padding: 4px 0;
-  text-align: center;
-}
-@media all and (min-width: 500px){
-  .settingPanel {
-    position: absolute;
-    top: 0;
-    z-index: 2200;
-  }
-  .settingButtons {
-    position: absolute;
-    text-align: right;
-  }
-  .settingText {
-    opacity: 0;
-  }
-  .settingButton {
-    opacity: 0.15;
-  }
-  .settingButton:hover {
-    color: 1;
-  }
-  .settingButton:hover .settingText {
-    opacity: 1;
-  }
+  text-align: right;
+
 }
 .settingButton {
   display: inline-block;
   margin: 0 4px;
-  font-size: 28px;
   cursor: pointer;
-  color: $black;
   text-align: center;
 }
-.settingText {
-  font-size: 14px;
-  color: $black;
-}
-.removeButton {
-  position: absolute;
-  right: 18px;
-  top: 2px;
-  cursor: pointer;
-  font-size: 24px;
-  color: rgb(240,240,240);
-}
-.removeButton:hover {
-  color: white;
-  font-size:26px;
-  top: 1px;
+
+@media all and (min-width: $breakMedium){
+  .settingButton {
+    opacity: 0.5;
+  }
+  .settingButton:hover {
+    opacity: 1;
+  }
 }

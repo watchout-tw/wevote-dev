@@ -40,18 +40,18 @@ export default class InteractiveIssue extends Component {
         userPosition: "", //贊成, 反對, 不確定
         currentIssueName: props.currentIssueName, //URL
         currentView: props.currentView
-        
+
 
     }
     this.props.handleUpdateStage("intro");
 
   }
-  
-  componentDidMount(){ 
+
+  componentDidMount(){
       console.log("mount - InteractiveIssue")
       if(window){
         let pathname = window.location.pathname;
-        console.log(pathname) 
+        console.log(pathname)
         if(pathname.indexOf(".html")!==-1){
            pathname = pathname.split(".html")[0]
         }
@@ -236,7 +236,7 @@ export default class InteractiveIssue extends Component {
     })
     this.props.handleUpdateStage(value);
   }
- 
+
   componentWillReceiveProps(nextProps){
     //取消這個的話，結束一個任務，再選擇時，不會重load。
     const {issues} = this.props;
@@ -272,7 +272,7 @@ export default class InteractiveIssue extends Component {
       const {issues, skipInteractive, setCurrentView} = this.props;
       const {stage, shouldAnimated, showNext, showSlides, userPosition,
              currentIssueName, currentView } = this.state;
-  
+
 
       // 拿該議題的資料
       const currentIssue = issues[currentIssueName];
@@ -301,14 +301,13 @@ export default class InteractiveIssue extends Component {
       let introItemMobile = (
           <div className={styles.mobileHint}>
                <div className={styles.actionButton} onClick={this._handleNext.bind(this)}>繼續</div>
-               <div className={styles.skipInteractive} onClick={skipInteractive.bind(null)}>直接看結果</div>
+               <div className={styles.skipInteractive}><Link className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</Link></div>
           </div>
       );
       // Only used in web (>800px)
       let introItemWeb = (
-          <div className={styles.keyboardHint}>
-                （按空白鍵繼續）或是 <div className={styles.skipInteractive}
-                                        onClick={skipInteractive.bind(null)}>直接看結果</div>
+          <div className={styles.keyboardHint}>按空白鍵繼續──或──
+            <div className={styles.skipInteractive}><Link className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</Link></div>
           </div>
       )
 

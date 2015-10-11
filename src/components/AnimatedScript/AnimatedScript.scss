@@ -1,22 +1,22 @@
+@import '../../common.scss';
 /* ------------------------------------------------ */
 /* Typing Animaiton */
 /* ------------------------------------------------ */
+$break: 600px;
 
 .storyBlock {
     text-align: left;
-    max-width: 480px;
+    max-width: $break;
+    margin: 0 auto 20px;
     padding: 30px;
-    background: white;
+    background: $trueWhite;
     box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.05);
     position: relative;
-
-    margin: 0 8px 30px 8px;
     font-size: 16px;
-
 }
-@media all and (min-width: 500px){
+@media all and (min-width: $break){
     .storyBlock {
-        margin: 0 auto 30px auto;
+        margin: 20px auto 20px auto;
         font-size: 20px;
     }
 }
@@ -43,30 +43,30 @@
     from, to { border-color: transparent }
     50% { border-color: black }
 }
-.cssTyping { 
+.cssTyping {
     font-family: Consolas, monospace;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
 }
-.animation12 { 
+.animation12 {
     -webkit-animation: typing 400ms steps(12, end);
     -moz-animation: typing 400ms steps(12, end);
 }
-.animation14 { 
+.animation14 {
     -webkit-animation: typing 500ms steps(14, end);
     -moz-animation: typing 500ms steps(14, end);
 }
-.animation21 { 
+.animation21 {
     -webkit-animation: typing 1200ms steps(21, end);
     -moz-animation: typing 1200ms steps(21, end);
 }
-.animation24 { 
+.animation24 {
     -webkit-animation: typing 1450ms steps(24, end);
     -moz-animation: typing 1450ms steps(24, end);
 }
-.animation26 { 
+.animation26 {
     -webkit-animation: typing 1600ms steps(26, end);
     -moz-animation: typing 1600ms steps(26, end);
 }
@@ -96,13 +96,17 @@
 
 
 .arrowRight {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   position: absolute;
   right: 10px;
+  bottom: 10px;
   display: inline-block;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 20px solid #CC2C2C;
+  border-top: 16px solid $awesomeColor;
   cursor: pointer;
+}
+.battleStrategy {
+  color: $awesomeColor;
 }

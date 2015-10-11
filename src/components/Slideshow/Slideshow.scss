@@ -1,6 +1,6 @@
 @import '../../common.scss';
 
-$break-large: 500px;
+$break: 600px;
 
 .wrap {
 	position: relative;
@@ -11,11 +11,11 @@ $break-large: 500px;
 .prevNextWrap {
 	width: 100%;
 	background: $lightGrey;
+	font-size: 0; //避免額外的空間
 }
 .prev, .next {
   display: inline-block;
   width: 50%;
-	opacity: 0.5;
 	cursor: pointer;
 }
 .prev_next {
@@ -26,7 +26,7 @@ $break-large: 500px;
 .next {
 	transform: rotate(180deg);
 }
-@media all and (min-width: $break-large){
+@media all and (min-width: $break){
 	.prevNextWrap {
 		position: absolute;
 		top: 0;
@@ -37,7 +37,7 @@ $break-large: 500px;
 		height: 0;
 		padding-bottom: 42.5%;
 		opacity: 0.15;
-		z-index: 222;
+		//z-index: 222;
   }
   .prev:hover, .next:hover {
   	opacity: 1.0;
@@ -47,6 +47,7 @@ $break-large: 500px;
 		top: 50%;
 		transform: translateY(-50%);
 		height: 43px;
+		margin: 0;
 	}
 }
 
@@ -93,7 +94,7 @@ $break-large: 500px;
 	display: inline-block;
   cursor: pointer;
   display: inline-block;
-  margin: 4px;
+  margin: 8px 4px;
 	padding: 0;
   width: 16px;
   height: 16px;

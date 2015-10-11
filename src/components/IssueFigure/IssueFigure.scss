@@ -1,6 +1,5 @@
 @import '../../common.scss';
 
-$main: #006060;
 $breakSmall: 440px;
 $breakLarge: 800px;
 .wrap{
@@ -25,10 +24,10 @@ $breakLarge: 800px;
   display: inline-block;
   background: $black;
   color: $white;
-  padding: 10px;
+  padding: 10px 20px;
 }
 .issueStatement {
-  padding: 10px;
+  padding: 10px 20px;
 }
 .issueController {
   margin: 10px 0;

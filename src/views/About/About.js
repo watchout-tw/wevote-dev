@@ -10,7 +10,6 @@ export default class About extends Component {
 
     let mainContent;
 
-
     let aboutBlock = (
       <div className={styles.content}>
           <h2>2016，有感投票<br/>為你關心的議題投下一票</h2>
@@ -54,7 +53,7 @@ export default class About extends Component {
             <a href="http://wytype.com/typeface/earlier/"
               target="_blank"
               className={`${styles.ia} ${styles.bright}`}>Typeland《隸辨隸書體》</a>
-              作者厉向晨讓我們自由使用《隸辨隸書體》。</p>
+              作者厉向晨讓我們在這個網站的圖像創作中自由使用《隸辨隸書體》。</p>
           </div>
       </div>
     );
@@ -110,17 +109,20 @@ export default class About extends Component {
 
     }
 
-
+    let about_title_1 = require('./images/AboutTitle-01.svg');
+    let about_title_2 = require('./images/AboutTitle-02.svg');
 
     return (
       <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
           <div className={styles.about}>
-              <ul className={styles.innerTag}>
-                  <li><Link to={`/about`} className = { tabName==="about" ? styles.active : ""}>關於立委出任務</Link></li>
-                  <li><Link to={`/about/FAQ`} className = { tabName==="FAQ" ? styles.active : ""}>資料來源說明</Link></li>
-                  <li><Link to={`/about/statement`} className = { tabName==="statement" ? styles.active : ""}>著作權聲明</Link></li>
-              </ul>
+            <div className={styles.aboutImage}></div>
+            <div className={styles.aboutTitle}><img src={about_title_1}/><img src={about_title_2}/></div>
+            <ul className={styles.innerTag}>
+                <li><Link to={`/about`} className = { tabName==="about" ? styles.active : ""}>關於</Link></li>
+                <li><Link to={`/about/FAQ`} className = { tabName==="FAQ" ? styles.active : ""}>問答</Link></li>
+                <li><Link to={`/about/statement`} className = { tabName==="statement" ? styles.active : ""}>聲明</Link></li>
+            </ul>
           </div>
           {mainContent}
       </div>

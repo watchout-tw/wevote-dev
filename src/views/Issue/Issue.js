@@ -233,7 +233,7 @@ export default class Issue extends Component {
       console.log("[Issue Mount]")
       this._checkLocalInteractive();
       this._checkLocalNotificationPref();
-      
+
       this.setState({
         isClientSide: true
       })
@@ -284,21 +284,17 @@ export default class Issue extends Component {
       // 選擇跳過的提示
       let skipNotification =  (
          <div className={styles.headerNotification}>
-              <div className={styles.headerNotificationText}>你選擇跳過互動腳本，將直接顯示對戰紀錄。</div>
-              <div className={styles.undo}
-                   onClick={this._undoSkip.bind(this)}>Undo</div>
-              <div className={styles.removeButton}
-                   onClick={this._hideNotification.bind(this)}><i className="fa fa-times"></i></div>
+              <div className={styles.headerNotificationText}>你選擇跳過戰鬥，直接顯示對戰紀錄。</div>
+                <div className={styles.undo} onClick={this._undoSkip.bind(this)}>回到戰鬥</div>
+                <div className={styles.removeButton} onClick={this._hideNotification.bind(this)}>我知道了</div>
          </div>
       );
       // completed notification
       let completedNotification =  (
          <div className={styles.headerNotification}>
-              <div className={styles.headerNotificationText}>你已完成此任務，將直接顯示對戰紀錄。</div>
-              <div className={styles.undo}
-                   onClick={this._handleClearCompleted.bind(this)}>Reply</div>
-              <div className={styles.removeButton}
-                   onClick={this._hideCompleteNotification.bind(this)}><i className="fa fa-times"></i></div>
+              <div className={styles.headerNotificationText}>你已完成此任務，直接顯示對戰紀錄。</div>
+                <div className={styles.undo} onClick={this._handleClearCompleted.bind(this)}>再出一次任務</div>
+                <div className={styles.removeButton} onClick={this._hideCompleteNotification.bind(this)}>我知道了</div>
          </div>
       );``
 
@@ -317,25 +313,24 @@ export default class Issue extends Component {
 
       // 畫面右上方的控制鍵
       let alternative = (isInteractiveMode === true) ? (
-              <div className={styles.settingButton}
-                   onClick={this._skipInteractive.bind(this,false)}>
-                   <i className="fa fa-rocket"></i>
-                   <div className={styles.settingText}>跳過互動</div>
-              </div>) : (
-              <div className={styles.settingButton}
-                   onClick={this._handleSetInteractive.bind(this,true)}>
-                   <i className="fa fa-reply"></i>
-                   <div className={styles.settingText}>互動版本</div>
-              </div>
-              );
-
-      let interactionControlPanel = (notificationShowed === false) ? (
         <div className={styles.settingPanel}>
           <div className={styles.settingButtons}>
-              {alternative}
+              <div className={styles.settingButton}
+                onClick={this._skipInteractive.bind(this,false)}>
+                跳過任務
+              </div>
           </div>
-        </div>
-      ):"";
+        </div>) : (
+          <div className={`${styles.settingPanel} ${styles.withBackground}`}>
+            <div className={styles.settingButtons}>
+              <div className={styles.settingButton} onClick={this._handleSetInteractive.bind(this,true)}>
+                回到任務
+              </div>
+            </div>
+          </div>
+              );
+
+      let interactionControlPanel = (notificationShowed === false) ? ({alternative}) : '';
 
       const metaData = {
           title: `議題表態分析-2016立委出任務`,
