@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
+import Video from '../../components/Video/Video.js';
 import Missions from '../../components/Missions/Missions.js';
 @connect(
     state => ({
@@ -32,12 +33,14 @@ export default class Home extends Component {
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
-
-          <div className={styles.innerWrap}>
-              <div className={styles.pageTitle}>立即選擇任務</div>
-              <Missions issues={issues}
-                        showComingMission={true}/>
-
+          <Video />
+          <div className={styles.contentWrap}>
+              <div className={styles.innerWrap}>
+                  <div className={styles.pageTitle}>立即選擇任務</div>
+                  <Missions issues={issues}
+                            showComingMission={true}/>
+    
+              </div>
           </div>
       </div>
     );
