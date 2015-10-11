@@ -2,7 +2,7 @@
 
 .videoWrap {
 	width: 100%;
-	height: calc(50vw - 40px);
+	height: 54vw;
 	overflow: hidden;
 }
 .videobcg {
@@ -13,27 +13,32 @@
    overflow: hidden;
    background-size: cover;
    position: fixed;
-   top: -40px;
-   
+   top: 80px; 
 }
 .videoFilter {
-	width: 100%;
-	position: fixed;
-	top: 0;
-	z-index: -900;
-	height: 57vw;
-	background: rgba(23, 21, 21, 0.4);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -900;
+  height: 100%;
+  background: rgba(23, 21, 21, 0.4);
 }
+@media screen and (min-width: $appBarBreakLarge) {
+  .videobcg {
+    top: 40px;
+  }
+}
+
 .videoText {
 	width: 100%;
 	top: 0;
 	height: 57vw;
 	color: white;
-	padding-top: 150px;
+	padding-top: 30px;
 }
 .videoTitle {
-	text-align: center;
-    font-size: 46px;
+	  text-align: center;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.6;
     text-shadow: 1px 1px 10px #29ABE2;
@@ -42,11 +47,22 @@
     cursor: pointer;
     display: inline-block;
     margin: 0 auto;
-    font-size: 24px;
+    font-size: 16px;
     text-shadow: none;
-    padding: 4px 40px;
+    padding: 4px 20px;
     background: #29ABE2;
     border-bottom: 4px solid #E9E9EE;
+}
+@media all and (min-width: $appBarBreakLarge) {
+    .videoText {
+      padding-top: 150px;
+    }
+    .videoTitle {
+      font-size: 46px;
+    }
+    .playButton {
+      font-size: 24px;
+    }
 }
 .playButton:hover {
 	background: #FF0055;

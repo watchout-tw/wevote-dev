@@ -13,7 +13,7 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	padding: 0px;
 	height: $appBarHeightExtended;
 	width: 100%;
-	box-shadow: 0 4px 4px 0px rgba($trueBlack, 0.25);
+  	box-shadow: 0 4px 4px 0px rgba($trueBlack, 0.25);
 	z-index: $zAppBar;
 }
 .appbar.showMenu {
@@ -54,7 +54,7 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	width: 100%;
 	max-height: 1000px;
 	padding-top: $logoHeight + $logoMarginTop;
- 
+  //transition: max-height .5s ease-in-out;
 }
 .lists li {
 	display: inline-block;
@@ -71,7 +71,7 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 }
 .navItem:hover, .navItem.active {
 	background: rgba($glow, 0.25);
-	
+	//border-bottom: 4px solid aqua;
 }
 .navItem > * {
 	display: inline-block;
@@ -112,35 +112,32 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 }
 @media screen and (min-width: $appBarBreakLarge) {
 	.appbar, .appbar.showMenu {
-		height: $appBarHeight;
+    height: $appBarHeight;
 	}
 	.siteName {
 
 	}
-	.lists {
-		max-height: 1000px;
-		display: block;
-		list-style-type: none;
-		margin: 0 auto;
+  .lists {
+  	max-height: 1000px;
+ 		display: block;
+ 		list-style-type: none;
+ 		margin: 0 auto;
 		text-align: right;
-	}
-	.lists.showMenu {
-		padding-top: 0;
-	}
-	.lists li {
-		margin: 0;
+  }
+  .lists li {
+ 		margin: 0;
 		width: auto;
-			display: inline-block;
-	}
-	.navItem {
-		display: inline-block;
+ 		display: inline-block;
+  }
+  .navItem {
+  	display: inline-block;
 		padding: 11px;
-	}
+  }
 	.navItem > * {
 		display: inline-block;
 		margin: 0;
 	}
-	.rightToggle {
-		display: none;
-	}
+  .rightToggle {
+  	display: none;
+  }
 }

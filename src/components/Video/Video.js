@@ -18,8 +18,7 @@ export default class Video extends Component {
   	const styles = require('./Video.scss');
     
     // Background Video
-    //"http://soidid.github.io/video-test/index.mp4";
-    const bgVideoUrl = "https://fbcdn-video-l-a.akamaihd.net/hvideo-ak-xtp1/v/t43.1792-2/11832368_493615154130036_2137710266_n.mp4?efg=eyJybHIiOjE1MDAsInJsYSI6MjE1NywidmVuY29kZV90YWciOiJoZCJ9&rl=1500&vabr=561&oh=0fabba535fc8af06998453784e9425f0&oe=561A6F52&__gda__=1444573921_f1b857f0e6ba26a546df0f021e81ea18";
+    const bgVideoUrl = "http://soidid.github.io/video-test/index.mp4";
     const finalVote = moment([2016, 0, 16]);
     const now = moment();
     const diff = finalVote.diff(now, 'days');
@@ -27,7 +26,7 @@ export default class Video extends Component {
 
     // Playing Video
     const {playVideo} = this.state;
-    const youtubeId = "J8RpjWzCMmY";
+    const youtubeId = "qLUq4uPqFog";
     const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&controls=0&showinfo=0&autohide=1&rel=0`;
     
     let playingFullScreen = (playVideo === true) ? (
