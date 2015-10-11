@@ -78,8 +78,12 @@ $breakLarge: 800px;
 .settingPanel {
   width: 100%;
   padding-top: 8px;
-  background: $trueWhite;
+  background: none;
   font-size: $smallerFontSize;
+
+  &.withBackground {
+    background: $trueWhite;
+  }
 }
 .settingButtons {
   width: 100%;
