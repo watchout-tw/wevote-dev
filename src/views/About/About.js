@@ -54,7 +54,7 @@ export default class About extends Component {
             <a href="http://wytype.com/typeface/earlier/"
               target="_blank"
               className={`${styles.ia} ${styles.bright}`}>Typeland《隸辨隸書體》</a>
-              作者厉向晨讓我們自由使用《隸辨隸書體》。</p>
+              作者厉向晨讓我們在這個網站的圖像創作中自由使用《隸辨隸書體》。</p>
           </div>
       </div>
     );
