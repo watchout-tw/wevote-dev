@@ -39,7 +39,7 @@ export default class Appbar extends Component {
   render() {
 
     const styles = require('./Appbar.scss');
-    const siteLogo = require('./images/logo-1.svg');
+    const siteLogo = require('./images/logo-big-1.svg');
     const {showMenu, location, issueName} = this.state;
     const {currentIssueName, issues} = this.props;
 
@@ -68,6 +68,7 @@ export default class Appbar extends Component {
     let aboutActive = (location === "about") ? styles.active : "";
     let symbol_parties = require('./images/symbols_parties.svg');
     let symbol_about = require('./images/symbols_about.svg');
+    let menu = require('./images/menu.svg');
 
     return (
       <nav className={`${styles.appbar} ${showStyle}`}>
@@ -90,9 +91,9 @@ export default class Appbar extends Component {
                 </li>
               </ul>
 
-              <div className={styles.rightToggle}
-                   onClick={this._toggleShowMenu.bind(this)}><i className="fa fa-bars"></i>
-          </div>
+              <div className={styles.rightToggle} onClick={this._toggleShowMenu.bind(this)}>
+                <img src={menu}/>
+              </div>
           </div>
       </nav>
     );

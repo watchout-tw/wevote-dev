@@ -1,64 +1,77 @@
 @import '../../common.scss';
-$navHeight: 54px;
-$paddingHeight: 11px; // (54 - 32 (symbol高))/2
-$breakLarge: 800px;
+
+$logoHeight: 96px;
+$logoMarginTop: 8px;
+$logoMarginLeft: 10px;
+$paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高))/2
 
 .appbar {
-	background: $themeColor;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: $white;
 	padding: 0px;
-	height: $navHeight;
-  //box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+	height: $appBarHeightExtended;
+	width: 100%;
+  box-shadow: 0 4px 4px 0px rgba($trueBlack, 0.25);
+	z-index: $zAppBar;
 }
 .appbar.showMenu {
 	height: auto;
 }
 .inner {
-	max-width: 1200px;
+	max-width: $contentMaxWidth;
 	position: relative;
 	margin: 0 auto;
 }
 .siteName, .siteName:visited {
-	left: 0px;
-	text-decoration: none;
-}
-
-.siteLogo {
-	float: left;
-	height: $navHeight;
+	position: absolute;
+	display: inline-block;
 	margin: 0;
-	margin-left: 10px;
+	margin-top: $logoMarginTop;
+	margin-left: $logoMarginLeft;
+	text-decoration: none;
+	img {
+		@include prefix(filter, drop-shadow(0 0 20px rgba($trueWhite, 0.5)));
+	}
+}
+.siteLogo {
+	display: block;
+	height: $logoHeight;
 	padding: 0;
 }
 .lists {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 	max-height: 0px;
 	overflow: hidden;
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	float: left;
-	display: block;
+	text-align: left;
 }
 .lists.showMenu {
-	float: none;
 	width: 100%;
 	max-height: 1000px;
-	-webkit-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
+	padding-top: $logoHeight + $logoMarginTop;
+  //transition: max-height .5s ease-in-out;
 }
 .lists li {
+	display: inline-block;
 	margin: 0;
+	width: 50%;
+	text-align: center;
 }
 .navItem, .navItem:visited {
 	display: block;
-	color: $textColor;
+	color: $black;
 	text-decoration: none;
 	padding: $paddingHeight;
-	height: $navHeight;
+	height: $appBarHeight;
 }
 .navItem:hover, .navItem.active {
-	background: rgba(0, 255, 255, 0.15); //darken($themeColor, 5%);
-	border-bottom: 4px solid aqua;
+	background: rgba($glow, 0.25);
+	//border-bottom: 4px solid aqua;
 }
 .navItem > * {
 	display: inline-block;
@@ -66,40 +79,65 @@ $breakLarge: 800px;
 }
 .rightToggle {
 	position: absolute;
-	top: 15px;
-	right: 20px;
-	font-size: 20px;
+	top: 0;
+	right: 0;
+	width: 54px;
+	height: 54px;
 	cursor: pointer;
-	color: $textColor;
 }
 .icon {
 	display: inline-block;
 	margin-right: 3px;
 }
-@media screen and (min-width: $breakLarge){
+@media all and (min-width: 400px) {
+	.lists li {
+		width: 20%;
+	}
+	.navItem {
+		height: auto;
+		padding: 11px 5px;
+	}
+	.navItem > * {
+		display: block;
+		margin: 0 auto;
+	}
+	.navItem > span {
+		margin-top: 2px;
+	}
+}
+@media screen and (min-width: 540px) {
+	.navItem > * {
+		display: inline-block;
+	}
+}
+@media screen and (min-width: $appBarBreakLarge) {
 	.appbar, .appbar.showMenu {
-		text-align: right;
-    height: $navHeight;
+    height: $appBarHeight;
 	}
-	.siteName, .siteName:visited {
-		position: absolute;
-	}
-    .lists {
-    	max-height: 1000px;
-   		display: inline-block;
-   		list-style-type: none;
-   		margin-top: 0;
-   		float: none;
+	.siteName {
 
-    }
-    .lists li {
-   		margin: 0;
-   		display: inline-block;
-    }
-    .navItem {
-    	display: inline-block;;
-    }
-    .rightToggle {
-    	display: none;
-    }
+	}
+  .lists {
+  	max-height: 1000px;
+ 		display: block;
+ 		list-style-type: none;
+ 		margin: 0 auto;
+		text-align: right;
+  }
+  .lists li {
+ 		margin: 0;
+		width: auto;
+ 		display: inline-block;
+  }
+  .navItem {
+  	display: inline-block;
+		padding: 11px;
+  }
+	.navItem > * {
+		display: inline-block;
+		margin: 0;
+	}
+  .rightToggle {
+  	display: none;
+  }
 }
