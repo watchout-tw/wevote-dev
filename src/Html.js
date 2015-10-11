@@ -24,12 +24,13 @@ export default class Html extends Component {
 
   render() {
     const {assets, component, store} = this.props;
+    const content = React.renderToString(component);
     return (
       <html lang="en-us">
         <head>
           <meta charSet="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
-          {DocumentMeta.rewind({asReact: true})}
+          {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />
           <link href={cdn + 'font-awesome/4.4.0/css/font-awesome.min.css'}
@@ -46,7 +47,7 @@ export default class Html extends Component {
           <style>{cheatCSS}</style>
         </head>
         <body>
-          <div id="content" dangerouslySetInnerHTML={{__html: React.renderToString(component)}}/>
+          <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
         </body>
