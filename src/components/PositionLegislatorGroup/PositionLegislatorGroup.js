@@ -69,7 +69,7 @@ class LegislatorAvatar extends Component {
     }
 
     return (
-        <Link to={`/people/${people_name2id(name)}/${currentIssueName}`}
+        <Link to={`/people/${people_name2id(name)}/records/${currentIssueName}`}
               className={styles.avatarItem}
               onMouseEnter={this._toggleActive.bind(this, true)}
               onMouseLeave={this._toggleActive.bind(this, false)}>

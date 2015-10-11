@@ -55,7 +55,7 @@ export default class Appbar extends Component {
         <li key={index}
             onClick={this._updateLocation.bind(this,issueId)}>
             <Link className={`${styles.navItem} ${activeStyle}`}
-                  to={`/issues/${issueId}`}
+                  to={`/issues/${issueId}/`}
                   onClick={this._hideMenu.bind(this)}>
                     <img src={symbol} className={styles.symbol}/>
                     <span>{issues[issueId].title}</span>
@@ -83,7 +83,7 @@ export default class Appbar extends Component {
 
                 <li onClick={this._updateLocation.bind(this,'about')}>
                     <Link className={`${styles.navItem} ${aboutActive}`}
-                          to={`/about`}
+                          to={`/about/`}
                           onClick={this._hideMenu.bind(this)}>
                             <img src={symbol_about} className={styles.symbol}/>
                             <span>關於我們</span>

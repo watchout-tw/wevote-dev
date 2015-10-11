@@ -30,7 +30,7 @@ export default class Profile extends Component {
           <header>
         
             <h1>{name}</h1>
-            <Link to={`/parties/${id}`}>
+            <Link to={`/parties/${id}/records/`}>
                 <div className={` ${styles["party-flag"]} ${styles[id]} `}></div>
             </Link>
             <p>第八屆中華民國立法委員席次</p>

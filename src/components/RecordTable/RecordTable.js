@@ -29,7 +29,7 @@ class Record extends Component {
                className={styles.date}>{date.format('YYYY-MM-DD')}</Link>
          <div className={styles.category}>{data.category}</div>
 
-         <Link to={`/people/${people_name2id(data.legislator)}`} className={styles.avatar}>
+         <Link to={`/people/${people_name2id(data.legislator)}/records/`} className={styles.avatar}>
               <div className={styles.avatarImg}>
                   <PeopleAvatar id={people_name2id(data.legislator)}/>
               </div>

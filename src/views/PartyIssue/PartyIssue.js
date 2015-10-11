@@ -56,10 +56,11 @@ export default class PartyIssue extends Component {
         
         /// Refine 拿數字的方法
         let dataName = issues[currentIssueName].titleEng;
-        let recordsCount = partyPositions.positions[dataName].totalCounts;
+
+        let recordsCount = currentPartyPositions.positions[dataName].totalCounts;
 
         return  <Link className={` ${styles.menu} ${active}`}
-                      to={`/parties/${id}/${currentIssueName}`} 
+                      to={`/parties/${id}/records/${currentIssueName}`} 
                       key={i}>
                      {` ${issues[currentIssueName].title}(${recordsCount}) `}
                 </Link>;
