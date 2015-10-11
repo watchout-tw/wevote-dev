@@ -401,7 +401,7 @@ const initialState = {
         "isCurrent": true,
         "constituency1": "台中市",
         "constituency2": "6",
-        "isCandidate": true,
+        "isCandidate": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "6"
     },
@@ -674,8 +674,8 @@ const initialState = {
     "49": {
         "id": 49,
         "name": "徐欣瑩",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "party": "MKT",
+        "partyCht": "民國黨",
         "gender": "女",
         "age": "43",
         "isCurrent": true,

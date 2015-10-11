@@ -33,7 +33,7 @@ export default class PeoplePhoto extends Component {
     }
    
     return (
-        <Link to={`/people/${id}`} className={styles["people-pic"]}>
+        <Link to={`/people/${id}/records/`} className={styles["people-pic"]}>
             <img className={`${styles.avatar}  is-${party}`}
                  src={imgURL}
                  alt={`${name}-${eng2party_short(party)}立委${name}`} />

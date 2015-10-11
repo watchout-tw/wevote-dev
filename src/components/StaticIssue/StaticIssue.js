@@ -26,22 +26,25 @@ export default class StaticIssue extends Component {
      }
   }
   componentDidMount(){
-      console.log("mount - static issue")
+      console.log("mount - static issue : update pathname form url")
       if(window){
         let pathname = window.location.pathname;
-        console.log(pathname) 
+        
         if(pathname.indexOf(".html")!==-1){
            pathname = pathname.split(".html")[0]
         }
         pathname = pathname.split("/");
-        console.log(pathname)
+        
+        let value = pathname[3] || "parties";
+        if(["parties","legislators","positions"].indexOf(value)===-1){
+           value = "parties";
+        }
         this.setState({
           currentIssueName: pathname[2],
-          currentView: pathname[3] || "parties"
+          currentView: value
 
         })
-        console.log("*")
-        console.log(this.state)
+        
       }
   }
   componentWillReceiveProps(nextProps){

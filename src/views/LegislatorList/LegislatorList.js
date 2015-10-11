@@ -213,7 +213,7 @@ class Record extends Component {
         let currentData = data.positions[currentIssue.id];
         //if(!currentData) return "";
         return (
-          <Link to={`/people/${id}/${currentIssue.url}`}
+          <Link to={`/people/${id}/records/${currentIssue.url}`}
                 className={`${styles.issueCube} ${styles[currentData.dominantPosition]}`}>{currentIssue.cht}</Link>
         )
     });
@@ -222,7 +222,7 @@ class Record extends Component {
       <div className={styles.item}>
       
           <div className={styles.avatar}><PeopleAvatar id={id}/></div>
-          <Link to={`/people/${id}`} div className={styles.name}>
+          <Link to={`/people/${id}/records/`} div className={styles.name}>
               {data.name}
           </Link>
           <div className={styles.issueCubes}>

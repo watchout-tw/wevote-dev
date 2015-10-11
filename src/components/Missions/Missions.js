@@ -82,7 +82,7 @@ export default class Missions extends Component {
 
         if(skipIssue !== currentIssue){
             return (
-              <Link to={`/issues/${currentIssue}`} key={index} className={styles.coverItem}>
+              <Link to={`/issues/${currentIssue}/`} key={index} className={styles.coverItem}>
                   <img src={imgURL} className={styles.coverImg}/>
                   <div className={styles.coverTitleBlock}>
                       <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>

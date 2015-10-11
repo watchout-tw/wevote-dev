@@ -22,7 +22,7 @@ export default class Profile extends Component {
     const {parties, id} = this.props;
     const party = parties[id];
    
-    let {name} = party;
+    let {name, seats} = party;
    
   
     return (
@@ -30,11 +30,11 @@ export default class Profile extends Component {
           <header>
         
             <h1>{name}</h1>
-            <Link to={`/parties/${id}`}>
+            <Link to={`/parties/${id}/records/`}>
                 <div className={` ${styles["party-flag"]} ${styles[id]} `}></div>
             </Link>
             <p>第八屆中華民國立法委員席次</p>
-            <p>3/114</p>
+            <p>{seats}/112</p>
 
           </header>
             

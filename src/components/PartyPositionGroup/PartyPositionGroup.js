@@ -120,7 +120,7 @@ export default class PartyPositionGroup extends Component {
 
     // 超過畫面大小，最外圈要 translate
     if(outerCircleSize > viewWidth){
-        let translateValue = outerCircleSize/2 - viewWidth/2 + (20);//因為最外面的 wrap 有 20 的 margin;
+        let translateValue = outerCircleSize/2 - viewWidth/2 + (16);//因為最外面的 wrap 有 20 的 margin;
         translateParams = `translate3d(-${translateValue}px,0,0)`;
     }
 
@@ -188,7 +188,7 @@ export default class PartyPositionGroup extends Component {
     return (
         <div div className={styles.wrap}>
             <div className={styles.header}>
-                <Link to={`/parties/${data.party}/${issueId}`}
+                <Link to={`/parties/${data.party}/records/${issueId}`}
                       className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}>{partyTitle}</Link>
                 <div>{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
                 <div>{issueStatement}</div>

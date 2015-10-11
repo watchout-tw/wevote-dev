@@ -24,17 +24,21 @@ export default function(store) {
   return (
     <Route component={App}>
       <Route path="/" component={Home}/>
+      
       <Route path="/issues/:issueName" component={Issue}/>
       <Route path="/issues/:issueName/:viewName" component={Issue}/>
       
       <Route path="/8th-legislators" component={LegislatorList}/>
       
-      <Route path="/people/:peopleId" component={People}/>
-      <Route path="/people/:peopleId/:issueName" component={PeopleIssue}/>
-      <Route path="/parties" component={PartyList}/>
-      <Route path="/parties/:partyId" component={Party}/>
-      <Route path="/parties/:partyId/:issueName" component={PartyIssue}/>
+      <Route path="/people/:peopleId/records/" component={People}/>
+      <Route path="/people/:peopleId/records/:issueName" component={PeopleIssue}/>
+      
+      
+      <Route path="/parties/:partyId/records/" component={Party}/>
+      <Route path="/parties/:partyId/records/:issueName" component={PartyIssue}/>
+      
       <Route path="/records/:recordId" component={Record}/>
+      
       <Route path="/about" component={About}/>
       <Route path="/about/:tabName" component={About}/>
       <Route path="/about/:tabName/:focus" component={About}/>

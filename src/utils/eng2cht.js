@@ -18,6 +18,8 @@ export default function eng2cht(input){
 
       case 'NSU':
         return '無黨團結聯盟';
+      case 'MKT':
+        return '民國黨';
       case 'NONE':
         return '無黨籍';
 

@@ -34,7 +34,7 @@ export default class IssueGroup extends Component {
 
         let issueUrl = eng2url(currentIssue);
         return (
-                <Link to={`/people/${id}/${issueUrl }`}
+                <Link to={`/people/${id}/records/${issueUrl}`}
                       className={styles.issueBlock} 
                       key={index} >
                     <PositionSquare issueName={currentIssue}

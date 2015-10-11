@@ -69,7 +69,7 @@ export default class PeopleProfile extends Component {
             </div>
             
             <div className={styles.nameAndParty}>
-                <Link to={`/people/${id}`}
+                <Link to={`/people/${id}/records/`}
                       className={styles.name}>{name}</Link>
                 <div className={styles.party}>
                   <div className={`${styles["party-flag-s"]} ${styles[party]} ${styles["party-flag"]}`}></div>

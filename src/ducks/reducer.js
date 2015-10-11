@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import counter from './counter';//// will be removed later
 
 import legislators from './legislators';
 import issues from './issues';
@@ -9,7 +8,6 @@ import FAQ from './FAQ';
 
 export default combineReducers({
   legislators,
-  counter,
   issues,
   parties,
   records,

@@ -111,7 +111,7 @@ export default class Record extends Component {
                 {candidateInfo}
                 <div className={styles.avatarName}>
                       <div className={` ${styles["party-flag"]} ${styles[data.party]} `}></div>
-                      <Link to={`/people/${legislatorId}`}
+                      <Link to={`/people/${legislatorId}/records/`}
                             className={styles.name}>{data.legislator}</Link>
                 </div>
             </div>

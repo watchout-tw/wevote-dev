@@ -29,7 +29,7 @@ class Record extends Component {
                className={styles.date}>{date.format('YYYY-MM-DD')}</Link>
          <div className={styles.category}>{data.category}</div>
 
-         <Link to={`/people/${people_name2id(data.legislator)}`} className={styles.avatar}>
+         <Link to={`/people/${people_name2id(data.legislator)}/records/`} className={styles.avatar}>
               <div className={styles.avatarImg}>
                   <PeopleAvatar id={people_name2id(data.legislator)}/>
               </div>
@@ -134,18 +134,18 @@ export default class RecordTable extends Component {
     })
     ///
 
-    let controPanelItem = (records.length > 0) ? (
+    let controPanelItem = (
         <div className={styles.controls}>
               {options}
               <div className={styles.sortingButtons}>{sortings}</div>
         </div>
-    ):"";
+    );
 
     let evadingItem;
     if(data.dominantPosition === "evading" && records.length === 0){
        evadingItem = (
           <div className={styles.evadingItem}>
-               <div>我應該有立場，可是我沒有立場。</div>
+               <div>我應該表態，卻沒有表態。</div>
                <Link className={styles.evadingFAQ}
                      to={`/about/FAQ`}>我們如何統計的？</Link>
 
