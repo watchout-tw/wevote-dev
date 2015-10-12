@@ -58,7 +58,7 @@ export default class Issue extends Component {
       }
   }
   _handleUpdateStage(stage){
-      console.log("[ handleUpdateStage ]"+stage)
+      //console.log("[ handleUpdateStage ]"+stage)
       const {isClientSide} = this.state;
       if(isClientSide === true){
           this.setState({
@@ -92,7 +92,7 @@ export default class Issue extends Component {
   }
 
   _handleSetInteractive(value){
-      console.log("設定互動模式："+value)
+      //console.log("設定互動模式："+value)
       if(value === true){
          this._handleClearCompleted();
       }
@@ -281,7 +281,7 @@ export default class Issue extends Component {
 
       let isInteractiveMode = (interactive === true && completed[currentIssueName]===false)? true : false;
 
-      console.log("<><> isInteractiveMode:"+isInteractiveMode)
+      //console.log("<><> isInteractiveMode:"+isInteractiveMode)
 
 
       // 主畫面

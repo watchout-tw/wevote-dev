@@ -39,8 +39,7 @@ export default class Slideshow extends Component {
     window.addEventListener('resize', this._handleResize.bind(this));
 
     if(window.innerWidth >= this.mobileDesktopBreak){
-       console.log("[mount] -> change to web version. current width:")
-       console.log(window.innerWidth);
+       
 
        this.setState({
          data: this.props.currentIssue.slideshows,
@@ -49,7 +48,7 @@ export default class Slideshow extends Component {
     }
   }
   _handleResize(e){
-    console.log("resize event.");
+    //console.log("resize event.");
     const {mobile} = this.state;
     if(window.innerWidth >= this.mobileDesktopBreak){
         if(mobile === true){
@@ -116,9 +115,6 @@ export default class Slideshow extends Component {
 
     let {currentIndex, mobile} = this.state;
 
-    console.log("--- render (slideshow) ---, mobile:")
-    console.log(mobile)
-
     let pageItems =  (mobile === false) ? dataWeb.map((value,index)=>{
         let activePageClass = (index===currentIndex) ? styles.activePage : "";
         return (
@@ -149,10 +145,9 @@ export default class Slideshow extends Component {
     let slideImagesMobile = dataMobile.map((value,index)=>{
         let url = require(`./images/${value.filename}`)
         return (
-          <div><img alt={value.alt}
+          <div key={index}><img alt={value.alt}
                src={url}
-               className={styles.activeSlideImg}
-               key={index}/></div>
+               className={styles.activeSlideImg}/></div>
         )
     });
 

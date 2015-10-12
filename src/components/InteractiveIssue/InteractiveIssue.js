@@ -48,22 +48,21 @@ export default class InteractiveIssue extends Component {
   }
 
   componentDidMount(){
-      console.log("mount - InteractiveIssue")
+      //console.log("mount - InteractiveIssue")
       if(window){
         let pathname = window.location.pathname;
-        console.log(pathname)
+        
         if(pathname.indexOf(".html")!==-1){
            pathname = pathname.split(".html")[0]
         }
         pathname = pathname.split("/");
-        console.log(pathname)
+        
         this.setState({
           currentIssueName: pathname[2],
           currentView: pathname[3] || "parties"
 
         })
-        console.log("*")
-        console.log(this.state)
+        
       }
 
       window.addEventListener('keydown', this._handleKeyDown.bind(this));
@@ -151,7 +150,7 @@ export default class InteractiveIssue extends Component {
   }
   _handleChoice(choice){
     const {stage} = this.state;
-    console.log("[ handle choice ]")
+    //console.log("[ handle choice ]")
 
     switch(stage){
         case 'chooseSlides':
@@ -244,13 +243,11 @@ export default class InteractiveIssue extends Component {
     const {issues} = this.props;
     const currentIssueName = this.props.currentIssueName;
     const nextIssueName = nextProps.currentIssueName
-    console.log("currentIssueName:"+currentIssueName)
-    console.log("nextIssueName:"+nextIssueName)
-
+    
     if(currentIssueName !== nextIssueName){
 
         const nextIssue = issues[nextIssueName];
-        console.log("RESET STAGE PARAMETERS")
+        //console.log("RESET STAGE PARAMETERS")
 
         this.props.handleUpdateStage("intro");
 
@@ -280,7 +277,7 @@ export default class InteractiveIssue extends Component {
       const currentIssue = issues[currentIssueName];
 
 
-      console.log("==== RENDER:"+stage+"=====");
+      //console.log("==== RENDER:"+stage+"=====");
 
       let notFirstPage = ((stage !== "intro") && (stage !=="introStory"));
       //back
@@ -303,13 +300,13 @@ export default class InteractiveIssue extends Component {
       let introItemMobile = (
           <div className={styles.mobileHint}>
                <div className={styles.actionButton} onClick={this._handleNext.bind(this)}>繼續</div>
-               <div className={styles.skipInteractive}><Link className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</Link></div>
+               <div className={styles.skipInteractive}><a className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</a></div>
           </div>
       );
       // Only used in web (>800px)
       let introItemWeb = (
           <div className={styles.keyboardHint}>按空白鍵繼續──或──
-            <div className={styles.skipInteractive}><Link className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</Link></div>
+            <div className={styles.skipInteractive}><a className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</a></div>
           </div>
       )
 
