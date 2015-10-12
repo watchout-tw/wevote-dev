@@ -5,15 +5,14 @@
 	height: 54vw;
 	overflow: hidden;
 }
-.videobcg {
-   min-width: 100%;
-   width: 100%;
-   height: auto;
-   z-index: -1000;
-   overflow: hidden;
-   background-size: cover;
-   position: fixed;
-   top: 80px; 
+.bgIframWrap {
+  position: fixed; 
+  width: 100%; 
+  height: calc(57vw - 4px);
+  z-index: -1000;
+  overflow: hidden;
+  background-size: cover;
+  top: 80px;
 }
 .videoFilter {
   width: 100%;
@@ -24,7 +23,7 @@
   background: rgba(23, 21, 21, 0.4);
 }
 @media screen and (min-width: $appBarBreakLarge) {
-  .videobcg {
+  .bgIframWrap {
     top: 40px;
   }
 }
@@ -34,7 +33,7 @@
 	top: 0;
 	height: 57vw;
 	color: white;
-	padding-top: 30px;
+	padding-top: 26px;
 }
 .videoTitle {
 	  text-align: center;
@@ -46,12 +45,12 @@
 .playButton {
     cursor: pointer;
     display: inline-block;
-    margin: 0 auto;
-    font-size: 16px;
-    text-shadow: none;
-    padding: 4px 20px;
-    background: #29ABE2;
-    border-bottom: 4px solid #E9E9EE;
+    margin: -20px auto 0 auto;
+    font-size: 60px;
+    text-shadow: none;   
+}
+.playButton:hover {
+    color: #29ABE2;
 }
 @media all and (min-width: $appBarBreakLarge) {
     .videoText {
@@ -61,11 +60,9 @@
       font-size: 46px;
     }
     .playButton {
-      font-size: 24px;
+      font-size: 120px;
+      margin: 0 auto;
     }
-}
-.playButton:hover {
-	background: #FF0055;
 }
 .playingSection {
 	position: fixed; 
