@@ -79,13 +79,15 @@ export default class Record extends Component {
     else
         candidateConstituency2 = `第${candidateConstituency2}選區`;
 
+    let isCaucus = (name.indexOf('黨團') !== -1);
+    let personOrCaucus = (isCaucus ? '黨團' : '立委');
     let currentInfo;
-    if(isCurrent){
-      currentInfo = <div className={styles.isCurrent}>第八屆立委</div>;
+    if(isCurrent) {
+      currentInfo = <div className={styles.isCurrent}>第八屆{personOrCaucus}</div>;
     }
 
     let candidateInfo;
-    if(isCandidate === true){
+    if(!isCaucus && isCandidate) {
       candidateInfo = <div className={styles.isCandidate}>{`2016第九屆${candidateConstituency1}${candidateConstituency2}立委候選人`}</div>;
     }
 
@@ -120,7 +122,7 @@ export default class Record extends Component {
         <div className={styles.contentMeta}>
           <div className={styles.date}>{date.format('YYYY-MM-DD')}</div>
           <div className={styles.category}>{data.category}</div>
-          <div className={styles.partyThen}>{`時任${eng2cht(data.party)}立委`}</div>
+          <div className={styles.partyThen}>{(isCaucus ? '' : `${data.legislator}為時任${eng2cht(data.party)}立委`)}</div>
         </div>
         <div className={styles.contentMain}>{data.content}</div>
         <div className={styles.lyURL}><Link className={`${styles.ia} ${styles.bright}`} to={data.lyURL} target="_blank" >中華民國立法院原始資料</Link></div>

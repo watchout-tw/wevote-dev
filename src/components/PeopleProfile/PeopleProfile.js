@@ -48,13 +48,14 @@ export default class PeopleProfile extends Component {
 
 
     //處理黨團的資訊顯示方式
-    if(name.indexOf("黨團")!== -1){
-       ageInfo = "";
+    let isCaucus = (name.indexOf("黨團")!== -1);
+    if(isCaucus){
+       ageInfo = '';
        legislationInfo = <p>第八屆黨團</p>
     }
 
     let candidateInfo;
-    if(isCandidate === true){
+    if(!isCaucus && isCandidate){
         candidateInfo = <p>{`2016第九屆${candidateConstituency1}${candidateConstituency2}立委候選人`}</p>;
     }
 
@@ -66,10 +67,10 @@ export default class PeopleProfile extends Component {
             <div className={styles.peopleInfo}>
               <div className={styles.peopleName}>
                 <Link to={`/people/${id}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{name}</Link>
-                <div className={styles.party}>
+                {isCaucus ? '' : (<div className={styles.party}>
                   <div className={`${styles.partyFlag} ${styles.small} ${styles[party]}`}></div>
                   <span className={styles.partyTitle}>{partyCht}</span>
-                </div>
+                </div>)}
               </div>
               <div className={styles.peopleDetail}>
                 {ageInfo}

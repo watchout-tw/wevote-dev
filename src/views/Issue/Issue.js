@@ -315,16 +315,19 @@ export default class Issue extends Component {
       let alternative = (isInteractiveMode === true) ? (
         <div className={styles.settingPanel}>
           <div className={styles.settingButtons}>
-              <div className={styles.settingButton}
-                onClick={this._skipInteractive.bind(this,false)}>
-                跳過任務
+              <div className={styles.settingButton}>
+                <Link className={`${styles.ia} ${styles.black}`} onClick={this._skipInteractive.bind(this,false)}>
+                  跳過任務
+                </Link>
               </div>
           </div>
         </div>) : (
           <div className={`${styles.settingPanel} ${styles.withBackground}`}>
             <div className={styles.settingButtons}>
-              <div className={styles.settingButton} onClick={this._handleSetInteractive.bind(this,true)}>
-                回到任務
+              <div className={styles.settingButton}>
+                <Link className={`${styles.ia} ${styles.black}`} onClick={this._handleSetInteractive.bind(this,true)}>
+                  回到任務
+                </Link>
               </div>
             </div>
           </div>

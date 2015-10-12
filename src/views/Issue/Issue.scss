@@ -71,7 +71,6 @@ $breakLarge: 900px;
   }
 }
 .settingPanel {
-
   width: 100%;
   padding-top: 8px;
   background: none;
@@ -91,13 +90,4 @@ $breakLarge: 900px;
   margin: 0 4px;
   cursor: pointer;
   text-align: center;
-}
-
-@media all and (min-width: $breakMedium){
-  .settingButton {
-    opacity: 0.5;
-  }
-  .settingButton:hover {
-    opacity: 1;
-  }
 }
