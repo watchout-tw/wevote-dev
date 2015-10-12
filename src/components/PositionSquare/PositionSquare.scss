@@ -1,14 +1,10 @@
 @import '../../common.scss';
 
-$cubeSize: 20px;
-$ayeColor: #00FFB0;
-$nayColor: #FF0055;
-$unknownColor: #FFF800;
+$cubeSize: $defaultCubeSize;
 $evadingColor: black;
 
 .wrap {
 	display: inline-block;
-	margin: 20px;
 	vertical-align: top;
 }
 .title {
@@ -55,15 +51,6 @@ $countItemWidth: 40px;
 	float: left;
 }
 
-.aye {
-	background: $ayeColor;
-}
-.nay {
-	background: $nayColor;
-}
-.unknown {
-	background: $unknownColor;
-}
 /* hover 上的時候顯示的文字 */
 .activeCube {
 	width: 100%;
@@ -77,7 +64,7 @@ $countItemWidth: 40px;
 	height:90px;
 	width: 340px;
 	border: 1px solid;
-  	overflow: hidden;
+  overflow: hidden;
 	z-index: 1;
 	box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
 }

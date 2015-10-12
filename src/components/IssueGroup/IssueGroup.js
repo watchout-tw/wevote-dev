@@ -17,25 +17,25 @@ import eng2url from '../../utils/eng2url';
 
 export default class IssueGroup extends Component {
   static propTypes = {
-     
+
   }
- 
+
   render() {
     const styles = require('./IssueGroup.scss');
     const id = this.props.id;
     const {currentLegislatorPosition} = this.props;
 
     const {name, positions} = currentLegislatorPosition;
-    
+
     if(!positions)
         return <div></div>
-   
+
     let issueGroups = Object.keys(positions).map((currentIssue, index)=>{
 
         let issueUrl = eng2url(currentIssue);
         return (
                 <Link to={`/people/${id}/records/${issueUrl}`}
-                      className={styles.issueBlock} 
+                      className={styles.issueBlock}
                       key={index} >
                     <PositionSquare issueName={currentIssue}
                                          data={positions[currentIssue]}/>
@@ -44,7 +44,7 @@ export default class IssueGroup extends Component {
 
     return (
       <div className={styles.wrap}>
-          <div className={styles.issueWrap}>{issueGroups}</div>    
+          <div className={styles.issueWrap}>{issueGroups}</div>
       </div>
     );
   }

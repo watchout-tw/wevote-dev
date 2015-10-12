@@ -1,43 +1,43 @@
+@import '../../common.scss';
+
+$breakMedium: 600px;
 $breakLarge: 1000px;
 .wrap {
 	text-align: center;
 	position: relative;
 }
 .main {
-	padding: 30px 5px;
-	background: #e6e6e6;
+	padding: 30px 0;
 }
 .summary {
 	position: relative;
+	max-width: $breakMedium;
+	min-height: 120px; // 為了讓「切換議題」完整顯示
+	margin: 0 auto;
+}
+.summary > .positionSquare {
+	margin-bottom: 20px;
 }
 .table {
-
 }
 .menuBlock {
+	font-size: $smallerFontSize;
+	text-align: right;
 	position: absolute;
-	right: 10px;
+	right: 0;
 	top: 0;
-
+	width: 7em;
 }
 .menuTitle, .menuTitle:visited {
 	cursor: pointer;
-	color: black;
-	border-bottom: 2px solid;
-	padding: 4px 8px;
-	margin-bottom: 4px;
+	padding: 0 4px 4px;
 }
-.menu, .menu:visited {
-	display: block;
-	padding: 4px 5px;
-	cursor: pointer;
-	color: rgb(153,155,154);
-	text-decoration: none;
-}
-.menu:hover {
-	text-decoration: underline;
+.menu {
+	padding: 4px;
+	opacity: 0.75;
 }
 .menu.menuActive {
-	color: black;
+	opacity: 1;
 }
 @media screen and (min-width: $breakLarge){
 	.main {

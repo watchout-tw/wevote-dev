@@ -19,23 +19,24 @@ class Record extends Component {
   render() {
     const styles = require('./RecordTable.scss');
     const {data} = this.props;
-   
+
     let date = moment.unix(data.date);
 
     return (
-      <div className={styles.aRecordRow}>        
-         <div className={` ${styles.positionCube} ${styles[data.position]}`}></div>
-         <Link to={`/records/${data.id}`}
-               className={styles.date}>{date.format('YYYY-MM-DD')}</Link>
-         <div className={styles.category}>{data.category}</div>
-
-         <Link to={`/people/${people_name2id(data.legislator)}/records/`} className={styles.avatar}>
-              <div className={styles.avatarImg}>
-                  <PeopleAvatar id={people_name2id(data.legislator)}/>
-              </div>
-              <div className={styles.avatarName}>{data.legislator}</div>
-         </Link>
-         <div className={styles.content}>{data.content}</div>
+      <div className={styles.aRecordRow}>
+        <Link to={`/people/${people_name2id(data.legislator)}/records/`} className={styles.avatar}>
+          <div className={styles.avatarImg}>
+            <PeopleAvatar id={people_name2id(data.legislator)}/>
+          </div>
+          <div className={styles.avatarName}><div className={styles.name}>{data.legislator}</div></div>
+        </Link>
+        <div className={styles.detail}>
+          <div className={`${styles.positionCube} ${styles[data.position]}`}></div>
+          <Link to={`/records/${data.id}`}
+            className={`${styles.date} ${styles.ia} ${styles.bright}`}>{date.format('YYYY-MM-DD')}</Link>
+          <div className={styles.category}>{data.category}</div>
+          <div className={styles.content}>{data.content}</div>
+        </div>
       </div>
     )
   }
@@ -49,7 +50,7 @@ class Record extends Component {
 export default class RecordTable extends Component {
   static propTypes = {
     setToActiveRecord: PropTypes.func.isRequired
-  
+
   }
   //設定 initial state
   constructor(props) { super(props)
@@ -59,16 +60,16 @@ export default class RecordTable extends Component {
           ascending: false,
       }
   }
-  _setCategoryFilter(value, event){  
+  _setCategoryFilter(value, event){
     this.setState({ categoryFilter: value });
   }
-  _setSortingOption(value, event){  
+  _setSortingOption(value, event){
     if(this.state.sortingOption === value){
       this.setState({ ascending: !this.state.ascending });
     }else{
       this.setState({ sortingOption: value });
     }
-    
+
   }
   render() {
     const styles = require('./RecordTable.scss');
@@ -78,7 +79,7 @@ export default class RecordTable extends Component {
     const {ascending, categoryFilter, sortingOption} = this.state;
 
     const sortingOptions = ['按時序排','按立場排'];
-    
+
 
     ///////
     let records = data.records
@@ -107,8 +108,8 @@ export default class RecordTable extends Component {
             }
 
         }
-        
-        
+
+
     })
     .map((item,index)=>{
         return <Record data={item} key={index}/>
@@ -119,7 +120,7 @@ export default class RecordTable extends Component {
     let options = categoryFilters.map((v,i)=>{
         let active = (v===categoryFilter) ? styles.controlButtonActive : "";
         return <div className={`${styles.controlButton} ${active}`}
-                    key={i} 
+                    key={i}
                     onClick={this._setCategoryFilter.bind(this,v)}>
                     {v}</div>
     });
@@ -128,9 +129,9 @@ export default class RecordTable extends Component {
     let sortings = sortingOptions.map((v,i)=>{
         let active = (v===sortingOption) ? styles.sortingButtonActive : "";
         return <div className={`${styles.sortingButton} ${active}`}
-                    key={i} 
+                    key={i}
                     onClick={this._setSortingOption.bind(this,v)}>
-                    {v}</div> 
+                    {v}</div>
     })
     ///
 
@@ -165,4 +166,3 @@ export default class RecordTable extends Component {
     className: ''
   }
 }
-
