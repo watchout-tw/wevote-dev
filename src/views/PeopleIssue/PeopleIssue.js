@@ -92,7 +92,7 @@ export default class PeopleIssue extends Component {
 
     }
     
-    const title = `${name}對於${issueName}的表態-2016立委出任務`;
+    const title = `${name}對於${issueName}的表態-沃草2016立委出任務`;
     
     const metaData = {
       title: title,

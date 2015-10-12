@@ -332,18 +332,19 @@ export default class Issue extends Component {
 
       let interactionControlPanel = (notificationShowed === false) ? ({alternative}) : '';
 
+      const title = `${currentIssue.title}-你支持${currentIssue.statement}嗎？-沃草2016立委出任務`;
+      const description = currentIssue.description;
       const metaData = {
-          title: `議題表態分析-2016立委出任務`,
-          description: `對於各項重大議題的表態大解析！趕快來看看委員在立法院針對下列重大議題有哪些發言！`,
+          title: title,
+          description: description,
           meta: {
               charSet: 'utf-8',
               property: {
-                'og:title': `議題表態分析-2016立委出任務`,
-                'og:description': `對於各項重大議題的表態大解析！趕快來看看委員在立法院針對下列重大議題有哪些發言！`,
+                'og:title': title,
+                'og:description': description,
                 'og:type' : 'website'
               }
           }
-
       };
 
 

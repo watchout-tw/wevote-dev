@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
+import DocumentMeta from 'react-document-meta';
 import moment from 'moment';
 
 import cht2url from '../../utils/cht2url';
@@ -90,9 +91,27 @@ export default class Record extends Component {
       candidateInfo = <div className={styles.isCandidate}>{` 2016 ${candidateConstituency1} ${candidateConstituency2} 立委候選人`}</div>;
     }
 
+
+    //SEO
+    const title = `${data.legislator}${data.positionJudgement}-沃草2016立委出任務`;
+    const description = `${data.legislator}${data.positionJudgement}-${data.legislator}為${eng2cht(data.party)}，為什麼對於${data.issue}採用此戰鬥策略？`;
+    const metaData = {
+        title: title,
+        description: description,
+        meta: {
+            charSet: 'utf-8',
+            property: {
+              'og:title': title,
+              'og:description': description,
+              'og:type' : 'website'
+            }
+        }
+    };
+
     return (
       <div className={styles.wrap}>
-      
+
+      <DocumentMeta {...metaData}/>
       <div className={styles.form}>
          
          

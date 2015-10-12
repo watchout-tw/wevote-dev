@@ -50,8 +50,8 @@ export default class Party extends Component {
                 </Link>)
     })
 
-    const title = `${currentPartyPositions.name}議題表態分析-2016立委出任務`;
-    const description = `${currentPartyPositions.name}對於各項重大議題的攻城策略大解析！趕快來看看${currentPartyPositions.name}委員在立法院針對下列重大議題講了哪些話！`;
+    const title = `${currentPartyPositions.name}議題表態分析-沃草2016立委出任務`;
+    const description = `${currentPartyPositions.name}對於各項重大議題的戰鬥策略大解析！趕快來看看${currentPartyPositions.name}委員在立法院針對下列重大議題講了哪些話！`;
     const metaData = {
       title: title,
       description: description,
