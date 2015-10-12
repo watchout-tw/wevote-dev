@@ -84,9 +84,7 @@ export default class Slideshow extends Component {
     this.setState({
       currentIndex: value
     })
-    console.log(this)
-
-
+   
   }
   _next() {
     this.refs.ReactSwipe.swipe.next();

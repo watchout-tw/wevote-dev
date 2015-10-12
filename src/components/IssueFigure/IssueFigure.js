@@ -41,9 +41,9 @@ export default class IssueFigure extends Component {
       const {partyView, legislatorView, positionView} = this.state;
 
 
-      if(!partyView[currentIssue.titleEng]) return <div>partyView 還沒算好</div>
-      if(!legislatorView[currentIssue.titleEng]) return <div>legislatorView 還沒算好</div>
-      if(!positionView[currentIssue.titleEng]) return <div>positionView 還沒算好</div>
+      if(!partyView[currentIssue.titleEng]) return <div></div>
+      if(!legislatorView[currentIssue.titleEng]) return <div></div>
+      if(!positionView[currentIssue.titleEng]) return <div></div>
      
       // 結果圖表
 

@@ -261,7 +261,8 @@ export default class AnimatedScript extends Component {
 
         )
     });
-    let optionButton = (showNext) ? (
+    
+    let optionButton = (showNext===true) ? (
       <div className={styles.actionButtons}>
         <div className={styles.arrowRight}
              onClick={handleNext.bind(null)}></div>

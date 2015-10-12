@@ -26,7 +26,10 @@ export default class StaticIssue extends Component {
      }
   }
   componentDidMount(){
-      console.log("mount - static issue : update pathname form url")
+      this._updateCurrentIssueFromURL();
+  }
+  _updateCurrentIssueFromURL(){
+      //console.log("mount - static issue : update pathname form url")
       if(window){
         let pathname = window.location.pathname;
         
@@ -46,6 +49,7 @@ export default class StaticIssue extends Component {
         })
         
       }
+
   }
   componentWillReceiveProps(nextProps){
       this.setState({
@@ -61,8 +65,7 @@ export default class StaticIssue extends Component {
       const {issues, setCurrentView} = this.props;
       const {currentView, currentIssueName} = this.state;
       const currentIssue = issues[currentIssueName];
-      console.log("static issues render")
-
+      
       if(!currentIssue) return <div></div>;
 
        // 協力 NGO
