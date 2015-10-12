@@ -96,7 +96,7 @@ export default class PartyPositionGroup extends Component {
   }
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, issueId, issueStatement} = this.props;
+    const {data, issueURL, userPosition, issueStatement} = this.props;
 
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
@@ -112,12 +112,24 @@ export default class PartyPositionGroup extends Component {
       data.dominantPosition,
     );
 
+
+    let userPositionItem;
+    if(data.dominantPosition === userPosition){
+       let imgURL = require("./images/favicon.png");
+       userPositionItem = 
+        <div className={styles.userPositionBlock}>
+            <div className={styles.userPositionText}>與你立場相同</div>
+            <img src={imgURL} className={styles.userPositionImg} />
+        </div>
+    }
+
     return (
       <div className={styles.wrap}>
         <div className={styles.header}>
-          <Link to={`/parties/${data.party}/records/${issueId}`} className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}>{partyTitle}</Link>
-          <div>{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
-          <div>{issueStatement}</div>
+          {userPositionItem}
+          <Link to={`/parties/${data.party}/records/${issueURL}`} className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}>{partyTitle}</Link>
+          <div className={styles.metaTitle}>{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
+          <div className={styles.metaTitle}>{issueStatement}</div>
         </div>
         <div style={layoutStyles.margin}>
           <div style={layoutStyles.circle}>

@@ -29,7 +29,32 @@ export default class IssueFigure extends Component {
         this.state = {
            partyView: parseToPartyView(props.records, props.issues),
            legislatorView: parseToLegislatorView(props.records, props.issues),
-           positionView: parseToPositionView(props.records, props.issues)
+           positionView: parseToPositionView(props.records, props.issues),
+
+           userPosition: {
+             "marriage-equality" : "none",
+             "recall" : "none",
+             "referendum" : "none",
+             "nuclear-power" : "none"
+           }
+        }
+    }
+
+    componentDidMount(){
+       // Get user position from local Storage
+       
+        if(window){
+            const {currentIssueName} = this.props;
+            let value = currentIssueName + "-userPosition"
+            let position =  window.localStorage.getItem(value);
+            if(["aye","nay"].indexOf(position)!==-1){
+                let {userPosition} = this.state;
+                userPosition[currentIssueName] = position;
+                this.setState({
+                   userPosition: userPosition
+                })
+            }
+      
         }
     }
 
@@ -38,7 +63,7 @@ export default class IssueFigure extends Component {
       const styles = require('./IssueFigure.scss');  
       const {currentView, currentIssue, currentIssueName, setCurrentView} = this.props;
 
-      const {partyView, legislatorView, positionView} = this.state;
+      const {partyView, legislatorView, positionView, userPosition} = this.state;
 
 
       if(!partyView[currentIssue.titleEng]) return <div></div>
@@ -52,8 +77,9 @@ export default class IssueFigure extends Component {
       let partyPositionGroups = currentPartyView.partyPositions.map((value, index)=>{
           //console.log(value);
           return <PartyPositionGroup data={value} 
-                                     issueId={currentIssueName}
                                      issueStatement={currentPartyView.statement} 
+                                     issueURL={currentIssueName}
+                                     userPosition={userPosition[currentIssueName]}
                                      key={index} />;
       });
   
@@ -63,8 +89,9 @@ export default class IssueFigure extends Component {
       let positionLegislatorGroups = currentLegislatorView.positions.map((value, index)=>{
           return <PositionLegislatorGroup data={value} 
                                           issueStatement={currentPartyView.statement} 
-                                          key={index}
-                                          currentIssueName={currentIssueName}/>;
+                                          issueURL={currentIssueName}
+                                          userPosition={userPosition[currentIssueName]}
+                                          key={index}/>;
       });
   
       // 3. 看表態
@@ -73,6 +100,8 @@ export default class IssueFigure extends Component {
           //console.log(value);
           return <PositionPartyGroup data={value} 
                                      issueStatement={currentPartyView.statement}
+                                     issueURL={currentIssueName}
+                                     userPosition={userPosition[currentIssueName]}
                                      key={index} />;
       });
   
