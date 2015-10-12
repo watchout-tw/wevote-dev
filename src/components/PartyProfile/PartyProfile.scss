@@ -26,45 +26,10 @@
     padding: 25px 0 0 0;
     height: 150px;
 }
-.party-flag {
-    width: 40px;
-    height: 40px;
-    margin: 20px auto 10px auto;
-    border-radius: 50px;
-    border: 8px solid #000;
-}
+
 .party-title h1 {
     font-size: 36px;
 }
 .party-title p {
     margin: 0px;
-}
-
-/*黨旗設定*/
-.party-flag.KMT {
-    background: url(./images/flag-kmt.svg);
-}
-.party-flag.DPP {
-    background: url(./images/flag-dpp.svg);
-}
-.party-flag.GSD {
-    background: url(./images/flag-gsd.svg);
-}
-.party-flag.MKT {
-    background: url(./images/flag-mkt.svg);
-}
-.party-flag.NONE {
-    background: url(./images/flag-none.svg);
-}
-.party-flag.NP {
-    background: url(./images/flag-np.svg);
-}
-.party-flag.NSU {
-    background: url(./images/flag-npp.svg);
-}
-.party-flag.PFP {
-    background: url(./images/flag-pfp.svg);
-}
-.party-flag.TSU {
-    background: url(./images/flag-tsu.svg);
 }
