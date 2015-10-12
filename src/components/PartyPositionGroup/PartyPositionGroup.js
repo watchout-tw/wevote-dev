@@ -97,6 +97,7 @@ export default class PartyPositionGroup extends Component {
   render() {
     const styles = require('./PartyPositionGroup.scss');
     const {data, issueURL, userPosition, issueStatement} = this.props;
+    const {parties} = this.props;
 
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
 
@@ -105,11 +106,13 @@ export default class PartyPositionGroup extends Component {
                      key={index} />
     });
 
+    let partyHasPositionPercentage = Math.round((data.hasPositionCount/parties[data.party].hasBeenCount) * 100, 0);
     const layoutStyles = rectInCircleLayout(
       this.state.viewWidth,
       20,
       this.props.data.records.length,
       data.dominantPosition,
+      partyHasPositionPercentage
     );
 
 
@@ -128,8 +131,9 @@ export default class PartyPositionGroup extends Component {
         <div className={styles.header}>
           {userPositionItem}
           <Link to={`/parties/${data.party}/records/${issueURL}`} className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}>{partyTitle}</Link>
-          <div className={styles.metaTitle}>{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
-          <div className={styles.metaTitle}>{issueStatement}</div>
+          <div className={styles.metaTitle}>{`${partyHasPositionPercentage}%的立委曾經表態`}</div>
+          <div className={styles.metaTitle}>表態紀錄中{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
+          
         </div>
         <div style={layoutStyles.margin}>
           <div style={layoutStyles.circle}>

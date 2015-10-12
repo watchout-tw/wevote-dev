@@ -1,6 +1,6 @@
 import position2color from './position2color';
 
-export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position) {
+export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position, hasPositionPercentage) {
   let outerMargin = 20;
 
   // 算圈圈有多粗
@@ -64,10 +64,11 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     width: rectWidth,
     height: rectHeight,
   }
+  //// TODO ARC
 
   return {
     margin: marginStyles,
     circle: circleStyles,
-    rect: rectStyles,
+    rect: rectStyles
   }
 }

@@ -55,15 +55,22 @@ function parseToPartyView_Proceed (records, currentIssue, PartyView) {
 	});
 
 	/* traverse 每個政黨的記錄，找出最多數，並且記錄「主要立場」跟「百分比」 */
-	
+	// 計算每個政黨有表態的人數
 	Object.keys(Parties).map((currentParty,index)=>{
 		
 		//console.log(`xxxxx ${currentParty} xxxxx`);
 		let count = {}; count.aye = 0, count.nay = 0, count.unknown = 0;
-   	
+   		let hasPosition = [];
 		Parties[currentParty].records.map((record, k)=>{
 			count[record.position]++;
+
+			//如果這個人還沒被點到名，就點他！
+			if(hasPosition.indexOf(record.legislator)===-1){
+				hasPosition.push(record.legislator);
+			}
 		})
+		//看看最後有多少人名，即是人數
+		Parties[currentParty].hasPositionCount = hasPosition.length;
 
 		/** 把 records 依照時間排序 */
 		Parties[currentParty].records.sort((a,b)=>{
@@ -130,7 +137,8 @@ function parseToPartyView_Proceed (records, currentIssue, PartyView) {
     	    "dominantPosition" : currentParty.dominantPosition, // 主要立場
     	    "dominantPercentage" : currentParty.dominantPercentage,
     	    "records" : currentParty.records,
-    	    "rank" : currentParty.rank
+    	    "rank" : currentParty.rank,
+    	    "hasPositionCount" : currentParty.hasPositionCount
 		});
 		
 	})

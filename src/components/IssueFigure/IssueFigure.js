@@ -14,8 +14,10 @@ import parseToLegislatorView from '../../utils/parseToLegislatorView';
 import parseToPositionView from '../../utils/parseToPositionView';
 
 @connect(
-    state => ({ issues: state.issues,
-                records: state.records
+    state => ({ 
+                issues: state.issues,
+                records: state.records,
+                parties: state.parties
               }),
     dispatch => bindActionCreators({}, dispatch))
 
@@ -62,7 +64,7 @@ export default class IssueFigure extends Component {
     render(){
       const styles = require('./IssueFigure.scss');  
       const {currentView, currentIssue, currentIssueName, setCurrentView} = this.props;
-
+      const {parties} = this.props;
       const {partyView, legislatorView, positionView, userPosition} = this.state;
 
 
@@ -80,6 +82,7 @@ export default class IssueFigure extends Component {
                                      issueStatement={currentPartyView.statement} 
                                      issueURL={currentIssueName}
                                      userPosition={userPosition[currentIssueName]}
+                                     parties={parties}
                                      key={index} />;
       });
   
@@ -91,6 +94,7 @@ export default class IssueFigure extends Component {
                                           issueStatement={currentPartyView.statement} 
                                           issueURL={currentIssueName}
                                           userPosition={userPosition[currentIssueName]}
+                                          parties={parties}
                                           key={index}/>;
       });
   
@@ -102,6 +106,7 @@ export default class IssueFigure extends Component {
                                      issueStatement={currentPartyView.statement}
                                      issueURL={currentIssueName}
                                      userPosition={userPosition[currentIssueName]}
+                                     parties={parties}
                                      key={index} />;
       });
   
@@ -133,16 +138,19 @@ export default class IssueFigure extends Component {
           <div>
               
               <div className={styles.figHeader} id="view">
-                  <div className={styles.issueBlock}>
-                      <div className={styles.issueTitle}>{currentIssue.title}</div>
-                      <div className={styles.issueStatement}>{currentViewStatement}</div>
-                  </div>
                   
+                  <div className={styles.issueBlock}>
+                      <div className={styles.issueTitle}>{currentIssue.title}</div>  
+                  </div>
+
                   <div className={styles.issueController}>
                     <IssueController currentIssue={currentIssue} 
                                      currentView={currentView}
                                      setCurrentView={setCurrentView}/>
                   </div>
+
+                  <div className={styles.issueStatement}>{currentViewStatement}</div>
+                  
               </div>
     
               <div className={styles.records}>
