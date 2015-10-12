@@ -174,6 +174,7 @@ export default class InteractiveIssue extends Component {
               })
               let {currentIssueName} = this.props;
               this.props.handleCompleted(currentIssueName);
+              this.props.handleSetUserPosition(currentIssueName, "aye");
               this._handleSetStage("results");
           }
           if(choice===N){
@@ -182,6 +183,7 @@ export default class InteractiveIssue extends Component {
               })
               let {currentIssueName} = this.props;
               this.props.handleCompleted(currentIssueName);
+              this.props.handleSetUserPosition(currentIssueName, "nay")
               this._handleSetStage("results");
           }
           if(choice===S){
