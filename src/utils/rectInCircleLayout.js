@@ -1,10 +1,11 @@
 import position2color from './position2color';
 
 export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position) {
-  let outerMargin = 20;
+  let outerMarginTop = 20;
+  let outerMarginLeft = 40;
 
   // 算圈圈有多粗
-  let borderWidth = Math.ceil(Math.sqrt(recordCount))*2;
+  let borderWidth = Math.ceil(Math.sqrt(recordCount))*2*cubeSize/20;
   if(borderWidth < 2)
     borderWidth = 2;
 
@@ -38,13 +39,13 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
       offsetTop = (diameter - rectHeight)/2;
     }
     // 確定circle大小之後來算水平位移
-    toTranslate = (diameter - viewWidth)/2 + outerMargin;
+    toTranslate = (diameter - viewWidth)/2 + outerMarginLeft;
     toTranslate = `translateX(-${toTranslate}px)`;
   }
 
   // 算inline styles
   let marginStyles = {
-    margin: `${outerMargin}px`,
+    margin: `${outerMarginTop}px ${outerMarginLeft}px`,
   }
   let circleStyles = {
     display: 'inline-block',
