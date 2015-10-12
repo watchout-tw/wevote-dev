@@ -54,13 +54,14 @@ export default class Record extends Component {
 
     let clarification;
     if(data.clarificationContent){
+        let clarificationDate = moment.unix(data.clarificationLastUpdate);
         clarification = (
-          <div className={styles.clarificationContent}>
-            {data.clarificationLastUpdate}
-            {data.clarificationContent}
-          </div>
+            <div className={styles.clarificationContent}>
+              <div className={styles.date}>{clarificationDate.format('YYYY-MM-DD')}</div>
+              <div className={styles.contentMain}>{data.clarificationContent}</div>
+            </div>
         )
-    
+  
     }else{
         clarification = (
           <div className={styles.clarificationContent}>沒有澄清資訊。</div>
