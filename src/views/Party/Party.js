@@ -43,14 +43,11 @@ export default class Party extends Component {
         //console.log(positions[currentIssue])
         let issueUrl = eng2url(currentIssue);
         return (
-          <div className={styles.issueBlock}>
-            <Link to={`/parties/${id}/${issueUrl }`}
-                  className={styles.issueBlock}
-                  key={index}>
-                <PositionSquare issueName={currentIssue}
-                                data={positions[currentIssue]}/>
-            </Link>
-          </div>
+          <Link to={`/parties/${id}/${issueUrl }`}
+            className={styles.issueBlock}
+            key={index}>
+            <PositionSquare issueName={currentIssue} data={positions[currentIssue]}/>
+          </Link>
         );
     })
     // 改用IssueGroup嗎？
