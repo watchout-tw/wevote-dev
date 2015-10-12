@@ -1,6 +1,6 @@
 .wrap {
     display: inline-block;
-    margin: 20px;
+    //margin: 20px;
     text-align: left;
 }
 .header {
@@ -24,19 +24,19 @@
     vertical-align: top;
 }
 .avatarImg {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     overflow: hidden;
     margin: 4px;
 
     border-radius: 50%;
-    border-width: 3px;
+    border-width: 4px;
     border-style: solid;
 
     display: inline-block;
 
     cursor: pointer;
-} 
+}
 .avatarImg:hover, .avatarImgActive {
     box-shadow: 0 0 0 4px rgb(180,180,180);
 }
@@ -71,19 +71,16 @@
     min-height: 54px;
     line-height: 1.4;
     text-align: center;
-    
+
     color: black;
     background: white;
-    
+
     padding: 8px;
     font-size: 14px;
-    
+
     border: 2px solid rgb(80,80,80);
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.12);
-    
-    cursor: pointer; 
-    
+
+    cursor: pointer;
+
 }
-
-
-
