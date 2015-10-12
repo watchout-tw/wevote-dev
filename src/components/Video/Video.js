@@ -26,7 +26,8 @@ export default class Video extends Component {
 
     // Playing Video
     const {playVideo} = this.state;
-    const youtubeId = "qLUq4uPqFog";
+    const youtubeId = "5dSckWGmybo";
+    const bgYoutubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&loop=1&playlist=${youtubeId}&controls=0&showinfo=0&autohide=1&rel=0`;
     const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&controls=0&showinfo=0&autohide=1&rel=0`;
     
     let playingFullScreen = (playVideo === true) ? (
@@ -47,12 +48,11 @@ export default class Video extends Component {
         <div className={styles.videoWrap}>
       	    {playingFullScreen}
 
-            <video id="videobcg" preload="auto" autoPlay="true" loop="loop" muted="muted" volume="0"
-                   className={styles.videobcg}>
-                <source src={bgVideoUrl} type="video/mp4" />
-               
-                Sorry, your browser does not support HTML5 video.
-            </video>
+            <div className={styles.bgIframWrap}>
+                <iframe frameborder="0" height="100%" width="100%" 
+                        src={bgYoutubeURL}>
+                </iframe>
+            </div>
 
             <div className={styles.videoFilter}></div>
             <div className={styles.videoText}>
@@ -60,7 +60,8 @@ export default class Video extends Component {
                     <div>立委勇者大選還有{diff}天</div>
                     <div>你還沒準備好嗎？</div>
                     <div className={styles.playButton}
-                         onClick={this._handlePlay.bind(this)}>播放影片</div>
+                         onClick={this._handlePlay.bind(this)}>
+                         <i className="fa fa-play-circle-o"></i></div>
                 </div>
             </div>
         </div>
