@@ -127,7 +127,7 @@ export default class About extends Component {
             <div className={styles.aboutImage}></div>
             <div className={styles.aboutTitle}><img src={about_title_1}/><img src={about_title_2}/></div>
             <ul className={styles.innerTag}>
-                <li><Link to={`/about`} className = { tabName==="about" ? styles.active : ""}>關於</Link></li>
+                <li><Link to={`/about/`} className = { tabName==="about" ? styles.active : ""}>關於</Link></li>
                 <li><Link to={`/about/FAQ`} className = { tabName==="FAQ" ? styles.active : ""}>問答</Link></li>
                 <li><Link to={`/about/statement`} className = { tabName==="statement" ? styles.active : ""}>聲明</Link></li>
             </ul>
