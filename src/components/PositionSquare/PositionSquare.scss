@@ -1,3 +1,5 @@
+@import '../../common.scss';
+
 $cubeSize: 20px;
 $ayeColor: #00FFB0;
 $nayColor: #FF0055;
@@ -8,29 +10,37 @@ $evadingColor: black;
 	display: inline-block;
 	margin: 20px;
 	vertical-align: top;
-	
 }
 .title {
-	margin: 5px;
+	padding: 4px 4px 0;
 	font-size: 20px;
+	background: $trueBlack;
+	color: $trueWhite;
 }
 /* 上方，下方 */
+$countItemWidth: 40px;
 .countWrap {
-	border: 2px solid black;
 	display: inline-block;
+	border: 2px solid $trueBlack;
+	font-size: $defaultFontSize;
+	line-height: 1;
 }
 .countTotal {
 	display: inline-block;
-	width: 3*$cubeSize;
-	background: black;
-	color: white;
+	width: 3*$countItemWidth;
+	padding: 0 0 4px;
+	background: $trueBlack;
+	color: $trueWhite;
+	font-size: 20px;
+	font-weight: bold;
 }
 .countItem {
 	display: inline-block;
-	width: $cubeSize;
+	width: $countItemWidth;
+	padding: 4px 0;
 }
 .cubesOuterWrap {
-	margin: 20px;
+	margin-top: 20px;
 }
 
 

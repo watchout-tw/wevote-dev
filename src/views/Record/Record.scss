@@ -1,237 +1,173 @@
 @import '../../common.scss';
-$cubeSize: 18px;
-$ayeColor: #00FFB0;
-$nayColor: #FF0055;
-$unknownColor: #FFF800;
+$cubeSize: $defaultCubeSize;
 
+$border: 2px solid $trueBlack;
 .wrap {
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 40px 0 0;
 	text-align: center;
-	margin: 40px 10px 0 10px;
+}
+.form {
+	border-top: $border;
+	border-bottom: $border;
+	background: $trueWhite;
+	text-align: left;
+	//box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
 }
 @media all and (min-width: 600px){
 	.wrap {
-		margin: 40px auto 0 auto;
+		margin: 40px auto 0;
 	}
-}
-.form {
-	box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
-	border: 2px solid;
-	background: white;
-	text-align: left;
+	.form {
+		border: $border;
+	}
 }
 .issueRow {
-	border-bottom: 2px solid;
+	border-bottom: $border;
+	text-align: center;
 }
 .issueName {
-	background: black;
-	color: white;
-	padding: 10px;
-}
-@media all and (min-width: 350px){
-	.issueName {
-		display: inline-block;
-	}
+	background: $trueBlack;
+	color: $trueWhite;
+	padding: 10px 20px;
 }
 .issueQuestion {
-	display: inline-block;
-	padding: 10px;
+	padding: 10px 20px;
 }
 
-.peopleRow {
-	margin: 10px;
-	min-height: 100px;
-}
-.judegementRow {
-	border-top: 2px solid;
-	padding: 20px;
-}
-.recordRow {
-	border-top: 2px solid;	
-}
-.positionCube {
-	width: $cubeSize;
-	height: $cubeSize;
-	display: inline-block;
-    margin: 0 6px;
-    vertical-align: top;
-}
-.clarifyRow {
-	border-top: 2px solid;
-	position: relative;
-}
-
-
-.aye {
-	background: $ayeColor;
-}
-.nay {
-	background: $nayColor;
-}
-.unknown {
-	background: $unknownColor;
-}
-
-.avatar, .avatar:visited {
-	text-decoration: none;
-	color: rgb(53,55,54);
-	border: 4px solid rgb(230,230,230);
-	width: 100px;
-	height: 100px;
-	border-radius: 100px;
-	background: white;
-	margin: 0 auto;
-}
-@media all and (min-width: 400px){
-	.avatar, .avatar:visited {
-		float: left;
-		margin: 0 0 30px 10px;
-	}
-}
-
-.avatar:hover {
-	text-decoration: underline;
-}
-.profileBlock {
-	display: inline-block;
-	margin-left: 20px;
-	margin-top: 10px;
-	vertical-align: top;
-
-}
-.isCurrent, .isCandidate  {
-	margin-left: 3px;
-    font-size: 14px;
-    line-height: 1.4;
-    color: rgb(100,100,100);
-
-}
-.avatarName {
-    vertical-align: top;
-    font-size: 34px;
-    font-weight: bold;
-    
-    
-}
-/*黨旗設定*/
-.party-flag {
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    margin-top: 6px;
-    margin-right: 6px;
-    vertical-align: top;
-    display: inline-block;
-}
-.party-flag.KMT {
-    background: url(./images/flag-kmt.svg);
-}
-.party-flag.DPP {
-    background: url(./images/flag-dpp.svg);
-}
-.party-flag.GSD {
-    background: url(./images/flag-gsd.svg);
-}
-.party-flag.MKT {
-    background: url(./images/flag-mkt.svg);
-}
-.party-flag.NONE {
-    background: url(./images/flag-none.svg);
-}
-.party-flag.NP {
-    background: url(./images/flag-np.svg);
-}
-.party-flag.NSU {
-    background: url(./images/flag-npp.svg);
-}
-.party-flag.PFP {
-    background: url(./images/flag-pfp.svg);
-}
-.party-flag.TSU {
-    background: url(./images/flag-tsu.svg);
-}
-.name, .name:visited {
-	text-decoration: none;
-	color: black;
-}
-.name:hover {
-	text-decoration: underline;
-}
 .content {
 	padding: 20px;
 }
-.contentMeta {
-	margin-top: 10px;
+.peopleRow {
+	padding: 10px 20px;
+	min-height: 100px;
 }
-.date, .category {
+.judegementRow {
+	border-top: $border;
+	padding: 10px 20px;
+}
+.recordRow {
+	border-top: $border;
+}
+.clarifyRow {
+	position: relative;
+	border-top: $border;
+}
+.recordRow > .content > *:not(:first-child),
+.clarifyRow > .content > *:not(:first-child) {
+	margin-top: 20px;
+}
+
+.positionCube {
 	display: inline-block;
-	margin-right: 10px;
+	vertical-align: middle;
+	width: $cubeSize;
+	height: $cubeSize;
+  margin: 0 6px;
+}
+.avatar {
+	text-decoration: none;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	border: 4px solid $lightGrey;
+	border-radius: 50%;
+	background: $trueWhite;
+}
+.profileBlock {
+	display: block;
+	text-align: center;
+}
+@media all and (min-width: 600px) {
+	.avatar, .avatar:visited, .profileBlock {
+		@include inline-middle;
+	}
+	.profileBlock {
+		margin-left: 20px;
+		text-align: left;
+	}
+}
+.isCurrent, .isCandidate  {
+	font-size: $smallerFontSize;
+	line-height: 1.5;
+	color: $darkGrey;
+}
+.avatarName {
+	margin: 4px 0;
+  vertical-align: top;
+  font-size: 40px;
+  font-weight: bold;
+}
+.name {
+	margin: 0 4px;
+}
+
+.judegementRow > * {
+	@include inline-middle;
+}
+
+.contentMeta {
+	line-height: $textLineHeight;
+}
+.contentMeta > * {
+	display: inline-block;
+	margin-right: $defaultFontSize;
+}
+.date {
+	font-weight: bold;
 }
 .contentMain {
 	margin-top: 20px;
-	line-height: 1.6;
+	line-height: $textLineHeight;
 	quotes: "\201C""\201D""\2018""\2019";
-	
+}
+.contentMain:before, .contentMain:after {
+	display: inline-block;
+	color: $lightGrey;
+	font-size: $defaultFontSize*4;
+	vertical-align: top;
+  height: $defaultFontSize;
+  margin-top: $defaultFontSize*(-1.5);
 }
 .contentMain:before {
-   color: #ccc;
-   content: open-quote;
-   font-size: 4em;
-   line-height: 0.1em;
-   margin-right: 0.25em;
-   vertical-align: -0.4em;
+	content: open-quote;
+	margin-right: 2px;
 }
 .contentMain:after {
-   color: #ccc;
-   content: close-quote;
-   font-size: 4em;
-   line-height: 0.1em;
-   margin-left: 10px;
-   vertical-align: -0.45em;
+	content: close-quote;
+	margin-left: 2px;
 }
 .partyThen {
-	margin-top: 10px;
-	font-size: 14px;
+	color: $grey;
 }
 .lyURL {
-	display: block;
-    cursor: pointer;
-    padding: 8px 20px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: gray;
+	display: inline-block;
 }
-.lyURL:hover {
-	background: rgb(220,220,220);
+.clarifyRow > .content {
+	padding-top: $defaultFontSize + 10px*2;
 }
 .clarifyTitle {
+	position: absolute;
+	top: 0;
+	left: 0;
 	background: black;
-    color: white;
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 0px;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 0px;
+	font-size: $defaultFontSize;
 }
 .clarificationContent {
-	padding: 20px;
+	//padding: 20px;
+	line-height: $textLineHeight;
 }
-.clarifyButton, .clarifyButton:visited {
-	cursor: pointer;
-	text-decoration: underline;
-	padding: 20px;
-	font-size: 14px;
-	color: rgb(53,55,54);
-	display: block;
-}
-.clarifyButton:hover {
-	color: gray;
+.clarifyPrompt {
+	display: inline-block;
+	line-height: $textLineHeight;
 }
 
 .seeOtherIssue {
 	padding: 10px;
+  margin-top: 40px;
 	font-size: 20px;
-    margin-top: 40px;
-    line-height: 1.6;
 }
-
-

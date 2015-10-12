@@ -14,12 +14,12 @@ class Record extends Component {
   // constructor(props) { super(props)
   //     this.state = { active: false}
   // }
-  
+
   // _setActive(value, event){
   //   this.setState({ active: true });
   // }
 
-  // _setInactive(){  
+  // _setInactive(){
   //   this.setState({ active: false });
   // }
 
@@ -38,7 +38,7 @@ class Record extends Component {
 
     return (
       <div className={styles.postionWrap}>
-       
+
           <div className={` ${styles.positionCube} ${styles[data.position]}`}>
           </div>
 
@@ -61,8 +61,7 @@ export default class PositionSquare extends Component {
   render() {
     const styles = require('./PositionSquare.scss');
     const {data, issueName} = this.props;
-    
-    
+
     /* 這裡是一筆一筆的資料，方框顏色表示立場 */
     let records = data.records.map((item,index)=>{
       return <Record data={item} key={index}/>
@@ -70,11 +69,15 @@ export default class PositionSquare extends Component {
 
     /* 寬度是 record 數=> 開根號，round up 到整數 */
     /* $cubeSize: 20px; */
-    let width = Math.ceil(Math.sqrt(records.length))*20;
+    let cubeSize = 20;
+    let width = Math.ceil(Math.sqrt(records.length));
+    let height = Math.ceil(records.length/width);
+    width *= cubeSize;
+    height *= cubeSize;
     // 依照紀錄筆數，設定寬度
     let cubes = {
       width: width,
-      height: width,
+      height: height,
       display: "inline-block",
       position: "relative"
     }
@@ -86,18 +89,21 @@ export default class PositionSquare extends Component {
         )
     })
 
+    let recordsHTML = (records.length > 0) ? (
+      <div className={styles.cubesOuterWrap}>
+        <div style={cubes}>{records}</div>
+      </div>
+    ) : '';
+
+
     return (
       <div className={styles.wrap}>
           <div className={styles.title}>{eng2cht(issueName)}</div>
-          
           <div className={styles.countWrap}>
             <div className={styles.countTotal}>{data.totalCounts}</div>
             <div>{positionCountItems}</div>
           </div>
-
-          <div className={styles.cubesOuterWrap}>
-            <div style={cubes}>{records}</div>
-          </div>
+          {recordsHTML}
       </div>
     );
   }
@@ -106,4 +112,3 @@ export default class PositionSquare extends Component {
     className: 'PositionSquare'
   }
 }
-

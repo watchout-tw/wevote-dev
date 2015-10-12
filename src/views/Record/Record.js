@@ -30,7 +30,7 @@ export default class Record extends Component {
         legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
       }
   }
- 
+
   render() {
     const styles = require('./Record.scss');
     const {records, issues, legislators} = this.props;
@@ -43,7 +43,7 @@ export default class Record extends Component {
 
     const {legislatorPositions} = this.state;
     const currentLegislatorPosition = legislatorPositions[legislator.name];
-    
+
 
     let date = moment.unix(data.date);
     let question;
@@ -59,8 +59,7 @@ export default class Record extends Component {
             {data.clarificationContent}
           </div>
         )
-    
-    }else{
+    } else {
         clarification = (
           <div className={styles.clarificationContent}>沒有澄清資訊。</div>
         )
@@ -69,7 +68,7 @@ export default class Record extends Component {
     /* 立委個人資料 */
     let {name, party, partyCht, gender, age, isCurrent, constituency1, constituency2,
          isCandidate, candidateConstituency1, candidateConstituency2} = legislator;
-    
+
     if(constituency2 === "N/A")
         constituency2 = "";
     else
@@ -79,7 +78,7 @@ export default class Record extends Component {
         candidateConstituency2 = "";
     else
         candidateConstituency2 = `第${candidateConstituency2}選區`;
-    
+
     let currentInfo;
     if(isCurrent){
       currentInfo = <div className={styles.isCurrent}>第八屆立委</div>;
@@ -87,69 +86,60 @@ export default class Record extends Component {
 
     let candidateInfo;
     if(isCandidate === true){
-      candidateInfo = <div className={styles.isCandidate}>{` 2016 ${candidateConstituency1} ${candidateConstituency2} 立委候選人`}</div>;
+      candidateInfo = <div className={styles.isCandidate}>{`2016第九屆${candidateConstituency1}${candidateConstituency2}立委候選人`}</div>;
     }
 
     return (
-      <div className={styles.wrap}>
-      
-      <div className={styles.form}>
-         
-         
-         <div className={styles.issueRow}>
-              <div className={styles.issueName}>{data.issue}</div>
-              <div className={styles.issueQuestion}>{question}</div>
-         </div>    
-         
-         <div className={styles.peopleRow}>
-            <div className={styles.avatar}>
-              <PeoplePhoto id={people_name2id(data.legislator)}/>
-            </div>
 
-            <div className={styles.profileBlock}>
-                {currentInfo}
-                {candidateInfo}
-                <div className={styles.avatarName}>
-                      <div className={` ${styles["party-flag"]} ${styles[data.party]} `}></div>
-                      <Link to={`/people/${legislatorId}/records/`}
-                            className={styles.name}>{data.legislator}</Link>
-                </div>
-            </div>
-           
-         </div>
+<div className={styles.wrap}>
+  <div className={styles.form}>
+    <div className={styles.issueRow}>
+      <div className={styles.issueName}>{data.issue}</div>
+      <div className={styles.issueQuestion}>{question}</div>
+    </div>
 
-         <div className={styles.judegementRow}>
-              立場判斷
-              <div className={` ${styles.positionCube} ${styles[data.position]}`}></div>
-              {data.positionJudgement}
-         </div>
-
-         <div className={styles.recordRow}>
-            <div className={styles.content}>
-                <div className={styles.contentMeta}>
-                  <div className={styles.date}>{date.format('YYYY-MM-DD')}</div>
-                  <div className={styles.category}>{data.category}</div>
-                </div>
-                <div className={styles.contentMain}>{data.content}</div>
-                <div className={styles.partyThen}>{`（時任${eng2cht(data.party)}立委）`}</div>
-            </div>
-            <a className={styles.lyURL}
-               href={data.lyURL}
-               target="_blank" >中華民國立法院原始資料</a>
-         </div>
-
-         <div className={styles.clarifyRow}>
-            <div className={styles.clarifyTitle}>委員澄清</div>
-
-         </div>
-         {clarification}
-         <Link to={`/clarify`} className={styles.clarifyButton}>表態立場如果有解讀錯誤，歡迎委員來函澄清</Link>
-
+    <div className={styles.peopleRow}>
+      <div className={styles.avatar}><PeoplePhoto id={people_name2id(data.legislator)}/></div>
+      <div className={styles.profileBlock}>
+        {currentInfo}
+        {candidateInfo}
+        <div className={styles.avatarName}>
+          <div className={`${styles.partyFlag} ${styles[data.party]}`}></div>
+          <Link to={`/people/${legislatorId}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{data.legislator}</Link>
+        </div>
       </div>
-         <div className={styles.seeOtherIssue}>看看{data.legislator}在各個議題有什麼表態：</div>
-         <IssueGroup id={legislatorId} currentLegislatorPosition={currentLegislatorPosition}/>
+    </div>
+    <div className={styles.judegementRow}>
+      立場判斷
+      <div className={` ${styles.positionCube} ${styles[data.position]}`}></div>
+      {data.positionJudgement}
+    </div>
+
+    <div className={styles.recordRow}>
+      <div className={styles.content}>
+        <div className={styles.contentMeta}>
+          <div className={styles.date}>{date.format('YYYY-MM-DD')}</div>
+          <div className={styles.category}>{data.category}</div>
+          <div className={styles.partyThen}>{`時任${eng2cht(data.party)}立委`}</div>
+        </div>
+        <div className={styles.contentMain}>{data.content}</div>
+        <div className={styles.lyURL}><Link className={`${styles.ia} ${styles.bright}`} to={data.lyURL} target="_blank" >中華民國立法院原始資料</Link></div>
       </div>
-    );
+    </div>
+
+    <div className={styles.clarifyRow}>
+      <div className={styles.content}>
+        <div className={styles.clarifyTitle}>委員澄清</div>
+        {clarification}
+        <div className={styles.clarifyPrompt}>表態立場如有解讀錯誤，歡迎<Link to={`/clarify/`} className={`${styles.ia} ${styles.bright}`}>來函澄清</Link></div>
+      </div>
+    </div>
+  </div>
+  <div className={styles.seeOtherIssue}>看看{data.legislator}<br/>在各個議題的表態紀錄⋯</div>
+  <IssueGroup id={legislatorId} currentLegislatorPosition={currentLegislatorPosition}/>
+</div>
+
+    ); // end of return
   }
 }
 
