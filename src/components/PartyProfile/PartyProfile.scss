@@ -1,35 +1,19 @@
 @import '../../common.scss';
 .wrap {
-	display: inline-block;
+	display: block;
 }
-.name {
-	vertical-align: top;
-	padding-top: 16px;
-	margin-left: 5px;
+.partyTitle {
     text-align: center;
+    background: $trueWhite;
+    padding: 40px 0;
 }
-.party-title, .people-title {
-    text-align: center;
-    // height: 240px;
-    // background: url(./images/intitle-common.png) center bottom;
-    // background-size: cover;
-    // overflow: hidden;
-    // margin-bottom: 0px;
-    background: white;
-    padding: 30px 0 50px 0;
-    margin-bottom: 0px;
+.partyTitle h1 {
+    font-size: 40px;
+		margin: 10px 0;
 }
-.people-basic-info {
-    width: 430px;
-    margin: auto;
-    text-align: left;
-    padding: 25px 0 0 0;
-    height: 150px;
+.partyTitle p {
+    margin: 0;
 }
-
-.party-title h1 {
-    font-size: 36px;
-}
-.party-title p {
-    margin: 0px;
+.partyTitle .detail {
+	margin: 0;
 }

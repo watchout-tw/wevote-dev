@@ -113,26 +113,24 @@ export default class PeopleIssue extends Component {
 
     return (
       <div className={styles.wrap}>
-          <DocumentMeta {...metaData}/>
-          <PeopleProfile id={id} />
-
-          <div className={styles.main}>
-              <div className={styles.summary}>
-                  <div className={styles.positionSquare}>
-                    <PositionSquare issueName={issueDataName} data={positions} />
-                  </div>
-                  <div className={styles.menuBlock}>
-                      <div className={styles.menuTitle}>
-                        <Link className={`${styles.ia} ${styles.bright}`} onClick={this._toggleMenu.bind(this)}>切換議題</Link>
-                      </div>
-                      {issueMenu}
-                  </div>
+        <DocumentMeta {...metaData}/>
+        <PeopleProfile id={id} />
+        <div className={styles.main}>
+          <div className={styles.summary}>
+            <div className={styles.positionSquare}>
+              <PositionSquare issueName={issueDataName} data={positions} />
+            </div>
+            <div className={styles.menuBlock}>
+              <div className={styles.menuTitle}>
+                <Link className={`${styles.ia} ${styles.bright}`} onClick={this._toggleMenu.bind(this)}>切換議題</Link>
               </div>
-              <div className={styles.table}>
-                  <RecordTable data={positions}/>
-              </div>
-
+              {issueMenu}
+            </div>
           </div>
+          <div className={styles.table}>
+            <RecordTable data={positions}/>
+          </div>
+        </div>
       </div>
     );
   }

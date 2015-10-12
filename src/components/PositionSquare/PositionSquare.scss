@@ -7,17 +7,23 @@ $evadingColor: black;
 	display: inline-block;
 	vertical-align: top;
 }
+.wrap > * {
+	display: block;
+	margin: 0 auto;
+}
+
+$countItemWidth: 40px;
+$border: 2px solid $trueBlack;
 .title {
 	padding: 4px 4px 0;
+	width: 3*$countItemWidth + 2*2px;
 	font-size: 20px;
 	background: $trueBlack;
 	color: $trueWhite;
 }
-/* 上方，下方 */
-$countItemWidth: 40px;
 .countWrap {
 	display: inline-block;
-	border: 2px solid $trueBlack;
+	border: $border;
 	font-size: $defaultFontSize;
 	line-height: 1;
 }

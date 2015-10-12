@@ -91,6 +91,10 @@ $defaultCubeSize: 20px;
   width: 24px;
   height: 24px;
 }
+.partyFlag.large {
+  width: 74px;
+  height: 74px;
+}
 .partyFlag.KMT { background: url(images/flag-kmt.svg); }
 .partyFlag.DPP { background: url(images/flag-dpp.svg); }
 .partyFlag.GSD { background: url(images/flag-gsd.svg); }

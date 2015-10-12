@@ -26,14 +26,19 @@ $breakLarge: 1000px;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 7em;
+	//width: 7em;
+}
+@media screen and (max-width: $breakMedium) {
+	.menuBlock {
+		right: 8px;
+	}
 }
 .menuTitle, .menuTitle:visited {
 	cursor: pointer;
-	padding: 0 4px 4px;
+	padding: 0 0 4px;
 }
 .menu {
-	padding: 4px;
+	padding: 4px 0;
 	opacity: 0.75;
 }
 .menu.menuActive {
@@ -41,22 +46,22 @@ $breakLarge: 1000px;
 }
 @media screen and (min-width: $breakLarge){
 	.main {
-		padding: 40px 120px 100px 0;
+		//padding: 40px 120px 100px 0;
 	}
 	.summary {
 		display: inline-block;
 		vertical-align: top;
+		margin-right: 20px;
 	}
 	.menuBlock {
 		position: relative;
-		padding: 0 40px;
-		right: 0;
+		text-align: left;
+		margin-top: 40px;
 	}
 	.menu, .menu:visited, .menuTitle, .menuTitle:visited {
-		display: block;
+		//display: block;
 	}
 	.table {
 		display: inline-block;
 	}
-
 }

@@ -33,10 +33,10 @@ export default class PartyIssue extends Component {
           partyPositions: parseToPartyPosition(props.records, props.issues)
       }
   }
-  _toggleMenu(){  
+  _toggleMenu(){
     this.setState({ showMenu: !this.state.showMenu });
   }
-  
+
   render() {
     const styles = require('./PartyIssue.scss');
     const id = this.props.params.partyId;
@@ -45,7 +45,7 @@ export default class PartyIssue extends Component {
     const {showMenu, partyPositions} = this.state;
     const currentPartyPositions = partyPositions[id];
     const positions = currentPartyPositions.positions || {};
-    
+
 
     let issueDataName = url2eng(issueURL)
 
@@ -53,20 +53,27 @@ export default class PartyIssue extends Component {
 
     let issueMenu = (showMenu===true) ? (Object.keys(issues).map((currentIssueName,i)=>{
         let active = (issueURL === currentIssueName) ? styles.menuActive : "";
-        
+
         /// Refine 拿數字的方法
         let dataName = issues[currentIssueName].titleEng;
 
         let recordsCount = currentPartyPositions.positions[dataName].totalCounts;
 
-        return  <Link className={` ${styles.menu} ${active}`}
-                      to={`/parties/${id}/records/${currentIssueName}`} 
+        /*return  <Link className={` ${styles.menu} ${active}`}
+                      to={`/parties/${id}/records/${currentIssueName}`}
                       key={i}>
                      {` ${issues[currentIssueName].title}(${recordsCount}) `}
-                </Link>;
-        
+                </Link>;*/
+        return  <div className={`${styles.menu} ${active}`}>
+          <Link className={`${styles.ia} ${styles.black}`}
+            to={`/parties/${id}/records/${currentIssueName}`}
+            key={i}>
+            {`${issues[currentIssueName].title}─${recordsCount}`}
+          </Link>
+        </div>;
+
     })) : "";
-    
+
     let issueTitle = eng2cht(issueURL);
 
     const title = `${currentPartyPositions.name}對於${issueTitle}的表態-2016立委出任務`;
@@ -81,28 +88,29 @@ export default class PartyIssue extends Component {
             'og:description': description
           }
       }
-     
+
     };
     return (
-      <div className={styles.wrap}> 
+      <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
           <PartyProfile id={id}/>
           <div className={styles.main}>
-              <div className={styles.summary}> 
-                  <PositionSquare issueName={issueDataName}
-                                       data={position} />
-                  <div>
-                      <div className={styles.menuBlock}>
-                          <div className={styles.menuTitle}
-                               onClick={this._toggleMenu.bind(this)}>更換議題</div>
-                          {issueMenu}
-                      </div>
+            <div className={styles.summary}>
+              <div className={styles.positionSquare}>
+                <PositionSquare issueName={issueDataName} data={position}/>
+              </div>
+              <div>
+                <div className={styles.menuBlock}>
+                  <div className={styles.menuTitle}>
+                    <Link className={`${styles.ia} ${styles.bright}`} onClick={this._toggleMenu.bind(this)}>切換議題</Link>
                   </div>
+                  {issueMenu}
+                </div>
               </div>
-              <div className={styles.table}>
-                  <RecordTable data={position}/> 
-              </div>
-
+            </div>
+            <div className={styles.table}>
+              <RecordTable data={position}/>
+            </div>
           </div>
       </div>
     );
