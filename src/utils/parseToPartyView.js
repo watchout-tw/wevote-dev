@@ -66,11 +66,15 @@ function parseToPartyView_Proceed (records, currentIssue, PartyView) {
 
 			//如果這個人還沒被點到名，就點他！
 			if(hasPosition.indexOf(record.legislator)===-1){
-				hasPosition.push(record.legislator);
+				//同時這個人不是黨團
+				if(record.legislator.indexOf("黨團")===-1){
+					hasPosition.push(record.legislator);
+				}
 			}
 		})
 		//看看最後有多少人名，即是人數
 		Parties[currentParty].hasPositionCount = hasPosition.length;
+		
 
 		/** 把 records 依照時間排序 */
 		Parties[currentParty].records.sort((a,b)=>{

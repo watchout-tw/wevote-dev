@@ -107,6 +107,7 @@ export default class PartyPositionGroup extends Component {
     });
 
     let partyHasPositionPercentage = Math.round((data.hasPositionCount/parties[data.party].hasBeenCount) * 100, 0);
+    
     const layoutStyles = rectInCircleLayout(
       this.state.viewWidth,
       20,
@@ -114,8 +115,7 @@ export default class PartyPositionGroup extends Component {
       data.dominantPosition,
       partyHasPositionPercentage
     );
-
-
+   
     let userPositionItem;
     if(data.dominantPosition === userPosition){
        let imgURL = require("./images/favicon.png");
@@ -136,8 +136,11 @@ export default class PartyPositionGroup extends Component {
           
         </div>
         <div style={layoutStyles.margin}>
-          <div style={layoutStyles.circle}>
+          <div style={layoutStyles.baseCircle}>
+            <div style={layoutStyles.colorCircle} key={`${layoutStyles.colorCircle.border} ${layoutStyles.colorCircle.borderColor}`}></div>
+            <div style={layoutStyles.grayCircle} key={`${layoutStyles.grayCircle.border} ${layoutStyles.grayCircle.borderColor}`}></div>
             <div style={layoutStyles.rect}>{records}</div>
+            
           </div>
         </div>
       </div>
