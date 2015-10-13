@@ -8,6 +8,7 @@ import cht2url from '../../utils/cht2url';
 import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
+import peopleInfo from '../../utils/peopleInfo';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
@@ -71,29 +72,7 @@ export default class Record extends Component {
     /* 立委個人資料 */
     let {name, party, partyCht, gender, age, isCurrent, constituency1, constituency2,
          isCandidate, candidateConstituency1, candidateConstituency2} = legislator;
-
-    if(constituency2 === "N/A")
-        constituency2 = "";
-    else
-        constituency2 =  `第${constituency2}選區`;
-
-    if(candidateConstituency2 === "N/A")
-        candidateConstituency2 = "";
-    else
-        candidateConstituency2 = `第${candidateConstituency2}選區`;
-
-    let isCaucus = (name.indexOf('黨團') !== -1);
-    let personOrCaucus = (isCaucus ? '黨團' : '立委');
-    let currentInfo;
-    if(isCurrent) {
-      currentInfo = <div className={styles.isCurrent}>第八屆{personOrCaucus}</div>;
-    }
-
-    let candidateInfo;
-    if(!isCaucus && isCandidate) {
-      candidateInfo = <div className={styles.isCandidate}>{`2016第九屆${candidateConstituency1}${candidateConstituency2}立委候選人`}</div>;
-    }
-
+    let info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateConstituency1, candidateConstituency2);
 
     /* 來源資料 */
     let lySourceItem = (data.lyURL) ? (
@@ -104,10 +83,8 @@ export default class Record extends Component {
         <div className={styles.lyURL}>
           <a className={`${styles.ia} ${styles.bright}`} href={data.otherSourceURL} target="_blank" >{data.otherSourceTitle}</a>
         </div>) : "";
-    
+
     let sourceItem = <div>{lySourceItem}{otherSourceItem}</div>;
-
-
 
     return (
 
@@ -117,12 +94,12 @@ export default class Record extends Component {
           <div className={styles.issueName}>{data.issue}</div>
           <div className={styles.issueQuestion}>{question}</div>
         </div>
-    
+
         <div className={styles.peopleRow}>
           <div className={styles.avatar}><PeoplePhoto id={people_name2id(data.legislator)}/></div>
           <div className={styles.profileBlock}>
-            {currentInfo}
-            {candidateInfo}
+            <div className={styles.isCurrent}>{info.legislatorTitle}</div>
+            <div className={styles.isCandidate}>{info.candidateTitle}</div>
             <div className={styles.avatarName}>
               <Link to={`/people/${legislatorId}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{data.legislator}</Link>
               <div className={styles.party}>
@@ -134,22 +111,22 @@ export default class Record extends Component {
         </div>
         <div className={styles.judegementRow}>
           立場判斷
-          <div className={` ${styles.positionCube} ${styles[data.position]}`}></div>
+          <div className={`${styles.positionCube} ${styles[data.position]}`}></div>
           {data.positionJudgement}
         </div>
-    
+
         <div className={styles.recordRow}>
           <div className={styles.content}>
             <div className={styles.contentMeta}>
               <div className={styles.date}>{date.format('YYYY-MM-DD')}</div>
               <div className={styles.category}>{data.category}</div>
-              <div className={styles.partyThen}>{(isCaucus ? '' : `${data.legislator}為時任${eng2cht(data.party)}立委`)}</div>
+              <div className={styles.partyThen}>{(info.isCaucus ? '' : `${data.legislator}為時任${eng2cht(data.party)}立委`)}</div>
             </div>
             <div className={styles.contentMain}>{data.content}</div>
             {sourceItem}
           </div>
         </div>
-    
+
         <div className={styles.clarifyRow}>
           <div className={styles.content}>
             <div className={styles.clarifyTitle}>委員澄清</div>
@@ -161,9 +138,7 @@ export default class Record extends Component {
       <div className={styles.seeOtherIssue}>看看{data.legislator}<br/>在各個議題的表態紀錄⋯</div>
       <IssueGroup id={legislatorId} currentLegislatorPosition={currentLegislatorPosition}/>
     </div>
-    
+
     ); // end of return
   }
 }
-
-
