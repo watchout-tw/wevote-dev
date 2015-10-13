@@ -12,12 +12,16 @@
   top: 80px;
 }
 @media screen and (min-width: $appBarBreakLarge) {
+  .bgWrap {
+    height: 50vw;
+  }
   .bgGif {
     top: 04px;
   }
 }
 
-.coverText {
+.coverTextBlock {
+  position: absolute;
 	width: 100%;
 	top: 0;
 	height: 57vw;
@@ -30,27 +34,75 @@
     font-weight: 800;
     line-height: 1.6;
     text-shadow: 1px 1px 10px #29ABE2;
+    position: relative;
+    width: 100%;
 }
-.playButton {
+.coverTitleMain { 
+    width: 90%;
+    margin-top: 45vw;
+}
+.diffTensImg {
+    position: absolute;
+    top: 48.7vw;
+    width: 5%;
+    right: 21.5vw;
+}
+.diffOnesImg {
+    position: absolute;
+    top: 47.5vw;
+    width: 5%;
+    right: 16.4vw;
+}
+.storyBeginsHereImg {
     cursor: pointer;
-    display: inline-block;
-    margin: -20px auto 0 auto;
-    font-size: 60px;
-    text-shadow: none;   
+    cursor: pointer;
+    width: 70%;
+    margin-left: 5%;
+    @include prefix(filter, drop-shadow(0 0 15px rgba(100, 255, 255, 0.75)));
 }
-.playButton:hover {
-    color: #29ABE2;
+.storyBeginsHereImg:hover {
+    @include prefix(filter, drop-shadow(0 0 10px rgba(200, 255, 255, 0.75)));
+}
+.missionImg {
+    width: 60%;
+    margin-top: 10px;
+    padding: 0 10px;
+    background: rgb(156, 5, 5);
+    @include prefix(filter, drop-shadow(0 0 10px rgba(200, 255, 255, 0.75)));
+
 }
 @media all and (min-width: $appBarBreakLarge) {
-    .coverText {
-      padding-top: 150px;
+    .coverTitleMain { 
+        width: 40%;
+        margin-top: 13vw;
     }
-    .coverTitle {
-      font-size: 46px;
+    .diffTensImg {
+        position: absolute;
+        top: 14.8vw;
+        width: 1.8%;
+        right: 37.5vw;
     }
-    .playButton {
-      font-size: 120px;
-      margin: 0 auto;
+    .diffOnesImg {
+        position: absolute;
+        top: 14.4vw;
+        width: 1.8%;
+        right: 35.7vw;
+    }
+    .storyBeginsHereImg {
+        width: 30%;
+        margin-left: 2.8%;
+    }
+    .missionImg {
+        width: 17%;
+        margin: -20px auto 0 auto;
+        display: block;
+        padding: 0;
+        background: none;
+        cursor: pointer;
+        @include prefix(filter, drop-shadow(0 0 15px rgba(200, 255, 255, 0.75)));
+    }
+    .missionImg:hover {
+        @include prefix(filter, drop-shadow(0 0 10px rgba(150, 255, 255, 0.75)));
     }
 }
 

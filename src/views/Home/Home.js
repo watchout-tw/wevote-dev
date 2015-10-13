@@ -36,7 +36,6 @@ export default class Home extends Component {
           <Video />
           <div className={styles.contentWrap}>
               <div className={styles.innerWrap}>
-                  <div className={styles.pageTitle}>立即選擇任務</div>
                   <Missions issues={issues}
                             showComingMission={true}/>
     
