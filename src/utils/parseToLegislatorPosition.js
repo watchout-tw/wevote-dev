@@ -139,18 +139,18 @@ function parseToLegislatorPosition_Proceed(records, currentIssue, issues, legisl
         Legislators[currentLegislator].positionCounts = [];
         
         Legislators[currentLegislator].positionCounts.push({
-            "position" : "nay",
-            "count" : count.nay
+            "position" : "aye",
+            "count" : count.aye
         })
-
+        
         Legislators[currentLegislator].positionCounts.push({
             "position" : "unknown",
             "count" : count.unknown
         })
-        
+     
         Legislators[currentLegislator].positionCounts.push({
-            "position" : "aye",
-            "count" : count.aye
+            "position" : "nay",
+            "count" : count.nay
         })
 
         Legislators[currentLegislator].totalCounts = Legislators[currentLegislator].records.length;
