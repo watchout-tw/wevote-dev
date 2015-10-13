@@ -89,12 +89,12 @@ export default class AnimatedScript extends Component {
   _setStage(props){
     const {stage, shouldAnimated, issue, handleNext, userPosition} = props;
     const {currentScript} = this.state;
-    console.log("[AnimatedScript - set stage]");
+    //console.log("[AnimatedScript - set stage]");
 
     let data;
     switch(stage){
        case 'intro':
-          console.log("-intro");
+          //console.log("-intro");
           data = this._generateIntroLines(issue);
           this.setState({
               firstLine: data.firstLine,
@@ -139,7 +139,7 @@ export default class AnimatedScript extends Component {
           break;
 
       case 'chooseSlides':
-          console.log("-chooseSlides")
+          //console.log("-chooseSlides")
           this.setState({
               firstLine: ""
           })
@@ -148,7 +148,7 @@ export default class AnimatedScript extends Component {
           break;
 
       case 'slides':
-          console.log("-slides")
+          //console.log("-slides")
           this.setState({
               firstLine: ""
           })
@@ -157,7 +157,7 @@ export default class AnimatedScript extends Component {
           break;
 
       case 'choosePosition':
-          console.log("-choosePosition")
+          //console.log("-choosePosition")
           this.setState({
               firstLine: "",
               resultLinePlayed: false
@@ -167,7 +167,7 @@ export default class AnimatedScript extends Component {
           break;
 
       case 'results':
-          console.log("-results")
+          //console.log("-results")
           this.setState({
               firstLine: ""
           })
@@ -184,7 +184,7 @@ export default class AnimatedScript extends Component {
           break;
 
       case 'others':
-          console.log("-ohters")
+          //console.log("-ohters")
           this.setState({
             firstLine: "",
             resultLinePlayed: false
@@ -195,7 +195,7 @@ export default class AnimatedScript extends Component {
           break;
 
       default:
-          console.log("-default x")
+          //console.log("-default x")
           break;
 
     }
@@ -204,7 +204,7 @@ export default class AnimatedScript extends Component {
      this._setStage(this.props);
   }
   componentWillReceiveProps(nextProps){
-      console.log("componentWillReceiveProps");
+      //console.log("componentWillReceiveProps");
       if(this.props.issue !== nextProps.issue){
          this._clearTimeoutScript();
       }
@@ -216,10 +216,6 @@ export default class AnimatedScript extends Component {
     const styles = require('./AnimatedScript.scss');
     const { lines, currentLineIndex, firstLine, breakLines }  = this.state;
     const { shouldAnimated, showNext, stage, handleNext } = this.props;
-
-    console.log("=== render ====")
-    console.log("firstLine > "+firstLine)
-    console.log("stage > "+stage)
 
     let firstLineItem;
     if(firstLine){
@@ -252,7 +248,7 @@ export default class AnimatedScript extends Component {
           paragraphBreaks = (breakLines.indexOf(index)!==-1)? <div><br/></div> : "";
 
         return(
-          <div>
+          <div key={index}>
             {paragraphBreaks}
             <div className={` ${styles.cssTyping} ${animationClass} `}
                  key={index}>
@@ -265,7 +261,8 @@ export default class AnimatedScript extends Component {
 
         )
     });
-    let optionButton = (showNext) ? (
+    
+    let optionButton = (showNext===true) ? (
       <div className={styles.actionButtons}>
         <div className={styles.arrowRight}
              onClick={handleNext.bind(null)}></div>

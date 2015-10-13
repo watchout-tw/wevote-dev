@@ -48,28 +48,35 @@ export default class InteractiveIssue extends Component {
   }
 
   componentDidMount(){
-      console.log("mount - InteractiveIssue")
+      window.addEventListener('keydown', this._handleKeyDown.bind(this));
+      this._updateCurrentIssueFromURL();
+  }
+
+  componentWillUnmount() {
+      window.removeEventListener('keydown', this._handleKeyDown.bind(this));
+  }
+
+  _updateCurrentIssueFromURL(){
       if(window){
         let pathname = window.location.pathname;
-        console.log(pathname)
+        
         if(pathname.indexOf(".html")!==-1){
            pathname = pathname.split(".html")[0]
         }
         pathname = pathname.split("/");
-        console.log(pathname)
+        
+        let value = pathname[3] || "parties";
+        if(["parties","legislators","positions"].indexOf(value)===-1){
+           value = "parties";
+        }
         this.setState({
           currentIssueName: pathname[2],
-          currentView: pathname[3] || "parties"
+          currentView: value
 
         })
-        console.log("*")
-        console.log(this.state)
+        
       }
 
-      window.addEventListener('keydown', this._handleKeyDown.bind(this));
-  }
-  componentWillUnmount() {
-      window.removeEventListener('keydown', this._handleKeyDown.bind(this));
   }
 
   _handleKeyDown(e){
@@ -151,7 +158,7 @@ export default class InteractiveIssue extends Component {
   }
   _handleChoice(choice){
     const {stage} = this.state;
-    console.log("[ handle choice ]")
+    //console.log("[ handle choice ]")
 
     switch(stage){
         case 'chooseSlides':
@@ -174,6 +181,7 @@ export default class InteractiveIssue extends Component {
               })
               let {currentIssueName} = this.props;
               this.props.handleCompleted(currentIssueName);
+              this.props.handleSetUserPosition(currentIssueName, "aye");
               this._handleSetStage("results");
           }
           if(choice===N){
@@ -182,6 +190,7 @@ export default class InteractiveIssue extends Component {
               })
               let {currentIssueName} = this.props;
               this.props.handleCompleted(currentIssueName);
+              this.props.handleSetUserPosition(currentIssueName, "nay")
               this._handleSetStage("results");
           }
           if(choice===S){
@@ -238,21 +247,19 @@ export default class InteractiveIssue extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    //取消這個的話，結束一個任務，再選擇時，不會重load。
+    
     const {issues} = this.props;
     const currentIssueName = this.props.currentIssueName;
     const nextIssueName = nextProps.currentIssueName
-    console.log("currentIssueName:"+currentIssueName)
-    console.log("nextIssueName:"+nextIssueName)
-
+    
+    //RESET stage parameter when change issue
     if(currentIssueName !== nextIssueName){
 
         const nextIssue = issues[nextIssueName];
-        console.log("RESET STAGE PARAMETERS")
+        //結束一個任務時，重新設定互動 state
 
         this.props.handleUpdateStage("intro");
-
-        this.state = {
+        this.setState({
             stage: "intro",
             shouldAnimated: true,
             showNext: true,
@@ -261,7 +268,14 @@ export default class InteractiveIssue extends Component {
 
             currentIssueName: nextProps.currentIssueName,
             currentView: nextProps.currentView
-        }
+        })
+
+    }else{
+        // Always update current issue name and current view
+        this.setState({
+            currentIssueName: nextProps.currentIssueName,
+            currentView: nextProps.currentView
+        })
     }
   }
 
@@ -272,15 +286,15 @@ export default class InteractiveIssue extends Component {
       const {issues, skipInteractive, setCurrentView} = this.props;
       const {stage, shouldAnimated, showNext, showSlides, userPosition,
              currentIssueName, currentView } = this.state;
-
-
+      
       // 拿該議題的資料
       const currentIssue = issues[currentIssueName];
+      if(!currentIssue) return <div></div>
 
-
-      console.log("==== RENDER:"+stage+"=====");
+      
 
       let notFirstPage = ((stage !== "intro") && (stage !=="introStory"));
+      
       //back
       let backItem = (notFirstPage) ? (
               <div className={styles.backStage}
@@ -301,13 +315,13 @@ export default class InteractiveIssue extends Component {
       let introItemMobile = (
           <div className={styles.mobileHint}>
                <div className={styles.actionButton} onClick={this._handleNext.bind(this)}>繼續</div>
-               <div className={styles.skipInteractive}><Link className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</Link></div>
+               <div className={styles.skipInteractive}><a className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</a></div>
           </div>
       );
       // Only used in web (>800px)
       let introItemWeb = (
           <div className={styles.keyboardHint}>按空白鍵繼續──或──
-            <div className={styles.skipInteractive}><Link className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</Link></div>
+            <div className={styles.skipInteractive}><a className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</a></div>
           </div>
       )
 
@@ -316,6 +330,7 @@ export default class InteractiveIssue extends Component {
       let slidesItem = (showSlides === true) ? <Slideshow currentIssue={currentIssue} topic={currentIssue.title}/> : "";
 
       // 協力 NGO
+     
       const { collaborators } = currentIssue;
       let collaboratorItems = collaborators.map((ngo, index)=>{
           return <a className={`${styles.ia} ${styles.bright}`}
@@ -389,6 +404,7 @@ export default class InteractiveIssue extends Component {
         default:
           //op
       }
+     
       return (
         <div className={styles.wrap}>
             <div className={styles.innerWrap}>

@@ -28,7 +28,7 @@ export default class Video extends Component {
     const {playVideo} = this.state;
     const youtubeId = "5dSckWGmybo";
     const bgYoutubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&loop=1&playlist=${youtubeId}&controls=0&showinfo=0&autohide=1&rel=0`;
-    const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&controls=0&showinfo=0&autohide=1&rel=0`;
+    const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&showinfo=0&rel=0&playlist=${youtubeId}`;
     
     let playingFullScreen = (playVideo === true) ? (
         <div className={styles.playingSection }>
@@ -38,7 +38,7 @@ export default class Video extends Component {
                 <div className={styles.closeText}>關閉影片</div>
             </div>
             <div className={styles.iframWrap}>
-                <iframe frameborder="0" height="100%" width="100%" 
+                <iframe frameBorder="0" height="100%" width="100%" 
                         src={youtubeURL}>
                 </iframe>
             </div>
@@ -49,7 +49,7 @@ export default class Video extends Component {
       	    {playingFullScreen}
 
             <div className={styles.bgIframWrap}>
-                <iframe frameborder="0" height="100%" width="100%" 
+                <iframe frameBorder="0" height="100%" width="100%" 
                         src={bgYoutubeURL}>
                 </iframe>
             </div>

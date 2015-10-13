@@ -11,7 +11,7 @@ const initialState =
         "positionJudgement": "贊成同性婚姻合法化",
         "position": "aye",
         "clarificationContent": "假的澄清內容假的澄清內容假的澄清內容假的澄清內容假的澄清內容假的澄清內容",
-        "clarificationLastUpdate": "2015/5/11",
+        "clarificationLastUpdate": 1431273600,
         "lyURL": "http://lci.ly.gov.tw/LyLCEW/communique1/final/pdf/101/32/LCIDC01_1013201.pdf",
         "meeting": "院會",
         "meetingCategory": "院會書面質詢"

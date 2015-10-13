@@ -38,7 +38,6 @@ export default class About extends Component {
           <FAQ />
       </div>
     );
-    //https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Cc-by-nc-sa_euro_icon.svg/1024px-Cc-by-nc-sa_euro_icon.svg.png
     let ccBadge = require('./images/cc.svg');
     let termsBlock = (
       <div className={styles.content}>
@@ -68,18 +67,22 @@ export default class About extends Component {
 
     let metaData = {};
 
+    let title, description;
+
     switch(tabName){
 
       case 'FAQ':
           mainContent = FAQBlock;
+          title = `問答-沃草2016立委出任務`;
+          description =  `「2016立委出任務」的資料來源、整理方式、議題挑選，以及小編們整理「2016立委出任務」資料的種種血淚。`;
           metaData = {
-            title: `資料來源說明-2016立委出任務-2016立委投票資訊站`,
-            description: `「2016立委出任務」的資料來源、整理方式、議題挑選，以及小編們整理「2016立委出任務」資料的種種血淚。`,
+            title: title,
+            description: description,
             meta: {
                 charSet: 'utf-8',
                 property: {
-                  'og:title': `資料來源說明-2016立委出任務-2016立委投票資訊站`,
-                  'og:description': `「2016立委出任務」的資料來源、整理方式、議題挑選，以及小編們整理「2016立委出任務」資料的種種血淚。`
+                  'og:title': title,
+                  'og:description': description
                 }
             }
           };
@@ -87,14 +90,17 @@ export default class About extends Component {
 
       case 'statement':
           mainContent = termsBlock;
+          title = `聲明-沃草2016立委出任務`;
+          description =  `關於「2016立委出任務」內容資料之著作權聲明。`;
+          
           metaData = {
-            title: `著作權聲明-2016立委出任務-2016立委投票資訊站`,
-            description: `關於「2016立委出任務」內容資料之著作權聲明。`,
+            title: title,
+            description: description,
             meta: {
                 charSet: 'utf-8',
                 property: {
-                  'og:title': `著作權聲明-2016立委出任務-2016立委投票資訊站`,
-                  'og:description': `關於「2016立委出任務」內容資料之著作權聲明。`
+                  'og:title': title,
+                  'og:description': description
                 }
             }
           };
@@ -102,14 +108,17 @@ export default class About extends Component {
 
       default:
           mainContent = aboutBlock;
+          title = `關於-沃草2016立委出任務`;
+          description = `「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委針對議題在立院說了什麽以及表決了什麽。並彙整下任立委候選人針對這些重大議題的立場。我們希望透過整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委出任務」希望能夠做到更多的資訊揭露，改變台灣民主政治。`;
+          
           metaData = {
-            title: `關於立委出任務-2016立委出任務-2016立委投票資訊站`,
-            description: `「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委針對議題在立院說了什麽以及表決了什麽。並彙整下任立委候選人針對這些重大議題的立場。我們希望透過整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委出任務」希望能夠做到更多的資訊揭露，改變台灣民主政治。`,
+            title: title,
+            description: description,
             meta: {
                 charSet: 'utf-8',
                 property: {
-                  'og:title': `關於立委出任務-2016立委出任務-2016立委投票資訊站`,
-                  'og:description': `「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委針對議題在立院說了什麽以及表決了什麽。並彙整下任立委候選人針對這些重大議題的立場。我們希望透過整理分析第八屆立委對重大議題的表態立場，提供選民了解候選人的價值理念。 「2016立委出任務」希望能夠做到更多的資訊揭露，改變台灣民主政治。`
+                  'og:title': title,
+                  'og:description': description
                 }
             }
           };
@@ -127,7 +136,7 @@ export default class About extends Component {
             <div className={styles.aboutImage}></div>
             <div className={styles.aboutTitle}><img src={about_title_1}/><img src={about_title_2}/></div>
             <ul className={styles.innerTag}>
-                <li><Link to={`/about`} className = { tabName==="about" ? styles.active : ""}>關於</Link></li>
+                <li><Link to={`/about/`} className = { tabName==="about" ? styles.active : ""}>關於</Link></li>
                 <li><Link to={`/about/FAQ`} className = { tabName==="FAQ" ? styles.active : ""}>問答</Link></li>
                 <li><Link to={`/about/statement`} className = { tabName==="statement" ? styles.active : ""}>聲明</Link></li>
             </ul>
