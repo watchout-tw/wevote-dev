@@ -84,6 +84,7 @@ $border: 2px solid $trueBlack;
 		@include inline-middle;
 	}
 	.profileBlock {
+		max-width: calc(100% - 140px); // avatar width 120px + 20px margin
 		margin-left: 20px;
 		text-align: left;
 	}
