@@ -144,7 +144,7 @@ export default class PositionLegislatorGroup extends Component {
     if(data.position === userPosition){
        userPositionItem = 
         <div className={styles.userPositionBlock}>
-            <div className={styles.userPositionText}>與你立場相同</div> 
+            <div className={styles.userPositionText}>你的立場</div> 
         </div>
     }
 
