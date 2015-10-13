@@ -1,7 +1,7 @@
 import position2color from './position2color';
 
 
-export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position, hasPositionPercentage) {
+export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position, hasPositionPercentage, positionPercentages) {
   let outerMarginTop = 20;
   let outerMarginLeft = 40;
 
@@ -44,41 +44,96 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     toTranslate = `translateX(-${toTranslate}px)`;
   }
 
-  // 計算 arc
+  /////////////////////////////
+  //*----- 計算 arc ---------*/
+  ////////////////////////////
 
+  // 總共的，給灰色用
   let degree = (hasPositionPercentage/100*360);
   let colorLevel = Math.ceil( degree/90);
-  // 一個 arc 90 度，有幾個 arc 要是彩色，預設是 1 ，每多 90 度要多一個 arc
 
-  let colorCircleBorder = ["gray","gray","gray","gray"];
+  // 個別顏色的
+  let colorCircleBorder = [];
+
+  // 一個 arc 90 度，有幾個 arc 要是彩色，預設是 1 ，每多 90 度要多一個 arc
+  // 計算每個立場有幾個彩度
+  // 計算 rotate 度數 = 45 + 之前總和 (不包括自己)
+
+  let colorRotateStyle = [];
+  let sum = 0;
+
+  // 其他兩個畫面並不需要算不同顏色的 arcs
+  if(!positionPercentages)
+     positionPercentages = [];
+
+  positionPercentages.map((value,index)=>{
+
+     let d = (value.percentage/100 * hasPositionPercentage/100 * 360);
+     let c = Math.ceil( d/90);
+     value.colorLevel = c;
+
+     colorRotateStyle.push(45+sum);
+
+     sum+=d;
+  })
+
+  positionPercentages.map((value,index)=>{
+      //第一個顏色圈，負責補底色
+      let borderColor = ["gray","gray","gray","gray"];
+      if(index > 0){
+        borderColor = ["transparent","transparent","transparent","transparent"];
+      }
+
+      for(let i = 0; i<4; i++){
+          if(i<value.colorLevel){
+             borderColor[i] = position2color(value.position);
+          }
+      }
+      colorCircleBorder.push(borderColor);
+  })
+
+
+  //gray circle
   let grayCircleBorder = ["transparent","transparent","transparent","transparent"];
+  let grayRotateDegree = 45+degree%90;
 
   for(let i = 0; i<4; i++){
-      if(i<colorLevel){
-          colorCircleBorder[i] = position2color(position);
-      }
-      if((i+1 === colorLevel)&&((hasPositionPercentage/100*360)%90 !== 0 )){
-          grayCircleBorder[i] = "gray";
+      if(i+1 === colorLevel){
+          if(degree%90 !==0){
+              grayCircleBorder[i] = "gray";
+          }else{
+              grayCircleBorder[i+1] = "gray";
+          }
+
       }
   }
 
-  let grayRotateDegree = 45+hasPositionPercentage;
-
+  //第四個 arc 換色
   if((colorLevel === 4)&&(degree!==360)){
-    //gray 的第四個 arc 要換色
-    colorCircleBorder[3] = "gray";
+    //第三個彩色圈的第四個 arc 要換色
+    colorCircleBorder[2][3] = "transparent";
     grayCircleBorder[3] = position2color(position);
+
     //rorate 要改，最後的 90 依照比例倒退嚕
     grayRotateDegree = 45-( (90-(degree-270))/90 *45);
   }
 
-  let colorCircleBorderStyle = `${colorCircleBorder[0]} ${colorCircleBorder[1]} ${colorCircleBorder[2]} ${colorCircleBorder[3]}`;
+
+  // 以下是要給出去的 inline style
+  let colorCircleBorderStyle = [];
+
+  colorCircleBorder.map((key,index)=>{
+      colorCircleBorderStyle.push(`${colorCircleBorder[index][0]} ${colorCircleBorder[index][1]} ${colorCircleBorder[index][2]} ${colorCircleBorder[index][3]}`)
+  })
+
+
   let grayCircleBorderStyle = `${grayCircleBorder[0]} ${grayCircleBorder[1]} ${grayCircleBorder[2]} ${grayCircleBorder[3]}`;
 
   // 算inline styles
   let marginStyles = {
     margin: `${outerMarginTop}px ${outerMarginLeft}px`,
   }
+  // 這是一般用
   let circleStyles = {
     display: 'inline-block',
     verticalAlign: 'middle',
@@ -91,7 +146,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     transform: toTranslate,
   }
 
-  // 以下三組 circle 是為了 arc
+  // 以下 circle 是為了 arc
   let baseCircleStyles = {
     display: 'inline-block',
     verticalAlign: 'middle',
@@ -102,7 +157,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     borderRadius: '50%',
     transform: toTranslate,
   }
-  let colorCircleStyles = {
+  let colorCircleStylesA = {
     display: 'inline-block',
     verticalAlign: 'middle',
     position: 'absolute',
@@ -111,9 +166,35 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     width: diameter + borderWidth*2,
     height: diameter + borderWidth*2,
     border: `${borderWidth}px solid`,
-    borderColor: colorCircleBorderStyle,
+    borderColor: colorCircleBorderStyle[0],
     borderRadius: '50%',
-    transform: 'rotate(45deg)'
+    transform: `rotate(${colorRotateStyle[0]}deg)`
+  }
+  let colorCircleStylesB = {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    position: 'absolute',
+    top: `-${borderWidth}px`,
+    left: `-${borderWidth}px`,
+    width: diameter + borderWidth*2,
+    height: diameter + borderWidth*2,
+    border: `${borderWidth}px solid`,
+    borderColor: colorCircleBorderStyle[1],
+    borderRadius: '50%',
+    transform: `rotate(${colorRotateStyle[1]}deg)`
+  }
+  let colorCircleStylesC = {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    position: 'absolute',
+    top: `-${borderWidth}px`,
+    left: `-${borderWidth}px`,
+    width: diameter + borderWidth*2,
+    height: diameter + borderWidth*2,
+    border: `${borderWidth}px solid`,
+    borderColor: colorCircleBorderStyle[2],
+    borderRadius: '50%',
+    transform: `rotate(${colorRotateStyle[2]}deg)`
   }
   let grayCircleStyles = {
     display: 'inline-block',
@@ -135,13 +216,32 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     width: rectWidth,
     height: rectHeight,
   }
-  //// TODO ARC
+
+
+  // 如果是百分百表態，要先畫最多數，再用少數蓋
+  // 並且如果全部是灰的，把顏色改成 transparent
+  let finalA = colorCircleStylesA;
+  let finalB = colorCircleStylesB;
+  let finalC = colorCircleStylesC;
+  if(hasPositionPercentage === 100){
+    finalA = colorCircleStylesC; //最多數
+
+    finalB = colorCircleStylesB; //次多數，可能沒有
+    if( colorCircleStylesB.borderColor === "gray gray gray gray")
+        finalB.borderColor = "transparent";
+
+    finalC = colorCircleStylesA; //第三多數，可能沒有
+    if( colorCircleStylesA.borderColor === "gray gray gray gray")
+        finalC.borderColor = "transparent";
+  }
 
   return {
     margin: marginStyles,
     circle: circleStyles,
     baseCircle: baseCircleStyles,
-    colorCircle: colorCircleStyles,
+    colorCircleA: finalA,
+    colorCircleB: finalB,
+    colorCircleC: finalC,
     grayCircle: grayCircleStyles,
     rect: rectStyles
   }

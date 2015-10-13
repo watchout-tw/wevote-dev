@@ -6,6 +6,8 @@ export default function eng2cht(input){
         return '反對';
       case 'unknown':
         return '模糊';
+      case 'none':
+        return '沒有';
       
       case 'KMT':
         return '中國國民黨';
@@ -35,10 +37,10 @@ export default function eng2cht(input){
         return '公投';
 
       case 'nuclearPower':
-        return '核四';
+        return '核能';
         
       case 'nuclear-power':
-        return '核四';
+        return '核能';
       
       default:
       	return '<>找不到<>'+input;

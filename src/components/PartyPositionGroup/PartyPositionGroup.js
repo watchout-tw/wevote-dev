@@ -105,19 +105,43 @@ export default class PartyPositionGroup extends Component {
       return <Record data={item}
                      key={index} />
     });
+    
 
+    // 處理有多少人曾經表態，表態做主要的立場為何
+    let partyPercentageItem;
     let partyHasPositionPercentage = Math.round((data.hasPositionCount/parties[data.party].hasBeenCount) * 100, 0);
+    partyPercentageItem = (
+      <div>
+        <div className={styles.metaTitle}>{`${partyHasPositionPercentage}%的立委曾經表態`}</div>
+        <div className={styles.metaTitle}>表態紀錄中{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
+      </div>
+    )
+
+    if(data.hasPositionCount === 0){// 沒有任何表態紀錄
+       partyHasPositionPercentage = 0;
+       partyPercentageItem = (
+          <div>
+             <div className={styles.metaTitle}>{`${partyHasPositionPercentage}%的立委曾經表態`}</div>
+          </div>
+       )
+    }
+
+   
     
     const layoutStyles = rectInCircleLayout(
       this.state.viewWidth,
       20,
       this.props.data.records.length,
       data.dominantPosition,
-      partyHasPositionPercentage
+      partyHasPositionPercentage,
+      data.positionPercentages
     );
+
+   
    
     let userPositionItem;
-    if(data.dominantPosition === userPosition){
+    if( data.dominantPosition === userPosition && 
+        (data.dominantPosition === "aye" || data.dominantPosition === "nay")){
        
        userPositionItem = 
         <div className={styles.userPositionBlock}>
@@ -128,15 +152,18 @@ export default class PartyPositionGroup extends Component {
     return (
       <div className={styles.wrap}>
         <div className={styles.header}>
-          {userPositionItem}
+          { userPositionItem }
           <Link to={`/parties/${data.party}/records/${issueURL}`} className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}>{partyTitle}</Link>
-          <div className={styles.metaTitle}>{`${partyHasPositionPercentage}%的立委曾經表態`}</div>
-          <div className={styles.metaTitle}>表態紀錄中{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
+          
+          { partyPercentageItem }
           
         </div>
         <div style={layoutStyles.margin}>
           <div style={layoutStyles.baseCircle}>
-            <div style={layoutStyles.colorCircle} key={`${layoutStyles.colorCircle.border} ${layoutStyles.colorCircle.borderColor}`}></div>
+            <div style={layoutStyles.colorCircleA} key={`${layoutStyles.colorCircleA.border} ${layoutStyles.colorCircleA.borderColor}`}></div>
+            <div style={layoutStyles.colorCircleB} key={`${layoutStyles.colorCircleB.border} ${layoutStyles.colorCircleB.borderColor}`}></div>
+            <div style={layoutStyles.colorCircleC} key={`${layoutStyles.colorCircleC.border} ${layoutStyles.colorCircleC.borderColor}`}></div>
+            
             <div style={layoutStyles.grayCircle} key={`${layoutStyles.grayCircle.border} ${layoutStyles.grayCircle.borderColor}`}></div>
             <div style={layoutStyles.rect}>{records}</div>
             

@@ -40,8 +40,7 @@ function parseToPartyPosition_Proceed (records, issues, currentIssue, PartyPosit
 		{   
 			"id": "TSU",
 			"name":'台灣團結聯盟'
-		}
-		,
+		},
 		{
 			"id": "PFP",
 			"name":'親民黨'
@@ -49,6 +48,10 @@ function parseToPartyPosition_Proceed (records, issues, currentIssue, PartyPosit
 		{
 			"id": "NSU",
 			"name":'無黨團結聯盟'
+		},
+		{
+			"id": "MKT",
+			"name":'民國黨'
 		},
 		{
 			"id": "NONE",
@@ -112,8 +115,8 @@ function parseToPartyPosition_Proceed (records, issues, currentIssue, PartyPosit
 		Parties[currentParty].positionCounts = [];
 		
 		Parties[currentParty].positionCounts.push({
-			"position" : "nay",
-			"count" : count.nay
+			"position" : "aye",
+			"count" : count.aye
 		})
 
 		Parties[currentParty].positionCounts.push({
@@ -122,8 +125,8 @@ function parseToPartyPosition_Proceed (records, issues, currentIssue, PartyPosit
 		})
 		
 		Parties[currentParty].positionCounts.push({
-			"position" : "aye",
-			"count" : count.aye
+			"position" : "nay",
+			"count" : count.nay
 		})
 
 		Parties[currentParty].totalCounts = Parties[currentParty].records.length;

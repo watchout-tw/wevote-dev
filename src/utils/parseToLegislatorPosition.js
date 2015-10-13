@@ -82,8 +82,37 @@ function parseToLegislatorPosition_Proceed(records, currentIssue, issues, legisl
         countSort.sort((a,b)=>{
           return b.count-a.count;
         });
-    
+
+        /* 處理最高表態數相同狀況 */
+        /*
+            如果有模糊 + 贊成，就算贊成
+            如果有模糊 + 反對，就算反對
+            如果贊成反對同時都有，就算模糊
+        */
+        let maxCount = countSort[0].count;
+        let maximumClub = [];
+        countSort.map((value,index)=>{
+            if(value.count === maxCount){
+                maximumClub.push(value.position);
+            }
+        })
+
         Legislators[currentLegislator].dominantPosition = countSort[0].position;
+        if(maximumClub.size > 1){
+            let hasAye = (maximumClub.indexOf("aye") !== -1);
+            let hasNay = (maximumClub.indexOf("nay") !== -1);
+            let hasUnknown = (maximumClub.indexOf("unknown") !== -1);
+            if(hasAye && !hasNay && hasUnknown){
+                Legislators[currentLegislator].dominantPosition = "aye";
+            }
+            if(!hasAye && hasNay && hasUnknown){
+                Legislators[currentLegislator].dominantPosition = "nay";
+            }
+            if(hasAye && hasNay){
+                Legislators[currentLegislator].dominantPosition = "unknown";
+            }
+
+        }
         
        
         //如果最高票是 0 票
@@ -110,18 +139,18 @@ function parseToLegislatorPosition_Proceed(records, currentIssue, issues, legisl
         Legislators[currentLegislator].positionCounts = [];
         
         Legislators[currentLegislator].positionCounts.push({
-            "position" : "nay",
-            "count" : count.nay
+            "position" : "aye",
+            "count" : count.aye
         })
-
+        
         Legislators[currentLegislator].positionCounts.push({
             "position" : "unknown",
             "count" : count.unknown
         })
-        
+     
         Legislators[currentLegislator].positionCounts.push({
-            "position" : "aye",
-            "count" : count.aye
+            "position" : "nay",
+            "count" : count.nay
         })
 
         Legislators[currentLegislator].totalCounts = Legislators[currentLegislator].records.length;

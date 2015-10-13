@@ -1,41 +1,30 @@
 @import '../../common.scss';
-
-.videoWrap {
+.bgWrap {
 	width: 100%;
-	height: 54vw;
+	height: 116vw;
 	overflow: hidden;
 }
-.bgIframWrap {
-  position: fixed; 
+.bgGif {
   width: 100%; 
-  height: calc(57vw - 4px);
   z-index: -1000;
   overflow: hidden;
   background-size: cover;
   top: 80px;
 }
-.videoFilter {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: -900;
-  height: 100%;
-  background: rgba(23, 21, 21, 0.4);
-}
 @media screen and (min-width: $appBarBreakLarge) {
-  .bgIframWrap {
-    top: 40px;
+  .bgGif {
+    top: 04px;
   }
 }
 
-.videoText {
+.coverText {
 	width: 100%;
 	top: 0;
 	height: 57vw;
 	color: white;
 	padding-top: 26px;
 }
-.videoTitle {
+.coverTitle {
 	  text-align: center;
     font-size: 24px;
     font-weight: 800;
@@ -53,10 +42,10 @@
     color: #29ABE2;
 }
 @media all and (min-width: $appBarBreakLarge) {
-    .videoText {
+    .coverText {
       padding-top: 150px;
     }
-    .videoTitle {
+    .coverTitle {
       font-size: 46px;
     }
     .playButton {
@@ -64,6 +53,9 @@
       margin: 0 auto;
     }
 }
+
+/* 播放影片 */
+
 .playingSection {
 	position: fixed; 
 	width: 100%; 

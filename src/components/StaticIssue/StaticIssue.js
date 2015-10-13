@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
 import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
-
+import Missions from '../../components/Missions/Missions.js';
 
 @connect(
     state => ({
@@ -89,6 +89,11 @@ export default class StaticIssue extends Component {
                              setCurrentView={setCurrentView} />
 
                 <IssueArticle issue={currentIssue.titleEng} />
+
+                <Missions issues={issues}
+                          skipIssue={currentIssueName}
+                          showComingMission={false}/>
+
                 <div className={styles.collaboratorInfo}>
                     特別感謝{collaboratorItems}協助議題資料
                 </div>
