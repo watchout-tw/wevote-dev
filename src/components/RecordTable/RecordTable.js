@@ -135,27 +135,31 @@ export default class RecordTable extends Component {
     })
     ///
 
-    let controPanelItem = (
+    let isEvading = (data.dominantPosition === "evading" && records.length === 0);
+    let controlPanelItem;
+    if(!isEvading) {
+      controlPanelItem = (
         <div className={styles.controls}>
               {options}
               <div className={styles.sortingButtons}>{sortings}</div>
         </div>
-    );
+      );
+    }
 
     let evadingItem;
-    if(data.dominantPosition === "evading" && records.length === 0){
+    if(isEvading){
        evadingItem = (
           <div className={styles.evadingItem}>
-               <div>我應該表態，卻沒有表態。</div>
-               <Link className={styles.evadingFAQ}
-                     to={`/about/FAQ`}>我們如何統計的？</Link>
+               <div className={styles.evadingText}>我應該表態，卻沒有表態。</div>
+               <Link className={`${styles.evadingFAQ} ${styles.ia} ${styles.bright}`}
+                     to={`/about/FAQ/`}>我們是如何判斷的？</Link>
 
           </div>)
     }
 
     return (
       <div className={styles.wrap}>
-            {controPanelItem}
+            {controlPanelItem}
             {evadingItem}
             {records}
       </div>

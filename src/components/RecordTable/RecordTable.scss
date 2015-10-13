@@ -110,13 +110,20 @@ $break: 600px;
 	line-height: $textLineHeight;
 }
 .evadingItem {
-	padding: 30px 20px;
-  text-align: center;
-  margin: 50px;
-  color: #8E8D8D;
-  font-size: 20px;
-  border: 5px dotted #CCCCCC;
+  margin: 20px;
+	//border: 5px dotted #CCCCCC;
+	//padding: 20px;
+	text-align: center;
+  color: $darkGrey;
 }
+.evadingText {
+	font-size: 20px;
+	margin: 20px 0;
+}
+.evadingFAQ {
+	margin: 10px 0;
+}
+/*
 a.evadingFAQ, a.evadingFAQ:visited {
 	color: black;
 	font-size: 18px;
@@ -126,3 +133,4 @@ a.evadingFAQ, a.evadingFAQ:visited {
 a.evadingFAQ:hover {
 	color: #FF0055;
 }
+*/

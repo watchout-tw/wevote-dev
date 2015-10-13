@@ -1,56 +1,42 @@
+@import '../../common.scss';
+
+$break: 600px;
 .articleWrap {
 	position: relative;
-	max-width: 800px;
-	margin: 0 10px 150px 10px;
+	max-width: $break;
+	margin: 0 0 150px;
 }
-@media all and (min-width: 800px){
+.article {
+	text-align: left;
+	background: $trueWhite;
+	padding: 20px;
+	background: $trueWhite;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+  //border: 6px solid #B4AEA3;
+}
+@media all and (min-width: $break){
 	.articleWrap {
 		margin: 0 auto 150px auto;
 	}
-}
-
-.article {
-	text-align: left;
-	background: white;
-	padding: 20px;
-	background: rgb(250,250,250);
-    box-shadow: 4px 2px 7px 0 rgba(0,0,0,0.12);
-    border: 6px solid #B4AEA3;
-}
-
-.article:before {
-	content: '';
-    position: absolute;
-    top: -50px;
-    left: 162px;
-    border-bottom: 50px solid #B4AEA3;
-    border-left: 0px solid transparent;
-    border-right: 30px solid transparent;
+	.article {
+		padding: 40px;
+		box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.15);
+	}
 }
 .article:after {
 	content: '';
-    position: absolute;
-    top: -32px;
-    left: 167px;
-    border-bottom: 50px solid white;
-    border-left: 0px solid transparent;
-    border-right: 30px solid transparent;
+	position: absolute;
+	top: -32px;
+	left: 144px;
+	border-bottom: 32px solid $trueWhite;
+	border-left: 0 solid transparent;
+	border-right: 32px solid transparent;
 }
-
 
 /* header, preview */
 .articleHeader {
-    margin: 10px;
-    text-align: left;
-    color: #6C5E5E;
-    
+	color: $trueBlack;
 }
-@media all and (min-width: 800px){
-	.articleHeader {
-		padding: 20px;
-	}
-}
-
 .img {
     position: absolute;
     width: 200px;
@@ -61,35 +47,51 @@
 
 .articleTitle {
 	font-size: 24px;
-	color: #594949;
+	font-weight: bold;
+	color: $awesomeColor;
+	line-height: $textLineHeight;
+	text-align: center;
 }
 .articleSubtitle {
 	font-size: 20px;
-    color: rgb(53,55,54);
-    padding: 4px 10px 4px 0;
+  color: $darkGrey;
+	line-height: $textLineHeight;
+	text-align: center;
 }
 .hintList {
-	padding: 0 0 0 20px;
+	list-style: none;
+	margin: 20px 0;
+	padding: 0;
 }
 .hint {
+	position: relative;
+	margin: 10px 0 0 4em;
 	line-height: 1.5;
-	margin: 10px 0;
-}
-@media all and (min-width: 800px){
-	.hint {
-		margin: 0;
+	&:before {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -4em;
+		font-weight: bold;
 	}
+	&:nth-child(1):before { content: '迷思一：'; }
+	&:nth-child(2):before { content: '迷思二：'; }
+	&:nth-child(3):before { content: '迷思三：'; }
+	&:nth-child(4):before { content: '迷思四：'; }
+	&:nth-child(5):before { content: '迷思五：'; }
 }
 /* 繼續閱讀 */
 .button {
 	cursor: pointer;
-	display: inline-block;
-	padding: 4px;
-	border-bottom: 3px solid #B4AEA3;
-	color: #6C5E5E;
+	width: 4*$defaultFontSize + 20px*2;
+	margin: 0 auto;
+	padding: 10px 20px;
+	background: $awesomeColor;
+	color: $white;
+	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.25);
 }
 .button:hover {
-	color: #594949;
+	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
 }
 
 /* 段落 */
@@ -101,23 +103,24 @@
     max-height: 10000px;
 }
 .section {
-	margin: 10px auto;
-	margin-bottom: 80px;
+	margin: 40px 0;
 }
 .sectionTitle {
-	font-size: 22px;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: $textLineHeight;
 }
 .paragraph {
-	line-height: 1.6;
+	line-height: $textLineHeight;
 }
 .list {
-	line-height: 2;
+	line-height: $textLineHeight;
 }
 .peopleLink, .peopleLink:visited {
-	color: #FF0055;
+	@extend .ia.bright;
 }
 blockquote {
-    background: rgba(180, 174, 163, 0.19);
-    margin: 10px 10px 20px 10px;
-    padding: 20px;
+  background: rgba(180, 174, 163, 0.19);
+  margin: 10px 0 10px 40px;
+  padding: 20px;
 }
