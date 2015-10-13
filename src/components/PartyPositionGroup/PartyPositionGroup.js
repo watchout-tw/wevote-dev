@@ -105,8 +105,28 @@ export default class PartyPositionGroup extends Component {
       return <Record data={item}
                      key={index} />
     });
+    
 
+    // 處理有多少人曾經表態，表態做主要的立場為何
+    let partyPercentageItem;
     let partyHasPositionPercentage = Math.round((data.hasPositionCount/parties[data.party].hasBeenCount) * 100, 0);
+    partyPercentageItem = (
+      <div>
+        <div className={styles.metaTitle}>{`${partyHasPositionPercentage}%的立委曾經表態`}</div>
+        <div className={styles.metaTitle}>表態紀錄中{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
+      </div>
+    )
+
+    if(data.hasPositionCount === 0){// 沒有任何表態紀錄
+       partyHasPositionPercentage = 0;
+       partyPercentageItem = (
+          <div>
+             <div className={styles.metaTitle}>{`${partyHasPositionPercentage}%的立委曾經表態`}</div>
+          </div>
+       )
+    }
+
+   
     
     const layoutStyles = rectInCircleLayout(
       this.state.viewWidth,
@@ -120,7 +140,8 @@ export default class PartyPositionGroup extends Component {
    
    
     let userPositionItem;
-    if(data.dominantPosition === userPosition){
+    if( data.dominantPosition === userPosition && 
+        (data.dominantPosition === "aye" || data.dominantPosition === "nay")){
        
        userPositionItem = 
         <div className={styles.userPositionBlock}>
@@ -131,10 +152,10 @@ export default class PartyPositionGroup extends Component {
     return (
       <div className={styles.wrap}>
         <div className={styles.header}>
-          {userPositionItem}
+          { userPositionItem }
           <Link to={`/parties/${data.party}/records/${issueURL}`} className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}>{partyTitle}</Link>
-          <div className={styles.metaTitle}>{`${partyHasPositionPercentage}%的立委曾經表態`}</div>
-          <div className={styles.metaTitle}>表態紀錄中{`${data.dominantPercentage}%${eng2cht(data.dominantPosition)}`}</div>
+          
+          { partyPercentageItem }
           
         </div>
         <div style={layoutStyles.margin}>

@@ -40,8 +40,7 @@ function parseToPartyPosition_Proceed (records, issues, currentIssue, PartyPosit
 		{   
 			"id": "TSU",
 			"name":'台灣團結聯盟'
-		}
-		,
+		},
 		{
 			"id": "PFP",
 			"name":'親民黨'
@@ -49,6 +48,10 @@ function parseToPartyPosition_Proceed (records, issues, currentIssue, PartyPosit
 		{
 			"id": "NSU",
 			"name":'無黨團結聯盟'
+		},
+		{
+			"id": "MKT",
+			"name":'民國黨'
 		},
 		{
 			"id": "NONE",

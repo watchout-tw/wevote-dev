@@ -41,6 +41,17 @@ export default function parseToPartyView(records, issues){
 function parseToPartyView_Proceed (records, currentIssue, PartyView) {
 	var Parties = {};
 
+	/* 初始化各政黨 */
+	// 如果初始化政黨，就會顯示沒有表態的政黨在「看政黨」中
+	// issues/{:issue_id}/parties
+	/*
+	["KMT","DPP","TSU","PFP","NSU","MKT","NONE"].map((value,index)=>{
+		Parties[value] = [];
+    	Parties[value].records = [];
+
+	});
+    */
+
 	/* 把 表態 依照政黨分組 */
 	records.map((value, index)=>{
 		if(!Parties[value.party])
@@ -106,6 +117,7 @@ function parseToPartyView_Proceed (records, currentIssue, PartyView) {
         Parties[currentParty].dominantPosition = countSort[0].position;
         Parties[currentParty].dominantPercentage = percentage;
 
+
         //為了要算出精準的顏色外框，需要各個立場的比例，最少 -> 最多
         let positionPercentages = [];
         countSort.map((value,index)=>{
@@ -126,6 +138,18 @@ function parseToPartyView_Proceed (records, currentIssue, PartyView) {
         //贊成的 percent 數，用來排序
         Parties[currentParty].rank = (count.aye || 0) / Parties[currentParty].records.length;
         Parties[currentParty].party = currentParty;
+
+
+        //如果沒有任何記錄
+        if(Parties[currentParty].records.length === 0){
+        	Parties[currentParty].dominantPosition = "none";
+    		Parties[currentParty].dominantPercentage = 0;
+    		Parties[currentParty].rank = 0;   
+    		Parties[currentParty].hasPositionCount = 0;
+    		Parties[currentParty].positionPercentages = [];
+
+        }
+    	
 
 	});
 
