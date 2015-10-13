@@ -23,7 +23,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
 
   // 確認circle沒有比view寬
   let toTranslate = '';
-  if(diameter > viewWidth) {
+  if(diameter + outerMarginLeft*2 > viewWidth) { // 比較的時候把左右margin也加進來比較對
     // 唉呀circle比view寬只好重算了哭哭
     // 先確定rect有沒有比view寬
     if(rectWidth > viewWidth) {
@@ -45,38 +45,35 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
   }
 
   // 計算 arc
-  
+
   let degree = (hasPositionPercentage/100*360);
   let colorLevel = Math.ceil( degree/90);
   // 一個 arc 90 度，有幾個 arc 要是彩色，預設是 1 ，每多 90 度要多一個 arc
 
   let colorCircleBorder = ["gray","gray","gray","gray"];
   let grayCircleBorder = ["transparent","transparent","transparent","transparent"];
-  
+
   for(let i = 0; i<4; i++){
       if(i<colorLevel){
           colorCircleBorder[i] = position2color(position);
       }
       if((i+1 === colorLevel)&&((hasPositionPercentage/100*360)%90 !== 0 )){
-
           grayCircleBorder[i] = "gray";
       }
   }
-  
+
   let grayRotateDegree = 45+hasPositionPercentage;
-  
+
   if((colorLevel === 4)&&(degree!==360)){
     //gray 的第四個 arc 要換色
     colorCircleBorder[3] = "gray";
     grayCircleBorder[3] = position2color(position);
     //rorate 要改，最後的 90 依照比例倒退嚕
     grayRotateDegree = 45-( (90-(degree-270))/90 *45);
-   
   }
 
   let colorCircleBorderStyle = `${colorCircleBorder[0]} ${colorCircleBorder[1]} ${colorCircleBorder[2]} ${colorCircleBorder[3]}`;
   let grayCircleBorderStyle = `${grayCircleBorder[0]} ${grayCircleBorder[1]} ${grayCircleBorder[2]} ${grayCircleBorder[3]}`;
-  
 
   // 算inline styles
   let marginStyles = {

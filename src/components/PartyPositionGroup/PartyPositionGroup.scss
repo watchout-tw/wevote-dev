@@ -1,9 +1,6 @@
 @import '../../common.scss';
 
-$cubeSize: 20px;
-$ayeColor: #00FFB0;
-$nayColor: #FF0055;
-$unknownColor: #FFF800;
+$cubeSize: $defaultCubeSize;
 
 .wrap {
 	display: inline-block;
@@ -52,7 +49,7 @@ $unknownColor: #FFF800;
 	display: inline-block;
 }
 .metaTitle {
-	color: gray;
+	color: $darkGrey;
 	font-size: 14px;
 	line-height: 1.4;
 }
@@ -117,4 +114,3 @@ $unknownColor: #FFF800;
 	background-image: url('./images/command.svg');
 	background-size: cover;
 }
-
