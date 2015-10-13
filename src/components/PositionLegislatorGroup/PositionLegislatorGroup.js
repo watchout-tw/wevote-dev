@@ -47,7 +47,7 @@ class LegislatorAvatar extends Component {
   }
 
   render () {
-    const { data, currentIssueName } = this.props;
+    const { data, issueURL } = this.props;
     const { active } = this.state;
     const styles = require('./PositionLegislatorGroup.scss');
 
@@ -70,7 +70,7 @@ class LegislatorAvatar extends Component {
     }
 
     return (
-        <Link to={`/people/${people_name2id(name)}/records/${currentIssueName}`}
+        <Link to={`/people/${people_name2id(name)}/records/${issueURL}`}
               className={styles.avatarItem}
               onMouseEnter={this._toggleActive.bind(this, true)}
               onMouseLeave={this._toggleActive.bind(this, false)}>
@@ -117,7 +117,8 @@ export default class PositionLegislatorGroup extends Component {
   }
   render() {
     const styles = require('./PositionLegislatorGroup.scss');
-    const {data, currentIssueName, issueStatement} = this.props;
+    const {data, issueURL, userPosition, issueStatement} = this.props;
+    const {parties} = this.props;
 
     let title = `我${eng2cht(data.position)}${issueStatement}`;
     if(data.position === "unknown")
@@ -129,7 +130,7 @@ export default class PositionLegislatorGroup extends Component {
     let legislators = data.legislators.map((item,index)=>{
       return <LegislatorAvatar
               data={item} key={index}
-              currentIssueName={currentIssueName}/>
+              issueURL={issueURL}/>
     });
 
     const layoutStyles = rectInCircleLayout(
@@ -139,9 +140,19 @@ export default class PositionLegislatorGroup extends Component {
       data.position,
     );
 
+    let userPositionItem;
+    if(data.position === userPosition){
+       userPositionItem = 
+        <div className={styles.userPositionBlock}>
+            <div className={styles.userPositionText}>與你立場相同</div> 
+        </div>
+    }
+
     return (
       <div className={styles.wrap}>
+        {userPositionItem}
         <div className={styles.header}>{title}</div>
+        
         <div style={layoutStyles.margin}>
           <div style={layoutStyles.circle}>
             <div style={layoutStyles.rect}>{legislators}</div>

@@ -4,21 +4,36 @@
 	display: inline-block;
 }
 .optionImg {
-	width: 50px;
-	display: block;
+	width: 40px;
+    float: left;
+    margin-right: 3px;
 }
 .optionItem:hover .optionImg, .optionImg:hover, .optionImgActive {
 	opacity: 1;
 }
 .optionItem, .optionItem:visited {
 	display: inline-block;
-	cursor: pointer;
-	margin: 0 10px;
-	text-decoration: none;
-	color: $black;
+    cursor: pointer;
+    margin: 0 2px -2px 4px;
+    text-decoration: none;
+    color: #0f0f0f;
+    vertical-align: top;
+    padding-right: 8px;
+    border-bottom: 3px solid;
+}
+@media all and (min-width: 500px){
+	.optionItem, .optionItem:visited {
+		margin: 0 10px -2px 10px;
+	}
+}
+.optionText {
+	display: inline-block;
+    vertical-align: top;
+    padding-top: 12px;
 }
 .optionItemInactive, .optionItemInactive:visited {
 	opacity: 0.25;
+	border-bottom: none;
 }
 .optionItem:hover, .optionItemActive, .optionItemActive:visited, .optionItemInactive:hover {
 	opacity: 1;

@@ -1,6 +1,7 @@
 import position2color from './position2color';
 
-export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position) {
+
+export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position, hasPositionPercentage) {
   let outerMarginTop = 20;
   let outerMarginLeft = 40;
 
@@ -43,6 +44,40 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     toTranslate = `translateX(-${toTranslate}px)`;
   }
 
+  // 計算 arc
+  
+  let degree = (hasPositionPercentage/100*360);
+  let colorLevel = Math.ceil( degree/90);
+  // 一個 arc 90 度，有幾個 arc 要是彩色，預設是 1 ，每多 90 度要多一個 arc
+
+  let colorCircleBorder = ["gray","gray","gray","gray"];
+  let grayCircleBorder = ["transparent","transparent","transparent","transparent"];
+  
+  for(let i = 0; i<4; i++){
+      if(i<colorLevel){
+          colorCircleBorder[i] = position2color(position);
+      }
+      if((i+1 === colorLevel)&&((hasPositionPercentage/100*360)%90 !== 0 )){
+
+          grayCircleBorder[i] = "gray";
+      }
+  }
+  
+  let grayRotateDegree = 45+hasPositionPercentage;
+  
+  if((colorLevel === 4)&&(degree!==360)){
+    //gray 的第四個 arc 要換色
+    colorCircleBorder[3] = "gray";
+    grayCircleBorder[3] = position2color(position);
+    //rorate 要改，最後的 90 依照比例倒退嚕
+    grayRotateDegree = 45-( (90-(degree-270))/90 *45);
+   
+  }
+
+  let colorCircleBorderStyle = `${colorCircleBorder[0]} ${colorCircleBorder[1]} ${colorCircleBorder[2]} ${colorCircleBorder[3]}`;
+  let grayCircleBorderStyle = `${grayCircleBorder[0]} ${grayCircleBorder[1]} ${grayCircleBorder[2]} ${grayCircleBorder[3]}`;
+  
+
   // 算inline styles
   let marginStyles = {
     margin: `${outerMarginTop}px ${outerMarginLeft}px`,
@@ -58,6 +93,44 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     borderRadius: '50%',
     transform: toTranslate,
   }
+
+  // 以下三組 circle 是為了 arc
+  let baseCircleStyles = {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    position: 'relative',
+    width: diameter,
+    height: diameter,
+    margin: `${borderWidth}px 0`,
+    borderRadius: '50%',
+    transform: toTranslate,
+  }
+  let colorCircleStyles = {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    position: 'absolute',
+    top: `-${borderWidth}px`,
+    left: `-${borderWidth}px`,
+    width: diameter + borderWidth*2,
+    height: diameter + borderWidth*2,
+    border: `${borderWidth}px solid`,
+    borderColor: colorCircleBorderStyle,
+    borderRadius: '50%',
+    transform: 'rotate(45deg)'
+  }
+  let grayCircleStyles = {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    position: 'absolute',
+    top: `-${borderWidth}px`,
+    left: `-${borderWidth}px`,
+    width: diameter + borderWidth*2,
+    height: diameter + borderWidth*2,
+    border: `${borderWidth}px solid`,
+    borderColor: grayCircleBorderStyle,
+    borderRadius: '50%',
+    transform: `rotate(${grayRotateDegree}deg)`
+  }
   let rectStyles = {
     position: 'absolute',
     top: `${offsetTop}px`,
@@ -65,10 +138,14 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     width: rectWidth,
     height: rectHeight,
   }
+  //// TODO ARC
 
   return {
     margin: marginStyles,
     circle: circleStyles,
-    rect: rectStyles,
+    baseCircle: baseCircleStyles,
+    colorCircle: colorCircleStyles,
+    grayCircle: grayCircleStyles,
+    rect: rectStyles
   }
 }

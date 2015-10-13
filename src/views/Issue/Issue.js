@@ -43,6 +43,12 @@ export default class Issue extends Component {
           "referendum" : false,
           "nuclear-power" : false
         },
+        userPosition: {
+          "marriage-equality" : "none",
+          "recall" : "none",
+          "referendum" : "none",
+          "nuclear-power" : "none"
+        },
         localChecked: {
           "marriage-equality" :false,
           "recall" : false,
@@ -52,7 +58,7 @@ export default class Issue extends Component {
       }
   }
   _handleUpdateStage(stage){
-      console.log("[ handleUpdateStage ]"+stage)
+      //console.log("[ handleUpdateStage ]"+stage)
       const {isClientSide} = this.state;
       if(isClientSide === true){
           this.setState({
@@ -63,8 +69,7 @@ export default class Issue extends Component {
 
           if((stage === "intro")&&(completed[currentIssueName]===false)&&localChecked[currentIssueName]===false){
               // add 'checked' to avoid overly checked local storage
-              console.log("<> check local complete info.")
-
+              
               if(window){
                   let current =  window.localStorage.getItem(currentIssueName);
                   if(current === "true"){
@@ -87,7 +92,7 @@ export default class Issue extends Component {
   }
 
   _handleSetInteractive(value){
-      console.log("設定互動模式："+value)
+      //console.log("設定互動模式："+value)
       if(value === true){
          this._handleClearCompleted();
       }
@@ -123,26 +128,50 @@ export default class Issue extends Component {
   }
   _handleCompleted(issueName){
       this._markLocalStorageCompleted(issueName);
+      
+  }
+  _handleSetUserPosition(issueName, position){
+      let {userPosition} = this.state;
+      userPosition[issueName] = position;
+
+      this.setState({
+        userPosition: userPosition
+      });
+      this._markLocalStorageUserPosition(issueName, position);
   }
   _handleClearCompleted(){
-      console.log("[handle clear completed]")
+      
       const issueName = this.props.params.issueName;
 
-      let {completed, localChecked} = this.state;
+      let {completed, localChecked, userPosition} = this.state;
       completed[issueName] = false;
       localChecked[issueName] = false;
+      userPosition[issueName] = "none";
+
       this.setState({
         completed: completed,
-        localChecked: localChecked
+        localChecked: localChecked,
+        userPosition: userPosition
       })
+
+      let value = issueName + "-userPosition";
       if(window){
           window.localStorage.setItem(issueName, false);
+          window.localStorage.setItem(value, "");
       }
   }
+
+  // 設定存入 local storage
 
   _markLocalStorageCompleted(issueName){
       if(window){
           window.localStorage.setItem(issueName, true);
+      }
+  }
+  _markLocalStorageUserPosition(issueName, userPosition){
+      if(window){
+          let value = issueName + "-userPosition"
+          window.localStorage.setItem(value, userPosition);
       }
   }
 
@@ -162,18 +191,14 @@ export default class Issue extends Component {
       }
   }
 
+  //取得 local storage 資訊
   _checkLocalNotificationPref(){
-      console.log("check local storage (issue - notification)")
       if(this.state.hasCheckNotificationPref===false){
 
           const {showNotification, showCompleteNotification} = this.state;
           if(showNotification === true){
 
                 let shouldHide = window.localStorage.getItem("hideNotification");
-                console.log("shouldHideNitification")
-                console.log(shouldHide)
-
-
                 if(shouldHide){
                     this.setState({
                        showNotification: false
@@ -183,8 +208,6 @@ export default class Issue extends Component {
           }
           if(showCompleteNotification===true){
                 let shouldCompleteHide = window.localStorage.getItem("hideCompleteNotification");
-                console.log("shouldCompleteHide")
-                console.log(shouldCompleteHide)
                 if(shouldCompleteHide){
                     this.setState({
                        showNotification: false
@@ -198,24 +221,14 @@ export default class Issue extends Component {
       }
 
   }
-
-  // 取得 localStorage
   _checkLocalInteractive(){
 
-      console.log("checkLocalInteractive");
-
       const {interactive, localInteractivePrefChecked} = this.state;
-
-
       if(localInteractivePrefChecked===false){
           let interactivePref = window.localStorage.getItem("interactivePref");
 
-          console.log(" ▨▨▨  更新 interactive pref ")
-
           if(interactivePref==="false"){
-
-              console.log("▨ 瀏覽器存的設定："+interactivePref)
-
+              //console.log("▨ 瀏覽器存的設定："+interactivePref)
               this.setState({
                   localInteractivePrefChecked: true,
                   interactive: false
@@ -229,10 +242,26 @@ export default class Issue extends Component {
           }
       }
   }
+  _checkLocalUserPosition(){
+      const currentIssueName = this.props.params.issueName;
+      let value = currentIssueName + "-userPosition"
+  
+      if(window){
+          let position =  window.localStorage.getItem(value);
+          if(["aye","nay"].indexOf(position)!==-1){
+              let {userPosition} = this.state;
+              userPosition[currentIssueName] = position;
+              this.setState({
+                 userPosition: userPosition
+              })
+          }
+      }
+  }
   componentDidMount(){//Only runs in client side
-      console.log("[Issue Mount]")
+      
       this._checkLocalInteractive();
       this._checkLocalNotificationPref();
+      this._checkLocalUserPosition();
 
       this.setState({
         isClientSide: true
@@ -252,7 +281,7 @@ export default class Issue extends Component {
 
       let isInteractiveMode = (interactive === true && completed[currentIssueName]===false)? true : false;
 
-      console.log("<><> isInteractiveMode:"+isInteractiveMode)
+      //console.log("<><> isInteractiveMode:"+isInteractiveMode)
 
 
       // 主畫面
@@ -264,12 +293,10 @@ export default class Issue extends Component {
                             skipInteractive={this._skipInteractive.bind(this)}
                             setCurrentView={this._setCurrentView.bind(this)}
                             handleCompleted={this._handleCompleted.bind(this)}
+                            handleSetUserPosition={this._handleSetUserPosition.bind(this)}
                             handleUpdateStage={this._handleUpdateStage.bind(this)} />
         )
       }else{
-        // if we use (isInteractiveMode === false) here, it would not shown the static version at first
-        // default mode has to be non-interactive, so that can generate static pages of all.
-        // use 'invisibleStyle' to hide the 1-sec flash from real-person user
         let invisibleStyle = (isInteractiveMode === false) ? "" : styles.invisibleBlock;
         main = (
           <div className={styles.invisibleStyle}>
@@ -335,18 +362,19 @@ export default class Issue extends Component {
 
       let interactionControlPanel = (notificationShowed === false) ? ({alternative}) : '';
 
+      const title = `${currentIssue.title}-你支持${currentIssue.statement}嗎？-沃草2016立委出任務`;
+      const description = currentIssue.description;
       const metaData = {
-          title: `議題表態分析-2016立委出任務`,
-          description: `對於各項重大議題的表態大解析！趕快來看看委員在立法院針對下列重大議題有哪些發言！`,
+          title: title,
+          description: description,
           meta: {
               charSet: 'utf-8',
               property: {
-                'og:title': `議題表態分析-2016立委出任務`,
-                'og:description': `對於各項重大議題的表態大解析！趕快來看看委員在立法院針對下列重大議題有哪些發言！`,
+                'og:title': title,
+                'og:description': description,
                 'og:type' : 'website'
               }
           }
-
       };
 
 

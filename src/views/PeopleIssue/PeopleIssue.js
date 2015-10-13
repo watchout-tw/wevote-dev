@@ -93,8 +93,8 @@ export default class PeopleIssue extends Component {
       description = `${name}${eng2cht(dominantPosition)}${issue.statement}，${name}為${partyCht}立委，為什麼${eng2cht(dominantPosition)}${issue.statement}？`;
 
     }
-
-    const title = `${name}對於${issueName}的表態-2016立委出任務`;
+    
+    const title = `${name}對於${issueName}的表態-沃草2016立委出任務`;
 
     const metaData = {
       title: title,

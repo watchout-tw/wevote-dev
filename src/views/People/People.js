@@ -36,8 +36,8 @@ export default class People extends Component {
     const {legislatorPositions} = this.state;
     const currentLegislatorPosition = legislatorPositions[name];
     
-    const title = `${name}攻城策略分析-2016立委出任務`;
-    const description = `${name}對於各項重大議題之城的攻城策略大解析！趕快來看看${name}在立法院針對下列重大議題說了些什麽！`;
+    const title = `${name}戰鬥策略分析-2016立委出任務`;
+    const description = `${name}對於各項重大議題之城的戰鬥策略大解析！趕快來看看${name}在立法院針對下列重大議題說了些什麽！`;
     const metaData = {
       title: title,
       description: description,

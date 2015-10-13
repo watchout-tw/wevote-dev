@@ -90,7 +90,7 @@ class OptionItem extends Component {
         <div className={`${styles.optionItem} ${itemActive}`}
              onClick={setCurrentView.bind(null, data.view)}>
           <img className={`${styles.optionImg} ${imgActive}`} src={imgURL} />
-          {data.title}
+          <div className={styles.optionText}>{data.title}</div>
           <Link className={styles.invisible}
                 to={`/issues/${issue}/${data.view}`}>link</Link>
         </div>

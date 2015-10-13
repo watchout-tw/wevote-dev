@@ -13,7 +13,7 @@ $breakLarge: 800px;
 }
 .figHeader {
   min-height: 80px;
-  max-width: 800px;
+  //max-width: 800px;
   margin: 50px auto 0 auto;
 }
 .issueBlock {
@@ -21,16 +21,19 @@ $breakLarge: 800px;
   font-size: 20px;
 }
 .issueTitle {
-  display: inline-block;
-  background: $black;
-  color: $white;
-  padding: 10px 20px;
+  // display: inline-block;
+  // background: $black;
+  // color: $white;
+  display: none;
 }
 .issueStatement {
-  padding: 10px 20px;
+  color: rgb(63,63,63);
+  background: rgb(221,221,221);
+  padding: 16px 0;
 }
 .issueController {
-  margin: 10px 0;
+  margin: 40px 0 0 0;
+  border-bottom: 1px solid silver;
 }
 @media all and (min-width: $breakLarge){
 	.issueBlock {

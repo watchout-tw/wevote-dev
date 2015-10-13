@@ -13,25 +13,49 @@ $unknownColor: #FFF800;
 	max-width: 100vw;
 	font-size: 16px;
 }
+.userPositionBlock {
+	position: relative;
+	text-align: center;
+}
+.userPositionText {
+    padding: 6px 10px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+}
+.userPositionText:before {
+	content: '';
+    border-top: 10px solid #171717;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 5px);
+}
+.userPositionText:after {
+	content: '';
+    border-top: 18px solid #eeeeee;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    position: absolute;
+    bottom: -9px;
+    left: calc(50% - 9px);
+}
+
 .margin {
 	display: inline-block;
 	margin: 20px;
 }
 .partyTitle {
+	font-size: 22px;
+	display: inline-block;
 }
-/*
-.partyTitle, .partyTitle:visited {
-    color: black;
-    text-decoration: none;
-    padding-bottom: 2px;
-    margin-bottom: 4px;
-    display: inline-block;
-    border-bottom: 1px solid rgb(53,55,54);
+.metaTitle {
+	color: gray;
+	font-size: 14px;
+	line-height: 1.4;
 }
-.partyTitle:hover {
-	color: #B88234;
-	border-bottom: 1px solid #B88234;
-}*/
 .positionWrap {
 	position: relative;
 	float: left;
@@ -93,13 +117,4 @@ $unknownColor: #FFF800;
 	background-image: url('./images/command.svg');
 	background-size: cover;
 }
-/*
-.caucus:after {
-	content: '令';
-	color: #FFFF1B;
-	border: 1px solid #FFFF1B;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: calc(100% - 2px);
-}*/
+

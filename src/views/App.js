@@ -11,7 +11,7 @@ import Appbar from '../components/Appbar/Appbar.js';
 import Footer from '../components/Footer/Footer.js';
 import Social from '../components/Social/Social.js';
 
-const title = "立委出任務-2016立委投票資訊站";
+const title = "沃草！立委出任務 - 2016立委投票攻略";
 const description = "2016立委選舉票該投給誰？「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委與下任候選人立場，並分析政黨針對議題的整體立場。想透過議題更了解你的選區立委嗎？請上「立委出任務」！";
 const image = './images/logo.png';
 
@@ -26,7 +26,9 @@ const meta = {
       'og:locale': 'zh_TW',
       'og:title': title,
       'og:description': description,
-      'og:type' : 'website'
+      'og:type' : 'website',
+      'og:author' : 'https://www.facebook.com/WatchOutTW',
+      'og:publisher' : 'https://www.facebook.com/WatchOutTW'
     }
   }
 };

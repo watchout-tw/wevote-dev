@@ -21,39 +21,31 @@ export default class Missions extends Component {
 
   }
 
-  // 取得 localStorage
+  // 取得 localStorage，檢查任務是否已完成
   _checkLocalStorage(){
-      console.log("check local storage!!");
       const {checkedLocal} = this.state;
       if(window && checkedLocal === false){
           const {issues} = this.props;
           const {completed} = this.state;
-          console.log("has window")
+          
           Object.keys(issues).map((currentIssueName, index)=>{
               let local = window.localStorage.getItem(currentIssueName);
-              console.log("local value")
-              console.log(local)
               if(local === "true"){
                   completed[currentIssueName] = true;
               }
           })
+
           this.setState({
             checkedLocal: true,
             completed: completed
           })
-
-
       }
-
 
   }
   componentDidMount(){//Only runs in client side
       this._checkLocalStorage();
   }
-  componentDidUpdate(prevProps, prevState){//Only runs in client side
-      //this._checkLocalStorage();
-  }
-
+  
   render() {
     const styles = require('./Missions.scss');
     const {issues, skipIssue, showComingMission} = this.props;

@@ -744,8 +744,8 @@ const initialState = {
     "54": {
         "id": 54,
         "name": "高金素梅",
-        "party": "NONE",
-        "partyCht": "無黨籍",
+        "party": "NSU",
+        "partyCht": "無黨團結聯盟",
         "gender": "女",
         "age": "50",
         "isCurrent": true,
@@ -1108,8 +1108,8 @@ const initialState = {
     "80": {
         "id": 80,
         "name": "黃文玲",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "party": "TSU",
+        "partyCht": "台聯",
         "gender": "女",
         "age": "46",
         "isCurrent": true,
@@ -1640,8 +1640,8 @@ const initialState = {
     "118": {
         "id": 118,
         "name": "顏清標",
-        "party": "NONE",
-        "partyCht": "無黨籍",
+        "party": "NSU",
+        "partyCht": "無黨團結聯盟",
         "gender": "男",
         "age": "55",
         "isCurrent": true,
