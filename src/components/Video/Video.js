@@ -6,7 +6,7 @@ export default class Video extends Component {
   constructor(props){ super(props)
     this.state = {
       playVideo: false,
-      mode: "mobile"
+      mode: ""
     }
   } 
   _handlePlay(){
@@ -16,7 +16,6 @@ export default class Video extends Component {
     })
   }
   componentDidMount(){
-    console.log("componentDidMount")
     this._handleResize();
     window.addEventListener('resize', this._handleResize.bind(this));
   }
@@ -25,18 +24,17 @@ export default class Video extends Component {
   }
   _handleResize(){
       const {mode} = this.state;
-      if((window.innerWidth >= 720)&&(mode==="mobile")){
+      if((window.innerWidth >= 720)&&(mode!=="web")){
           this.setState({
             mode: "web"
           })
       }
-      if((window.innerWidth < 720)&&(mode==="web")){
+      if((window.innerWidth < 720)&&(mode!=="mobile")){
           this.setState({
             mode: "mobile"
           }) 
       }
-      console.log("after handle resize")
-      console.log(this.state)
+      
   }
   //bgFileName: "./images/bg-small.gif"
   render() {
@@ -45,7 +43,9 @@ export default class Video extends Component {
     console.log(mode)
     
     // Background GIF
-    let bgImg = (mode === "mobile") ? require("./images/bg_small.gif") : require("./images/bg_large.gif")
+    let bgImg;
+    if(mode === "mobile") bgImg = require("./images/bg_small.gif");
+    if(mode === "web") bgImg = require("./images/bg_large.gif");
     
     const finalVote = moment([2016, 0, 16]);
     const now = moment();
@@ -54,7 +54,7 @@ export default class Video extends Component {
 
     // Playing Video
     const {playVideo} = this.state;
-    const youtubeId = "5dSckWGmybo";
+    const youtubeId = "ZrTyN0g_GD4";
     const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&showinfo=0&rel=0&playlist=${youtubeId}`;
     
     let playingFullScreen = (playVideo === true) ? (
@@ -71,6 +71,15 @@ export default class Video extends Component {
             </div>
         </div>):"";
 
+
+    //title
+    const title = require("./images/VideoTitles_main.svg");
+    const diffTens = Math.floor(diff/10);
+    const diffOnes = diff%10;
+    const diffTensImg = require(`./images/counter_${diffTens}.svg`);
+    const diffOnesImg = require(`./images/counter_${diffOnes}.svg`);
+    const storyBeginsHereImg = require("./images/VideoTitles_video.svg");
+    const missionImg = require("./images/VideoTitles_mission.svg");
     return (
         <div className={styles.bgWrap}>
       	    {playingFullScreen}
@@ -78,13 +87,22 @@ export default class Video extends Component {
             <img className={styles.bgGif}
                  src={bgImg} />
            
-            <div className={styles.coverText}>
+            <div className={styles.coverTextBlock}>
                 <div className={styles.coverTitle}>
-                    <div>立委勇者大選還有{diff}天</div>
-                    <div>你還沒準備好嗎？</div>
-                    <div className={styles.playButton}
-                         onClick={this._handlePlay.bind(this)}>
-                         <i className="fa fa-play-circle-o"></i></div>
+                    <img src={title}
+                         className={styles.coverTitleMain}/>
+                    <img src={diffTensImg}
+                         className={styles.diffTensImg} />
+                    <img src={diffOnesImg}
+                         className={styles.diffOnesImg} />
+                    <div>
+                    <img src={storyBeginsHereImg}
+                         className={styles.storyBeginsHereImg}
+                         onClick={this._handlePlay.bind(this)} />
+                    <img src={missionImg}   
+                         className={styles.missionImg}
+                         /> 
+                    </div>
                 </div>
             </div>
         </div>
