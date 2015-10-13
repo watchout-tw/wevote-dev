@@ -112,8 +112,8 @@ function parseToPartyPosition_Proceed (records, issues, currentIssue, PartyPosit
 		Parties[currentParty].positionCounts = [];
 		
 		Parties[currentParty].positionCounts.push({
-			"position" : "nay",
-			"count" : count.nay
+			"position" : "aye",
+			"count" : count.aye
 		})
 
 		Parties[currentParty].positionCounts.push({
@@ -122,8 +122,8 @@ function parseToPartyPosition_Proceed (records, issues, currentIssue, PartyPosit
 		})
 		
 		Parties[currentParty].positionCounts.push({
-			"position" : "aye",
-			"count" : count.aye
+			"position" : "nay",
+			"count" : count.nay
 		})
 
 		Parties[currentParty].totalCounts = Parties[currentParty].records.length;
