@@ -5,7 +5,8 @@ import moment from 'moment';
 export default class Video extends Component {
   constructor(props){ super(props)
     this.state = {
-      playVideo: false
+      playVideo: false,
+      mode: "mobile"
     }
   } 
   _handlePlay(){
@@ -14,11 +15,38 @@ export default class Video extends Component {
       playVideo: !this.state.playVideo
     })
   }
+  componentDidMount(){
+    console.log("componentDidMount")
+    this._handleResize();
+    window.addEventListener('resize', this._handleResize.bind(this));
+  }
+  componentWillUnmount(){
+    window.removeEventListener('resize', this._handleResize.bind(this));
+  }
+  _handleResize(){
+      const {mode} = this.state;
+      if((window.innerWidth >= 720)&&(mode==="mobile")){
+          this.setState({
+            mode: "web"
+          })
+      }
+      if((window.innerWidth < 720)&&(mode==="web")){
+          this.setState({
+            mode: "mobile"
+          }) 
+      }
+      console.log("after handle resize")
+      console.log(this.state)
+  }
+  //bgFileName: "./images/bg-small.gif"
   render() {
   	const styles = require('./Video.scss');
+    const {mode} = this.state;
+    console.log(mode)
     
-    // Background Video
-    const bgVideoUrl = "http://soidid.github.io/video-test/index.mp4";
+    // Background GIF
+    let bgImg = (mode === "mobile") ? require("./images/bg_small.gif") : require("./images/bg_large.gif")
+    
     const finalVote = moment([2016, 0, 16]);
     const now = moment();
     const diff = finalVote.diff(now, 'days');
@@ -27,7 +55,6 @@ export default class Video extends Component {
     // Playing Video
     const {playVideo} = this.state;
     const youtubeId = "5dSckWGmybo";
-    const bgYoutubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&loop=1&playlist=${youtubeId}&controls=0&showinfo=0&autohide=1&rel=0`;
     const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&showinfo=0&rel=0&playlist=${youtubeId}`;
     
     let playingFullScreen = (playVideo === true) ? (
@@ -45,18 +72,14 @@ export default class Video extends Component {
         </div>):"";
 
     return (
-        <div className={styles.videoWrap}>
+        <div className={styles.bgWrap}>
       	    {playingFullScreen}
 
-            <div className={styles.bgIframWrap}>
-                <iframe frameBorder="0" height="100%" width="100%" 
-                        src={bgYoutubeURL}>
-                </iframe>
-            </div>
-
-            <div className={styles.videoFilter}></div>
-            <div className={styles.videoText}>
-                <div className={styles.videoTitle}>
+            <img className={styles.bgGif}
+                 src={bgImg} />
+           
+            <div className={styles.coverText}>
+                <div className={styles.coverTitle}>
                     <div>立委勇者大選還有{diff}天</div>
                     <div>你還沒準備好嗎？</div>
                     <div className={styles.playButton}
