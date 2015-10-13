@@ -10,7 +10,7 @@ export default function eng2url(input){
         return 'nuclear-power';
       
       default:
-      	return '<>找不到<>';///////
+      	return '<>找不到<>eng2url';///////
     }
 }
 

@@ -6,7 +6,7 @@ export default function cht2url(input){
         	return 'recall';
       case '公投':
         	return 'referendum';
-      case '核四':
+      case '核能':
           return 'nuclear-power';
       
       default:
