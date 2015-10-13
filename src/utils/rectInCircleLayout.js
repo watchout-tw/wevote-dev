@@ -68,7 +68,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     colorCircleBorder[3] = "gray";
     grayCircleBorder[3] = position2color(position);
     //rorate 要改，最後的 90 依照比例倒退嚕
-    grayRotateDegree = 45-((degree-270)/90);
+    grayRotateDegree = 45-( (90-(degree-270))/90 *45);
    
   }
 

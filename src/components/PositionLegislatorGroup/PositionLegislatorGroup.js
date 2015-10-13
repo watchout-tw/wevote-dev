@@ -118,6 +118,7 @@ export default class PositionLegislatorGroup extends Component {
   render() {
     const styles = require('./PositionLegislatorGroup.scss');
     const {data, issueURL, userPosition, issueStatement} = this.props;
+    const {parties} = this.props;
 
     let title = `我${eng2cht(data.position)}${issueStatement}`;
     if(data.position === "unknown")
@@ -139,9 +140,19 @@ export default class PositionLegislatorGroup extends Component {
       data.position,
     );
 
+    let userPositionItem;
+    if(data.position === userPosition){
+       userPositionItem = 
+        <div className={styles.userPositionBlock}>
+            <div className={styles.userPositionText}>與你立場相同</div> 
+        </div>
+    }
+
     return (
       <div className={styles.wrap}>
+        {userPositionItem}
         <div className={styles.header}>{title}</div>
+        
         <div style={layoutStyles.margin}>
           <div style={layoutStyles.circle}>
             <div style={layoutStyles.rect}>{legislators}</div>

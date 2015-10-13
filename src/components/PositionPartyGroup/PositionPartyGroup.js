@@ -104,7 +104,8 @@ export default class PositionPartyGroup extends Component {
   }
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, issueId, issueStatement} = this.props;
+    const {data, issueId, issueStatement, userPosition} = this.props;
+    const {parties} = this.props;
 
     let title = `我${eng2cht(data.position)}${issueStatement}`;
     if(data.position === "unknown")
@@ -122,8 +123,17 @@ export default class PositionPartyGroup extends Component {
       data.position,
     );
 
+    let userPositionItem;
+    if(data.position === userPosition){
+       userPositionItem = 
+        <div className={styles.userPositionBlock}>
+            <div className={styles.userPositionText}>與你立場相同</div> 
+        </div>
+    }
+
     return (
       <div className={styles.wrap}>
+        {userPositionItem}
         <div className={styles.header}>{title}</div>
         <div style={layoutStyles.margin}>
           <div style={layoutStyles.circle}>

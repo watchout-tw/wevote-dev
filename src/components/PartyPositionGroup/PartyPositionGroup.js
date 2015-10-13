@@ -118,11 +118,10 @@ export default class PartyPositionGroup extends Component {
    
     let userPositionItem;
     if(data.dominantPosition === userPosition){
-       let imgURL = require("./images/favicon.png");
+       
        userPositionItem = 
         <div className={styles.userPositionBlock}>
             <div className={styles.userPositionText}>與你立場相同</div>
-            <img src={imgURL} className={styles.userPositionImg} />
         </div>
     }
 
