@@ -106,8 +106,11 @@ export default class Record extends Component {
         {currentInfo}
         {candidateInfo}
         <div className={styles.avatarName}>
-          <div className={`${styles.partyFlag} ${styles[data.party]}`}></div>
           <Link to={`/people/${legislatorId}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{data.legislator}</Link>
+          <div className={styles.party}>
+            <div className={`${styles.partyFlag} ${styles.small} ${styles[data.party]}`}></div>
+            <Link to={`/parties/${data.party}/records/`} className={`${styles.partyName} ${styles.ia} ${styles.black}`}>{eng2cht(data.party)}</Link>
+          </div>
         </div>
       </div>
     </div>

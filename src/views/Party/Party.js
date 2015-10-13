@@ -43,7 +43,7 @@ export default class Party extends Component {
         //console.log(positions[currentIssue])
         let issueUrl = eng2url(currentIssue);
         return (
-          <Link to={`/parties/${id}/${issueUrl }`}
+          <Link to={`/parties/${id}/records/${issueUrl}`}
             className={styles.issueBlock}
             key={index}>
             <PositionSquare issueName={currentIssue} data={positions[currentIssue]}/>

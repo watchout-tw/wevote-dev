@@ -69,7 +69,7 @@ export default class PeopleProfile extends Component {
                 <Link to={`/people/${id}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{name}</Link>
                 {isCaucus ? '' : (<div className={styles.party}>
                   <div className={`${styles.partyFlag} ${styles.small} ${styles[party]}`}></div>
-                  <span className={styles.partyTitle}>{partyCht}</span>
+                  <Link to={`/parties/${party}/records/`} className={`${styles.partyTitle} ${styles.ia} ${styles.black}`}>{partyCht}</Link>
                 </div>)}
               </div>
               <div className={styles.peopleDetail}>
