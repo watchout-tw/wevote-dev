@@ -127,13 +127,16 @@ $break: 600px;
 	font-weight: bold;
 	line-height: $textLineHeight;
 }
-.sectionSubitle {
+.sectionSubtitle {
 	font-size: 18px;
 	font-weight: bold;
 	line-height: $textLineHeight;
 }
 .paragraph {
 	line-height: $textLineHeight;
+}
+.paragraphIndent {
+	margin: 0 8px;
 }
 .list {
 	line-height: $textLineHeight;
@@ -146,4 +149,10 @@ blockquote {
   margin: 10px 0 10px 40px;
   padding: 20px;
   line-height: 1.6;
+}
+.pos {
+	margin: 10px;
+}
+li {
+	margin: 10px;
 }
