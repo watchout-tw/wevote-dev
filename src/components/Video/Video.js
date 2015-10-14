@@ -40,7 +40,7 @@ export default class Video extends Component {
   render() {
   	const styles = require('./Video.scss');
     const {mode} = this.state;
-    console.log(mode)
+   
 
     // Background GIF
     let bgImg;
@@ -101,8 +101,7 @@ export default class Video extends Component {
                        className={styles.storyBeginsHereImg}
                        onClick={this._handlePlay.bind(this)} />
                   <img src={missionImg}
-                       className={styles.missionImg}
-                       />
+                       className={styles.missionImg}/>
                 </div>
             </div>
         </div>
