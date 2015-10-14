@@ -101,7 +101,6 @@ class MarriageEqualityContent extends Component {
             <p className={styles.paragraph}>圖表中可以看到民進黨共有37筆表態紀錄，全都是支持，而國民黨則有9筆表態紀錄，以反對居多。這樣看起來標題的說法似乎沒錯？</p>
             <p className={styles.paragraph}>
               不過，民進黨其實只有28%的立委（即12位）曾經表態。更重要的是，婚姻平權法案交由司法法制委員會審查，屬於這個委員會的立委應該都有責任表態，但實際上
-              柯建銘、潘孟安、高志鵬、蔡其昌
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("柯建銘")}/records/marriage-equality`}>柯建銘</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("潘孟安")}/records/marriage-equality`}>潘孟安</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("高志鵬")}/records/marriage-equality`}>高志鵬</Link>、
@@ -112,7 +111,6 @@ class MarriageEqualityContent extends Component {
 
             <p className={styles.paragraph}>
               而國民黨立委的表態率也只有12%，8位立委，其中<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("黃昭順")}/records/marriage-equality`}>黃昭順</Link>則曾經表態偏向支持。同時，在拒絕表態這件事上，國民黨立委也不落人後，其中
-              謝國樑、顏寬恆、王廷升、王惠美
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("謝國樑")}/records/marriage-equality`}>謝國樑</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("顏寬恆")}/records/marriage-equality`}>顏寬恆</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("王廷升")}/records/marriage-equality`}>王廷升</Link>、
