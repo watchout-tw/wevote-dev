@@ -43,13 +43,12 @@ export default class AnimatedScript extends Component {
         breakLines: data.breakLines
     });
 
-
     // set new timeout script
     let currentLineIndex = 0, lines = [];
     let newScript = [];
 
     let callback = ()=>{
-      //console.log("timeout!!!")
+      
       this.setState({
         currentScript:{
           scripts: this.state.currentScript.scripts,
@@ -200,7 +199,7 @@ export default class AnimatedScript extends Component {
 
     }
   }
-  componentWillMount(){
+  componentDidMount(){
      this._setStage(this.props);
   }
   componentWillReceiveProps(nextProps){
@@ -250,8 +249,7 @@ export default class AnimatedScript extends Component {
         return(
           <div key={index}>
             {paragraphBreaks}
-            <div className={` ${styles.cssTyping} ${animationClass} `}
-                 key={index}>
+            <div className={` ${styles.cssTyping} ${animationClass} `}>
                  <div className={`${styles.cssText} `}>
                    {data}
                  </div>
