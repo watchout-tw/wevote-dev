@@ -18,7 +18,7 @@ export default class Slideshow extends Component {
   }
 
   _handleKeyDown(e){
-    e.preventDefault();
+   
 
     const LEFT = 37,
           TOP = 38,
@@ -27,9 +27,11 @@ export default class Slideshow extends Component {
 
     const { currentIndex } = this.state;
     if( e.keyCode === RIGHT || e.keyCode === DOWN ) {
+        e.preventDefault();
         this._setCurrentIndex(currentIndex + 1);
     }
     if( e.keyCode === LEFT || e.keyCode === TOP ) {
+        e.preventDefault(); 
         this._setCurrentIndex(currentIndex - 1);
     }
 
