@@ -86,7 +86,7 @@ function parseToPartyView_Proceed (records, currentIssue, PartyView) {
 		})
 		//看看最後有多少人名，即是人數
 		Parties[currentParty].hasPositionCount = hasPosition.length;
-		
+		//console.log(hasPosition)
 
 		/** 把 records 依照時間排序 */
 		Parties[currentParty].records.sort((a,b)=>{

@@ -40,7 +40,7 @@ export default class Video extends Component {
   render() {
   	const styles = require('./Video.scss');
     const {mode} = this.state;
-    console.log(mode)
+   
 
     // Background GIF
     let bgImg;
@@ -54,7 +54,7 @@ export default class Video extends Component {
 
     // Playing Video
     const {playVideo} = this.state;
-    const youtubeId = "ZrTyN0g_GD4";
+    const youtubeId = "sxmD7gj4eIU";
     const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&showinfo=0&rel=0&playlist=${youtubeId}`;
 
     let playingFullScreen = (playVideo === true) ? (
@@ -101,8 +101,7 @@ export default class Video extends Component {
                        className={styles.storyBeginsHereImg}
                        onClick={this._handlePlay.bind(this)} />
                   <img src={missionImg}
-                       className={styles.missionImg}
-                       />
+                       className={styles.missionImg}/>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import position2color from './position2color';
-
+import prefixr from 'react-prefixr';
 
 export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position, hasPositionPercentage, positionPercentages) {
   let outerMarginTop = 20;
@@ -134,7 +134,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     margin: `${outerMarginTop}px ${outerMarginLeft}px`,
   }
   // 這是一般用
-  let circleStyles = {
+  let circleStyles = prefixr({
     display: 'inline-block',
     verticalAlign: 'middle',
     position: 'relative',
@@ -143,11 +143,12 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     margin: `${borderWidth}px 0`,
     boxShadow: `0 0 0 ${borderWidth}px ${position2color(position)}`,
     borderRadius: '50%',
-    transform: toTranslate,
-  }
+    transform: toTranslate
+  })
+  
 
   // 以下 circle 是為了 arc
-  let baseCircleStyles = {
+  let baseCircleStyles = prefixr({
     display: 'inline-block',
     verticalAlign: 'middle',
     position: 'relative',
@@ -156,8 +157,8 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     margin: `${borderWidth}px 0`,
     borderRadius: '50%',
     transform: toTranslate,
-  }
-  let colorCircleStylesA = {
+  })
+  let colorCircleStylesA = prefixr({
     display: 'inline-block',
     verticalAlign: 'middle',
     position: 'absolute',
@@ -169,8 +170,8 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     borderColor: colorCircleBorderStyle[0],
     borderRadius: '50%',
     transform: `rotate(${colorRotateStyle[0]}deg)`
-  }
-  let colorCircleStylesB = {
+  })
+  let colorCircleStylesB = prefixr({
     display: 'inline-block',
     verticalAlign: 'middle',
     position: 'absolute',
@@ -182,8 +183,8 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     borderColor: colorCircleBorderStyle[1],
     borderRadius: '50%',
     transform: `rotate(${colorRotateStyle[1]}deg)`
-  }
-  let colorCircleStylesC = {
+  })
+  let colorCircleStylesC = prefixr({
     display: 'inline-block',
     verticalAlign: 'middle',
     position: 'absolute',
@@ -195,8 +196,8 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     borderColor: colorCircleBorderStyle[2],
     borderRadius: '50%',
     transform: `rotate(${colorRotateStyle[2]}deg)`
-  }
-  let grayCircleStyles = {
+  })
+  let grayCircleStyles = prefixr({
     display: 'inline-block',
     verticalAlign: 'middle',
     position: 'absolute',
@@ -208,14 +209,14 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     borderColor: grayCircleBorderStyle,
     borderRadius: '50%',
     transform: `rotate(${grayRotateDegree}deg)`
-  }
-  let rectStyles = {
+  })
+  let rectStyles = prefixr({
     position: 'absolute',
     top: `${offsetTop}px`,
     left: `${offsetLeft}px`,
     width: rectWidth,
     height: rectHeight,
-  }
+  })
 
 
   // 如果是百分百表態，要先畫最多數，再用少數蓋
