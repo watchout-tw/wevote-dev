@@ -7,9 +7,10 @@ export default class Social extends Component {
       	    <a className={styles.watchoutLogo}
       	       href="https://www.facebook.com/WatchOutTW"
       	       target="_blank"></a>
-     	      <div className='shareaholic-canvas' 
+            <div className='shareaholic-canvas' 
                  data-app='share_buttons' 
-                 data-app-id='21124681'></div>
+                 data-app-id='21223043'></div>
+     	      
         </div>
     );
   }

@@ -29,12 +29,14 @@ export default class Html extends Component {
       <html lang="en-us">
         <head>
           <meta charSet="utf-8"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-          <meta name="og:image" content="//dev.wevote.tw/facebook.png"/>
-          <meta name="og:locale" content="zh_TW"/>
-          <meta name="og:type" content="website"/>
-          <meta name="og:author" content="https://www.facebook.com/WatchOutTW"/>
-          <meta name="og:publisher" content="https://www.facebook.com/WatchOutTW"/>
+          <meta property="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+          <meta property="og:image" content="http://dev.wevote.tw/facebook.png"/>
+          <meta property="og:locale" content="zh_TW"/>
+          <meta property="og:type" content="website"/>
+          <meta property="article:publisher" content="https://www.facebook.com/WatchOutTW"/>
+          <meta property="article:author" content="https://www.facebook.com/WatchOutTW"/>
+          <meta property='shareaholic:article_author' content='https://www.facebook.com/WatchOutTW' />
+          
   
           {DocumentMeta.renderAsReact()}
 
@@ -49,7 +51,7 @@ export default class Html extends Component {
           )}
 
           {/* shareaholic */}
-          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='ee9e58db815746ed0289a30d43e9d636' data-cfasync='false' async='async'></script>
+          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='6f03c30df4bd0fe0dc18bab5908becce' data-cfasync='false' async='async'></script>
           <style>{cheatCSS}</style>
         </head>
         <body>
