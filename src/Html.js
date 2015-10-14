@@ -30,6 +30,12 @@ export default class Html extends Component {
         <head>
           <meta charSet="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+          <meta name="og:image" content="//dev.wevote.tw/facebook.png"/>
+          <meta name="og:locale" content="zh_TW"/>
+          <meta name="og:type" content="website"/>
+          <meta name="og:author" content="https://www.facebook.com/WatchOutTW"/>
+          <meta name="og:publisher" content="https://www.facebook.com/WatchOutTW"/>
+  
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />

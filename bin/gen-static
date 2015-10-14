@@ -4,3 +4,5 @@ wget -r -F -k -np -E http://localhost:8080
 mv localhost\:8080/ build/
 cp -r static/dist build/
 cp CNAME build/
+cp static/*.png build/
+
