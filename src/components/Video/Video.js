@@ -54,7 +54,7 @@ export default class Video extends Component {
 
     // Playing Video
     const {playVideo} = this.state;
-    const youtubeId = "ZrTyN0g_GD4";
+    const youtubeId = "sxmD7gj4eIU";
     const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&showinfo=0&rel=0&playlist=${youtubeId}`;
 
     let playingFullScreen = (playVideo === true) ? (
