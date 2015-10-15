@@ -7,18 +7,25 @@ $itemSize: 240px;
 	margin: 0 auto 60px;
 	text-align: center;
 }
+/* 手機上 safari 需要指定 block */
 .coverItem, .coverItem:visited {
 	text-decoration: none;
-	display: inline-block;
+	display: block;
 	vertical-align: middle;
 	width: 240px;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
   	overflow: hidden;
   	color: $black;
 	text-align: center;
 	cursor: pointer;
 	transition: color 100ms ease-in-out;
+}
+@media all and (min-width: 480px) {
+	.coverItem, .coverItem:visited {
+		display: inline-block;
+		margin: 0;
+	}
 }
 @media all and (max-width: ($itemSize - 1px)) {
 	.coverItem, .coverItem:visited {
