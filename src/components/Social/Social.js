@@ -10,11 +10,8 @@ export default class Social extends Component {
             <div className='shareaholic-canvas'
                  data-app='share_buttons'
                  data-app-id='21117200'></div>
+
         </div>
     );
   }
-
-
-
-
 }
