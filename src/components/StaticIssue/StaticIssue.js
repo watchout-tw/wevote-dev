@@ -105,11 +105,11 @@ export default class StaticIssue extends Component {
 
           case 'done':
           processingItem = <div className={styles.processingItem}>立場分析中⋯⋯</div>;
-              processingItem = <div className={styles.processingItem}>立場分析 DONE</div>;
+              processingItem = <div className={styles.processingItem}>分析完成！</div>;
               break;
 
           case 'none':
-              processingItem = <div className={`${styles.processingItem} ${styles.processingItemHide}`}>立場分析 GONE</div>;
+              processingItem = <div className={`${styles.processingItem} ${styles.processingItemHide}`}></div>;
               break;
           
       }
