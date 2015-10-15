@@ -321,14 +321,16 @@ export default class InteractiveIssue extends Component {
       );
       // Only used in web (>800px)
       let introItemWeb = (
-          <div className={styles.keyboardHint}>按空白鍵繼續──或──
+          <div className={styles.keyboardHint}>
             <div className={styles.skipInteractive}><a className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</a></div>
           </div>
       )
 
       /*----- RESULTS -----*/
       // slides
-      let slidesItem = (showSlides === true) ? <Slideshow currentIssue={currentIssue} topic={currentIssue.title}/> : "";
+      let slidesItem = (showSlides === true) ? (
+        <Slideshow currentIssue={currentIssue} topic={currentIssue.title}/>
+      ) : "";
 
       // 協力 NGO
      

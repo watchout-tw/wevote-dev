@@ -261,9 +261,9 @@ export default class AnimatedScript extends Component {
     });
     
     let optionButton = (showNext===true) ? (
-      <div className={styles.actionButtons}>
-        <div className={styles.arrowRight}
-             onClick={handleNext.bind(null)}></div>
+      <div className={styles.arrowSection} onClick={handleNext.bind(null)}>
+        <a className={`${styles.ia} ${styles.bright} ${styles.arrowText}`} >空白鍵繼續</a>
+        <div className={styles.arrowRight}></div>
       </div>
     ): "";
 
@@ -351,7 +351,7 @@ export default class AnimatedScript extends Component {
         lines.push(`你決定贊成使用`);
         lines.push(`「${issue.statement}」`);
         lines.push(`這個戰鬥策略。`);
-        lines.push(`ファイト！`);
+        lines.push(`戰鬥吧！`);
         lines.push(`這是過去的戰役紀錄⋯`);
       }
       if(userPosition === "反對"){

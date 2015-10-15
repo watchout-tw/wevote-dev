@@ -3,7 +3,7 @@
 /* Typing Animaiton */
 /* ------------------------------------------------ */
 $break: 600px;
-
+$breakLarge: 800px;
 .storyBlock {
     text-align: left;
     max-width: $break;
@@ -81,31 +81,35 @@ $break: 600px;
     -webkit-animation: blink-caret 1s step-end infinite;
     -moz-animation: blink-caret 1s step-end infinite;
 }
-/*
-你好，歡迎來到公投城堡。12
-你好，歡迎來到婚姻平權城堡。14
-在這個國度裡，每一座城堡，都有不同的人馬駐守著。24
-駐守的人可以決定城堡的相關制度及未來發展。21
-甚至，要自我毀滅，讓公投完全消失，也不是完全不可能。26
-要不要先聽聽兩邊說法？（Y/n）
-請問你要支持哪一個陣營？（Y/n/s）
-嗯，你決定加入支持方陣營
-這是雙方過去的交戰紀錄
-嗯⋯⋯2
-*/
 
-
-.arrowRight {
-  width: 0;
-  height: 0;
+.arrowSection {
   position: absolute;
   right: 10px;
   bottom: 10px;
+  cursor: pointer;
+}
+.arrowText {
+  display: none;
+}
+@media all and (min-width: $breakLarge){
+  .arrowText {
+      display: inline-block;
+      font-size: 15px;
+      margin: 0 8px;
+      vertical-align: top;
+      padding-top: 4px;
+      color: $awesomeColor;
+  }
+}
+.arrowRight {
+  width: 0;
+  height: 0;
+  
   display: inline-block;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 16px solid $awesomeColor;
-  cursor: pointer;
+  
 }
 .battleStrategy {
   color: $awesomeColor;
