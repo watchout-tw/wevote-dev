@@ -30,7 +30,7 @@ export default class Html extends Component {
         <head>
           <meta charSet="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-          <meta property="og:image" content="http://dev.wevote.tw/facebook.png"/>
+          <meta property="og:image" content="http://wevote.tw/facebook.png"/>
           <meta property="og:locale" content="zh_TW"/>
           <meta property="og:type" content="website"/>
           <meta property="article:publisher" content="https://www.facebook.com/WatchOutTW"/>
@@ -51,13 +51,14 @@ export default class Html extends Component {
           )}
 
           {/* shareaholic */}
-          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='6f03c30df4bd0fe0dc18bab5908becce' data-cfasync='false' async='async'></script>
+          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
           <style>{cheatCSS}</style>
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
+          <script async src='//www.google-analytics.com/analytics.js'></script>
         </body>
       </html>
     );
