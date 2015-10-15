@@ -358,7 +358,7 @@ export default class AnimatedScript extends Component {
         lines.push(`你決定反對使用`);
         lines.push(`「${issue.statement}」`);
         lines.push(`這個戰鬥策略。`);
-        lines.push(`ファイト！`);
+        lines.push(`戰鬥吧！`);
         lines.push(`這是過去的戰役紀錄⋯`);
       }
       if(userPosition === "不確定"){
