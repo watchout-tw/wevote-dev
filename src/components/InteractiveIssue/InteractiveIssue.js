@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
+import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 import Missions from '../../components/Missions/Missions.js';
 
 //handle key down event, key code
@@ -59,12 +60,12 @@ export default class InteractiveIssue extends Component {
   _updateCurrentIssueFromURL(){
       if(window){
         let pathname = window.location.pathname;
-        
+
         if(pathname.indexOf(".html")!==-1){
            pathname = pathname.split(".html")[0]
         }
         pathname = pathname.split("/");
-        
+
         let value = pathname[3] || "parties";
         if(["parties","legislators","positions"].indexOf(value)===-1){
            value = "parties";
@@ -74,7 +75,7 @@ export default class InteractiveIssue extends Component {
           currentView: value
 
         })
-        
+
       }
 
   }
@@ -145,20 +146,11 @@ export default class InteractiveIssue extends Component {
             this._handleSetStage("choosePosition");
             break;
 
-        case 'results':
-            this._handleSetStage("others");
-
-
-            break;
-
-        case 'others':
-        break;
-
     }
   }
   _handleChoice(choice){
     const {stage} = this.state;
-    
+
     switch(stage){
         case 'chooseSlides':
           if(choice===S){
@@ -166,7 +158,7 @@ export default class InteractiveIssue extends Component {
           }
           let showSlides = (choice === Y) ? true : false ;
           let nextStage = (choice === Y) ? "slides" : "choosePosition" ;
-          
+
           this.setState({
             showSlides: showSlides
           })
@@ -228,7 +220,7 @@ export default class InteractiveIssue extends Component {
   _handleSetStage(value, event){
 
     //console.log("[handle set stage]")
-    const hasNext = ["intro", "introStory", "slides", "results"];
+    const hasNext = ["intro", "introStory", "slides"];
     let shouldShowNext = (hasNext.indexOf(value) !== -1) ? true : false ;
 
     this.setState({
@@ -241,7 +233,7 @@ export default class InteractiveIssue extends Component {
   // 往前跟往後設定 stage 需要分開，因為「回去到」showSlides 要 reset showSlides 的值
   // 但是這會把「正在 chooseSlides」選擇「要看」的選擇蓋掉
   _handleSetStageBackTo(value, event){
-    
+
     const hasNext = ["intro", "introStory", "slides", "results"];
     let shouldShowNext = (hasNext.indexOf(value) !== -1) ? true : false ;
 
@@ -257,11 +249,11 @@ export default class InteractiveIssue extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    
+
     const {issues} = this.props;
     const currentIssueName = this.props.currentIssueName;
     const nextIssueName = nextProps.currentIssueName
-    
+
     //RESET stage parameter when change issue
     if(currentIssueName !== nextIssueName){
 
@@ -296,14 +288,14 @@ export default class InteractiveIssue extends Component {
       const {issues, skipInteractive, setCurrentView} = this.props;
       const {stage, shouldAnimated, showNext, showSlides, userPosition,
              currentIssueName, currentView } = this.state;
-      
+
       // 拿該議題的資料
       const currentIssue = issues[currentIssueName];
       if(!currentIssue) return <div></div>
 
 
       let notFirstPage = ((stage !== "intro") && (stage !=="introStory"));
-      
+
       //back
       let backItem = (notFirstPage) ? (
               <div className={styles.backStage}
@@ -329,17 +321,19 @@ export default class InteractiveIssue extends Component {
       );
       // Only used in web (>800px)
       let introItemWeb = (
-          <div className={styles.keyboardHint}>按空白鍵繼續──或──
+          <div className={styles.keyboardHint}>
             <div className={styles.skipInteractive}><a className={`${styles.ia} ${styles.bright}`} onClick={skipInteractive.bind(null)}>直接看結果</a></div>
           </div>
       )
 
       /*----- RESULTS -----*/
       // slides
-      let slidesItem = (showSlides === true) ? <Slideshow currentIssue={currentIssue} topic={currentIssue.title}/> : "";
+      let slidesItem = (showSlides === true) ? (
+        <Slideshow currentIssue={currentIssue} topic={currentIssue.title}/>
+      ) : "";
 
       // 協力 NGO
-     
+
       const { collaborators } = currentIssue;
       let collaboratorItems = collaborators.map((ngo, index)=>{
           return <a className={`${styles.ia} ${styles.bright}`}
@@ -354,8 +348,17 @@ export default class InteractiveIssue extends Component {
                          currentIssue={currentIssue}
                          currentIssueName={currentIssueName}
                          setCurrentView={setCurrentView} />
+            <IssueArticle issue={currentIssue.titleEng} />
+
+            <div className={styles.completeMessage}>
+                <div>{currentIssue.title}之城任務完成了！</div>
+                <div>選擇其他任務吧！</div>
+            </div>
+            <Missions issues={issues}
+                      skipIssue={currentIssueName}
+                      showComingMission={false}/>
             <div className={styles.collaboratorInfo}>
-                  特別感謝{collaboratorItems}協助議題資料
+                  本議題特別感謝{collaboratorItems}的協助
             </div>
         </div>
       ):"";
@@ -413,7 +416,7 @@ export default class InteractiveIssue extends Component {
         default:
           //op
       }
-     
+
       return (
         <div className={styles.wrap}>
             <div className={styles.innerWrap}>

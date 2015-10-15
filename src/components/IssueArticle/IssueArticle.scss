@@ -11,8 +11,7 @@ $break: 600px;
 	background: $trueWhite;
 	padding: 20px;
 	background: $trueWhite;
-  	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
-  
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
 }
 @media all and (min-width: $break){
 	.articleWrap {
@@ -22,6 +21,28 @@ $break: 600px;
 		padding: 40px;
 		box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.15);
 	}
+}
+
+// 表頭：阿草、單元標題、副標、小箭頭
+.img {
+    position: absolute;
+    width: 200px;
+    top: -160px;
+    left: -10px;
+    float: left;
+}
+.bigTitle {
+	font-size: 24px;
+	font-weight: bold;
+	color: $awesomeColor;
+	line-height: $textLineHeight;
+	text-align: center;
+}
+.bigSubtitle {
+	font-size: 20px;
+  color: $darkGrey;
+	line-height: $textLineHeight;
+	text-align: center;
 }
 .article:after {
 	content: '';
@@ -33,70 +54,133 @@ $break: 600px;
 	border-right: 32px solid transparent;
 }
 
-/* header, preview */
-.articleHeader {
-	color: $trueBlack;
+/* 段落 */
+.mainContent {
+	max-height: 0;
+	overflow: hidden;
+
+	&.active {
+	  max-height: 10000px;
+	}
+	&:before {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		width: 2*$defaultFontSize;
+		height: 1px;
+		background: $grey;
+	}
 }
-.img {
-    position: absolute;
-    width: 200px;
-    top: -160px;
-    left: -10px;
-    float: left;
+article {
+	display: block;
+	margin: 0;
+	border: none;
+	padding: 0;
+	h1 {
+		font-size: 20px;
+		font-weight: bold;
+		line-height: $textLineHeight;
+	}
+	h2 {
+		font-size: 18px;
+		font-weight: bold;
+		line-height: $textLineHeight;
+	}
+	p {
+		margin: $defaultFontSize 0;
+		line-height: $textLineHeight;
+	}
+	section {
+		margin: 40px 0;
+	}
+	ul {
+		line-height: $textLineHeight;
+	}
+	ul > li {
+		margin: 10px;
+	}
+	blockquote {
+	  background: rgba(180, 174, 163, 0.19);
+	  margin: 10px 0 10px 40px;
+	  padding: 20px;
+	  line-height: 1.6;
+
+		> p {
+			margin: 0;
+		}
+		> p:not(:first-child) {
+			margin-top: $defaultFontSize;
+		}
+	}
+	.editorialComment {
+		color: $grey;
+		&:before {
+			content: '【編註：';
+		}
+		&.editorialComment:after {
+			content: '】';
+		}
+	}
 }
 
-.articleTitle {
-	font-size: 24px;
-	font-weight: bold;
-	color: $awesomeColor;
-	line-height: $textLineHeight;
-	text-align: center;
+// 量身定做中文前綴點點清單
+@mixin custom-list-item($i) {
+	margin-left: $i*$defaultFontSize;
+	&:before {
+		left: -$i*$defaultFontSize;
+	}
 }
-.articleSubtitle {
-	font-size: 20px;
-  color: $darkGrey;
-	line-height: $textLineHeight;
-	text-align: center;
-}
-.hintList {
+.customList {
 	list-style: none;
 	margin: 20px 0;
 	padding: 0;
-}
-.hint {
-	position: relative;
-	margin: 10px 0 0 4em;
-	line-height: 1.5;
-	&:before {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: -4em;
-		font-weight: bold;
+
+	> li {
+		position: relative;
+		margin: 10px 0 0;
+		line-height: $textLineHeight;
+		&:before {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-weight: bold;
+		}
 	}
-	&:nth-child(1):before { content: '迷思一：'; }
-	&:nth-child(2):before { content: '迷思二：'; }
-	&:nth-child(3):before { content: '迷思三：'; }
-	&:nth-child(4):before { content: '迷思四：'; }
-	&:nth-child(5):before { content: '迷思五：'; }
-}
-.est {
-	position: relative;
-	margin: 10px 0 0 6em;
-	line-height: 1.5;
-	&:before {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: -6em;
-		font-weight: bold;
+	> li.myth {
+		@include custom-list-item(4);
+		&:nth-child(1):before { content: '迷思一：'; }
+		&:nth-child(2):before { content: '迷思二：'; }
+		&:nth-child(3):before { content: '迷思三：'; }
+		&:nth-child(4):before { content: '迷思四：'; }
+		&:nth-child(5):before { content: '迷思五：'; }
 	}
-	&:nth-child(1):before { content: '歷史之最一：'; }
-	&:nth-child(2):before { content: '歷史之最二：'; }
-	&:nth-child(3):before { content: '歷史之最三：'; }
-	&:nth-child(4):before { content: '歷史之最四：'; }
-	&:nth-child(5):before { content: '歷史之最五：'; }
+	> li.est {
+		@include custom-list-item(6);
+		&:nth-child(1):before { content: '歷史之最一：'; }
+		&:nth-child(2):before { content: '歷史之最二：'; }
+		&:nth-child(3):before { content: '歷史之最三：'; }
+		&:nth-child(4):before { content: '歷史之最四：'; }
+		&:nth-child(5):before { content: '歷史之最五：'; }
+	}
+	> li.partisan {
+		@include custom-list-item(2);
+		&.ruling:before { content: '朝：' }
+		&.opposition:before { content: '野：' }
+		&.none {
+			@include custom-list-item(4);
+			&:before { content: '無黨籍：'; }
+		}
+	}
+	> li.partyPosition {
+		@include custom-list-item(7);
+		&.DPP_aye:before { content: '贊成／民進黨：'; }
+		&.PFP_aye:before { content: '贊成／親民黨：'; }
+		&.KMT_unknown:before { content: '模糊／國民黨：'; }
+		&.KMT_nay:before { content: '反對／國民黨：'; }
+	}
 }
+
 /* 繼續閱讀 */
 .button {
 	cursor: pointer;
@@ -111,48 +195,10 @@ $break: 600px;
 	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
 }
 
-/* 段落 */
-.mainArticle {
-	max-height: 0;
-	overflow: hidden;
-}
-.mainArticle.active {
-    max-height: 10000px;
-}
-.section {
-	margin: 40px 0;
-}
-.sectionTitle {
-	font-size: 20px;
-	font-weight: bold;
-	line-height: $textLineHeight;
-}
-.sectionSubtitle {
-	font-size: 18px;
-	font-weight: bold;
-	line-height: $textLineHeight;
-}
-.paragraph {
-	line-height: $textLineHeight;
-}
-.paragraphIndent {
-	margin: 0 8px;
-}
-.list {
-	line-height: $textLineHeight;
-}
-.peopleLink, .peopleLink:visited {
-	@extend .ia.bright;
-}
-blockquote {
-  background: rgba(180, 174, 163, 0.19);
-  margin: 10px 0 10px 40px;
-  padding: 20px;
-  line-height: 1.6;
-}
-.pos {
-	margin: 10px;
-}
-li {
-	margin: 10px;
+// 讓文章裡的立委連結更明顯！
+.peopleLink {
+	display: inline-block;
+	white-space: nowrap;
+	background: rgba($awesomeColor, 0.15);
+	padding: 0 2px;
 }

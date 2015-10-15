@@ -9,8 +9,8 @@ export default class Social extends Component {
       	       target="_blank"></a>
             <div className='shareaholic-canvas' 
                  data-app='share_buttons' 
-                 data-app-id='21223043'></div>
-     	      
+                 data-app-id='21117200'></div>
+
         </div>
     );
   }
