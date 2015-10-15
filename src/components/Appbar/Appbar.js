@@ -1,6 +1,14 @@
 import React, {Component, PropTypes} from 'react';
 import {Router, Link} from 'react-router';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {setToProecessing} from '../../ducks/processingState.js';
 
+@connect(
+    state => ({
+                issues: state.issues
+              }),
+    dispatch => bindActionCreators({setToProecessing}, dispatch))
 
 export default class Appbar extends Component {
   constructor(props){ super(props)
@@ -12,6 +20,10 @@ export default class Appbar extends Component {
         location: "",
         issueName: issueName
     }
+  }
+  _onClickIssue(){
+    this._hideMenu();
+    this.props.setToProecessing();
   }
   _toggleShowMenu(){
     this.setState({
@@ -42,6 +54,7 @@ export default class Appbar extends Component {
     const siteLogo = require('./images/logo-big-1.svg');
     const {showMenu, location, issueName} = this.state;
     const {currentIssueName, issues} = this.props;
+    const {processing} = this.props;
 
     let showStyle = (showMenu) ? styles.showMenu : "";
 
@@ -56,7 +69,7 @@ export default class Appbar extends Component {
             onClick={this._updateLocation.bind(this,issueId)}>
             <Link className={`${styles.navItem} ${activeStyle}`}
                   to={`/issues/${issueId}/`}
-                  onClick={this._hideMenu.bind(this)}>
+                  onClick={this._onClickIssue.bind(this)}>
                     <img src={symbol} className={styles.symbol}/>
                     <span>{issues[issueId].title}</span>
             </Link>

@@ -8,16 +8,18 @@ import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
 import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 import Missions from '../../components/Missions/Missions.js';
 
+import {done, none} from '../../ducks/processingState.js';
+
 @connect(
     state => ({
-                issues: state.issues
+                issues: state.issues,
+                processingState: state.processingState
               }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({done, none}, dispatch))
 
 export default class StaticIssue extends Component {
   static propTypes = {
-     issues: PropTypes.object.isRequired,
-     processing: "none"
+     issues: PropTypes.object.isRequired
   }
 
   constructor(props) { super(props)
@@ -26,29 +28,24 @@ export default class StaticIssue extends Component {
         currentView: props.currentView
      }
   }
-  _informProcessing(){
-      const {processing} = this.state;
-      if(processing === "processing"){
-          setTimeout(()=>{
-              this.setState({
-                 processing: "done"
-              })
-              setTimeout(()=>{
-                 this.setState({
-                    processing: "none"
-                 })
-              }, 1000)
-          }, 5000)
-      }
 
-  }
   componentDidMount(){
       this._updateCurrentIssueFromURL();
       this._informProcessing();
-
   }
   componentDidUpdate(){
       this._informProcessing();
+  }
+  _informProcessing(){
+      const {processingState, done, none} = this.props;
+      if(processingState.processing === "processing"){
+          setTimeout(()=>{
+              done();
+              setTimeout(()=>{
+                 none();
+              }, 1000)
+          }, 5000)
+      }
 
   }
   _updateCurrentIssueFromURL(){
@@ -76,11 +73,9 @@ export default class StaticIssue extends Component {
   }
   componentWillReceiveProps(nextProps){
       //console.log(nextProps.currentIssueName)
-      let processing = (nextProps.currentIssueName === "nuclear-power") ? "processing" : "none";
       this.setState({
           currentIssueName: nextProps.currentIssueName,
-          currentView: nextProps.currentView,
-          processing: processing
+          currentView: nextProps.currentView
       })
 
   }
@@ -99,9 +94,10 @@ export default class StaticIssue extends Component {
 
 
       // 顯示處理中
-      const {processing} = this.state;
+      const {processingState} = this.props;
       let processingItem;
-      switch(processing){
+     
+      switch(processingState.processing){
           case 'processing':
               processingItem = <div className={styles.processingItem}><div className={styles.content}><img src={runner_animated}/><div>立場分析中</div></div></div>;
               break;
