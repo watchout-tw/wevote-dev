@@ -52,7 +52,6 @@ export default class Html extends Component {
           <meta property='shareaholic:article_author' content='https://www.facebook.com/WatchOutTW' />
           <meta name="google-site-verification" content="lcgCkeejw-aJgK6-JoOR9a8ivs5MWZA66UavjFBxCJA" />
           <meta name="msvalidate.01" content="2CB93BE9E9E2D38CAD7DA93479BA8E30" />
-
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />
@@ -67,7 +66,6 @@ export default class Html extends Component {
 
           {/* shareaholic */}
           <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
-
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
