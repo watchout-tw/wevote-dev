@@ -8,7 +8,46 @@
 }
 .collaboratorInfo {
 	text-align: center;
-  //margin: 0 -9%;
 	padding: 10px 0;
   background: $lightGrey;
+}
+
+.processingItem {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: rgba($awesomeColor, 0.85);
+  color: white;
+	font-size: $smallerFontSize;
+  text-align: center;
+  z-index: $zProcessingIndicator;
+
+	> .content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		> img {
+			display: block;
+			width: 40px;
+			margin: 8px auto;
+		}
+		> div {
+			display: block;
+			width: 100%;
+			min-width: 5*$smallerFontSize;
+		}
+	}
+}
+.processingItem.processingItemHide {
+	max-width: 0;
+	max-height: 0;
+	padding: 0;
+	overflow: hidden;
+	transition: all 500ms ease-in;
 }

@@ -6,10 +6,13 @@ import parties from './parties';
 import records from './records';
 import FAQ from './FAQ';
 
+import processingState from './processingState';
+
 export default combineReducers({
   legislators,
   issues,
   parties,
   records,
-  FAQ
+  FAQ,
+  processingState
 });

@@ -3,7 +3,13 @@ import { Link } from "react-router";
 
 import eng2url from '../../utils/eng2url';
 
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {setToProecessing} from '../../ducks/processingState.js';
 
+@connect(
+    state => ({}),
+    dispatch => bindActionCreators({setToProecessing}, dispatch))
 export default class Missions extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired
@@ -53,6 +59,8 @@ export default class Missions extends Component {
     const castle_default = require("./images/castles_default.svg");
     const symbol_star = require('./images/symbols_star.svg');
 
+    const {setToProecessing} = this.props;
+
     let missonItems = Object.keys(issues).map((currentIssue, index)=>{
 
         let imgURL;
@@ -74,7 +82,8 @@ export default class Missions extends Component {
 
         if(skipIssue !== currentIssue){
             return (
-              <Link to={`/issues/${currentIssue}/`} key={index} className={styles.coverItem}>
+              <Link to={`/issues/${currentIssue}/`} key={index} className={styles.coverItem}
+                    onClick={setToProecessing}>
                   <img src={imgURL} className={styles.coverImg}/>
                   <div className={styles.coverTitleBlock}>
                       <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
