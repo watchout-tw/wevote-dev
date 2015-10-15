@@ -325,8 +325,8 @@ class RecallPreview extends Component {
                 <p>罷免權是人民收回當選官員權力的制度，美國光是2011年這一年當中，就舉行了150次罷免選舉，其中75位官員被罷免成功，9位官員自行辭職。但反觀台灣，針對立委提出的罷免，主要有三次，卻從來沒有成功過。</p>
                 <ul>
                   <li>1994年，反核團體提出罷免擁核立委林志嘉、<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("洪秀柱")}/records/recall`}>洪秀柱</Link>、詹裕仁、韓國瑜、魏鏞等5人，最後未達投票門檻而失敗。</li>
-                  <li>2013年，憲法133實踐聯盟提出罷免吳育昇，最後未達連署門檻而失敗。</li>
-                  <li>2015年，割闌尾計畫提出罷免蔡正元，最後未達投票門檻而失敗。</li>
+                  <li>2013年，憲法133實踐聯盟提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/marriage-equality`}>吳育昇</Link>，最後未達連署門檻而失敗。</li>
+                  <li>2015年，割闌尾計畫提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("蔡正元")}/records/recall`}>蔡正元</Link>，最後未達投票門檻而失敗。</li>
                 </ul>
                 <p>在立法院第八屆任期期間（2012年—2015年），就發生了兩次對立委的罷免行動，罷免可說是攸關立委個人去留的議題。那麼，在立法院內是怎麼討論罷免呢？</p>
                 <p>讓阿草用數據告訴你立法院裡的修法真相！</p>
