@@ -160,9 +160,9 @@ export default class PartyPositionGroup extends Component {
         </div>
         <div style={layoutStyles.margin}>
           <div style={layoutStyles.baseCircle}>
-            <div style={layoutStyles.colorCircleA} key={`${layoutStyles.colorCircleA.border} ${layoutStyles.colorCircleA.borderColor}`}></div>
-            <div style={layoutStyles.colorCircleB} key={`${layoutStyles.colorCircleB.border} ${layoutStyles.colorCircleB.borderColor}`}></div>
-            <div style={layoutStyles.colorCircleC} key={`${layoutStyles.colorCircleC.border} ${layoutStyles.colorCircleC.borderColor}`}></div>
+            <div style={layoutStyles.colorCircleA} key={`A${layoutStyles.colorCircleA.border} ${layoutStyles.colorCircleA.borderColor}`}></div>
+            <div style={layoutStyles.colorCircleB} key={`B${layoutStyles.colorCircleB.border} ${layoutStyles.colorCircleB.borderColor}`}></div>
+            <div style={layoutStyles.colorCircleC} key={`C${layoutStyles.colorCircleC.border} ${layoutStyles.colorCircleC.borderColor}`}></div>
             
             <div style={layoutStyles.grayCircle} key={`${layoutStyles.grayCircle.border} ${layoutStyles.grayCircle.borderColor}`}></div>
             <div style={layoutStyles.rect}>{records}</div>
