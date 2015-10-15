@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
+import DocumentMeta from 'react-document-meta';
 import { connect } from 'react-redux';
 import moment from 'moment';
 
@@ -70,9 +71,9 @@ export default class Record extends Component {
     }
 
     /* 立委個人資料 */
-    let {name, party, partyCht, gender, age, isCurrent, constituency1, constituency2,
+    const {name, party, partyCht, gender, age, isCurrent, constituency1, constituency2,
          isCandidate, candidateConstituency1, candidateConstituency2} = legislator;
-    let info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateConstituency1, candidateConstituency2);
+    const info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateConstituency1, candidateConstituency2);
 
     /* 來源資料 */
     let lySourceItem = (data.lyURL) ? (
@@ -86,9 +87,27 @@ export default class Record extends Component {
 
     let sourceItem = <div>{lySourceItem}{otherSourceItem}</div>;
 
+
+    const title = `${name}${data.positionJudgement}-沃草2016立委出任務`;
+    const description = `${name}${data.positionJudgement}，${name}為${eng2cht(data.party)}立委，為什麼對於${data.issue}採用此戰鬥策略？`;
+    const metaData = {
+      title: title,
+      description: description,
+      meta: {
+          charSet: 'utf-8',
+          property: {
+            'og:title': title,
+            'og:description': description,
+            'og:type' : 'website'
+          }
+      }
+     
+    };
+
     return (
 
     <div className={styles.wrap}>
+      <DocumentMeta {...metaData}/>
       <div className={styles.form}>
         <div className={styles.issueRow}>
           <div className={styles.issueName}>{data.issue}</div>
