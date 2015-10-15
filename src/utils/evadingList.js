@@ -70,8 +70,8 @@ export default {
             "name": "蔡其昌",
             "party": "DPP"
         },
-        "鄭天財Sra．Kacaw": {
-            "name": "鄭天財Sra．Kacaw",
+        "鄭天財Sra·Kacaw": {
+            "name": "鄭天財Sra·Kacaw",
             "party": "KMT"
         },
         "賴士葆": {
