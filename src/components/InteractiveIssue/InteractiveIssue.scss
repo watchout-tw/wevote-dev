@@ -184,3 +184,14 @@ $breakLarge: 800px;
   padding: 10px 0;
   background: $lightGrey;
 }
+.completeMessage {
+  text-align: left;
+  max-width: 600px;
+  margin: 100px auto 20px auto;
+  padding: 30px;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+
+}

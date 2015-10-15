@@ -3,7 +3,7 @@
 $itemSize: 240px;
 .wrap {
 	position: relative;
-	max-width: 720px; // 3 castles
+	max-width: 720px; /* 3 castles */
 	margin: 0 auto 60px;
 	text-align: center;
 }
@@ -14,8 +14,8 @@ $itemSize: 240px;
 	width: 240px;
 	margin: 0;
 	padding: 0;
-  overflow: hidden;
-  color: $black;
+  	overflow: hidden;
+  	color: $black;
 	text-align: center;
 	cursor: pointer;
 	transition: color 100ms ease-in-out;

@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
+import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 import Missions from '../../components/Missions/Missions.js';
 
 //handle key down event, key code
@@ -145,15 +146,6 @@ export default class InteractiveIssue extends Component {
             this._handleSetStage("choosePosition");
             break;
 
-        case 'results':
-            this._handleSetStage("others");
-
-
-            break;
-
-        case 'others':
-        break;
-
     }
   }
   _handleChoice(choice){
@@ -228,7 +220,7 @@ export default class InteractiveIssue extends Component {
   _handleSetStage(value, event){
 
     //console.log("[handle set stage]")
-    const hasNext = ["intro", "introStory", "slides", "results"];
+    const hasNext = ["intro", "introStory", "slides"];
     let shouldShowNext = (hasNext.indexOf(value) !== -1) ? true : false ;
 
     this.setState({
@@ -354,6 +346,15 @@ export default class InteractiveIssue extends Component {
                          currentIssue={currentIssue}
                          currentIssueName={currentIssueName}
                          setCurrentView={setCurrentView} />
+            <IssueArticle issue={currentIssue.titleEng} />
+
+            <div className={styles.completeMessage}>
+                <div>{currentIssue.title}之城任務完成了！</div>
+                <div>選擇其他任務吧！</div>
+            </div>
+            <Missions issues={issues}
+                      skipIssue={currentIssueName}
+                      showComingMission={false}/> 
             <div className={styles.collaboratorInfo}>
                   特別感謝{collaboratorItems}協助議題資料
             </div>
