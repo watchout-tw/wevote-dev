@@ -45,11 +45,11 @@ export default class StaticIssue extends Component {
   componentDidMount(){
       this._updateCurrentIssueFromURL();
       this._informProcessing();
-      
+
   }
   componentDidUpdate(){
       this._informProcessing();
-      
+
   }
   _updateCurrentIssueFromURL(){
       //console.log("mount - static issue : update pathname form url")
@@ -92,6 +92,9 @@ export default class StaticIssue extends Component {
       const {currentView, currentIssueName} = this.state;
       const currentIssue = issues[currentIssueName];
 
+      const runner = require('./images/runner.gif');
+      const runner_animated = require('./images/runner-animated.gif');
+
       if(!currentIssue) return <div></div>;
 
 
@@ -100,20 +103,19 @@ export default class StaticIssue extends Component {
       let processingItem;
       switch(processing){
           case 'processing':
-              processingItem = <div className={styles.processingItem}>立場分析中⋯⋯</div>;
+              processingItem = <div className={styles.processingItem}><div className={styles.content}><img src={runner_animated}/><div>立場分析中</div></div></div>;
               break;
 
           case 'done':
-          processingItem = <div className={styles.processingItem}>立場分析中⋯⋯</div>;
-              processingItem = <div className={styles.processingItem}>分析完成！</div>;
+              processingItem = <div className={styles.processingItem}><div className={styles.content}><img src={runner}/><div>分析完成</div></div></div>;
               break;
 
           case 'none':
               processingItem = <div className={`${styles.processingItem} ${styles.processingItemHide}`}></div>;
               break;
-          
+
       }
-      
+
 
        // 協力 NGO
       const { collaborators } = currentIssue;
@@ -128,7 +130,7 @@ export default class StaticIssue extends Component {
         <div className={styles.wrap}>
             {processingItem}
             <div className={styles.innerWrap}>
-                
+
                 <Slideshow currentIssue={currentIssue}
                            topic={currentIssue.title}/>
 
