@@ -44,14 +44,14 @@ export default class Html extends Component {
         <head>
           <meta charSet="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-          <meta property="og:image" content="http://dev.wevote.tw/facebook.png"/>
+          <meta property="og:image" content="http://wevote.tw/facebook.png"/>
           <meta property="og:locale" content="zh_TW"/>
           <meta property="og:type" content="website"/>
           <meta property="article:publisher" content="https://www.facebook.com/WatchOutTW"/>
           <meta property="article:author" content="https://www.facebook.com/WatchOutTW"/>
           <meta property='shareaholic:article_author' content='https://www.facebook.com/WatchOutTW' />
-
-
+          <meta name="google-site-verification" content="lcgCkeejw-aJgK6-JoOR9a8ivs5MWZA66UavjFBxCJA" />
+          <meta name="msvalidate.01" content="2CB93BE9E9E2D38CAD7DA93479BA8E30" />
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />
@@ -65,12 +65,13 @@ export default class Html extends Component {
           )}
 
           {/* shareaholic */}
-          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='6f03c30df4bd0fe0dc18bab5908becce' data-cfasync='false' async='async'></script>
+          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
+          <script async src='//www.google-analytics.com/analytics.js'></script>
         </body>
         <style>{cheatCSS}</style>
       </html>
