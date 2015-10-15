@@ -19,7 +19,7 @@ export default class StaticIssue extends Component {
      issues: PropTypes.object.isRequired
   }
 
-  constructor(props) { super(props)   
+  constructor(props) { super(props)
      this.state = {
         currentIssueName: props.currentIssueName, //URL
         currentView: props.currentView
@@ -32,12 +32,12 @@ export default class StaticIssue extends Component {
       //console.log("mount - static issue : update pathname form url")
       if(window){
         let pathname = window.location.pathname;
-        
+
         if(pathname.indexOf(".html")!==-1){
            pathname = pathname.split(".html")[0]
         }
         pathname = pathname.split("/");
-        
+
         let value = pathname[3] || "parties";
         if(["parties","legislators","positions"].indexOf(value)===-1){
            value = "parties";
@@ -47,7 +47,7 @@ export default class StaticIssue extends Component {
           currentView: value
 
         })
-        
+
       }
 
   }
@@ -65,7 +65,7 @@ export default class StaticIssue extends Component {
       const {issues, setCurrentView} = this.props;
       const {currentView, currentIssueName} = this.state;
       const currentIssue = issues[currentIssueName];
-      
+
       if(!currentIssue) return <div></div>;
 
        // 協力 NGO
@@ -95,7 +95,7 @@ export default class StaticIssue extends Component {
                           showComingMission={false}/>
 
                 <div className={styles.collaboratorInfo}>
-                    特別感謝{collaboratorItems}協助議題資料
+                    本議題特別感謝{collaboratorItems}的協助
                 </div>
 
              </div>
