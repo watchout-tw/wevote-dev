@@ -3,9 +3,23 @@ import serialize from 'serialize-javascript';
 import DocumentMeta from 'react-document-meta';
 const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
-// This is me cheating.
-const cheatCSS = 'i.shareaholic-service-icon { border: none !important; background: none !important; color: white !important; box-shadow: none !important; }';
-
+const IMP = '!important';
+const cheatCSS = `
+.shareaholic-share-buttons-container ul.shareaholic-share-buttons
+{ margin: 0 ${IMP}; padding: 4px ${IMP}; }
+i.shareaholic-service-icon
+{ border: none ${IMP}; background: none ${IMP}; color: white ${IMP}; box-shadow: none ${IMP}; }
+.shareaholic-share-buttons-container li.shareaholic-share-button
+{ padding: 0 10px ${IMP}; }
+.shareaholic-share-buttons-container.mini .shareaholic-share-button-container .shareaholic-service-icon
+{ font-size: 16px ${IMP}; }
+.shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-twitter
+{ font-size: 18px ${IMP}; margin-top: -1px ${IMP}; }
+.shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-google_plus
+{ font-size: 22px ${IMP}; width: 26px ${IMP}; margin-top: -3px ${IMP}; margin-left: -3px ${IMP};}
+.shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-plurk
+{ font-size: 15px ${IMP}; padding-top: 1px ${IMP}; }
+`;
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
  * Used in server-side code only to wrap the string output of the
@@ -38,7 +52,7 @@ export default class Html extends Component {
           <meta property='shareaholic:article_author' content='https://www.facebook.com/WatchOutTW' />
           <meta name="google-site-verification" content="lcgCkeejw-aJgK6-JoOR9a8ivs5MWZA66UavjFBxCJA" />
           <meta name="msvalidate.01" content="2CB93BE9E9E2D38CAD7DA93479BA8E30" />
-  
+
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,7 +67,7 @@ export default class Html extends Component {
 
           {/* shareaholic */}
           <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
-          <style>{cheatCSS}</style>
+
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
@@ -61,6 +75,7 @@ export default class Html extends Component {
           <script src={assets.javascript.main}/>
           <script async src='//www.google-analytics.com/analytics.js'></script>
         </body>
+        <style>{cheatCSS}</style>
       </html>
     );
   }
