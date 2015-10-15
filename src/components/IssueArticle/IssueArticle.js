@@ -193,9 +193,9 @@ class ReferendumContent extends Component {
           <section>
               <h1>真相一：不只是藍綠對決，其實是朝野政黨大亂鬥</h1>
               <p>大家常常會以為立法院是藍綠對決，但在公投法的討論上，實際上是朝野政黨的大亂鬥。圖表顯示有表態紀錄的立委總共51人，包含：</p>
-              <ul>
-                <li>朝：國民黨13人</li>
-                <li>野：民進黨30人+台聯6人+親民黨2人</li>
+              <ul className={styles.customList}>
+                <li className={`${styles.partisan} ${styles.ruling}`}>國民黨13人</li>
+                <li className={`${styles.partisan} ${styles.opposition}`}>民進黨30人+台聯6人+親民黨2人</li>
               </ul>
               <p>我們發現，在野黨非常關心這個議題，民進黨表態立委超過四分之三，其他兩個小黨台聯和親民黨的立委則全部參戰。更特別的是，這些在野黨立委全部都偏向贊成公投門檻下修的立場，國民黨立委則是落在模糊和反對的立場，朝野雙方壁壘分明。</p>
               <p className={styles.editorialComment}>台聯慣例為「一席立委兩人輪替」，每人各擔任兩年，故台聯共3席立委有6人擔任過立委</p>
@@ -208,26 +208,26 @@ class ReferendumContent extends Component {
 
           <section>
               <h1>真相二：國民黨模糊反對分不清，在野黨修法內容很分歧</h1>
-              <p><b>贊成×民進黨：</b>
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳其邁")}/records/referendum`}>陳其邁(7)</Link>、
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("段宜康")}/records/referendum`}>段宜康(7)</Link>、
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("姚文智")}/records/referendum`}>姚文智(7)</Link>、
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/referendum`}>尤美女(7)</Link>、
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("李俊俋")}/records/referendum`}>李俊俋(6)</Link>、
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("鄭麗君")}/records/referendum`}>鄭麗君(5)</Link>
-              </p>
-              <p><b>贊成×親民黨：</b>
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("李桐豪")}/records/referendum`}>李桐豪(5)</Link>
-              </p>
-
-              <p><b>模糊×國民黨：</b>
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/referendum`}>吳育昇(6)</Link>、
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("邱文彥")}/records/referendum`}>邱文彥(5)</Link>
-              </p>
-
-              <p><b>反對×國民黨：</b>
-                  <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("張慶忠")}/records/referendum`}>張慶忠(5)</Link>
-              </p>
+              <ul className={styles.customList}>
+                <li className={`${styles.partyPosition} ${styles.DPP_aye}`}>
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳其邁")}/records/referendum`}>陳其邁(7)</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("段宜康")}/records/referendum`}>段宜康(7)</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("姚文智")}/records/referendum`}>姚文智(7)</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/referendum`}>尤美女(7)</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("李俊俋")}/records/referendum`}>李俊俋(6)</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("鄭麗君")}/records/referendum`}>鄭麗君(5)</Link>
+                </li>
+                <li className={`${styles.partyPosition} ${styles.PFP_aye}`}>
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("李桐豪")}/records/referendum`}>李桐豪(5)</Link>
+                </li>
+                <li className={`${styles.partyPosition} ${styles.KMT_unknown}`}>
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/referendum`}>吳育昇(6)</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("邱文彥")}/records/referendum`}>邱文彥(5)</Link>
+                </li>
+                <li className={`${styles.partyPosition} ${styles.KMT_nay}`}>
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("張慶忠")}/records/referendum`}>張慶忠(5)</Link>
+                </li>
+              </ul>
               <p className={styles.editorialComment}>括號內代表表態次數</p>
 
               <p>以上這些可說是特別關心這個議題的立委，他們的表態次數合計60次，幾乎佔全部139次的一半。進一步分析他們各自的表態內容，我們發現兩個特點：</p>

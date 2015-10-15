@@ -163,6 +163,18 @@ article {
 		&:nth-child(4):before { content: '歷史之最四：'; }
 		&:nth-child(5):before { content: '歷史之最五：'; }
 	}
+	> li.partisan {
+		@include custom-list-item(2);
+		&.ruling:before { content: '朝：' }
+		&.opposition:before { content: '野：' }
+	}
+	> li.partyPosition {
+		@include custom-list-item(7);
+		&.DPP_aye:before { content: '贊成×民進黨：'; }
+		&.PFP_aye:before { content: '贊成×親民黨：'; }
+		&.KMT_unknown:before { content: '模糊×國民黨：'; }
+		&.KMT_nay:before { content: '反對×國民黨：'; }
+	}
 }
 
 /* 繼續閱讀 */
@@ -180,6 +192,8 @@ article {
 }
 
 .peopleLink {
+	display: inline-block;
+	white-space: nowrap;
 	background: rgba($awesomeColor, 0.15);
 	padding: 0 2px;
 }
