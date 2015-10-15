@@ -343,18 +343,18 @@ export default class Issue extends Component {
         <div className={styles.settingPanel}>
           <div className={styles.settingButtons}>
               <div className={styles.settingButton}>
-                <Link className={`${styles.ia} ${styles.black}`} onClick={this._skipInteractive.bind(this,false)}>
+                <a className={`${styles.ia} ${styles.black}`} onClick={this._skipInteractive.bind(this,false)}>
                   跳過任務
-                </Link>
+                </a>
               </div>
           </div>
         </div>) : (
           <div className={`${styles.settingPanel} ${styles.withBackground}`}>
             <div className={styles.settingButtons}>
               <div className={styles.settingButton}>
-                <Link className={`${styles.ia} ${styles.black}`} onClick={this._handleSetInteractive.bind(this,true)}>
+                <a className={`${styles.ia} ${styles.black}`} onClick={this._handleSetInteractive.bind(this,true)}>
                   回到任務
-                </Link>
+                </a>
               </div>
             </div>
           </div>

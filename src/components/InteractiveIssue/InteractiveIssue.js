@@ -158,8 +158,7 @@ export default class InteractiveIssue extends Component {
   }
   _handleChoice(choice){
     const {stage} = this.state;
-    //console.log("[ handle choice ]")
-
+    
     switch(stage){
         case 'chooseSlides':
           if(choice===S){
@@ -167,6 +166,7 @@ export default class InteractiveIssue extends Component {
           }
           let showSlides = (choice === Y) ? true : false ;
           let nextStage = (choice === Y) ? "slides" : "choosePosition" ;
+          
           this.setState({
             showSlides: showSlides
           })
@@ -218,15 +218,12 @@ export default class InteractiveIssue extends Component {
 
     let backTo = stages[index];
 
-    // console.log("<>"+backTo);
-    // console.log("<><>"+showSlides);
-
     if(backTo === "slides" && showSlides === false){
        backTo = "chooseSlides";
       //否則會回到 slide 看到一片空白
     }
 
-    this._handleSetStage(backTo);
+    this._handleSetStageBackTo(backTo);
   }
   _handleSetStage(value, event){
 
@@ -234,8 +231,21 @@ export default class InteractiveIssue extends Component {
     const hasNext = ["intro", "introStory", "slides", "results"];
     let shouldShowNext = (hasNext.indexOf(value) !== -1) ? true : false ;
 
-    // reset 'showSlides' state, otherwise it will show according to previous choice
+    this.setState({
+        stage: value,
+        lines: [],
+        showNext: shouldShowNext
+    })
+    this.props.handleUpdateStage(value);
+  }
+  // 往前跟往後設定 stage 需要分開，因為「回去到」showSlides 要 reset showSlides 的值
+  // 但是這會把「正在 chooseSlides」選擇「要看」的選擇蓋掉
+  _handleSetStageBackTo(value, event){
+    
+    const hasNext = ["intro", "introStory", "slides", "results"];
+    let shouldShowNext = (hasNext.indexOf(value) !== -1) ? true : false ;
 
+    // reset 'showSlides' state, otherwise it will show according to previous choice
     let resetSlideChoiceTo = (value==="chooseSlides") ? false : this.state.showSlides;
     this.setState({
         stage: value,
@@ -291,7 +301,6 @@ export default class InteractiveIssue extends Component {
       const currentIssue = issues[currentIssueName];
       if(!currentIssue) return <div></div>
 
-      
 
       let notFirstPage = ((stage !== "intro") && (stage !=="introStory"));
       

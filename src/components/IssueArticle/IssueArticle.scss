@@ -11,8 +11,8 @@ $break: 600px;
 	background: $trueWhite;
 	padding: 20px;
 	background: $trueWhite;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
-  //border: 6px solid #B4AEA3;
+  	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+  
 }
 @media all and (min-width: $break){
 	.articleWrap {
@@ -80,6 +80,23 @@ $break: 600px;
 	&:nth-child(4):before { content: '迷思四：'; }
 	&:nth-child(5):before { content: '迷思五：'; }
 }
+.est {
+	position: relative;
+	margin: 10px 0 0 6em;
+	line-height: 1.5;
+	&:before {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -6em;
+		font-weight: bold;
+	}
+	&:nth-child(1):before { content: '歷史之最一：'; }
+	&:nth-child(2):before { content: '歷史之最二：'; }
+	&:nth-child(3):before { content: '歷史之最三：'; }
+	&:nth-child(4):before { content: '歷史之最四：'; }
+	&:nth-child(5):before { content: '歷史之最五：'; }
+}
 /* 繼續閱讀 */
 .button {
 	cursor: pointer;
@@ -110,8 +127,16 @@ $break: 600px;
 	font-weight: bold;
 	line-height: $textLineHeight;
 }
+.sectionSubtitle {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: $textLineHeight;
+}
 .paragraph {
 	line-height: $textLineHeight;
+}
+.paragraphIndent {
+	margin: 0 8px;
 }
 .list {
 	line-height: $textLineHeight;
@@ -123,4 +148,11 @@ blockquote {
   background: rgba(180, 174, 163, 0.19);
   margin: 10px 0 10px 40px;
   padding: 20px;
+  line-height: 1.6;
+}
+.pos {
+	margin: 10px;
+}
+li {
+	margin: 10px;
 }
