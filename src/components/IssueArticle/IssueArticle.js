@@ -84,7 +84,7 @@ export default class IssueArticle extends Component {
 
 - 有冒號的條列清單用 ul.customList 再到 CSS 裡面設定 :before content
 
-- 立委名字連結用 .peopleLink .ia .bright 三個 class
+- 立委名字連結用 .peopleLink .ia .bright 三個 class（有點多⋯）
 
 - blockquote 裡面如果是小編的話，不加「」，立委說的話才加「」
 
@@ -150,7 +150,6 @@ class MarriageEqualityContent extends Component {
             </p>
 
             <p>殘酷的事實是，許多在媒體上公開表態支持護家盟理念的立委（其實不只上述三位立委，還包含了民進黨的<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("劉櫂豪")}/records/marriage-equality`}>劉櫂豪</Link>立委），卻幾乎不曾在立法院內針對這個議題進行正反意見的交流和辯論，實在很可惜。我們強烈建議護家盟的朋友，應該去詢問這些立委，為什麼沒有在國會裡代表民意發聲？</p>
-
             <p>另一方面，由相關新聞或同志團體公布的訊息中，發現如
                 <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("羅淑蕾")}/records/marriage-equality`}>羅淑蕾</Link>、
                 <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("丁守中")}/records/marriage-equality`}>丁守中</Link>
@@ -193,18 +192,18 @@ class MarriageEqualityContent extends Component {
 }
 
 class ReferendumPreview extends Component {
-    render(){
-      const styles = require('./IssueArticle.scss');
-      return (
-        <div>
-          <section>
-            <p>公民投票是人民直接行使權利的方式，向來被認為是民主國家的重要制度。台灣在2004年立法通過後，成為東亞第一個採行公投制度的國家。</p>
-            <p>每當有社會重大爭議時，不管朝野藍綠，都曾經提出以公投解決問題的想法，如軍購案公投、入聯公投、ECFA公投、核四公投等等，但全國公投從來沒有一次真正成功進行。</p>
-            <p>那麼，在台灣立法院內又是怎麼討論這個議題呢？讓阿草用數據告訴你立法院中公投法修法三大真相，誰說真相永遠只有一個？</p>
-          </section>
-        </div>
-      )
-    }
+  render(){
+    const styles = require('./IssueArticle.scss');
+    return (
+      <div>
+        <section>
+          <p>公民投票是人民直接行使權利的方式，向來被認為是民主國家的重要制度。台灣在2004年立法通過後，成為東亞第一個採行公投制度的國家。</p>
+          <p>每當有社會重大爭議時，不管朝野藍綠，都曾經提出以公投解決問題的想法，如軍購案公投、入聯公投、ECFA公投、核四公投等等，但全國公投從來沒有一次真正成功進行。</p>
+          <p>那麼，在台灣立法院內又是怎麼討論這個議題呢？讓阿草用數據告訴你立法院中公投法修法三大真相，誰說真相永遠只有一個？</p>
+        </section>
+      </div>
+    )
+  }
 }
 class ReferendumContent extends Component {
   render(){
@@ -405,22 +404,22 @@ class RecallContent extends Component {
 }
 
 class NuclearPowerPreview extends Component {
-    render(){
-      const styles = require('./IssueArticle.scss');
-      return (
-        <div>
-          <section>
-            <p>核四工程興建案，是台灣史上最具爭議的公共工程，耗費2,838億元的預算，卻一度停工再復工，最終在2014年4月27日宣布封存停工。這個工程引發社會各界激辯，從核四的工程品質、核廢料貯存問題、核一二三是否延役到經濟發展、核能綠能之間的取捨等等，都是各種熱議話題。</p>
-            <p>那麼，在立法院內又是怎麼討論這個議題呢？讓阿草用數據告訴你，核四在立法院第八屆任期中，所創下的三大「歷史之最」！</p>
-            <ul className={styles.customList}>
-              <li className={styles.est}>立委角色最複雜</li>
-              <li className={styles.est}>最多立委參戰、最多次表態</li>
-              <li className={styles.est}>最常提到的話──沒有核安，就沒有核電</li>
-            </ul>
-          </section>
-        </div>
-      )
-    }
+  render(){
+    const styles = require('./IssueArticle.scss');
+    return (
+      <div>
+        <section>
+          <p>核四工程興建案，是台灣史上最具爭議的公共工程，耗費2,838億元的預算，卻一度停工再復工，最終在2014年4月27日宣布封存停工。這個工程引發社會各界激辯，從核四的工程品質、核廢料貯存問題、核一二三是否延役到經濟發展、核能綠能之間的取捨等等，都是各種熱議話題。</p>
+          <p>那麼，在立法院內又是怎麼討論這個議題呢？讓阿草用數據告訴你，核四在立法院第八屆任期中，所創下的三大「歷史之最」！</p>
+          <ul className={styles.customList}>
+            <li className={styles.est}>立委角色最複雜</li>
+            <li className={styles.est}>最多立委參戰、最多次表態</li>
+            <li className={styles.est}>最常提到的話──沒有核安，就沒有核電</li>
+          </ul>
+        </section>
+      </div>
+    )
+  }
 }
 class NuclearPowerContent extends Component {
   render(){
