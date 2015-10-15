@@ -167,13 +167,17 @@ article {
 		@include custom-list-item(2);
 		&.ruling:before { content: '朝：' }
 		&.opposition:before { content: '野：' }
+		&.none {
+			@include custom-list-item(4);
+			&:before { content: '無黨籍：'; }
+		}
 	}
 	> li.partyPosition {
 		@include custom-list-item(7);
-		&.DPP_aye:before { content: '贊成×民進黨：'; }
-		&.PFP_aye:before { content: '贊成×親民黨：'; }
-		&.KMT_unknown:before { content: '模糊×國民黨：'; }
-		&.KMT_nay:before { content: '反對×國民黨：'; }
+		&.DPP_aye:before { content: '贊成／民進黨：'; }
+		&.PFP_aye:before { content: '贊成／親民黨：'; }
+		&.KMT_unknown:before { content: '模糊／國民黨：'; }
+		&.KMT_nay:before { content: '反對／國民黨：'; }
 	}
 }
 

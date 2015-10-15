@@ -70,6 +70,27 @@ export default class IssueArticle extends Component {
     )
   }
 }
+/**
+
+＃ 編輯指南：
+
+- 中英之間**不加**空格，之後會用 https://github.com/ethantw/Han
+
+- 標點用全形
+-- 例外：立委名字後面數字的括號用半形
+-- （一）、（二）、（三）
+-- 三點破折號用一個「⋯」，不用兩個「⋯⋯」
+-- 破折號因為字型顯示不統一，所以用 Box drawings light horizontal「─」
+
+- 有冒號的條列清單用 ul.customList 再到 CSS 裡面設定 :before content
+
+- 立委名字連結用 .peopleLink .ia .bright 三個 class
+
+- blockquote 裡面如果是小編的話，不加「」，立委說的話才加「」
+
+- 編註用 .editorialComment，並儘量獨立一個段落。CSS 會自動加上「編註：」還有【】
+
+*/
 class MarriageEqualityPreview extends Component {
     render(){
       const styles = require('./IssueArticle.scss');
@@ -233,7 +254,7 @@ class ReferendumContent extends Component {
               <p>以上這些可說是特別關心這個議題的立委，他們的表態次數合計60次，幾乎佔全部139次的一半。進一步分析他們各自的表態內容，我們發現兩個特點：</p>
 
               <h2>（一）國民黨的發言偏向模糊，僅有少數明確的反對表態</h2>
-              <p>國民黨大多數立委並不會直接表明反對公投門檻下修，而是提出「我贊成調降，但是要再多討論...」、「門檻還是有他的意義...」、「要有嚴謹配套措施...」等等曖昧不明的用詞。</p>
+              <p>國民黨大多數立委並不會直接表明反對公投門檻下修，而是提出「我贊成調降，但是要再多討論⋯」、「門檻還是有他的意義⋯」、「要有嚴謹配套措施⋯」等等曖昧不明的用詞。</p>
               <p>這種特有的說話技巧，讓人捉摸不清真實態度，這種類型的立委以
                   <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/referendum`}>吳育昇</Link>為代表人物。少數像
                   <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("張慶忠")}/records/referendum`}>張慶忠</Link>這類的立委則是完全不同，非常直率的表達出他對「高門檻」的堅持。
@@ -251,31 +272,31 @@ class ReferendumContent extends Component {
               <p>從2012年，第八屆立委剛上任時開始，就有許多公投法的修法草案陸續提出，但在內政委員會的審查過程並不順利，一直到2015年4月（立法院第八屆立委第七會期）才順利初審通過，送入二讀協商討論中。</p>
               <p>延宕兩年多，其中的原因是什麼？我們分析了這七個會期中內政委員會的席次分布，發現以下狀況：</p>
 
-              <p>第一到四會期（2012—2013）：
-                 <ul>
-                    <li>執政黨7人</li>
-                    <li>在野黨6人：民進黨4、台聯1、親民黨1</li>
-                    <li>無黨籍1人</li>
+              <p>第一到四會期（2012—2013）
+                 <ul className={styles.customList}>
+                    <li className={`${styles.partisan} ${styles.ruling}`}>7人</li>
+                    <li className={`${styles.partisan} ${styles.opposition}`}>6人─民進黨4、台聯1、親民黨1</li>
+                    <li className={`${styles.partisan} ${styles.none}`}>1人</li>
                  </ul>
               </p>
+              <p className={styles.editorialComment}>第一到四會期的無黨籍立委為高金素梅</p>
 
-              <p>第五到六會期（2014）：
-                 <ul>
-                    <li>執政黨8人</li>
-                    <li>在野黨6人：民進黨5、台聯1</li>
+              <p>第五到六會期（2014）
+                 <ul className={styles.customList}>
+                    <li className={`${styles.partisan} ${styles.ruling}`}>8人</li>
+                    <li className={`${styles.partisan} ${styles.opposition}`}>6人─民進黨5、台聯1</li>
                  </ul>
               </p>
               <p className={styles.editorialComment}>第五到六會期立法院爆發服貿爭議</p>
 
-              <p>第七會期（2015）：
-                 <ul>
-                    <li>執政黨7人</li>
-                    <li>在野黨7人：民進黨5、台聯1、親民黨1</li>
+              <p>第七會期（2015）
+                 <ul className={styles.customList}>
+                    <li className={`${styles.partisan} ${styles.ruling}`}>7人</li>
+                    <li className={`${styles.partisan} ${styles.opposition}`}>7人─民進黨5、台聯1、親民黨1</li>
                  </ul>
               </p>
 
               <p>可以發現第七會期最大的不同，是民進黨、台聯、親民黨合計7席，是歷來最多。</p>
-              <p className={styles.editorialComment}>第一到四會期的無黨籍立委為高金素梅</p>
               <p>在野黨立委按照分工，一人擔任召委排案當主席，還有6席可以進行表決；這時，只要在野黨全部團結，除非國民黨立委全部出席，否則表決的控制權就掌握在在野黨陣營這邊。</p>
               <p className={styles.editorialComment}>贊成反對數相同時，召委主席就可參與投票</p>
               <p>在這樣的背景下，國民黨對法案及議事的控制力最弱。2015年4月22日，公投法在內政委員會的審查，正是因為當天國民黨立委<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("鄭天財Sra·Kacaw")}/records/referendum`}>鄭天財Sra·Kacaw</Link>請假未出席，形成國民黨：在野黨席次比為6：7的局勢，最後國民黨立委集體退席，終於初審通過。</p>
