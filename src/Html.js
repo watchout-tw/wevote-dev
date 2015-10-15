@@ -36,7 +36,8 @@ export default class Html extends Component {
           <meta property="article:publisher" content="https://www.facebook.com/WatchOutTW"/>
           <meta property="article:author" content="https://www.facebook.com/WatchOutTW"/>
           <meta property='shareaholic:article_author' content='https://www.facebook.com/WatchOutTW' />
-          
+          <meta name="google-site-verification" content="lcgCkeejw-aJgK6-JoOR9a8ivs5MWZA66UavjFBxCJA" />
+          <meta name="msvalidate.01" content="2CB93BE9E9E2D38CAD7DA93479BA8E30" />
   
           {DocumentMeta.renderAsReact()}
 
