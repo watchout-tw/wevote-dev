@@ -16,7 +16,8 @@ import Missions from '../../components/Missions/Missions.js';
 
 export default class StaticIssue extends Component {
   static propTypes = {
-     issues: PropTypes.object.isRequired
+     issues: PropTypes.object.isRequired,
+     processing: "none"
   }
 
   constructor(props) { super(props)
@@ -25,8 +26,30 @@ export default class StaticIssue extends Component {
         currentView: props.currentView
      }
   }
+  _informProcessing(){
+      const {processing} = this.state;
+      if(processing === "processing"){
+          setTimeout(()=>{
+              this.setState({
+                 processing: "done"
+              })
+              setTimeout(()=>{
+                 this.setState({
+                    processing: "none"
+                 })
+              }, 1000)
+          }, 5000)
+      }
+
+  }
   componentDidMount(){
       this._updateCurrentIssueFromURL();
+      this._informProcessing();
+      
+  }
+  componentDidUpdate(){
+      this._informProcessing();
+      
   }
   _updateCurrentIssueFromURL(){
       //console.log("mount - static issue : update pathname form url")
@@ -52,21 +75,45 @@ export default class StaticIssue extends Component {
 
   }
   componentWillReceiveProps(nextProps){
+      //console.log(nextProps.currentIssueName)
+      let processing = (nextProps.currentIssueName === "nuclear-power") ? "processing" : "none";
       this.setState({
           currentIssueName: nextProps.currentIssueName,
-          currentView: nextProps.currentView
+          currentView: nextProps.currentView,
+          processing: processing
       })
 
   }
 
   render(){
-
       const styles = require('./StaticIssue.scss');
+
       const {issues, setCurrentView} = this.props;
       const {currentView, currentIssueName} = this.state;
       const currentIssue = issues[currentIssueName];
 
       if(!currentIssue) return <div></div>;
+
+
+      // 顯示處理中
+      const {processing} = this.state;
+      let processingItem;
+      switch(processing){
+          case 'processing':
+              processingItem = <div className={styles.processingItem}>立場分析中⋯⋯</div>;
+              break;
+
+          case 'done':
+          processingItem = <div className={styles.processingItem}>立場分析中⋯⋯</div>;
+              processingItem = <div className={styles.processingItem}>分析完成！</div>;
+              break;
+
+          case 'none':
+              processingItem = <div className={`${styles.processingItem} ${styles.processingItemHide}`}></div>;
+              break;
+          
+      }
+      
 
        // 協力 NGO
       const { collaborators } = currentIssue;
@@ -79,7 +126,9 @@ export default class StaticIssue extends Component {
 
       return (
         <div className={styles.wrap}>
+            {processingItem}
             <div className={styles.innerWrap}>
+                
                 <Slideshow currentIssue={currentIssue}
                            topic={currentIssue.title}/>
 

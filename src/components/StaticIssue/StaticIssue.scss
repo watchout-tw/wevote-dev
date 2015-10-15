@@ -3,6 +3,22 @@
 .wrap {
 	position: relative;
 }
+.processingItem {
+	background: rgba(57, 55, 55, 0.3);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: -24px;
+}
+.processingItem.processingItemHide {
+	max-height: 0;
+	padding: 0;
+	overflow: hidden;
+	transition: all 500ms ease-in;
+}
 .innerWrap {
     text-align: center;
 }
