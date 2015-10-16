@@ -29,6 +29,9 @@ i.shareaholic-service-icon
  * HTML doctype declaration, which is added to the rendered output
  * by the server.js file.
  */
+const title = "沃草！立委出任務 - 2016立委投票攻略";
+const description = "2016立委選舉票該投給誰？「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委與下任候選人立場，並分析政黨針對議題的整體立場。想透過議題更了解你的選區立委嗎？請上「立委出任務」！";
+
 export default class Html extends Component {
   static propTypes = {
     assets: PropTypes.object,
@@ -40,12 +43,16 @@ export default class Html extends Component {
     const {assets, component, store} = this.props;
     const content = React.renderToString(component);
     return (
-      <html lang="en-us">
+      <html lang="zh-TW">
         <head>
           <meta charSet="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-          <meta property="og:image" content="http://wevote.tw/facebook.png"/>
-          <meta property="og:locale" content="zh_TW"/>
+          <meta content="http://wevote.tw/" property="og:url"/>
+          <meta content={title} property="og:title"/>
+          <meta content={title} property="og:site_name"/>
+          <meta content={description} property="og:description"/>
+          <meta property="og:image" content="http://wevote.tw/facebook.jpg"/>
+          <meta property="og:locale" content="zh-TW"/>
           <meta property="og:type" content="website"/>
           <meta property="article:publisher" content="https://www.facebook.com/WatchOutTW"/>
           <meta property="article:author" content="https://www.facebook.com/WatchOutTW"/>

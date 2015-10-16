@@ -1,7 +1,7 @@
 .wrap {
     display: inline-block;
-    //margin: 20px;
     text-align: left;
+    max-width: 100%;
 }
 .header {
     display: block;
@@ -22,7 +22,7 @@
 .userPositionText {
     padding: 6px 10px;
     border: 1px solid gray;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
     display: inline-block;
     position: relative;
 }

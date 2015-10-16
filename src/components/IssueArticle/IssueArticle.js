@@ -131,7 +131,7 @@ class MarriageEqualityContent extends Component {
 
             <p>而國民黨立委的表態率也只有12%，8位立委，其中<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("黃昭順")}/records/marriage-equality`}>黃昭順</Link>則曾經表態偏向支持。同時，在拒絕表態這件事上，國民黨立委也不落人後，其中
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("謝國樑")}/records/marriage-equality`}>謝國樑</Link>、
-              <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("顏寬恆")}/records/marriage-equality`}>顏寬恆</Link>、
+              <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("顏寬恒")}/records/marriage-equality`}>顏寬恒</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("王廷升")}/records/marriage-equality`}>王廷升</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("王惠美")}/records/marriage-equality`}>王惠美</Link>
               這幾位同樣是司法委員會中不表態的資深立委。
