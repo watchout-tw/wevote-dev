@@ -268,7 +268,7 @@ const initialState = {
       "collaborators" : [
         {
           "name" : "割闌尾",
-          "link" : "http://appy.tw/"
+          "link" : "https://www.facebook.com/Appendectomy"
         }
       ]
     },

@@ -103,8 +103,8 @@ export default class Slideshow extends Component {
   }
 
   _onSlideChange(index, elem){
-      console.log(index);
-      console.log(elem)
+      // console.log(index);
+      // console.log(elem)
   }
 
   render() {
@@ -119,7 +119,7 @@ export default class Slideshow extends Component {
         let activePageClass = (index===currentIndex) ? styles.activePage : "";
         return (
           <div className={`${styles.page} ${activePageClass}`}
-               key={index}
+               key={value.filename}
                onClick={this._setCurrentIndex.bind(this, index)}>
           </div>
         )
@@ -137,7 +137,7 @@ export default class Slideshow extends Component {
           <img alt={value.alt}
                src={url}
                className={imageClass}
-               key={index}/>
+               key={value.filename}/>
         )
     });
 
@@ -145,15 +145,20 @@ export default class Slideshow extends Component {
     let slideImagesMobile = dataMobile.map((value,index)=>{
         let url = require(`./images/${value.filename}`)
         return (
-          <div key={index}><img alt={value.alt}
+          <div key={value.filename}>
+              <img alt={value.alt}
                src={url}
-               className={styles.activeSlideImg}/></div>
+               className={styles.activeSlideImg}/>
+          </div>
         )
     });
 
     //decide show mobile version or web version
     let slides = (mobile === true) ? (
-      <ReactSwipe continuous={true} callback={this._onSlideChange.bind(this)} ref='ReactSwipe'>
+      <ReactSwipe continuous={true} 
+                  callback={this._onSlideChange.bind(this)} 
+                  ref='ReactSwipe'
+                  key={currentIssue.title}>
          {slideImagesMobile}
       </ReactSwipe>
     ) : slideImages;
