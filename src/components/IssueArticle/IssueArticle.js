@@ -161,7 +161,7 @@ class MarriageEqualityContent extends Component {
             <h1>迷思三：看起來支持方的表態次數比反對方多，那法案應該很容易通過吧？</h1>
             <p>
               由圖表來看，
-              <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/marriage-equality`}>尤美女</Link>
+              <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/marriage-equality`}>尤美女(8)</Link>
               可說是最關心這個議題的立委，總計提過兩次法案，主辦過兩次公聽會，四次發言紀錄，在這些方面的次數都是名列第一。此外，
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("蕭美琴")}/records/marriage-equality`}>蕭美琴(6)</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳其邁")}/records/marriage-equality`}>陳其邁(4)</Link>、
@@ -513,7 +513,7 @@ class NuclearPowerContent extends Component {
 
           <section>
               <h2>（七）人格分裂型</h2>
-              <p>最後特別要介紹的是，<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("羅明才")}/records/nuclear-power`}>羅明才</Link>的行為模式也是類似表決部隊，從來不發言說出他的看法，我們也只能從他的表決紀錄推論。但他不同於一般表決部隊只會投一種立場，而是分別投贊成4次/沒投票5次/反對3次。也就是說，羅委員內心中彷彿有三個立場的人，每次投票時就天人交戰，堪稱最糾結的人格分裂型，也讓選民永遠無法得知羅委員的真實想法。</p>
+              <p>最後特別要介紹的是，<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("羅明才")}/records/nuclear-power`}>羅明才</Link>的行為模式也是類似表決部隊，從來不發言說出他的看法，我們也只能從他的表決紀錄推論。但他不同於一般表決部隊只會投一種立場，而是分別投贊成4次／沒投票5次／反對3次。也就是說，羅委員內心中彷彿有三個立場的人，每次投票時就天人交戰，堪稱最糾結的人格分裂型，也讓選民永遠無法得知羅委員的真實想法。</p>
           </section>
 
           <section>
@@ -533,7 +533,7 @@ class NuclearPowerContent extends Component {
               <p>在整個核四的討論過程中，最常被指出的一個爭論就是核安，尤其是核四本身的工程安全問題。贊成停建的論述中，多數都是以實際案例指出核四本身不安全的問題，也有部分直接論述核能就是不安全的能源，例如：</p>
 
               <blockquote>
-                <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("李昆澤")}/records/nuclear-power`}>李昆澤</Link>：「核四從招標到興建發生的索賄案件高達 44 件，我們能祈求核四安全嗎？再者，核四由統包變成分包、監察院對核四提出 1,500 項變更設計的糾正、原能會也提出核四廠變更 700 項核安設計，我們能夠祈求核四安全嗎？」
+                <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("李昆澤")}/records/nuclear-power`}>李昆澤</Link>：「核四從招標到興建發生的索賄案件高達44件，我們能祈求核四安全嗎？再者，核四由統包變成分包、監察院對核四提出1,500項變更設計的糾正、原能會也提出核四廠變更700項核安設計，我們能夠祈求核四安全嗎？」
               </blockquote>
 
               <blockquote>
