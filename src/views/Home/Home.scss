@@ -49,26 +49,33 @@ h2 {
 
   > .stage {
     display: inline-block;
+    vertical-align: top;
     height: 240px;
     width: 320px;
+    margin: 0 20px;
     background-image: url('./images/roadmap-01.png');
     background-position: 0 0;
     background-size: auto 100%;
 
+    &.october, &.november {
+      height: 200px;
+      background-size: auto 240px;
+    }
     &.october {
-      width: 270px;
+      width: 222px;
+      background-position: -34px 0;
     }
     &.november {
-      width: 200px;
-      background-position: -270px 0;
+      width: 177px;
+      background-position: -283px 0;
     }
     &.december {
-      width: 265px;
-      background-position: -470px 0;
+      width: 247px;
+      background-position: -478px 0;
     }
     &.january {
-      width: 265px;
-      background-position: -735px 0;
+      width: 231px;
+      background-position: -746px 0;
     }
   }
 }
