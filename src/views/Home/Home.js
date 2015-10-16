@@ -38,8 +38,14 @@ export default class Home extends Component {
               <div className={styles.innerWrap}>
                   <Missions issues={issues}
                             showComingMission={true}/>
-    
+
               </div>
+          </div>
+          <div className={styles.roadmap}>
+            <div className={`${styles.stage} ${styles.october}`}></div>
+            <div className={`${styles.stage} ${styles.november}`}></div>
+            <div className={`${styles.stage} ${styles.december}`}></div>
+            <div className={`${styles.stage} ${styles.january}`}></div>
           </div>
       </div>
     );

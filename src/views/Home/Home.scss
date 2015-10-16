@@ -27,13 +27,6 @@ $breakLarge: 800px;
 h2 {
   font-size: 34px;
 }
-.roadmapBlock {
-  background: #FAF4EC;
-  padding: 30px 0;
-}
-.roadmap {
-  width: 100%;
-}
 .aboutUsBlock {
   padding-top: 50px;
   background: rgb(220,220,220);
@@ -45,4 +38,37 @@ h2 {
   padding: 30px 10px 100px 10px;
   font-size: 18px;
 
+}
+
+// roadmap
+.roadmap {
+  width: 100%;
+  text-align: center;
+  background: rgba($awesomeColor, 0.15);
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
+
+  > .stage {
+    display: inline-block;
+    height: 240px;
+    width: 320px;
+    background-image: url('./images/roadmap-01.png');
+    background-position: 0 0;
+    background-size: auto 100%;
+
+    &.october {
+      width: 270px;
+    }
+    &.november {
+      width: 200px;
+      background-position: -270px 0;
+    }
+    &.december {
+      width: 265px;
+      background-position: -470px 0;
+    }
+    &.january {
+      width: 265px;
+      background-position: -735px 0;
+    }
+  }
 }
