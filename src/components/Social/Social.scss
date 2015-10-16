@@ -22,6 +22,10 @@
 	overflow: hidden;
 	text-indent: -500px;
 	cursor: pointer;
+
+	&:hover {
+		opacity: 0.5;
+	}
 }
 @media all and (min-width: 600px) {
 	.watchoutLogo {

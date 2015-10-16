@@ -16,9 +16,11 @@ i.shareaholic-service-icon
 .shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-twitter
 { font-size: 18px ${IMP}; margin-top: -1px ${IMP}; }
 .shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-google_plus
-{ font-size: 22px ${IMP}; width: 26px ${IMP}; margin-top: -3px ${IMP}; margin-left: -3px ${IMP};}
+{ font-size: 22px ${IMP}; width: 26px ${IMP}; height: 22px ${IMP}; margin-top: -3px ${IMP}; margin-left: -3px ${IMP};}
 .shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-plurk
 { font-size: 15px ${IMP}; padding-top: 1px ${IMP}; }
+.shareaholic-share-buttons-container li.shareaholic-share-button .shareaholic-share-button-container:hover
+{ opacity: 0.5 ${IMP}; }
 `;
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
