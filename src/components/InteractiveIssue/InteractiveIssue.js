@@ -81,6 +81,11 @@ export default class InteractiveIssue extends Component {
   }
 
   _handleKeyDown(e){
+    // 如果訂閱表單是 active，不要做任何反應，直接回去，讓 default 去處理
+    let inputNode = document.getElementById("email-Primary");
+    if(inputNode === document.activeElement){
+       return;
+    }
 
     // back
     if(e.keyCode === b || e.keyCode === B){
