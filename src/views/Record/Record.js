@@ -32,6 +32,9 @@ export default class Record extends Component {
         legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
       }
   }
+  componentDidMount(){
+      document.body.scrollTop = 0;
+  }
 
   render() {
     const styles = require('./Record.scss');
