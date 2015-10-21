@@ -6,4 +6,4 @@ cp -r static/dist build/
 cp CNAME build/
 cp static/*.png build/
 cp static/*.jpg build/
-
+cp -r files/ build/files/
