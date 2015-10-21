@@ -51,7 +51,7 @@ export default class Appbar extends Component {
   render() {
 
     const styles = require('./Appbar.scss');
-    const siteLogo = require('./images/logo-big-1.svg');
+    const siteLogo = require('./images/logo-2.svg');
     const {showMenu, location, issueName} = this.state;
     const {currentIssueName, issues} = this.props;
     const {processing} = this.props;

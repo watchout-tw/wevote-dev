@@ -271,7 +271,7 @@ class ReferendumContent extends Component {
               <p>從2012年，第八屆立委剛上任時開始，就有許多公投法的修法草案陸續提出，但在內政委員會的審查過程並不順利，一直到2015年4月（立法院第八屆立委第七會期）才順利初審通過，送入二讀協商討論中。</p>
               <p>延宕兩年多，其中的原因是什麼？我們分析了這七個會期中內政委員會的席次分布，發現以下狀況：</p>
 
-              <p>第一到四會期（2012—2013）
+              <p>第一到四會期（2012─2013）
                  <ul className={styles.customList}>
                     <li className={`${styles.partisan} ${styles.ruling}`}>7人</li>
                     <li className={`${styles.partisan} ${styles.opposition}`}>6人─民進黨4、台聯1、親民黨1</li>
@@ -328,7 +328,7 @@ class RecallPreview extends Component {
                   <li>2013年，憲法133實踐聯盟提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/marriage-equality`}>吳育昇</Link>，最後未達連署門檻而失敗。</li>
                   <li>2015年，割闌尾計畫提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("蔡正元")}/records/recall`}>蔡正元</Link>，最後未達投票門檻而失敗。</li>
                 </ul>
-                <p>在立法院第八屆任期期間（2012年—2015年），就發生了兩次對立委的罷免行動，罷免可說是攸關立委個人去留的議題。那麼，在立法院內是怎麼討論罷免呢？</p>
+                <p>在立法院第八屆任期期間（2012年─2015年），就發生了兩次對立委的罷免行動，罷免可說是攸關立委個人去留的議題。那麼，在立法院內是怎麼討論罷免呢？</p>
                 <p>讓阿草用數據告訴你立法院裡的修法真相！</p>
             </section>
         </div>
@@ -338,16 +338,20 @@ class RecallPreview extends Component {
 class RecallContent extends Component {
   render(){
     const styles = require('./IssueArticle.scss');
+    const figure1 = require('./images/IssueArticleFigures-01.png');
+    const figure2 = require('./images/IssueArticleFigures-02.png');
+    const figure3 = require('./images/IssueArticleFigures-03.png');
     return (
       <div>
           <section>
-            <h1>真相一、藍綠正反對決，親民黨游移不表態</h1>
+            <h1>真相一：藍綠正反對決，親民黨游移不表態</h1>
             <p>憲法明定人民有選舉、罷免、創制、複決的權利，後兩者屬於公投議題，且公投和罷免的修法都分配到內政委員會中審查，因此近年來兩者經常被一起討論。</p>
             <p>但比較兩者在立法院內的紀錄，卻發現罷免的表態人數和次數顯然都較少，立委很明顯比較不願意討論罷免。即使有門檻下修的提案，大部分都卡在程序委員會，甚至連討論機會都沒有。這些現象可能說明的是：</p>
 
             <blockquote>罷免門檻下修將使罷免更容易成功，直接影響立委個人權利。</blockquote>
 
             <p>另外，公投門檻下修幾乎是在野黨共識，連大多數國民黨立委都只有抱持模糊態度而未明確反對。相比之下，對於罷免門檻下修的問題，各黨意見則有很大的歧異。</p>
+            <img className={styles.IssueArticleFigure} src={figure1} />
             <p>民進黨及台聯當中有表態的紀錄都是高度贊成（但民進黨立委也有將近一半沒有表態），許多國民黨立委則勇於表達反對立場，親民黨立委則繼續游移在國民黨和民進黨之間，幾乎完全不表態，只有一則立場模糊的發言。</p>
             <p>因為這些強烈反對和不表態的立委，導致雖然贊成門檻下修的表態比反對多，卻距離修法通過仍然非常遙遠。</p>
 
@@ -360,7 +364,7 @@ class RecallContent extends Component {
           </section>
 
           <section>
-            <h1>真相二、人性衝突，被罷免立委的真實反應？</h1>
+            <h1>真相二：人性衝突，被罷免立委的真實反應？</h1>
             <p>由於立法院第八屆任期期間，民間提出許多罷免立委的行動，因此立院的表態紀錄也成為觀察立委人性衝突的最佳範本。經過分析整理，我們發現被罷免的立委有以下這幾種類型：</p>
 
             <h2>（一）訴苦型：<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("張慶忠")}/records/recall`}>張慶忠</Link>立委</h2>
@@ -379,6 +383,7 @@ class RecallContent extends Component {
             <h2>（三）另外提案修法型：<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/recall`}>吳育昇</Link>立委</h2>
             <p>相比之下，吳育昇立委則展現了過人的風度，完全沒有在發言時訴苦或惱怒，而是另外提出了法案，要求罷免連署要附切結書及身分證影本，變相加高罷免難度。2013年11月29日，國民黨團利用人數優勢將這個法案逕付二讀，當時正好吳育昇立委被提出罷免，因此被民進黨立委稱作「吳育昇條款」。</p>
             <p>事實上，過去二十年來罷免制度曾經出現重大的修法，就是1994年洪秀柱等立委面對被罷免的危機時，主動提出修法，大幅提高提案、連署門檻，也將投票門檻從三分之一提高到二分之一。在官位受到威脅時，洪秀柱及吳育昇立委的作法非常「符合人性」，但是否「符合民意」？那就是另一個問題了。</p>
+            <img className={styles.IssueArticleFigure} src={figure2} />
           </section>
 
           <section>
@@ -394,6 +399,7 @@ class RecallContent extends Component {
                 這幾位立委「違反人性」頻繁表達贊成。在這樣的背景下，這屆立法院任期之間要通過相關修法，幾乎是不可能的任務。
             </p>
             <p className={styles.editorialComment}>括號內為表態次數</p>
+            <img className={styles.IssueArticleFigure} src={figure3} />
             <p>幾位之前被提出罷免的立委，都在尋求連任中。在保住自己官位的「人性衝突」下，要如何同時說服選民自己高舉「代表民意」的旗幟？不但考驗立委，更考驗選民的智慧。</p>
             <p>另一個值得觀察的重點，如果2016選後民進黨取得新國會最大黨地位，是否會繼續維持現在偏向贊成罷免門檻下修的表態，而促成修法？</p>
             <p>隨著現在公民意識的提升，未來針對不適任立委提出的罷免，應該會更加頻繁，討論也會更熱烈。到底在新國會中，罷免門檻下修會完成修法，還是像過去經驗反而加高呢？這就有賴關心這個議題的選民，依照這些表態紀錄，選擇真正關心這個議題並願意表態的立委了。</p>

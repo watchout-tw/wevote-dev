@@ -13,7 +13,7 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	padding: 0px;
 	height: $appBarHeightExtended;
 	width: 100%;
-  	box-shadow: 0 4px 4px 0px rgba($trueBlack, 0.25);
+  box-shadow: 0 4px 4px 0px rgba($trueBlack, 0.25);
 	z-index: $zAppBar;
 }
 .appbar.showMenu {
