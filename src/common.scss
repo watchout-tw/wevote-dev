@@ -82,11 +82,14 @@ $defaultCubeSize: 20px;
 
 // 黨旗
 .partyFlag {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    vertical-align: top;
-    display: inline-block;
+  display: inline-block;
+  vertical-align: top;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .partyFlag.small {
   width: 24px;
@@ -96,12 +99,13 @@ $defaultCubeSize: 20px;
   width: 74px;
   height: 74px;
 }
-.partyFlag.KMT { background: url(images/flag-kmt.svg); }
-.partyFlag.DPP { background: url(images/flag-dpp.svg); }
-.partyFlag.GSD { background: url(images/flag-gsd.svg); }
-.partyFlag.MKT { background: url(images/flag-mkt.svg); }
-.partyFlag.NONE { background: url(images/flag-none.svg); }
-.partyFlag.NP { background: url(images/flag-np.svg); }
-.partyFlag.NSU { background: url(images/flag-npp.svg); }
-.partyFlag.PFP { background: url(images/flag-pfp.svg); }
-.partyFlag.TSU { background: url(images/flag-tsu.svg); }
+.partyFlag.KMT { background-image: url(images/flag-kmt.svg); }
+.partyFlag.DPP { background-image: url(images/flag-dpp.svg); }
+.partyFlag.GSD { background-image: url(images/flag-gsd.svg); }
+.partyFlag.MKT { background-image: url(images/flag-mkt.svg); }
+.partyFlag.NONE { background-image: url(images/flag-none.svg); }
+.partyFlag.NP { background-image: url(images/flag-np.svg); }
+.partyFlag.NPP { background-image: url(images/flag-npp.svg); }
+.partyFlag.PFP { background-image: url(images/flag-pfp.svg); }
+.partyFlag.TSU { background-image: url(images/flag-tsu.svg); }
+.partyFlag.NSU { background-image: url(images/flag-nsu.svg); }
