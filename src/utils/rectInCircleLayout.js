@@ -15,7 +15,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
   let numRow = numCol;
   let rectWidth = numCol*cubeSize;
   let rectHeight = rectWidth;
-  let radius = (rectWidth/2*Math.sqrt(2))*1.25 + borderWidth;
+  let radius = (rectWidth/2*Math.sqrt(2))*1.05 + borderWidth;
   let diameter = radius*2;
 
   let offsetLeft = (diameter - rectWidth)/2;
@@ -145,7 +145,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     borderRadius: '50%',
     transform: toTranslate
   })
-  
+
 
   // 以下 circle 是為了 arc
   let baseCircleStyles = prefixr({
