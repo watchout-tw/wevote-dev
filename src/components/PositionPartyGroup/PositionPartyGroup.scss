@@ -58,7 +58,7 @@ $unknownColor: #FFF800;
 
 }
 .positionCube:hover, .positionCubeActive {
-	box-shadow: 0 0 0 2px black;
+	box-shadow: 0 0 0 2px white;
 	z-index: 10;
 }
 .aye {
@@ -125,7 +125,7 @@ $unknownColor: #FFF800;
 	margin: 5px 0;
 }
 .caucus {
-	background-image: url('./images/command-white.svg');
+	background-image: url('./images/command-2_white.svg');
 	background-size: cover;
 }
 /*
