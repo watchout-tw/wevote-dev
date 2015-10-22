@@ -23,7 +23,9 @@
     "watch-client": "node ./node_modules/better-npm-run watch-client",
     "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run start-dev\"",
     "test": "karma start",
-    "deploy": "babel-node script/gh-pages.es6"
+    "deploy": "babel-node script/gh-pages.es6",
+    "dev-mode": "git remote remove origin && git remote add origin git@github.com:watchout-tw/dev.wevote.tw.git",
+    "prod-mode": "git remote remove origin && git remote add origin git@github.com:watchout-tw/wevote.tw.git"
   },
   "betterScripts": {
     "start": {
