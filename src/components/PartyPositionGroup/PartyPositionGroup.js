@@ -110,7 +110,7 @@ export default class PartyPositionGroup extends Component {
     
     let pie = d3.layout.pie()
         .sort(null)
-        .value(function(d) { return d.population; });
+        .value(function(d) { return d.percentage; });
     
     let node = d3.select(`#svgContainer-${issueURL}-${data.party}`);
     
@@ -126,12 +126,12 @@ export default class PartyPositionGroup extends Component {
     let dataset = data.positionPercentages.map((value,index)=>{
         return {
             position: value.position,
-            population: value.percentage * (partyHasPositionPercentage / 100)
+            percentage: value.percentage * (partyHasPositionPercentage / 100)
         }
     });
     dataset.push({
       position: 'none',
-      population: 100-partyHasPositionPercentage
+      percentage: 100-partyHasPositionPercentage
     });
 
     let g = svg.selectAll(".arc")
@@ -201,10 +201,7 @@ export default class PartyPositionGroup extends Component {
     const layoutStyles = rectInCircleLayout(
       this.state.viewWidth,
       20,
-      this.props.data.records.length,
-      data.dominantPosition,
-      partyHasPositionPercentage,
-      data.positionPercentages
+      this.props.data.records.length
     );
 
     let userPositionItem;

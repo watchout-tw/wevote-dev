@@ -42,13 +42,13 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount) {
     }
     // 確定circle大小之後來算水平位移
     toTranslate = (diameter - viewWidth)/2 + outerMarginLeft;
-    toTranslate = `translateX(-${toTranslate}px)`;
+    //toTranslate = `translateX(-${toTranslate}px)`;
     translateX = toTranslate;//單純只有 x translate 的 px 值
   }
 
   return {
-    width: diameter + borderWidth*2,
-    height: diameter + borderWidth*2,
+    width: Math.ceil(diameter + borderWidth*2),
+    height: Math.ceil(diameter + borderWidth*2),
     borderWidth: borderWidth,
     translateX: translateX
   }

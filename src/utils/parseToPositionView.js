@@ -55,13 +55,38 @@ function parseToPositionView_Proceed (records, currentIssue, PositionView) {// r
             throw new Error("未定義的立場："+Positions[value.position]);
         }
         Positions[value.position].records.push(value);
-
     });
+
+    // 計算政黨比例
+    Object.keys(Positions).map((currentPosition, index)=>{
+        let count = {};
+        Positions[currentPosition].records.map((r, i)=>{
+            if(!count[r.party]){
+                count[r.party] = 0;
+            }
+            count[r.party]++;
+        })
+        const recordTotalCount = Positions[currentPosition].records.length;  
+
+        let countSort = [];
+        Object.keys(count).map((currentParty, i)=>{
+            let p = (count[currentParty]/ recordTotalCount) * 100;
+            p = +p.toFixed(2);// + will drop extra zeros
+            countSort.push({
+              "party" : currentParty,
+              "percentage" : p
+            })
+        })
+        countSort.sort((a,b)=>{ return a.percentage - b.percentage })
+
+        Positions[currentPosition].partyPercentages = countSort;
+        
+    })
+
 
 
     Object.keys(Positions).map((currentPosition, index)=>{
-        PositionView[currentIssue].positions.push(Positions[currentPosition]);
-        
+        PositionView[currentIssue].positions.push(Positions[currentPosition]);   
     })
 
 

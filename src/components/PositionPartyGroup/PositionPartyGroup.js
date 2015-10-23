@@ -4,7 +4,9 @@ import moment from 'moment';
 
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
+import party2color from '../../utils/party2color';
 import rectInCircleLayout from '../../utils/rectInCircleLayout';
+import rectInCircleLayoutSVG from '../../utils/rectInCircleLayoutSVG';
 
 class Record extends Component {
   static propTypes = {
@@ -94,17 +96,72 @@ export default class PositionPartyGroup extends Component {
         })
     }
   }
+  _playD3(){
+    console.log("we ♥ svg!");
 
+    const { data, issueURL, parties } = this.props;
+    const styles = require('./PositionPartyGroup.scss');
+    
+    const layoutStyles = rectInCircleLayoutSVG(
+      window.innerWidth,
+      20,
+      data.records.length
+    );
+
+    let width = layoutStyles.width,
+        height = layoutStyles.height,
+        radius = Math.min(width, height) / 2;
+    
+    let arc = d3.svg.arc()
+                .outerRadius(radius)
+                .innerRadius(radius - layoutStyles.borderWidth);
+    
+    let pie = d3.layout.pie()
+        .sort(null)
+        .value(function(d) { return d.percentage; });
+    
+    let node = d3.select(`#svgContainer-${issueURL}-${data.position}`);
+    
+    node.selectAll("*")
+        .remove();
+
+    let svg = node
+                .attr("width", width)
+                .attr("height", height)
+              .append("g")
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    let dataset = data.partyPercentages.map((value,index)=>{
+        return {
+            party: value.party,
+            percentage: value.percentage
+        }
+    });
+   
+    let g = svg.selectAll(".arc")
+               .data(pie(dataset))
+               .enter()
+               .append("g")
+               .attr("class", "arc")
+
+        g.append("path")
+         .attr("d", arc)
+         .style("fill", function(d) { return party2color(d.data.party); });
+  }
   componentDidMount(){
     this._updateViewWidth();
     window.addEventListener('resize', this._updateViewWidth.bind(this));
+    this._playD3();
+  }
+  componentDidUpdate(){
+    this._playD3();
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this._updateViewWidth.bind(this));
   }
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, issueId, issueStatement, userPosition} = this.props;
+    const {data, issueURL, issueStatement, userPosition} = this.props;
     const {parties} = this.props;
 
     let title = `我${eng2cht(data.position)}${issueStatement}`;
@@ -119,8 +176,7 @@ export default class PositionPartyGroup extends Component {
     const layoutStyles = rectInCircleLayout(
       this.state.viewWidth,
       20,
-      this.props.data.records.length,
-      data.position,
+      data.records.length
     );
 
     let userPositionItem;
@@ -135,10 +191,11 @@ export default class PositionPartyGroup extends Component {
       <div className={styles.wrap}>
         {userPositionItem}
         <div className={styles.header}>{title}</div>
-        <div style={layoutStyles.margin}>
-          <div style={layoutStyles.circle}>
-            <div style={layoutStyles.rect}>{records}</div>
-          </div>
+    
+        <div style={layoutStyles.wrap}>
+            <svg id={`svgContainer-${issueURL}-${data.position}`}
+                 className={styles.svgWrap} />
+              <div style={layoutStyles.rect}>{records}</div>
         </div>
       </div>
     );
