@@ -1,10 +1,8 @@
 import position2color from './position2color';
 import prefixr from 'react-prefixr';
+const appBarBreakLarge = 750;
 
-export default function rectInCircleLayout(viewWidth, cubeSize, recordCount) {
-  let outerMarginTop = 20;
-  let outerMarginLeft = 40;
-
+function getBorderAndDiameter(cubeSize, recordCount){
   // 算圈圈有多粗
   let borderWidth = Math.ceil(Math.sqrt(recordCount))*2*cubeSize/20;
   if(borderWidth < 2)
@@ -21,35 +19,39 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount) {
   let offsetLeft = (diameter - rectWidth)/2;
   let offsetTop = offsetLeft;
 
-  // 確認circle沒有比view寬
-  let toTranslate = '';
-  let translateX;
-  if(diameter + outerMarginLeft*2 > viewWidth) { // 比較的時候把左右margin也加進來比較對
-    // 唉呀circle比view寬只好重算了哭哭
-    // 先確定rect有沒有比view寬
-    if(rectWidth > viewWidth) {
-      // rect比view寬所以要重算circle大小
-      rectWidth = Math.floor(viewWidth/cubeSize)*cubeSize;
-      numCol = rectWidth/cubeSize;
-      numRow = Math.ceil(recordCount/numCol);
-      rectHeight = numRow*cubeSize;
+  return {
+    borderWidth: borderWidth,
+    diameter: diameter, 
+    width: Math.ceil(diameter + borderWidth*2),
+    height: Math.ceil(diameter + borderWidth*2),
+    offsetLeft: offsetLeft,
+    offsetTop: offsetTop
+  }
+}
+export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, maxCount) {
+  let outerMarginTop = 20;
+  let outerMarginLeft = 40;
 
-      radius = Math.sqrt((rectWidth/2)*(rectWidth/2) + (rectHeight/2)*(rectHeight/2))*1.5
-      diameter = radius*2;
+  let maxLayout = getBorderAndDiameter(cubeSize, maxCount);
+  let currentLayout = getBorderAndDiameter(cubeSize, recordCount);
+  let { width, height, borderWidth, offsetLeft, offsetTop } = currentLayout;
 
-      offsetLeft = (diameter - rectWidth)/2;
-      offsetTop = (diameter - rectHeight)/2;
-    }
-    // 確定circle大小之後來算水平位移
-    toTranslate = (diameter - viewWidth)/2 + outerMarginLeft;
-    //toTranslate = `translateX(-${toTranslate}px)`;
-    translateX = toTranslate;//單純只有 x translate 的 px 值
+  // console.log("maxLayout:")
+  // console.log(maxLayout)
+  // console.log("viewWidth:")
+  // console.log(viewWidth)
+
+  //手機版本
+  if(( maxLayout.width > viewWidth ) && ( viewWidth < appBarBreakLarge )){
+    //console.log("*");
+    const ratio = viewWidth / maxLayout.width;
+    width *= ratio;
+    height *= ratio;
   }
 
   return {
-    width: Math.ceil(diameter + borderWidth*2),
-    height: Math.ceil(diameter + borderWidth*2),
-    borderWidth: borderWidth,
-    translateX: translateX
+    width: width,
+    height: height,
+    borderWidth: borderWidth
   }
 }

@@ -170,11 +170,14 @@ function parseToPartyView_Proceed (records, currentIssue, PartyView) {
 
 
 	// 之後塞到 PartyView['marriageEquality'].partyPositions 底下 */
-
+	let maxCount = 0;
 	sortedParty.map((currentParty,index)=>{
 
 		if(!PartyView[currentIssue].partyPositions)
 		 	PartyView[currentIssue].partyPositions = []; // initialize
+
+		if(currentParty.records.length > maxCount)
+			maxCount = currentParty.records.length;
 
 		PartyView[currentIssue].partyPositions.push(
 		{
@@ -186,6 +189,7 @@ function parseToPartyView_Proceed (records, currentIssue, PartyView) {
     	    "hasPositionCount" : currentParty.hasPositionCount,
     	    "positionPercentages" : currentParty.positionPercentages 
 		});
+		PartyView[currentIssue].maxCount = maxCount;
 		
 	})
 }

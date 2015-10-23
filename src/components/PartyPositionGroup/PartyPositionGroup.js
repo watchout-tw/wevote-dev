@@ -86,18 +86,24 @@ export default class PartyPositionGroup extends Component {
            viewWidth: window.innerWidth
         })
     }
+    this._playD3();
   }
   _playD3(){
-    console.log("we ♥ svg!");
+    //console.log("we ♥ svg!");
 
-    const { data, issueURL, parties } = this.props;
+    const { data, maxCount, issueURL, parties } = this.props;
     const styles = require('./PartyPositionGroup.scss');
     
     const partyHasPositionPercentage = Math.round((this.props.data.hasPositionCount/this.props.parties[this.props.data.party].hasBeenCount) * 100, 0);
+    let viewWidth = window.innerWidth;
+    if(this.state.viewWidth){
+      viewWidth = this.state.viewWidth;
+    }
     const layoutStyles = rectInCircleLayoutSVG(
-      window.innerWidth,
+      viewWidth,
       20,
-      data.records.length
+      data.records.length,
+      maxCount
     );
 
     let width = layoutStyles.width,
@@ -167,7 +173,7 @@ export default class PartyPositionGroup extends Component {
   }
   render() {
     const styles = require('./PartyPositionGroup.scss');
-    const {data, issueURL, userPosition, issueStatement} = this.props;
+    const {data, maxCount, issueURL, userPosition, issueStatement} = this.props;
     const {parties} = this.props;
 
     let partyTitle = eng2cht(data.party);//KMT->中國國民黨
@@ -201,7 +207,8 @@ export default class PartyPositionGroup extends Component {
     const layoutStyles = rectInCircleLayout(
       this.state.viewWidth,
       20,
-      this.props.data.records.length
+      this.props.data.records.length,
+      maxCount
     );
 
     let userPositionItem;
@@ -227,7 +234,8 @@ export default class PartyPositionGroup extends Component {
         <div style={layoutStyles.wrap}>
             <svg id={`svgContainer-${issueURL}-${data.party}`}
                  className={styles.svgWrap} />
-              <div style={layoutStyles.rect}>{records}</div>
+              <div style={layoutStyles.rect}
+                   className={styles.rectWrap}>{records}</div>
         </div>
       </div>
     );

@@ -1,7 +1,8 @@
 import position2color from './position2color';
 import prefixr from 'react-prefixr';
+const appBarBreakLarge = 750;
 
-export default function rectInCircleLayout(viewWidth, cubeSize, recordCount) {
+function getBorderAndDiameter(viewWidth, cubeSize, recordCount){
   let outerMarginTop = 20;
   let outerMarginLeft = 40;
 
@@ -40,16 +41,44 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount) {
       offsetTop = (diameter - rectHeight)/2;
     }
     // 確定circle大小之後來算水平位移
-    toTranslate = (diameter - viewWidth)/2 + outerMarginLeft;
-    toTranslate = `translateX(-${toTranslate}px)`;
+    toTranslate = (Math.ceil(diameter + borderWidth*2 + outerMarginTop*2) - viewWidth)/2;
+    //toTranslate = `translateX(-${toTranslate}px)`;
+  }
+  return {
+    width: Math.ceil(diameter + borderWidth*2),
+    height: Math.ceil(diameter + borderWidth*2),
+    rectWidth: rectWidth,
+    rectHeight: rectHeight,
+    offsetTop: offsetTop,
+    offsetLeft: offsetLeft,
+    toTranslate: toTranslate
+  }
+}
+export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, maxCount) {
+  
+  let maxLayout = getBorderAndDiameter(viewWidth, cubeSize, maxCount);
+  let currentLayout = getBorderAndDiameter(viewWidth, cubeSize, recordCount);
+  let { width, height, toTranslate, rectWidth, rectHeight, offsetTop, offsetLeft } = currentLayout;
+  
+  //手機版本
+  if(( maxLayout.width > viewWidth )&&( viewWidth < appBarBreakLarge )){
+    
+    width = "auto";
+    height = "auto";
+    offsetTop = "";
+    offsetLeft = "";
+    toTranslate = "";
+
   }
 
   let wrapStyles = prefixr({
     position: 'relative',
     display: 'inline-block',
-    width: Math.ceil(diameter + borderWidth*2),
-    height: Math.ceil(diameter + borderWidth*2),
+    width: width,
+    height: height,
+    transform: `translateX(-${toTranslate}px)`
   })
+  
   let rectStyles = prefixr({
     position: 'absolute',
     top: `${offsetTop}px`,

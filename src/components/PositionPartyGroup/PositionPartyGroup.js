@@ -95,17 +95,22 @@ export default class PositionPartyGroup extends Component {
            viewWidth: window.innerWidth
         })
     }
+    this._playD3();
   }
   _playD3(){
-    console.log("we ♥ svg!");
-
-    const { data, issueURL, parties } = this.props;
+    
+    const { data, maxCount, issueURL, parties } = this.props;
     const styles = require('./PositionPartyGroup.scss');
     
+    let viewWidth = window.innerWidth;
+    if(this.state.viewWidth){
+      viewWidth = this.state.viewWidth;
+    }
     const layoutStyles = rectInCircleLayoutSVG(
-      window.innerWidth,
+      viewWidth,
       20,
-      data.records.length
+      data.records.length,
+      maxCount
     );
 
     let width = layoutStyles.width,
@@ -161,7 +166,7 @@ export default class PositionPartyGroup extends Component {
   }
   render() {
     const styles = require('./PositionPartyGroup.scss');
-    const {data, issueURL, issueStatement, userPosition} = this.props;
+    const {data, maxCount, issueURL, issueStatement, userPosition} = this.props;
     const {parties} = this.props;
 
     let title = `我${eng2cht(data.position)}${issueStatement}`;
@@ -176,7 +181,8 @@ export default class PositionPartyGroup extends Component {
     const layoutStyles = rectInCircleLayout(
       this.state.viewWidth,
       20,
-      data.records.length
+      data.records.length,
+      maxCount
     );
 
     let userPositionItem;
@@ -195,7 +201,8 @@ export default class PositionPartyGroup extends Component {
         <div style={layoutStyles.wrap}>
             <svg id={`svgContainer-${issueURL}-${data.position}`}
                  className={styles.svgWrap} />
-              <div style={layoutStyles.rect}>{records}</div>
+            <div style={layoutStyles.rect}
+                 className={styles.rectWrap}>{records}</div>
         </div>
       </div>
     );

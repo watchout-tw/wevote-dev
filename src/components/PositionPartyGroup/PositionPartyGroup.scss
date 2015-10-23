@@ -1,3 +1,4 @@
+@import '../../common.scss';
 $cubeSize: 20px;
 $ayeColor: #00FFB0;
 $nayColor: #FF0055;
@@ -5,7 +6,12 @@ $unknownColor: #FFF800;
 
 .wrap {
 	display: inline-block;
-	margin: 20px;
+	margin: 20px 0;
+}
+@media screen and (min-width: $appBarBreakLarge) {
+	.wrap {
+		margin: 20px;
+	}
 }
 .header {
 	display: block;
@@ -44,6 +50,15 @@ $unknownColor: #FFF800;
 .svgWrap {
 	vertical-align: middle;
 }
+.rectWrap {
+	display: none;
+}
+@media screen and (min-width: $appBarBreakLarge) {
+	.rectWrap {
+		display: inline-block;
+	}
+}
+
 .positionWrap {
 	position: relative;
 	float: left;

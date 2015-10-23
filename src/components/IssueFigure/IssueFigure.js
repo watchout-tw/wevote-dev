@@ -77,8 +77,9 @@ export default class IssueFigure extends Component {
       // 1. 看政黨
       const currentPartyView = partyView[currentIssue.titleEng];
       let partyPositionGroups = currentPartyView.partyPositions.map((value, index)=>{
-          //console.log(value);
+          let maxCount = currentPartyView.maxCount;
           return <PartyPositionGroup data={value} 
+                                     maxCount={maxCount}
                                      issueStatement={currentPartyView.statement} 
                                      issueURL={currentIssueName}
                                      userPosition={userPosition[currentIssueName]}
@@ -100,9 +101,11 @@ export default class IssueFigure extends Component {
   
       // 3. 看表態
       const currentPositionView = positionView[currentIssue.titleEng];//只拿: 目前頁面議題的表態資料
+      let maxCount = currentPositionView.maxCount;
       let positionPartyGroups = currentPositionView.positions.map((value, index)=>{
           //console.log(value);
           return <PositionPartyGroup data={value} 
+                                     maxCount={maxCount}
                                      issueStatement={currentPartyView.statement}
                                      issueURL={currentIssueName}
                                      userPosition={userPosition[currentIssueName]}

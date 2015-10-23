@@ -37,6 +37,7 @@ export default function parseToPositionView(records, issues){
 }
 function parseToPositionView_Proceed (records, currentIssue, PositionView) {// records: [], currentIssue: marriageEquality (e.g.)
     var Positions = {};
+    let maxCount = 0;
 
     /* 把 表態 依照 立場 分組 */
     //順序固定是 贊成 - 模糊 - 反對
@@ -67,6 +68,8 @@ function parseToPositionView_Proceed (records, currentIssue, PositionView) {// r
             count[r.party]++;
         })
         const recordTotalCount = Positions[currentPosition].records.length;  
+        if(recordTotalCount > maxCount)
+            maxCount = recordTotalCount;
 
         let countSort = [];
         Object.keys(count).map((currentParty, i)=>{
@@ -88,6 +91,7 @@ function parseToPositionView_Proceed (records, currentIssue, PositionView) {// r
     Object.keys(Positions).map((currentPosition, index)=>{
         PositionView[currentIssue].positions.push(Positions[currentPosition]);   
     })
+    PositionView[currentIssue].maxCount = maxCount;
 
 
     
