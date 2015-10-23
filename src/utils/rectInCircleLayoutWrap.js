@@ -1,7 +1,8 @@
 import position2color from './position2color';
 import prefixr from 'react-prefixr';
+const appBarBreakLarge = 750;
 
-export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, position, hasPositionPercentage, positionPercentages) {
+function getBorderAndDiameter(viewWidth, cubeSize, recordCount){
   let outerMarginTop = 20;
   let outerMarginLeft = 40;
 
@@ -18,7 +19,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
   let radius = (rectWidth/2*Math.sqrt(2))*1.05 + borderWidth;
   let diameter = radius*2;
 
-  let offsetLeft = (diameter - rectWidth)/2;
+  let offsetLeft = (radius + borderWidth)/2;
   let offsetTop = offsetLeft;
 
   // 確認circle沒有比view寬
@@ -40,28 +41,44 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
       offsetTop = (diameter - rectHeight)/2;
     }
     // 確定circle大小之後來算水平位移
-    toTranslate = (diameter - viewWidth)/2 + outerMarginLeft;
-    toTranslate = `translateX(-${toTranslate}px)`;
+    toTranslate = (Math.ceil(diameter + borderWidth*2 + outerMarginTop*2) - viewWidth)/2;
+    //toTranslate = `translateX(-${toTranslate}px)`;
   }
-
+  return {
+    width: Math.ceil(diameter + borderWidth*2),
+    height: Math.ceil(diameter + borderWidth*2),
+    rectWidth: rectWidth,
+    rectHeight: rectHeight,
+    offsetTop: offsetTop,
+    offsetLeft: offsetLeft,
+    toTranslate: toTranslate
+  }
+}
+export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, maxCount) {
   
-  // 算inline styles
-  let marginStyles = {
-    margin: `${outerMarginTop}px ${outerMarginLeft}px`,
-  }
-  // 這是一般用
-  let circleStyles = prefixr({
-    display: 'inline-block',
-    verticalAlign: 'middle',
-    position: 'relative',
-    width: diameter,
-    height: diameter,
-    margin: `${borderWidth}px 0`,
-    boxShadow: `0 0 0 ${borderWidth}px ${position2color(position)}`,
-    borderRadius: '50%',
-    transform: toTranslate
-  })
+  let maxLayout = getBorderAndDiameter(viewWidth, cubeSize, maxCount);
+  let currentLayout = getBorderAndDiameter(viewWidth, cubeSize, recordCount);
+  let { width, height, toTranslate, rectWidth, rectHeight, offsetTop, offsetLeft } = currentLayout;
+  
+  //手機版本
+  if(( maxLayout.width > viewWidth )&&( viewWidth < appBarBreakLarge )){
+    
+    width = "auto";
+    height = "auto";
+    offsetTop = "";
+    offsetLeft = "";
+    toTranslate = "";
 
+  }
+
+  let wrapStyles = prefixr({
+    position: 'relative',
+    display: 'inline-block',
+    width: width,
+    height: height,
+    transform: `translateX(-${toTranslate}px)`
+  })
+  
   let rectStyles = prefixr({
     position: 'absolute',
     top: `${offsetTop}px`,
@@ -70,12 +87,8 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     height: rectHeight,
   })
 
-
-
-
   return {
-    margin: marginStyles,
-    circle: circleStyles,
+    wrap: wrapStyles,
     rect: rectStyles
   }
 }

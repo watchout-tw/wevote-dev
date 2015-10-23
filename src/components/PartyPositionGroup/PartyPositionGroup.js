@@ -5,7 +5,7 @@ import d3 from 'd3';
 
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
-import rectInCircleLayout from '../../utils/rectInCircleLayout';
+import rectInCircleLayoutWrap from '../../utils/rectInCircleLayoutWrap';
 import rectInCircleLayoutSVG from '../../utils/rectInCircleLayoutSVG';
 
 class Record extends Component {
@@ -204,7 +204,7 @@ export default class PartyPositionGroup extends Component {
 
    
     
-    const layoutStyles = rectInCircleLayout(
+    const layoutStyles = rectInCircleLayoutWrap(
       this.state.viewWidth,
       20,
       this.props.data.records.length,

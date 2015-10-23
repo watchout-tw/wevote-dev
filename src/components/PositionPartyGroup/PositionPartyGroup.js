@@ -5,7 +5,7 @@ import moment from 'moment';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 import party2color from '../../utils/party2color';
-import rectInCircleLayout from '../../utils/rectInCircleLayout';
+import rectInCircleLayoutWrap from '../../utils/rectInCircleLayoutWrap';
 import rectInCircleLayoutSVG from '../../utils/rectInCircleLayoutSVG';
 
 class Record extends Component {
@@ -178,7 +178,7 @@ export default class PositionPartyGroup extends Component {
                      key={index} />
     });
 
-    const layoutStyles = rectInCircleLayout(
+    const layoutStyles = rectInCircleLayoutWrap(
       this.state.viewWidth,
       20,
       data.records.length,
