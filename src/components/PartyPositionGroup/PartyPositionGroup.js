@@ -1,10 +1,12 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import moment from 'moment';
+import d3 from 'd3';
 
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 import rectInCircleLayout from '../../utils/rectInCircleLayout';
+import rectInCircleLayoutSVG from '../../utils/rectInCircleLayoutSVG';
 
 class Record extends Component {
   static propTypes = {
@@ -70,7 +72,6 @@ class Record extends Component {
   }
 }
 
-
 export default class PartyPositionGroup extends Component {
   static propTypes = {
   }
@@ -86,10 +87,80 @@ export default class PartyPositionGroup extends Component {
         })
     }
   }
+  _playD3(){
+    console.log("we ♥ svg!");
+
+    const { data, issueURL, parties } = this.props;
+    const styles = require('./PartyPositionGroup.scss');
+    
+    const partyHasPositionPercentage = Math.round((this.props.data.hasPositionCount/this.props.parties[this.props.data.party].hasBeenCount) * 100, 0);
+    const layoutStyles = rectInCircleLayoutSVG(
+      window.innerWidth,
+      20,
+      data.records.length
+    );
+
+    let width = layoutStyles.width,
+        height = layoutStyles.height,
+        radius = Math.min(width, height) / 2;
+    
+    let arc = d3.svg.arc()
+                .outerRadius(radius)
+                .innerRadius(radius - layoutStyles.borderWidth);
+    
+    let pie = d3.layout.pie()
+        .sort(null)
+        .value(function(d) { return d.population; });
+    
+    let node = d3.select(`#svgContainer-${issueURL}-${data.party}`);
+    
+    node.selectAll("*")
+        .remove();
+
+    let svg = node
+                .attr("width", width)
+                .attr("height", height)
+              .append("g")
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    let dataset = data.positionPercentages.map((value,index)=>{
+        return {
+            position: value.position,
+            population: value.percentage * (partyHasPositionPercentage / 100)
+        }
+    });
+    dataset.push({
+      position: 'none',
+      population: 100-partyHasPositionPercentage
+    });
+
+    let g = svg.selectAll(".arc")
+               .data(pie(dataset))
+               .enter()
+               .append("g")
+               .attr("class", "arc")
+
+        g.append("path")
+         .attr("d", arc)
+         .style("fill", function(d) { return position2color(d.data.position); });
+      
+      // g.append("text")
+      //  .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      //  .attr("dy", ".35em")
+      //  .style("text-anchor", "middle")
+      //  .text(function(d) { return d.data.position; });
+    
+
+  }
 
   componentDidMount(){
     this._updateViewWidth();
     window.addEventListener('resize', this._updateViewWidth.bind(this));
+    this._playD3();
+  }
+  componentDidUpdate(){
+    this._playD3();
+    
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this._updateViewWidth.bind(this));
@@ -106,7 +177,6 @@ export default class PartyPositionGroup extends Component {
                      key={index} />
     });
     
-
     // 處理有多少人曾經表態，表態做主要的立場為何
     let partyPercentageItem;
     let partyHasPositionPercentage = Math.round((data.hasPositionCount/parties[data.party].hasBeenCount) * 100, 0);
@@ -137,8 +207,6 @@ export default class PartyPositionGroup extends Component {
       data.positionPercentages
     );
 
-   
-   
     let userPositionItem;
     if( data.dominantPosition === userPosition && 
         (data.dominantPosition === "aye" || data.dominantPosition === "nay")){
@@ -148,6 +216,7 @@ export default class PartyPositionGroup extends Component {
             <div className={styles.userPositionText}>與你立場相同</div>
         </div>
     }
+   
 
     return (
       <div className={styles.wrap}>
@@ -158,16 +227,10 @@ export default class PartyPositionGroup extends Component {
           { partyPercentageItem }
           
         </div>
-        <div style={layoutStyles.margin}>
-          <div style={layoutStyles.baseCircle}>
-            <div style={layoutStyles.colorCircleA} key={`A${layoutStyles.colorCircleA.border} ${layoutStyles.colorCircleA.borderColor}`}></div>
-            <div style={layoutStyles.colorCircleB} key={`B${layoutStyles.colorCircleB.border} ${layoutStyles.colorCircleB.borderColor}`}></div>
-            <div style={layoutStyles.colorCircleC} key={`C${layoutStyles.colorCircleC.border} ${layoutStyles.colorCircleC.borderColor}`}></div>
-            
-            <div style={layoutStyles.grayCircle} key={`${layoutStyles.grayCircle.border} ${layoutStyles.grayCircle.borderColor}`}></div>
-            <div style={layoutStyles.rect}>{records}</div>
-            
-          </div>
+        <div style={layoutStyles.wrap}>
+            <svg id={`svgContainer-${issueURL}-${data.party}`}
+                 className={styles.svgWrap} />
+              <div style={layoutStyles.rect}>{records}</div>
         </div>
       </div>
     );

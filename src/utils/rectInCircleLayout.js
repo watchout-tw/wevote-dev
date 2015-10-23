@@ -18,7 +18,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
   let radius = (rectWidth/2*Math.sqrt(2))*1.05 + borderWidth;
   let diameter = radius*2;
 
-  let offsetLeft = (diameter - rectWidth)/2;
+  let offsetLeft = (radius + borderWidth)/2;
   let offsetTop = offsetLeft;
 
   // 確認circle沒有比view寬
@@ -210,6 +210,18 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     borderRadius: '50%',
     transform: `rotate(${grayRotateDegree}deg)`
   })
+  // let rectStyles = prefixr({
+  //   position: 'absolute',
+  //   top: `${offsetTop}px`,
+  //   left: `${offsetLeft}px`,
+  //   width: rectWidth,
+  //   height: rectHeight,
+  // })
+  let wrapStyles = prefixr({
+    position: 'relative',
+    width: diameter + borderWidth*2,
+    height: diameter + borderWidth*2,
+  })
   let rectStyles = prefixr({
     position: 'absolute',
     top: `${offsetTop}px`,
@@ -244,6 +256,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
     colorCircleB: finalB,
     colorCircleC: finalC,
     grayCircle: grayCircleStyles,
+    wrap: wrapStyles,
     rect: rectStyles
   }
 }

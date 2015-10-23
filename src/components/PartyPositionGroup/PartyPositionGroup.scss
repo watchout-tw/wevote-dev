@@ -4,11 +4,13 @@ $cubeSize: $defaultCubeSize;
 
 .wrap {
 	display: inline-block;
+	margin: 20px;
 }
 .header {
 	display: block;
 	max-width: 100vw;
 	font-size: 16px;
+	margin-bottom: 10px;
 }
 .userPositionBlock {
 	position: relative;
@@ -39,7 +41,9 @@ $cubeSize: $defaultCubeSize;
     bottom: -9px;
     left: calc(50% - 9px);
 }
-
+.svgWrap {
+	vertical-align: middle;
+}
 .margin {
 	display: inline-block;
 	margin: 20px;

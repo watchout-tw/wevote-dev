@@ -12,8 +12,11 @@ export default function position2color(position_eng){
       case 'evading':
       	return 'black';
 
+      case 'none':
+        return 'gray';
+
       default:
-        return 'black';///////
+        return 'black';
  }
   
 }
