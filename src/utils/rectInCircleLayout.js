@@ -19,7 +19,7 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, pos
   let diameter = radius*2;
 
   let offsetLeft = (diameter - rectWidth)/2;
-  let offsetTop = offsetLeft;
+  let offsetTop = offsetLeft - 15;//因為加上了名字
 
   // 確認circle沒有比view寬
   let toTranslate = '';

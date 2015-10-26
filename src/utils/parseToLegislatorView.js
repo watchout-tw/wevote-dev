@@ -141,6 +141,21 @@ function parseToLegislatorView_Proceed (records, currentIssue, LegislatorView) {
 		PositionGroup[currentPosition].push(Legislators[currentLegislator]);
 	});
 
+	// 把分好立場的 PositionGroup 立委，依照表態紀錄的數量排序，多的在前面
+	["aye","unknown","nay","evading"].map((currentPosition, index)=>{
+		PositionGroup[currentPosition].sort((a,b)=>{
+          	if(b.records.length === a.records.length){
+          		// 如果次數一樣，最近有表態的在前面
+          		let length = b.records.length;
+          		return b.records[length-1].date - a.records[length-1].date;
+	
+          	}else{
+          		return b.records.length-a.records.length;
+          	}
+          
+        })
+	})
+
     //把應表態未表態的立委放進去
 	Object.keys(currentEvading).map((currentLegislator,index)=>{
 		let currentPosition = evadingList[currentIssue][currentLegislator].dominantPosition;
