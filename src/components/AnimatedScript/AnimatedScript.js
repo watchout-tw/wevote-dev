@@ -200,7 +200,10 @@ export default class AnimatedScript extends Component {
     }
   }
   componentDidMount(){
-     this._setStage(this.props);
+      this._setStage(this.props);
+  }
+  componentDidUpdate(){
+      document.body.scrollTop = 0;
   }
   componentWillReceiveProps(nextProps){
       //console.log("componentWillReceiveProps");
@@ -208,8 +211,6 @@ export default class AnimatedScript extends Component {
          this._clearTimeoutScript();
       }
       this._setStage(nextProps);
-
-
   }
   render(){
     const styles = require('./AnimatedScript.scss');

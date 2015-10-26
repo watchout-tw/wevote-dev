@@ -8,11 +8,16 @@ $breakLarge: 800px;
     text-align: left;
     max-width: $break;
     margin: 0 auto 20px;
-    padding: 30px;
+    padding: 30px 18px;
     background: $trueWhite;
     box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.05);
     position: relative;
     font-size: 16px;
+}
+@media all and (min-width: 400px){
+    .storyBlock {
+        padding: 30px;
+    }
 }
 @media all and (min-width: $break){
     .storyBlock {
