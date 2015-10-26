@@ -2,8 +2,13 @@ const initialState = {
     "1": {
         "id": 1,
         "name": "丁守中",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "61",
         "isCurrent": true,
@@ -17,8 +22,13 @@ const initialState = {
     "2": {
         "id": 2,
         "name": "孔文吉",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "58",
         "isCurrent": true,
@@ -32,8 +42,13 @@ const initialState = {
     "3": {
         "id": 3,
         "name": "尤美女",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "60",
         "isCurrent": true,
@@ -47,8 +62,13 @@ const initialState = {
     "4": {
         "id": 4,
         "name": "王廷升",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "50",
         "isCurrent": true,
@@ -62,8 +82,13 @@ const initialState = {
     "5": {
         "id": 5,
         "name": "王育敏",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "44",
         "isCurrent": true,
@@ -77,8 +102,13 @@ const initialState = {
     "6": {
         "id": 6,
         "name": "王金平",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "74",
         "isCurrent": true,
@@ -92,8 +122,13 @@ const initialState = {
     "7": {
         "id": 7,
         "name": "王惠美",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "47",
         "isCurrent": true,
@@ -107,8 +142,13 @@ const initialState = {
     "8": {
         "id": 8,
         "name": "王進士",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "67",
         "isCurrent": true,
@@ -122,8 +162,13 @@ const initialState = {
     "9": {
         "id": 9,
         "name": "田秋堇",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "61",
         "isCurrent": true,
@@ -137,8 +182,13 @@ const initialState = {
     "10": {
         "id": 10,
         "name": "江啟臣",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "43",
         "isCurrent": true,
@@ -152,8 +202,13 @@ const initialState = {
     "11": {
         "id": 11,
         "name": "江惠貞",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "52",
         "isCurrent": true,
@@ -167,8 +222,13 @@ const initialState = {
     "12": {
         "id": 12,
         "name": "何欣純",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "42",
         "isCurrent": true,
@@ -182,8 +242,13 @@ const initialState = {
     "13": {
         "id": 13,
         "name": "吳育仁",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "46",
         "isCurrent": true,
@@ -197,8 +262,13 @@ const initialState = {
     "14": {
         "id": 14,
         "name": "吳育昇",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "57",
         "isCurrent": true,
@@ -212,8 +282,13 @@ const initialState = {
     "15": {
         "id": 15,
         "name": "吳宜臻",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "45",
         "isCurrent": true,
@@ -227,8 +302,13 @@ const initialState = {
     "16": {
         "id": 16,
         "name": "吳秉叡",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "49",
         "isCurrent": true,
@@ -242,8 +322,13 @@ const initialState = {
     "17": {
         "id": 17,
         "name": "呂玉玲",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "61",
         "isCurrent": true,
@@ -257,8 +342,13 @@ const initialState = {
     "18": {
         "id": 18,
         "name": "呂學樟",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "63",
         "isCurrent": true,
@@ -272,8 +362,13 @@ const initialState = {
     "19": {
         "id": 19,
         "name": "李昆澤",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "51",
         "isCurrent": true,
@@ -287,8 +382,13 @@ const initialState = {
     "20": {
         "id": 20,
         "name": "李俊俋",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "50",
         "isCurrent": true,
@@ -302,8 +402,13 @@ const initialState = {
     "21": {
         "id": 21,
         "name": "李桐豪",
-        "party": "PFP",
-        "partyCht": "親民黨",
+        "parties": [
+            {
+                "partyCht": "親民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "60",
         "isCurrent": true,
@@ -317,8 +422,13 @@ const initialState = {
     "22": {
         "id": 22,
         "name": "李貴敏",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "61",
         "isCurrent": true,
@@ -332,8 +442,13 @@ const initialState = {
     "23": {
         "id": 23,
         "name": "李慶華",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "67",
         "isCurrent": true,
@@ -347,8 +462,13 @@ const initialState = {
     "24": {
         "id": 24,
         "name": "李應元",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "62",
         "isCurrent": true,
@@ -362,8 +482,13 @@ const initialState = {
     "25": {
         "id": 25,
         "name": "李鴻鈞",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "56",
         "isCurrent": true,
@@ -377,8 +502,13 @@ const initialState = {
     "26": {
         "id": 26,
         "name": "周倪安",
-        "party": "TSU",
-        "partyCht": "台聯",
+        "parties": [
+            {
+                "partyCht": "台聯",
+                "startDate": "2014/2/10",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "43",
         "isCurrent": true,
@@ -392,8 +522,13 @@ const initialState = {
     "27": {
         "id": 27,
         "name": "林世嘉",
-        "party": "TSU",
-        "partyCht": "台聯",
+        "parties": [
+            {
+                "partyCht": "台聯",
+                "startDate": "2012/2/1",
+                "endDate": "2013/7/15"
+            }
+        ],
         "gender": "女",
         "age": "46",
         "isCurrent": true,
@@ -407,8 +542,13 @@ const initialState = {
     "28": {
         "id": 28,
         "name": "林正二",
-        "party": "PFP",
-        "partyCht": "親民黨",
+        "parties": [
+            {
+                "partyCht": "親民黨",
+                "startDate": "2012/2/1",
+                "endDate": "2013/7/11"
+            }
+        ],
         "gender": "男",
         "age": "63",
         "isCurrent": true,
@@ -422,8 +562,13 @@ const initialState = {
     "29": {
         "id": 29,
         "name": "林佳龍",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": "2014/11/25"
+            }
+        ],
         "gender": "男",
         "age": "51",
         "isCurrent": true,
@@ -437,8 +582,13 @@ const initialState = {
     "30": {
         "id": 30,
         "name": "林岱樺",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "43",
         "isCurrent": true,
@@ -452,8 +602,13 @@ const initialState = {
     "31": {
         "id": 31,
         "name": "林明溱",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": "2014/12/25"
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -467,8 +622,13 @@ const initialState = {
     "32": {
         "id": 32,
         "name": "林郁方",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -482,8 +642,13 @@ const initialState = {
     "33": {
         "id": 33,
         "name": "林國正",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "61",
         "isCurrent": true,
@@ -497,8 +662,13 @@ const initialState = {
     "34": {
         "id": 34,
         "name": "林淑芬",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "42",
         "isCurrent": true,
@@ -512,8 +682,13 @@ const initialState = {
     "35": {
         "id": 35,
         "name": "林滄敏",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "57",
         "isCurrent": true,
@@ -527,8 +702,13 @@ const initialState = {
     "36": {
         "id": 36,
         "name": "林德福",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "62",
         "isCurrent": true,
@@ -542,8 +722,13 @@ const initialState = {
     "37": {
         "id": 37,
         "name": "林鴻池",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "60",
         "isCurrent": true,
@@ -557,8 +742,13 @@ const initialState = {
     "38": {
         "id": 38,
         "name": "邱文彥",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "61",
         "isCurrent": true,
@@ -572,8 +762,13 @@ const initialState = {
     "39": {
         "id": 39,
         "name": "邱志偉",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "43",
         "isCurrent": true,
@@ -587,8 +782,13 @@ const initialState = {
     "40": {
         "id": 40,
         "name": "邱議瑩",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "44",
         "isCurrent": true,
@@ -602,8 +802,13 @@ const initialState = {
     "41": {
         "id": 41,
         "name": "姚文智",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "50",
         "isCurrent": true,
@@ -617,8 +822,13 @@ const initialState = {
     "42": {
         "id": 42,
         "name": "柯建銘",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -632,8 +842,13 @@ const initialState = {
     "43": {
         "id": 43,
         "name": "段宜康",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "52",
         "isCurrent": true,
@@ -647,8 +862,13 @@ const initialState = {
     "44": {
         "id": 44,
         "name": "洪秀柱",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "67",
         "isCurrent": true,
@@ -662,8 +882,13 @@ const initialState = {
     "45": {
         "id": 45,
         "name": "紀國棟",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": "2015/7/16"
+            }
+        ],
         "gender": "男",
         "age": "55",
         "isCurrent": true,
@@ -677,8 +902,13 @@ const initialState = {
     "46": {
         "id": 46,
         "name": "孫大千",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "46",
         "isCurrent": true,
@@ -692,8 +922,13 @@ const initialState = {
     "47": {
         "id": 47,
         "name": "徐少萍",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "74",
         "isCurrent": true,
@@ -707,8 +942,13 @@ const initialState = {
     "48": {
         "id": 48,
         "name": "徐志榮",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2015/2/16",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "60",
         "isCurrent": true,
@@ -722,8 +962,18 @@ const initialState = {
     "49": {
         "id": 49,
         "name": "徐欣瑩",
-        "party": "MKT",
-        "partyCht": "民國黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": "2015/1/26"
+            },
+            {
+                "partyCht": "民國黨",
+                "startDate": "2015/1/27",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "43",
         "isCurrent": true,
@@ -737,8 +987,13 @@ const initialState = {
     "50": {
         "id": 50,
         "name": "徐耀昌",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": "2014/12/25"
+            }
+        ],
         "gender": "男",
         "age": "60",
         "isCurrent": true,
@@ -752,8 +1007,13 @@ const initialState = {
     "51": {
         "id": 51,
         "name": "翁重鈞",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "60",
         "isCurrent": true,
@@ -767,8 +1027,13 @@ const initialState = {
     "52": {
         "id": 52,
         "name": "馬文君",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "50",
         "isCurrent": true,
@@ -782,8 +1047,13 @@ const initialState = {
     "53": {
         "id": 53,
         "name": "高志鵬",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "52",
         "isCurrent": true,
@@ -797,8 +1067,13 @@ const initialState = {
     "54": {
         "id": 54,
         "name": "高金素梅",
-        "party": "NSU",
-        "partyCht": "無黨團結聯盟",
+        "parties": [
+            {
+                "partyCht": "無黨團結聯盟",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "50",
         "isCurrent": true,
@@ -812,8 +1087,13 @@ const initialState = {
     "55": {
         "id": 55,
         "name": "張嘉郡",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "34",
         "isCurrent": true,
@@ -827,8 +1107,13 @@ const initialState = {
     "56": {
         "id": 56,
         "name": "張慶忠",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -842,8 +1127,13 @@ const initialState = {
     "57": {
         "id": 57,
         "name": "張曉風",
-        "party": "PFP",
-        "partyCht": "親民黨",
+        "parties": [
+            {
+                "partyCht": "親民黨",
+                "startDate": "2012/2/1",
+                "endDate": "2013/3/17"
+            }
+        ],
         "gender": "女",
         "age": "74",
         "isCurrent": true,
@@ -857,23 +1147,33 @@ const initialState = {
     "58": {
         "id": 58,
         "name": "莊瑞雄",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2015/2/16",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "52",
         "isCurrent": true,
-        "constituency1": "南投縣",
-        "constituency2": "2",
+        "constituency1": "屏東縣",
+        "constituency2": "3",
         "isCandidate": true,
         "hasResigned": false,
-        "candidateConstituency1": "南投縣",
-        "candidateConstituency2": "2"
+        "candidateConstituency1": "屏東縣",
+        "candidateConstituency2": "3"
     },
     "59": {
         "id": 59,
         "name": "許忠信",
-        "party": "TSU",
-        "partyCht": "台聯",
+        "parties": [
+            {
+                "partyCht": "台聯",
+                "startDate": "2012/2/1",
+                "endDate": "2014/2/1"
+            }
+        ],
         "gender": "男",
         "age": "50",
         "isCurrent": true,
@@ -887,23 +1187,33 @@ const initialState = {
     "60": {
         "id": 60,
         "name": "許淑華",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "40",
         "isCurrent": true,
-        "constituency1": "苗栗縣",
+        "constituency1": "南投縣",
         "constituency2": "2",
         "isCandidate": true,
         "hasResigned": false,
-        "candidateConstituency1": "苗栗縣",
+        "candidateConstituency1": "南投縣",
         "candidateConstituency2": "2"
     },
     "61": {
         "id": 61,
         "name": "許添財",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -917,8 +1227,13 @@ const initialState = {
     "62": {
         "id": 62,
         "name": "許智傑",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "49",
         "isCurrent": true,
@@ -932,8 +1247,13 @@ const initialState = {
     "63": {
         "id": 63,
         "name": "陳其邁",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "51",
         "isCurrent": true,
@@ -947,8 +1267,13 @@ const initialState = {
     "64": {
         "id": 64,
         "name": "陳怡潔",
-        "party": "PFP",
-        "partyCht": "親民黨",
+        "parties": [
+            {
+                "partyCht": "親民黨",
+                "startDate": "2013/3/22",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "36",
         "isCurrent": true,
@@ -962,8 +1287,13 @@ const initialState = {
     "65": {
         "id": 65,
         "name": "陳明文",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "60",
         "isCurrent": true,
@@ -977,8 +1307,13 @@ const initialState = {
     "66": {
         "id": 66,
         "name": "陳亭妃",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "41",
         "isCurrent": true,
@@ -992,8 +1327,13 @@ const initialState = {
     "67": {
         "id": 67,
         "name": "陳唐山",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "80",
         "isCurrent": true,
@@ -1007,8 +1347,13 @@ const initialState = {
     "68": {
         "id": 68,
         "name": "陳根德",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "59",
         "isCurrent": true,
@@ -1022,8 +1367,13 @@ const initialState = {
     "69": {
         "id": 69,
         "name": "陳素月",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2015/2/16",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "49",
         "isCurrent": true,
@@ -1037,8 +1387,13 @@ const initialState = {
     "70": {
         "id": 70,
         "name": "陳淑慧",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "58",
         "isCurrent": true,
@@ -1052,8 +1407,18 @@ const initialState = {
     "71": {
         "id": 71,
         "name": "陳雪生",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "無黨籍",
+                "startDate": "2012/2/1",
+                "endDate": "2015/7/7"
+            },
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2015/7/8",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "63",
         "isCurrent": true,
@@ -1067,8 +1432,13 @@ const initialState = {
     "72": {
         "id": 72,
         "name": "陳超明",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -1082,8 +1452,13 @@ const initialState = {
     "73": {
         "id": 73,
         "name": "陳節如",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "71",
         "isCurrent": true,
@@ -1097,8 +1472,13 @@ const initialState = {
     "74": {
         "id": 74,
         "name": "陳碧涵",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "55",
         "isCurrent": true,
@@ -1112,8 +1492,13 @@ const initialState = {
     "75": {
         "id": 75,
         "name": "陳歐珀",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "54",
         "isCurrent": true,
@@ -1127,8 +1512,13 @@ const initialState = {
     "76": {
         "id": 76,
         "name": "陳學聖",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "58",
         "isCurrent": true,
@@ -1142,8 +1532,13 @@ const initialState = {
     "77": {
         "id": 77,
         "name": "陳鎮湘",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "73",
         "isCurrent": true,
@@ -1157,8 +1552,13 @@ const initialState = {
     "78": {
         "id": 78,
         "name": "曾巨威",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -1172,8 +1572,13 @@ const initialState = {
     "79": {
         "id": 79,
         "name": "費鴻泰",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "61",
         "isCurrent": true,
@@ -1187,8 +1592,13 @@ const initialState = {
     "80": {
         "id": 80,
         "name": "黃文玲",
-        "party": "TSU",
-        "partyCht": "台聯",
+        "parties": [
+            {
+                "partyCht": "台聯",
+                "startDate": "2012/2/1",
+                "endDate": "2014/2/1"
+            }
+        ],
         "gender": "女",
         "age": "46",
         "isCurrent": true,
@@ -1202,8 +1612,13 @@ const initialState = {
     "81": {
         "id": 81,
         "name": "黃志雄",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "39",
         "isCurrent": true,
@@ -1217,8 +1632,13 @@ const initialState = {
     "82": {
         "id": 82,
         "name": "黃昭順",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "62",
         "isCurrent": true,
@@ -1232,8 +1652,13 @@ const initialState = {
     "83": {
         "id": 83,
         "name": "黃偉哲",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "52",
         "isCurrent": true,
@@ -1247,8 +1672,13 @@ const initialState = {
     "84": {
         "id": 84,
         "name": "黃國書",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2015/2/16",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "51",
         "isCurrent": true,
@@ -1262,8 +1692,13 @@ const initialState = {
     "85": {
         "id": 85,
         "name": "楊玉欣",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "41",
         "isCurrent": true,
@@ -1277,8 +1712,13 @@ const initialState = {
     "86": {
         "id": 86,
         "name": "楊應雄",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "61",
         "isCurrent": true,
@@ -1292,8 +1732,13 @@ const initialState = {
     "87": {
         "id": 87,
         "name": "楊曜",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "49",
         "isCurrent": true,
@@ -1307,8 +1752,13 @@ const initialState = {
     "88": {
         "id": 88,
         "name": "楊瓊瓔",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "51",
         "isCurrent": true,
@@ -1322,8 +1772,13 @@ const initialState = {
     "89": {
         "id": 89,
         "name": "楊麗環",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "58",
         "isCurrent": true,
@@ -1337,8 +1792,13 @@ const initialState = {
     "90": {
         "id": 90,
         "name": "葉宜津",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "55",
         "isCurrent": true,
@@ -1352,8 +1812,13 @@ const initialState = {
     "91": {
         "id": 91,
         "name": "葉津鈴",
-        "party": "TSU",
-        "partyCht": "台聯",
+        "parties": [
+            {
+                "partyCht": "台聯",
+                "startDate": "2013/7/26",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "68",
         "isCurrent": true,
@@ -1367,8 +1832,13 @@ const initialState = {
     "92": {
         "id": 92,
         "name": "詹凱臣",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "61",
         "isCurrent": true,
@@ -1382,8 +1852,13 @@ const initialState = {
     "93": {
         "id": 93,
         "name": "詹滿容",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2015/7/20",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "59",
         "isCurrent": true,
@@ -1397,8 +1872,13 @@ const initialState = {
     "94": {
         "id": 94,
         "name": "廖正井",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "70",
         "isCurrent": true,
@@ -1412,8 +1892,13 @@ const initialState = {
     "95": {
         "id": 95,
         "name": "廖國棟",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "60",
         "isCurrent": true,
@@ -1427,8 +1912,13 @@ const initialState = {
     "96": {
         "id": 96,
         "name": "管碧玲",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "59",
         "isCurrent": true,
@@ -1442,8 +1932,13 @@ const initialState = {
     "97": {
         "id": 97,
         "name": "趙天麟",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "42",
         "isCurrent": true,
@@ -1457,8 +1952,13 @@ const initialState = {
     "98": {
         "id": 98,
         "name": "劉建國",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "46",
         "isCurrent": true,
@@ -1472,8 +1972,13 @@ const initialState = {
     "99": {
         "id": 99,
         "name": "劉櫂豪",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "48",
         "isCurrent": true,
@@ -1487,8 +1992,13 @@ const initialState = {
     "100": {
         "id": 100,
         "name": "潘孟安",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": "2014/12/25"
+            }
+        ],
         "gender": "男",
         "age": "52",
         "isCurrent": true,
@@ -1502,8 +2012,13 @@ const initialState = {
     "101": {
         "id": 101,
         "name": "潘維剛",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "58",
         "isCurrent": true,
@@ -1517,8 +2032,13 @@ const initialState = {
     "102": {
         "id": 102,
         "name": "蔡正元",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "62",
         "isCurrent": true,
@@ -1532,8 +2052,13 @@ const initialState = {
     "103": {
         "id": 103,
         "name": "蔡其昌",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "46",
         "isCurrent": true,
@@ -1547,8 +2072,13 @@ const initialState = {
     "104": {
         "id": 104,
         "name": "蔡煌瑯",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "55",
         "isCurrent": true,
@@ -1562,8 +2092,13 @@ const initialState = {
     "105": {
         "id": 105,
         "name": "蔡錦隆",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "57",
         "isCurrent": true,
@@ -1577,8 +2112,13 @@ const initialState = {
     "106": {
         "id": 106,
         "name": "蔣乃辛",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "61",
         "isCurrent": true,
@@ -1592,8 +2132,13 @@ const initialState = {
     "107": {
         "id": 107,
         "name": "鄭天財Sra·Kacaw",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "59",
         "isCurrent": true,
@@ -1607,8 +2152,13 @@ const initialState = {
     "108": {
         "id": 108,
         "name": "鄭汝芬",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "58",
         "isCurrent": true,
@@ -1622,8 +2172,13 @@ const initialState = {
     "109": {
         "id": 109,
         "name": "鄭麗君",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "46",
         "isCurrent": true,
@@ -1637,8 +2192,13 @@ const initialState = {
     "110": {
         "id": 110,
         "name": "盧秀燕",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "54",
         "isCurrent": true,
@@ -1652,8 +2212,13 @@ const initialState = {
     "111": {
         "id": 111,
         "name": "盧嘉辰",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "63",
         "isCurrent": true,
@@ -1667,8 +2232,13 @@ const initialState = {
     "112": {
         "id": 112,
         "name": "蕭美琴",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "44",
         "isCurrent": true,
@@ -1682,8 +2252,13 @@ const initialState = {
     "113": {
         "id": 113,
         "name": "賴士葆",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -1697,8 +2272,13 @@ const initialState = {
     "114": {
         "id": 114,
         "name": "賴振昌",
-        "party": "TSU",
-        "partyCht": "台聯",
+        "parties": [
+            {
+                "partyCht": "台聯",
+                "startDate": "2014/2/10",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "57",
         "isCurrent": true,
@@ -1712,8 +2292,13 @@ const initialState = {
     "115": {
         "id": 115,
         "name": "薛凌",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "63",
         "isCurrent": true,
@@ -1727,8 +2312,13 @@ const initialState = {
     "116": {
         "id": 116,
         "name": "謝國樑",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "40",
         "isCurrent": true,
@@ -1742,8 +2332,13 @@ const initialState = {
     "117": {
         "id": 117,
         "name": "簡東明",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "64",
         "isCurrent": true,
@@ -1757,8 +2352,13 @@ const initialState = {
     "118": {
         "id": 118,
         "name": "顏清標",
-        "party": "NSU",
-        "partyCht": "無黨團結聯盟",
+        "parties": [
+            {
+                "partyCht": "無黨團結聯盟",
+                "startDate": "2012/2/1",
+                "endDate": "2012/11/28"
+            }
+        ],
         "gender": "男",
         "age": "55",
         "isCurrent": true,
@@ -1772,8 +2372,13 @@ const initialState = {
     "119": {
         "id": 119,
         "name": "顏寬恒",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2013/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "38",
         "isCurrent": true,
@@ -1787,8 +2392,13 @@ const initialState = {
     "120": {
         "id": 120,
         "name": "魏明谷",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": "2014/11/25"
+            }
+        ],
         "gender": "男",
         "age": "52",
         "isCurrent": true,
@@ -1802,8 +2412,13 @@ const initialState = {
     "121": {
         "id": 121,
         "name": "羅明才",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "48",
         "isCurrent": true,
@@ -1817,8 +2432,13 @@ const initialState = {
     "122": {
         "id": 122,
         "name": "羅淑蕾",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "女",
         "age": "63",
         "isCurrent": true,
@@ -1832,8 +2452,13 @@ const initialState = {
     "123": {
         "id": 123,
         "name": "蘇清泉",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "58",
         "isCurrent": true,
@@ -1847,8 +2472,13 @@ const initialState = {
     "124": {
         "id": 124,
         "name": "蘇震清",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "男",
         "age": "50",
         "isCurrent": true,
@@ -1862,8 +2492,13 @@ const initialState = {
     "125": {
         "id": 125,
         "name": "國民黨黨團",
-        "party": "KMT",
-        "partyCht": "中國國民黨",
+        "parties": [
+            {
+                "partyCht": "中國國民黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "",
         "age": "",
         "isCurrent": "unknown",
@@ -1877,8 +2512,13 @@ const initialState = {
     "126": {
         "id": 126,
         "name": "民進黨黨團",
-        "party": "DPP",
-        "partyCht": "民主進步黨",
+        "parties": [
+            {
+                "partyCht": "民主進步黨",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "",
         "age": "",
         "isCurrent": "unknown",
@@ -1892,8 +2532,13 @@ const initialState = {
     "127": {
         "id": 127,
         "name": "台灣團結聯盟黨團",
-        "party": "TSU",
-        "partyCht": "台聯",
+        "parties": [
+            {
+                "partyCht": "台聯",
+                "startDate": "2012/2/1",
+                "endDate": ""
+            }
+        ],
         "gender": "",
         "age": "",
         "isCurrent": "unknown",
@@ -1907,8 +2552,13 @@ const initialState = {
     "128": {
         "id": 128,
         "name": "親民黨黨團",
-        "party": "PFP",
-        "partyCht": "親民黨",
+        "parties": [
+            {
+                "partyCht": "親民黨",
+                "startDate": "2012/2/1",
+                "endDate": "2013/7/11"
+            }
+        ],
         "gender": "",
         "age": "",
         "isCurrent": "unknown",
