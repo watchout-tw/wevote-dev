@@ -35,20 +35,22 @@ export default function rectInCircleLayout(viewWidth, cubeSize, recordCount, max
   let maxLayout = getBorderAndDiameter(cubeSize, maxCount);
   let currentLayout = getBorderAndDiameter(cubeSize, recordCount);
   let { width, height, borderWidth, offsetLeft, offsetTop } = currentLayout;
-
-  // console.log("maxLayout:")
-  // console.log(maxLayout)
-  // console.log("viewWidth:")
-  // console.log(viewWidth)
+  
 
   //手機版本
   if(( maxLayout.width > viewWidth ) && ( viewWidth < appBarBreakLarge )){
-    //console.log("*");
     const ratio = viewWidth / maxLayout.width;
     width *= ratio;
     height *= ratio;
+    borderWidth = (width/2) * 0.4;
+  
   }
-
+  if(( maxLayout.width < viewWidth ) && ( viewWidth < appBarBreakLarge )){
+    borderWidth = Math.ceil(Math.sqrt(recordCount))*2*cubeSize/5;
+    if(borderWidth < 2)
+      borderWidth = 2;
+  }
+  
   return {
     width: width,
     height: height,
