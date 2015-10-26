@@ -7,7 +7,7 @@ export default class IssueArticle extends Component {
   }
   constructor(props) { super(props)
     this.state = {
-        active : false
+        active : true
     }
   }
   _toggleActive(){
@@ -64,7 +64,7 @@ export default class IssueArticle extends Component {
                 <div className={styles.previewContent}>{previewContent}</div>
                 <div className={`${styles.mainContent} ${mainContentIsActive}`}>{mainContent}</div>
               </article>
-              <div className={styles.button} onClick={this._toggleActive.bind(this)}>{buttonText}</div>
+              
            </div>
        </div>
     )

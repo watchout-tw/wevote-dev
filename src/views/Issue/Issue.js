@@ -20,7 +20,7 @@ export default class Issue extends Component {
 
   constructor(props) { super(props)
       let value = props.params.viewName || 'parties';
-      if(["parties","legislators","positions"].indexOf(value)===-1){
+      if(["parties","legislators","positions", "analysis"].indexOf(value)===-1){
            value = "parties";
       }
       this.state = {

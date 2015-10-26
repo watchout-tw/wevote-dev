@@ -7,6 +7,7 @@ import IssueController from '../../components/IssueController/IssueController.js
 import PartyPositionGroup from '../../components/PartyPositionGroup/PartyPositionGroup.js';
 import PositionLegislatorGroup from '../../components/PositionLegislatorGroup/PositionLegislatorGroup.js';
 import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPartyGroup.js';
+import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 
 import {getAllRecords} from '../../ducks/records';
 import parseToPartyView from '../../utils/parseToPartyView';
@@ -128,6 +129,9 @@ export default class IssueFigure extends Component {
         case 'positions':
           currentViewStatement = `${currentIssue.statement}，委員有哪些具體表態行動？`;
           currentViewGroups = positionPartyGroups;
+          break;
+        case 'analysis':
+          currentViewGroups = <IssueArticle issue={currentIssue.titleEng} />
           break;
         
         default:
