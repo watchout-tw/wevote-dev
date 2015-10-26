@@ -131,6 +131,7 @@ export default class IssueFigure extends Component {
           currentViewGroups = positionPartyGroups;
           break;
         case 'analysis':
+          currentViewStatement = `${currentIssue.statement}，數據告訴我們哪些事？`;
           currentViewGroups = <IssueArticle issue={currentIssue.titleEng} />
           break;
         

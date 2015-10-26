@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import moment from 'moment';
 
+import eng2party_short from '../../utils/eng2party_short';
 import eng2cht from '../../utils/eng2cht';
 import position2color from '../../utils/position2color';
 import party2color from '../../utils/party2color';
@@ -169,6 +170,21 @@ export default class PositionPartyGroup extends Component {
     const {data, maxCount, issueURL, issueStatement, userPosition} = this.props;
     const {parties} = this.props;
 
+     // 處理在這個立場，政黨表態的比例
+    let positionPercentageItem;
+    let reverseArray = [];
+    for(let i = data.partyPercentages.length-1; i>=0; i--){
+        reverseArray.push(data.partyPercentages[i])
+    }
+
+    positionPercentageItem = reverseArray.map((value, index)=>{
+      return <div className={styles.metaTitle}
+                  key={`${eng2cht(value.party)} ${value.percentage}-${index}`}>
+                  {`${eng2party_short(value.party)} ${value.percentage}%`}
+             </div>
+    })
+
+
     let title = `我${eng2cht(data.position)}${issueStatement}`;
     if(data.position === "unknown")
       title = "我立場模糊";
@@ -196,8 +212,11 @@ export default class PositionPartyGroup extends Component {
     return (
       <div className={styles.wrap}>
         {userPositionItem}
-        <div className={styles.header}>{title}</div>
-    
+        <div className={styles.header}>
+          {title}
+          <div>{positionPercentageItem}</div>
+        </div>
+        
         <div style={layoutStyles.wrap}>
             <svg id={`svgContainer-${issueURL}-${data.position}`}
                  className={styles.svgWrap} />

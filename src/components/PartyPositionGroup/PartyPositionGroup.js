@@ -185,7 +185,7 @@ export default class PartyPositionGroup extends Component {
                      key={index} />
     });
     
-    // 處理有多少人曾經表態，表態做主要的立場為何
+    // 處理有多少人曾經表態，表態最主要的立場為何
     let partyPercentageItem;
     let partyHasPositionPercentage = Math.round((data.hasPositionCount/parties[data.party].hasBeenCount) * 100, 0);
     partyPercentageItem = (
