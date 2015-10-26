@@ -10,6 +10,7 @@ const initialState = {
         "constituency1": "台北市",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台北市",
         "candidateConstituency2": "1"
     },
@@ -24,6 +25,7 @@ const initialState = {
         "constituency1": "山地原住民",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -38,6 +40,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -52,6 +55,7 @@ const initialState = {
         "constituency1": "花蓮縣",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "花蓮縣",
         "candidateConstituency2": "N/A"
     },
@@ -66,6 +70,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -80,6 +85,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -94,6 +100,7 @@ const initialState = {
         "constituency1": "彰化縣",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "彰化縣",
         "candidateConstituency2": "1"
     },
@@ -108,6 +115,7 @@ const initialState = {
         "constituency1": "屏東縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "屏東縣",
         "candidateConstituency2": "2"
     },
@@ -122,6 +130,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -136,6 +145,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "8",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "8"
     },
@@ -150,6 +160,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "7",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "7"
     },
@@ -164,6 +175,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "7",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "7"
     },
@@ -178,6 +190,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -192,6 +205,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "1"
     },
@@ -206,6 +220,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -220,6 +235,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -234,6 +250,7 @@ const initialState = {
         "constituency1": "桃園縣",
         "constituency2": "5",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "桃園縣",
         "candidateConstituency2": "5"
     },
@@ -248,6 +265,7 @@ const initialState = {
         "constituency1": "新竹市",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新竹市",
         "candidateConstituency2": "N/A"
     },
@@ -262,6 +280,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "6",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "6"
     },
@@ -276,6 +295,7 @@ const initialState = {
         "constituency1": "嘉義市",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "嘉義市",
         "candidateConstituency2": "N/A"
     },
@@ -290,6 +310,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -304,6 +325,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -318,6 +340,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "12",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "12"
     },
@@ -332,6 +355,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -346,6 +370,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "4",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "4"
     },
@@ -360,6 +385,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -374,6 +400,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": true,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -388,6 +415,7 @@ const initialState = {
         "constituency1": "平地原住民",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": true,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -402,6 +430,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "6",
         "isCandidate": false,
+        "hasResigned": true,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "6"
     },
@@ -416,6 +445,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "4",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "4"
     },
@@ -430,6 +460,7 @@ const initialState = {
         "constituency1": "南投縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": true,
         "candidateConstituency1": "南投縣",
         "candidateConstituency2": "2"
     },
@@ -444,6 +475,7 @@ const initialState = {
         "constituency1": "台北市",
         "constituency2": "5",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台北市",
         "candidateConstituency2": "5"
     },
@@ -458,6 +490,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "9",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "9"
     },
@@ -472,6 +505,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "2"
     },
@@ -486,6 +520,7 @@ const initialState = {
         "constituency1": "彰化縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "彰化縣",
         "candidateConstituency2": "2"
     },
@@ -500,6 +535,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "9",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "9"
     },
@@ -514,6 +550,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "6",
         "isCandidate": false,
+        "hasResigned": false,
         "candidateConstituency1": "N/A",
         "candidateConstituency2": "N/A"
     },
@@ -528,6 +565,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -542,6 +580,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "2"
     },
@@ -556,6 +595,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "1"
     },
@@ -570,6 +610,7 @@ const initialState = {
         "constituency1": "台北市",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台北市",
         "candidateConstituency2": "2"
     },
@@ -584,6 +625,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -598,6 +640,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -612,6 +655,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -626,6 +670,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": true,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -640,6 +685,7 @@ const initialState = {
         "constituency1": "桃園縣",
         "constituency2": "6",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "桃園縣",
         "candidateConstituency2": "6"
     },
@@ -654,6 +700,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -668,6 +715,7 @@ const initialState = {
         "constituency1": "屏東縣",
         "constituency2": "3",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "屏東縣",
         "candidateConstituency2": "3"
     },
@@ -682,6 +730,7 @@ const initialState = {
         "constituency1": "新竹縣",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新竹縣",
         "candidateConstituency2": "N/A"
     },
@@ -696,6 +745,7 @@ const initialState = {
         "constituency1": "苗栗縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": true,
         "candidateConstituency1": "苗栗縣",
         "candidateConstituency2": "2"
     },
@@ -710,6 +760,7 @@ const initialState = {
         "constituency1": "嘉義縣",
         "constituency2": "1",
         "isCandidate": false,
+        "hasResigned": false,
         "candidateConstituency1": "N/A",
         "candidateConstituency2": "N/A"
     },
@@ -724,6 +775,7 @@ const initialState = {
         "constituency1": "南投縣",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "南投縣",
         "candidateConstituency2": "1"
     },
@@ -738,6 +790,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "3",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "3"
     },
@@ -752,6 +805,7 @@ const initialState = {
         "constituency1": "山地原住民",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -766,6 +820,7 @@ const initialState = {
         "constituency1": "雲林縣",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "雲林縣",
         "candidateConstituency2": "1"
     },
@@ -780,6 +835,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "8",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "8"
     },
@@ -794,6 +850,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": true,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -808,6 +865,7 @@ const initialState = {
         "constituency1": "南投縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "南投縣",
         "candidateConstituency2": "2"
     },
@@ -822,6 +880,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": true,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -836,6 +895,7 @@ const initialState = {
         "constituency1": "苗栗縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "苗栗縣",
         "candidateConstituency2": "2"
     },
@@ -850,6 +910,7 @@ const initialState = {
         "constituency1": "台南市",
         "constituency2": "4",
         "isCandidate": false,
+        "hasResigned": false,
         "candidateConstituency1": "N/A",
         "candidateConstituency2": "N/A"
     },
@@ -864,6 +925,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "8",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "8"
     },
@@ -878,6 +940,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -892,6 +955,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -906,6 +970,7 @@ const initialState = {
         "constituency1": "嘉義縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "嘉義縣",
         "candidateConstituency2": "2"
     },
@@ -920,6 +985,7 @@ const initialState = {
         "constituency1": "台南市",
         "constituency2": "3",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台南市",
         "candidateConstituency2": "3"
     },
@@ -934,6 +1000,7 @@ const initialState = {
         "constituency1": "台南市",
         "constituency2": "5",
         "isCandidate": false,
+        "hasResigned": false,
         "candidateConstituency1": "N/A",
         "candidateConstituency2": "N/A"
     },
@@ -948,6 +1015,7 @@ const initialState = {
         "constituency1": "桃園縣",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "桃園縣",
         "candidateConstituency2": "1"
     },
@@ -962,6 +1030,7 @@ const initialState = {
         "constituency1": "彰化縣",
         "constituency2": "4",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "彰化縣",
         "candidateConstituency2": "4"
     },
@@ -976,6 +1045,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -990,6 +1060,7 @@ const initialState = {
         "constituency1": "連江縣",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "連江縣",
         "candidateConstituency2": "N/A"
     },
@@ -1004,6 +1075,7 @@ const initialState = {
         "constituency1": "苗栗縣",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "苗栗縣",
         "candidateConstituency2": "1"
     },
@@ -1018,6 +1090,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1032,6 +1105,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1046,6 +1120,7 @@ const initialState = {
         "constituency1": "宜蘭縣",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "宜蘭縣",
         "candidateConstituency2": "N/A"
     },
@@ -1060,6 +1135,7 @@ const initialState = {
         "constituency1": "桃園縣",
         "constituency2": "3",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "桃園縣",
         "candidateConstituency2": "3"
     },
@@ -1074,6 +1150,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1088,6 +1165,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1102,6 +1180,7 @@ const initialState = {
         "constituency1": "台北市",
         "constituency2": "7",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台北市",
         "candidateConstituency2": "7"
     },
@@ -1116,6 +1195,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": true,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1130,6 +1210,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "5",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "5"
     },
@@ -1144,6 +1225,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "3",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "3"
     },
@@ -1158,6 +1240,7 @@ const initialState = {
         "constituency1": "台南市",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台南市",
         "candidateConstituency2": "2"
     },
@@ -1172,6 +1255,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "6",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "6"
     },
@@ -1186,6 +1270,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1200,6 +1285,7 @@ const initialState = {
         "constituency1": "金門縣",
         "constituency2": "N/A",
         "isCandidate": false,
+        "hasResigned": false,
         "candidateConstituency1": "N/A",
         "candidateConstituency2": "N/A"
     },
@@ -1214,6 +1300,7 @@ const initialState = {
         "constituency1": "澎湖縣",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "澎湖縣",
         "candidateConstituency2": "N/A"
     },
@@ -1228,6 +1315,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "3",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "3"
     },
@@ -1242,6 +1330,7 @@ const initialState = {
         "constituency1": "桃園縣",
         "constituency2": "4",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "桃園縣",
         "candidateConstituency2": "4"
     },
@@ -1256,6 +1345,7 @@ const initialState = {
         "constituency1": "台南市",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台南市",
         "candidateConstituency2": "1"
     },
@@ -1270,6 +1360,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1284,6 +1375,7 @@ const initialState = {
         "constituency1": "僑居國外國民",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1298,6 +1390,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1312,6 +1405,7 @@ const initialState = {
         "constituency1": "桃園縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "桃園縣",
         "candidateConstituency2": "2"
     },
@@ -1326,6 +1420,7 @@ const initialState = {
         "constituency1": "平地原住民",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "平地原住民",
         "candidateConstituency2": "N/A"
     },
@@ -1340,6 +1435,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "5",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "5"
     },
@@ -1354,6 +1450,7 @@ const initialState = {
         "constituency1": "高雄市",
         "constituency2": "7",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "高雄市",
         "candidateConstituency2": "7"
     },
@@ -1368,6 +1465,7 @@ const initialState = {
         "constituency1": "雲林縣",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "雲林縣",
         "candidateConstituency2": "2"
     },
@@ -1382,6 +1480,7 @@ const initialState = {
         "constituency1": "台東縣",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台東縣",
         "candidateConstituency2": "N/A"
     },
@@ -1396,6 +1495,7 @@ const initialState = {
         "constituency1": "屏東縣",
         "constituency2": "3",
         "isCandidate": true,
+        "hasResigned": true,
         "candidateConstituency1": "屏東縣",
         "candidateConstituency2": "3"
     },
@@ -1410,6 +1510,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1424,6 +1525,7 @@ const initialState = {
         "constituency1": "台北市",
         "constituency2": "4",
         "isCandidate": false,
+        "hasResigned": false,
         "candidateConstituency1": "N/A",
         "candidateConstituency2": "N/A"
     },
@@ -1438,6 +1540,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "1"
     },
@@ -1452,6 +1555,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1466,6 +1570,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "4",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "4"
     },
@@ -1480,6 +1585,7 @@ const initialState = {
         "constituency1": "台北市",
         "constituency2": "6",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台北市",
         "candidateConstituency2": "6"
     },
@@ -1494,6 +1600,7 @@ const initialState = {
         "constituency1": "平地原住民",
         "constituency2": "N/A",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "平地原住民",
         "candidateConstituency2": "N/A"
     },
@@ -1508,6 +1615,7 @@ const initialState = {
         "constituency1": "彰化縣",
         "constituency2": "3",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "彰化縣",
         "candidateConstituency2": "3"
     },
@@ -1522,6 +1630,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1536,6 +1645,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "5",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "5"
     },
@@ -1550,6 +1660,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "10",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "10"
     },
@@ -1564,6 +1675,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1578,6 +1690,7 @@ const initialState = {
         "constituency1": "台北市",
         "constituency2": "8",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台北市",
         "candidateConstituency2": "8"
     },
@@ -1592,6 +1705,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1606,6 +1720,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1620,6 +1735,7 @@ const initialState = {
         "constituency1": "基隆市",
         "constituency2": "N/A",
         "isCandidate": false,
+        "hasResigned": false,
         "candidateConstituency1": "N/A",
         "candidateConstituency2": "N/A"
     },
@@ -1634,6 +1750,7 @@ const initialState = {
         "constituency1": "山地原住民",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1648,6 +1765,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": true,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "2"
     },
@@ -1662,6 +1780,7 @@ const initialState = {
         "constituency1": "台中市",
         "constituency2": "2",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "台中市",
         "candidateConstituency2": "2"
     },
@@ -1676,6 +1795,7 @@ const initialState = {
         "constituency1": "彰化縣",
         "constituency2": "4",
         "isCandidate": true,
+        "hasResigned": true,
         "candidateConstituency1": "彰化縣",
         "candidateConstituency2": "4"
     },
@@ -1690,6 +1810,7 @@ const initialState = {
         "constituency1": "新北市",
         "constituency2": "11",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "新北市",
         "candidateConstituency2": "11"
     },
@@ -1704,6 +1825,7 @@ const initialState = {
         "constituency1": "台北市",
         "constituency2": "3",
         "isCandidate": false,
+        "hasResigned": false,
         "candidateConstituency1": "N/A",
         "candidateConstituency2": "N/A"
     },
@@ -1718,6 +1840,7 @@ const initialState = {
         "constituency1": "全國不分區",
         "constituency2": "N/A",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1732,6 +1855,7 @@ const initialState = {
         "constituency1": "屏東縣",
         "constituency2": "1",
         "isCandidate": true,
+        "hasResigned": false,
         "candidateConstituency1": "屏東縣",
         "candidateConstituency2": "1"
     },
@@ -1746,6 +1870,7 @@ const initialState = {
         "constituency1": "",
         "constituency2": "",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1760,6 +1885,7 @@ const initialState = {
         "constituency1": "",
         "constituency2": "",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1774,6 +1900,7 @@ const initialState = {
         "constituency1": "",
         "constituency2": "",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     },
@@ -1788,6 +1915,7 @@ const initialState = {
         "constituency1": "",
         "constituency2": "",
         "isCandidate": "unknown",
+        "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
     }

@@ -23,10 +23,11 @@ export default class PeopleProfile extends Component {
     const legislator = legislators[id];
 
     let {name, party, partyCht, gender, age, constituency1, constituency2,
-         isCandidate, candidateConstituency1, candidateConstituency2} = legislator;
+         isCandidate, candidateConstituency1, candidateConstituency2, hasResigned} = legislator;
 
     let info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateConstituency1, candidateConstituency2);
-
+    let hasResignedText = (hasResigned===true) ? "已離職" : "";
+    
     return (
       <div className={styles.wrap}>
         <header>
@@ -44,6 +45,7 @@ export default class PeopleProfile extends Component {
                 <p>{info.ageText}</p>
                 <p>{info.legislatorTitle}</p>
                 <p>{info.candidateTitle}</p>
+                <p>{hasResignedText}</p>
               </div>
             </div>
           </div>
