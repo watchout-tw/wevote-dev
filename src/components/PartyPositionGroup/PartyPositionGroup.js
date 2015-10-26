@@ -39,7 +39,6 @@ class Record extends Component {
     /* active record */
     let detailText;
     if(active){
-
           let preview = (data.content.length > 60) ? data.content.slice(0,60)+" ..." : data.content;
           detailText =  (
           <div className={styles.activeBlock}>
@@ -54,7 +53,7 @@ class Record extends Component {
 
 
     return (
-      <div className={styles.postionWrap}>
+      <div className={styles.positionWrap}>
           {detailText}
 
           <Link to={`/records/${data.id}`}
@@ -113,6 +112,7 @@ export default class PartyPositionGroup extends Component {
     let arc = d3.svg.arc()
                 .outerRadius(radius)
                 .innerRadius(radius - layoutStyles.borderWidth);
+                
     
     let pie = d3.layout.pie()
         .sort(null)
@@ -150,6 +150,7 @@ export default class PartyPositionGroup extends Component {
          .attr("d", arc)
          .style("fill", function(d) { return position2color(d.data.position); });
       
+
       // g.append("text")
       //  .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
       //  .attr("dy", ".35em")
@@ -180,6 +181,7 @@ export default class PartyPositionGroup extends Component {
 
     let records = data.records.map((item,index)=>{
       return <Record data={item}
+                     index={index}
                      key={index} />
     });
     

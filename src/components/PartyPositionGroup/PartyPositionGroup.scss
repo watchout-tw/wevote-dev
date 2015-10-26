@@ -75,7 +75,7 @@ $cubeSize: $defaultCubeSize;
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
-	position:relative;
+	position: relative;
 	cursor: pointer;
 	color: black;
 	text-decoration: none;
@@ -98,7 +98,7 @@ $cubeSize: $defaultCubeSize;
 .activeBlock {
 	position: absolute;
 	top: -160px;
-	z-index: 10;
+	z-index: 100;
 }
 .activeCube, .activeCube:visited {
 	width: 100%;
