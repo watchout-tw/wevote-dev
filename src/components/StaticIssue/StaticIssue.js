@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
-import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 import Missions from '../../components/Missions/Missions.js';
 
 import {done, none} from '../../ducks/processingState.js';
@@ -134,8 +133,6 @@ export default class StaticIssue extends Component {
                              currentIssue={currentIssue}
                              currentIssueName={currentIssueName}
                              setCurrentView={setCurrentView} />
-
-                <IssueArticle issue={currentIssue.titleEng} />
 
                 <Missions issues={issues}
                           skipIssue={currentIssueName}

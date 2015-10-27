@@ -80,6 +80,7 @@ class LegislatorAvatar extends Component {
           <div className={`${styles.avatarImg} ${imgActiveStyle} ${styles[party]}`}>
             <PeopleAvatar id={people_name2id(name)} />
           </div>
+          <div className={styles.avatarName}>{name}</div>
 
         </Link>
     );

@@ -5,21 +5,25 @@
 }
 .optionImg {
 	width: 40px;
-  float: left;
-  margin-right: 3px;
+  	margin-right: 3px;
+}
+@media all and (min-width: 500px){
+	.optionImg {
+		float: left;
+	}
 }
 .optionItem:hover .optionImg, .optionImg:hover, .optionImgActive {
 	opacity: 1;
 }
 .optionItem, .optionItem:visited {
 	display: inline-block;
-  cursor: pointer;
-  margin: 0 2px -2px 2px;
-  text-decoration: none;
-  color: #0f0f0f;
-  vertical-align: top;
-  padding: 0 4px 4px 0;
-  border-bottom: 3px solid;
+    cursor: pointer;
+    margin: 0 2px -2px 2px;
+    text-decoration: none;
+    color: #0f0f0f;
+    vertical-align: top;
+    padding: 0 4px 4px 0;
+    border-bottom: 3px solid;
 }
 @media all and (min-width: 500px){
 	.optionItem, .optionItem:visited {
@@ -27,9 +31,15 @@
 	}
 }
 .optionText {
-	display: inline-block;
-    vertical-align: top;
-    padding-top: 12px;
+	padding: 0 10px;
+}
+@media all and (min-width: 500px){
+	.optionText {
+		display: inline-block;
+		padding: 0;
+		vertical-align: top;
+    	padding-top: 12px;
+	}
 }
 .optionItemInactive, .optionItemInactive:visited {
 	opacity: 0.25;

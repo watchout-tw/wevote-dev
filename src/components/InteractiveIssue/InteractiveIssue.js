@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
-import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 import Missions from '../../components/Missions/Missions.js';
 
 //handle key down event, key code
@@ -353,7 +352,7 @@ export default class InteractiveIssue extends Component {
                          currentIssue={currentIssue}
                          currentIssueName={currentIssueName}
                          setCurrentView={setCurrentView} />
-            <IssueArticle issue={currentIssue.titleEng} />
+            
 
             <div className={styles.completeMessage}>
                 <div>{currentIssue.title}之城任務完成了！</div>

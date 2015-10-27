@@ -2,8 +2,12 @@
 export default function cht_to_eng(cht){
     try{
     	switch(cht){
+            case '中國國民黨':
+                return 'KMT';
     		case '國民黨':
     			return 'KMT';
+            case '民主進步黨':
+                return 'DPP';
     		case '民進黨':
     			return 'DPP';
     		case '台聯':

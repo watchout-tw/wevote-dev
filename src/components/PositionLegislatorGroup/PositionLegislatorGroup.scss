@@ -44,10 +44,12 @@
     bottom: -9px;
     left: calc(50% - 9px);
 }
-.avatarItem {
+.avatarItem, .avatarItem:visited {
     position: relative;
     display: inline-block;
     vertical-align: top;
+    text-decoration: none;
+    color: rgb(53,55,54);
 }
 .avatarImg {
     width: 42px;
@@ -65,6 +67,12 @@
 }
 .avatarImg:hover, .avatarImgActive {
     box-shadow: 0 0 0 4px rgb(180,180,180);
+}
+.avatarName {
+    text-align: center;
+    font-size: 12px;
+    margin-top: -7px;
+    width: 48px;
 }
 
 .KMT {

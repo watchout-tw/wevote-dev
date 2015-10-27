@@ -25,7 +25,7 @@ $breakLarge: 800px;
 .issueStatement {
   color: rgb(63,63,63);
   background: rgb(221,221,221);
-  padding: 16px 0;
+  padding: 16px 4px;
 }
 .issueController {
   margin: 40px 0 0 0;
@@ -42,49 +42,17 @@ $breakLarge: 800px;
   text-align: center;
   padding-bottom: 100px;
 }
-.link, .link:visited {
-  color: #b88234;
-  text-decoration: none;
+.mobileHint {
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 30px;
+  color: #5A5656;
+  border: 1px solid #766F6F;
   display: inline-block;
-  padding: 10px;
+    
 }
-.link:hover {
-  color: #b88234;
-  text-decoration: underline;
-
-}
-.moreInfo {
-	background: white;
-	line-height: 2;
-	text-align: left;
-	padding-bottom: 50px;
-}
-.moreInfoInner {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 40px 10px;
-	font-size: 22px;
-  color: rgb(53,55,54);
-}
-.linkButton, .linkButton:visited {
-	color: #D6A051;
-    border: 2px solid #D6A051;
-    padding: 0px 10px;
-    font-size: 18px;
-    margin: 0 10px 0px 10px;
-    display: inline-block;
-    text-decoration: none;
-}
-.linkButton:hover {
-	background: #D6A051;
-	color: white;
-}
-.comingButton {
-	color: #D6A051;
-    border: 2px dotted #D6A051;
-    padding: 0px 10px;
-    font-size: 18px;
-    margin: 0 10px 0px 10px;
-    display: inline-block;
-    text-decoration: none;
+@media screen and (min-width: $appBarBreakLarge) {
+  .mobileHint {
+    display: none;
+  }
 }

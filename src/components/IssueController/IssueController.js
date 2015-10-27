@@ -6,21 +6,23 @@ import {connect} from 'react-redux';
 const views = [
     {
       'title' : '看政黨',
-      'id' : 'VIEW_PARTY',
       'icon': 'IssueController_party',
       'view' : 'parties'
     },
     {
       'title' : '看委員',
-      'id' : 'VIEW_LEGISLATOR',
       'icon': 'IssueController_person',
       'view' : 'legislators'
     },
     {
       'title' : '看表態',
-      'id' : 'VIEW_POSITION',
       'icon': 'IssueController_position',
       'view' : 'positions'
+    },
+    {
+      'title' : '看分析',
+      'icon': 'IssueController_analysis',
+      'view' : 'analysis'
     }
 ];
 @connect(

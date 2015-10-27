@@ -7,6 +7,7 @@ import IssueController from '../../components/IssueController/IssueController.js
 import PartyPositionGroup from '../../components/PartyPositionGroup/PartyPositionGroup.js';
 import PositionLegislatorGroup from '../../components/PositionLegislatorGroup/PositionLegislatorGroup.js';
 import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPartyGroup.js';
+import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 
 import {getAllRecords} from '../../ducks/records';
 import parseToPartyView from '../../utils/parseToPartyView';
@@ -77,8 +78,9 @@ export default class IssueFigure extends Component {
       // 1. 看政黨
       const currentPartyView = partyView[currentIssue.titleEng];
       let partyPositionGroups = currentPartyView.partyPositions.map((value, index)=>{
-          //console.log(value);
+          let maxCount = currentPartyView.maxCount;
           return <PartyPositionGroup data={value} 
+                                     maxCount={maxCount}
                                      issueStatement={currentPartyView.statement} 
                                      issueURL={currentIssueName}
                                      userPosition={userPosition[currentIssueName]}
@@ -100,9 +102,11 @@ export default class IssueFigure extends Component {
   
       // 3. 看表態
       const currentPositionView = positionView[currentIssue.titleEng];//只拿: 目前頁面議題的表態資料
+      let maxCount = currentPositionView.maxCount;
       let positionPartyGroups = currentPositionView.positions.map((value, index)=>{
           //console.log(value);
           return <PositionPartyGroup data={value} 
+                                     maxCount={maxCount}
                                      issueStatement={currentPartyView.statement}
                                      issueURL={currentIssueName}
                                      userPosition={userPosition[currentIssueName]}
@@ -111,12 +115,18 @@ export default class IssueFigure extends Component {
       });
   
       let currentViewGroups, currentViewStatement;
-      
+      let hints = ['誠心推薦你在電腦上閱讀','講個祕訣：用電腦，看更多！'];
+      let ran = Date.now()%2;
+      let hintRandom = hints[ran];
      
       switch(currentView){
         case 'parties': 
           currentViewStatement = `${currentIssue.statement}，政黨的態度是？`;
-          currentViewGroups = partyPositionGroups;
+          currentViewGroups = (
+            <div>
+              <div>{partyPositionGroups}</div>
+              <div className={styles.mobileHint}>{hintRandom}</div>
+            </div>);
           break;
         case 'legislators':
           currentViewStatement = `${currentIssue.statement}，委員的態度是？`;
@@ -124,7 +134,15 @@ export default class IssueFigure extends Component {
           break;
         case 'positions':
           currentViewStatement = `${currentIssue.statement}，委員有哪些具體表態行動？`;
-          currentViewGroups = positionPartyGroups;
+          currentViewGroups = (
+          <div>
+            <div>{positionPartyGroups}</div>
+            <div className={styles.mobileHint}>{hintRandom}</div>
+          </div>);
+          break;
+        case 'analysis':
+          currentViewStatement = `${currentIssue.statement}，數據告訴我們哪些事？`;
+          currentViewGroups = <IssueArticle issue={currentIssue.titleEng} />
           break;
         
         default:
@@ -136,7 +154,6 @@ export default class IssueFigure extends Component {
 
       return (
           <div>
-              
               <div className={styles.figHeader} id="view">
                   
                   <div className={styles.issueBlock}>
@@ -156,7 +173,6 @@ export default class IssueFigure extends Component {
               <div className={styles.records}>
                   {currentViewGroups}
               </div>
-          
           </div>
           );
 

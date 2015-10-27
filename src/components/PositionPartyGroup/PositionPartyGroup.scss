@@ -1,3 +1,4 @@
+@import '../../common.scss';
 $cubeSize: 20px;
 $ayeColor: #00FFB0;
 $nayColor: #FF0055;
@@ -5,10 +6,23 @@ $unknownColor: #FFF800;
 
 .wrap {
 	display: inline-block;
+	margin: 20px 0;
+}
+@media screen and (min-width: $appBarBreakLarge) {
+	.wrap {
+		margin: 20px;
+	}
 }
 .header {
 	display: block;
 	max-width: 100vw;
+	margin-bottom: 10px;
+	padding: 0 20px;
+}
+.metaTitle {
+	color: $darkGrey;
+	font-size: 14px;
+	line-height: 1.4;
 }
 .userPositionBlock {
     position: relative;
@@ -39,10 +53,18 @@ $unknownColor: #FFF800;
     bottom: -9px;
     left: calc(50% - 9px);
 }
-.margin {
-	display: inline-block;
-	margin: 20px;
+.svgWrap {
+	vertical-align: middle;
 }
+.rectWrap {
+	display: none;
+}
+@media screen and (min-width: $appBarBreakLarge) {
+	.rectWrap {
+		display: inline-block;
+	}
+}
+
 .positionWrap {
 	position: relative;
 	float: left;
@@ -51,7 +73,7 @@ $unknownColor: #FFF800;
 	width: $cubeSize;
 	height: $cubeSize;
 	float: left;
-	position:relative;
+	position: relative;
 	cursor: pointer;
 	color: black;
 	text-decoration: none;
@@ -92,7 +114,7 @@ $unknownColor: #FFF800;
 .activeBlock {
 	position: absolute;
 	top: -160px;
-	z-index: 10;
+	z-index: 100;
 }
 .activeBlockClose {
 	position: absolute;
