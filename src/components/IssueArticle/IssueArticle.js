@@ -114,11 +114,14 @@ class MarriageEqualityPreview extends Component {
 class MarriageEqualityContent extends Component {
   render(){
     const styles = require('./IssueArticle.scss');
+    const figure1 = require('./images/IssueArticleFigures-04.png');
+    const figure2 = require('./images/IssueArticleFigures-05.png');
     return (
       <div>
           <section>
             <h1>迷思一：民進黨就是支持婚姻平權，國民黨就是反對？</h1>
             <p>圖表中可以看到民進黨共有37筆表態紀錄，全都是支持，而國民黨則有9筆表態紀錄，以反對居多。這樣看起來標題的說法似乎沒錯？</p>
+            <img className={styles.IssueArticleFigure} src={figure1} />
             <p>不過，民進黨其實只有28%的立委（即12位）曾經表態。更重要的是，婚姻平權法案交由司法法制委員會審查，屬於這個委員會的立委應該都有責任表態，但實際上
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("柯建銘")}/records/marriage-equality`}>柯建銘</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("潘孟安")}/records/marriage-equality`}>潘孟安</Link>、
@@ -141,7 +144,7 @@ class MarriageEqualityContent extends Component {
 
           <section>
             <h1>迷思二：國民黨立委席次比較多，那在立法院裡他們的聲音應該比較大吧？</h1>
-            <p>在立法院中，立委總席次是國民黨65席：民進黨40席，就算只看司法法制委員會內的席次，長期以來都是國民黨9席，民進黨4席。可見國民黨有人數的絕對優勢，但是直接比較兩方發言討論這個議題的次數卻是國民黨9次：民進黨17次，顯然不成比例。也就是說，國民黨立委有著惜字如金的美德，或許他們不是想打混，只是想扮演好「沉默的多數」這個角色，但這樣的角色可能不太符合立委「為民喉舌」的形象</p>
+            <p>在立法院中，立委總席次是國民黨65席：民進黨40席，就算只看司法法制委員會內的席次，長期以來都是國民黨9席，民進黨4席。可見國民黨有人數的絕對優勢，但是直接比較兩方發言討論這個議題的次數卻是國民黨9次：民進黨17次，顯然不成比例。也就是說，國民黨立委有著惜字如金的美德，或許他們不是想打混，只是想扮演好「沉默的多數」這個角色，但這樣的角色可能不太符合立委「為民喉舌」的形象。</p>
             <p>說到這裡，你可能會反駁：不對吧！明明新聞中常看到
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("賴士葆")}/records/marriage-equality`}>賴士葆</Link>、
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("費鴻泰")}/records/marriage-equality`}>費鴻泰</Link>、
@@ -155,6 +158,7 @@ class MarriageEqualityContent extends Component {
                 <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("丁守中")}/records/marriage-equality`}>丁守中</Link>
                 立委已轉變立場為支持同婚，或許也有其他國民黨立委是支持的態度，但是這些立場也沒有直接反映在他們的問政表現上。
             </p>
+            <img className={styles.IssueArticleFigure} src={figure2} />
           </section>
 
           <section>
