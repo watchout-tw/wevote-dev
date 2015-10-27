@@ -265,10 +265,13 @@ export default class AnimatedScript extends Component {
     if(stage==="slides"){
       nextHintWord = "左右換頁，空白鍵進入下一步"
     }
+    let nextHintWordMobile = (stage==="slides") ? "繼續鍵進入下一步" : "";
+    
     
     let optionButton = (showNext===true) ? (
       <div className={styles.arrowSection} onClick={handleNext.bind(null)}>
         <a className={`${styles.ia} ${styles.bright} ${styles.arrowText}`} >{nextHintWord}</a>
+        <a className={`${styles.ia} ${styles.bright} ${styles.arrowTextMobile}`} >{nextHintWordMobile}</a>
         <div className={styles.arrowRight}></div>
       </div>
     ): "";

@@ -115,12 +115,18 @@ export default class IssueFigure extends Component {
       });
   
       let currentViewGroups, currentViewStatement;
-      
+      let hints = ['誠心推薦你在電腦上閱讀','講個祕訣：用電腦，看更多！'];
+      let ran = Date.now()%2;
+      let hintRandom = hints[ran];
      
       switch(currentView){
         case 'parties': 
           currentViewStatement = `${currentIssue.statement}，政黨的態度是？`;
-          currentViewGroups = partyPositionGroups;
+          currentViewGroups = (
+            <div>
+              <div>{partyPositionGroups}</div>
+              <div className={styles.mobileHint}>{hintRandom}</div>
+            </div>);
           break;
         case 'legislators':
           currentViewStatement = `${currentIssue.statement}，委員的態度是？`;
@@ -128,7 +134,11 @@ export default class IssueFigure extends Component {
           break;
         case 'positions':
           currentViewStatement = `${currentIssue.statement}，委員有哪些具體表態行動？`;
-          currentViewGroups = positionPartyGroups;
+          currentViewGroups = (
+          <div>
+            <div>{positionPartyGroups}</div>
+            <div className={styles.mobileHint}>{hintRandom}</div>
+          </div>);
           break;
         case 'analysis':
           currentViewStatement = `${currentIssue.statement}，數據告訴我們哪些事？`;
@@ -144,7 +154,6 @@ export default class IssueFigure extends Component {
 
       return (
           <div>
-              
               <div className={styles.figHeader} id="view">
                   
                   <div className={styles.issueBlock}>
@@ -164,7 +173,6 @@ export default class IssueFigure extends Component {
               <div className={styles.records}>
                   {currentViewGroups}
               </div>
-          
           </div>
           );
 
