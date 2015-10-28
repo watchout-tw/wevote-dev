@@ -1,0 +1,85 @@
+@import '../../common.scss';
+.QAItem {
+	position: relative;
+	display: none;
+	padding: 30px;
+	margin: 0px 10px;
+} 
+@media screen and (min-width: 400px){
+	.QAItem {
+		width: 420px;
+		margin: 0 auto;
+	    position: relative;
+	    display: none;
+    } 
+}
+.QAItem.isActive {
+	display: block;
+}
+.questionContent {
+	background: rgb(247,247,247);
+    padding: 20px 10px;
+    box-shadow: 3px 3px rgba(0,0,0,0.12);
+}
+.questionTitle {
+	font-size: 20px;
+	font-weight: 800;
+	padding: 10px;
+}
+.questionDescription {
+	padding: 10px;
+	line-height: 1.6;
+	
+}
+.optionSection{
+	margin: 0 auto;
+	width: 100%;
+	line-height: 1.6;
+	text-align: center;
+	padding: 50px 0 30px 0;
+}
+
+.optionItem {
+	margin: 5px;
+	padding: 10px;
+	cursor: pointer;
+	display: inline-block;
+	color: white;
+    box-shadow: 3px 2px 2px 0 rgba(0,0,0,0.12);
+}
+.optionItem:hover {
+	box-shadow: 4px 3px 2px 0 rgba(0,0,0,0.32);
+}
+.optionItem.isChoosed {
+	border: 1px solid #F2DB5D;
+	box-shadow: -5px 0px 0px #F2DB5D, 5px 0px 0px #F2DB5D;
+}
+.aye {
+	background: $ayeColor;
+}
+.nay {
+	background: $nayColor;
+}
+.none {
+	background: $noneColor;
+}
+
+
+
+.button {
+	cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 6px 20px;
+    background: rgb(53,55,54);
+    color: white;
+    margin-bottom: 20px;
+}
+.button:hover {
+	box-shadow: 5px 5px rgba(0,0,0,0.12);
+}
+.resultContnet {
+	text-align: center;
+}
+
+

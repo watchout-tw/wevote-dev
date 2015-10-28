@@ -18,6 +18,8 @@ import Record from 'views/Record/Record.js';
 import Clarify from 'views/Clarify/Clarify.js';
 import Subscribe from 'views/Subscribe/Subscribe.js';
 
+import MatchGame from 'views/MatchGame/MatchGame.js';
+
 import NotFound from 'views/NotFound/NotFound.js';
 
 export default function(store) {
@@ -46,6 +48,8 @@ export default function(store) {
       <Route path="/clarify" component={Clarify}/>
       <Route path="/subscribe" component={Subscribe}/>
       <Route path="/subscribe/:state" component={Subscribe}/>
+
+      <Route path="/matchgame" component={MatchGame}/>
       
       <Route path="/404" component={NotFound}/>
       <Route path="*" component={NotFound}/>
