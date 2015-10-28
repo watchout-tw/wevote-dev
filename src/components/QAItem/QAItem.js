@@ -39,19 +39,28 @@ export default class QAItem extends Component {
     
   }
   _scrollToNextQuestion(){
-    const {data, maxIndex} = this.props;
+    const {data, currentQAItemIndex, maxIndex, unlockNext} = this.props;
     if(data.order === maxIndex)//it is the last one!
       return;
 
+    let timeout = 0;
+    if(data.order === currentQAItemIndex){
+      unlockNext();
+      timeout = 200;
+    }
 
-    let nextqId = `Question${data.order+1}`;
+    setTimeout(()=>{
+        let nextqId = `Question${data.order+1}`;
     
-    // Scroll to answer section
-    let target = document.getElementById(nextqId);
-    let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
+        // Scroll to answer section
+        let target = document.getElementById(nextqId);
+        let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
     
-    this._scrollTo(document.body, targetPos, 200);
+        this._scrollTo(document.body, targetPos, 200);
 
+    },timeout)
+
+    
   }
   _scrollTo(element, to, duration) {
       

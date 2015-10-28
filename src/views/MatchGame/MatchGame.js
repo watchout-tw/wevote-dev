@@ -118,7 +118,7 @@ export default class MatchGame extends Component {
       const {qaSet, currentQAItemIndex} = this.state;
       let showAnswerSection = -1;
       let scrollTop = document.body.scrollTop;
-
+      console.log(currentQAItemIndex)
       //check each Answer's scrollTop
       qaSet.map((v,i)=>{
         
@@ -126,11 +126,32 @@ export default class MatchGame extends Component {
             let ansId = `Question${i}-Answer`;
             let node = document.getElementById(ansId);
             let nodePos = document.body.scrollTop + node.getBoundingClientRect().top;
-            //console.log(i+"*"+nodePos);
-            if(nodePos - 10 < scrollTop && scrollTop < nodePos + 200){
-               //console.log("======"+i+"=======")
+            console.log(i+"*"+nodePos);
+
+            let viewHeight = window.innerHeight;
+            let topBorder, bottomBorder; 
+            if(window.innerWidth < 768){
+                // web version
+                // 答案全部都在目前畫面的中間 80%
+                topBorder = (scrollTop + 0);
+                bottomBorder = (scrollTop + viewHeight - viewHeight*0.2);
+
+            }else{
+                // mobile version
+                // 答案在畫面的上方 80%
+                topBorder = (scrollTop + 0) + viewHeight*0.1;
+                bottomBorder = (scrollTop + viewHeight - viewHeight*0.1);
+            }
+
+            console.log("top:"+topBorder)
+            console.log("bottom:"+bottomBorder)
+            
+            if(nodePos > topBorder && nodePos < bottomBorder){
+               console.log("======"+i+"=======")
                showAnswerSection = i;
             }
+
+
         }
       });
       //console.log("-> to be:"+showAnswerSection)
@@ -139,7 +160,7 @@ export default class MatchGame extends Component {
         showAnswerSection: showAnswerSection
       })
 
-      //console.log(scrollTop);
+      console.log(scrollTop);
       //console.log(this.state.showAnswerSection)
   }
   _recordUserChoice(issueId, order, choice) {
@@ -151,8 +172,13 @@ export default class MatchGame extends Component {
 
       currentChoices[issueId] = choice;
       this.setState({
-          userChoices: currentChoices,
-          currentQAItemIndex: order+1
+          userChoices: currentChoices
+      });
+
+  }
+  _unlockNext(){
+      this.setState({
+          currentQAItemIndex: this.state.currentQAItemIndex+1
       });
 
   }
@@ -168,7 +194,8 @@ export default class MatchGame extends Component {
                        userChoices={userChoices}
                        recordHandler={this._recordUserChoice.bind(this)}
                        candidatePositions={fakeData}
-                       maxIndex={qaSet.length-1} />
+                       maxIndex={qaSet.length-1}
+                       unlockNext={this._unlockNext.bind(this)} />
     })
     return (
         <div className={styles.wrap}>

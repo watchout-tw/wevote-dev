@@ -18,9 +18,7 @@ export default class CandidatesHoldSigns extends Component {
   render() {
     const styles = require("./CandidatesHoldSigns.scss")
     const {data, userChoices, currentQAItemIndex, showAnswerSection} = this.props;
-    
-    console.log("#")
-    console.log(showAnswerSection)
+   
 
     let candidateItems = data.map((value, index)=>{
       return (
@@ -30,11 +28,15 @@ export default class CandidatesHoldSigns extends Component {
               key={`${index}-${currentQAItemIndex}`}/>
       ) 
     })
+
+    let containerWidth = {
+      width: `${data.length * 50 + 10}px`
+    }
     
     return (
         <div className={styles.CandidatesHoldSigns} 
              key={`CandidatesHoldSigns-${currentQAItemIndex}`}>
-          {candidateItems}
+            <div style={containerWidth}>{candidateItems}</div>
         </div>
     );
   }
