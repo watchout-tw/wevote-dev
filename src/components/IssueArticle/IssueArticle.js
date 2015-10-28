@@ -64,7 +64,7 @@ export default class IssueArticle extends Component {
                 <div className={styles.previewContent}>{previewContent}</div>
                 <div className={`${styles.mainContent} ${mainContentIsActive}`}>{mainContent}</div>
               </article>
-              
+
            </div>
        </div>
     )
@@ -153,12 +153,12 @@ class MarriageEqualityContent extends Component {
             </p>
 
             <p>殘酷的事實是，許多在媒體上公開表態支持護家盟理念的立委（其實不只上述三位立委，還包含了民進黨的<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("劉櫂豪")}/records/marriage-equality`}>劉櫂豪</Link>立委），卻幾乎不曾在立法院內針對這個議題進行正反意見的交流和辯論，實在很可惜。我們強烈建議護家盟的朋友，應該去詢問這些立委，為什麼沒有在國會裡代表民意發聲？</p>
+            <img className={styles.IssueArticleFigure} src={figure2} />
             <p>另一方面，由相關新聞或同志團體公布的訊息中，發現如
                 <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("羅淑蕾")}/records/marriage-equality`}>羅淑蕾</Link>、
                 <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("丁守中")}/records/marriage-equality`}>丁守中</Link>
                 立委已轉變立場為支持同婚，或許也有其他國民黨立委是支持的態度，但是這些立場也沒有直接反映在他們的問政表現上。
             </p>
-            <img className={styles.IssueArticleFigure} src={figure2} />
           </section>
 
           <section>
