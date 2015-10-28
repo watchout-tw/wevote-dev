@@ -38,32 +38,60 @@
 	text-align: center;
 	padding: 50px 0 30px 0;
 }
-
 .optionItem {
 	margin: 5px;
-	padding: 10px;
+	padding: 4px 20px;
 	cursor: pointer;
 	display: inline-block;
+	border: 1px solid;
+}
+.optionItem.aye {
+	border-color: $ayeColor;
+	color: $ayeColor;
+	background: none;
+}
+.optionItem.nay {
+	border-color: $nayColor;
+	color: $nayColor;
+	background: none;
+}
+.optionItem.none {
+	border-color: $noneColor;
+	color: $noneColor;
+	background: none;
+}
+.optionItem.aye:hover, .optionItem.isChoosed.aye {
 	color: white;
-    box-shadow: 3px 2px 2px 0 rgba(0,0,0,0.12);
-}
-.optionItem:hover {
-	box-shadow: 4px 3px 2px 0 rgba(0,0,0,0.32);
-}
-.optionItem.isChoosed {
-	border: 1px solid #F2DB5D;
-	box-shadow: -5px 0px 0px #F2DB5D, 5px 0px 0px #F2DB5D;
-}
-.aye {
 	background: $ayeColor;
 }
-.nay {
+.optionItem.nay:hover, .optionItem.isChoosed.nay {
+	color: white;
 	background: $nayColor;
 }
-.none {
+.optionItem.none:hover, .optionItem.isChoosed.none {
+	color: white;
 	background: $noneColor;
 }
+.optionItem.isChoosed {
+	transition: background 1s;
+}
 
+
+.Answer {
+	height: 0px;
+	overflow: hidden;
+	position: relative;
+
+}
+.Answer.isCompleted {
+	height: auto;
+	min-height: 50vh;
+	padding-top: 150px;
+}
+.samePositionItem {
+	margin: 2px;
+	display: inline-block;
+}
 
 
 .button {

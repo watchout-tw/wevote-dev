@@ -2568,7 +2568,36 @@ const initialState = {
         "hasResigned": false,
         "candidateConstituency1": "",
         "candidateConstituency2": ""
+    },
+    "129": {
+        "id": 129,
+        "name": "范雲"
+    },
+    "130": {
+        "id": 130,
+        "name": "陳家宏"
+    },
+    "131": {
+        "id": 131,
+        "name": "吳旭智"
+    },
+    "132": {
+        "id": 132,
+        "name": "曾獻瑩"
+    },
+    "133": {
+        "id": 133,
+        "name": "林珍妤"
+    },
+    "134": {
+        "id": 134,
+        "name": "龎維良"
+    },
+    "135": {
+        "id": 135,
+        "name": "周芳如"
     }
+
 }
 
 

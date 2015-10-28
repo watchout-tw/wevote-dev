@@ -14,32 +14,80 @@ export default class QAItem extends Component {
   }
   constructor(props){ super(props)
       this.state = {
-          
+          completed: false
       }
   }
   _onAnswer(choice, e){
     const {data, recordHandler} = this.props;
 
-    console.log("----")
-    console.log(data.id)
-    console.log(choice)
+    this.setState({
+        completed: true
+    })
     
-    recordHandler(data.id, choice)
+    recordHandler(data.issueId, data.order, choice);
+    this._scrollToAnswer();
   }
+  _scrollToAnswer(){
+    const {data} = this.props;
+    let ansId = `${data.id}-Answer`;
+    
+    // Scroll to answer section
+    let target = document.getElementById(ansId);
+    let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
+    
+    this._scrollTo(document.body, targetPos, 200);
+    
+  }
+  _scrollToNextQuestion(){
+    const {data, maxIndex} = this.props;
+    if(data.order === maxIndex)//it is the last one!
+      return;
+
+
+    let nextqId = `Question${data.order+1}`;
+    
+    // Scroll to answer section
+    let target = document.getElementById(nextqId);
+    let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
+    
+    this._scrollTo(document.body, targetPos, 200);
+
+  }
+  _scrollTo(element, to, duration) {
+      
+      if (duration <= 0) return;
+      let difference = to - element.scrollTop;
+      let perTick = difference / duration * 10;
+    
+      setTimeout(()=>{
+          element.scrollTop = element.scrollTop + perTick;
+          if (element.scrollTop == to) return;
+          this._scrollTo(element, to, duration - 10);
+      }, 10);
+  }
+
   render() {
     const styles = require("./QAItem.scss")
-    const {data, currentQAItemIndex, userVote} = this.props;
+    const {data, currentQAItemIndex, userChoices, candidatePositions, maxIndex} = this.props;
+    const {completed} = this.state;
 
     let qaItemClasses = classnames({
       [styles.QAItem] : true,
       [styles.isActive] : data.order <= currentQAItemIndex
     })
 
- // <Answer completed={this.state.completed}
-              //         data={options}
-              //         id={id}
-              //         userVote={this.props.userVote} />
-              //{toNextItem}
+    let toNextItem = "";
+    //作答之後才顯示下一題 or 看結果的選項
+    if(completed){
+       toNextItem = (data.order < maxIndex) ? 
+                    <div className={styles.button}
+                         onClick={this._scrollToNextQuestion.bind(this)}>下一題</div> :
+                    <div className={styles.button}
+                         onClick={this._scrollToNextQuestion.bind(this)}>看結果</div> ;
+    }
+
+    let userVote = userChoices[data.issueId];
+
     return (
         <div className={qaItemClasses}
              id={data.id}>
@@ -56,7 +104,12 @@ export default class QAItem extends Component {
                 </div>
             </div>
             <div className={styles.resultContnet}>
-                
+                <Answer completed={completed} 
+                        qid={data.id}
+                        issueId={data.issueId}
+                        userVote={userVote}
+                        candidatePositions={candidatePositions}/>
+                {toNextItem}
             </div>
         </div>
     );
@@ -76,5 +129,33 @@ class OptionItem extends Component {
         <div className={`${optionClasses} ${styles[value]}`}
              onClick={onAnswerHandler.bind(null, value)}>{title}</div>
     );
+  }
+}
+class Answer extends Component {
+  
+  render() {
+    const styles = require("./QAItem.scss")
+    const {completed, qid, issueId, userVote, candidatePositions} = this.props;
+    let answerClasses = classnames({
+        [styles.Answer]: true,
+        [styles.isCompleted]: completed
+    });
+
+    let samePositionTitle = (userVote === "none") ? "跟你一樣沒意見的是～" : "跟你相同立場的是～";
+    let samePositions = candidatePositions.map((item, i)=>{
+      
+        if(item.positions[issueId] === userVote){
+            return <div className={styles.samePositionItem}
+                        key={`${qid}-${i}`}>{item.name}</div>
+        }
+    })
+
+    return (
+        <div className={answerClasses}
+             id={`${qid}-Answer`}>
+            <div>{samePositionTitle}</div>
+            {samePositions}
+        </div>
+    )
   }
 }

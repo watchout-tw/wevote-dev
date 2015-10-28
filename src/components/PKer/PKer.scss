@@ -1,0 +1,34 @@
+@import '../../common.scss';
+.wrap {
+	display: inline-block;
+	margin: 2px;
+}
+.posCard {
+	background: black;
+	color: white;
+}
+.posCard.ans {
+	
+}
+.posCard.ans.aye {
+	background: $ayeColor;
+}
+.posCard.ans.nay {
+	background: $nayColor;
+}
+.posCard.ans.none {
+	background: $noneColor;
+}
+.avatarImg {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+.name {
+	background: white;
+}
+.points {
+	background: white;
+	font-size: 18px;
+	font-weight: 800;
+}
