@@ -39,10 +39,26 @@ export default class QAItem extends Component {
     
   }
   _scrollToNextQuestion(){
-    const {data, currentQAItemIndex, maxIndex, unlockNext} = this.props;
-    if(data.order === maxIndex)//it is the last one!
-      return;
+    const {data, currentQAItemIndex, maxIndex, unlockNext, onShowMatchResult} = this.props;
+    if(data.order === maxIndex){
+      //it is the last one! 回報給上頭
+      console.log("* show result!")
+      onShowMatchResult();
 
+      //scroll to id = rankResultSection
+      // 需要等 timeout 一小段時間，讓 obj 先出現，才能抓到對應位置，知道要滑到哪裡去
+      setTimeout(()=>{
+          
+          // Scroll to answer section
+          let target = document.getElementById("rankResultSection");
+          let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
+      
+          this._scrollTo(document.body, targetPos, 100);
+
+      }, 50)
+
+      return;
+    }
     let timeout = 0;
     if(data.order === currentQAItemIndex){
       unlockNext();
@@ -61,7 +77,6 @@ export default class QAItem extends Component {
 
     },timeout)
 
-    
   }
   _scrollTo(element, to, duration) {
       

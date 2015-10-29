@@ -54,8 +54,7 @@ export default class PKer extends Component {
         diff: newPoints - points
     })
   }
-  
-  
+
   render() {
     const styles = require("./PKer.scss")
     let {data, userChoices, showAnswerSection} = this.props;

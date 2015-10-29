@@ -4,6 +4,10 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import QAItem from '../../components/QAItem/QAItem';
 import CandidatesHoldSigns from '../../components/CandidatesHoldSigns/CandidatesHoldSigns';
+import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar';
+
+import people_name2id from '../../utils/people_name2id';
+import eng2cht from '../../utils/eng2cht';
 
 const fakeData = [
   {
@@ -99,13 +103,21 @@ export default class MatchGame extends Component {
         }
       })
 
+      // 不然會連動，可是我不要 fakeData 被排序
+      let currentRank = [];
+      fakeData.map((v,i)=>{
+        currentRank.push(v)
+      })
+
       this.state = {
           qaSet: qaSet,
           currentQAItemIndex: 0,
           userChoices: {
             // Format // "marriage-equality":"aye"
           },
-          showAnswerSection: -1
+          showAnswerSection: -1,
+          currentRank: currentRank,
+          showRank: false
       }
   }
   componentDidMount(){
@@ -176,23 +188,54 @@ export default class MatchGame extends Component {
       // if(currentChoices[issueId]){
       //    return;//如果已經回答過，不再重複登記
       // }
-
       currentChoices[issueId] = choice;
-      this.setState({
-          userChoices: currentChoices
-      });
 
+
+      //計算新的 rank
+      let currentRank = this.state.currentRank;
+      currentRank.map((people,index)=>{
+          let points = 0;
+          Object.keys(people.positions).map((issueId,k)=>{
+              //如果立場相同，並且使用者選擇的不是「沒意見」，加一分
+              if((currentChoices[issueId] === people.positions[issueId])&&(currentChoices[issueId]!=="none")){
+                  points++;
+              }  
+              //如果立場相反，扣一分
+              if(
+                  (currentChoices[issueId] === "aye" && people.positions[issueId] === "nay")||
+                  (currentChoices[issueId] === "nay" && people.positions[issueId] === "aye")
+                 ){
+                  points--;
+              } 
+          });
+          people.points = points;
+      })
+      currentRank.sort((a,b)=>{
+        return b.points - a.points;
+      })
+
+      this.setState({
+          userChoices: currentChoices,
+          currentRank: currentRank
+      });
   }
   _unlockNext(){
       this.setState({
           currentQAItemIndex: this.state.currentQAItemIndex+1
       });
+  }
+  _onShowMatchResult(){
+    console.log("i'm in charge. i'll take care of that. -by MatchGame")
+    this.setState({
+      showRank: true
+    });
 
   }
   render() {
     const styles = require("./MatchGame.scss")
     const {issues} = this.props;
-    let {qaSet, currentQAItemIndex, userChoices, showAnswerSection} = this.state;
+    let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
+         currentRank, showRank} = this.state;
 
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
@@ -202,21 +245,137 @@ export default class MatchGame extends Component {
                        recordHandler={this._recordUserChoice.bind(this)}
                        candidatePositions={fakeData}
                        maxIndex={qaSet.length-1}
-                       unlockNext={this._unlockNext.bind(this)} />
+                       unlockNext={this._unlockNext.bind(this)}
+                       onShowMatchResult={this._onShowMatchResult.bind(this)} />
     })
 
     let userChoiceArray = Object.keys(userChoices).map((k,i)=>{
         return `${userChoices[k]}-`
     })
 
-    return (
-        <div className={styles.wrap}>
-            {qaItems}
+   
+    // 配對結果
+    let rankResultSection, CandidatesHoldSignsSection;
+
+    // 看結果：顯示結果
+    if(showRank){
+        
+        // Best Fit
+        let bestPKers = currentRank.map((people,index)=>{
+            if(people.points === currentRank[0].points)
+              return <ResultPKer data={people} 
+                                 userChoices={userChoices} 
+                                 key={`resultPKer${index}`} />
+        })
+    
+        // Worst Fit
+        let lastIndex = currentRank.length-1;
+        let worstPKers = currentRank.map((people,index)=>{
+            if(people.points === currentRank[lastIndex].points)
+              return <ResultPKer data={people} 
+                                 userChoices={userChoices}
+                                 key={`resultPKer${index}`} />
+        })
+    
+        // Everyone
+        let resultPKers = currentRank.map((people,index)=>{
+            return <ResultPKer data={people} 
+                               userChoices={userChoices}
+                               key={`resultPKer${index}`} />
+        })
+    
+        rankResultSection = (
+          <div id="rankResultSection">
+              <div className={styles.rankResultWrap}>
+                  <div className={styles.rankResultTitle}>和你立場最相近的候選人</div>
+                  {bestPKers}
+              </div>
+    
+              <div className={styles.rankResultWrap}>
+                  <div className={styles.rankResultTitle}>和你立場最不同的候選人</div>
+                  {worstPKers}
+              </div>
+          </div>
+          )
+    
+    }else{
+        CandidatesHoldSignsSection =(
             <CandidatesHoldSigns data={fakeData}
                                  userChoices={userChoices}
                                  currentQAItemIndex={currentQAItemIndex}
                                  showAnswerSection={showAnswerSection}/>
+        );
+
+    }
+
+    return (
+        <div className={styles.wrap}>
+            {qaItems}
+            {rankResultSection}
+            {CandidatesHoldSignsSection} 
         </div>
     );
+  }
+}
+class ResultPKer extends Component {
+  
+  render() {
+    const styles = require("./MatchGame.scss")
+    const {data, userChoices} = this.props;
+    let sameOpinions = [];
+    let oppositeOpinions = [];
+
+    Object.keys(data.positions).map((issueId,i)=>{
+      
+      if(data.positions[issueId] === userChoices[issueId] && userChoices[issueId] !== "none"){
+          sameOpinions.push(issueId);
+      }
+
+      if(
+       (data.positions[issueId] === "aye" && userChoices[issueId] === "nay")||
+       (data.positions[issueId] === "nay" && userChoices[issueId] === "aye")
+      ){
+          oppositeOpinions.push(issueId);       
+      } 
+
+    })
+
+    //相同意見
+    let sameOpinionItems = sameOpinions.map((id, index)=>{
+        return <div className={styles.issueCircle}>{eng2cht(id)}</div>
+    })
+    
+    //相反意見
+    let oppositeOpinionItems = oppositeOpinions.map((id, index)=>{
+        return <div className={styles.issueCircle}>{eng2cht(id)}</div>
+    })
+
+    return (
+        <div className={styles.resultPKer}>
+            
+            <div className={styles.avatarImg}>
+                <PeopleAvatar id={people_name2id(data.name)} />
+                {data.name}
+            </div>
+
+            <div className={styles.opinionGroups}>
+                <div className={styles.opinionGroup}>
+                    <div className={styles.circleCount}>
+                        <div className={styles.opinionCount}>{sameOpinions.length}</div>
+                        <div>個意見相同</div>
+                    </div>
+                    <div className={styles.issueCircles}>{sameOpinionItems}</div>
+                </div>
+                <div className={styles.opinionGroup}>
+                    <div className={styles.circleCount}>
+                        <div className={styles.opinionCount}>{oppositeOpinions.length}</div>
+                        <div>個意見不同</div>
+                    </div>
+                    <div className={styles.issueCircles}>{oppositeOpinionItems}</div>
+                </div>
+            </div>
+
+        </div>
+    )
   }
 }

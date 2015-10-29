@@ -2,3 +2,73 @@
 	position: relative;
 	padding-bottom: 150px;
 }
+.rankResultWrap {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.rankResultTitle {
+	font-size: 20px;
+}
+.resultPKer {
+	padding: 10px;
+	background: white;
+    border: 1px solid #C2BDBD;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 190px;
+    margin: 10px 4px;
+}
+/* 和你相同的議題是這些 */
+.opinionGroups {
+	display: inline-block;
+	text-align: left;
+}
+.opinionGroup {
+	margin-bottom: 10px;
+	border-bottom: 1px dotted gray;
+    margin: 0 14px 20px 14px;
+    padding: 5px 0;
+}
+.avatarImg {
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+@media all and (min-width: 400px){
+	.avatarImg {
+		width: 50px;
+		height: 50px;
+	}
+}
+.opinionCount {
+	font-size: 20px;
+	font-weight: 800;
+}
+.circleCount {
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+    padding: 0 10px;
+}
+.issueCircles {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 200px;
+}
+.issueCircle {
+	border-radius: 100%;
+    background: #005060;
+    border: 3px solid #A9C6CB;
+    color: white;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    vertical-align: top;
+    margin: 2px;
+    font-size: 13px;
+    padding: 5px 2px;
+    text-align: center;
+}
