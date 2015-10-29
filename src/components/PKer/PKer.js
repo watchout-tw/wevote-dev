@@ -45,18 +45,24 @@ export default class PKer extends Component {
     //如果在 window 內並且使用者已經選擇過答案才顯示
     let keyName = indexToIssueId[showAnswerSection];
 
-    let posCardItem ;
+    let showBackClass, currentPos;
     if((showAnswerSection >= 0)&&(userChoices[keyName])){
-        let currentPos = positionArray[showAnswerSection];
-        posCardItem = <div className={`${styles.posCard} ${styles.ans} ${styles[currentPos]}`}>{currentPos}</div>;
-
+        //show back: 各人立場
+        showBackClass = styles.showBack;
+        currentPos = positionArray[showAnswerSection];
+        
     }else{
-        posCardItem = <div className={styles.posCard}>???</div>;
+        //show front: ???
+        showBackClass = styles.showFront;
     }
     
     return (
-        <div className={styles.wrap}>
-            {posCardItem}
+        <div className={`${styles.wrap} ${showBackClass}`}>
+            
+            <div className={`${styles.cardWrap}`}>
+                <div className={`${styles.posCard} ${styles.front}`}>？</div>
+                <div className={`${styles.posCard} ${styles.back} ${styles.ans} ${styles[currentPos]}`}>{currentPos}</div>
+            </div>
             <div className={styles.avatarImg}>
                 <PeopleAvatar id={people_name2id(data.name)} />
             </div>

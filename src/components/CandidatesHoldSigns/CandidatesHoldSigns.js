@@ -41,7 +41,7 @@ export default class CandidatesHoldSigns extends Component {
         <PKer data={value} 
               userChoices={userChoices}
               showAnswerSection={showAnswerSection}
-              key={`${index}-${currentQAItemIndex}-${showAnswerSection}`}/>
+              key={`${index}-${currentQAItemIndex}`}/>
       ) 
     })
 
@@ -52,7 +52,7 @@ export default class CandidatesHoldSigns extends Component {
     
     return (
         <div className={styles.CandidatesHoldSigns} 
-             key={`CandidatesHoldSigns-${currentQAItemIndex}-${showAnswerSection}`}>
+             key={`CandidatesHoldSigns-${currentQAItemIndex}`}>
             <div style={containerWidth}>{candidateItems}</div>
         </div>
     );

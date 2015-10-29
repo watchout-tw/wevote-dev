@@ -3,13 +3,35 @@
 	display: inline-block;
 	margin: 2px;
 	min-width: 48px;
+	cursor: pointer;
+}
+.cardWrap {
+	margin-bottom: 30px;
+	position: relative;
+}
+.showFront .cardWrap {
+	transition: 0.5s;
+}
+.showBack .cardWrap {
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+	transition: 0.5s;
 }
 .posCard {
 	background: black;
 	color: white;
+	backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
 }
-.posCard.ans {
-	
+.front {
+	z-index: 10;
+}
+.showBack .cardWrap .front {
+	z-index: 0;
+}
+.back {
+ 	transform: rotateY(180deg);
 }
 .posCard.ans.aye {
 	background: $ayeColor;
