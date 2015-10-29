@@ -33,15 +33,20 @@ export default class CandidatesHoldSigns extends Component {
   }
   render() {
     const styles = require("./CandidatesHoldSigns.scss")
-    const {data, userChoices, currentQAItemIndex, showAnswerSection} = this.props;
-    const {viewWidth} = this.state;
+    let {data, userChoices, currentQAItemIndex, showAnswerSection} = this.props;
+    let {viewWidth} = this.state;
+
+    let userChoicesArray = "";
+    Object.keys(userChoices).map((v,i)=>{
+      userChoicesArray += `${userChoices[v]} `
+    })
 
     let candidateItems = data.map((value, index)=>{
       return (
         <PKer data={value} 
               userChoices={userChoices}
               showAnswerSection={showAnswerSection}
-              key={`${index}-${currentQAItemIndex}`}/>
+              key={index}/>
       ) 
     })
 
@@ -49,10 +54,9 @@ export default class CandidatesHoldSigns extends Component {
       width: `${data.length * 54 + 10}px`,
       margin: `0 auto`
     } : {};
-    
+
     return (
-        <div className={styles.CandidatesHoldSigns} 
-             key={`CandidatesHoldSigns-${currentQAItemIndex}`}>
+        <div className={styles.CandidatesHoldSigns}>
             <div style={containerWidth}>{candidateItems}</div>
         </div>
     );

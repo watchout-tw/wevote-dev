@@ -4,6 +4,29 @@
 	margin: 2px;
 	min-width: 48px;
 	cursor: pointer;
+	position: relative;
+}
+@keyframes soaring {
+    from { top: 0 }
+    to { top: -40px}
+}
+@keyframes fading {
+    from { opacity: 1 }
+    to { opacity: 0}
+}
+.pointDiff {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+.pointDiff.animate {
+	top: -40px;
+	animation: soaring 1s 1, fading 1s linear 1s 1;
+	animation-fill-mode: forwards; 
+}
+.styles.hide {
+	top: 0;
+	opacity: 0;
 }
 .cardWrap {
 	margin-bottom: 30px;

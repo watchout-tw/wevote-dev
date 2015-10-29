@@ -20,27 +20,47 @@ export default class PKer extends Component {
         positionArray.push(props.data.positions[k]);
 
     })
-
+    
     this.state = {
       positionArray: positionArray,
-      indexToIssueId: Object.keys(props.data.positions)
+      indexToIssueId: Object.keys(props.data.positions),
+      points: 0, 
+      diff: 0
     }
 
   }
+  componentWillReceiveProps(nextProps){
+    let {data, userChoices} = nextProps;
+    let {points, userChoiceArray} = this.state;
+   
+    //計算這個人的速配得分
+    let newPoints = 0;
+    Object.keys(userChoices).map((k,i)=>{
+        //如果立場相同，並且使用者選擇的不是「沒意見」，加一分
+        if((userChoices[k] === data.positions[k])&&(userChoices[k]!=="none")){
+            newPoints++;
+        }  
+        //如果立場相反，扣一分
+        if(
+            (userChoices[k] === "aye" && data.positions[k] === "nay")||
+            (userChoices[k] === "nay" && data.positions[k] === "aye")
+           ){
+            newPoints--;
+        } 
+    })
+    
+    this.setState({
+        points: newPoints,
+        diff: newPoints - points
+    })
+  }
+  
   
   render() {
     const styles = require("./PKer.scss")
-    const {data, userChoices, showAnswerSection} = this.props;
-    const {positionArray, indexToIssueId} = this.state;
-
-    //計算這個人的速配得分
-    let points = 0;
-    Object.keys(userChoices).map((k,i)=>{
-        if(userChoices[k] === data.positions[k]){
-            points++;
-        }  
-    })
-
+    let {data, userChoices, showAnswerSection} = this.props;
+    let {positionArray, indexToIssueId, points, diff} = this.state;
+    
     //依照 window 所在位置決定要放答案 or ???
     //如果在 window 內並且使用者已經選擇過答案才顯示
     let keyName = indexToIssueId[showAnswerSection];
@@ -55,10 +75,13 @@ export default class PKer extends Component {
         //show front: ???
         showBackClass = styles.showFront;
     }
+
+    let animatePointDiffClass = (diff !== 0) ? styles.animate : styles.hide;
+    let diffText = (diff > 0) ? `+${diff}`: diff;
     
     return (
         <div className={`${styles.wrap} ${showBackClass}`}>
-            
+            <div className={` ${styles.pointDiff} ${animatePointDiffClass} `}>{diffText}</div>
             <div className={`${styles.cardWrap}`}>
                 <div className={`${styles.posCard} ${styles.front}`}>？</div>
                 <div className={`${styles.posCard} ${styles.back} ${styles.ans} ${styles[currentPos]}`}>{currentPos}</div>

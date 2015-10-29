@@ -118,7 +118,7 @@ export default class MatchGame extends Component {
       const {qaSet, currentQAItemIndex} = this.state;
       let showAnswerSection = -1;
       let scrollTop = document.body.scrollTop;
-      console.log(currentQAItemIndex)
+      
       //check each Answer's scrollTop
       qaSet.map((v,i)=>{
         
@@ -126,13 +126,11 @@ export default class MatchGame extends Component {
             let ansId = `Question${i}-Answer`;
             let node = document.getElementById(ansId);
             let nodePos = document.body.scrollTop + node.getBoundingClientRect().top;
-            console.log(i+"*"+nodePos);
-
+            
             let viewHeight = window.innerHeight;
             let viewWidth = window.innerWidth;
             let topBorder, bottomBorder; 
 
-            console.log("viewHeight:"+viewHeight)
             if(viewHeight < 700){
                 
                 // mobile version
@@ -147,13 +145,15 @@ export default class MatchGame extends Component {
                 bottomBorder = (scrollTop + viewHeight - viewHeight*0.1);
             }
 
-            console.log("top:"+topBorder)
-            console.log("bottom:"+bottomBorder)
+            // console.log(i+"*"+nodePos);
+            // console.log("viewHeight:"+viewHeight)
+            // console.log("top:"+topBorder)
+            // console.log("bottom:"+bottomBorder)
             
             if(nodePos > topBorder && nodePos < bottomBorder){//top border in
                 let objectHeight = 250;
                 if(nodePos + objectHeight > topBorder && nodePos + objectHeight < bottomBorder){//bottom border in
-                  console.log("======"+i+"=======")
+                  //console.log("======"+i+"=======")
                   showAnswerSection = i;
                } 
             }
@@ -167,11 +167,11 @@ export default class MatchGame extends Component {
         showAnswerSection: showAnswerSection
       })
 
-      console.log(scrollTop);
+      //console.log(scrollTop);
       //console.log(this.state.showAnswerSection)
   }
   _recordUserChoice(issueId, order, choice) {
-
+      console.log("record user choice:"+issueId+"-"+choice)
       let currentChoices = this.state.userChoices;
       // if(currentChoices[issueId]){
       //    return;//如果已經回答過，不再重複登記
@@ -192,7 +192,7 @@ export default class MatchGame extends Component {
   render() {
     const styles = require("./MatchGame.scss")
     const {issues} = this.props;
-    const {qaSet, currentQAItemIndex, userChoices, showAnswerSection} = this.state;
+    let {qaSet, currentQAItemIndex, userChoices, showAnswerSection} = this.state;
 
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
@@ -204,6 +204,11 @@ export default class MatchGame extends Component {
                        maxIndex={qaSet.length-1}
                        unlockNext={this._unlockNext.bind(this)} />
     })
+
+    let userChoiceArray = Object.keys(userChoices).map((k,i)=>{
+        return `${userChoices[k]}-`
+    })
+
     return (
         <div className={styles.wrap}>
             {qaItems}
