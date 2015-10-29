@@ -129,16 +129,20 @@ export default class MatchGame extends Component {
             console.log(i+"*"+nodePos);
 
             let viewHeight = window.innerHeight;
+            let viewWidth = window.innerWidth;
             let topBorder, bottomBorder; 
-            if(window.innerWidth < 768){
-                // web version
-                // 答案全部都在目前畫面的中間 80%
+
+            console.log("viewHeight:"+viewHeight)
+            if(viewHeight < 700){
+                
+                // mobile version
+                // 答案在畫面的上方 80%
                 topBorder = (scrollTop + 0);
                 bottomBorder = (scrollTop + viewHeight - viewHeight*0.2);
 
-            }else{
-                // mobile version
-                // 答案在畫面的上方 80%
+            }else if(viewHeight >= 700){
+                // web version
+                // 答案全部都在目前畫面的中間 80%
                 topBorder = (scrollTop + 0) + viewHeight*0.1;
                 bottomBorder = (scrollTop + viewHeight - viewHeight*0.1);
             }
@@ -146,9 +150,12 @@ export default class MatchGame extends Component {
             console.log("top:"+topBorder)
             console.log("bottom:"+bottomBorder)
             
-            if(nodePos > topBorder && nodePos < bottomBorder){
-               console.log("======"+i+"=======")
-               showAnswerSection = i;
+            if(nodePos > topBorder && nodePos < bottomBorder){//top border in
+                let objectHeight = 250;
+                if(nodePos + objectHeight > topBorder && nodePos + objectHeight < bottomBorder){//bottom border in
+                  console.log("======"+i+"=======")
+                  showAnswerSection = i;
+               } 
             }
 
 

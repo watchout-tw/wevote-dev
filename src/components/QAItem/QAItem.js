@@ -46,9 +46,10 @@ export default class QAItem extends Component {
     let timeout = 0;
     if(data.order === currentQAItemIndex){
       unlockNext();
-      timeout = 200;
+      timeout = 50;
     }
 
+    // 需要等 timeout 一小段時間，讓 obj 先出現，才能抓到對應位置，知道要滑到哪裡去
     setTimeout(()=>{
         let nextqId = `Question${data.order+1}`;
     
@@ -56,7 +57,7 @@ export default class QAItem extends Component {
         let target = document.getElementById(nextqId);
         let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
     
-        this._scrollTo(document.body, targetPos, 200);
+        this._scrollTo(document.body, targetPos, 100);
 
     },timeout)
 
