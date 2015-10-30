@@ -13,8 +13,9 @@ export default class QAItem extends Component {
       
   }
   constructor(props){ super(props)
+      let completed = (props.completed) ? props.completed : false;
       this.state = {
-          completed: false
+          completed: completed
       }
   }
   _onAnswer(choice, e){
@@ -90,11 +91,19 @@ export default class QAItem extends Component {
           this._scrollTo(element, to, duration - 10);
       }, 10);
   }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.completed === false){
+      this.setState({
+        completed: false
+      })
+    }
+  }
 
   render() {
     const styles = require("./QAItem.scss")
     const {data, currentQAItemIndex, userChoices, candidatePositions, maxIndex} = this.props;
     const {completed} = this.state;
+    //console.log(data.order+":"+completed)
 
     let qaItemClasses = classnames({
       [styles.QAItem] : true,

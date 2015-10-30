@@ -2,6 +2,9 @@
 	position: relative;
 	padding-bottom: 150px;
 }
+.rankResultSection {
+	text-align: center;
+}
 .rankResultWrap {
 	text-align: center;
 	margin-bottom: 40px;
@@ -71,4 +74,10 @@
     font-size: 13px;
     padding: 5px 2px;
     text-align: center;
+}
+.replay {
+	cursor: pointer;
+	border: 1px solid;
+	display: inline-block;
+	padding: 8px 20px;
 }

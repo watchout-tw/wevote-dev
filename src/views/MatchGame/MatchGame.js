@@ -117,7 +117,8 @@ export default class MatchGame extends Component {
           },
           showAnswerSection: -1,
           currentRank: currentRank,
-          showRank: false
+          showRank: false,
+          completed: false
       }
   }
   componentDidMount(){
@@ -188,6 +189,12 @@ export default class MatchGame extends Component {
       // if(currentChoices[issueId]){
       //    return;//如果已經回答過，不再重複登記
       // }
+
+      if(this.state.completed === false){// 開始作答了
+        this.setState({
+          completed: true
+        })
+      }
       currentChoices[issueId] = choice;
 
 
@@ -231,11 +238,30 @@ export default class MatchGame extends Component {
     });
 
   }
+  _replay(){
+    console.log("*replay")
+    // 不然會連動，可是我不要 fakeData 被排序
+    let currentRank = [];
+    fakeData.map((v,i)=>{
+      currentRank.push(v)
+    })
+
+    this.setState({
+        currentQAItemIndex: 0,
+        userChoices: {},
+        showAnswerSection: -1,
+        currentRank: currentRank,
+        showRank: false,
+        completed: false
+    })
+    window.scrollTo(-100,0);
+    
+  }
   render() {
     const styles = require("./MatchGame.scss")
     const {issues} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
-         currentRank, showRank} = this.state;
+         currentRank, showRank, completed} = this.state;
 
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
@@ -246,7 +272,8 @@ export default class MatchGame extends Component {
                        candidatePositions={fakeData}
                        maxIndex={qaSet.length-1}
                        unlockNext={this._unlockNext.bind(this)}
-                       onShowMatchResult={this._onShowMatchResult.bind(this)} />
+                       onShowMatchResult={this._onShowMatchResult.bind(this)}
+                       completed={completed} />
     })
 
     let userChoiceArray = Object.keys(userChoices).map((k,i)=>{
@@ -285,7 +312,8 @@ export default class MatchGame extends Component {
         })
     
         rankResultSection = (
-          <div id="rankResultSection">
+          <div id="rankResultSection"
+               className={styles.rankResultSection}>
               <div className={styles.rankResultWrap}>
                   <div className={styles.rankResultTitle}>和你立場最相近的候選人</div>
                   {bestPKers}
@@ -295,6 +323,9 @@ export default class MatchGame extends Component {
                   <div className={styles.rankResultTitle}>和你立場最不同的候選人</div>
                   {worstPKers}
               </div>
+
+              <div className={styles.replay}
+                   onClick={this._replay.bind(this)}>REPLAY</div>
           </div>
           )
     
