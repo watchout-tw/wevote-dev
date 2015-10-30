@@ -26,25 +26,41 @@
 	display: inline-block;
 	text-align: left;
 }
+@media all and (min-width: 400px){
+	.opinionGroups {
+		vertical-align: top;
+		margin-top: 14px;
+	}
+}
 .opinionGroup {
 	margin-bottom: 10px;
 	border-bottom: 1px dotted gray;
     margin: 0 14px 20px 14px;
     padding: 5px 0;
 }
+.peopleInfo {
+	display: block;
+}
 .avatarImg {
-	width: 30px;
-	height: 30px;
+	width: 120px;
+	height: 120px;
 	margin: 0 auto;
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
 }
 @media all and (min-width: 400px){
-	.avatarImg {
-		width: 50px;
-		height: 50px;
+	.peopleInfo {
+		display: inline-block
 	}
+	.avatarImg {
+		
+	}
+}
+
+.avatarName {
+	font-size: 24px;
+	margin: 8px;
 }
 .opinionCount {
 	font-size: 20px;
@@ -59,7 +75,12 @@
 .issueCircles {
 	display: inline-block;
 	vertical-align: top;
-	min-width: 200px;
+	min-width: calc(100vw - 160px);
+}
+@media all and (min-width: 450px){
+	.issueCircles {
+		min-width: 200px;
+	}
 }
 .issueCircle {
 	border-radius: 100%;

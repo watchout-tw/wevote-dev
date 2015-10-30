@@ -60,8 +60,8 @@ export default class CandidatesHoldSigns extends Component {
     // },
     // "范雲" : {}
 
-    let containerWidth = (viewWidth <= 400) ? {
-      width: `${data.length * 54 + 10}px`,
+    let containerWidth = (viewWidth <= 450) ? {
+      width: `${Object.keys(data).length * 52}px`,
       margin: `0 auto`
     } : {};
 

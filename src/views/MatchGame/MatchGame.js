@@ -381,9 +381,11 @@ export default class MatchGame extends Component {
       //console.log("record user choice:"+issueId+"-"+choice)
       
       let currentChoices = this.state.userChoices;
+
       // if(currentChoices[issueId]){
       //    return;//如果已經回答過，不再重複登記
       // }
+
 
       if(this.state.completed === false){// 開始作答了
         this.setState({
@@ -395,6 +397,12 @@ export default class MatchGame extends Component {
       this.setState({
           userChoices: currentChoices
       });
+
+      const {showRank} = this.state;
+      if(showRank){
+         this._onShowMatchResult();
+        //如果已經算答案，重新計算
+      }
   }
   _unlockNext(){
       this.setState({
@@ -589,9 +597,9 @@ class ResultPKer extends Component {
     return (
         <div className={styles.resultPKer}>
             
-            <div className={styles.avatarImg}>
-                <PeopleAvatar id={people_name2id(data.name)} />
-                {data.name}
+            <div className={styles.peopleInfo}>
+                <div className={styles.avatarImg}><PeopleAvatar id={people_name2id(data.name)} /></div>
+                <div className={styles.avatarName}>{data.name}</div>
             </div>
 
             <div className={styles.opinionGroups}>

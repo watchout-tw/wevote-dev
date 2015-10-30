@@ -14,7 +14,7 @@ function scrollTo(element, to, duration){
         element.scrollTop = element.scrollTop + perTick;
         if (element.scrollTop == to) return;
         scrollTo(element, to, duration - 10);
-    }, 5);
+    }, 10);
 }
 
 @connect(
@@ -102,7 +102,7 @@ export default class QAItem extends Component {
     let target = document.getElementById(ansId);
     let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
     
-    scrollTo(document.body, targetPos, 60);  
+    scrollTo(document.body, targetPos, 120);  
   }
   _scrollToNextQuestion(){
     const {data, currentQAItemIndex, maxIndex, unlockNext, onShowMatchResult} = this.props;
@@ -119,7 +119,7 @@ export default class QAItem extends Component {
           let target = document.getElementById("rankResultSection");
           let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
       
-          scrollTo(document.body, targetPos, 100);
+          scrollTo(document.body, targetPos, 120);
 
       }, 50)
 
@@ -139,7 +139,7 @@ export default class QAItem extends Component {
         let target = document.getElementById(nextqId);
         let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
     
-        scrollTo(document.body, targetPos, 100);
+        scrollTo(document.body, targetPos, 120);
 
     },timeout)
   }
@@ -273,11 +273,15 @@ class Subconflict extends Component {
           <div className={styles.conflictItem}
                id={`${qid}-Conflict-${index}`}>
               <div className={styles.conflictContent}>
-                  <b>{peopleName}</b>
-                  過去在立法院的表態紀錄顯示他{positionStatement}。<br/>
-                  {futureStatement}，
-                  {additionalStatement}<br/>
-                  請問你選擇採取他的哪一個立場？
+                  <p>
+                      <b>{peopleName}</b>
+                      過去在立法院的表態紀錄顯示他{positionStatement}。
+                  </p>
+                  <p>
+                      {futureStatement}，
+                      {additionalStatement}
+                  </p>
+                  <p>請問你選擇採取他的哪一個立場？</p>
               </div>
               <div className={styles.conflictActions}>
                   <div className={recordClasses}

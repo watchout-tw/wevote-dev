@@ -92,16 +92,18 @@ export default class PKer extends Component {
     return (
         <div className={`${styles.wrap} ${showBackClass}`}>
             <div className={` ${styles.pointDiff} ${animatePointDiffClass} `}>{diffText}</div>
-            <div className={`${styles.cardWrap}`}>
-                <div className={`${styles.posCard} ${styles.front}`}>？</div>
-                <div className={`${styles.posCard} ${styles.back} ${styles.ans} ${styles[currentPos]}`}>{currentPos}</div>
-            </div>
-            <div className={styles.avatarImg}>
-                <PeopleAvatar id={people_name2id(peopleName)} />
-            </div>
-            <div className={styles.name}>{peopleName}</div>
-            <div className={styles.points}>
-                {points}  
+            <div className={styles.container}>
+                <div className={`${styles.cardWrap}`}>
+                    <div className={`${styles.posCard} ${styles.front}`}>？</div>
+                    <div className={`${styles.posCard} ${styles.back} ${styles.ans} ${styles[currentPos]}`}>{currentPos}</div>
+                </div>
+                <div className={styles.avatarImg}>
+                    <PeopleAvatar id={people_name2id(peopleName)} />
+                </div>
+                <div className={styles.name}>{peopleName}</div>
+                <div className={styles.points}>
+                    {points}  
+                </div>
             </div>
         </div>
     );

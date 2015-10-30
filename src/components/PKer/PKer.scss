@@ -1,14 +1,15 @@
 @import '../../common.scss';
 .wrap {
 	display: inline-block;
-	margin: 2px;
+	text-align: center;
 	min-width: 48px;
 	cursor: pointer;
 	position: relative;
+	padding-top: 50px;/* space for animation */
 }
 @keyframes soaring {
-    from { top: 0 }
-    to { top: -40px}
+    from { top: 30px }
+    to { top: 0px}
 }
 @keyframes fading {
     from { opacity: 1 }
@@ -20,16 +21,26 @@
 	text-align: center;
 }
 .pointDiff.animate {
-	top: -40px;
+	top: 30px;
 	animation: soaring 1s 1, fading 1s linear 1s 1;
 	animation-fill-mode: forwards; 
 }
 .styles.hide {
-	top: 0;
+	top: 30px;
 	opacity: 0;
 }
+.container {
+	background: #929B9D;
+	padding: 2px;
+}
+@media all and (min-width: 450px){
+	.container {
+		background: none;
+	}
+}
 .cardWrap {
-	margin-bottom: 30px;
+	height: 30px;
+	text-align: center;
 	position: relative;
 }
 .showFront .cardWrap {
