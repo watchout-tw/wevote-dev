@@ -16,14 +16,14 @@ export default class PKer extends Component {
   constructor(props){super(props)
      //把候選人的資料 array 化
     let positionArray = [];
-    Object.keys(props.data.positions).map((k,i)=>{
-        positionArray.push(props.data.positions[k]);
+    Object.keys(props.data).map((k,i)=>{
+        positionArray.push(props.data[k]);
 
     })
     
     this.state = {
       positionArray: positionArray,
-      indexToIssueId: Object.keys(props.data.positions),
+      indexToIssueId: Object.keys(props.data),
       points: 0, 
       diff: 0
     }
@@ -33,17 +33,27 @@ export default class PKer extends Component {
     let {data, userChoices} = nextProps;
     let {points, userChoiceArray} = this.state;
    
+    // console.log("count points")
+    // console.log(data)
+
+    //更新 positionArray
+    let positionArray = [];
+    Object.keys(data).map((k,i)=>{
+        positionArray.push(data[k]);
+
+    })
+
     //計算這個人的速配得分
     let newPoints = 0;
     Object.keys(userChoices).map((k,i)=>{
         //如果立場相同，並且使用者選擇的不是「沒意見」，加一分
-        if((userChoices[k] === data.positions[k])&&(userChoices[k]!=="none")){
+        if((userChoices[k] === data[k])&&(userChoices[k]!=="none")){
             newPoints++;
         }  
         //如果立場相反，扣一分
         if(
-            (userChoices[k] === "aye" && data.positions[k] === "nay")||
-            (userChoices[k] === "nay" && data.positions[k] === "aye")
+            (userChoices[k] === "aye" && data[k] === "nay")||
+            (userChoices[k] === "nay" && data[k] === "aye")
            ){
             newPoints--;
         } 
@@ -51,13 +61,14 @@ export default class PKer extends Component {
     
     this.setState({
         points: newPoints,
+        positionArray: positionArray,
         diff: newPoints - points
     })
   }
 
   render() {
     const styles = require("./PKer.scss")
-    let {data, userChoices, showAnswerSection} = this.props;
+    let {peopleName, data, userChoices, showAnswerSection} = this.props;
     let {positionArray, indexToIssueId, points, diff} = this.state;
     
     //依照 window 所在位置決定要放答案 or ???
@@ -86,9 +97,9 @@ export default class PKer extends Component {
                 <div className={`${styles.posCard} ${styles.back} ${styles.ans} ${styles[currentPos]}`}>{currentPos}</div>
             </div>
             <div className={styles.avatarImg}>
-                <PeopleAvatar id={people_name2id(data.name)} />
+                <PeopleAvatar id={people_name2id(peopleName)} />
             </div>
-            <div className={styles.name}>{data.name}</div>
+            <div className={styles.name}>{peopleName}</div>
             <div className={styles.points}>
                 {points}  
             </div>

@@ -41,14 +41,24 @@ export default class CandidatesHoldSigns extends Component {
       userChoicesArray += `${userChoices[v]} `
     })
 
-    let candidateItems = data.map((value, index)=>{
+    let candidateItems = Object.keys(data).map((peopleName, index)=>{
       return (
-        <PKer data={value} 
+        <PKer peopleName={peopleName}
+              data={data[peopleName]} 
               userChoices={userChoices}
               showAnswerSection={showAnswerSection}
               key={index}/>
       ) 
     })
+
+    // matchData  
+    // "蔣乃辛": {
+    //     "marriage-equality": "none",
+    //     "recall": "none",
+    //     "referendum": "none",
+    //     "nuclear-power": "nay"
+    // },
+    // "范雲" : {}
 
     let containerWidth = (viewWidth <= 400) ? {
       width: `${data.length * 54 + 10}px`,

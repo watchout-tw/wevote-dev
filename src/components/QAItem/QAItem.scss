@@ -80,8 +80,46 @@
 .optionItem.isChoosed {
 	transition: background 1s;
 }
+/* ---------------- */
+.Conflict {
+	height: 0px;
+	overflow: hidden;
+	position: relative;
+}
+.Conflict.isConflict {
+	height: auto;
+	margin-top: 30px;
+}
+.conflictItem {
+	background: white;
+	padding: 20px;
+}
+.conflictContent {
+	line-height: 1.4;
+}
+.conflictActions {
+	margin-top: 20px;
+}
+.conflictButton {
+	display: inline-block;
+	cursor: pointer;
+    margin: 10px;
+    border: 1px solid;
+    padding: 10px;
+}
+.conflictButton.isActive {
+	display: inline-block;
+	cursor: pointer;
+    margin: 10px;
+    border: 1px solid;
+    padding: 10px;
+    background: black;
+    color: white;
+}
 
 
+
+/* ----------------- */
 .Answer {
 	height: 0px;
 	overflow: hidden;

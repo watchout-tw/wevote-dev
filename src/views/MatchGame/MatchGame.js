@@ -9,80 +9,228 @@ import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar';
 import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
 
-const fakeData = [
-  {
-    "name" : "蔣乃辛",
-    "positions" : {
-        "marriage-equality":"none",
-        "recall":"none",
-        "referendum":"none",
-        "nuclear-power":"nay"
-    }
+const fakeData = {
+  "蔣乃辛": {
+      "marriage-equality": {
+          "record" : { "position": "none" },
+          "promise" : { 
+            "position": "aye",
+            "statement": "我理解到人權的重要，未來將以行動支持同性婚姻合法化。"
+          }
+      },
+      "recall": {
+          "record" : { "position": "none" },
+          "promise" : { 
+            "position": "none",
+            "statement": "罷免這個議題很複雜，牽涉到很多相關的機制，無法簡單的說贊成或反對。"
+          }
+      },
+      "referendum": {
+          "record" : { "position": "none" },
+          "promise" : { 
+            "position": "aye",
+            "statement": ""
+          }
+      },
+      "nuclear-power": {
+          "record" : { "position": "nay" },
+          "promise" : { 
+            "position": "aye",
+            "statement": "因為國民黨後來贊成停建了，所以我也決定遵從黨的意志。"
+          }
+      },
   },
-  {
-    "name" : "范雲",
-    "positions" : {
-        "marriage-equality":"aye",
-        "recall":"aye",
-        "referendum":"aye",
-        "nuclear-power":"aye"
-    }
+  "范雲" : {
+      "marriage-equality": {
+          "promise" : {
+            "position": "aye",
+            "statement": "社民黨支持同性婚姻合法化。"
+          } 
+      },
+      "recall": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          } 
+      },
+      "referendum": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          }
+      },
+      "nuclear-power": {
+          "record" : { "position": "none" },
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          } 
+      }
   },
-  {
-    "name" : "陳家宏",
-    "positions" : {
-        "marriage-equality":"none",
-        "recall":"none",
-        "referendum":"none",
-        "nuclear-power":"nay"
-    }
+  "陳家宏" : {
+
+      "marriage-equality": {
+          "promise" : {
+            "position": "nay",
+            "statement": ""
+          } 
+      },
+      "recall": {
+          "promise" : {
+              "position": "none",
+              "statement": ""
+          } 
+      },
+      "referendum": {
+          "promise" : {
+              "position": "none",
+              "statement": ""
+          }
+      },
+      "nuclear-power": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          } 
+      }
   },
-  {
-    "name" : "吳旭智",
-    "positions" : {
-        "marriage-equality":"none",
-        "recall":"aye",
-        "referendum":"aye",
-        "nuclear-power":"nay"
-    }
+  "吳旭智" : {
+    
+      "marriage-equality": {
+          "promise" : {
+            "position": "none",
+            "statement": "需要社會共識"
+          } 
+      },
+      "recall": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          } 
+      },
+      "referendum": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          }
+      },
+      "nuclear-power": {
+          "promise" : {
+              "position": "nay",
+              "statement": ""
+          } 
+      }
+   
   },
-  {
-    "name" : "曾獻瑩",
-    "positions" : {
-        "marriage-equality":"aye",
-        "recall":"nay",
-        "referendum":"none",
-        "nuclear-power":"nay"
-    }
+  "曾獻瑩": {
+    
+      "marriage-equality": {
+          "promise" : {
+            "position": "aye",
+            "statement": ""
+          } 
+      },
+      "recall": {
+          "promise" : {
+              "position": "nay",
+              "statement": ""
+          } 
+      },
+      "referendum": {
+          "promise" : {
+              "position": "none",
+              "statement": ""
+          }
+      },
+      "nuclear-power": {
+          "promise" : {
+              "position": "nay",
+              "statement": ""
+          } 
+      }
   },
-  {
-    "name" : "林珍妤",
-    "positions" : {
-        "marriage-equality":"nay",
-        "recall":"aye",
-        "referendum":"none",
-        "nuclear-power":"nay"
-    }
+  "林珍妤" : {
+
+      "marriage-equality": {
+          "promise" : {
+            "position": "nay",
+            "statement": ""
+          } 
+      },
+      "recall": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          } 
+      },
+      "referendum": {
+          "promise" : {
+              "position": "none",
+              "statement": ""
+          }
+      },
+      "nuclear-power": {
+          "promise" : {
+              "position": "nay",
+              "statement": ""
+          } 
+      }
   },
-  {
-    "name" : "龎維良",
-    "positions" : {
-        "marriage-equality":"nay",
-        "recall":"aye",
-        "referendum":"aye",
-        "nuclear-power":"aye"
-    }
+  "龎維良" : {
+
+      "marriage-equality": {
+          "promise" : {
+            "position": "nay",
+            "statement": ""
+          } 
+      },
+      "recall": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          } 
+      },
+      "referendum": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          }
+      },
+      "nuclear-power": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          } 
+      }
+    
   },
-  {
-    "name" : "周芳如",
-    "positions" : {
-        "marriage-equality":"none",
-        "recall":"nay",
-        "referendum":"nay",
-        "nuclear-power":"nay"
-    }
+  "周芳如" : {
+      "marriage-equality": {
+          "promise" : {
+            "position": "none",
+            "statement": ""
+          } 
+      },
+      "recall": {
+          "promise" : {
+              "position": "none",
+              "statement": ""
+          } 
+      },
+      "referendum": {
+          "promise" : {
+              "position": "none",
+              "statement": ""
+          }
+      },
+      "nuclear-power": {
+          "promise" : {
+              "position": "aye",
+              "statement": ""
+          } 
+      }
   }
-]
+}
 
 @connect(
     state => ({issues: state.issues}),
@@ -99,14 +247,34 @@ export default class MatchGame extends Component {
             issueId: issueId,
             order: index,
             title: props.issues[issueId].title,
-            description: props.issues[issueId].question
+            description: props.issues[issueId].question,
+            statement: props.issues[issueId].statement,
         }
       })
 
-      // 不然會連動，可是我不要 fakeData 被排序
-      let currentRank = [];
-      fakeData.map((v,i)=>{
-        currentRank.push(v)
+      /*
+        // matchData format
+        "蔣乃辛": {
+          "marriage-equality": "aye",
+          "recall" : "nay"
+        },
+        "范雲": {
+          "marriage-equality": "aye",
+          "recall" : "nay"
+        }
+      */
+      let matchData = {};
+      Object.keys(fakeData).map((peopleName,i)=>{
+          matchData[peopleName] = {};
+          let currentData = fakeData[peopleName];
+
+          Object.keys(currentData).map((issueId, k)=>{
+              
+              matchData[peopleName] [issueId] = currentData[issueId].promise.position;
+              if(currentData[issueId].record){
+                matchData[peopleName][issueId] = currentData[issueId].record.position;
+              }
+          })
       })
 
       this.state = {
@@ -116,9 +284,11 @@ export default class MatchGame extends Component {
             // Format // "marriage-equality":"aye"
           },
           showAnswerSection: -1,
-          currentRank: currentRank,
           showRank: false,
-          completed: false
+          completed: false,
+          currentRank: [],
+          matchData: matchData//used for match, because position might conflicts
+
       }
   }
   componentDidMount(){
@@ -183,8 +353,33 @@ export default class MatchGame extends Component {
       //console.log(scrollTop);
       //console.log(this.state.showAnswerSection)
   }
+  _onChooseConflict(name, issueId, pos){
+      // console.log("* onChooseConflict")
+      // console.log(`決定 ${name} 在 ${issueId} 的立場是 ${pos}`);
+
+      // 更新 matchData
+      let {matchData} = this.state;
+      matchData[name][issueId] = pos;
+      this.setState({
+          matchData: matchData
+      })
+
+      /*
+        // matchData format
+        "蔣乃辛": {
+          "marriage-equality": "aye",
+          "recall" : "nay"
+        },
+        "范雲": {
+          "marriage-equality": "aye",
+          "recall" : "nay"
+        }
+      */
+
+  }
   _recordUserChoice(issueId, order, choice) {
-      console.log("record user choice:"+issueId+"-"+choice)
+      //console.log("record user choice:"+issueId+"-"+choice)
+      
       let currentChoices = this.state.userChoices;
       // if(currentChoices[issueId]){
       //    return;//如果已經回答過，不再重複登記
@@ -197,33 +392,8 @@ export default class MatchGame extends Component {
       }
       currentChoices[issueId] = choice;
 
-
-      //計算新的 rank
-      let currentRank = this.state.currentRank;
-      currentRank.map((people,index)=>{
-          let points = 0;
-          Object.keys(people.positions).map((issueId,k)=>{
-              //如果立場相同，並且使用者選擇的不是「沒意見」，加一分
-              if((currentChoices[issueId] === people.positions[issueId])&&(currentChoices[issueId]!=="none")){
-                  points++;
-              }  
-              //如果立場相反，扣一分
-              if(
-                  (currentChoices[issueId] === "aye" && people.positions[issueId] === "nay")||
-                  (currentChoices[issueId] === "nay" && people.positions[issueId] === "aye")
-                 ){
-                  points--;
-              } 
-          });
-          people.points = points;
-      })
-      currentRank.sort((a,b)=>{
-        return b.points - a.points;
-      })
-
       this.setState({
-          userChoices: currentChoices,
-          currentRank: currentRank
+          userChoices: currentChoices
       });
   }
   _unlockNext(){
@@ -232,25 +402,58 @@ export default class MatchGame extends Component {
       });
   }
   _onShowMatchResult(){
-    console.log("i'm in charge. i'll take care of that. -by MatchGame")
+    //console.log("i'm in charge. i'll take care of that. -by MatchGame")
+    
+    // 計算 rank
+    let currentRank = [];
+    let {matchData, userChoices} = this.state;
+
+    Object.keys(matchData).map((peopleName, index)=>{
+        let points = 0;
+        let currentPeople = matchData[peopleName];
+
+        Object.keys(currentPeople).map((issueId,k)=>{
+            // 如果立場相同，並且使用者選擇的不是「沒意見」，加一分
+            if((userChoices[issueId] === currentPeople[issueId])&&(userChoices[issueId]!=="none")){
+                points++;
+            }  
+            // 如果立場相反，扣一分
+            if(
+                (userChoices[issueId] === "aye" && currentPeople[issueId] === "nay")||
+                (userChoices[issueId] === "nay" && currentPeople[issueId] === "aye")
+               ){
+                points--;
+            }
+            
+        });
+
+        currentRank.push(
+          Object.assign(currentPeople, {
+            name: peopleName,
+            points: points
+          })
+        ) 
+
+    })
+   
+    currentRank.sort((a,b)=>{
+      return b.points - a.points;
+    })
+
+
     this.setState({
-      showRank: true
+      showRank: true,
+      currentRank: currentRank
     });
 
   }
   _replay(){
-    console.log("*replay")
-    // 不然會連動，可是我不要 fakeData 被排序
-    let currentRank = [];
-    fakeData.map((v,i)=>{
-      currentRank.push(v)
-    })
-
+    //console.log("*replay")
+   
     this.setState({
         currentQAItemIndex: 0,
         userChoices: {},
         showAnswerSection: -1,
-        currentRank: currentRank,
         showRank: false,
         completed: false
     })
@@ -261,15 +464,17 @@ export default class MatchGame extends Component {
     const styles = require("./MatchGame.scss")
     const {issues} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
-         currentRank, showRank, completed} = this.state;
+         currentRank, showRank, completed, matchData} = this.state;
 
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
                        data={value}
                        currentQAItemIndex={currentQAItemIndex}
                        userChoices={userChoices}
+                       conflictHandler={this._onChooseConflict.bind(this)}
                        recordHandler={this._recordUserChoice.bind(this)}
                        candidatePositions={fakeData}
+                       matchData={matchData}
                        maxIndex={qaSet.length-1}
                        unlockNext={this._unlockNext.bind(this)}
                        onShowMatchResult={this._onShowMatchResult.bind(this)}
@@ -331,7 +536,7 @@ export default class MatchGame extends Component {
     
     }else{
         CandidatesHoldSignsSection =(
-            <CandidatesHoldSigns data={fakeData}
+            <CandidatesHoldSigns data={matchData}
                                  userChoices={userChoices}
                                  currentQAItemIndex={currentQAItemIndex}
                                  showAnswerSection={showAnswerSection}/>
@@ -356,15 +561,15 @@ class ResultPKer extends Component {
     let sameOpinions = [];
     let oppositeOpinions = [];
 
-    Object.keys(data.positions).map((issueId,i)=>{
+    Object.keys(data).map((issueId,i)=>{
       
-      if(data.positions[issueId] === userChoices[issueId] && userChoices[issueId] !== "none"){
+      if(data[issueId] === userChoices[issueId] && userChoices[issueId] !== "none"){
           sameOpinions.push(issueId);
       }
 
       if(
-       (data.positions[issueId] === "aye" && userChoices[issueId] === "nay")||
-       (data.positions[issueId] === "nay" && userChoices[issueId] === "aye")
+       (data[issueId] === "aye" && userChoices[issueId] === "nay")||
+       (data[issueId] === "nay" && userChoices[issueId] === "aye")
       ){
           oppositeOpinions.push(issueId);       
       } 
