@@ -1,0 +1,40 @@
+@import '../../common.scss';
+$breakMedium: 600px;
+$breakLarge: 800px;
+.home {
+  position: relative;
+}
+.contentWrap {
+  padding: 60px 0 0;
+  border-top: 1px solid rgb(232, 246, 251);
+}
+.innerWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.alignCenter {
+  text-align: center;
+}
+.pageTitle {
+  text-align: center;
+  font-size: 26px;
+  padding: 15px 0;
+  margin: 35px 0 15px 0;
+  color: $textColor;
+}
+
+h2 {
+  font-size: 34px;
+}
+.aboutUsBlock {
+  padding-top: 50px;
+  background: rgb(220,220,220);
+}
+.aboutUsText {
+  text-align: left;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 30px 10px 100px 10px;
+  font-size: 18px;
+
+}

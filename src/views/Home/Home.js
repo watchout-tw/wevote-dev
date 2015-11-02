@@ -36,25 +36,26 @@ export default class Home extends Component {
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
-          <Video />
-          <div className={styles.contentWrap}>
-              <div className={styles.innerWrap}>
-                  <Missions issues={issues}
-                            showComingMission={true}/>
-
-              </div>
-          </div>
-          <div className={styles.roadmap}>
-            <div className={`${styles.stage} ${styles.october}`}></div>
-            <div className={`${styles.stage} ${styles.november}`}></div>
-            <div className={`${styles.stage} ${styles.december}`}></div>
-            <div className={`${styles.stage} ${styles.january}`}></div>
-          </div>
-          <Footer/>
-          <Social />
+          NEW HOMEPAGE
       </div>
     );
   }
 }
+// <Video />
+// <div className={styles.contentWrap}>
+//     <div className={styles.innerWrap}>
+//         <Missions issues={issues}
+//                   showComingMission={true}/>
+
+//     </div>
+// </div>
+// <div className={styles.roadmap}>
+//   <div className={`${styles.stage} ${styles.october}`}></div>
+//   <div className={`${styles.stage} ${styles.november}`}></div>
+//   <div className={`${styles.stage} ${styles.december}`}></div>
+//   <div className={`${styles.stage} ${styles.january}`}></div>
+// </div>
+// <Footer/>
+// <Social />
 
 

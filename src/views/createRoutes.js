@@ -20,6 +20,9 @@ import Subscribe from 'views/Subscribe/Subscribe.js';
 
 import MatchGame from 'views/MatchGame/MatchGame.js';
 
+import Issues from 'views/Issues/Issues.js';
+import Constituencies from 'views/Constituencies/Constituencies.js';
+
 import NotFound from 'views/NotFound/NotFound.js';
 
 export default function(store) {
@@ -27,6 +30,11 @@ export default function(store) {
     <Route component={App}>
       <Route path="/" component={Home}/>
       
+      <Route path="/issues/" component={Issues}/>
+      <Route path="/constituencies/" component={Constituencies}/>
+
+
+
       <Route path="/issues/:issueName" component={Issue}/>
       <Route path="/issues/:issueName/:viewName" component={Issue}/>
       

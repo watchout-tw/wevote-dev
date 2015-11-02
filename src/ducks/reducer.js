@@ -8,11 +8,14 @@ import FAQ from './FAQ';
 
 import processingState from './processingState';
 
+import candidates from './candidates';
+
 export default combineReducers({
   legislators,
   issues,
   parties,
   records,
   FAQ,
-  processingState
+  processingState,
+  candidates
 });

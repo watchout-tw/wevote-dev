@@ -58,27 +58,30 @@ export default class Appbar extends Component {
 
     let showStyle = (showMenu) ? styles.showMenu : "";
 
-    let issueItems = Object.keys(issues).map((issueId, index)=>{
+    // let issueItems = Object.keys(issues).map((issueId, index)=>{
 
-      //let activeStyle = (currentIssueName===issueId) ? styles.active : "";
-      let activeStyle = (issueName===issueId) ? styles.active : "";
-      let symbol = require('./images/symbols_' + issues[issueId].titleEng + '.svg');
+    //   //let activeStyle = (currentIssueName===issueId) ? styles.active : "";
+    //   let activeStyle = (issueName===issueId) ? styles.active : "";
+    //   let symbol = require('./images/symbols_' + issues[issueId].titleEng + '.svg');
 
-      return (
-        <li key={index}
-            onClick={this._updateLocation.bind(this,issueId)}>
-            <Link className={`${styles.navItem} ${activeStyle}`}
-                  to={`/issues/${issueId}/`}
-                  onClick={this._onClickIssue.bind(this)}>
-                    <img src={symbol} className={styles.symbol}/>
-                    <span>{issues[issueId].title}</span>
-            </Link>
-        </li>
-      )
-    })
+    //   return (
+    //     <li key={index}
+    //         onClick={this._updateLocation.bind(this,issueId)}>
+    //         <Link className={`${styles.navItem} ${activeStyle}`}
+    //               to={`/issues/${issueId}/`}
+    //               onClick={this._onClickIssue.bind(this)}>
+    //                 <img src={symbol} className={styles.symbol}/>
+    //                 <span>{issues[issueId].title}</span>
+    //         </Link>
+    //     </li>
+    //   )
+    // })
 
+    let issuesActive = (location === "issues") ? styles.active : "";
+    let constituenciesActive = (location === "constituencies") ? styles.active : "";
     let partiesActive = (location === "parties") ? styles.active : "";
     let aboutActive = (location === "about") ? styles.active : "";
+
     let symbol_parties = require('./images/symbols_parties.svg');
     let symbol_about = require('./images/symbols_about.svg');
     let menu = require('./images/menu.svg');
@@ -93,14 +96,39 @@ export default class Appbar extends Component {
 
               <ul className={`${styles.lists} ${showStyle}`}>
 
-                {issueItems}
+                <li onClick={this._updateLocation.bind(this,'issues')}>
+                    <Link className={`${styles.navItem} ${issuesActive}`}
+                          to={`/issues/`}
+                          onClick={this._hideMenu.bind(this)}>
+                            <img src={symbol_about} className={styles.symbol}/>
+                            <span>議題攻城戰</span>
+                    </Link>
+                </li>
+
+                <li onClick={this._updateLocation.bind(this,'constituencies')}>
+                    <Link className={`${styles.navItem} ${constituenciesActive}`}
+                          to={`/constituencies/`}
+                          onClick={this._hideMenu.bind(this)}>
+                            <img src={symbol_about} className={styles.symbol}/>
+                            <span>勇者競技場</span>
+                    </Link>
+                </li>
+
+                <li onClick={this._updateLocation.bind(this,'parties')}>
+                    <Link className={`${styles.navItem} ${partiesActive}`}
+                          to={`/parties/`}
+                          onClick={this._hideMenu.bind(this)}>
+                            <img src={symbol_about} className={styles.symbol}/>
+                            <span>黨團衝突戰</span>
+                    </Link>
+                </li>
 
                 <li onClick={this._updateLocation.bind(this,'about')}>
                     <Link className={`${styles.navItem} ${aboutActive}`}
-                          to={`/about/`}
+                          to={`/about/FAQ`}
                           onClick={this._hideMenu.bind(this)}>
                             <img src={symbol_about} className={styles.symbol}/>
-                            <span>關於我們</span>
+                            <span>FAQ</span>
                     </Link>
                 </li>
               </ul>
