@@ -1,0 +1,27 @@
+.wrap {
+	position: relative;
+	max-width: 400px;
+	margin: 0 auto;
+}
+select.selector {
+	display: block;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #D0D3D5;
+   	border-radius: 0px;
+    border: 0;
+    height: 40px;
+    font-size: 20px;
+}
+.option {
+	width: 100%;
+}
+.button {
+	margin: 0 auto;
+    display: block;
+    padding: 4px 20px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background: #026466;
+}

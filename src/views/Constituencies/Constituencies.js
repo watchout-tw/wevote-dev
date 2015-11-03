@@ -4,70 +4,35 @@ import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
+import DistrictSelector from '../../components/DistrictSelector/DistrictSelector.js';
 import Footer from '../../components/Footer/Footer.js';
 import Social from '../../components/Social/Social.js';
 
-import {load} from '../../ducks/candidates.js';
 
 @connect(
-    state => ({
-                candidates: state.candidates.data
-              }),
-    dispatch => bindActionCreators({load}, dispatch))
+    state => ({}),
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class Constituencies extends Component {
   constructor(props){super(props)
     this.state = {
-      candidates: ""
-    }
-
-  }
-  componentWillMount(){
-    this.props.load();
-  }
-  componentWillReceiveProps(nextProps){
-    if(nextProps.candidates){
-      let remoteData = [];
-      // when this data was used multitimes, move it to utilities
-      nextProps.candidates.value.map((value,index)=>{
-          if(value['選區'] === '1'){
-              remoteData.push({
-                  name: value['姓名'],
-                  marriageEquality: {
-                    position: value['婚姻平權-立場'],
-                    statement: value['婚姻平權-補充意見']
-                  }
-              })
-          }
-      })
-      this.setState({
-        candidates: remoteData
-      })
     }
   }
   render() {
     const styles = require('./Constituencies.scss');
-    const {load} = this.props;
-    const {candidates} = this.state;
-    let candidateItem;
-    if(candidates){
-      candidateItem = candidates.map((value,index)=>{
-          return (
-            <div key={index}>{value.name}
-              <div>婚姻平權立場：{value.marriageEquality.position}</div>
-              <div>補充意見：{value.marriageEquality.statement}</div>
-            </div>
-          )
-      })
-    }
-   
-   
+    
     return (
-      <div className={styles.constituencies}>
-          {candidateItem}
-        
-        
-         <button onClick={load}>Reload from server</button>
+      <div className={styles.wrap}>
+          <div className={styles.table}>
+              <div className={styles.map}></div>
+          </div>
+          <div className={styles.instruction}>
+              <p className={styles.paragraph}>每屆勇者大選，將開啟兩大戰場：勇者競技場和黨團衝突戰。</p>
+              <p className={styles.paragraph}>勇者競技場，全島分成 75 個不同區域，每區只會產生一名勝利者。勇者將在每區競技場裡爭取各地島嶼主人的信任，取得代表民意的機會。誰能成為最終的競技場王者，就由觀戰的你來決定！</p>
+              <p className={styles.paragraph}>島嶼主人！請選出你想觀戰的競技場區域：</p>
+              <DistrictSelector />
+          </div>
+          
       </div>
     );
   }
