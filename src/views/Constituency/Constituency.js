@@ -18,11 +18,14 @@ export default class Constituency extends Component {
   }
   render() {
     const styles = require('./Constituency.scss');
+    const {area, areaNo} = this.props.params;
     
     return (
       <div className={styles.wrap}>
-          Constituency 
-          {this.props.params}
+          <div className={styles.areaFlag}>
+            <div>{area}</div>
+            <div>{areaNo}</div>
+          </div>
       </div>
     );
   }
