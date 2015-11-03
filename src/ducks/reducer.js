@@ -9,6 +9,7 @@ import FAQ from './FAQ';
 import processingState from './processingState';
 
 import candidates from './candidates';
+import candidateDynamicData from './candidateDynamicData';
 
 export default combineReducers({
   legislators,
@@ -17,5 +18,6 @@ export default combineReducers({
   records,
   FAQ,
   processingState,
-  candidates
+  candidates,
+  candidateDynamicData
 });

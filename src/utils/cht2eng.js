@@ -18,6 +18,24 @@ export default function cht_to_eng(cht){
     			return 'MKT';
     		case '無黨團結聯盟':
     		 	return 'NSU';
+            case '時代力量':
+                return 'NPP';
+            case '綠黨社會民主黨聯盟':
+                return 'GSD';
+            case '新黨':
+                return 'NP';
+            case '軍公教聯盟黨':
+                return 'MCFAP';
+            case '樹黨':
+                return 'TP';
+            case '台灣獨立黨':
+                return 'TIP';
+            case '信心希望聯盟':
+                return 'FHL';
+            case '中華民國機車黨':
+                return 'MPR'
+            case '自由台灣黨':
+                return 'FTP'
     		case '無黨':
     			return 'NONE';
     		case '無黨籍':
