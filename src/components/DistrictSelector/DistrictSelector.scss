@@ -16,12 +16,16 @@ select.selector {
 .option {
 	width: 100%;
 }
-.button {
+.buttonWrap {
+    text-align: center;
+}
+.button, .button:visited {
 	margin: 0 auto;
-    display: block;
+    display: inline-block;
     padding: 4px 20px;
     font-size: 20px;
     border: none;
     color: white;
     background: #026466;
+    text-decoration: none;
 }

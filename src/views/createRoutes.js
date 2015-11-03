@@ -22,6 +22,7 @@ import MatchGame from 'views/MatchGame/MatchGame.js';
 
 import Issues from 'views/Issues/Issues.js';
 import Constituencies from 'views/Constituencies/Constituencies.js';
+import Constituency from 'views/Constituency/Constituency.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
 
@@ -32,6 +33,7 @@ export default function(store) {
       
       <Route path="/issues/" component={Issues}/>
       <Route path="/constituencies/" component={Constituencies}/>
+      <Route path="/constituencies/:area/:areaNo" component={Constituency}/>
 
 
 

@@ -2,34 +2,37 @@ import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
+import district2eng from '../../utils/district2eng'
 
 export default class DistrictSelector extends Component {
   constructor(props){ super(props)
     this.state = {
         topMenuValue: "",
-        bottomMenuValue: ""
+        bottomMenuValue: 1
     }
   }
-  _onSelectTopMenu(event, value){
+  _onSelectTopMenu(event){
     let node = this.refs.topMenu.getDOMNode();
     this.setState({
         topMenuValue: node.value
     })
   }
-  _onSelectBottomMenu(event, value){
+  _onSelectBottomMenu(event){
     let node = this.refs.bottomMenu.getDOMNode();
     this.setState({
         bottomMenuValue: node.value
     })
   }
   _onGo(){
-    const {topMenuValue, bottomMenuValue} = this.state;
+    let {topMenuValue, bottomMenuValue} = this.state;
+    
+
     console.log(`${topMenuValue}第${bottomMenuValue}`);
 
   }
   render() {
     const styles = require('./DistrictSelector.scss');
-    const {topMenuValue} = this.state;
+    const {topMenuValue, bottomMenuValue} = this.state;
 
     let topMenuOptions = districtData.district.map((value, index)=>{
       return (
@@ -48,6 +51,16 @@ export default class DistrictSelector extends Component {
       });
     }
 
+    let goButton;
+    if(topMenuValue && topMenuValue!=='請選擇'){
+        goButton = (
+          <div className={styles.buttonWrap}>
+              <Link to={`/constituencies/${district2eng(topMenuValue)}/${bottomMenuValue}`} 
+                    className={styles.button}>GO</Link>
+          </div>
+        )
+    }
+  
     return (
         <div className={styles.wrap}>
             <select onChange={this._onSelectTopMenu.bind(this)} ref="topMenu"
@@ -59,9 +72,8 @@ export default class DistrictSelector extends Component {
                     className={styles.selector}>
                 {bottomMenuOptions}
             </select>
-            <button onClick={this._onGo.bind(this)}
-                    className={styles.button}>GO</button>
-        </div>
+            {goButton}
+        </div>    
     )
   }
 
