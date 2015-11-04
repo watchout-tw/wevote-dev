@@ -1,10 +1,12 @@
 @import '../../common.scss';
 .wrap {
 	position: relative;
+    min-height: 300px;
 }
 .cardItems {
 	text-align: center;
 	margin-top: 10vh;
+    margin-bottom: 100px;
 }
 .cardItem {
 	display: inline-block;

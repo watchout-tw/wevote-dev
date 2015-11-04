@@ -1,12 +1,31 @@
 .wrap {
-	position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+.bgWrap {
+    overflow: hidden;
+    perspective: 4000px;
+    width: 100vw;
+    height: 100vh;
+}
+.background {
+	position: fixed;
 	background: url(./images/hall.jpg);
 	background-size: cover;
-	min-height: 100vh;
 	padding-right: 120px;
     position: absolute;
-    left: 0;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    transform-style: preserve-3d; 
+}
+.mainContent {
+    position: absolute;
+    top: 50px;;
+    padding-top: 10vh;
     width: 100%;
+    min-height: 100vh;
 }
 .areaFlag {
 	position: absolute;
@@ -20,4 +39,25 @@
     font-size: 22px;
     box-shadow: 2px 4px 20px 0 rgba(0,0,0,0.4);
     border: 4px solid white;
+}
+.action {
+    display: block;
+    text-align: center;
+}
+.actionButton {
+    display: inline-block;
+    border: 2px solid #0B5462;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin: 20px;
+    background: #005060;
+    box-shadow: 2px 3px 10px 0 rgba(0,0,0,0.12);
+    color: white;
+    font-size: 20px;
+}
+.resultButton {
+    cursor: pointer;
+    border-bottom: 1px solid;
+    display: inline-block;
+    padding: 4px;
 }

@@ -24,8 +24,15 @@ export default class PeoplePhoto extends Component {
 
     const styles = require('./PeoplePhoto.scss');
     const {legislators, candidates, id} = this.props;
-    const people = legislators[id] || candidates[id];//////這裡要再想想，目前所有的人是分散在兩個地方，這樣好不好
+    let people;
+    if(candidates[id]){
+      people = candidates[id];//////這裡要再想想，目前所有的人是分散在兩個地方，這樣好不好
+    }else{
+      people = legislators[id];
+    }
 
+    if(!people.party)
+      return <div></div>
 
     let {name, party} = people;
     let imgURL;
