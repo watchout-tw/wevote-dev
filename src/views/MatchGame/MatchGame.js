@@ -8,6 +8,8 @@ import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar';
 
 import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
+import getDistrictCandidates from '../../utils/getDistrictCandidates';
+import getMatchgameData from '../../utils/getMatchgameData';
 
 const fakeData = {
   "蔣乃辛": {
@@ -233,7 +235,10 @@ const fakeData = {
 }
 
 @connect(
-    state => ({issues: state.issues}),
+    state => ({
+      issues: state.issues,
+      candidates: state.candidates
+    }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class MatchGame extends Component {
@@ -263,18 +268,12 @@ export default class MatchGame extends Component {
           "recall" : "nay"
         }
       */
-      let matchData = {};
-      Object.keys(fakeData).map((peopleName,i)=>{
-          matchData[peopleName] = {};
-          let currentData = fakeData[peopleName];
 
-          Object.keys(currentData).map((issueName, k)=>{
-              
-              matchData[peopleName] [issueName] = currentData[issueName].promise.position;
-              if(currentData[issueName].record){
-                matchData[peopleName][issueName] = currentData[issueName].record.position;
-              }
-          })
+      let candidateList = getDistrictCandidates(props.candidates, props.params.area, props.params.areaNo);
+
+      let matchData = {};
+      candidateList.map((people,i)=>{
+          matchData[people.name] = {};
       })
 
       this.state = {
