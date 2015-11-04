@@ -61,7 +61,8 @@ export default class Constituency extends Component {
                                          areaNo={areaNo}/>
               
               <div className={styles.action}>
-                  <div className={styles.actionButton}>進入競技場</div>
+                  <Link className={styles.actionButton}
+                        to={`/constituencies/${area}/${areaNo}/matchgame`}>進入競技場</Link>
                   <div><div className={styles.resultButton}>直接看結果</div></div>
               </div>
 

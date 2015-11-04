@@ -241,14 +241,14 @@ export default class MatchGame extends Component {
       issues: PropTypes.object.isRequired
   }
   constructor(props){ super(props)
-      let qaSet = Object.keys(props.issues).map((issueId, index)=>{
+      let qaSet = Object.keys(props.issues).map((issueName, index)=>{
         return {
             id: `Question${index}`,
-            issueId: issueId,
+            issueName: issueName,
             order: index,
-            title: props.issues[issueId].title,
-            description: props.issues[issueId].question,
-            statement: props.issues[issueId].statement,
+            title: props.issues[issueName].title,
+            description: props.issues[issueName].question,
+            statement: props.issues[issueName].statement,
         }
       })
 
@@ -268,11 +268,11 @@ export default class MatchGame extends Component {
           matchData[peopleName] = {};
           let currentData = fakeData[peopleName];
 
-          Object.keys(currentData).map((issueId, k)=>{
+          Object.keys(currentData).map((issueName, k)=>{
               
-              matchData[peopleName] [issueId] = currentData[issueId].promise.position;
-              if(currentData[issueId].record){
-                matchData[peopleName][issueId] = currentData[issueId].record.position;
+              matchData[peopleName] [issueName] = currentData[issueName].promise.position;
+              if(currentData[issueName].record){
+                matchData[peopleName][issueName] = currentData[issueName].record.position;
               }
           })
       })
@@ -353,13 +353,13 @@ export default class MatchGame extends Component {
       //console.log(scrollTop);
       //console.log(this.state.showAnswerSection)
   }
-  _onChooseConflict(name, issueId, pos){
+  _onChooseConflict(name, issueName, pos){
       // console.log("* onChooseConflict")
-      // console.log(`決定 ${name} 在 ${issueId} 的立場是 ${pos}`);
+      // console.log(`決定 ${name} 在 ${issueName} 的立場是 ${pos}`);
 
       // 更新 matchData
       let {matchData} = this.state;
-      matchData[name][issueId] = pos;
+      matchData[name][issueName] = pos;
       this.setState({
           matchData: matchData
       })
@@ -377,12 +377,12 @@ export default class MatchGame extends Component {
       */
 
   }
-  _recordUserChoice(issueId, order, choice) {
-      //console.log("record user choice:"+issueId+"-"+choice)
+  _recordUserChoice(issueName, order, choice) {
+      //console.log("record user choice:"+issueName+"-"+choice)
       
       let currentChoices = this.state.userChoices;
 
-      // if(currentChoices[issueId]){
+      // if(currentChoices[issueName]){
       //    return;//如果已經回答過，不再重複登記
       // }
 
@@ -392,7 +392,7 @@ export default class MatchGame extends Component {
           completed: true
         })
       }
-      currentChoices[issueId] = choice;
+      currentChoices[issueName] = choice;
 
       this.setState({
           userChoices: currentChoices
@@ -420,15 +420,15 @@ export default class MatchGame extends Component {
         let points = 0;
         let currentPeople = matchData[peopleName];
 
-        Object.keys(currentPeople).map((issueId,k)=>{
+        Object.keys(currentPeople).map((issueName,k)=>{
             // 如果立場相同，並且使用者選擇的不是「沒意見」，加一分
-            if((userChoices[issueId] === currentPeople[issueId])&&(userChoices[issueId]!=="none")){
+            if((userChoices[issueName] === currentPeople[issueName])&&(userChoices[issueName]!=="none")){
                 points++;
             }  
             // 如果立場相反，扣一分
             if(
-                (userChoices[issueId] === "aye" && currentPeople[issueId] === "nay")||
-                (userChoices[issueId] === "nay" && currentPeople[issueId] === "aye")
+                (userChoices[issueName] === "aye" && currentPeople[issueName] === "nay")||
+                (userChoices[issueName] === "nay" && currentPeople[issueName] === "aye")
                ){
                 points--;
             }
@@ -569,17 +569,17 @@ class ResultPKer extends Component {
     let sameOpinions = [];
     let oppositeOpinions = [];
 
-    Object.keys(data).map((issueId,i)=>{
+    Object.keys(data).map((issueName,i)=>{
       
-      if(data[issueId] === userChoices[issueId] && userChoices[issueId] !== "none"){
-          sameOpinions.push(issueId);
+      if(data[issueName] === userChoices[issueName] && userChoices[issueName] !== "none"){
+          sameOpinions.push(issueName);
       }
 
       if(
-       (data[issueId] === "aye" && userChoices[issueId] === "nay")||
-       (data[issueId] === "nay" && userChoices[issueId] === "aye")
+       (data[issueName] === "aye" && userChoices[issueName] === "nay")||
+       (data[issueName] === "nay" && userChoices[issueName] === "aye")
       ){
-          oppositeOpinions.push(issueId);       
+          oppositeOpinions.push(issueName);       
       } 
 
     })

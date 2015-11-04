@@ -44,7 +44,7 @@
     display: block;
     text-align: center;
 }
-.actionButton {
+.actionButton, .actionButton:visited {
     display: inline-block;
     border: 2px solid #0B5462;
     cursor: pointer;
@@ -54,6 +54,7 @@
     box-shadow: 2px 3px 10px 0 rgba(0,0,0,0.12);
     color: white;
     font-size: 20px;
+    text-decoration: none;
 }
 .resultButton {
     cursor: pointer;

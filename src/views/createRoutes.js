@@ -34,8 +34,7 @@ export default function(store) {
       <Route path="/issues/" component={Issues}/>
       <Route path="/constituencies/" component={Constituencies}/>
       <Route path="/constituencies/:area/:areaNo" component={Constituency}/>
-
-
+      <Route path="/constituencies/:area/:areaNo/matchgame" component={MatchGame}/>
 
       <Route path="/issues/:issueName" component={Issue}/>
       <Route path="/issues/:issueName/:viewName" component={Issue}/>
@@ -58,8 +57,6 @@ export default function(store) {
       <Route path="/clarify" component={Clarify}/>
       <Route path="/subscribe" component={Subscribe}/>
       <Route path="/subscribe/:state" component={Subscribe}/>
-
-      <Route path="/matchgame" component={MatchGame}/>
       
       <Route path="/404" component={NotFound}/>
       <Route path="*" component={NotFound}/>
