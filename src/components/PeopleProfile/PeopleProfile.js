@@ -8,7 +8,10 @@ import peopleInfo from '../../utils/peopleInfo';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 @connect(
-    state => ({legislators: state.legislators}),
+    state => ({
+      legislators: state.legislators,
+      candidates: state.candidates
+    }),
     dispatch => bindActionCreators({}, dispatch))
 
 
@@ -21,14 +24,14 @@ export default class PeopleProfile extends Component {
   render () {
     const styles = require('./PeopleProfile.scss');
 
-    const {legislators, id} = this.props;
-    const legislator = legislators[id];
+    const {legislators, candidates, id} = this.props;
+    const people = legislators[id] || candidates[id];
 
     let {name, parties, gender, age, constituency1, constituency2,
-         isCandidate, candidateConstituency1, candidateConstituency2, hasResigned} = legislator;
+         isCandidate, candidateConstituency1, candidateConstituency2, hasResigned} = people;
 
     let info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateConstituency1, candidateConstituency2);
-    let partiesItem = parties.map((p,index)=>{
+    let partiesItem = (parties || []).map((p,index)=>{
         let partyEng = cht2eng(p.partyCht);
         return (
           <div key={index}>

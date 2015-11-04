@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
+import CandidateProfileCards from '../../components/CandidateProfileCards/CandidateProfileCards.js';
 import Footer from '../../components/Footer/Footer.js';
 import Social from '../../components/Social/Social.js';
 
@@ -26,6 +27,8 @@ export default class Constituency extends Component {
             <div>{area}</div>
             <div>{areaNo}</div>
           </div>
+          <CandidateProfileCards area={area}
+                                 areaNo={areaNo}/>
       </div>
     );
   }

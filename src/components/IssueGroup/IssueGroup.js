@@ -24,6 +24,8 @@ export default class IssueGroup extends Component {
     const styles = require('./IssueGroup.scss');
     const id = this.props.id;
     const {currentLegislatorPosition} = this.props;
+    if(!currentLegislatorPosition)//候選人沒有這個圖表
+        return <div></div>
 
     const {name, positions} = currentLegislatorPosition;
 

@@ -1,0 +1,67 @@
+@import '../../common.scss';
+.wrap {
+	position: relative;
+}
+.cardItems {
+	text-align: center;
+	margin-top: 10vh;
+}
+.cardItem {
+	display: inline-block;
+	border: 1px solid;
+    margin: 30px 8px;
+    width: 200px;
+    height: 280px;
+    background: rgba(0,0,0,0.8);
+    background-image: url(./images/card.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.reflectBelow { /* only works for safari and chrome */
+	-webkit-box-reflect: below 0
+    -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.75, transparent), to(black)); 
+}
+.partyItem {
+	position: absolute;
+	left: 2px;
+	top: 5px;
+}
+.name {
+	text-align: center;
+	font-size: 20px;
+	padding: 20px;
+	color: white;
+}
+.peoplePhoto {
+	width: 100px;
+    height: 110px;
+    background: white;
+    padding: 10px;
+    border: 3px solid #9D7351;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.goalSection {
+	display: block;
+    background: rgba(56, 38, 23, 0.7);
+    margin: 10px;
+}
+.goalTitle {
+	width: 20px;
+    float: left;
+    padding: 6px 0;
+    margin-left: 10px;
+    font-size: 14px;
+    background: #B28765;
+}
+.goalList {
+	display: inline-block;
+    text-align: left;
+    width: 120px;
+    font-size: 14px;
+    vertical-align: top;
+    padding: 0 10px;
+    color: #f5f5f5;
+}

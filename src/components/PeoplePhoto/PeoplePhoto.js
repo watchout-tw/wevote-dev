@@ -5,7 +5,11 @@ import { connect } from 'react-redux';
 import eng2party_short from '../../utils/eng2party_short';
 
 @connect(
-    state => ({legislators: state.legislators}),
+    state => ({
+      legislators: state.legislators,
+      candidates: state.candidates
+
+    }),
     dispatch => bindActionCreators({}, dispatch))
 
 
@@ -19,10 +23,11 @@ export default class PeoplePhoto extends Component {
   render () {
 
     const styles = require('./PeoplePhoto.scss');
-    const {legislators, id} = this.props;
-    const legislator = legislators[id];
+    const {legislators, candidates, id} = this.props;
+    const people = legislators[id] || candidates[id];//////這裡要再想想，目前所有的人是分散在兩個地方，這樣好不好
 
-    let {name, party} = legislator;
+
+    let {name, party} = people;
     let imgURL;
 
     try {

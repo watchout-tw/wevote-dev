@@ -48,11 +48,8 @@ export function load() {
                 .get('http://cors.io/?u='+sheetsuURL)
                 .set('Accept', 'application/json')
                 .end(function(err, res){
-                    console.log(res);
-                    console.log("---");
                     
                     let value = JSON.parse(res.text).result;
-                    console.log(value);
                     resolve({
                        value: value
                     });

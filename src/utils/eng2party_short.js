@@ -36,7 +36,7 @@ export default function eng2party_short(input){
         return '無黨籍'
       
       default:
-      	throw "No party cht short found.";
+      	return "No party cht short found."+input;
     }
 }
 

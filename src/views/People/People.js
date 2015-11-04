@@ -13,6 +13,7 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 @connect(
     state => ({  
                  legislators: state.legislators,
+                 candidates: state.candidates,
                  records: state.records,
                  issues: state.issues
                }),
@@ -31,8 +32,16 @@ export default class People extends Component {
   }
   render() {
     const styles = require('./People.scss');
+    
     const id = this.props.params.peopleId;
-    const name = this.props.legislators[id].name;
+    const {legislators, candidates} = this.props;
+    let name;
+    if(legislators[id]){
+      name = legislators[id].name;
+    }else{
+      name = candidates[id].name;
+    }
+    
     const {legislatorPositions} = this.state;
     const currentLegislatorPosition = legislatorPositions[name];
     

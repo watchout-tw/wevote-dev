@@ -3,7 +3,10 @@
 	background: url(./images/hall.jpg);
 	background-size: cover;
 	min-height: 100vh;
-	padding-right: 120px
+	padding-right: 120px;
+    position: absolute;
+    left: 0;
+    width: 100%;
 }
 .areaFlag {
 	position: absolute;
