@@ -25,11 +25,11 @@ export default class Constituency extends Component {
       window.removeEventListener('mousemove', this._handleMouseMove.bind(this));
   }
   _handleMouseMove(e){
-      console.log(`(${e.pageX},${e.pageY})`)
+      //console.log(`(${e.pageX},${e.pageY})`)
       let midX = window.innerWidth/2;
       let relativeXPos = (e.pageX - midX) / window.innerWidth * 100;
       relativeXPos = relativeXPos/4;
-      console.log("relativeXPos:"+relativeXPos)
+      //console.log("relativeXPos:"+relativeXPos)
       this.setState({
         degreeY: relativeXPos
       })

@@ -7,6 +7,7 @@ export default function getDistrictCandidates(candidates, area, areaNo){
             result.push(people);
         }
     })
+    console.log(result)
     return result;
    
 }

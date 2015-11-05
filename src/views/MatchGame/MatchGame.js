@@ -8,272 +8,39 @@ import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar';
 
 import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
+import url2eng from '../../utils/url2eng';
+
+import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
 import getMatchgameData from '../../utils/getMatchgameData';
+import parseDynamicData from '../../utils/parseDynamicData';
 
-const fakeData = {
-  "蔣乃辛": {
-      "marriage-equality": {
-          "record" : { "position": "none" },
-          "promise" : { 
-            "position": "aye",
-            "statement": "我理解到人權的重要，未來將以行動支持同性婚姻合法化。"
-          }
-      },
-      "recall": {
-          "record" : { "position": "none" },
-          "promise" : { 
-            "position": "none",
-            "statement": "罷免這個議題很複雜，牽涉到很多相關的機制，無法簡單的說贊成或反對。"
-          }
-      },
-      "referendum": {
-          "record" : { "position": "none" },
-          "promise" : { 
-            "position": "aye",
-            "statement": ""
-          }
-      },
-      "nuclear-power": {
-          "record" : { "position": "nay" },
-          "promise" : { 
-            "position": "aye",
-            "statement": "因為國民黨後來贊成停建了，所以我也決定遵從黨的意志。"
-          }
-      },
-  },
-  "范雲" : {
-      "marriage-equality": {
-          "promise" : {
-            "position": "aye",
-            "statement": "社民黨支持同性婚姻合法化。"
-          } 
-      },
-      "recall": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          } 
-      },
-      "referendum": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          }
-      },
-      "nuclear-power": {
-          "record" : { "position": "none" },
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          } 
-      }
-  },
-  "陳家宏" : {
-
-      "marriage-equality": {
-          "promise" : {
-            "position": "nay",
-            "statement": ""
-          } 
-      },
-      "recall": {
-          "promise" : {
-              "position": "none",
-              "statement": ""
-          } 
-      },
-      "referendum": {
-          "promise" : {
-              "position": "none",
-              "statement": ""
-          }
-      },
-      "nuclear-power": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          } 
-      }
-  },
-  "吳旭智" : {
-    
-      "marriage-equality": {
-          "promise" : {
-            "position": "none",
-            "statement": "需要社會共識"
-          } 
-      },
-      "recall": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          } 
-      },
-      "referendum": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          }
-      },
-      "nuclear-power": {
-          "promise" : {
-              "position": "nay",
-              "statement": ""
-          } 
-      }
-   
-  },
-  "曾獻瑩": {
-    
-      "marriage-equality": {
-          "promise" : {
-            "position": "aye",
-            "statement": ""
-          } 
-      },
-      "recall": {
-          "promise" : {
-              "position": "nay",
-              "statement": ""
-          } 
-      },
-      "referendum": {
-          "promise" : {
-              "position": "none",
-              "statement": ""
-          }
-      },
-      "nuclear-power": {
-          "promise" : {
-              "position": "nay",
-              "statement": ""
-          } 
-      }
-  },
-  "林珍妤" : {
-
-      "marriage-equality": {
-          "promise" : {
-            "position": "nay",
-            "statement": ""
-          } 
-      },
-      "recall": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          } 
-      },
-      "referendum": {
-          "promise" : {
-              "position": "none",
-              "statement": ""
-          }
-      },
-      "nuclear-power": {
-          "promise" : {
-              "position": "nay",
-              "statement": ""
-          } 
-      }
-  },
-  "龎維良" : {
-
-      "marriage-equality": {
-          "promise" : {
-            "position": "nay",
-            "statement": ""
-          } 
-      },
-      "recall": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          } 
-      },
-      "referendum": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          }
-      },
-      "nuclear-power": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          } 
-      }
-    
-  },
-  "周芳如" : {
-      "marriage-equality": {
-          "promise" : {
-            "position": "none",
-            "statement": ""
-          } 
-      },
-      "recall": {
-          "promise" : {
-              "position": "none",
-              "statement": ""
-          } 
-      },
-      "referendum": {
-          "promise" : {
-              "position": "none",
-              "statement": ""
-          }
-      },
-      "nuclear-power": {
-          "promise" : {
-              "position": "aye",
-              "statement": ""
-          } 
-      }
-  }
-}
+import {load} from '../../ducks/candidateDynamicData.js';
 
 @connect(
     state => ({
+      legislators: state.legislators,
+      candidates: state.candidates,
+      records: state.records,
       issues: state.issues,
-      candidates: state.candidates
+      candidateDynamicData: state.candidateDynamicData.data
     }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({load}, dispatch))
 
 export default class MatchGame extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired
   }
   constructor(props){ super(props)
-      let qaSet = Object.keys(props.issues).map((issueName, index)=>{
+      let qaSet = Object.keys(props.issues).map((issueUrl, index)=>{
         return {
             id: `Question${index}`,
-            issueName: issueName,
+            issueName: url2eng(issueUrl),
             order: index,
-            title: props.issues[issueName].title,
-            description: props.issues[issueName].question,
-            statement: props.issues[issueName].statement,
+            title: props.issues[issueUrl].title,
+            description: props.issues[issueUrl].question,
+            statement: props.issues[issueUrl].statement,
         }
-      })
-
-      /*
-        // matchData format
-        "蔣乃辛": {
-          "marriage-equality": "aye",
-          "recall" : "nay"
-        },
-        "范雲": {
-          "marriage-equality": "aye",
-          "recall" : "nay"
-        }
-      */
-
-      let candidateList = getDistrictCandidates(props.candidates, props.params.area, props.params.areaNo);
-
-      let matchData = {};
-      candidateList.map((people,i)=>{
-          matchData[people.name] = {};
       })
 
       this.state = {
@@ -286,12 +53,70 @@ export default class MatchGame extends Component {
           showRank: false,
           completed: false,
           currentRank: [],
-          matchData: matchData//used for match, because position might conflicts
+
+          candidateDynamicLoad: "",
+          matchData: "",//used for match, because position might conflicts"
+          positionData: ""
 
       }
   }
+  componentWillMount(){
+      this.props.load();
+  }
   componentDidMount(){
       window.addEventListener('scroll', this._onScroll.bind(this));
+  }
+  componentWillReceiveProps(nextProps){
+    console.log("will receive")
+    //拿到 api 的資料了，可以開始計算 matchData
+    if(nextProps.candidateDynamicData){
+      console.log("calculating...")
+     
+      const {records, issues, legislators, candidates} = nextProps;
+      const {area, areaNo} = nextProps.params;
+
+      // 現任立委的歷史表態資料
+      let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
+
+      console.log(area + ", " + areaNo)
+
+      // 這個選區有哪些候選人的清單  
+      let candidateList = getDistrictCandidates(candidates, area, areaNo);
+      
+      // 候選人動態資料，包括承諾、要推動的法案
+      let candidateDynamicData = parseDynamicData(nextProps.candidateDynamicData.value);
+      
+      
+      // 候選人過去跟未來的表態資料
+      let combinedPositionData = getMatchgameData(legislatorPositions, candidateList, candidateDynamicData, area, areaNo);
+
+      // default 單一立場，如有過去，選過去。matchgame 進行後，會依照使用者選擇的更新
+      let matchData = {};
+      Object.keys(combinedPositionData).map((peopleName,i)=>{
+          matchData[peopleName] = {};
+          let currentData = combinedPositionData[peopleName];
+         
+          
+          Object.keys(currentData).map((issueName, k)=>{
+              
+              matchData[peopleName][issueName] = currentData[issueName].promise.position;
+              
+              if(currentData[issueName].record){
+                  matchData[peopleName][issueName] = currentData[issueName].record.position;
+              }
+          })
+      });
+
+      this.setState({
+          candidateDynamicLoad: candidateDynamicData,
+          positionData: combinedPositionData,
+          matchData: matchData
+      })
+
+
+
+
+    }
   }
   componentWillUnmount(){
       window.removeEventListener('scroll', this._onScroll.bind(this));
@@ -374,7 +199,6 @@ export default class MatchGame extends Component {
           "recall" : "nay"
         }
       */
-
   }
   _recordUserChoice(issueName, order, choice) {
       //console.log("record user choice:"+issueName+"-"+choice)
@@ -471,7 +295,10 @@ export default class MatchGame extends Component {
     const styles = require("./MatchGame.scss")
     const {issues} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
-         currentRank, showRank, completed, matchData} = this.state;
+         currentRank, showRank, completed, 
+         matchData, positionData} = this.state;
+
+    if(!matchData) return <div>Processing...</div>
 
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
@@ -480,7 +307,7 @@ export default class MatchGame extends Component {
                        userChoices={userChoices}
                        conflictHandler={this._onChooseConflict.bind(this)}
                        recordHandler={this._recordUserChoice.bind(this)}
-                       candidatePositions={fakeData}
+                       candidatePositions={positionData}
                        matchData={matchData}
                        maxIndex={qaSet.length-1}
                        unlockNext={this._unlockNext.bind(this)}

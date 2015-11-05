@@ -1,3 +1,12 @@
+import cht2eng from './cht2eng';
+
+function parsePosCht(input){
+  if(!input){
+    return "none";
+  }else{
+    return cht2eng(input);
+  }
+}
 export default function parseDynamicData(rawData){
 	let remoteData = {};
     
@@ -7,19 +16,19 @@ export default function parseDynamicData(rawData){
           remoteData[name] = {   
               name: name,
               marriageEquality: {
-                position: value['婚姻平權-立場'],
+                position: parsePosCht(value['婚姻平權-立場']),
                 statement: value['婚姻平權-補充意見']
               },
               recall: {
-                position: value['罷免-立場'],
+                position: parsePosCht(value['罷免-立場']),
                 statement: value['罷免-補充意見']
               },
               referendum: {
-                position: value['公投-立場'],
+                position: parsePosCht(value['公投-立場']),
                 statement: value['公投-補充意見']
               },
-              newclearPower: {
-                position: value['核能-立場'],
+              nuclearPower: {
+                position: parsePosCht(value['核能-立場']),
                 statement: value['核能-補充意見']
               },
               goals: [
@@ -38,6 +47,7 @@ export default function parseDynamicData(rawData){
               ] 
           }
       });
+
 	  return remoteData;
 
 

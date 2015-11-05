@@ -1,11 +1,49 @@
 export default function getMatchgame(legislatorPositions, candidateList, dynamicData, area, areaNo){
-    // 編列過去表態紀錄資料
+    let result = {};
+    let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower"];//Hmmm....
 
+    candidateList.map((people, index)=>{
+        result[people.name] = {};//initialize 每個候選人
+        issueList.map((issueName, k)=>{
+            result[people.name][issueName] = {};//initialize 每個議題
 
-    // 針對未來的表態資料
+            //過去紀錄
+            if(legislatorPositions[people.name]){
+                // ["none","unknown","evading"] 都是 none
+                // view 的處理可以拿掉了
+                let recordPosition = legislatorPositions[people.name].positions[issueName].dominantPosition;
+                if(["none","unknown","evading"].indexOf(recordPosition) !== -1){
+                  recordPosition = "none";
+                }
+                result[people.name][issueName].record = {
+                    position : recordPosition
+                }
+            }
+            //未來承諾
+            result[people.name][issueName].promise = dynamicData[people.name][issueName];// { position: 'aye', statement: ... }
+            
+        })
+
+    })
+    
+    return result;
     
 }
 /*
+
+// candiateList
+[
+  { 
+      districtArea: "TPE"
+      districtNo: "1"
+      id: "1"
+      name: "丁守中"
+      party: "KMT"
+  },
+  {
+    ...next candidate
+  }
+]
 // legislatorPositions format
 
 "丁守中" : {
@@ -35,7 +73,7 @@ remoteData[name] = {
       position: value['公投-立場'],
       statement: value['公投-補充意見']
     },
-    newclearPower: {
+    nuclearPower: {
       position: value['核能-立場'],
       statement: value['核能-補充意見']
     },

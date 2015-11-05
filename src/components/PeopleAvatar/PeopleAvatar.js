@@ -4,7 +4,10 @@ import { Link } from "react-router";
 import { connect } from 'react-redux';
 
 @connect(
-    state => ({legislators: state.legislators}),
+    state => ({ 
+      legislators: state.legislators,
+      candidates: state.candidates
+    }),
     dispatch => bindActionCreators({}, dispatch))
 
 
@@ -19,13 +22,15 @@ export default class PeopleeAvatar extends Component {
 
     const styles = require('./PeopleAvatar.scss');
 
-    const {legislators, id} = this.props;
-    const legislator = legislators[id];
+    const {legislators, candidates, id} = this.props;
+    let people = legislators[id] || candidates[id];
    
-    if(!legislator) return <div></div>
+    if(!people){
+      return <div>err</div>
+    }
 
 
-    let {name, party} = legislator;
+    let {name, party} = people;
     let imgURL;
 
     try {

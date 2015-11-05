@@ -35,9 +35,20 @@ export default class QAItem extends Component {
         
         let currentPeople = candidatePositions[peopleName];
         //both have data
-        if(currentPeople[data.issueId].record && currentPeople[data.issueId].promise){
+        if(currentPeople[data.issueName].record && currentPeople[data.issueName].promise){
+            //需要處理 ["none","unknown","evading"] 都是未表態
             //position not the same
-            if(currentPeople[data.issueId].record.position !== currentPeople[data.issueId].promise.position){
+
+            let recordPosition = currentPeople[data.issueName].record.position;
+            if(["none","unknown","evading"].indexOf(recordPosition) !== -1){
+                recordPosition = "none";
+            }
+            let promisePosition = currentPeople[data.issueName].promise.position;
+            if(["none","unknown","evading"].indexOf(promisePosition) !== -1){
+                promisePosition = "none";
+            }
+
+            if( recordPosition !== promisePosition){
                 conflictPeople[peopleName] = candidatePositions[peopleName];
             }
         }
@@ -85,7 +96,7 @@ export default class QAItem extends Component {
 
     }
  
-    recordHandler(data.issueId, data.order, choice);
+    recordHandler(data.issueName, data.order, choice);
     this._scrollToAnswer();
   }
   _onShowAnser(){
@@ -175,7 +186,7 @@ export default class QAItem extends Component {
                          onClick={this._scrollToNextQuestion.bind(this)}>看結果</div> ;
     }
 
-    let userVote = userChoices[data.issueId];
+    let userVote = userChoices[data.issueName];
 
     return (
         <div className={qaItemClasses}
@@ -194,7 +205,7 @@ export default class QAItem extends Component {
             </div>
             <Conflict conflictPeople={conflictPeople}
                       qid={data.id}
-                      issueId={data.issueId}
+                      issueName={data.issueName}
                       statement={data.statement}
                       conflictHandler={conflictHandler}
                       completed={completed}
@@ -203,7 +214,7 @@ export default class QAItem extends Component {
             <div className={styles.resultContnet}>
                 <Answer completed={completed} 
                         qid={data.id}
-                        issueId={data.issueId}
+                        issueName={data.issueName}
                         userVote={userVote}
                         matchData={matchData}/>
                 {toNextItem}
@@ -246,10 +257,10 @@ class Subconflict extends Component {
   }
   render(){
       const styles = require("./QAItem.scss")
-      const {currentPeople, peopleName, conflictChoose, issueId, statement, resolvedConflicts, index, qid} = this.props;
-
-      let recordPosition = currentPeople[issueId].record.position;//過去立場
-      let promisePosition = currentPeople[issueId].promise.position;//現在承諾
+      const {currentPeople, peopleName, conflictChoose, issueName, statement, resolvedConflicts, index, qid} = this.props;
+      
+      let recordPosition = currentPeople[issueName].record.position;//過去立場
+      let promisePosition = currentPeople[issueName].promise.position;//現在承諾
       
       //未表態有三種可能
       let recordIsNone = ["none","unknown","evading"].indexOf(recordPosition)!== -1;
@@ -258,7 +269,7 @@ class Subconflict extends Component {
       //說明的台詞
       let positionStatement = (recordIsNone === true) ? `並未在「${statement}」上表態` : `${eng2cht(recordPosition)}「${statement}」`;
       let futureStatement = (promiseIsNone === true) ? `但他針對未來立場並未明確承諾` : `但他承諾未來將${eng2cht(promisePosition)}`;
-      let additionalStatement = (currentPeople[issueId].promise.statement) ? `同時表示：「${currentPeople[issueId].promise.statement}」` : "";
+      let additionalStatement = (currentPeople[issueName].promise.statement) ? `同時表示：「${currentPeople[issueName].promise.statement}」` : "";
 
       //選擇按鈕的樣式，因為要顯示使用者選了哪一個
       let recordClasses = classnames({
@@ -285,11 +296,11 @@ class Subconflict extends Component {
               </div>
               <div className={styles.conflictActions}>
                   <div className={recordClasses}
-                       onClick={conflictChoose.bind(this,peopleName, issueId, recordPosition, index)}>
+                       onClick={conflictChoose.bind(this,peopleName, issueName, recordPosition, index)}>
                        {`過去紀錄：${this._engPos2choice(recordPosition)}`}
                   </div>
                   <div className={promiseClasses}
-                       onClick={conflictChoose.bind(this,peopleName, issueId, promisePosition, index)}>
+                       onClick={conflictChoose.bind(this,peopleName, issueName, promisePosition, index)}>
                        {`未來承諾：${this._engPos2choice(promisePosition)}`}
                   </div>
               </div>
@@ -314,14 +325,14 @@ class Conflict extends Component {
       })
     }
   }
-  _conflictChoose(name, issueId, pos, currentIndex){
+  _conflictChoose(name, issueName, pos, currentIndex){
     const { conflictPeople, conflictHandler, showAnswerHandler, qid} = this.props;
     
     // console.log("------ onChooseConflict")
-    // console.log(`決定 ${name} 在 ${issueId} 的立場是 ${pos}`);
+    // console.log(`決定 ${name} 在 ${issueName} 的立場是 ${pos}`);
     
     //回報給 MatchGame
-    conflictHandler(name, issueId, pos)
+    conflictHandler(name, issueName, pos)
     
     //自己記錄這一題的 conflict
     let {resolvedConflicts} = this.state;
@@ -354,7 +365,7 @@ class Conflict extends Component {
   }
   render() {
     const styles = require("./QAItem.scss")
-    let {conflictPeople, issueId, statement, completed, qid} = this.props;
+    let {conflictPeople, issueName, statement, completed, qid} = this.props;
     let {resolvedConflicts} = this.state;
 
     let conflictClasses = classnames({
@@ -369,7 +380,7 @@ class Conflict extends Component {
            //過去已經回答過的
            return <Subconflict peopleName={peopleName}
                                currentPeople={conflictPeople[peopleName]}
-                               issueId={issueId}
+                               issueName={issueName}
                                statement={statement}
                                conflictChoose={this._conflictChoose.bind(this)}
                                resolvedConflicts={resolvedConflicts}
@@ -380,7 +391,7 @@ class Conflict extends Component {
             found = true;
             return <Subconflict peopleName={peopleName}
                                 currentPeople={conflictPeople[peopleName]}
-                                issueId={issueId}
+                                issueName={issueName}
                                 statement={statement}
                                 conflictChoose={this._conflictChoose.bind(this)}
                                 resolvedConflicts={resolvedConflicts}
@@ -401,7 +412,7 @@ class Answer extends Component {
   
   render() {
     const styles = require("./QAItem.scss")
-    const {completed, qid, issueId, userVote, matchData} = this.props;
+    const {completed, qid, issueName, userVote, matchData} = this.props;
     let answerClasses = classnames({
         [styles.Answer]: true,
         [styles.isCompleted]: completed === "answer"
@@ -410,7 +421,7 @@ class Answer extends Component {
     let samePositionTitle = (userVote === "none") ? "跟你一樣沒意見的是～" : "跟你相同立場的是～";
     let samePositions = Object.keys(matchData).map((peopleName, i)=>{
       
-        if(matchData[peopleName][issueId] === userVote){
+        if(matchData[peopleName][issueName] === userVote){
             return <div className={styles.samePositionItem}
                         key={`${qid}-${i}`}>{peopleName}</div>
         }
