@@ -36,7 +36,12 @@ export default class Home extends Component {
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
-          NEW HOMEPAGE
+          <div className={styles.innerWrap}>
+              <Link className={styles.tempLink} to={`/issues/`}>議題攻城戰</Link>
+              <Link className={styles.tempLink} to={`/constituencies/`}>勇者競技場</Link>
+              <Link className={styles.tempLink} to={`/parties/`}>黨團衝突戰</Link>
+
+          </div>
       </div>
     );
   }
