@@ -28,7 +28,7 @@ export default function(store) {
     <Route component={App}>
       <Route path="/" component={Home}/>
       
-      <Route path="/reports/ma-xi-meet" component={Report}/>
+      <Route path="/SP/ma-xi-meet" component={Report}/>
 
       <Route path="/issues/:issueName" component={Issue}/>
       <Route path="/issues/:issueName/:viewName" component={Issue}/>
