@@ -20,7 +20,8 @@ export default class LegislatorCards extends Component {
   }
   render() {
     const styles = require('./LegislatorCards.scss');
-    const {MaXiRecords, handleClickCard, activeLegislator, meetFilterValue, procedureFilterValue} = this.props;
+    const {MaXiRecords, handleClickCard, activeLegislator, showBack, handleCloseCard,
+           meetFilterValue, procedureFilterValue} = this.props;
 
     let cardItems = Object.keys(MaXiRecords)
       .filter((currentLegislator, index)=>{
@@ -47,7 +48,9 @@ export default class LegislatorCards extends Component {
       .map((currentLegislator, index)=>{
         return <LegislatorCard data={ MaXiRecords[currentLegislator] }
                                activeLegislator={activeLegislator}
+                               showBack={showBack}
                                handleClickCard={handleClickCard}
+                               handleCloseCard={handleCloseCard}
                                key={`LegislatorCard-${index}`} />
     })
     return (
@@ -76,31 +79,52 @@ function transparent2aye(pos){
 class LegislatorCard extends Component {
   render(){
     const styles = require('./LegislatorCards.scss');
-    const {data, activeLegislator, handleClickCard} = this.props;
+    const {data, activeLegislator, handleClickCard, handleCloseCard, showBack} = this.props;
+
+    console.log("showBack:"+showBack)
+    let shouldShowBack = (showBack === true && data.name === activeLegislator);
+    
+    let outerWrapClasses = classnames({
+      [styles.outerWrap] : true,
+      [styles.showBack] : shouldShowBack === true,
+      [styles.showFront]: shouldShowBack === false
+    })
+
+
     let cardWrapClasses = classnames({
-      [styles.cardWrap]: true,
-      [styles.active]  : data.name === activeLegislator
+      [styles.cardWrap]   : true,
+      [styles.active]     : data.name === activeLegislator
     })
 
     return (
-        <div className={cardWrapClasses}
-             onClick={handleClickCard.bind(null,data.name)}>
-            <div className={styles.photo}><PeoplePhoto id={people_name2id(data.name)}/></div>
-            <div className={styles.peopleName}>{data.name}</div>
-            
-            <div>
-                <div className={`${styles.partyFlag} ${styles.small} ${styles[data.party]}`}></div>
-                <div className={styles.partyTitle}>{eng2cht(data.party)}</div>
-            </div>
-
-            <div className={styles.positions}>
-                <div className={styles.position}>
-                    <div className={styles.posTitle}>支持會面</div>
-                    <div className={`${styles.posPosition} ${styles[data.supportMaXiMeet]}`}>{handlePosEng(data.supportMaXiMeet)}</div>
+        <div className={outerWrapClasses}>
+            <div className={cardWrapClasses}
+                 onClick={handleClickCard.bind(null,data.name)}>
+    
+                <div className={`${styles.card} ${styles.front}`}>
+                    <div className={styles.photo}><PeoplePhoto id={people_name2id(data.name)}/></div>
+                    <div className={styles.peopleName}>{data.name}</div>
+                    
+                    <div>
+                        <div className={`${styles.partyFlag} ${styles.small} ${styles[data.party]}`}></div>
+                        <div className={styles.partyTitle}>{eng2cht(data.party)}</div>
+                    </div>
+        
+                    <div className={styles.positions}>
+                        <div className={styles.position}>
+                            <div className={styles.posTitle}>支持會面</div>
+                            <div className={`${styles.posPosition} ${styles[data.supportMaXiMeet]}`}>{handlePosEng(data.supportMaXiMeet)}</div>
+                        </div>
+                        <div className={styles.position}>
+                            <div className={styles.posTitle}>本次程序</div>
+                            <div className={`${styles.posPosition}  ${styles[transparent2aye(data.positionOnProcedure)]}`}>{handlePosEng(data.positionOnProcedure)}</div>
+                        </div>
+                    </div>
                 </div>
-                <div className={styles.position}>
-                    <div className={styles.posTitle}>本次程序</div>
-                    <div className={`${styles.posPosition}  ${styles[transparent2aye(data.positionOnProcedure)]}`}>{handlePosEng(data.positionOnProcedure)}</div>
+    
+                <div className={`${styles.card} ${styles.back}`}>
+                     <div className={styles.closeCard}
+                          onClick={handleCloseCard.bind(null)}>Close</div>
                 </div>
             </div>
         </div>

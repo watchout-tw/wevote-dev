@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import LegislatorCards from '../../components/LegislatorCards/LegislatorCards.js';
 import RecordStream from '../../components/RecordStream/RecordStream.js';
 
-const breakWebVersion = 500; //跟 scss 同步
+const breakWebVersion = 730; //跟 scss 同步
 
 @connect(
     state => ({
@@ -24,6 +24,7 @@ export default class Report extends Component {
       
       this.state = {
         activeLegislator: array[0],
+        showBack: false,
         fixedStream: false,
         meetFilterValue: "all",
         procedureFilterValue: "all"
@@ -56,12 +57,24 @@ export default class Report extends Component {
   _handleClickCard(name, event){
       console.log("card clicked:"+name)
       if(window.innerWidth < breakWebVersion){//手機版本
-
+          this.setState({
+              activeLegislator: name,
+              showBack: true
+          })
       }else{//網頁版本
           this.setState({
               activeLegislator: name
           })
       }
+  }
+  _handleCloseCard(e){
+      console.log("close!")
+      console.log(e)
+      e.stopPropagation();
+      this.setState({
+          showBack: false,
+          activeLegislator: ""
+      })
   }
   _onChangeMeetFilter(){
     let node = this.refs.meetFilter.getDOMNode();
@@ -82,7 +95,7 @@ export default class Report extends Component {
   render() {
     const styles = require('./Report.scss');
     const {MaXiRecords} = this.props;
-    const {activeLegislator, fixedStream, meetFilterValue, procedureFilterValue} = this.state;
+    const {activeLegislator, showBack, fixedStream, meetFilterValue, procedureFilterValue} = this.state;
 
     let legislatorCardsClasses = classnames({
         [styles.legislatorCards] :true,
@@ -131,6 +144,8 @@ export default class Report extends Component {
               </div>
               <LegislatorCards handleClickCard={this._handleClickCard.bind(this)}
                                activeLegislator={activeLegislator}
+                               showBack={showBack}
+                               handleCloseCard={this._handleCloseCard.bind(this)}
                                meetFilterValue={meetFilterValue}
                                procedureFilterValue={procedureFilterValue}/>
             </div>

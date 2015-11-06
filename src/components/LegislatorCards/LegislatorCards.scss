@@ -7,23 +7,8 @@ $breakWebVersion : 730px;
 	padding: 20px;
 	text-align: center;
 }
-.cardWrap {
-	
-	cursor: pointer;
-	text-align: center;
-	position: relative;
-	
-	background: white;
-	border: 1px solid white;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.12);
-
-    width: 100%;
-    margin: 10px;
-    padding-bottom: 120px;
-}
-/* 手機版顯示背面 */
 .cardWrap.active {
-
+	border: none;
 }
 @media all and (min-width: $breakWebVersion){
 	.cardWrap {
@@ -39,6 +24,8 @@ $breakWebVersion : 730px;
 		border: 3px solid black;
 	}
 }
+
+/* 卡片正面 layout: 人 */
 .photo {
 	text-decoration: none;
 	width: 130px;
@@ -64,6 +51,11 @@ $breakWebVersion : 730px;
 	bottom: 0;
 	width: 100%;
 }
+@media all and (max-width: $breakWebVersion){
+	.showBack .positions {
+		display: none;
+	}
+}
 .position {
 	display: inline-block;
 	width: 50%;
@@ -78,4 +70,74 @@ $breakWebVersion : 730px;
 }
 .posPosition {
  	padding: 14px 0;
+}
+.outerWrap {
+	display: inline-block;
+}
+
+/* 手機版，卡片翻頁 */
+.cardWrap {
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	
+	background: white;
+	border: 1px solid white;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.12);
+
+    margin: 10px;
+    padding-bottom: 120px;
+    display: inline-block;
+}
+/* 這裡跟一般邏輯反過來，要再改 */
+@media all and (max-width: $breakWebVersion){
+	.showBack .cardWrap {
+		transform-style: preserve-3d;
+		transform: rotateY(180deg);
+		transition: 0.5s;
+	}
+	.showBack .cardWrap .front {
+		z-index: 0;
+		max-height: 0;
+		overflow: hidden;
+	}
+
+	.outerWrap {
+		display: block;
+	}
+	.outerWrap.showBack {
+    	display: block;
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+    	transition: all 0.5s 1s;
+    	height: 100vh;
+    	left: 0;
+    	background: white;
+    	z-index: $zShowCardBack;
+	}
+	.cardWrap {
+		width: 100%;
+		display: block;
+	}
+}
+.card {
+	backface-visibility: hidden;
+	width: 100%;
+}
+.front {
+	z-index: 10;
+	max-height: 10000px;
+}
+.back {
+	transform: rotateY(180deg);
+}
+.showBack .back {
+	height: 250px;
+}
+.closeCard {
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
 }
