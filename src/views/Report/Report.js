@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import classnames from 'classnames';
 
+import DocumentMeta from 'react-document-meta';
+
 import LegislatorCards from '../../components/LegislatorCards/LegislatorCards.js';
 import RecordStream from '../../components/RecordStream/RecordStream.js';
 
@@ -124,10 +126,27 @@ export default class Report extends Component {
     let recordStreamClasses = classnames({
         [styles.fixedStream] : fixedStream
     })
+
+    const title = `你支持馬習會嗎？你認為馬習會程序公開透明嗎？-沃草2016立委出任務`;
+    const description = `你知道針對馬習會，立委在立法院講了些甚麼嗎？你認為馬習會規劃程序有符合國家需要、人民支持、國會監督的原則嗎？一起來看看立委怎麼說。`;
+    const metaData = {
+      title: title,
+      description: description,
+      meta: {
+          charSet: 'utf-8',
+          property: {
+            'og:title': title,
+            'og:description': description,
+            'og:type' : 'website',
+            'og:image' : 'http://dev.wevote.tw/MaXi.jpg'
+          }
+      }
+     
+    };
     
     return (
     <div className={styles.wrap}>
-
+        <DocumentMeta {...metaData}/>
         <img src={coverImg} className={styles.coverImg}/>
         <Fig/>
         <div className={styles.posFigSection}><h2>你知道針對馬習會，立委在立法院講了些甚麼嗎？</h2></div>
