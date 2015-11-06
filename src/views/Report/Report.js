@@ -4,13 +4,12 @@ import { connect } from 'react-redux';
 import { Link } from "react-router";
 
 @connect(
-    state => ({legislators: state.legislators,
-               issues: state.issues,
-               records: state.records
-               }),
+    state => ({
+                  MaXiRecords: state.MaXiRecords
+              }),
     dispatch => bindActionCreators({}, dispatch))
 
-export default class Record extends Component {
+export default class Report extends Component {
   static propTypes = {
       
   }
@@ -20,10 +19,11 @@ export default class Record extends Component {
  
   render() {
     const styles = require('./Report.scss');
+    const {MaXiRecords} = this.props;
     
     return (
     <div className={styles.wrap}>  
-        report
+        
     </div>
 
     ); 
