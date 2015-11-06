@@ -6,8 +6,9 @@ import classnames from 'classnames';
 
 import eng2cht from '../../utils/eng2cht';
 import people_name2id from '../../utils/people_name2id';
+import handlePos from '../../utils/handlePos';
 import PeoplePhoto from '../PeoplePhoto/PeoplePhoto';
-
+import RecordPost from '../RecordPost/RecordPost';
 import ReactSwipe from 'react-swipe';
 import moment from 'moment';
 
@@ -85,27 +86,8 @@ class Card extends Component {
       [styles.active]     : data.name === activeLegislator
     })
     let recordPosts = data.records.map((r,i)=>{
-        let date = moment.unix(r.date);
-        let postClasses = classnames({
-          [styles.recordPost] :  true,
-          [styles.multiple]   :  data.records.length > 1
-        })
         return (
-            <div className={postClasses}>
-                <div className={styles.recordMeta}>{`${date.format('YYYY-MM-DD')} ${r.meeting}`}</div>
-                <div className={styles.quote}>
-                    {r.content}
-                </div>
-                <div className={styles.recordPosisition}>
-                    <div className={`${styles.recordPosisitionTitle} ${styles.recordPosisitionRow}`}>本則表態立場</div>
-                    <div className={styles.recordPosisitionRow}>支持會面：{handlePos(r.supportMaXiMeet)}</div>
-                    <div className={styles.recordPosisitionRow}>本次程序：{handlePos(r.positionOnProcedure)}</div>
-                </div>
-                <div>
-                    <a  className={`${styles.ia} ${styles.bright}`}
-                        target="_blank" 
-                        href={r.sourceURL}>資料來源</a></div>
-            </div>
+            <div className={styles.recordWrap}><RecordPost r={r} totalLength={data.records.length} /></div>
         )
     });
     let dotItems = data.records.map((r,i)=>{
@@ -179,20 +161,7 @@ class Card extends Component {
   }
 
 }
-function handlePos(pos){
-    if(pos === "none"){
-        return "？";
 
-    }else if(pos === "transparent"){
-        return "公開透明";
-
-    }else if(pos === "blackbox"){
-        return "黑箱";
-
-    }else{
-        return eng2cht(pos);
-    }
-}
 function transparent2aye(pos){
     if(pos === "transparent"){
       return "aye";

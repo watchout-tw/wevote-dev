@@ -26,26 +26,58 @@ export default class Report extends Component {
         activeLegislator: array[0],
         fixedStream: false,
         meetFilterValue: "all",
-        procedureFilterValue: "all",
-        showControls: false
+        procedureFilterValue: "all"
       }
   }
   _onScroll(){
       let node = this.refs.positionSection.getDOMNode();
       let rect = node.getBoundingClientRect();
       let {fixedStream} = this.state;
-      // console.log(rect.top)
+
+      let Fnode = this.refs.SPfooterSection.getDOMNode();
+      let Frect = Fnode.getBoundingClientRect();
+
+      let Rnode = this.refs.recordStream.getDOMNode();
+
+       // console.log(rect.top)
+       // console.log(rect.bottom)
+      // console.log("*"+Frect.top)
+      // console.log(">"+window.innerHeight)
       // console.log(document.body.scrollTop)
-      if(rect.top <= 0 && fixedStream === false){//set fixed
-          this.setState({
-             fixedStream: true
-          })
+
+      if(rect.top <= 0){//set fixed
+          //scroll to bottom, set back to default
+          if(Frect.top<window.innerHeight){
+              if(fixedStream === true){
+                  this.setState({
+                      fixedStream: false
+                  })
+                  
+                  Rnode.style.position = 'relative';
+                  Rnode.style.top = `${-(rect.top)}px`;
+                  Rnode.style.height = 'auto';
+
+
+              }
+    
+          }else{
+              if(fixedStream === false){
+                  Rnode.style.position = '';
+                  Rnode.style.top = '';
+                  Rnode.style.height = '';
+
+                  this.setState({
+                     fixedStream: true
+                  })
+              }
+          }
       }
-      if(rect.top >= 0 && fixedStream === true){//set fixed
+      if(rect.top >= 0 && fixedStream === true){//set back to default
           this.setState({
              fixedStream: false
           })
       }
+
       
   }
   componentDidMount(){
@@ -55,16 +87,12 @@ export default class Report extends Component {
      window.removeEventListener("scroll", this._onScroll.bind(this));
   }
   _handleClickCard(name, event){
-      
       this.setState({
           activeLegislator: name
-      })
-      
+      }) 
   }
-  
   _onChangeMeetFilter(){
     let node = this.refs.meetFilter.getDOMNode();
-    console.log(node.value)
     this.setState({
         meetFilterValue: node.value
     })
@@ -72,7 +100,6 @@ export default class Report extends Component {
   }
   _onChangeProcedureFilter(){
     let node = this.refs.procedureFilter.getDOMNode();
-    console.log(node.value)
     this.setState({
         procedureFilterValue: node.value
     })
@@ -81,7 +108,7 @@ export default class Report extends Component {
   render() {
     const styles = require('./Report.scss');
     const {MaXiRecords} = this.props;
-    const {activeLegislator, fixedStream, meetFilterValue, procedureFilterValue, showControls} = this.state;
+    const {activeLegislator, fixedStream, meetFilterValue, procedureFilterValue} = this.state;
 
     let legislatorCardsClasses = classnames({
         [styles.legislatorCards] :true,
@@ -90,10 +117,6 @@ export default class Report extends Component {
     let legislatorControlClasses = classnames({
         [styles.legislatorControls] :true,
         [styles.fixed] : fixedStream
-    })
-    let controlBodyClasses = classnames({
-        [styles.selectBlocks] : true,
-        [styles.show] : showControls,
     })
 
     let recordStreamClasses = classnames({
@@ -109,7 +132,7 @@ export default class Report extends Component {
             <div className={legislatorCardsClasses}>
               <div className={legislatorControlClasses}>
                   
-                  <div className={controlBodyClasses}>
+                  <div className={styles.selectBlocks}>
                       <div className={styles.selectBlock}>
                           支持會面
                           <select onChange={this._onChangeMeetFilter.bind(this)}
@@ -139,11 +162,16 @@ export default class Report extends Component {
                                meetFilterValue={meetFilterValue}
                                procedureFilterValue={procedureFilterValue}/>
             </div>
-            <div className={styles.recordStream} >
-                <div className={recordStreamClasses}>
+            <div className={styles.recordStream}>
+                <div className={recordStreamClasses} ref="recordStream">
                     <RecordStream activeLegislator={activeLegislator}/>
                 </div>
             </div>
+        </div>
+
+        <div className={styles.footerSection} ref="SPfooterSection">
+            <div>本特別報導統計資料自2015年11月3日至6日中午12時止</div>
+            <div>澄清請 email 至 wevote@watchout.tw</div>
         </div>
     </div>
 

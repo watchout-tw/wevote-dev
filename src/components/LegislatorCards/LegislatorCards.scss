@@ -129,53 +129,8 @@ $breakWebVersion : 730px;
 		display: none;
 	}
 }
-.recordPost {
-	text-align: left;
-    padding: 10px 20px;
-    font-size: 15px;
-    
-}
-.recordPost.multiple {
-	
-    margin-bottom: 8px;
-    box-shadow: inset 0 -2px 4px rgba(0,0,0,0.12),inset 0 3px 5px rgba(0,0,0,0.12);
-
-}
-.recordMeta {
-	margin-bottom: 8px;
-}
-.quote {
-	line-height: $textLineHeight;
-	quotes: "\201C""\201D""\2018""\2019";
-	margin-bottom: 10px;
-}
-.quote:before, .quote:after {
-	display: inline-block;
-	color: $lightGrey;
-	font-size: $defaultFontSize*4;
-	vertical-align: top;
-  	height: $defaultFontSize;
-  	margin-top: $defaultFontSize*(-1.5);
-}
-.quote:before {
-	content: open-quote;
-	margin-right: 2px;
-}
-.quote:after {
-	content: close-quote;
-	margin-left: 2px;
-}
-.recordPosisition {
-	border: 1px solid;
-	margin-bottom: 10px;
-	display: inline-block;	
-}
-.recordPosisitionRow {
-	padding: 2px 4px;
-}
-.recordPosisitionTitle {
-	background:black;
-	color: white;
+.recordWrap {
+	width: 100%;
 }
 .dotItem {
 	display: inline-block;
