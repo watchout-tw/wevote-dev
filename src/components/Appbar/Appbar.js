@@ -94,7 +94,7 @@ export default class Appbar extends Component {
                 
                 <li onClick={this._updateLocation.bind(this,'ma-xi-meet')}>
                     <Link className={`${styles.navItem} ${maxiActive}`}
-                          to={`/SP/ma-xi-meet`}
+                          to={`/SP/ma-xi-meet/`}
                           onClick={this._hideMenu.bind(this)}>
                             <img src={symbol_about} className={styles.symbol}/>
                             <span>馬習會</span>
