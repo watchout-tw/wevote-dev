@@ -1,4 +1,5 @@
-$breakWebVersion : 500px;
+@import '../../common.scss';
+$breakWebVersion : 730px;
 
 .wrap {
 	position: relative;
@@ -8,17 +9,23 @@ $breakWebVersion : 500px;
 	width: 100%;
 	content: 'temp place holder';
 }
-
 .positionSection {
 	display: flex;
 }
 .legislatorCards {
 	flex: 1;
 }
+.legislatorCards.fixed {
+	padding-top: 60px;
+	/* space for the control bar */
+	/* control bar is 60px */
+}
+
 /* 手機版不顯示 */
 .recordStream {
 	display: none;
 }
+
 @media all and (min-width: $breakWebVersion){
 	.recordStream {
 		position: relative;
@@ -26,11 +33,50 @@ $breakWebVersion : 500px;
 		display: block;
 		height: 100vh;
 		overflow: scroll;
-		border: 1px solid pink;
 		flex: 0 0 460px;
 	}
-	.fixed {
+	.fixedStream {
 		position: fixed;
 		top: 0;
 	}
 }
+
+
+/* controls */
+.legislatorControls {
+    background: white;
+    text-align: center;
+    border-bottom: 1px solid #D3CFCF;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.12);
+}
+.legislatorControls.fixed {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $zMaXiLegislatorControl;
+}
+@media all and (min-width: $breakWebVersion){
+	.legislatorControls.fixed {
+		width: calc(100% - 460px);
+	}
+}
+.selectTitle {
+	background: black;
+	color: white;
+	padding: 5px;
+}
+.selectBlock {
+	display: inline-block;
+	padding: 10px;
+}
+.selectBlock select {
+	margin: 0 5px;
+  	border-radius: 0;
+  	&:focus {
+  	  outline: none;
+  	}
+}
+
+
+
+

@@ -1,10 +1,10 @@
 @import '../../common.scss';
-$breakWebVersion : 500px;
+$breakWebVersion : 730px;
 
 .wrap {
 	position: relative;
 	background: rgb(225, 221, 221);
-	padding: 0 20px;
+	padding: 20px;
 	text-align: center;
 }
 .cardWrap {
@@ -15,7 +15,7 @@ $breakWebVersion : 500px;
 	
 	background: white;
 	border: 1px solid white;
-    box-shadow: 4px 4px 6px 0 rgba(0,0,0,0.18);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.12);
 
     width: 100%;
     margin: 10px;

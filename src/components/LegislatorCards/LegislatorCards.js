@@ -20,8 +20,31 @@ export default class LegislatorCards extends Component {
   }
   render() {
     const styles = require('./LegislatorCards.scss');
-    const {MaXiRecords, handleClickCard, activeLegislator} = this.props;
-    let cardItems = Object.keys(MaXiRecords).map((currentLegislator, index)=>{
+    const {MaXiRecords, handleClickCard, activeLegislator, meetFilterValue, procedureFilterValue} = this.props;
+
+    let cardItems = Object.keys(MaXiRecords)
+      .filter((currentLegislator, index)=>{
+          //立場過濾
+          let item = MaXiRecords[currentLegislator];
+          
+          let shouldReturn = true;
+          if(meetFilterValue!=="all"){
+              if(item.supportMaXiMeet!==meetFilterValue){
+                shouldReturn = false;
+              } 
+          }
+          if(procedureFilterValue!=="all"){
+              if(item.positionOnProcedure!==procedureFilterValue){
+                shouldReturn = false;
+              }
+          }
+
+          if(shouldReturn === true){
+             return currentLegislator;
+          }
+          
+      })
+      .map((currentLegislator, index)=>{
         return <LegislatorCard data={ MaXiRecords[currentLegislator] }
                                activeLegislator={activeLegislator}
                                handleClickCard={handleClickCard}

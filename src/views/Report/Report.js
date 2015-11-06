@@ -24,11 +24,13 @@ export default class Report extends Component {
       
       this.state = {
         activeLegislator: array[0],
-        fixedStream: false
+        fixedStream: false,
+        meetFilterValue: "all",
+        procedureFilterValue: "all"
       }
   }
   _onScroll(){
-      let node = this.refs.recordStream.getDOMNode();
+      let node = this.refs.positionSection.getDOMNode();
       let rect = node.getBoundingClientRect();
       let {fixedStream} = this.state;
       // console.log(rect.top)
@@ -61,26 +63,78 @@ export default class Report extends Component {
           })
       }
   }
+  _onChangeMeetFilter(){
+    let node = this.refs.meetFilter.getDOMNode();
+    console.log(node.value)
+    this.setState({
+        meetFilterValue: node.value
+    })
+
+  }
+  _onChangeProcedureFilter(){
+    let node = this.refs.procedureFilter.getDOMNode();
+    console.log(node.value)
+    this.setState({
+        procedureFilterValue: node.value
+    })
+  }
  
   render() {
     const styles = require('./Report.scss');
     const {MaXiRecords} = this.props;
-    const {activeLegislator, fixedStream} = this.state;
+    const {activeLegislator, fixedStream, meetFilterValue, procedureFilterValue} = this.state;
+
+    let legislatorCardsClasses = classnames({
+        [styles.legislatorCards] :true,
+        [styles.fixed] : fixedStream
+    })
+    let legislatorControlClasses = classnames({
+        [styles.legislatorControls] :true,
+        [styles.fixed] : fixedStream
+    })
 
     let recordStreamClasses = classnames({
-        [styles.fixed] : fixedStream
+        [styles.fixedStream] : fixedStream
     })
     
     return (
     <div className={styles.wrap}>  
         <div className={styles.figTemp}></div>
 
-        <div className={styles.positionSection}>
-            <div className={styles.legislatorCards}>
+        <div className={styles.positionSection} ref="positionSection">
+
+            <div className={legislatorCardsClasses}>
+              <div className={legislatorControlClasses}>
+                  <div className={styles.selectTitle}>立場過濾器</div>
+                  <div className={styles.selectBlock}>
+                      支持會面
+                      <select onChange={this._onChangeMeetFilter.bind(this)}
+                              ref="meetFilter">
+                        <option value="all">所有</option>
+                        <option value="aye">贊成</option>
+                        <option value="nay">反對</option>
+                        <option value="unknown">模糊</option>
+                        <option value="none">？</option>
+                      </select>
+                  </div>  
+                  <div className={styles.selectBlock}>
+                      本次程序
+                      <select onChange={this._onChangeProcedureFilter.bind(this)}
+                              ref="procedureFilter">
+                        <option value="all">所有</option>
+                        <option value="transparent">公開透明</option>
+                        <option value="blackbox">黑箱</option>
+                        <option value="unknown">模糊</option>
+                        <option value="none">？</option>
+                      </select>
+                  </div>  
+              </div>
               <LegislatorCards handleClickCard={this._handleClickCard.bind(this)}
-                               activeLegislator={activeLegislator}/>
+                               activeLegislator={activeLegislator}
+                               meetFilterValue={meetFilterValue}
+                               procedureFilterValue={procedureFilterValue}/>
             </div>
-            <div className={styles.recordStream} ref="recordStream">
+            <div className={styles.recordStream} >
                 <div className={recordStreamClasses}>
                     <RecordStream activeLegislator={activeLegislator}/>
                 </div>
