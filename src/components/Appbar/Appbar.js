@@ -76,8 +76,7 @@ export default class Appbar extends Component {
         </li>
       )
     })
-
-    let partiesActive = (location === "parties") ? styles.active : "";
+    let maxiActive = (location === "/reports/ma-xi-meet") ? styles.active : "";
     let aboutActive = (location === "about") ? styles.active : "";
     let symbol_parties = require('./images/symbols_parties.svg');
     let symbol_about = require('./images/symbols_about.svg');
@@ -92,6 +91,15 @@ export default class Appbar extends Component {
               </Link>
 
               <ul className={`${styles.lists} ${showStyle}`}>
+                
+                <li onClick={this._updateLocation.bind(this,'/reports/ma-xi-meet')}>
+                    <Link className={`${styles.navItem} ${maxiActive}`}
+                          to={`/reports/ma-xi-meet`}
+                          onClick={this._hideMenu.bind(this)}>
+                            <img src={symbol_about} className={styles.symbol}/>
+                            <span>馬習會</span>
+                    </Link>
+                </li>
 
                 {issueItems}
 

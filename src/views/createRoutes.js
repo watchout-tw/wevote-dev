@@ -2,6 +2,9 @@ import React from 'react';
 import {Route} from 'react-router';
 import App from 'views/App';
 import Home from 'views/Home/Home.js';
+
+import Report from 'views/Report/Report.js';
+
 import About from 'views/About/About.js';
 import Issue from 'views/Issue/Issue.js';
 
@@ -25,6 +28,8 @@ export default function(store) {
     <Route component={App}>
       <Route path="/" component={Home}/>
       
+      <Route path="/reports/ma-xi-meet" component={Report}/>
+
       <Route path="/issues/:issueName" component={Issue}/>
       <Route path="/issues/:issueName/:viewName" component={Issue}/>
       
