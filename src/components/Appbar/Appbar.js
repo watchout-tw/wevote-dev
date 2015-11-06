@@ -76,7 +76,7 @@ export default class Appbar extends Component {
         </li>
       )
     })
-    let maxiActive = (location === "/SP/ma-xi-meet") ? styles.active : "";
+    let maxiActive = (location === "ma-xi-meet") ? styles.active : "";
     let aboutActive = (location === "about") ? styles.active : "";
     let symbol_parties = require('./images/symbols_parties.svg');
     let symbol_about = require('./images/symbols_about.svg');
@@ -87,12 +87,12 @@ export default class Appbar extends Component {
           <div className={styles.inner}>
               <Link to="/" className={styles.siteName}
                     onClick={this._hideMenu.bind(this)}>
-                <img src={siteLogo} className={styles.siteLogo}/>
+                <img src={siteLogo} className={styles.siteLogo} onClick={this._updateLocation.bind(this,'/')}/>
               </Link>
 
               <ul className={`${styles.lists} ${showStyle}`}>
                 
-                <li onClick={this._updateLocation.bind(this,'/SP/ma-xi-meet')}>
+                <li onClick={this._updateLocation.bind(this,'ma-xi-meet')}>
                     <Link className={`${styles.navItem} ${maxiActive}`}
                           to={`/SP/ma-xi-meet`}
                           onClick={this._hideMenu.bind(this)}>

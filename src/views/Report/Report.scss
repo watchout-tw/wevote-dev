@@ -1,13 +1,48 @@
 @import '../../common.scss';
 $breakWebVersion : 730px;
-
 .wrap {
 	position: relative;
 }
-.figTemp {
-	height: 400px;
+.coverImg {
 	width: 100%;
-	content: 'temp place holder';
+}
+.figWrap {
+	
+}
+.figCover {
+	width: 100%;
+}
+.figSection {
+	margin: 0 auto 100px auto;
+	max-width: 800px;
+	padding: 10px;
+}
+.figSection.center {
+	text-align: center;
+}
+.metaData {
+	padding-left: 4px;
+}
+.header {
+	padding-left: 4px;
+}
+.figSection h3 {
+	margin-top: 40px;
+}
+.figSection p {
+	line-height: 1.5;
+}
+.figAuguePoints {
+	border-left: 5px solid gray;
+    padding-left: 10px;
+    line-height: 1.4;
+}
+
+
+.posFigSection {
+	max-width: 800px;
+	padding: 10px;
+	margin: 0 auto;
 }
 .positionSection {
 	display: flex;
