@@ -24,7 +24,6 @@ export default class Report extends Component {
       
       this.state = {
         activeLegislator: array[0],
-        showBack: false,
         fixedStream: false,
         meetFilterValue: "all",
         procedureFilterValue: "all"
@@ -55,27 +54,13 @@ export default class Report extends Component {
      window.removeEventListener("scroll", this._onScroll.bind(this));
   }
   _handleClickCard(name, event){
-      console.log("card clicked:"+name)
-      if(window.innerWidth < breakWebVersion){//手機版本
-          this.setState({
-              activeLegislator: name,
-              showBack: true
-          })
-      }else{//網頁版本
-          this.setState({
-              activeLegislator: name
-          })
-      }
-  }
-  _handleCloseCard(e){
-      console.log("close!")
-      console.log(e)
-      e.stopPropagation();
+      
       this.setState({
-          showBack: false,
-          activeLegislator: ""
+          activeLegislator: name
       })
+      
   }
+  
   _onChangeMeetFilter(){
     let node = this.refs.meetFilter.getDOMNode();
     console.log(node.value)
@@ -95,7 +80,7 @@ export default class Report extends Component {
   render() {
     const styles = require('./Report.scss');
     const {MaXiRecords} = this.props;
-    const {activeLegislator, showBack, fixedStream, meetFilterValue, procedureFilterValue} = this.state;
+    const {activeLegislator, fixedStream, meetFilterValue, procedureFilterValue} = this.state;
 
     let legislatorCardsClasses = classnames({
         [styles.legislatorCards] :true,
@@ -144,8 +129,6 @@ export default class Report extends Component {
               </div>
               <LegislatorCards handleClickCard={this._handleClickCard.bind(this)}
                                activeLegislator={activeLegislator}
-                               showBack={showBack}
-                               handleCloseCard={this._handleCloseCard.bind(this)}
                                meetFilterValue={meetFilterValue}
                                procedureFilterValue={procedureFilterValue}/>
             </div>

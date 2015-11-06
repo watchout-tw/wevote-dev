@@ -1,81 +1,6 @@
 @import '../../common.scss';
 $breakWebVersion : 730px;
 
-.wrap {
-	position: relative;
-	background: rgb(225, 221, 221);
-	padding: 20px;
-	text-align: center;
-}
-.cardWrap.active {
-	border: none;
-}
-@media all and (min-width: $breakWebVersion){
-	.cardWrap {
-		display: inline-block;
-		width: 200px;
-		height: 340px;
-		margin: 10px;
-		vertical-align: top;
-		padding-bottom: 0;
-	}
-	/* 網頁版 active */
-	.cardWrap.active {
-		border: 3px solid black;
-	}
-}
-
-/* 卡片正面 layout: 人 */
-.photo {
-	text-decoration: none;
-	width: 130px;
-	height: 130px;
-	margin: 10px auto;
-	border: 4px solid $lightGrey;
-	border-radius: 50%;
-	background: $trueWhite;
-}
-.peopleName {
-	margin: 4px;
-	@include inline-middle;
-	font-size: 30px;
-	font-weight: bold;
-}
-.partyTitle {
-	margin-left: 3px;
-	line-height: $defaultLineHeight;
-  	display: inline-block;
-}
-.positions {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-@media all and (max-width: $breakWebVersion){
-	.showBack .positions {
-		display: none;
-	}
-}
-.position {
-	display: inline-block;
-	width: 50%;
-}
-.position:first-child {
-	border-right: 1px solid white;
-}
-.posTitle {
-	background: black;
-	color: white;
-	padding: 5px 0;
-}
-.posPosition {
- 	padding: 14px 0;
-}
-.outerWrap {
-	display: inline-block;
-}
-
-/* 手機版，卡片翻頁 */
 .cardWrap {
 	cursor: pointer;
 	text-align: center;
@@ -85,59 +10,156 @@ $breakWebVersion : 730px;
 	border: 1px solid white;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.12);
 
-    margin: 10px;
-    padding-bottom: 120px;
-    display: inline-block;
+	max-width: 100%;
+	margin: 10px 5px;
 }
-/* 這裡跟一般邏輯反過來，要再改 */
-@media all and (max-width: $breakWebVersion){
-	.showBack .cardWrap {
-		transform-style: preserve-3d;
-		transform: rotateY(180deg);
-		transition: 0.5s;
-	}
-	.showBack .cardWrap .front {
-		z-index: 0;
-		max-height: 0;
-		overflow: hidden;
-	}
 
-	.outerWrap {
-		display: block;
-	}
-	.outerWrap.showBack {
-    	display: block;
-    	position: fixed;
-    	top: 0;
-    	width: 100%;
-    	transition: all 0.5s 1s;
-    	height: 100vh;
-    	left: 0;
-    	background: white;
-    	z-index: $zShowCardBack;
-	}
+@media all and (min-width: $breakWebVersion){
 	.cardWrap {
-		width: 100%;
+		display: inline-block;
+		width: 200px;
+		height: 180px;
+		margin: 10px;
+		vertical-align: top;
+		padding-bottom: 0;
+		border: 3px solid transparent;
+	}
+	/* 網頁版 active */
+	.cardWrap.active {
+		border: 3px solid black;
+	}
+}
+.aboutPeople {	
+}
+.aboutPosition {
+	font-size: 14px;
+	text-align: left;
+}
+.aboutPositionWeb {
+	display: none;
+}
+@media all and (min-width: $breakWebVersion){
+	.aboutPositionMobile {
+		display: none;
+	}
+	.aboutPositionWeb {
 		display: block;
 	}
 }
-.card {
-	backface-visibility: hidden;
-	width: 100%;
+.photo {
+	text-decoration: none;
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	margin: 10px auto;
+	border-radius: 50%;
+	background: $trueWhite;
 }
-.front {
-	z-index: 10;
-	max-height: 10000px;
+.peopleInfo {
+	display: inline-block;
+	vertical-align: top;
+    padding-top: 12px;
+    margin-left: 8px;
 }
-.back {
-	transform: rotateY(180deg);
+.peopleName {
+	margin: 4px;
+	font-size: 20px;
+	font-weight: bold;
+	vertical-align: top;
+	max-width: 100px;
 }
-.showBack .back {
-	height: 250px;
+.partyTitle {
+	margin-left: 3px;
+	line-height: $defaultLineHeight;
+  	display: inline-block;
 }
-.closeCard {
-	cursor: pointer;
-	position: absolute;
-	top: 10px;
-	right: 10px;
+.position {
+	padding: 0 10px 0 24px;
 }
+.posPosition {
+ 	width: 20px;
+ 	height: 20px;
+ 	display: inline-block;	
+}
+.posTitle {
+	padding: 0 5px ;
+	display: inline-block;
+    vertical-align: top;
+    padding-top: 2px;
+}
+@media all and (min-width: $breakWebVersion){
+	.aboutPosition {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	.position {
+		width: 50%;
+		display: inline-block;
+		padding: 0px;
+    	text-align: center;
+	}
+	.position:first-child {
+		border-right: 1px solid white;
+	}
+	.posPosition {
+		display: block;
+		width: auto;
+		height: auto;
+		padding: 10px;
+	}
+	.posTitle {
+		display: block;
+		background: black;
+		color: white;
+	}
+}
+
+
+/* 以下只出現在手機版 */
+.quoteSwiper {
+	display: block;
+	padding-bottom: 20px;
+}
+@media all and (min-width: $breakWebVersion){
+	.quoteSwiper {
+		display: none;
+	}
+}
+.recordPost {
+	text-align: left;
+	padding: 10px 20px;
+	font-size: 15px;
+}
+.quote {
+	line-height: $textLineHeight;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+.quote:before, .quote:after {
+	display: inline-block;
+	color: $lightGrey;
+	font-size: $defaultFontSize*4;
+	vertical-align: top;
+  	height: $defaultFontSize;
+  	margin-top: $defaultFontSize*(-1.5);
+}
+.quote:before {
+	content: open-quote;
+	margin-right: 2px;
+}
+.quote:after {
+	content: close-quote;
+	margin-left: 2px;
+}
+.dotItem {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid black;
+	border-radius: 50%;
+	margin: 2px;
+}
+.dotItem.active {
+	background: black;
+}
+
