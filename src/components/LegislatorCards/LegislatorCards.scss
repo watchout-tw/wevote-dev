@@ -3,10 +3,12 @@ $breakWebVersion : 500px;
 
 .wrap {
 	position: relative;
-	background: rgba(128, 128, 128, 0.54);
+	background: rgb(225, 221, 221);
+	padding: 0 20px;
+	text-align: center;
 }
 .cardWrap {
-	display: inline-block;
+	
 	cursor: pointer;
 	text-align: center;
 	position: relative;
@@ -14,6 +16,10 @@ $breakWebVersion : 500px;
 	background: white;
 	border: 1px solid white;
     box-shadow: 4px 4px 6px 0 rgba(0,0,0,0.18);
+
+    width: 100%;
+    margin: 10px;
+    padding-bottom: 120px;
 }
 /* 手機版顯示背面 */
 .cardWrap.active {
@@ -21,10 +27,12 @@ $breakWebVersion : 500px;
 }
 @media all and (min-width: $breakWebVersion){
 	.cardWrap {
+		display: inline-block;
 		width: 200px;
 		height: 340px;
 		margin: 10px;
 		vertical-align: top;
+		padding-bottom: 0;
 	}
 	/* 網頁版 active */
 	.cardWrap.active {

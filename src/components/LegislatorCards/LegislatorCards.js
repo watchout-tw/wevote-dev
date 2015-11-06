@@ -8,8 +8,6 @@ import eng2cht from '../../utils/eng2cht';
 import people_name2id from '../../utils/people_name2id';
 import PeoplePhoto from '../PeoplePhoto/PeoplePhoto';
 
-const breakWebVersion = 500; //跟 scss 同步
-
 @connect(
     state => ({ MaXiRecords: state.MaXiRecords }),
     dispatch => bindActionCreators({}, dispatch))
@@ -18,31 +16,15 @@ export default class LegislatorCards extends Component {
   static propTypes = {
   }
   constructor(props){ super(props)
-      let array = Object.keys(props.MaXiRecords);//default 為第一位立委
       
-      this.state = {
-        activeLegislator: array[0]
-      }
-  }
-  _handleClickCard(name, event){
-      console.log("card clicked:"+name)
-      if(window.innerWidth < breakWebVersion){//手機版本
-
-      }else{//網頁版本
-          this.setState({
-            activeLegislator: name
-          })
-
-      }
   }
   render() {
     const styles = require('./LegislatorCards.scss');
-    const {MaXiRecords} = this.props;
-    const {activeLegislator} = this.state;
+    const {MaXiRecords, handleClickCard, activeLegislator} = this.props;
     let cardItems = Object.keys(MaXiRecords).map((currentLegislator, index)=>{
         return <LegislatorCard data={ MaXiRecords[currentLegislator] }
                                activeLegislator={activeLegislator}
-                               handleClickCard={this._handleClickCard.bind(this)}
+                               handleClickCard={handleClickCard}
                                key={`LegislatorCard-${index}`} />
     })
     return (

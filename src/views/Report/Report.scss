@@ -1,3 +1,36 @@
+$breakWebVersion : 500px;
+
 .wrap {
 	position: relative;
+}
+.figTemp {
+	height: 400px;
+	width: 100%;
+	content: 'temp place holder';
+}
+
+.positionSection {
+	display: flex;
+}
+.legislatorCards {
+	flex: 1;
+}
+/* 手機版不顯示 */
+.recordStream {
+	display: none;
+}
+@media all and (min-width: $breakWebVersion){
+	.recordStream {
+		position: relative;
+		background: lightblue;
+		display: block;
+		height: 100vh;
+		overflow: scroll;
+		border: 1px solid pink;
+		flex: 0 0 460px;
+	}
+	.fixed {
+		position: fixed;
+		top: 0;
+	}
 }
