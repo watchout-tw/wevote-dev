@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from "react-router";
-
+import LegislatorCards from '../../components/LegislatorCards/LegislatorCards.js';
 @connect(
     state => ({
                   MaXiRecords: state.MaXiRecords
@@ -23,6 +23,7 @@ export default class Report extends Component {
     
     return (
     <div className={styles.wrap}>  
+        <LegislatorCards />
         
     </div>
 

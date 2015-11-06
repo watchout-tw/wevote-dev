@@ -8,6 +8,11 @@ export default function eng2cht(input){
         return '模糊';
       case 'none':
         return '沒有';
+
+      case 'transparent':
+        return '公開透明';
+      case 'blackbox':
+        return '黑箱';
       
       case 'KMT':
         return '中國國民黨';

@@ -1,6 +1,7 @@
 const initialState = 
 {
     "莊瑞雄": {
+        "name": "莊瑞雄",
         "party": "DPP",
         "records": [
             {
@@ -41,6 +42,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "陳其邁": {
+        "name": "陳其邁",
         "party": "DPP",
         "records": [
             {
@@ -70,6 +72,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "李俊俋": {
+        "name": "李俊俋",
         "party": "DPP",
         "records": [
             {
@@ -99,6 +102,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "姚文智": {
+        "name": "姚文智",
         "party": "DPP",
         "records": [
             {
@@ -128,6 +132,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "段宜康": {
+        "name": "段宜康",
         "party": "DPP",
         "records": [
             {
@@ -157,6 +162,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "林德福": {
+        "name": "林德福",
         "party": "KMT",
         "records": [
             {
@@ -175,6 +181,7 @@ const initialState =
         "positionOnProcedure": "transparent"
     },
     "葉津鈴": {
+        "name": "葉津鈴",
         "party": "TSU",
         "records": [
             {
@@ -193,6 +200,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "賴振昌": {
+        "name": "賴振昌",
         "party": "TSU",
         "records": [
             {
@@ -211,6 +219,7 @@ const initialState =
         "positionOnProcedure": "none"
     },
     "田秋堇": {
+        "name": "田秋堇",
         "party": "DPP",
         "records": [
             {
@@ -229,6 +238,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "陳明文": {
+        "name": "陳明文",
         "party": "DPP",
         "records": [
             {
@@ -247,6 +257,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "何欣純": {
+        "name": "何欣純",
         "party": "DPP",
         "records": [
             {
@@ -265,6 +276,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "周倪安": {
+        "name": "周倪安",
         "party": "TSU",
         "records": [
             {
@@ -283,6 +295,7 @@ const initialState =
         "positionOnProcedure": "blackbox"
     },
     "陳碧涵": {
+        "name": "陳碧涵",
         "party": "KMT",
         "records": [
             {
@@ -300,12 +313,13 @@ const initialState =
         "supportMaXiMeet": "aye",
         "positionOnProcedure": "transparent"
     },
-    "鄭天財": {
+    "鄭天財Sra·Kacaw": {
+        "name": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "records": [
             {
                 "date": 1446652800,
-                "legislator": "鄭天財",
+                "legislator": "鄭天財Sra·Kacaw",
                 "party": "KMT",
                 "meeting": "內政委員會",
                 "content": "至於馬習會，事實上是我們中華民國從過去到現在，無論是從中華民國憲法，無論是從兩岸人民關係條例，或者是從過去立法院所曾經做過的正式決議，都不曾有規定或是說有決議，這國家的領導人要跟國外的，不管是領袖或是總統或是總理或是甚麼樣層級的人要見面 ，必須要先跟國會立法院來做報告。",
@@ -319,6 +333,7 @@ const initialState =
         "positionOnProcedure": "transparent"
     },
     "葉宜津": {
+        "name": "葉宜津",
         "party": "DPP",
         "records": [
             {

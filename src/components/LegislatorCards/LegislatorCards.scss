@@ -1,0 +1,73 @@
+@import '../../common.scss';
+$breakWebVersion : 500px;
+
+.wrap {
+	position: relative;
+	background: rgba(128, 128, 128, 0.54);
+}
+.cardWrap {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	
+	background: white;
+	border: 1px solid white;
+    box-shadow: 4px 4px 6px 0 rgba(0,0,0,0.18);
+}
+/* 手機版顯示背面 */
+.cardWrap.active {
+
+}
+@media all and (min-width: $breakWebVersion){
+	.cardWrap {
+		width: 200px;
+		height: 340px;
+		margin: 10px;
+		vertical-align: top;
+	}
+	/* 網頁版 active */
+	.cardWrap.active {
+		border: 3px solid black;
+	}
+}
+.photo {
+	text-decoration: none;
+	width: 130px;
+	height: 130px;
+	margin: 10px auto;
+	border: 4px solid $lightGrey;
+	border-radius: 50%;
+	background: $trueWhite;
+}
+.peopleName {
+	margin: 4px;
+	@include inline-middle;
+	font-size: 30px;
+	font-weight: bold;
+}
+.partyTitle {
+	margin-left: 3px;
+	line-height: $defaultLineHeight;
+  	display: inline-block;
+}
+.positions {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.position {
+	display: inline-block;
+	width: 50%;
+}
+.position:first-child {
+	border-right: 1px solid white;
+}
+.posTitle {
+	background: black;
+	color: white;
+	padding: 5px 0;
+}
+.posPosition {
+ 	padding: 14px 0;
+}
