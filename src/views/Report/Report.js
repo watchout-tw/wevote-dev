@@ -26,7 +26,8 @@ export default class Report extends Component {
         activeLegislator: array[0],
         fixedStream: false,
         meetFilterValue: "all",
-        procedureFilterValue: "all"
+        procedureFilterValue: "all",
+        showControls: false
       }
   }
   _onScroll(){
@@ -80,7 +81,7 @@ export default class Report extends Component {
   render() {
     const styles = require('./Report.scss');
     const {MaXiRecords} = this.props;
-    const {activeLegislator, fixedStream, meetFilterValue, procedureFilterValue} = this.state;
+    const {activeLegislator, fixedStream, meetFilterValue, procedureFilterValue, showControls} = this.state;
 
     let legislatorCardsClasses = classnames({
         [styles.legislatorCards] :true,
@@ -89,6 +90,10 @@ export default class Report extends Component {
     let legislatorControlClasses = classnames({
         [styles.legislatorControls] :true,
         [styles.fixed] : fixedStream
+    })
+    let controlBodyClasses = classnames({
+        [styles.selectBlocks] : true,
+        [styles.show] : showControls,
     })
 
     let recordStreamClasses = classnames({
@@ -103,29 +108,31 @@ export default class Report extends Component {
 
             <div className={legislatorCardsClasses}>
               <div className={legislatorControlClasses}>
-                  <div className={styles.selectTitle}>立場過濾器</div>
-                  <div className={styles.selectBlock}>
-                      支持會面
-                      <select onChange={this._onChangeMeetFilter.bind(this)}
-                              ref="meetFilter">
-                        <option value="all">所有</option>
-                        <option value="aye">贊成</option>
-                        <option value="nay">反對</option>
-                        <option value="unknown">模糊</option>
-                        <option value="none">？</option>
-                      </select>
-                  </div>  
-                  <div className={styles.selectBlock}>
-                      本次程序
-                      <select onChange={this._onChangeProcedureFilter.bind(this)}
-                              ref="procedureFilter">
-                        <option value="all">所有</option>
-                        <option value="transparent">公開透明</option>
-                        <option value="blackbox">黑箱</option>
-                        <option value="unknown">模糊</option>
-                        <option value="none">？</option>
-                      </select>
-                  </div>  
+                  
+                  <div className={controlBodyClasses}>
+                      <div className={styles.selectBlock}>
+                          支持會面
+                          <select onChange={this._onChangeMeetFilter.bind(this)}
+                                  ref="meetFilter">
+                            <option value="all">所有</option>
+                            <option value="aye">贊成</option>
+                            <option value="nay">反對</option>
+                            <option value="unknown">模糊</option>
+                            <option value="none">？</option>
+                          </select>
+                      </div>  
+                      <div className={styles.selectBlock}>
+                          本次程序
+                          <select onChange={this._onChangeProcedureFilter.bind(this)}
+                                  ref="procedureFilter">
+                            <option value="all">所有</option>
+                            <option value="transparent">公開透明</option>
+                            <option value="blackbox">黑箱</option>
+                            <option value="unknown">模糊</option>
+                            <option value="none">？</option>
+                          </select>
+                      </div>  
+                  </div>
               </div>
               <LegislatorCards handleClickCard={this._handleClickCard.bind(this)}
                                activeLegislator={activeLegislator}

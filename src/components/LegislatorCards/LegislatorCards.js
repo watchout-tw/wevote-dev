@@ -9,6 +9,7 @@ import people_name2id from '../../utils/people_name2id';
 import PeoplePhoto from '../PeoplePhoto/PeoplePhoto';
 
 import ReactSwipe from 'react-swipe';
+import moment from 'moment';
 
 @connect(
     state => ({ MaXiRecords: state.MaXiRecords }),
@@ -84,11 +85,26 @@ class Card extends Component {
       [styles.active]     : data.name === activeLegislator
     })
     let recordPosts = data.records.map((r,i)=>{
+        let date = moment.unix(r.date);
+        let postClasses = classnames({
+          [styles.recordPost] :  true,
+          [styles.multiple]   :  data.records.length > 1
+        })
         return (
-            <div className={styles.recordPost}>
+            <div className={postClasses}>
+                <div className={styles.recordMeta}>{`${date.format('YYYY-MM-DD')} ${r.meeting}`}</div>
                 <div className={styles.quote}>
                     {r.content}
                 </div>
+                <div className={styles.recordPosisition}>
+                    <div className={`${styles.recordPosisitionTitle} ${styles.recordPosisitionRow}`}>本則表態立場</div>
+                    <div className={styles.recordPosisitionRow}>支持會面：{handlePos(r.supportMaXiMeet)}</div>
+                    <div className={styles.recordPosisitionRow}>本次程序：{handlePos(r.positionOnProcedure)}</div>
+                </div>
+                <div>
+                    <a  className={`${styles.ia} ${styles.bright}`}
+                        target="_blank" 
+                        href={r.sourceURL}>資料來源</a></div>
             </div>
         )
     });
@@ -120,11 +136,11 @@ class Card extends Component {
             <div className={styles.aboutPositionMobile}>
                 <div className={styles.position}>
                     <div className={`${styles.posPosition} ${styles[data.supportMaXiMeet]}`}></div>
-                    <div className={styles.posTitle}>支持會面：{handlePosMeet(data.supportMaXiMeet)}</div>
+                    <div className={styles.posTitle}>支持會面：{handlePos(data.supportMaXiMeet)}</div>
                 </div>
                 <div className={styles.position}>
                     <div className={`${styles.posPosition}  ${styles[transparent2aye(data.positionOnProcedure)]}`}></div>
-                    <div className={styles.posTitle}>本次程序：{handlePosProcedure(data.positionOnProcedure)}</div>
+                    <div className={styles.posTitle}>本次程序：{handlePos(data.positionOnProcedure)}</div>
                 </div>
             </div>
             <div className={styles.aboutPositionWeb}>
@@ -154,10 +170,7 @@ class Card extends Component {
                 </div>
             </div>
 
-            
-                {positionSection}
-            
-           
+            {positionSection}
             {quoteSection}
           
         </div>
@@ -187,24 +200,6 @@ function transparent2aye(pos){
       return "nay";
     }else{
       return pos;
-    }
-}
-function handlePosMeet(pos){
-    if(pos === "none"){
-        return "？"
-    }else{
-        return eng2cht(pos);
-    }
-}
-function handlePosProcedure(pos){
-    if(pos === "none"){
-        return "？"
-    }else if(pos === "aye"){
-        return `公開透明`;
-    }else if (pos === "nay"){
-        return `黑箱`;
-    }else {
-        return `模糊`;
     }
 }
 

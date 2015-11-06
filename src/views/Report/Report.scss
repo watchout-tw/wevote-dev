@@ -14,6 +14,7 @@ $breakWebVersion : 730px;
 }
 .legislatorCards {
 	flex: 1;
+	text-align: center;
 }
 .legislatorCards.fixed {
 	padding-top: 60px;
@@ -42,24 +43,29 @@ $breakWebVersion : 730px;
 }
 
 
+
 /* controls */
 .legislatorControls {
     background: white;
     text-align: center;
     border-bottom: 1px solid #D3CFCF;
-    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.12);
-}
-.legislatorControls.fixed {
-	position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: $zMaXiLegislatorControl;
+    
 }
 @media all and (min-width: $breakWebVersion){
+	.legislatorControls {
+		box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.12);
+	}
+	.legislatorControls.fixed {
+		position: fixed;
+	    top: 0;
+	    width: 100%;
+	    z-index: $zMaXiLegislatorControl;
+	}
 	.legislatorControls.fixed {
 		width: calc(100% - 460px);
 	}
 }
+
 .selectTitle {
 	background: black;
 	color: white;

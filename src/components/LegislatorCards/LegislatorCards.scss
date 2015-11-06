@@ -8,10 +8,11 @@ $breakWebVersion : 730px;
 	
 	background: white;
 	border: 1px solid white;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.12);
+    
+	width: 100%;
+	margin: 10px 0px;
 
-	max-width: 100%;
-	margin: 10px 5px;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.12);
 }
 
 @media all and (min-width: $breakWebVersion){
@@ -120,6 +121,8 @@ $breakWebVersion : 730px;
 .quoteSwiper {
 	display: block;
 	padding-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
 }
 @media all and (min-width: $breakWebVersion){
 	.quoteSwiper {
@@ -128,12 +131,23 @@ $breakWebVersion : 730px;
 }
 .recordPost {
 	text-align: left;
-	padding: 10px 20px;
-	font-size: 15px;
+    padding: 10px 20px;
+    font-size: 15px;
+    
+}
+.recordPost.multiple {
+	
+    margin-bottom: 8px;
+    box-shadow: inset 0 -2px 4px rgba(0,0,0,0.12),inset 0 3px 5px rgba(0,0,0,0.12);
+
+}
+.recordMeta {
+	margin-bottom: 8px;
 }
 .quote {
 	line-height: $textLineHeight;
 	quotes: "\201C""\201D""\2018""\2019";
+	margin-bottom: 10px;
 }
 .quote:before, .quote:after {
 	display: inline-block;
@@ -150,6 +164,18 @@ $breakWebVersion : 730px;
 .quote:after {
 	content: close-quote;
 	margin-left: 2px;
+}
+.recordPosisition {
+	border: 1px solid;
+	margin-bottom: 10px;
+	display: inline-block;	
+}
+.recordPosisitionRow {
+	padding: 2px 4px;
+}
+.recordPosisitionTitle {
+	background:black;
+	color: white;
 }
 .dotItem {
 	display: inline-block;
