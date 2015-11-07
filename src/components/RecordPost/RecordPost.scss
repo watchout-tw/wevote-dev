@@ -1,15 +1,18 @@
 @import '../../common.scss';
+$breakWebVersion : 730px;
 .recordPost {
 	text-align: left;
-    padding: 10px 20px;
+    padding: 20px;
     font-size: 15px;
-    
+}
+@media all and (min-width: $breakWebVersion){
+	.recordPost {
+		padding: 0 20px;
+	}
 }
 .recordPost.multiple {
-	
     margin-bottom: 8px;
-    box-shadow: inset 0 -2px 4px rgba(0,0,0,0.12),inset 0 3px 5px rgba(0,0,0,0.12);
-
+    //box-shadow: inset 0 -2px 4px rgba(0,0,0,0.12),inset 0 3px 5px rgba(0,0,0,0.12);
 }
 .recordMeta {
 	margin-bottom: 8px;
@@ -39,6 +42,7 @@
 	border: 1px solid;
 	margin-bottom: 10px;
 	display: inline-block;	
+	display: inline-block;
 }
 .recordPosisitionRow {
 	padding: 2px 4px;
@@ -46,4 +50,7 @@
 .recordPosisitionTitle {
 	background:black;
 	color: white;
+}
+.recordSource {
+	margin: 10px 0 0;
 }

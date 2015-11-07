@@ -16,27 +16,26 @@ import RecordPost from '../RecordPost/RecordPost';
 export default class RecordStream extends Component {
   static propTypes = {
   }
-  
+
   render() {
     const styles = require('./RecordStream.scss');
     const { MaXiRecords, activeLegislator} = this.props;
     const people = MaXiRecords[activeLegislator];
-    
+
     if(!people) return <div/>;
     if(!people.records) return<div/>;
 
     let recordItems = people.records.map((card, index)=>{
         return (
-           <div className={styles.recordCard}>
+          <div className={styles.recordCard}>
               <RecordPost r={card} totalLength={1} />
-              <div className={styles.spacer}></div>
-           </div>
+          </div>
         )
     })
 
     return (
         <div className={styles.wrap}>
-           <div className={styles.title}>{activeLegislator} 在立法院的表態：</div>
+           <div className={styles.title}>{activeLegislator}在立法院的表態</div>
            {recordItems}
         </div>
     );

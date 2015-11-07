@@ -19,11 +19,11 @@ import $ from 'jquery';
 
 export default class Report extends Component {
   static propTypes = {
-      
+
   }
   constructor(props){ super(props)
       let array = Object.keys(props.MaXiRecords);//default 為第一位立委
-      
+
       this.state = {
         activeLegislator: array[0],
         fixedStream: false,
@@ -54,14 +54,14 @@ export default class Report extends Component {
                   this.setState({
                       fixedStream: false
                   })
-                  
+
                   Rnode.style.position = 'relative';
                   Rnode.style.top = `${-(rect.top)}px`;
                   Rnode.style.height = 'auto';
 
 
               }
-    
+
           }else{
               if(fixedStream === false){
                   Rnode.style.position = '';
@@ -80,7 +80,7 @@ export default class Report extends Component {
           })
       }
 
-      
+
   }
   componentDidMount(){
       window.addEventListener("scroll", this._onScroll.bind(this));
@@ -91,7 +91,7 @@ export default class Report extends Component {
   _handleClickCard(name, event){
       this.setState({
           activeLegislator: name
-      }) 
+      })
   }
   _onChangeMeetFilter(){
     let node = this.refs.meetFilter.getDOMNode();
@@ -106,7 +106,7 @@ export default class Report extends Component {
         procedureFilterValue: node.value
     })
   }
- 
+
   render() {
     const styles = require('./Report.scss');
     const {MaXiRecords} = this.props;
@@ -141,9 +141,9 @@ export default class Report extends Component {
             'og:image' : 'http://dev.wevote.tw/MaXi.jpg'
           }
       }
-     
+
     };
-    
+
     return (
     <div className={styles.wrap}>
         <DocumentMeta {...metaData}/>
@@ -154,7 +154,7 @@ export default class Report extends Component {
 
             <div className={legislatorCardsClasses}>
               <div className={legislatorControlClasses}>
-                  
+
                   <div className={styles.selectBlocks}>
                       <div className={styles.selectBlock}>
                           支持會面
@@ -166,7 +166,7 @@ export default class Report extends Component {
                             <option value="unknown">模糊</option>
                             <option value="none">？</option>
                           </select>
-                      </div>  
+                      </div>
                       <div className={styles.selectBlock}>
                           本次程序
                           <select onChange={this._onChangeProcedureFilter.bind(this)}
@@ -177,7 +177,7 @@ export default class Report extends Component {
                             <option value="unknown">模糊</option>
                             <option value="none">？</option>
                           </select>
-                      </div>  
+                      </div>
                   </div>
               </div>
               <LegislatorCards handleClickCard={this._handleClickCard.bind(this)}
@@ -193,14 +193,16 @@ export default class Report extends Component {
         </div>
 
         <div className={styles.footerSection} ref="SPfooterSection">
+
           <ul>
             <li>統計資料範圍：2015/11/03 - 2015/11/06</li>
             <li>澄清請 email 至 wevote@watchout.tw</li>
           </ul>
+
         </div>
     </div>
 
-    ); 
+    );
   }
 }
 class Fig extends Component {
@@ -229,15 +231,15 @@ class Fig extends Component {
             </div>
         )
         let backToContents = (
-            <div className={styles.figSection}>
+            <div>
               <div className={styles.chapterItem} onClick={this._scrollTo.bind(this, 0)}>
                 <div className={styles.chapterItemText}>{`<<回到出發點>>`}</div></div>
-                跳
                 {chapters}
             </div>
         )
         return (
             <div className={styles.figWrap}>
+
                 <div className={styles.figSection}>
                     <h1 id="Section0">警鐘響起！【馬習會】特殊副本深夜來襲～</h1>
                     <p>即將卸任的島嶼總統，為了兩塊土地的和平和一個握手的心願，<br/>
@@ -249,6 +251,7 @@ class Fig extends Component {
                     {chapters}
                     
                     <p>你不可錯過的世紀之戰，快往下進入副本！</p>
+
                 </div>
                 <img src={fig1} className={styles.figCover}
                      id="Section1" />
@@ -262,9 +265,10 @@ class Fig extends Component {
                     <p>另一方面，行政院長毛治國則在同一天到立法院院長室，向院長王金平及立院各黨團報告。但民進黨則認為應到內政委員會作正式報告，而拒絕出席會議，台聯則當場退席抗議。國民黨則以此認為「馬習會三天前有報告，程序已屬公開透明」。關於陸委會到底應在哪裡報告，這也是另一個爭議點。</p>
                     <h3>院會：國民黨團出招「總統國情報告」，民進黨拒絕為馬背書</h3>
                     <p>到了11/6（五）的院會，雙方砲火更加升級，國民黨率先出招，提出「馬習會後，總統到立院國情報告」。但民進黨仍強調陸委會應先到內政委員會報告，不願以「國情報告」方式為馬總統事後背書。國民黨則以此反批民進黨「假監督」。朝野協商破裂，王金平也宣布院會直接休息，連院會也停擺整日。</p>
-                    <p>目前看來，民進黨沒有其他反制或出招，也受到社民黨批評未盡在野黨監督責任，認為民進黨既不採取體制內彈劾、罷免、釋憲等手段，也不採取體制外抗議。面對國民黨的出招，民進黨被動防禦，下周立院的攻防會如何進行？周六（7日）馬習會決戰新加坡，也將點燃立院的新戰場。</p>
+                    <p>目前看來，民進黨沒有其他反制或出招，也受到社民黨批評未盡在野黨監督責任，認為民進黨既不採取體制內彈劾、罷免、釋憲等手段，也不採取體制外抗議。面對國民黨的出招，民進黨被動防禦，下週立院的攻防會如何進行？週六（7日）馬習會決戰新加坡，也將點燃立院的新戰場。</p>
+                    {backToContents}
                 </div>
-                {backToContents}
+                
 
                 <img src={fig2} className={styles.figCover}
                      id="Section2" />
@@ -278,8 +282,9 @@ class Fig extends Component {
                     </div>
                     <p>註1：並非每個政黨所有立委都有表態，這裡僅呈現有表態的立委資訊。<br/>
                        註2：政黨圖的大小依照發言次數比例。</p>
+                    {backToContents}
                 </div>
-                {backToContents}
+                
 
                 <img src={fig3} className={styles.figCover}
                      id="Section3" />
@@ -314,8 +319,9 @@ class Fig extends Component {
                       「馬總統民調很低，過去常常無法信守他的承諾。」</div>
                     <p>在雙方領導人會面的問題上，民進黨意見似乎並不明確反對，而是著眼於應該交由大選後的新民意來決定。這可能間接證明：比起現在的在野監督角色，民進黨更看重將來執政的準備。</p>
                     <p>台灣政治的一個特點，就是立委都不只在立法院內處理問題，更經常在立法院外的媒體上交鋒。馬習會這次引起的爭議，也有類似現象。國民黨立委面對一開始民進黨立委在內政委員會挑起的「變更議程」之戰，選擇消極避戰不開會，而是在媒體上大動作開記者會，反批民進黨「鬼叫」。當國民黨出招「國情報告」而民進黨被動防禦後，更是在媒體上批判民進黨「假監督」。這些立法院外的口水砲，雖然增加了許多看頭，但是對於馬習會是否黑箱、國會如何監督等問題，其實沒有太大幫助。仍應回歸到立院內的表態，避免一再因爭議而延宕議事，才是立委的職責所在。</p>
+                    {backToContents}
                 </div>
-                {backToContents}
+                
 
             </div>
         )

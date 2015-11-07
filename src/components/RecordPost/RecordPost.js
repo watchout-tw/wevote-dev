@@ -15,7 +15,7 @@ export default class RecordPost extends Component {
   static propTypes = {
   }
   constructor(props){ super(props)
-      
+
   }
   render() {
     const styles = require('./RecordPost.scss');
@@ -36,9 +36,9 @@ export default class RecordPost extends Component {
                     <div className={styles.recordPosisitionRow}>支持會面：{handlePos(r.supportMaXiMeet)}</div>
                     <div className={styles.recordPosisitionRow}>本次程序：{handlePos(r.positionOnProcedure)}</div>
                 </div>
-                <div>
+                <div className={styles.recordSource}>
                     <a  className={`${styles.ia} ${styles.bright}`}
-                        target="_blank" 
+                        target="_blank"
                         href={r.sourceURL}>資料來源</a></div>
             </div>
         )
