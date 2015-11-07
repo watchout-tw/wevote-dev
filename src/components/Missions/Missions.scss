@@ -37,7 +37,7 @@ $itemSize: 240px;
 	@include prefix(filter, drop-shadow(0 0 15px rgba(0, 255, 255, 0.75)));
 }
 .coverImg {
-  display: block;
+    display: block;
 	width: 100%;
 }
 .coverTitleBlock {
