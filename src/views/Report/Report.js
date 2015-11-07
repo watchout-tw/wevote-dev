@@ -19,11 +19,11 @@ const breakWebVersion = 730; //跟 scss 同步
 
 export default class Report extends Component {
   static propTypes = {
-      
+
   }
   constructor(props){ super(props)
       let array = Object.keys(props.MaXiRecords);//default 為第一位立委
-      
+
       this.state = {
         activeLegislator: array[0],
         fixedStream: false,
@@ -54,14 +54,14 @@ export default class Report extends Component {
                   this.setState({
                       fixedStream: false
                   })
-                  
+
                   Rnode.style.position = 'relative';
                   Rnode.style.top = `${-(rect.top)}px`;
                   Rnode.style.height = 'auto';
 
 
               }
-    
+
           }else{
               if(fixedStream === false){
                   Rnode.style.position = '';
@@ -80,7 +80,7 @@ export default class Report extends Component {
           })
       }
 
-      
+
   }
   componentDidMount(){
       window.addEventListener("scroll", this._onScroll.bind(this));
@@ -91,7 +91,7 @@ export default class Report extends Component {
   _handleClickCard(name, event){
       this.setState({
           activeLegislator: name
-      }) 
+      })
   }
   _onChangeMeetFilter(){
     let node = this.refs.meetFilter.getDOMNode();
@@ -106,7 +106,7 @@ export default class Report extends Component {
         procedureFilterValue: node.value
     })
   }
- 
+
   render() {
     const styles = require('./Report.scss');
     const {MaXiRecords} = this.props;
@@ -141,9 +141,9 @@ export default class Report extends Component {
             'og:image' : 'http://dev.wevote.tw/MaXi.jpg'
           }
       }
-     
+
     };
-    
+
     return (
     <div className={styles.wrap}>
         <DocumentMeta {...metaData}/>
@@ -154,7 +154,7 @@ export default class Report extends Component {
 
             <div className={legislatorCardsClasses}>
               <div className={legislatorControlClasses}>
-                  
+
                   <div className={styles.selectBlocks}>
                       <div className={styles.selectBlock}>
                           支持會面
@@ -166,7 +166,7 @@ export default class Report extends Component {
                             <option value="unknown">模糊</option>
                             <option value="none">？</option>
                           </select>
-                      </div>  
+                      </div>
                       <div className={styles.selectBlock}>
                           本次程序
                           <select onChange={this._onChangeProcedureFilter.bind(this)}
@@ -177,7 +177,7 @@ export default class Report extends Component {
                             <option value="unknown">模糊</option>
                             <option value="none">？</option>
                           </select>
-                      </div>  
+                      </div>
                   </div>
               </div>
               <LegislatorCards handleClickCard={this._handleClickCard.bind(this)}
@@ -193,12 +193,12 @@ export default class Report extends Component {
         </div>
 
         <div className={styles.footerSection} ref="SPfooterSection">
-            <div>本特別報導統計資料自2015年11月3日至6日中午12時止</div>
-            <div>澄清請 email 至 wevote@watchout.tw</div>
+            <p>本特別報導統計資料自2015年11月3日至6日中午12時止。</p>
+            <p>澄清請email至wevote@watchout.tw。</p>
         </div>
     </div>
 
-    ); 
+    );
   }
 }
  class Fig extends Component {
@@ -210,9 +210,9 @@ export default class Report extends Component {
         return (
             <div className={styles.figWrap}>
                 <div className={`${styles.figSection} ${styles.center}`}>
-                  <h1>馬習會特刊</h1> 
-                  <p>2015/11/07</p>
-                  
+                  <h1>馬習會特刊</h1>
+                  <p>2015-11-07</p>
+
                 </div>
 
                 <img src={fig1} className={styles.figCover} />
@@ -226,7 +226,7 @@ export default class Report extends Component {
                     <p>另一方面，行政院長毛治國則在同一天到立法院院長室，向院長王金平及立院各黨團報告。但民進黨則認為應到內政委員會作正式報告，而拒絕出席會議，台聯則當場退席抗議。國民黨則以此認為「馬習會三天前有報告，程序已屬公開透明」。關於陸委會到底應在哪裡報告，這也是另一個爭議點。</p>
                     <h3>院會：國民黨團出招「總統國情報告」，民進黨拒絕為馬背書</h3>
                     <p>到了11/6（五）的院會，雙方砲火更加升級，國民黨率先出招，提出「馬習會後，總統到立院國情報告」。但民進黨仍強調陸委會應先到內政委員會報告，不願以「國情報告」方式為馬總統事後背書。國民黨則以此反批民進黨「假監督」。朝野協商破裂，王金平也宣布院會直接休息，連院會也停擺整日。</p>
-                    <p>目前看來，民進黨沒有其他反制或出招，也受到社民黨批評未盡在野黨監督責任，認為民進黨既不採取體制內彈劾、罷免、釋憲等手段，也不採取體制外抗議。面對國民黨的出招，民進黨被動防禦，下周立院的攻防會如何進行？周六（7日）馬習會決戰新加坡，也將點燃立院的新戰場。</p>
+                    <p>目前看來，民進黨沒有其他反制或出招，也受到社民黨批評未盡在野黨監督責任，認為民進黨既不採取體制內彈劾、罷免、釋憲等手段，也不採取體制外抗議。面對國民黨的出招，民進黨被動防禦，下週立院的攻防會如何進行？週六（7日）馬習會決戰新加坡，也將點燃立院的新戰場。</p>
                 </div>
 
                 <img src={fig2} className={styles.figCover} />

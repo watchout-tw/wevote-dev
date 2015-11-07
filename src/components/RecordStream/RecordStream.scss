@@ -1,15 +1,27 @@
+@import '../../common.scss';
 .wrap {
 	position: relative;
-	margin-top: 56px;
+	margin-top: 50px;
 }
 .recordCard {
-	
+	&:not(:last-child):after {
+		content: '';
+		display: block;
+		position: relative;
+		margin: 25px auto;
+		width: 50px;
+		height: 1px;
+		background: $black;
+	}
+	&:last-child {
+		margin-bottom: 50px;
+	}
 }
 .title {
     text-align: center;
-    padding: 10px;
+    padding: 0 0 25px;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: bold;
 }
 .spacer {
 	width: 100px;
