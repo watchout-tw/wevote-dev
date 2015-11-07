@@ -6,9 +6,6 @@ $breakWebVersion : 730px;
 .coverImg {
 	width: 100%;
 }
-.figWrap {
-	
-}
 .figCover {
 	width: 100%;
 }
@@ -17,6 +14,21 @@ $breakWebVersion : 730px;
 	max-width: 800px;
 	padding: 10px;
 }
+.chapterItem {
+	cursor: pointer;
+	margin: 8px 0;
+}
+.chapterItemText {
+	display: inline-block;
+    padding: 3px 10px 3px 0;
+    color: #873633;
+    font-weight: bold;
+}
+.chapterItemText:hover {
+	background: #873633;
+	color: white;
+}
+
 .figSection h3 {
 	margin-top: 40px;
 }
