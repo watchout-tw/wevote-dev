@@ -72,6 +72,11 @@ class Card extends Component {
 
   }
   _onSlideChange(index, div){
+    /* ReactSwipe duplicate ad-hoc fix */
+    const {data} = this.props;
+    if(index >= data.records.length){
+       index %= data.records.length;
+    }
     this.setState({
       currentIndex: index
     })
@@ -87,7 +92,8 @@ class Card extends Component {
     })
     let recordPosts = data.records.map((r,i)=>{
         return (
-            <div className={styles.recordWrap}><RecordPost r={r} totalLength={data.records.length} /></div>
+            <div className={styles.recordWrap} 
+                 key={`r-${r.legislator}-${i}`}><RecordPost r={r} totalLength={data.records.length} /></div>
         )
     });
     let dotItems = data.records.map((r,i)=>{
@@ -104,7 +110,7 @@ class Card extends Component {
     let quoteSection = data.records.length > 1 ? (
       <div className={styles.quoteSwiper}>
           <ReactSwipe continuous={true} 
-              callback={this._onSlideChange.bind(this)}>
+                      callback={this._onSlideChange.bind(this)}>
               {recordPosts}
           </ReactSwipe>
           <div className={styles.dots}>{dotItems}</div>

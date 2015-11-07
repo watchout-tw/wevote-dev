@@ -208,7 +208,6 @@ export default class Report extends Component {
 class Fig extends Component {
     
     _scrollTo(value, e){
-        console.log(value)
         let target = $("#Section"+value);
   
         $("html,body").animate({
