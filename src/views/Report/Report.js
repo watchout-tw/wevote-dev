@@ -193,8 +193,10 @@ export default class Report extends Component {
         </div>
 
         <div className={styles.footerSection} ref="SPfooterSection">
-            <div>本特別報導統計資料自2015年11月3日至6日中午12時止</div>
-            <div>澄清請 email 至 wevote@watchout.tw</div>
+          <ul>
+            <li>統計資料範圍：2015/11/03 - 2015/11/06</li>
+            <li>澄清請 email 至 wevote@watchout.tw</li>
+          </ul>
         </div>
     </div>
 
@@ -209,12 +211,6 @@ export default class Report extends Component {
         let fig3 = require('./images/slides-03.png');
         return (
             <div className={styles.figWrap}>
-                <div className={`${styles.figSection} ${styles.center}`}>
-                  <h1>馬習會特刊</h1> 
-                  <p>2015/11/07</p>
-                  
-                </div>
-
                 <img src={fig1} className={styles.figCover} />
                 <div className={styles.figSection}>
                     <h2>馬習會三天震撼，藍綠各出奇招</h2>
