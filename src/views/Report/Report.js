@@ -138,7 +138,7 @@ export default class Report extends Component {
             'og:title': title,
             'og:description': description,
             'og:type' : 'website',
-            'og:image' : 'http://dev.wevote.tw/MaXi.jpg'
+            'og:image' : 'http://wevote.tw/MaXi.jpg'
           }
       }
 
