@@ -225,15 +225,15 @@ class Fig extends Component {
 
         let chapters = (
             <div>
-                <div className={styles.chapterItem} onClick={this._scrollTo.bind(this, 1)}><div className={styles.chapterItemText}>***時間大事紀告訴你到底發生了什麼事？</div></div>
-                <div className={styles.chapterItem} onClick={this._scrollTo.bind(this, 2)}><div className={styles.chapterItemText}>***勇者黨團又各有什麼立場？</div></div>
-                <div className={styles.chapterItem} onClick={this._scrollTo.bind(this, 3)}><div className={styles.chapterItemText}>***立委勇者又各自說了什麼話？</div></div>
+                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 1)}>***時間大事紀告訴你到底發生了什麼事？</div></div>
+                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 2)}>***勇者黨團又各有什麼立場？</div></div>
+                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 3)}>***立委勇者又各自說了什麼話？</div></div>
             </div>
         )
         let backToContents = (
             <div>
-              <div className={styles.chapterItem} onClick={this._scrollTo.bind(this, 0)}>
-                <div className={styles.chapterItemText}>{`<<回到出發點>>`}</div></div>
+              <div className={styles.chapterItem}>
+                <div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 0)}>《回到出發點》</div></div>
                 {chapters}
             </div>
         )
