@@ -82,16 +82,11 @@ export default class App extends Component {
             <Link to={`/404`}>404</Link>
             <Link to={`/8th-legislators`}>8th-legislators</Link>
         </div>
-        <div className={styles.spaceBar}></div>
+        
         <div className={styles.appContent}>
           {this.props.children}
         </div>
-        <Footer/>
-        <Social />
-        <Appbar currentIssueName={params.issueName}
-                issues={issues}
-                firstPathName={location}
-                params={params}/>
+        
       </div>
     );
   }

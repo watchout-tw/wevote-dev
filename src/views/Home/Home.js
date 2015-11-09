@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 import Video from '../../components/Video/Video.js';
+import MaXiCastle from '../../components/MaXiCastle/MaXiCastle.js';
 import Missions from '../../components/Missions/Missions.js';
 @connect(
     state => ({
@@ -29,21 +30,13 @@ export default class Home extends Component {
         'og:type' : 'website'
       }
     };
-    let MaXi = require("./images/castles_maxi.svg");
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
           <Video />
           <div className={styles.contentWrap}>
               <div className={styles.innerWrap}>
-                  <div className={styles.alignCenter}>
-                      <Link className={styles.coverItem}
-                            to={`/SP/ma-xi-meet/`}>
-                          <img src={MaXi} 
-                               className={styles.coverImg}/>
-                          <div>超展開SP：馬習會</div>
-                      </Link>
-                  </div>
+                  <MaXiCastle />
                   <Missions issues={issues}
                             showComingMission={true}/>
 

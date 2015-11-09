@@ -3,8 +3,7 @@
 	position: relative;
 	background-image: url(./images/hall.jpg);
 	background-size: cover;
-	height: 100vh;
-	overflow: scroll;
+	min-height: 100vh;
 	text-align: center;
 }
 h1.topic {
