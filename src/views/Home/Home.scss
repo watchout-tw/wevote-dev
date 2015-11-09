@@ -4,6 +4,11 @@ $breakLarge: 800px;
 .home {
   position: relative;
 }
+.invisible {
+  max-height: 0;
+  overflow: hidden;
+}
+
 .contentWrap {
   padding: 60px 0 0;
   border-top: 1px solid rgb(232, 246, 251);

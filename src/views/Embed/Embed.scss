@@ -6,9 +6,22 @@
 	min-height: 100vh;
 	text-align: center;
 }
+.embedSection {
+	background: rgba(255,255,255,0.4);
+	text-align: left;
+}
+.embedImg {
+	width: 300px;
+	margin: 10px 0 0 20px;
+}
 h1.topic {
-	margin: 20px 0 0 10px;
+	margin: 20px auto;
 	font-size: 28px;
+}
+@media all and (min-width: $appBarBreakLarge) {
+	h1.topic {
+		margin: 20px 0 0 10px;
+	}
 
 }
 .container {
@@ -22,8 +35,8 @@ h1.topic {
 @media all and (min-width: $appBarBreakLarge) {
 	.flyingImg {
 		position: absolute;
-   		top: 30px;
-   		right: 0;
+   		top: 150px;
+   		left: calc(50% + 160px);
    		z-index: 1;
 	}	
 }

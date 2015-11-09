@@ -33,6 +33,11 @@ export default class Home extends Component {
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
+          <div className={styles.invisible}>
+            <Link to={`/404`}>404</Link>
+            <Link to={`/8th-legislators`}>8th-legislators</Link>
+          </div>
+
           <Video />
           <div className={styles.contentWrap}>
               <div className={styles.innerWrap}>

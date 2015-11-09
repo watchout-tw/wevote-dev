@@ -16,12 +16,17 @@ export default class Embed extends Component {
     const styles = require('./Embed.scss');
     const {issues} = this.props;
 
+    const embedLogo = require("./images/embedLogo.svg");
     const missionImg = require("./images/VideoTitles_mission.svg");
     const flyingImg = require("./images/flying-inverse.png");
 
     return (
       <div className={styles.wrap}>
-          <h1 className={styles.topic}>立委勇者大選・最強解析！</h1>
+          <div className={styles.embedSection}>
+              <img src={embedLogo} className={styles.embedImg}/>
+          </div>
+
+          <h1 className={styles.topic}>立委勇者大選・最強解析</h1>
           <img src={flyingImg} className={styles.flyingImg} />
           <img src={missionImg}
                className={styles.missionImg}/>
@@ -30,7 +35,7 @@ export default class Embed extends Component {
               <Missions issues={issues}
                         showComingMission={false}
                         embed={true}/>
-              <MaXiCastle />
+              <MaXiCastle embed={true}/>
           </div>
 
       </div>
