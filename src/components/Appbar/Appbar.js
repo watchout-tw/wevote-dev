@@ -58,32 +58,15 @@ export default class Appbar extends Component {
 
     let showStyle = (showMenu) ? styles.showMenu : "";
 
-    // let issueItems = Object.keys(issues).map((issueId, index)=>{
-
-    //   //let activeStyle = (currentIssueName===issueId) ? styles.active : "";
-    //   let activeStyle = (issueName===issueId) ? styles.active : "";
-    //   let symbol = require('./images/symbols_' + issues[issueId].titleEng + '.svg');
-
-    //   return (
-    //     <li key={index}
-    //         onClick={this._updateLocation.bind(this,issueId)}>
-    //         <Link className={`${styles.navItem} ${activeStyle}`}
-    //               to={`/issues/${issueId}/`}
-    //               onClick={this._onClickIssue.bind(this)}>
-    //                 <img src={symbol} className={styles.symbol}/>
-    //                 <span>{issues[issueId].title}</span>
-    //         </Link>
-    //     </li>
-    //   )
-    // })
-
     let issuesActive = (location === "issues") ? styles.active : "";
     let constituenciesActive = (location === "constituencies") ? styles.active : "";
     let partiesActive = (location === "parties") ? styles.active : "";
+
     let aboutActive = (location === "about") ? styles.active : "";
 
     let symbol_parties = require('./images/symbols_parties.svg');
     let symbol_about = require('./images/symbols_about.svg');
+    let symbol_maxi = require('./images/symbols_maXi.svg');
     let menu = require('./images/menu.svg');
 
     return (
@@ -91,7 +74,7 @@ export default class Appbar extends Component {
           <div className={styles.inner}>
               <Link to="/" className={styles.siteName}
                     onClick={this._hideMenu.bind(this)}>
-                <img src={siteLogo} className={styles.siteLogo}/>
+                <img src={siteLogo} className={styles.siteLogo} onClick={this._updateLocation.bind(this,'/')}/>
               </Link>
 
               <ul className={`${styles.lists} ${showStyle}`}>
@@ -122,6 +105,7 @@ export default class Appbar extends Component {
                             <span>黨團衝突戰</span>
                     </Link>
                 </li>
+
 
                 <li onClick={this._updateLocation.bind(this,'about')}>
                     <Link className={`${styles.navItem} ${aboutActive}`}

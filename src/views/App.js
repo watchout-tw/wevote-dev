@@ -7,8 +7,6 @@ import {createTransitionHook} from '../universalRouter';
 
 import './normalize.scss';
 
-import Appbar from '../components/Appbar/Appbar.js';
-
 const title = "沃草！立委出任務 - 2016立委投票攻略";
 const description = "2016立委選舉票該投給誰？「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委與下任候選人立場，並分析政黨針對議題的整體立場。想透過議題更了解你的選區立委嗎？請上「立委出任務」！";
 
@@ -76,19 +74,9 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
-        <div className={styles.invisible}>
-            <Link to={`/404`}>404</Link>
-            <Link to={`/8th-legislators`}>8th-legislators</Link>
-        </div>
-        <div className={styles.spaceBar}></div>
         <div className={styles.appContent}>
           {this.props.children}
         </div>
-      
-        <Appbar currentIssueName={params.issueName}
-                issues={issues}
-                firstPathName={location}
-                params={params}/>
       </div>
     );
   }

@@ -64,12 +64,14 @@ $contentMaxWidth: 1200px;
 
 $appBarBreakLarge: 750px;
 $appBarHeight: 54px;
-$appBarHeightExtended: 82px;
+$appBarHeightExtended: 76px;
 
 // z-index
 $zPlayingVideo: 999;
 $zAppBar: 99;
 $zProcessingIndicator: 99;
+$zMaXiLegislatorControl: 9;
+$zShowCardBack: 999;
 
 // 表態
 $ayeColor: #00FFB0;
@@ -78,6 +80,7 @@ $unknownColor: #FFF800;
 .aye { background: $ayeColor; }
 .nay { background: $nayColor; }
 .unknown { background: $unknownColor; }
+.none { background: gray; }
 $defaultCubeSize: 20px;
 $noneColor: gray;
 

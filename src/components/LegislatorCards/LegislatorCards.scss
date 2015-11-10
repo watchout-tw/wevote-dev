@@ -1,0 +1,149 @@
+@import '../../common.scss';
+$breakWebVersion : 730px;
+
+.cardWrap {
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+
+	background: white;
+	border: 1px solid white;
+
+	width: 100%;
+	margin: 10px 0px;
+
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.12);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media all and (min-width: $breakWebVersion){
+	.cardWrap {
+		display: inline-block;
+		width: 200px;
+		height: 180px;
+		margin: 10px;
+		vertical-align: top;
+		padding-bottom: 0;
+		border: 3px solid transparent;
+	}
+	/* 網頁版 active */
+	.cardWrap.active {
+		border: 3px solid black;
+	}
+}
+.aboutPeople {
+}
+.aboutPosition {
+	font-size: 14px;
+	text-align: left;
+}
+.aboutPositionWeb {
+	display: none;
+}
+@media all and (min-width: $breakWebVersion){
+	.aboutPositionMobile {
+		display: none;
+	}
+	.aboutPositionWeb {
+		display: block;
+	}
+}
+.photo {
+	text-decoration: none;
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	margin: 10px auto;
+	border-radius: 50%;
+	background: $trueWhite;
+}
+.peopleInfo {
+	display: inline-block;
+	vertical-align: top;
+    padding-top: 12px;
+    margin-left: 8px;
+}
+.peopleName {
+	margin: 4px;
+	font-size: 20px;
+	font-weight: bold;
+	vertical-align: top;
+	max-width: 100px;
+}
+.partyTitle {
+	margin-left: 3px;
+	line-height: $defaultLineHeight;
+  	display: inline-block;
+}
+.position {
+	padding: 0 10px 0 24px;
+}
+.posPosition {
+ 	width: 20px;
+ 	height: 20px;
+ 	display: inline-block;
+}
+.posTitle {
+	padding: 0 5px ;
+	display: inline-block;
+    vertical-align: top;
+    padding-top: 2px;
+}
+@media all and (min-width: $breakWebVersion){
+	.aboutPosition {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	.position {
+		width: 50%;
+		display: inline-block;
+		padding: 0px;
+    	text-align: center;
+	}
+	.position:first-child {
+		border-right: 1px solid white;
+	}
+	.posPosition {
+		display: block;
+		width: auto;
+		height: auto;
+		padding: 10px;
+	}
+	.posTitle {
+		display: block;
+		background: black;
+		color: white;
+	}
+}
+
+
+/* 以下只出現在手機版 */
+.quoteSwiper {
+	display: block;
+	padding-bottom: 4px;
+    margin-top: 10px;
+    width: 100%;
+}
+@media all and (min-width: $breakWebVersion){
+	.quoteSwiper {
+		display: none;
+	}
+}
+.recordWrap {
+	width: 100%;
+}
+.dotItem {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid black;
+	border-radius: 50%;
+	margin: 2px;
+}
+.dotItem.active {
+	background: black;
+}

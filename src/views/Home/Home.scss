@@ -13,83 +13,20 @@ $breakLarge: 800px;
   padding: 30px 20px;
   margin: 10px;
 }
-
 /* ------------- */
 .home {
   position: relative;
 }
+.invisible {
+  max-height: 0;
+  overflow: hidden;
+}
+
 .contentWrap {
-//  background: #EEEEEE;
   padding: 60px 0 0;
   border-top: 1px solid rgb(232, 246, 251);
 }
 .innerWrap {
   max-width: 1200px;
   margin: 0 auto;
-}
-.alignCenter {
-  text-align: center;
-}
-.pageTitle {
-  text-align: center;
-  font-size: 26px;
-  padding: 15px 0;
-  margin: 35px 0 15px 0;
-  color: $textColor;
-}
-
-h2 {
-  font-size: 34px;
-}
-.aboutUsBlock {
-  padding-top: 50px;
-  background: rgb(220,220,220);
-}
-.aboutUsText {
-  text-align: left;
-  margin: 0 auto;
-  line-height: 1.6;
-  padding: 30px 10px 100px 10px;
-  font-size: 18px;
-
-}
-
-// roadmap
-.roadmap {
-  width: 100%;
-  text-align: center;
-  background: rgba($awesomeColor, 0.15);
-  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
-
-  > .stage {
-    display: inline-block;
-    vertical-align: top;
-    height: 240px;
-    width: 320px;
-    margin: 0 20px;
-    background-image: url('./images/roadmap-01.png');
-    background-position: 0 0;
-    background-size: auto 100%;
-
-    &.october, &.november {
-      height: 200px;
-      background-size: auto 240px;
-    }
-    &.october {
-      width: 222px;
-      background-position: -34px 0;
-    }
-    &.november {
-      width: 177px;
-      background-position: -283px 0;
-    }
-    &.december {
-      width: 247px;
-      background-position: -478px 0;
-    }
-    &.january {
-      width: 231px;
-      background-position: -746px 0;
-    }
-  }
 }

@@ -7,6 +7,9 @@ $itemSize: 240px;
 	margin: 0 auto 60px;
 	text-align: center;
 }
+.wrap.embed {
+	max-width: 100vw;/* embed max width */
+}
 /* 手機上 safari 需要指定 block */
 .coverItem, .coverItem:visited {
 	text-decoration: none;
@@ -21,6 +24,14 @@ $itemSize: 240px;
 	cursor: pointer;
 	transition: color 100ms ease-in-out;
 }
+/* 用在 embed 需要白色背景 */
+.coverItem.embed {
+	background: rgba(250,250,250,0.4);
+	margin: 10px;
+	padding: 20px 10px;
+	
+}
+
 @media all and (min-width: 480px) {
 	.coverItem, .coverItem:visited {
 		display: inline-block;
@@ -37,7 +48,7 @@ $itemSize: 240px;
 	@include prefix(filter, drop-shadow(0 0 15px rgba(0, 255, 255, 0.75)));
 }
 .coverImg {
-  display: block;
+    display: block;
 	width: 100%;
 }
 .coverTitleBlock {

@@ -1,0 +1,146 @@
+@import '../../common.scss';
+$breakWebVersion : 730px;
+.wrap {
+	position: relative;
+}
+.coverImg {
+	width: 100%;
+}
+.figCover {
+	width: 100%;
+}
+.figSection {
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 10px 10px 0;
+
+	&:after {
+		content: '';
+		display: block;
+		position: relative;
+		width: 50px;
+		height: 1px;
+		margin: 75px auto;
+		background: $black;
+	}
+}
+.chapterItem {
+	margin: 8px 0;
+}
+.chapterItemText {
+	cursor: pointer;
+	display: inline-block;
+    padding: 3px 10px;
+    color: #873633;
+    font-weight: bold;
+}
+.chapterItemText:hover {
+	background: #873633;
+	color: white;
+}
+
+.figSection h3 {
+	margin-top: 40px;
+}
+.figSection p {
+	line-height: 1.5;
+}
+.figAuguePoints {
+	border-left: 5px solid gray;
+    padding-left: 10px;
+    line-height: 1.4;
+}
+
+
+
+
+.posFigSection {
+	max-width: 800px;
+	padding: 10px;
+	margin: 0 auto;
+}
+.positionSection {
+	display: flex;
+	border-top: 1px solid gainsboro;
+	border-bottom: 1px solid gainsboro;
+}
+.legislatorCards {
+	flex: 1;
+	text-align: center;
+	//padding-bottom: 40vh;
+	min-height: 180vh;
+}
+
+
+/* 手機版不顯示 */
+.recordStream {
+	display: none;
+}
+
+@media all and (min-width: $breakWebVersion){
+	.recordStream {
+		position: relative;
+		background: white;
+		padding: 20px;
+		display: block;
+		overflow: scroll;
+		flex: 0 0 460px;
+		border-left: 1px solid rgb(220,220,220);
+	}
+	.fixedStream {
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		overflow: scroll;
+	}
+}
+
+
+
+/* controls */
+.legislatorControls {
+    background: white;
+    text-align: center;
+    border-bottom: 1px solid #D3CFCF;
+}
+/* 網頁版才有過濾立委的 filter fixed */
+@media all and (min-width: $breakWebVersion){
+	.legislatorCards.fixed {
+		padding-top: 60px;
+		/* space for the control bar */
+		/* control bar is 60px */
+	}
+	.legislatorControls {
+		box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.12);
+	}
+	.legislatorControls.fixed {
+		position: fixed;
+	    top: 0;
+	    width: 100%;
+	    z-index: $zMaXiLegislatorControl;
+	}
+
+	.legislatorControls.fixed {
+		width: calc(100% - 460px);
+	}
+}
+
+.selectTitle {
+	background: black;
+	color: white;
+	padding: 5px;
+}
+.selectBlock {
+	display: inline-block;
+	padding: 10px;
+}
+.selectBlock select {
+	margin: 0 5px;
+  	border-radius: 0;
+  	&:focus {
+  	  outline: none;
+  	}
+}
+.footerSection {
+	padding: 100px 40px;
+}

@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from "react-router";
+import classnames from 'classnames';
 
 import eng2url from '../../utils/eng2url';
 
@@ -54,12 +55,17 @@ export default class Missions extends Component {
   
   render() {
     const styles = require('./Missions.scss');
-    const {issues, skipIssue, showComingMission} = this.props;
+    const {issues, skipIssue, showComingMission, embed} = this.props;
     const {completed} = this.state;
     const castle_default = require("./images/castles_default.svg");
     const symbol_star = require('./images/symbols_star.svg');
 
     const {setToProecessing} = this.props;
+
+    let coverItemClasses = classnames({
+      [styles.coverItem]  : true,
+      [styles.embed] : embed
+    })
 
     let missonItems = Object.keys(issues).map((currentIssue, index)=>{
 
@@ -81,28 +87,55 @@ export default class Missions extends Component {
         let titleStyle = (completed[currentIssue] === true) ? styles.completedCoverTitle : styles.coverTitle;
 
         if(skipIssue !== currentIssue){
-            return (
-              <Link to={`/issues/${currentIssue}/`} key={index} className={styles.coverItem}
-                    onClick={setToProecessing}>
-                  <img src={imgURL} className={styles.coverImg}/>
-                  <div className={styles.coverTitleBlock}>
-                      <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
-                  </div>
-                  <div className={styles.coverQuestion}>{completedOrStatement}</div>
-              </Link>
-            )
+            if(embed === true){
+              let linkURL = `//wevote.tw/issues/${currentIssue}/`;
+              return (
+                  <a href={linkURL}
+                     target="_blank" 
+                     key={index} 
+                     className={coverItemClasses}
+                     onClick={setToProecessing}>
+                      <img src={imgURL} className={styles.coverImg}/>
+                      <div className={styles.coverTitleBlock}>
+                          <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
+                      </div>
+                      <div className={styles.coverQuestion}>{completedOrStatement}</div>
+                  </a>
+              )
+
+            }else{
+              return (
+                  <Link to={`/issues/${currentIssue}/`} key={index} className={coverItemClasses}
+                        onClick={setToProecessing}>
+                      <img src={imgURL} className={styles.coverImg}/>
+                      <div className={styles.coverTitleBlock}>
+                          <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
+                      </div>
+                      <div className={styles.coverQuestion}>{completedOrStatement}</div>
+                  </Link>
+              )
+
+            }
+            
         }
     });
 
+    /* 更多任務 */
     let comingMissionItem = (showComingMission === true) ? (
-        <div className={styles.coverItem}>
+        <div className={coverItemClasses}>
           <img src={castle_default} className={styles.coverImg}/>
           <div className={styles.comingText}>更多任務<br/>即將揭曉</div>
         </div>
     ) : "";
 
+
+    let wrapClasses = classnames({
+      [styles.wrap]  : true,
+      [styles.embed] : embed
+    })
+
     return (
-        <div className={styles.wrap}>
+        <div className={wrapClasses}>
             {missonItems}
             {comingMissionItem}
         </div>

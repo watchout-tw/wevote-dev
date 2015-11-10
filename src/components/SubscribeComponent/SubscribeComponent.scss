@@ -1,0 +1,87 @@
+@import '../../common.scss';
+$redColor: #D65A5A;
+$breakSmall: 480px;
+$breakMedium: 800px;
+
+.title {
+	font-size: 20px;
+	padding: 20px 0;
+}
+.emailLabel {
+	display: none;
+}
+.red {
+	color: $redColor;
+}
+.showAlert  {
+	display: inline-block;
+	color: $redColor;
+}
+.hideAlert {
+	display: none;
+}
+.emailInput {
+	display: inline-block;
+	height: 40px;
+  	border: none;
+  	padding: 5px 10px;
+	background: rgba($white, 0.75);
+  	color: $black;
+	line-height: 1;
+}
+.emailInput:focus {
+  	outline: none;
+	background: $white;
+}
+.submit {
+	display: block;
+	height: 40px;
+	margin-top: 10px; // 當submit按鈕在第二行時
+	padding: 0 8px;
+	border: none;
+	color: $black;
+	background: rgba($white, 0.75);
+}
+.submit:hover {
+	background: $white;
+}
+@media all and (min-width: $breakSmall){
+	.submit {
+		display: inline-block;
+		margin: 0 10px;
+	}
+}
+.lawInfo {
+	line-height: 1.5;
+	font-size: 12px;
+}
+.bottomInfo {
+	display: none;
+	line-height: 1.5;
+	font-size: 12px;
+}
+.lawInfo, .lawInfoTitle, .lawInfoContent, .bottomInfo {
+	margin: 12px 0;
+}
+.lawInfo, .bottomInfo {
+	opacity: 0.5;
+}
+@media all and (min-width: $breakSmall){
+	.lawInfo, .bottomInfo {
+		width: 50%;
+	}
+}
+.linkItem {
+	display: inline-block;
+	margin: 10px;
+	font-size: 16px;
+}
+.hiddenLinks {
+	max-height: 0px;
+	overflow: hidden;
+}
+.smallIcon {
+	font-size: 16px;
+	margin: 4px;
+}
+
