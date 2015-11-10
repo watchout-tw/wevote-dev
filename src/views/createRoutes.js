@@ -21,9 +21,12 @@ import PartyIssue from 'views/PartyIssue/PartyIssue.js';
 
 import Record from 'views/Record/Record.js';
 import Clarify from 'views/Clarify/Clarify.js';
+
 import Subscribe from 'views/Subscribe/Subscribe.js';
+import SubscribeState from 'views/SubscribeState/SubscribeState.js';
 
 import Embed from 'views/Embed/Embed.js';
+import WithoutFooter from 'views/WithoutFooter/WithoutFooter.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
 
@@ -31,7 +34,9 @@ export default function(store) {
   return (
     <Route component={App}>
       <Route path="/embed" component={Embed}/>
-      
+      <Route component={WithoutFooter}>
+          <Route path="/subscribe" component={Subscribe}/>
+      </Route>
       <Route component={Shell}>
           <Route path="/" component={Home}/>
           
@@ -56,8 +61,7 @@ export default function(store) {
           <Route path="/about/:tabName/:focus" component={About}/>
           
           <Route path="/clarify" component={Clarify}/>
-          <Route path="/subscribe" component={Subscribe}/>
-          <Route path="/subscribe/:state" component={Subscribe}/>
+          <Route path="/subscribe/:state" component={SubscribeState}/>
           
           <Route path="/404" component={NotFound}/>
           <Route path="*" component={NotFound}/>
