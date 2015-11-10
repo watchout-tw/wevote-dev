@@ -154,3 +154,48 @@ $breakLarge: 1400px;
 	.licenseImg {
 	}
 }
+/* for the Video */
+.aboutWrap {
+	position: relative;
+}
+
+
+/* roadmap */
+.roadmap {
+  width: 100%;
+  text-align: center;
+  background: rgba($awesomeColor, 0.15);
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
+
+  > .stage {
+    display: inline-block;
+    vertical-align: top;
+    height: 240px;
+    width: 320px;
+    margin: 0 20px;
+    background-image: url('./images/roadmap-01.png');
+    background-position: 0 0;
+    background-size: auto 100%;
+
+    &.october, &.november {
+      height: 200px;
+      background-size: auto 240px;
+    }
+    &.october {
+      width: 222px;
+      background-position: -34px 0;
+    }
+    &.november {
+      width: 177px;
+      background-position: -283px 0;
+    }
+    &.december {
+      width: 247px;
+      background-position: -478px 0;
+    }
+    &.january {
+      width: 231px;
+      background-position: -746px 0;
+    }
+  }
+}

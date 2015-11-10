@@ -100,8 +100,7 @@ export default class Video extends Component {
                   <img src={storyBeginsHereImg}
                        className={styles.storyBeginsHereImg}
                        onClick={this._handlePlay.bind(this)} />
-                  <img src={missionImg}
-                       className={styles.missionImg}/>
+                  
                 </div>
             </div>
         </div>

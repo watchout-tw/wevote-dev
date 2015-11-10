@@ -3,29 +3,30 @@
 	width: 100%;
 	height: 116vw;
 	overflow: hidden;
+	position: relative;
 }
 .bgGif {
-  width: 100%;
-  z-index: -1000;
-  overflow: hidden;
-  background-size: cover;
-  top: 80px;
+	width: 100%;
+	z-index: -1000;
+	overflow: hidden;
+	background-size: cover;
+	top: 80px;
 }
 .coverTextBlock {
-  position: absolute;
+  	position: absolute;
 	width: 100%;
 	top: 0;
 	height: 116vw;
 	color: white;
-	//padding-top: 26px;
+	
 }
 @media screen and (min-width: $appBarBreakLarge) {
-  .bgWrap {
-    height: 50vw;
-  }
-  .bgGif {
-    top: 4px;
-  }
+	.bgWrap {
+	  height: 50vw;
+	}
+	.bgGif {
+	  top: 4px;
+	}
 	.coverTextBlock {
 		height: 50vw;
 	}
@@ -34,88 +35,79 @@
 	position: relative;
 	width: 100%;
 	margin-top: 45vw;
-/*	text-align: center;
-	font-size: 24px;
-	font-weight: 800;
-	line-height: $textLineHeight;
-	text-shadow: 1px 1px 10px #29ABE2;*/
 }
 .coverTitleMain {
 	display: block;
-  width: 90%;
+  	width: 90%;
 	margin: 0 auto;
-    //margin-top: 45vw;
 }
 .diffTensImg {
     position: absolute;
-    top: 3.6vw;//48.6vw;
+    top: 3.6vw;
     width: 5%;
-    left: 73.5vw;//21.5vw;
+    left: 73.5vw;
 }
 .diffOnesImg {
     position: absolute;
-    top: 3.6vw;//48.6vw;
+    top: 3.6vw;
     width: 5%;
-    left: 78.5vw;//16.5vw;
+    left: 78.5vw;
 }
 .actions {
-	position: absolute;
-	bottom: -10.25vw;
-	left: 0;
 	width: 100%;
 }
 .storyBeginsHereImg {
 	display: block;
 	margin: 0 auto;
 	width: 85%;
-  cursor: pointer;
-  @include prefix(filter, drop-shadow(0 0 8px $trueWhite));
+  	cursor: pointer;
+  	@include prefix(filter, drop-shadow(0 0 8px $trueWhite));
 }
 .missionImg {
 	display: block;
 	width: 55%;
 	margin: 10vw auto 0;
-  padding: 0 10px;
-  cursor: pointer;
-  @include prefix(filter, drop-shadow(0 0 8px aqua));
+  	padding: 0 10px;
+  	cursor: pointer;
+  	@include prefix(filter, drop-shadow(0 0 8px aqua));
 }
 @media all and (min-width: $appBarBreakLarge) {
 	.coverTitle {
 		margin-top: 17vw;
 	}
-  .coverTitleMain {
-    width: 60%;//40%;
-  }
-  .diffTensImg {
-    position: absolute;
-    top: 2.5vw;//14.8vw;
-    width: 3.25%;//1.8%;
-    left: 65.75vw;//60.7vw;//right: 37.5vw;
-  }
-  .diffOnesImg {
-    position: absolute;
-    top: 2.5vw;//14.4vw;
-    width: 3.25vw;//1.8%;
-    left: 68.95vw;//62.5vw;//right: 35.7vw;
-  }
+	.coverTitleMain {
+		width: 60%;
+	}
+	.diffTensImg {
+		position: absolute;
+		top: 2.5vw;
+		width: 3.25%;
+		left: 65.75vw;
+	}
+	.diffOnesImg {
+		position: absolute;
+		top: 2.5vw;
+		width: 3.25vw;
+		left: 68.95vw;
+	}
 	.actions {
 		bottom: -4vw;
 	}
-  .storyBeginsHereImg {
-    width: 36%;
-  }
-  .missionImg {
-    width: 20%;
-    margin: 4vw auto 0 auto;
-    display: block;
-    padding: 0;
-    background: none;
+	.storyBeginsHereImg {
+		width: 36%;
+	}
+	.missionImg {
+		width: 20%;
+		margin: 4vw auto 0 auto;
+		display: block;
+		padding: 0;
+		background: none;
 		cursor: pointer;
-    @include prefix(filter, drop-shadow(0 0 15px aqua));
-  }
-  .missionImg:hover {
-    @include prefix(filter, drop-shadow(0 0 8px aqua));
-  }
+		@include prefix(filter, drop-shadow(0 0 15px aqua));
+	}
+	.missionImg:hover {
+	  	@include prefix(filter, drop-shadow(0 0 8px aqua));
+	}
 }
 
 /* 播放影片 */
