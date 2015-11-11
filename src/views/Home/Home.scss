@@ -4,8 +4,12 @@ $breakLarge: 800px;
 .home {
   position: relative;
 }
+.invisible {
+  max-height: 0;
+  overflow: hidden;
+}
+
 .contentWrap {
-//  background: #EEEEEE;
   padding: 60px 0 0;
   border-top: 1px solid rgb(232, 246, 251);
 }
@@ -16,28 +20,38 @@ $breakLarge: 800px;
 .alignCenter {
   text-align: center;
 }
+.coverItem, .coverItem:visited {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto 50px auto;
+  text-decoration: none;
+}
+.coverItem img {
+  width: 260px;
+}
+.coverItem *, .coverItem:visited *{
+  text-decoration: none;
+  color: black;
+}
+.coverImg {
+  cursor: pointer;
+}
+@-webkit-keyframes toChina {
+  from { @include prefix(filter, drop-shadow(0 0 15px rgba(255, 222, 0, 0.75))); }
+  to   { @include prefix(filter, drop-shadow(0 0 15px rgba(222, 41, 16, 0.75))); }
+}
+.coverItem:hover .coverImg {
+  animation: toChina 4s;
+  -webkit-animation-fill-mode: forwards; 
+}
 .pageTitle {
   text-align: center;
   font-size: 26px;
   padding: 15px 0;
   margin: 35px 0 15px 0;
   color: $textColor;
-}
-
-h2 {
-  font-size: 34px;
-}
-.aboutUsBlock {
-  padding-top: 50px;
-  background: rgb(220,220,220);
-}
-.aboutUsText {
-  text-align: left;
-  margin: 0 auto;
-  line-height: 1.6;
-  padding: 30px 10px 100px 10px;
-  font-size: 18px;
-
 }
 
 // roadmap

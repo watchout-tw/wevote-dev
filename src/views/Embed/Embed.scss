@@ -1,0 +1,64 @@
+@import '../../common.scss';
+.wrap {
+	position: relative;
+	background-image: url(./images/hall.jpg);
+	background-size: cover;
+	min-height: 100vh;
+	text-align: center;
+}
+.embedSection {
+	background: rgba(255,255,255,0.4);
+	text-align: left;
+}
+.embedImg {
+	width: 300px;
+	margin: 10px 0 0 20px;
+}
+h1.topic {
+	margin: 20px auto;
+	font-size: 28px;
+}
+@media all and (min-width: $appBarBreakLarge) {
+	h1.topic {
+		margin: 20px 0 0 10px;
+	}
+
+}
+.container {
+	margin: 20px auto;
+	display: inline-block;
+}
+.flyingImg {
+	width: 250px;
+    margin: 0 auto;
+}
+@media all and (min-width: $appBarBreakLarge) {
+	.flyingImg {
+		position: absolute;
+   		top: 150px;
+   		left: calc(50% + 160px);
+   		z-index: 1;
+	}	
+}
+.missionImg {
+	display: block;
+	width: 55%;
+	margin: 0 auto;
+  	padding: 0 10px;
+  	cursor: pointer;
+  	@include prefix(filter, drop-shadow(0 0 8px aqua));
+}
+@media all and (min-width: $appBarBreakLarge) {
+  .missionImg {
+    width: 20%;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    background: none;
+		cursor: pointer;
+    @include prefix(filter, drop-shadow(0 0 15px aqua));
+  }
+  .missionImg:hover {
+    @include prefix(filter, drop-shadow(0 0 8px aqua));
+  }
+}

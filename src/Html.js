@@ -48,7 +48,7 @@ export default class Html extends Component {
       <html lang="zh-TW">
         <head>
           <meta charSet="utf-8"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
           <meta property="og:title" content={title}/>
           <meta property="og:site_name" content={title}/>
           <meta property="og:description" content={description}/>

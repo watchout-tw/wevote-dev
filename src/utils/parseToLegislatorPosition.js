@@ -98,7 +98,7 @@ function parseToLegislatorPosition_Proceed(records, currentIssue, issues, legisl
         })
 
         Legislators[currentLegislator].dominantPosition = countSort[0].position;
-        if(maximumClub.size > 1){
+        if(maximumClub.length > 1){
             let hasAye = (maximumClub.indexOf("aye") !== -1);
             let hasNay = (maximumClub.indexOf("nay") !== -1);
             let hasUnknown = (maximumClub.indexOf("unknown") !== -1);

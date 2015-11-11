@@ -1,0 +1,35 @@
+@import '../../common.scss';
+.wrap {
+	text-align: center;
+}
+.coverItem, .coverItem:visited {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto 50px auto;
+  text-decoration: none;
+}
+/* 用在 embed 需要白色背景 */
+.coverItem.embed {
+  
+  
+}
+.coverItem img {
+  width: 260px;
+}
+.coverItem *, .coverItem:visited *{
+  text-decoration: none;
+  color: black;
+}
+.coverImg {
+  cursor: pointer;
+}
+@-webkit-keyframes toChina {
+  from { @include prefix(filter, drop-shadow(0 0 15px rgba(255, 222, 0, 0.75))); }
+  to   { @include prefix(filter, drop-shadow(0 0 15px rgba(222, 41, 16, 0.75))); }
+}
+.coverItem:hover .coverImg {
+  animation: toChina 4s;
+  -webkit-animation-fill-mode: forwards; 
+}

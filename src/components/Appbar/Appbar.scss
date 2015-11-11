@@ -1,7 +1,7 @@
 @import '../../common.scss';
 
 $logoHeight: 96px;
-$logoMarginTop: 8px;
+$logoMarginTop: 6px;
 $logoMarginLeft: 10px;
 $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高))/2
 
@@ -105,18 +105,11 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 		margin-top: 2px;
 	}
 }
-@media screen and (min-width: 540px) {
-	.navItem > * {
-		display: inline-block;
-	}
-}
-@media screen and (min-width: $appBarBreakLarge) {
+@media screen and (min-width: 645px) {
 	.appbar, .appbar.showMenu {
-    height: $appBarHeight;
+    height: $appBarHeightExtended;
 	}
-	.siteName {
-
-	}
+	.siteName {}
   .lists {
   	max-height: 1000px;
  		display: block;
@@ -134,10 +127,19 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 		padding: 11px;
   }
 	.navItem > * {
-		display: inline-block;
-		margin: 0;
+		//display: inline-block;
+		//margin: 0;
 	}
   .rightToggle {
   	display: none;
   }
+}
+@media screen and (min-width: 840px) {
+	.appbar, .appbar.showMenu {
+		height: $appBarHeight;
+	}
+	.navItem > * {
+		display: inline-block;
+		margin: 0;
+	}
 }
