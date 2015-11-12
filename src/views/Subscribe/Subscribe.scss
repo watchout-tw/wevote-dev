@@ -1,6 +1,6 @@
 @import '../../common.scss';
 $redColor: #D65A5A;
-$breakSmall: 480px;
+$breakSmall: 540px;
 $breakMedium: 800px;
 .wrap {
 	padding: 20px 10px;
@@ -12,14 +12,17 @@ $breakMedium: 800px;
     max-width: 800px;
     position: relative;
     padding: 20px;
-}
-.postcardImg {
-	width: 100%;
-	border: 1px solid #EAEAEA;
-	box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.12);
+    margin-bottom: 200px;
 }
 .subscribeContent {
-	position: relative;
+	margin: -80px 10% 60px 10%;
+}
+@media all and (min-width: $breakSmall) and (max-width: $breakMedium){
+	.subscribeContent {
+		position: absolute;
+		margin: 0 8%;
+		top: 45%;
+	}
 }
 @media all and (min-width: $breakMedium){
 	.innerWrap {
@@ -29,13 +32,32 @@ $breakMedium: 800px;
 	}
 	.subscribeContent {
 		position: absolute;
-		bottom: 8%;
-    	margin: 0 10%;
+		left: 7%;
+		margin: 0 10%;
+		bottom: 40%;
 	}
 }
-.title {
+.postcardImg {
+	width: 100%;
+	border: 1px solid #EAEAEA;
+	box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.12);
+}
+.titleMobile {
 	font-size: 20px;
 	padding: 20px 0;
+	font-weight: bolder;
+}
+.titleWeb {
+	display: none;
+}
+@media all and (min-width: $breakMedium){
+	.titleMobile {
+		display: none;
+	}
+	.titleWeb {
+		font-size: 20px;
+		padding: 20px 0;
+	}
 }
 .emailLabel {
 	display: none;
@@ -53,39 +75,76 @@ $breakMedium: 800px;
 .emailInput {
 	display: inline-block;
 	height: 40px;
-  	border: 1px solid gray;
   	padding: 5px 10px;
 	background: rgba($white, 0.75);
   	color: $black;
 	line-height: 1;
+
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
 }
 .emailInput:focus {
   	outline: none;
 	background: $white;
-	border: 1px solid black;
+	border: none;
+	border-bottom: 1px solid black;
 }
-.submit {
+.submitMobile {
 	display: block;
 	height: 40px;
-	margin-top: 10px; // 當submit按鈕在第二行時
 	padding: 0 8px;
 	border: none;
 	color: white;
 	background: gray;
+	margin: 20px auto;
 }
-.submit:hover {
-	background: black;
+.submitWeb {
+	display: none;
 }
-@media all and (min-width: $breakSmall){
-	.submit {
+@media all and (min-width: $breakSmall) and (max-width: $breakMedium){
+	.emailInput{
+		width: 290px;
+	}
+	.submitMobile {
+		display: none;
+	}
+	input.submitWeb {
 		display: inline-block;
 		margin: 0 10px;
+		height: 40px;
+		padding: 0 8px;
+		border: none;
+		color: white;
+		background: gray;
 	}
 }
+@media all and (min-width: $breakMedium){
+	.emailInput {
+		width: 390px;
+	}
+	.submitMobile {
+		display: none;
+	}
+	input.submitWeb {
+		display: inline-block;
+		margin: 0 10px;
+		height: 40px;
+		padding: 0 8px;
+		border: none;
+		color: white;
+		background: gray;
+	}
+}
+.submitMobile:hover, .submitWeb:hover {
+	background: black;
+}
+
 .lawInfo {
 	line-height: 1.5;
 	font-size: 14px;
 	color: gray;
+	padding: 10px;
 }
 .lawInfo, .lawInfoTitle, .lawInfoContent {
 	margin: 12px 0;
