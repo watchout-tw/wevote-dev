@@ -31,11 +31,11 @@ export default class Embed extends Component {
           <img src={missionImg}
                className={styles.missionImg}/>
           <div className={styles.container}>
-              
-              <Missions issues={issues}
-                        showComingMission={false}
-                        embed={true}/>
               <MaXiCastle embed={true}/>
+              <Missions issues={issues}
+                        showComingMission={true}
+                        embed={true}/>
+              
           </div>
 
       </div>

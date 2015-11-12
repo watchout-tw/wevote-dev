@@ -434,11 +434,14 @@ class NuclearPowerPreview extends Component {
 class NuclearPowerContent extends Component {
   render(){
     const styles = require('./IssueArticle.scss');
+    const figure1 = require('./images/IssueArticleFigures-06.png');
+    const figure2 = require('./images/IssueArticleFigures-07.png');
     return (
       <div>
           <section>
               <h1>一、立委角色最複雜</h1>
               <p>因為核四這個議題牽涉的問題層面實在太廣，相比其他議題，每位立委的行為模式更多元複雜。經過分析，我們發現全體立委可以分成以下幾個類型：</p>
+              <img className={styles.IssueArticleFigure} src={figure1} />
           </section>
 
           <section>
@@ -534,6 +537,7 @@ class NuclearPowerContent extends Component {
               <blockquote>由此可知，核四可說是第八屆立院中表態紀錄最多、最完整的議題。</blockquote>
 
               <p>透過核四的表態結果，分析各政黨在整個立院中的輪廓，也會發現十分接近社會大眾對立院的想像。民進黨和台聯都有90%左右站在停建核四的立場，國民黨則有74%反對停建，親民黨則一如以往在國民黨和民進黨之間擺盪，一半贊成、一半模糊。</p>
+              <img className={styles.IssueArticleFigure} src={figure2} />
               <p>值得注意的是，國民黨內也有一部分模糊、甚至是贊成停建的表現，這是否可以推論為國民黨的整體反對態勢，其實已有鬆動現象？甚至這可能是後來核四封存決議的原因嗎？這值得進一步分析實際表態內容。</p>
               <p>另外，<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("徐欣瑩")}/records/nuclear-power`}>徐欣瑩</Link>在國民黨黨籍時，整體表態都偏向反對停建核四。那麼在2015年她另外籌組民國黨以後，她的想法是否就代表民國黨的立場呢？關心核能問題的朋友別忘了瞭解徐欣瑩立委對核四的態度。</p>
           </section>
