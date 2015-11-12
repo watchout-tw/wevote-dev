@@ -16,6 +16,7 @@ import People from 'views/People/People.js';
 import PeopleIssue from 'views/PeopleIssue/PeopleIssue.js';
 
 import PartyList from 'views/PartyList/PartyList.js';
+import Parties from 'views/Parties/Parties.js';
 import Party from 'views/Party/Party.js';
 import PartyIssue from 'views/PartyIssue/PartyIssue.js';
 
@@ -61,7 +62,7 @@ export default function(store) {
             <Route path="/people/:peopleId/records/" component={People}/>
             <Route path="/people/:peopleId/records/:issueName" component={PeopleIssue}/>
             
-            
+            <Route path="/parties" component={Parties}/>
             <Route path="/parties/:partyId/records/" component={Party}/>
             <Route path="/parties/:partyId/records/:issueName" component={PartyIssue}/>
             

@@ -33,11 +33,11 @@ export default class Home extends Component {
               <div className={styles.invisible}>
                 <Link to={`/404`}>404</Link>
                 <Link to={`/8th-legislators`}>8th-legislators</Link>
-                 <Link to={`/embed`}>embed</Link>
+                <Link to={`/embed`}>embed</Link>
               </div>
 
               <Link className={styles.tempLink} to={`/issues/`}>議題攻城戰</Link>
-              <Link className={styles.tempLink} to={`/constituencies/`}>勇者競技場</Link>
+              <div className={styles.tempLink}>勇者競技場(locked)</div>
               <Link className={styles.tempLink} to={`/parties/`}>黨團衝突戰</Link>
 
           </div>
