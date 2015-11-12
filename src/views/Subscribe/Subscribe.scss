@@ -1,62 +1,163 @@
 @import '../../common.scss';
-$breakSmall: 480px;
+$redColor: #D65A5A;
+$breakSmall: 540px;
 $breakMedium: 800px;
 .wrap {
-	background: $awesomeColor;
-  	color: $white;
-	padding: 20px 40px 55px;
+	padding: 20px 10px;
 	min-height: 100vh;
+	background: white;
 }
 .innerWrap {
 	margin: 0 auto;
-    max-width: 1000px;
-    margin-top: 10vh;
+    max-width: 800px;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 200px;
 }
-@media all and (min-width:$breakMedium){
-	.innerWrap {
-		margin-top: 20vh;
+.subscribeContent {
+	margin: -80px 10% 60px 10%;
+}
+@media all and (min-width: $breakSmall) and (max-width: $breakMedium){
+	.subscribeContent {
+		position: absolute;
+		margin: 0 8%;
+		top: 45%;
 	}
 }
-.stamp {
-	width: 280px;
-	height: 180px;
-	display: inline-block;
-	padding: 10px;
-	background: white;
-	position: relative;
-	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
-	/*The stamp cutout will be created using crisp radial gradients*/
-	background: radial-gradient(
-		transparent 0px, 
-		transparent 4px, 
-		white 4px,
-		white
-	);
-  
-	/*reducing the gradient size*/
-	background-size: 20px 20px;
-	/*Offset to move the holes to the edge*/
-	background-position: -10px -10px;
+@media all and (min-width: $breakMedium){
+	.innerWrap {
+		margin-top: 10vh;
+		min-height: 0;
+		padding: 0;
+	}
+	.subscribeContent {
+		position: absolute;
+		left: 7%;
+		margin: 0 10%;
+		bottom: 40%;
+	}
 }
-.stamp:after {
-	content: '';
-	position: absolute;
-	/*We can shrink the pseudo element here to hide the shadow edges*/
-	left: 5px; top: 5px; right: 5px; bottom: 5px;
-	z-index: -1;
-}
-/*Some text*/
-.stamp:before {
-	content: 'WATCHOUT';
-	position: absolute;
-	bottom: 0; left: 0;
-	font: bold 24px arial;
-	color: #005060;
-	opacity: 0.75;
-	line-height: 100%;
-	padding: 20px;
-}
-.subscribeImg {
+.postcardImg {
 	width: 100%;
+	border: 1px solid #EAEAEA;
+	box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.12);
 }
+.titleMobile {
+	font-size: 20px;
+	padding: 20px 0;
+	font-weight: bolder;
+}
+.titleWeb {
+	display: none;
+}
+@media all and (min-width: $breakMedium){
+	.titleMobile {
+		display: none;
+	}
+	.titleWeb {
+		font-size: 20px;
+		padding: 20px 0;
+	}
+}
+.emailLabel {
+	display: none;
+}
+.red {
+	color: $redColor;
+}
+.showAlert  {
+	display: inline-block;
+	color: $redColor;
+}
+.hideAlert {
+	display: none;
+}
+.emailInput {
+	display: inline-block;
+	height: 40px;
+  	padding: 5px 10px;
+	background: rgba($white, 0.75);
+  	color: $black;
+	line-height: 1;
+
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+}
+.emailInput:focus {
+  	outline: none;
+	background: $white;
+	border: none;
+	border-bottom: 1px solid black;
+}
+.submitMobile {
+	display: block;
+	height: 40px;
+	padding: 0 8px;
+	border: none;
+	color: white;
+	background: gray;
+	margin: 20px auto;
+}
+.submitWeb {
+	display: none;
+}
+@media all and (min-width: $breakSmall) and (max-width: $breakMedium){
+	.emailInput{
+		width: 290px;
+	}
+	.submitMobile {
+		display: none;
+	}
+	input.submitWeb {
+		display: inline-block;
+		margin: 0 10px;
+		height: 40px;
+		padding: 0 8px;
+		border: none;
+		color: white;
+		background: gray;
+	}
+}
+@media all and (min-width: $breakMedium){
+	.emailInput {
+		width: 390px;
+	}
+	.submitMobile {
+		display: none;
+	}
+	input.submitWeb {
+		display: inline-block;
+		margin: 0 10px;
+		height: 40px;
+		padding: 0 8px;
+		border: none;
+		color: white;
+		background: gray;
+	}
+}
+.submitMobile:hover, .submitWeb:hover {
+	background: black;
+}
+
+.lawInfo {
+	line-height: 1.5;
+	font-size: 14px;
+	color: gray;
+	padding: 10px;
+}
+.lawInfo, .lawInfoTitle, .lawInfoContent {
+	margin: 12px 0;
+}
+.linkItem {
+	display: inline-block;
+	margin: 10px;
+	font-size: 16px;
+}
+.smallIcon {
+	font-size: 16px;
+	margin: 4px;
+}
+
+
 
