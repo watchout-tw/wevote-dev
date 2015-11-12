@@ -14,7 +14,7 @@ export default class MaXiCastel extends Component {
     let linkURL = `//wevote.tw/SP/ma-xi-meet/`;
 
     return (embed === true) ? (
-        <div className={styles.wrap}>
+        <div className={`${styles.wrap} ${styles.embed}`}>
             <a className={coverItemClasses}
                href={linkURL}
                target="_blank">
