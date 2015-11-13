@@ -18,12 +18,7 @@ const initialState = {
     "PFP" : {
         "title": "親民黨",
         "id"   : "PFP",
-        "list" : [""]
-    },
-    "PFP" : {
-        "title": "親民黨",
-        "id"   : "PFP",
-        "list" : [""]
+        "list" : []
     },
     "NSU" : {
        "title": "無黨團結聯盟",

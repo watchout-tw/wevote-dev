@@ -1,3 +1,81 @@
 .wrap {
 	position: relative;
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #333 ), color-stop(100%,black));
+    background: -webkit-radial-gradient(center, ellipse cover, #333 0%, black 100%);
+    padding: 200px 0;
 }
+.partyFlow {
+	min-height: 60vh;
+    width: 100%;
+   
+    -webkit-perspective: 600px;
+}
+.partyRoll {
+	display: inline-block;
+	vertical-align: top;
+	background-image: url('./images/roll.png');
+	background-size: 100%;
+
+	width: 400px;
+	height: 400px;
+
+	transform-style: preserve-3d;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out; 
+
+    position: absolute;
+    top: -100px;
+    left: 50%;
+
+    cursor: pointer;
+
+    padding: 90px 80px 10px 80px;
+    overflow: hidden;
+}
+.partyRoll.focus {
+	width: 600px;
+	height: 600px;
+	padding: 140px 180px 10px 120px;
+}
+.tempAction {
+	width: 100%;
+	text-align: center;
+	margin-top: 140px;
+}
+.tempAction button {
+	height: 80px;
+	padding: 0 100px;
+}
+.control {
+	background: white;
+	display: flex;
+}
+.controlItem {
+	flex: 1;
+}
+.partyTitle {
+	font-size: 14px;
+	font-weight: bolder;
+	margin: 0 0 0 10px;
+}
+.columnBlock {
+	height: 280px;
+    overflow: hidden;
+    font-size: 12px;
+    padding-top: 10px;
+}
+.columnBlock ol{
+	margin: 0;
+}
+.partyRoll.focus .partyTitle {
+	font-size: 20px;
+}
+.partyRoll.focus .columnBlock {
+	font-size: 16px;
+	height: auto;
+}
+.columnBlock.twoColumn {
+	column-count: 2;
+}
+
