@@ -2,6 +2,9 @@
 .wrap {
 	text-align: center;
 }
+.wrap.embed {
+  display: inline;
+}
 .coverItem, .coverItem:visited {
   display: inline-block;
   margin: 0 auto;
@@ -12,11 +15,15 @@
 }
 /* 用在 embed 需要白色背景 */
 .coverItem.embed {
-  
-  
+  background: rgba(250,250,250,0.4);
+  margin: 10px;
+  padding: 20px 0px 28px 0;
 }
 .coverItem img {
   width: 260px;
+}
+.coverItem.embed img{
+  width: 240px;
 }
 .coverItem *, .coverItem:visited *{
   text-decoration: none;
