@@ -5,6 +5,29 @@ import {connect} from 'react-redux';
 import classnames from 'classnames';
 import eng2cht from '../../utils/eng2cht';
 
+function getConflictStatement(position, type, statement){//立場, 過去或未來
+    
+    if(type === "record"){
+        if(position === "aye" || position === "nay"){
+            return  `${eng2cht(position)}「${statement}」`;
+
+        }else if(position === "unknown"){
+            return `在「${statement}」上立場模糊`;
+
+        }else{//"none","evading"
+            return `並未在「${statement}」上表態`;
+        }
+    }else{
+        if(position === "aye" || position === "nay"){
+            return `但他承諾未來將${eng2cht(position)}`;//未來不應該有模糊
+
+        }else{//"none","evading"
+            return `但他針對未來立場並未明確承諾`;
+        }
+
+    }
+  
+}
 function scrollTo(element, to, duration){ 
     if (duration <= 0) return;
     let difference = to - element.scrollTop;
@@ -28,23 +51,26 @@ export default class QAItem extends Component {
       let completed = (props.completed) ? "answer" : "question";//question -> conflict -> anwser
       let shouldReset = (props.completed) ? false : true;
       const {candidatePositions, data} = props;
+     
 
-      //拿到資料的時候就知道誰是 conflict，先記下來，從成 conflictPeople，直接丟給 conflict 去 render
+      //拿到資料的時候就知道誰是 conflict，先記下來，存成 conflictPeople，直接丟給 conflict 去 render
       let conflictPeople = {};
       Object.keys(candidatePositions).map((peopleName, i)=>{
         
         let currentPeople = candidatePositions[peopleName];
+
+
         //both have data
         if(currentPeople[data.issueName].record && currentPeople[data.issueName].promise){
-            //需要處理 ["none","unknown","evading"] 都是未表態
+            //需要處理 ["none","evading"] 都是未表態
             //position not the same
 
             let recordPosition = currentPeople[data.issueName].record.position;
-            if(["none","unknown","evading"].indexOf(recordPosition) !== -1){
+            if(["none","evading"].indexOf(recordPosition) !== -1){
                 recordPosition = "none";
             }
             let promisePosition = currentPeople[data.issueName].promise.position;
-            if(["none","unknown","evading"].indexOf(promisePosition) !== -1){
+            if(["none","evading"].indexOf(promisePosition) !== -1){
                 promisePosition = "none";
             }
 
@@ -241,17 +267,11 @@ class OptionItem extends Component {
 }
 class Subconflict extends Component {
   _engPos2choice(engPos){
-    if(["none","unknown","evading"].indexOf(engPos)!==-1){
+    if(["none", "evading"].indexOf(engPos)!==-1){
         return "未表態";
 
-    }else if(engPos === "aye"){
-        return "贊成";
-
-    }else if(engPos === "nay"){
-        return "反對";
-
     }else{
-        return "";
+      return eng2cht(engPos);
     }
   
   }
@@ -262,13 +282,10 @@ class Subconflict extends Component {
       let recordPosition = currentPeople[issueName].record.position;//過去立場
       let promisePosition = currentPeople[issueName].promise.position;//現在承諾
       
-      //未表態有三種可能
-      let recordIsNone = ["none","unknown","evading"].indexOf(recordPosition)!== -1;
-      let promiseIsNone = ["none","unknown","evading"].indexOf(promisePosition)!== -1;
-    
-      //說明的台詞
-      let positionStatement = (recordIsNone === true) ? `並未在「${statement}」上表態` : `${eng2cht(recordPosition)}「${statement}」`;
-      let futureStatement = (promiseIsNone === true) ? `但他針對未來立場並未明確承諾` : `但他承諾未來將${eng2cht(promisePosition)}`;
+      //說明的台詞，分成3種情況: 贊成反對 / 模糊 / 未表態;
+      let positionStatement = getConflictStatement(recordPosition, "record", statement);
+      let futureStatement = getConflictStatement(promisePosition, "promise", statement);
+      
       let additionalStatement = (currentPeople[issueName].promise.statement) ? `同時表示：「${currentPeople[issueName].promise.statement}」` : "";
 
       //選擇按鈕的樣式，因為要顯示使用者選了哪一個
@@ -285,7 +302,7 @@ class Subconflict extends Component {
                id={`${qid}-Conflict-${index}`}>
               <div className={styles.conflictContent}>
                   <p>
-                      <b>{peopleName}</b>
+                      <b>{currentPeople.name}</b>
                       過去在立法院的表態紀錄顯示他{positionStatement}。
                   </p>
                   <p>

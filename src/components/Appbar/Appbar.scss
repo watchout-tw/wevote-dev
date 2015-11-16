@@ -13,7 +13,7 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	padding: 0px;
 	height: $appBarHeightExtended;
 	width: 100%;
-  box-shadow: 0 4px 4px 0px rgba($trueBlack, 0.25);
+  	box-shadow: 0 4px 4px 0px rgba($trueBlack, 0.25);
 	z-index: $zAppBar;
 }
 .appbar.showMenu {
@@ -71,11 +71,25 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 }
 .navItem:hover, .navItem.active {
 	background: rgba($glow, 0.25);
-	//border-bottom: 4px solid aqua;
 }
 .navItem > * {
 	display: inline-block;
 	vertical-align: middle;
+}
+.lockedNav {
+	color: gray;
+	display: inline-block;
+	position: relative;
+}
+.lockedNav:after {
+	position: absolute;
+	content: '即將上線';
+	left: 20%;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    color: #FF0055;
 }
 .rightToggle {
 	position: absolute;

@@ -1,4 +1,4 @@
-export default function getMatchgame(legislatorPositions, candidateList, dynamicData, area, areaNo){
+export default function getMatchgameCandidateData(legislatorPositions, candidateList, dynamicData, area, areaNo){
     let result = {};
     let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower"];//Hmmm....
 

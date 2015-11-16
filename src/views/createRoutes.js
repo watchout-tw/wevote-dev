@@ -28,8 +28,10 @@ import SubscribeState from 'views/SubscribeState/SubscribeState.js';
 
 import Embed from 'views/Embed/Embed.js';
 import WithoutFooter from 'views/WithoutFooter/WithoutFooter.js';
+import WithAppbarOnly from 'views/WithAppbarOnly/WithAppbarOnly.js';
 
 import MatchGame from 'views/MatchGame/MatchGame.js';
+import MatchGameParty from 'views/MatchGameParty/MatchGameParty.js';
 
 import Issues from 'views/Issues/Issues.js';
 import Constituencies from 'views/Constituencies/Constituencies.js';
@@ -41,6 +43,9 @@ export default function(store) {
   return (
     <Route component={App}>
         <Route path="/embed" component={Embed}/>
+        <Route component={WithAppbarOnly}>
+            <Route path="/parties/matchgame" component={MatchGameParty}/>
+        </Route>
         <Route component={WithoutFooter}>
             <Route path="/subscribe" component={Subscribe}/>
         </Route>
@@ -50,6 +55,7 @@ export default function(store) {
             <Route path="/SP/ma-xi-meet" component={Report}/>
   
             <Route path="/issues/" component={Issues}/>
+
             <Route path="/constituencies/" component={Constituencies}/>
             <Route path="/constituencies/:area/:areaNo" component={Constituency}/>
             <Route path="/constituencies/:area/:areaNo/matchgame" component={MatchGame}/>
@@ -63,6 +69,7 @@ export default function(store) {
             <Route path="/people/:peopleId/records/:issueName" component={PeopleIssue}/>
             
             <Route path="/parties" component={Parties}/>
+            
             <Route path="/parties/:partyId/records/" component={Party}/>
             <Route path="/parties/:partyId/records/:issueName" component={PartyIssue}/>
             

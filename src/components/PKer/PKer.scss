@@ -2,10 +2,16 @@
 .wrap {
 	display: inline-block;
 	text-align: center;
-	min-width: 48px;
+	width: 32px;
 	cursor: pointer;
 	position: relative;
 	padding-top: 50px;/* space for animation */
+}
+@media all and (min-width: 450px){
+	.wrap {
+		min-width: 48px;
+		width: auto;
+	}
 }
 @keyframes soaring {
     from { top: 30px }
@@ -30,7 +36,7 @@
 	opacity: 0;
 }
 .container {
-	background: #929B9D;
+	
 	padding: 2px;
 }
 @media all and (min-width: 450px){
@@ -57,6 +63,22 @@
 	backface-visibility: hidden;
 	position: absolute;
 	width: 100%;
+
+	top: -18px;
+}
+.posCard.front {
+	
+    height: 40px;
+    padding-top: 10px;
+}
+@media all and (min-width: 450px){
+	.posCard {
+		top: 0;
+	}
+	.posCard.front {
+		height: auto;
+		padding: 0;
+	}
 }
 .front {
 	z-index: 10;
@@ -73,6 +95,9 @@
 .posCard.ans.nay {
 	background: $nayColor;
 }
+.posCard.ans.unknown {
+	background: $unknownColor;
+}
 .posCard.ans.none {
 	background: $noneColor;
 }
@@ -84,12 +109,21 @@
 @media all and (min-width: 400px){
 	.avatarImg {
 		width: 50px;
-		height: 50px;
+		height: 30px;
 	}
 }
 .name {
-	background: white;
+	display: none;
 }
+@media all and (min-width: 450px){
+	.name {
+		display: block;
+		background: white;
+    	width: 74px;
+    	height: 40px;
+	}
+}
+
 .points {
 	background: white;
 	font-size: 18px;

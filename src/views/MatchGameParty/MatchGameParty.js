@@ -9,29 +9,24 @@ import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar';
 import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
 import url2eng from '../../utils/url2eng';
-
-import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
-import getDistrictCandidates from '../../utils/getDistrictCandidates';
-import getMatchgameCandidateData from '../../utils/getMatchgameCandidateData';
-import parseDynamicData from '../../utils/parseDynamicData';
-
-import {load} from '../../ducks/candidateDynamicData.js';
+import parseToPartyPosition from '../../utils/parseToPartyPosition';
+import getMatchgamePartyData from '../../utils/getMatchgamePartyData';
 
 @connect(
     state => ({
       legislators: state.legislators,
-      candidates: state.candidates,
       records: state.records,
       issues: state.issues,
-      candidateDynamicData: state.candidateDynamicData.data
+      partyPromises: state.partyPromises
     }),
-    dispatch => bindActionCreators({load}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class MatchGame extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired
   }
   constructor(props){ super(props)
+      //prepare qa set
       let qaSet = Object.keys(props.issues).map((issueUrl, index)=>{
         return {
             id: `Question${index}`,
@@ -42,6 +37,10 @@ export default class MatchGame extends Component {
             statement: props.issues[issueUrl].statement,
         }
       })
+
+      //prepare party positiom
+      let partyPositions = parseToPartyPosition(props.records, props.issues);
+      let parsed = getMatchgamePartyData(partyPositions, props.partyPromises);
 
       this.state = {
           qaSet: qaSet,
@@ -54,69 +53,13 @@ export default class MatchGame extends Component {
           completed: false,
           currentRank: [],
 
-          candidateDynamicLoad: "",
-          matchData: "",//used for match, because position might conflicts"
-          positionData: ""
-
+          positionData: parsed.positionData,
+          matchData: parsed.matchData//used for match, because position might conflicts"
+          
       }
-  }
-  componentWillMount(){
-      this.props.load();
   }
   componentDidMount(){
       window.addEventListener('scroll', this._onScroll.bind(this));
-  }
-  componentWillReceiveProps(nextProps){
-    console.log("will receive")
-    //拿到 api 的資料了，可以開始計算 matchData
-    if(nextProps.candidateDynamicData){
-      console.log("calculating...")
-     
-      const {records, issues, legislators, candidates} = nextProps;
-      const {area, areaNo} = nextProps.params;
-
-      // 現任立委的歷史表態資料
-      let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
-
-      console.log(area + ", " + areaNo)
-
-      // 這個選區有哪些候選人的清單  
-      let candidateList = getDistrictCandidates(candidates, area, areaNo);
-      
-      // 候選人動態資料，包括承諾、要推動的法案
-      let candidateDynamicData = parseDynamicData(nextProps.candidateDynamicData.value);
-      
-      
-      // 候選人過去跟未來的表態資料
-      let combinedPositionData = getMatchgameCandidateData(legislatorPositions, candidateList, candidateDynamicData, area, areaNo);
-
-      // default 單一立場，如有過去，選過去。matchgame 進行後，會依照使用者選擇的更新
-      let matchData = {};
-      Object.keys(combinedPositionData).map((peopleName,i)=>{
-          matchData[peopleName] = {};
-          let currentData = combinedPositionData[peopleName];
-         
-          
-          Object.keys(currentData).map((issueName, k)=>{
-              
-              matchData[peopleName][issueName] = currentData[issueName].promise.position;
-              
-              if(currentData[issueName].record){
-                  matchData[peopleName][issueName] = currentData[issueName].record.position;
-              }
-          })
-      });
-
-      this.setState({
-          candidateDynamicLoad: candidateDynamicData,
-          positionData: combinedPositionData,
-          matchData: matchData
-      })
-
-
-
-
-    }
   }
   componentWillUnmount(){
       window.removeEventListener('scroll', this._onScroll.bind(this));
@@ -190,14 +133,11 @@ export default class MatchGame extends Component {
 
       /*
         // matchData format
-        "蔣乃辛": {
+        "KMT": {
           "marriage-equality": "aye",
           "recall" : "nay"
         },
-        "范雲": {
-          "marriage-equality": "aye",
-          "recall" : "nay"
-        }
+        
       */
   }
   _recordUserChoice(issueName, order, choice) {
@@ -241,12 +181,14 @@ export default class MatchGame extends Component {
 
     Object.keys(matchData).map((peopleName, index)=>{
         let points = 0;
+        let samePositionCount = 0;
         let currentPeople = matchData[peopleName];
 
         Object.keys(currentPeople).map((issueName,k)=>{
             // 如果立場相同，並且使用者選擇的不是「沒意見」，加一分
             if((userChoices[issueName] === currentPeople[issueName])&&(userChoices[issueName]!=="none")){
                 points++;
+                samePositionCount++;
             }  
             // 如果立場相反，扣一分
             if(
@@ -268,10 +210,13 @@ export default class MatchGame extends Component {
     })
    
     currentRank.sort((a,b)=>{
-      return b.points - a.points;
+      if(b.points === a.points){
+        return b.samePositionCount - a.samePositionCount;
+
+      }else{
+        return b.points - a.points;
+      }
     })
-
-
     this.setState({
       showRank: true,
       currentRank: currentRank
@@ -292,7 +237,7 @@ export default class MatchGame extends Component {
     
   }
   render() {
-    const styles = require("./MatchGame.scss")
+    const styles = require("./MatchGameParty.scss")
     const {issues} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
          currentRank, showRank, completed, 
@@ -325,11 +270,12 @@ export default class MatchGame extends Component {
 
     // 看結果：顯示結果
     if(showRank){
-        
         // Best Fit
         let bestPKers = currentRank.map((people,index)=>{
+
             if(people.points === currentRank[0].points)
-              return <ResultPKer data={people} 
+              return <ResultPKer rank={people} 
+                                 data={positionData[people.name]}
                                  userChoices={userChoices} 
                                  key={`resultPKer${index}`} />
         })
@@ -338,14 +284,16 @@ export default class MatchGame extends Component {
         let lastIndex = currentRank.length-1;
         let worstPKers = currentRank.map((people,index)=>{
             if(people.points === currentRank[lastIndex].points)
-              return <ResultPKer data={people} 
+              return <ResultPKer rank={people} 
+                                 data={positionData[people.name]}
                                  userChoices={userChoices}
                                  key={`resultPKer${index}`} />
         })
     
         // Everyone
         let resultPKers = currentRank.map((people,index)=>{
-            return <ResultPKer data={people} 
+            return <ResultPKer rank={people} 
+                               data={positionData[people.name]}
                                userChoices={userChoices}
                                key={`resultPKer${index}`} />
         })
@@ -370,7 +318,8 @@ export default class MatchGame extends Component {
     
     }else{
         CandidatesHoldSignsSection =(
-            <CandidatesHoldSigns data={matchData}
+            <CandidatesHoldSigns matchData={matchData}
+                                 positionData={positionData} 
                                  userChoices={userChoices}
                                  currentQAItemIndex={currentQAItemIndex}
                                  showAnswerSection={showAnswerSection}/>
@@ -390,20 +339,20 @@ export default class MatchGame extends Component {
 class ResultPKer extends Component {
   
   render() {
-    const styles = require("./MatchGame.scss")
-    const {data, userChoices} = this.props;
+    const styles = require("./MatchGameParty.scss")
+    const {rank, data, userChoices} = this.props;
     let sameOpinions = [];
     let oppositeOpinions = [];
 
-    Object.keys(data).map((issueName,i)=>{
+    Object.keys(rank).map((issueName,i)=>{
       
-      if(data[issueName] === userChoices[issueName] && userChoices[issueName] !== "none"){
+      if(rank[issueName] === userChoices[issueName] && userChoices[issueName] !== "none"){
           sameOpinions.push(issueName);
       }
 
       if(
-       (data[issueName] === "aye" && userChoices[issueName] === "nay")||
-       (data[issueName] === "nay" && userChoices[issueName] === "aye")
+       (rank[issueName] === "aye" && userChoices[issueName] === "nay")||
+       (rank[issueName] === "nay" && userChoices[issueName] === "aye")
       ){
           oppositeOpinions.push(issueName);       
       } 
@@ -424,11 +373,15 @@ class ResultPKer extends Component {
         <div className={styles.resultPKer}>
             
             <div className={styles.peopleInfo}>
-                <div className={styles.avatarImg}><PeopleAvatar id={people_name2id(data.name)} /></div>
+                <div className={styles.avatarImg}>
+                    <div className={`${styles.partyFlag} ${styles.large} ${styles[data.id]}`}></div>
+                </div>
                 <div className={styles.avatarName}>{data.name}</div>
+                <div className={styles.totalPoints}>總分：{rank.points}</div>
             </div>
 
             <div className={styles.opinionGroups}>
+
                 <div className={styles.opinionGroup}>
                     <div className={styles.circleCount}>
                         <div className={styles.opinionCount}>{sameOpinions.length}</div>

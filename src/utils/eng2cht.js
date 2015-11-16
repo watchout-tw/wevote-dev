@@ -68,7 +68,7 @@ export default function eng2cht(input){
         return '核能';
       
       default:
-      	return '<>找不到<>'+input;
+      	return ':undefined-eng-term:'+input;
     }
 }
 

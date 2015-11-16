@@ -13,6 +13,8 @@ import processingState from './processingState';
 import candidates from './candidates';
 import candidateDynamicData from './candidateDynamicData';
 
+import partyPromises from './partyPromises';
+
 export default combineReducers({
   legislators,
   issues,
@@ -23,5 +25,6 @@ export default combineReducers({
   FAQ,
   processingState,
   candidates,
-  candidateDynamicData
+  candidateDynamicData,
+  partyPromises
 });

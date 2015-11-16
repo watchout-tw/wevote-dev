@@ -4,11 +4,15 @@
 	text-align: center;
 	width: 100%;
 	overflow-x: scroll;
+	background: rgb(250,250,250);
+	border-top: 1px solid rgb(53,55,54);
+	padding-bottom: 20px;
 }
 @media all and (min-width: 450px){
 	.CandidatesHoldSigns {
 		max-height: 1000px;
 		overflow: visible;
-		background: rgb(250,250,250);
+		padding-bottom: 0px;
+		border-top: 0;
 	}
 }

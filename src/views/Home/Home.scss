@@ -2,7 +2,7 @@
 $breakMedium: 600px;
 $breakLarge: 800px;
 .innerWrap {
-  padding-top: 40vh;
+  padding: 20vh 0;
   text-align: center;
 }
 .tempLink, .tempLink:visited {
@@ -12,6 +12,8 @@ $breakLarge: 800px;
   color: black;
   padding: 30px 20px;
   margin: 10px;
+  height: 100px;
+  vertical-align: top;
 }
 /* ------------- */
 .home {

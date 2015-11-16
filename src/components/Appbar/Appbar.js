@@ -69,6 +69,7 @@ export default class Appbar extends Component {
     let symbol_maxi = require('./images/symbols_maXi.svg');
     let menu = require('./images/menu.svg');
 
+
     return (
       <nav className={`${styles.appbar} ${showStyle}`}>
           <div className={styles.inner}>
@@ -97,15 +98,13 @@ export default class Appbar extends Component {
                     </Link>
                 </li>
 
-                <li onClick={this._updateLocation.bind(this,'constituencies')}>
-                    <Link className={`${styles.navItem} ${constituenciesActive}`}
-                          to={`/constituencies/`}
-                          onClick={this._hideMenu.bind(this)}>
-                            <img src={symbol_about} className={styles.symbol}/>
-                            <span>勇者競技場</span>
-                    </Link>
-                </li>
 
+                <li >
+                    <div className={`${styles.navItem} ${constituenciesActive} ${styles.lockedNav}`}>
+                        <img src={symbol_about} className={styles.symbol}/>
+                        <span>勇者競技場</span>
+                    </div>
+                </li>
 
                 <li onClick={this._updateLocation.bind(this,'about')}>
                     <Link className={`${styles.navItem} ${aboutActive}`}

@@ -33,18 +33,18 @@ export default class CandidatesHoldSigns extends Component {
   }
   render() {
     const styles = require("./CandidatesHoldSigns.scss")
-    let {data, userChoices, currentQAItemIndex, showAnswerSection} = this.props;
+    let {matchData, positionData, userChoices, currentQAItemIndex, showAnswerSection} = this.props;
     let {viewWidth} = this.state;
 
     let userChoicesArray = "";
     Object.keys(userChoices).map((v,i)=>{
       userChoicesArray += `${userChoices[v]} `
     })
-
-    let candidateItems = Object.keys(data).map((peopleName, index)=>{
+    
+    let candidatePartyItems = Object.keys(matchData).map((partyId, index)=>{
       return (
-        <PKer peopleName={peopleName}
-              data={data[peopleName]} 
+        <PKer matchData={matchData[partyId]} 
+              positionData={positionData[partyId]}
               userChoices={userChoices}
               showAnswerSection={showAnswerSection}
               key={index}/>
@@ -52,22 +52,22 @@ export default class CandidatesHoldSigns extends Component {
     })
 
     // matchData  
-    // "蔣乃辛": {
+    // "KMT": {
     //     "marriage-equality": "none",
     //     "recall": "none",
     //     "referendum": "none",
     //     "nuclear-power": "nay"
     // },
-    // "范雲" : {}
+
 
     let containerWidth = (viewWidth <= 450) ? {
-      width: `${Object.keys(data).length * 52}px`,
+      width: `${Object.keys(matchData).length * 34}px`,
       margin: `0 auto`
     } : {};
 
     return (
         <div className={styles.CandidatesHoldSigns}>
-            <div style={containerWidth}>{candidateItems}</div>
+            <div style={containerWidth}>{candidatePartyItems}</div>
         </div>
     );
   }

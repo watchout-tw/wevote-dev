@@ -1,3 +1,4 @@
+@import '../../common.scss';
 .wrap {
 	position: relative;
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #333 ), color-stop(100%,black));
@@ -77,5 +78,20 @@
 }
 .columnBlock.twoColumn {
 	column-count: 2;
+}
+.actions {
+	text-align: center;
+}
+.goMatch, .goMatch:visited {
+	display:inline-block;
+	margin: 0 auto;
+	background: $awesomeColor;
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	box-shadow: 2px 2px 12px 0 rgba(240, 240, 240, 0.3), -2px -2px 12px 0 rgba(240, 240, 240, 0.3)
+}
+.goMatch:hover {
+	box-shadow: 2px 2px 32px 0 rgba(240, 240, 240, 0.5), -2px -2px 32px 0 rgba(240, 240, 240, 0.5)
 }
 

@@ -2,13 +2,13 @@
 .QAItem {
 	position: relative;
 	display: none;
-	padding: 30px;
 	margin: 0px 10px;
 } 
 @media screen and (min-width: 400px){
 	.QAItem {
 		width: 420px;
 		margin: 0 auto;
+		padding: 30px;
 	    position: relative;
 	    display: none;
     } 
@@ -60,6 +60,11 @@
 	color: $nayColor;
 	background: none;
 }
+.optionItem.unknown {
+	border-color: $unknownColor;
+	color: $unknownColor;
+	background: none;
+}
 .optionItem.none {
 	border-color: $noneColor;
 	color: $noneColor;
@@ -70,6 +75,10 @@
 	background: $ayeColor;
 }
 .optionItem.nay:hover, .optionItem.isChoosed.nay {
+	color: white;
+	background: $nayColor;
+}
+.optionItem.unknown:hover, .optionItem.isChoosed.unknown {
 	color: white;
 	background: $nayColor;
 }

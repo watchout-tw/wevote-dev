@@ -136,14 +136,20 @@ export default class Parties extends Component {
             </div>
         </div>
     )
+    let pageButtons = (
+      <div className={styles.tempAction}>
+          <button onClick={this._onChangeFocus.bind(this, focus-1)}>Pre</button>
+          <button onClick={this._onChangeFocus.bind(this, focus+1)}>Next</button>        
+      </div>
+    )
     return (
       <div className={styles.wrap}>
           <div className={styles.partyFlow}>
               {partyRollItems}
           </div>
-          <div className={styles.tempAction}>
-              <button onClick={this._onChangeFocus.bind(this, focus-1)}>Pre</button>
-              <button onClick={this._onChangeFocus.bind(this, focus+1)}>Next</button>        
+          <div className={styles.actions}>
+          <Link to={`/parties/matchgame/`}
+                className={styles.goMatch}>進入挑戰</Link>
           </div>
       </div>
     );
