@@ -17,18 +17,23 @@ export default class Parties extends Component {
   constructor(props){ super(props)
     this.state = {
       focus: 0,
-      windowWidth: 0,
-      leftYbase: -10,
-      leftYeach: 0,
-      leftXbase: -300, /* 捲軸寬度的一半 */
-      leftXeach: -300,
-      leftZ: 100,
-      rightYbase: 10,
-      rightYeach: 0,
-      rightXbase: -300, /* 捲軸寬度的一半 */
-      rightXeach: 300, 
-      rightZ: 100
+      innerWidth: 400
     }
+  }
+  
+  componentDidMount(){
+    this.setState({
+      innerWidth: window.innerWidth
+    })
+    window.addEventListener('scroll', this._ononResize.bind(this));
+  }
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this._ononResize.bind(this));
+  }
+  _onResize(){
+      this.setState({
+        innerWidth: window.innerWidth
+      })
   }
 
   _onChangeFocus(value, event){
@@ -65,27 +70,12 @@ export default class Parties extends Component {
           rightZ: rightZ
       })
   }
-  componentDidMount(){
-      this.setState({
-          windowWidth: window.innerWidth
-      })
-  }
+  
   render() {
     const styles = require('./Parties.scss');
     const {partyBlock} = this.props;
-    const {focus, windowWidth} = this.state;
-    let {
-      leftYbase,
-      leftYeach,
-      leftXbase,
-      leftXeach,
-      leftZ,
-      rightYbase,
-      rightYeach,
-      rightXbase, 
-      rightXeach, 
-      rightZ
-    } = this.state;
+    const {focus, innerWidth} = this.state;
+   
 
     let partyRollItems = Object.keys(partyBlock).map((partyId, index)=>{
        
@@ -94,19 +84,8 @@ export default class Parties extends Component {
                        data={partyBlock[partyId]}
                        index={index}
                        focus={focus}
-                       onChangeFocus={this._onChangeFocus.bind(this)}
-
-                       leftYbase={leftYbase}
-                       leftYeach={leftYeach}
-                       leftXbase={leftXbase}
-                       leftXeach={leftXeach}
-                       leftZ={leftZ}
-
-                       rightYbase={rightYbase}
-                       rightYeach={rightYeach}
-                       rightXbase={rightXbase}
-                       rightXeach={rightXeach}
-                       rightZ={rightZ} />
+                       innerWidth={innerWidth}
+                       onChangeFocus={this._onChangeFocus.bind(this)} />
         )
     })
     
@@ -142,10 +121,16 @@ export default class Parties extends Component {
           <button onClick={this._onChangeFocus.bind(this, focus+1)}>Next</button>        
       </div>
     )
+    let containerStyle = (innerWidth <= 800) ? {
+      width: `${Object.keys(partyBlock).length * innerWidth}px`,
+      marginBottom: "50px"
+    }:{};
     return (
       <div className={styles.wrap}>
           <div className={styles.partyFlow}>
-              {partyRollItems}
+            <div style={containerStyle}>
+                {partyRollItems}
+            </div>
           </div>
           <div className={styles.actions}>
           <Link to={`/parties/matchgame/`}
@@ -155,26 +140,24 @@ export default class Parties extends Component {
     );
   }
 }
-function calculateTransfromStyle(index, focus, 
-                                 leftYbase, leftYeach, leftXbase, leftXeach, leftZ,
-                                 rightYbase, rightYeach, rightXbase, rightXeach, rightZ){
+function calculateTransfromStyle(index, focus, layout){
       /* 越靠近 focus, rotate 越小 */
 
-      let Y = 0, X = leftXbase, Z = leftZ; /* focus */
+      let Y = 0, X = layout.leftXbase, Z = layout.leftZ; /* focus */
       let vertical = 0;
 
       if(index < focus){
           let diff = focus - index; 
-          Y =  leftYbase + diff * leftYeach;
-          X =  leftXbase + diff * leftXeach;
+          Y =  layout.leftYbase + diff * layout.leftYeach;
+          X =  layout.leftXbase + diff * layout.leftXeach;
           Z =  150;
           vertical = 100;
 
       }else if(index > focus){
           let diff = index - focus;
-          Y = rightYbase - diff * rightYeach;
-          X = rightXbase + diff * rightXeach + 200;
-          Z = rightZ;
+          Y = layout.rightYbase - diff * layout.rightYeach;
+          X = layout.rightXbase + diff * layout.rightXeach + 200;
+          Z = layout.rightZ;
           vertical = 100;
       }
 
@@ -184,34 +167,29 @@ function calculateTransfromStyle(index, focus,
       })
 }
 class PartyRoll extends Component {
+  
   render(){
       const styles = require('./Parties.scss');
-      const {data, index, focus, onChangeFocus} = this.props;
-      let {
-        leftYbase,
-        leftYeach,
-        leftXbase,
-        leftXeach,
-        leftZ,
-        rightYbase,
-        rightYeach,
-        rightXbase, 
-        rightXeach,
-        rightZ
-      } = this.props;
+      const {data, index, focus, innerWidth, onChangeFocus} = this.props;
+      
+      // width > 800
+      let webLayout = {
+          leftYbase: -10,
+          leftYeach: 0,
+          leftXbase: -300, /* 捲軸寬度的一半 */
+          leftXeach: -300,
+          leftZ: 100,
+          rightYbase: 10,
+          rightYeach: 0,
+          rightXbase: -300, /* 捲軸寬度的一半 */
+          rightXeach: 300, 
+          rightZ: 100
+      }
+     
+      
 
-      let transformStyle = calculateTransfromStyle(index, focus,
-        leftYbase,
-        leftYeach,
-        leftXbase,
-        leftXeach,
-        leftZ,
-        rightYbase,
-        rightYeach,
-        rightXbase,
-        rightXeach, 
-        rightZ
-      );
+      let transformStyle = (innerWidth > 800) ? 
+          calculateTransfromStyle(index, focus, webLayout):{};
 
       let rollClasses = classnames({
         [styles.partyRoll] : true,
