@@ -37,8 +37,8 @@ export default class Home extends Component {
               </div>
 
               <Link className={styles.tempLink} to={`/issues/`}>議題攻城戰</Link>
-              <div className={styles.tempLink}>勇者競技場(locked)</div>
               <Link className={styles.tempLink} to={`/parties/`}>黨團衝突戰</Link>
+              <div className={styles.tempLink}>勇者競技場<br/>(12/10 啟動)</div>
 
           </div>
       </div>

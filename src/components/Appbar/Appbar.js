@@ -88,21 +88,21 @@ export default class Appbar extends Component {
                     </Link>
                 </li>
 
-                <li onClick={this._updateLocation.bind(this,'constituencies')}>
-                    <Link className={`${styles.navItem} ${constituenciesActive}`}
-                          to={`/constituencies/`}
-                          onClick={this._hideMenu.bind(this)}>
-                            <img src={symbol_about} className={styles.symbol}/>
-                            <span>勇者競技場</span>
-                    </Link>
-                </li>
-
                 <li onClick={this._updateLocation.bind(this,'parties')}>
                     <Link className={`${styles.navItem} ${partiesActive}`}
                           to={`/parties/`}
                           onClick={this._hideMenu.bind(this)}>
                             <img src={symbol_about} className={styles.symbol}/>
                             <span>黨團衝突戰</span>
+                    </Link>
+                </li>
+
+                <li onClick={this._updateLocation.bind(this,'constituencies')}>
+                    <Link className={`${styles.navItem} ${constituenciesActive}`}
+                          to={`/constituencies/`}
+                          onClick={this._hideMenu.bind(this)}>
+                            <img src={symbol_about} className={styles.symbol}/>
+                            <span>勇者競技場</span>
                     </Link>
                 </li>
 
