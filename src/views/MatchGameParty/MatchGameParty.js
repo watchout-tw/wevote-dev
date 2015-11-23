@@ -61,11 +61,9 @@ export default class MatchGameParty extends Component {
 
   }
   componentDidMount(){
-      console.log("did mount")
-      //window.addEventListener('scroll', this._onScroll.bind(this));
+      window.addEventListener('scroll', this._onScroll.bind(this));
   }
   componentWillUnmount(){
-      console.log("unmount")
       window.removeEventListener('scroll', this._onScroll.bind(this));
   }
   _onScroll(){
