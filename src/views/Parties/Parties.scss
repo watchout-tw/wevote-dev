@@ -10,6 +10,7 @@
 .partyFlow {
 	position: relative;
 	overflow: scroll;
+	margin-bottom: 40px;
 }
 .partyRoll {
 	display: inline-block;
@@ -19,18 +20,20 @@
 	background-size: 100%;
 
 	width: calc(100vw - 10px);
-	height: calc(2*(100vw - 10px));
-	padding: 60px 0 0 45px;
+	height: 100vw;
+	padding: 10px;
+
 }
 @media all and (min-width: 800px){
 	.wrap {
 		padding: 200px 0;
 	}
 	.partyFlow {
-		min-height: 60vh;
+		min-height: 600px;
     	width: 100%;
     	-webkit-perspective: 600px;
     	overflow: visible;
+
 	}
 	.partyRoll {
 		display: inline-block;

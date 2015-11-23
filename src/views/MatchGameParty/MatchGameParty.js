@@ -21,7 +21,7 @@ import getMatchgamePartyData from '../../utils/getMatchgamePartyData';
     }),
     dispatch => bindActionCreators({}, dispatch))
 
-export default class MatchGame extends Component {
+export default class MatchGameParty extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired
   }
@@ -57,11 +57,15 @@ export default class MatchGame extends Component {
           matchData: parsed.matchData//used for match, because position might conflicts"
           
       }
+      console.log("end of constructor")
+
   }
   componentDidMount(){
-      window.addEventListener('scroll', this._onScroll.bind(this));
+      console.log("did mount")
+      //window.addEventListener('scroll', this._onScroll.bind(this));
   }
   componentWillUnmount(){
+      console.log("unmount")
       window.removeEventListener('scroll', this._onScroll.bind(this));
   }
   _onScroll(){
@@ -243,8 +247,6 @@ export default class MatchGame extends Component {
          currentRank, showRank, completed, 
          matchData, positionData} = this.state;
 
-    if(!matchData) return <div>Processing...</div>
-
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
                        data={value}
@@ -260,80 +262,87 @@ export default class MatchGame extends Component {
                        completed={completed} />
     })
 
-    let userChoiceArray = Object.keys(userChoices).map((k,i)=>{
-        return `${userChoices[k]}-`
-    })
-
-   
     // 配對結果
-    let rankResultSection, CandidatesHoldSignsSection;
+    let BottomSection;
 
     // 看結果：顯示結果
     if(showRank){
-        // Best Fit
-        let bestPKers = currentRank.map((people,index)=>{
-
-            if(people.points === currentRank[0].points)
-              return <ResultPKer rank={people} 
-                                 data={positionData[people.name]}
-                                 userChoices={userChoices} 
-                                 key={`resultPKer${index}`} />
-        })
-    
-        // Worst Fit
-        let lastIndex = currentRank.length-1;
-        let worstPKers = currentRank.map((people,index)=>{
-            if(people.points === currentRank[lastIndex].points)
-              return <ResultPKer rank={people} 
-                                 data={positionData[people.name]}
-                                 userChoices={userChoices}
-                                 key={`resultPKer${index}`} />
-        })
-    
-        // Everyone
-        let resultPKers = currentRank.map((people,index)=>{
-            return <ResultPKer rank={people} 
-                               data={positionData[people.name]}
-                               userChoices={userChoices}
-                               key={`resultPKer${index}`} />
-        })
-    
-        rankResultSection = (
-          <div id="rankResultSection"
-               className={styles.rankResultSection}>
-              <div className={styles.rankResultWrap}>
-                  <div className={styles.rankResultTitle}>和你立場最相近的候選人</div>
-                  {bestPKers}
-              </div>
-    
-              <div className={styles.rankResultWrap}>
-                  <div className={styles.rankResultTitle}>和你立場最不同的候選人</div>
-                  {worstPKers}
-              </div>
-
-              <div className={styles.replay}
-                   onClick={this._replay.bind(this)}>REPLAY</div>
-          </div>
-          )
+        BottomSection = (
+            <ResultSection currentRank={currentRank}
+                           positionData={positionData}
+                           userChoices={userChoices} />
+        )
     
     }else{
-        CandidatesHoldSignsSection =(
+    //還沒看結果，顯示底部計分
+        BottomSection =(
             <CandidatesHoldSigns matchData={matchData}
                                  positionData={positionData} 
                                  userChoices={userChoices}
                                  currentQAItemIndex={currentQAItemIndex}
                                  showAnswerSection={showAnswerSection}/>
         );
-
     }
 
     return (
         <div className={styles.wrap}>
             {qaItems}
-            {rankResultSection}
-            {CandidatesHoldSignsSection} 
+            {BottomSection} 
         </div>
     );
+  }
+}
+class ResultSection extends Component {
+
+  render(){
+    const styles = require("./MatchGameParty.scss")
+    const {currentRank, positionData, userChoices} = this.props;
+
+    // Best Fit
+    let bestPKers = currentRank.map((people,index)=>{
+
+        if(people.points === currentRank[0].points)
+          return <ResultPKer rank={people} 
+                             data={positionData[people.name]}
+                             userChoices={userChoices} 
+                             key={`resultPKer${index}`} />
+    })
+    
+    // Worst Fit
+    let lastIndex = currentRank.length-1;
+    let worstPKers = currentRank.map((people,index)=>{
+        if(people.points === currentRank[lastIndex].points)
+          return <ResultPKer rank={people} 
+                             data={positionData[people.name]}
+                             userChoices={userChoices}
+                             key={`resultPKer${index}`} />
+    })
+    
+    // Everyone
+    let resultPKers = currentRank.map((people,index)=>{
+        return <ResultPKer rank={people} 
+                           data={positionData[people.name]}
+                           userChoices={userChoices}
+                           key={`resultPKer${index}`} />
+    })
+    
+    return (
+      <div id="rankResultSection"
+           className={styles.rankResultSection}>
+          <div className={styles.rankResultWrap}>
+              <div className={styles.rankResultTitle}>和你立場最相近的候選人</div>
+              {bestPKers}
+          </div>
+    
+          <div className={styles.rankResultWrap}>
+              <div className={styles.rankResultTitle}>和你立場最不同的候選人</div>
+              {worstPKers}
+          </div>
+
+          <div className={styles.replay}
+               onClick={this._replay.bind(this)}>REPLAY</div>
+      </div>
+    )
   }
 }
 class ResultPKer extends Component {

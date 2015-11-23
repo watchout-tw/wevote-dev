@@ -30,7 +30,6 @@ import Embed from 'views/Embed/Embed.js';
 import WithoutFooter from 'views/WithoutFooter/WithoutFooter.js';
 import WithAppbarOnly from 'views/WithAppbarOnly/WithAppbarOnly.js';
 
-import MatchGame from 'views/MatchGame/MatchGame.js';
 import MatchGameParty from 'views/MatchGameParty/MatchGameParty.js';
 
 import Issues from 'views/Issues/Issues.js';
@@ -58,7 +57,6 @@ export default function(store) {
 
             <Route path="/constituencies/" component={Constituencies}/>
             <Route path="/constituencies/:area/:areaNo" component={Constituency}/>
-            <Route path="/constituencies/:area/:areaNo/matchgame" component={MatchGame}/>
       
             <Route path="/issues/:issueName" component={Issue}/>
             <Route path="/issues/:issueName/:viewName" component={Issue}/>

@@ -25,10 +25,10 @@ export default class Parties extends Component {
     this.setState({
       innerWidth: window.innerWidth
     })
-    window.addEventListener('scroll', this._ononResize.bind(this));
+    window.addEventListener('scroll', this._onResize.bind(this));
   }
   componentWillUnmount(){
-    window.removeEventListener('scroll', this._ononResize.bind(this));
+    window.removeEventListener('scroll', this._onResize.bind(this));
   }
   _onResize(){
       this.setState({
