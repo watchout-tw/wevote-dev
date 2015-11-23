@@ -33,7 +33,7 @@ export default class CandidatesHoldSigns extends Component {
   }
   render() {
     const styles = require("./CandidatesHoldSigns.scss")
-    let {matchData, positionData, userChoices, currentQAItemIndex, showAnswerSection} = this.props;
+    let {matchData, userChoices, currentQAItemIndex, showAnswerSection} = this.props;
     let {viewWidth} = this.state;
 
     let userChoicesArray = "";
@@ -44,20 +44,24 @@ export default class CandidatesHoldSigns extends Component {
     let candidatePartyItems = Object.keys(matchData).map((partyId, index)=>{
       return (
         <PKer matchData={matchData[partyId]} 
-              positionData={positionData[partyId]}
               userChoices={userChoices}
               showAnswerSection={showAnswerSection}
               key={index}/>
       ) 
     })
-
+    /*
     // matchData  
-    // "KMT": {
-    //     "marriage-equality": "none",
-    //     "recall": "none",
-    //     "referendum": "none",
-    //     "nuclear-power": "nay"
-    // },
+    "KMT": {
+        id:xxx,
+        name:xxx,
+        positions:{
+          "marriage-equality": "none",
+          "recall": "none",
+          "referendum": "none",
+          "nuclear-power": "nay"
+        }
+    },
+    */
 
 
     let containerWidth = (viewWidth <= 450) ? {

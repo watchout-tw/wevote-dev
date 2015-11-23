@@ -38,10 +38,6 @@ export default class MatchGameParty extends Component {
         }
       })
 
-      //prepare party positiom
-      let partyPositions = parseToPartyPosition(props.records, props.issues);
-      let parsed = getMatchgamePartyData(partyPositions, props.partyPromises);
-
       this.state = {
           qaSet: qaSet,
           currentQAItemIndex: 0,
@@ -49,15 +45,14 @@ export default class MatchGameParty extends Component {
             // Format // "marriage-equality":"aye"
           },
           showAnswerSection: -1,
-          showRank: false,
+          progress: 'config', // config->game->result
           completed: false,
           currentRank: [],
 
-          positionData: parsed.positionData,
-          matchData: parsed.matchData//used for match, because position might conflicts"
+          matchData: {}
           
       }
-      console.log("end of constructor")
+      
 
   }
   componentDidMount(){
@@ -65,6 +60,20 @@ export default class MatchGameParty extends Component {
   }
   componentWillUnmount(){
       window.removeEventListener('scroll', this._onScroll.bind(this));
+  }
+  _onSetConfig(){
+      
+      // 使用者選擇要用過去或是承諾
+      // update match data
+      //prepare party positiom
+      const {records, issues, partyPromises} = this.props;
+      let partyPositions = parseToPartyPosition(records, issues);
+      let recordFirst = this.refs.recordFirst.getDOMNode().checked;
+      let matchData = getMatchgamePartyData(partyPositions, partyPromises, recordFirst);
+      this.setState({
+        progress: 'game',
+        matchData: matchData
+      })
   }
   _onScroll(){
       const {qaSet, currentQAItemIndex} = this.state;
@@ -122,26 +131,6 @@ export default class MatchGameParty extends Component {
       //console.log(scrollTop);
       //console.log(this.state.showAnswerSection)
   }
-  _onChooseConflict(name, issueName, pos){
-      // console.log("* onChooseConflict")
-      // console.log(`決定 ${name} 在 ${issueName} 的立場是 ${pos}`);
-
-      // 更新 matchData
-      let {matchData} = this.state;
-      matchData[name][issueName] = pos;
-      this.setState({
-          matchData: matchData
-      })
-
-      /*
-        // matchData format
-        "KMT": {
-          "marriage-equality": "aye",
-          "recall" : "nay"
-        },
-        
-      */
-  }
   _recordUserChoice(issueName, order, choice) {
       //console.log("record user choice:"+issueName+"-"+choice)
       
@@ -184,7 +173,7 @@ export default class MatchGameParty extends Component {
     Object.keys(matchData).map((peopleName, index)=>{
         let points = 0;
         let samePositionCount = 0;
-        let currentPeople = matchData[peopleName];
+        let currentPeople = matchData[peopleName].positions;
 
         Object.keys(currentPeople).map((issueName,k)=>{
             // 如果立場相同，並且使用者選擇的不是「沒意見」，加一分
@@ -220,10 +209,9 @@ export default class MatchGameParty extends Component {
       }
     })
     this.setState({
-      showRank: true,
+      progress: 'result',
       currentRank: currentRank
     });
-
   }
   _replay(){
     //console.log("*replay")
@@ -232,27 +220,24 @@ export default class MatchGameParty extends Component {
         currentQAItemIndex: 0,
         userChoices: {},
         showAnswerSection: -1,
-        showRank: false,
+        progress: 'config',
         completed: false
     })
     window.scrollTo(-100,0);
-    
   }
   render() {
     const styles = require("./MatchGameParty.scss")
     const {issues} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
-         currentRank, showRank, completed, 
-         matchData, positionData} = this.state;
-
+         currentRank, progress, completed, 
+         matchData} = this.state;
+    
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
                        data={value}
                        currentQAItemIndex={currentQAItemIndex}
                        userChoices={userChoices}
-                       conflictHandler={this._onChooseConflict.bind(this)}
                        recordHandler={this._recordUserChoice.bind(this)}
-                       candidatePositions={positionData}
                        matchData={matchData}
                        maxIndex={qaSet.length-1}
                        unlockNext={this._unlockNext.bind(this)}
@@ -263,63 +248,87 @@ export default class MatchGameParty extends Component {
     // 配對結果
     let BottomSection;
 
-    // 看結果：顯示結果
-    if(showRank){
-        BottomSection = (
-            <ResultSection currentRank={currentRank}
-                           positionData={positionData}
-                           userChoices={userChoices} />
+    switch(progress){
+      case 'config':
+        return (
+            <div className={styles.wrap}>
+                <div>
+                    如果過去四年的立法院紀錄和政黨目前的承諾不同⋯⋯
+                    
+                    <input type="radio" name="conflictResolver" value="recordFirst" ref="recordFirst" />我選擇以紀錄為準
+                    <input type="radio" name="conflictResolver" value="promiseFirst" />我選擇以承諾為準
+        
+                    <button onClick={this._onSetConfig.bind(this)}>開始</button>
+                </div>
+            </div>
         )
-    
-    }else{
-    //還沒看結果，顯示底部計分
-        BottomSection =(
-            <CandidatesHoldSigns matchData={matchData}
-                                 positionData={positionData} 
-                                 userChoices={userChoices}
-                                 currentQAItemIndex={currentQAItemIndex}
-                                 showAnswerSection={showAnswerSection}/>
-        );
-    }
+        
+      break;
 
-    return (
-        <div className={styles.wrap}>
-            {qaItems}
-            {BottomSection} 
-        </div>
+      case 'game':
+        return (
+            <div className={styles.wrap}>
+                {qaItems}
+                <CandidatesHoldSigns matchData={matchData}
+                                     userChoices={userChoices}
+                                     currentQAItemIndex={currentQAItemIndex}
+                                     showAnswerSection={showAnswerSection}/>
+            </div>
+        )
+      break;
+
+      case 'result':
+        return (
+            <div className={styles.wrap}>
+                {qaItems}
+                <ResultSection currentRank={currentRank}
+                               matchData={matchData}
+                               userChoices={userChoices}
+                               replay={this._replay.bind(this)} />
+            </div>
+        )
+      break;
+
+
+
+    }
+    
+    return (//default
+        <div></div>
     );
   }
 }
+
 class ResultSection extends Component {
 
   render(){
     const styles = require("./MatchGameParty.scss")
-    const {currentRank, positionData, userChoices} = this.props;
+    const {currentRank, matchData, userChoices, replay} = this.props;
 
     // Best Fit
-    let bestPKers = currentRank.map((people,index)=>{
+    let bestPKers = currentRank.map((party,index)=>{
 
-        if(people.points === currentRank[0].points)
-          return <ResultPKer rank={people} 
-                             data={positionData[people.name]}
+        if(party.points === currentRank[0].points)
+          return <ResultPKer rank={party} 
+                             data={matchData[party.name]}
                              userChoices={userChoices} 
                              key={`resultPKer${index}`} />
     })
     
     // Worst Fit
     let lastIndex = currentRank.length-1;
-    let worstPKers = currentRank.map((people,index)=>{
-        if(people.points === currentRank[lastIndex].points)
-          return <ResultPKer rank={people} 
-                             data={positionData[people.name]}
+    let worstPKers = currentRank.map((party,index)=>{
+        if(party.points === currentRank[lastIndex].points)
+          return <ResultPKer rank={party} 
+                             data={matchData[party.name]}
                              userChoices={userChoices}
                              key={`resultPKer${index}`} />
     })
     
     // Everyone
-    let resultPKers = currentRank.map((people,index)=>{
-        return <ResultPKer rank={people} 
-                           data={positionData[people.name]}
+    let resultPKers = currentRank.map((party,index)=>{
+        return <ResultPKer rank={party} 
+                           data={matchData[party.name]}
                            userChoices={userChoices}
                            key={`resultPKer${index}`} />
     })
@@ -328,17 +337,17 @@ class ResultSection extends Component {
       <div id="rankResultSection"
            className={styles.rankResultSection}>
           <div className={styles.rankResultWrap}>
-              <div className={styles.rankResultTitle}>和你立場最相近的候選人</div>
+              <div className={styles.rankResultTitle}>和你立場最相近的政黨</div>
               {bestPKers}
           </div>
     
           <div className={styles.rankResultWrap}>
-              <div className={styles.rankResultTitle}>和你立場最不同的候選人</div>
+              <div className={styles.rankResultTitle}>和你立場最不同的政黨</div>
               {worstPKers}
           </div>
 
           <div className={styles.replay}
-               onClick={this._replay.bind(this)}>REPLAY</div>
+               onClick={replay.bind(null)}>REPLAY</div>
       </div>
     )
   }

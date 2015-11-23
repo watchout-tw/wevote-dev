@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 import eng2cht from '../../utils/eng2cht'
 import eng2party_short from '../../utils/eng2party_short'
-import PeopleAvatar from '../PeopleAvatar/PeopleAvatar';
 
 @connect(
     state => ({}),
@@ -17,14 +16,14 @@ export default class PKer extends Component {
   constructor(props){super(props)
      //把候選人的資料 array 化
     let positionArray = [];
-    Object.keys(props.matchData).map((k,i)=>{
-        positionArray.push(props.matchData[k]);
+    Object.keys(props.matchData.positions).map((k,i)=>{
+        positionArray.push(props.matchData.positions[k]);
 
     })
     
     this.state = {
       positionArray: positionArray,
-      indexToIssueId: Object.keys(props.matchData),
+      indexToIssueId: Object.keys(props.matchData.positions),
       points: 0, 
       diff: 0
     }
@@ -39,21 +38,21 @@ export default class PKer extends Component {
 
     //更新 positionArray
     let positionArray = [];
-    Object.keys(matchData).map((k,i)=>{
-        positionArray.push(matchData[k]);
+    Object.keys(matchData.positions).map((k,i)=>{
+        positionArray.push(matchData.positions[k]);
     })
 
     //計算這個人的速配得分
     let newPoints = 0;
     Object.keys(userChoices).map((k,i)=>{
         //如果立場相同，並且使用者選擇的不是「沒意見」，加一分
-        if((userChoices[k] === matchData[k])&&(userChoices[k]!=="none")){
+        if((userChoices[k] === matchData.positions[k])&&(userChoices[k]!=="none")){
             newPoints++;
         }  
         //如果立場相反，扣一分
         if(
-            (userChoices[k] === "aye" && matchData[k] === "nay")||
-            (userChoices[k] === "nay" && matchData[k] === "aye")
+            (userChoices[k] === "aye" && matchData.positions[k] === "nay")||
+            (userChoices[k] === "nay" && matchData.positions[k] === "aye")
            ){
             newPoints--;
         } 
@@ -68,8 +67,9 @@ export default class PKer extends Component {
 
   render() {
     const styles = require("./PKer.scss")
-    let {peopleName, matchData, positionData, userChoices, showAnswerSection} = this.props;
+    let {peopleName, matchData, userChoices, showAnswerSection} = this.props;
     let {positionArray, indexToIssueId, points, diff} = this.state;
+
     
     //依照 window 所在位置決定要放答案 or ???
     //如果在 window 內並且使用者已經選擇過答案才顯示
@@ -98,9 +98,9 @@ export default class PKer extends Component {
                     <div className={`${styles.posCard} ${styles.back} ${styles.ans} ${styles[currentPos]}`}>{handleCardPos(currentPos)}</div>
                 </div>
                 <div className={styles.avatarImg}>
-                    <div className={`${styles.partyFlag} ${styles.small} ${styles[positionData.id]}`}></div>
+                    <div className={`${styles.partyFlag} ${styles.small} ${styles[matchData.id]}`}></div>
                 </div>
-                <div className={styles.name}>{eng2party_short(positionData.id)}</div>
+                <div className={styles.name}>{eng2party_short(matchData.id)}</div>
                 <div className={styles.points}>
                     {points}  
                 </div>
