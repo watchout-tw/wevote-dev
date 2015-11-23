@@ -212,6 +212,9 @@ class ReferendumPreview extends Component {
 class ReferendumContent extends Component {
   render(){
     const styles = require('./IssueArticle.scss');
+    const figure1 = require('./images/IssueArticleFigures-08.png');
+    const figure2 = require('./images/IssueArticleFigures-09.png');
+    const figure3 = require('./images/IssueArticleFigures-10.png');
     return (
       <div>
           <section>
@@ -224,6 +227,7 @@ class ReferendumContent extends Component {
               <p>我們發現，在野黨非常關心這個議題，民進黨表態立委超過四分之三，其他兩個小黨台聯和親民黨的立委則全部參戰。更特別的是，這些在野黨立委全部都偏向贊成公投門檻下修的立場，國民黨立委則是落在模糊和反對的立場，朝野雙方壁壘分明。</p>
               <p className={styles.editorialComment}>台聯慣例為「一席立委兩人輪替」，每人各擔任兩年，故台聯共3席立委有6人擔任過立委</p>
               <p>另外統計發言次數，各黨分別是國民黨32次、民進黨43次、親民黨7次、台聯7次，雖然以席次的比例來看，國民黨的次數仍然偏少，但是差異並非十分懸殊，不過在野黨則都非常踴躍發言。</p>
+              <img className={styles.IssueArticleFigure} src={figure1} />
               <blockquote>
                 <p>為什麼在野黨特別關心公投法這個議題？這可能是因為公投制度具有彌補代議政治不足的目的。</p>
                 <p>在代議制度下，立法院有時可能會制定出違反部分人民意志的法律或政策，而這時少數黨立委因為人數劣勢而不一定能在立法院中阻止通過，這時如果有完善的公投制度，就能透過全民作最終決定來避免這樣的問題。</p>
@@ -253,6 +257,7 @@ class ReferendumContent extends Component {
                 </li>
               </ul>
               <p className={styles.editorialComment}>括號內代表表態次數</p>
+              <img className={styles.IssueArticleFigure} src={figure2} />
 
               <p>以上這些可說是特別關心這個議題的立委，他們的表態次數合計60次，幾乎佔全部139次的一半。進一步分析他們各自的表態內容，我們發現兩個特點：</p>
 
@@ -274,6 +279,7 @@ class ReferendumContent extends Component {
               <h1>真相三：修法的關鍵在於席次分布</h1>
               <p>從2012年，第八屆立委剛上任時開始，就有許多公投法的修法草案陸續提出，但在內政委員會的審查過程並不順利，一直到2015年4月（立法院第八屆立委第七會期）才順利初審通過，送入二讀協商討論中。</p>
               <p>延宕兩年多，其中的原因是什麼？我們分析了這七個會期中內政委員會的席次分布，發現以下狀況：</p>
+              <img className={styles.IssueArticleFigure} src={figure3} />
 
               <p>第一到四會期（2012─2013）
                  <ul className={styles.customList}>
