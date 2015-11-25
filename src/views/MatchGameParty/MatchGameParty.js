@@ -57,6 +57,8 @@ export default class MatchGameParty extends Component {
   }
   componentDidMount(){
       window.addEventListener('scroll', this._onScroll.bind(this));
+      // default set to 以過去紀錄為準
+      this.refs.recordFirst.getDOMNode().checked = true;
   }
   componentWillUnmount(){
       window.removeEventListener('scroll', this._onScroll.bind(this));

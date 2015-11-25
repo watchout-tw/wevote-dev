@@ -190,20 +190,29 @@ class Answer extends Component {
         [styles.isCompleted]: completed === "answer"
     });
 
-    let samePositionTitle = (userVote === "none") ? "跟你一樣沒意見的是～" : "跟你相同立場的是～";
-    let samePositions = Object.keys(matchData).map((peopleName, i)=>{
-      
-        if(matchData[peopleName].positions[issueName] === userVote){
-            return <div className={styles.samePositionItem}
-                        key={`${qid}-${i}`}>{peopleName}</div>
+    let samePositionTitle = (userVote === "none") ? "跟你一樣沒意見的是" : `跟你一樣${eng2cht(userVote)}的是`;
+    let samePositionList = [];
+    Object.keys(matchData).map((partyId, i)=>{
+        if(matchData[partyId].positions[issueName] === userVote){
+            samePositionList.push(matchData[partyId]);
         }
+    })
+    
+    let samePositionItems = samePositionList.map((value, i)=>{
+        return (
+            <div className={styles.samePositionItem}
+                 key={`${qid}-${i}`}>
+                   {value.name}
+                   {(i < samePositionList.length-1) ? "、":""}
+            </div>
+        )
     })
 
     return (
         <div className={answerClasses}
              id={`${qid}-Answer`}>
-            <div>{samePositionTitle}</div>
-            {samePositions}
+            <div className={styles.answerTitle}>{samePositionTitle}</div>
+            <div>{samePositionItems}</div>
         </div>
     )
   }

@@ -7,6 +7,7 @@
 	max-width: 400px;
 	margin: 80px auto;
 	line-height: 2;
+  padding: 10px;
 }
 /* should be refine later */
 
@@ -74,12 +75,12 @@ $primaryColor: #16a085;
   }
 }
 .button {
-	margin: 0 auto;
+	margin-left: calc(50% - 55px);
 	display: block;
 	background: $awesomeColor;
-    border: none;
-    padding: 3px 24px;
-    color: white;
+  border: none;
+  padding: 3px 30px;
+  color: white;
 }
 
 .rankResultSection {

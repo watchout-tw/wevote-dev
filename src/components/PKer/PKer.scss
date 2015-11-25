@@ -15,28 +15,31 @@
 }
 @keyframes soaring {
     from { top: 30px }
-    to { top: 0px}
+    to { top: -20px;
+    	 z-index: 100;}
 }
 @keyframes fading {
-    from { opacity: 1 }
-    to { opacity: 0}
+    from { opacity: 1; z-index: 100; }
+    to { opacity: 0; z-index: 0;}
 }
 .pointDiff {
 	position: absolute;
 	width: 100%;
 	text-align: center;
+	top: 10px;
+
 }
 .pointDiff.animate {
-	top: 30px;
+	top: 35px;
 	animation: soaring 1s 1, fading 1s linear 1s 1;
 	animation-fill-mode: forwards; 
+	opacity: 1;
 }
 .styles.hide {
-	top: 30px;
+	top: 35px;
 	opacity: 0;
 }
 .container {
-	
 	padding: 2px;
 }
 @media all and (min-width: 450px){
@@ -63,13 +66,12 @@
 	backface-visibility: hidden;
 	position: absolute;
 	width: 100%;
-
-	top: -18px;
+    top: -44px;
+    height: 65px;
+    padding-top: 2px;
 }
 .posCard.front {
-	
-    height: 40px;
-    padding-top: 10px;
+    padding-top: 24px;
 }
 @media all and (min-width: 450px){
 	.posCard {

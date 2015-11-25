@@ -89,65 +89,30 @@
 .optionItem.isChoosed {
 	transition: background 1s;
 }
-/* ---------------- */
-.Conflict {
-	height: 0px;
-	overflow: hidden;
-	position: relative;
-}
-.Conflict.isConflict {
-	height: auto;
-	margin-top: 30px;
-}
-.conflictItem {
-	background: white;
-	padding: 20px;
-}
-.conflictContent {
-	line-height: 1.4;
-}
-.conflictContent p {
-	margin: 10px 0;
-}
-.conflictActions {
-	margin-top: 20px;
-}
-.conflictButton {
-	display: inline-block;
-	cursor: pointer;
-    margin: 10px;
-    border: 1px solid;
-    padding: 10px;
-}
-.conflictButton.isActive {
-	display: inline-block;
-	cursor: pointer;
-    margin: 10px;
-    border: 1px solid;
-    padding: 10px;
-    background: black;
-    color: white;
-}
-
-
-
 /* ----------------- */
 .Answer {
 	height: 0px;
 	overflow: hidden;
 	position: relative;
-
 }
 .Answer.isCompleted {
 	height: auto;
-	min-height: 50vh;
-	padding-top: 150px;
+	min-height: 40vh;
+    margin: 50px 0 25px 0;
+    padding: calc(20vh - 40px) 10px 0 10px;
+    border: 1px dashed gray;
 }
 .samePositionItem {
 	margin: 2px;
 	display: inline-block;
 }
-
+.answerTitle {
+	font-size: 20px;
+	display: inline-block;
+	margin-bottom: 5px;
+    border-bottom: 1px solid;
+    padding: 2px 4px;
+}
 
 .button {
 	cursor: pointer;
