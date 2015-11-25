@@ -285,10 +285,10 @@ class ReferendumContent extends Component {
                  <ul className={styles.customList}>
                     <li className={`${styles.partisan} ${styles.ruling}`}>7人</li>
                     <li className={`${styles.partisan} ${styles.opposition}`}>6人─民進黨4、台聯1、親民黨1</li>
-                    <li className={`${styles.partisan} ${styles.none}`}>1人</li>
+                    <li className={`${styles.partisan} ${styles.nsu}`}>1人</li>
                  </ul>
               </p>
-              <p className={styles.editorialComment}>第一到四會期的無黨籍立委為高金素梅</p>
+              <p className={styles.editorialComment}>第一到四會期的無黨團結聯盟立委為高金素梅</p>
 
               <p>第五到六會期（2014）
                  <ul className={styles.customList}>

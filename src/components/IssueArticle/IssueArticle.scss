@@ -176,6 +176,10 @@ article {
 			@include custom-list-item(4);
 			&:before { content: '無黨籍：'; }
 		}
+		&.nsu {
+			@include custom-list-item(7);
+			&:before { content: '無黨團結聯盟：'; }
+		}
 	}
 	> li.partyPosition {
 		@include custom-list-item(7);
