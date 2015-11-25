@@ -1,6 +1,6 @@
 import cht2eng from "./cht2eng";
 import evadingList from './evadingList';
-
+import people_name2id from './people_name2id';
 
 export default function parseToLegislatorPosition(records, issues, legislators){
 	const PositionRecords = records;
@@ -25,7 +25,43 @@ export default function parseToLegislatorPosition(records, issues, legislators){
 			parseToLegislatorPosition_Proceed(PositionRecords_Issue[issue], issue, issues, legislators, LegislatorPosition);
   	});
 
+    //saveToJson(LegislatorPosition);
+
   	return LegislatorPosition;
+
+}
+function saveToJson(LegislatorPosition){
+    
+    import fs from "fs";
+    let OutputLegislators = {};
+
+    Object.keys(LegislatorPosition).map((legislatorId,index)=>{
+        let current = LegislatorPosition[legislatorId];
+        let id = Number(people_name2id(current.name));
+
+        if(id <= 124){//124 以下是第八屆立委，不含黨團
+            OutputLegislators[legislatorId] = {
+                name: current.name,
+                url: `http://wevote.tw/people/${id}/records/?utm_source=yahoo&utm_medium=link&utm_campaign=2016election`,
+                positions: {}
+
+            };
+            Object.keys(LegislatorPosition[legislatorId].positions).map((issueName, i)=>{
+               let currentIssue = LegislatorPosition[legislatorId].positions[issueName];
+               OutputLegislators[legislatorId].positions[issueName] = {
+                    dominantPosition: currentIssue.dominantPosition,
+                    positionCounts: currentIssue.positionCounts,
+                    totalCounts: currentIssue. totalCounts
+               }
+            })
+        }
+        
+    });
+
+    fs.writeFile('./data/OutputLegislators.json', JSON.stringify(OutputLegislators, null, 4), function (err) {
+        if (err) return console.log(err);
+        console.log('OutputLegislators.json is saved.');
+    });
 
 }
 function parseToLegislatorPosition_Proceed(records, currentIssue, issues, legislators, LegislatorPosition){

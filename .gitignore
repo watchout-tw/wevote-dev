@@ -5,3 +5,4 @@ build/
 *.iml
 webpack-stats.json
 npm-debug.log
+data/
