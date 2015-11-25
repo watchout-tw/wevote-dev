@@ -17,6 +17,7 @@ import PeopleIssue from 'views/PeopleIssue/PeopleIssue.js';
 
 import PartyList from 'views/PartyList/PartyList.js';
 import Parties from 'views/Parties/Parties.js';
+import PartiesTable from 'views/PartiesTable/PartiesTable.js';
 import Party from 'views/Party/Party.js';
 import PartyIssue from 'views/PartyIssue/PartyIssue.js';
 
@@ -30,7 +31,7 @@ import Embed from 'views/Embed/Embed.js';
 import WithoutFooter from 'views/WithoutFooter/WithoutFooter.js';
 import WithAppbarOnly from 'views/WithAppbarOnly/WithAppbarOnly.js';
 
-import MatchGameParty from 'views/MatchGameParty/MatchGameParty.js';
+import PartiesMatchGame from 'views/PartiesMatchGame/PartiesMatchGame.js';
 
 import Issues from 'views/Issues/Issues.js';
 import Constituencies from 'views/Constituencies/Constituencies.js';
@@ -43,7 +44,7 @@ export default function(store) {
     <Route component={App}>
         <Route path="/embed" component={Embed}/>
         <Route component={WithAppbarOnly}>
-            <Route path="/parties/matchgame" component={MatchGameParty}/>
+            <Route path="/parties-matchgame" component={PartiesMatchGame}/>
         </Route>
         <Route component={WithoutFooter}>
             <Route path="/subscribe" component={Subscribe}/>
@@ -67,6 +68,7 @@ export default function(store) {
             <Route path="/people/:peopleId/records/:issueName" component={PeopleIssue}/>
             
             <Route path="/parties" component={Parties}/>
+            <Route path="/parties-table" component={PartiesTable}/>
             
             <Route path="/parties/:partyId/records/" component={Party}/>
             <Route path="/parties/:partyId/records/:issueName" component={PartyIssue}/>

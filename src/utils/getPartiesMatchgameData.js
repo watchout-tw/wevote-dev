@@ -1,4 +1,4 @@
-export default function getMatchgamePartyData(partyPositions, partyPromises, recordFirst){
+export default function getPartiesMatchgameData(partyPositions, partyPromises, recordFirst){
     let MatchData = {};
     let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower"];//Hmmm....
 

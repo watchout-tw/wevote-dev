@@ -10,7 +10,7 @@ import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
 import url2eng from '../../utils/url2eng';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
-import getMatchgamePartyData from '../../utils/getMatchgamePartyData';
+import getPartiesMatchgameData from '../../utils/getPartiesMatchgameData';
 
 @connect(
     state => ({
@@ -21,7 +21,7 @@ import getMatchgamePartyData from '../../utils/getMatchgamePartyData';
     }),
     dispatch => bindActionCreators({}, dispatch))
 
-export default class MatchGameParty extends Component {
+export default class PartiesMatchGame extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired
   }
@@ -67,11 +67,11 @@ export default class MatchGameParty extends Component {
       
       // 使用者選擇要用過去或是承諾
       // update match data
-      //prepare party positiom
+      // prepare party positiom
       const {records, issues, partyPromises} = this.props;
       let partyPositions = parseToPartyPosition(records, issues);
       let recordFirst = this.refs.recordFirst.getDOMNode().checked;
-      let matchData = getMatchgamePartyData(partyPositions, partyPromises, recordFirst);
+      let matchData = getPartiesMatchgameData(partyPositions, partyPromises, recordFirst);
       this.setState({
         progress: 'game',
         matchData: matchData
@@ -228,7 +228,7 @@ export default class MatchGameParty extends Component {
     window.scrollTo(-100,0);
   }
   render() {
-    const styles = require("./MatchGameParty.scss")
+    const styles = require("./PartiesMatchGame.scss")
     const {issues} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
          currentRank, progress, completed, 
@@ -315,7 +315,7 @@ export default class MatchGameParty extends Component {
 class ResultSection extends Component {
 
   render(){
-    const styles = require("./MatchGameParty.scss")
+    const styles = require("./PartiesMatchGame.scss")
     const {currentRank, matchData, userChoices, replay} = this.props;
 
     // Best Fit
@@ -368,7 +368,7 @@ class ResultSection extends Component {
 class ResultPKer extends Component {
   
   render() {
-    const styles = require("./MatchGameParty.scss")
+    const styles = require("./PartiesMatchGame.scss")
     const {rank, data, userChoices} = this.props;
     let sameOpinions = [];
     let oppositeOpinions = [];

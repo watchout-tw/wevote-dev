@@ -129,10 +129,20 @@
 	background: $awesomeColor;
 	text-decoration: none;
 	color: white;
-	padding: 20px;
-	box-shadow: 2px 2px 12px 0 rgba(240, 240, 240, 0.3), -2px -2px 12px 0 rgba(240, 240, 240, 0.3)
+	padding: 10px 20px;
+	box-shadow: 0 0 12px 0 rgba(240, 240, 240, 0.3), 0 0 12px 0 rgba(240, 240, 240, 0.3)
 }
 .goMatch:hover {
 	box-shadow: 2px 2px 32px 0 rgba(240, 240, 240, 0.5), -2px -2px 32px 0 rgba(240, 240, 240, 0.5)
+}
+.goTable, .goTable:visited {
+	color: rgb(240,240,240);
+	border-bottom: 1px solid;
+	margin: 20px auto;
+	display: inline-block;
+	text-decoration: none;
+}
+.goTable:hover {
+	color: white;
 }
 

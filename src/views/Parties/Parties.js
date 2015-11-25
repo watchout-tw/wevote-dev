@@ -133,8 +133,10 @@ export default class Parties extends Component {
             </div>
           </div>
           <div className={styles.actions}>
-          <Link to={`/parties/matchgame/`}
-                className={styles.goMatch}>進入挑戰</Link>
+              <Link to={`/parties-matchgame/`}
+                    className={styles.goMatch}>進入挑戰</Link>
+              <div><Link to={`/parties-table/`}
+                    className={styles.goTable}>直接看結果</Link></div>
           </div>
       </div>
     );

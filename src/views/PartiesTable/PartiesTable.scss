@@ -1,0 +1,76 @@
+@import '../../common.scss';
+$tableWebBreak: 500px;
+.wrap {
+	position: relative;
+}
+table {
+	margin: 50px auto;
+	
+}
+tr:hover {
+	background: rgb(200,200,200);
+}
+td.head {
+	text-align: center;
+	border-bottom: 1px solid gray;
+	padding: 0 4px 10px 4px;
+}
+tr td {
+	padding-bottom: 10px;
+}
+@media all and (min-width: $tableWebBreak){
+	td.partyName {
+		padding-left:20px;
+	}
+}
+td.positionTitle {
+	padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+td.position {
+	text-align: center;
+}
+@media all and (min-width: $tableWebBreak){
+	td.position {
+		padding: 10px 20px 0 20px;
+	}
+}
+.record {
+	display: inline-block;
+    vertical-align: top; 
+}
+@media all and (min-width: $tableWebBreak){
+	.record {
+		width: 80px;
+	}
+}
+.recordSquare {
+	margin: 0 5px;
+	display: inline-block;
+}
+.recordSquare.level1 {
+	width: 10px;
+	height: 10px;
+}
+.recordSquare.level2 {
+	width: 30px;
+	height: 30px;
+}
+.recordSquare.level3 {
+	width: 50px;
+	height: 50px;
+}
+.promise {
+
+}
+@media all and (min-width: $tableWebBreak){
+	td.bill {
+		padding: 0 20px;
+	}
+}
+.legend {
+	margin: 100px auto 50px auto;
+	display: block;
+}
