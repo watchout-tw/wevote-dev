@@ -231,7 +231,7 @@ export default class MatchGameParty extends Component {
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
          currentRank, progress, completed, 
          matchData} = this.state;
-    
+
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
                        data={value}
@@ -252,14 +252,25 @@ export default class MatchGameParty extends Component {
       case 'config':
         return (
             <div className={styles.wrap}>
-                <div>
+                <section className={styles.configSection}>
                     如果過去四年的立法院紀錄和政黨目前的承諾不同⋯⋯
-                    
-                    <input type="radio" name="conflictResolver" value="recordFirst" ref="recordFirst" />我選擇以紀錄為準
-                    <input type="radio" name="conflictResolver" value="promiseFirst" />我選擇以承諾為準
-        
-                    <button onClick={this._onSetConfig.bind(this)}>開始</button>
-                </div>
+                    <ul className={styles.list}>
+                      <li className={styles.listItem}>
+                        <label className={styles.radioLabel}>
+                          <input type="radio" className={styles.radio} name="conflictResolver" value="recordFirst" ref="recordFirst" />
+                            我選擇以紀錄為準
+                        </label>
+                      </li>
+                      <li className={styles.listItem}>
+                        <label className={styles.radioLabel}>
+                          <input type="radio" className={styles.radio} name="conflictResolver" value="promiseFirst" />
+                            我選擇以承諾為準
+                        </label>
+                      </li> 
+                    </ul>
+                    <button onClick={this._onSetConfig.bind(this)}
+                            className={styles.button}>開始</button>
+                </section>
             </div>
         )
         

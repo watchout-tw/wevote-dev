@@ -3,6 +3,85 @@
 	position: relative;
 	padding-bottom: 150px;
 }
+.configSection {
+	max-width: 400px;
+	margin: 80px auto;
+	line-height: 2;
+}
+/* should be refine later */
+
+$baseFontSize: 16;
+$primaryColor: #16a085;
+@function rem($val) {
+  @return #{$val / $baseFontSize}rem;
+}
+.list {
+  padding: .5rem 1rem;
+  margin: .5rem .5rem 2rem .5rem;    
+  list-style-type: none;
+}
+.listItem {
+  margin: 0 0 .5rem 0;
+  padding: 0;
+}
+.radioLabel {
+  position: relative;
+  margin: .5rem;
+  font-family: Arial, sans-serif;
+  line-height: 135%;
+  cursor: pointer;
+}
+
+.radio {
+  position: relative;
+  margin: 0 1rem 0 0 ;
+  cursor: pointer;
+  
+  &:before {
+    transition: all .4s cubic-bezier(.45,1.8,.5,.75);
+    transform: scale(0,0);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: rem(2);
+    z-index: 1;
+    width: rem(12);
+    height: rem(12);
+    border-radius: 50%;
+  }
+  
+  &:checked {
+    &:before {
+     background: $awesomeColor;
+     transform: scale(1,1); 
+    }
+  }
+  
+  &:after {
+    content: "";
+    
+    position: absolute;
+    top: rem(-4);
+    left: rem(-2);
+    
+    width: 1rem;
+    height: 1rem;
+    
+    background: #fff;
+    
+    border: 2px solid $awesomeColor;
+    border-radius: 50%;
+  }
+}
+.button {
+	margin: 0 auto;
+	display: block;
+	background: $awesomeColor;
+    border: none;
+    padding: 3px 24px;
+    color: white;
+}
+
 .rankResultSection {
 	text-align: center;
 }
