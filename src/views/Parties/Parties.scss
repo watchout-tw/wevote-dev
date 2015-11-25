@@ -15,15 +15,14 @@
 .partyRoll {
 	display: inline-block;
 	vertical-align: top;
-	background: white;
-	border: 1px solid;
-	background-size: 100%;
-
-	width: calc(100vw - 10px);
-	height: 100vw;
-	padding: 10px;
-
+	
+    background-image: url('./images/roll-long.png');
+    background-size: 100%;
+    width: calc(100vw - 50px);
+    height: calc(2.35 * (100vw - 50px));
+    padding: 100px 10vw;
 }
+
 @media all and (min-width: 800px){
 	.wrap {
 		padding: 200px 0;
@@ -86,28 +85,40 @@
 	flex: 1;
 }
 .partyTitle {
-	font-size: 14px;
 	font-weight: bolder;
 	margin: 0 0 0 10px;
 }
 .columnBlock {
-	height: 280px;
+	min-height: 280px;
     overflow: hidden;
-    font-size: 12px;
     padding-top: 10px;
+}
+.partyTitle {
+	font-size: 20px;
+}
+.columnBlock {
+	font-size: 16px;
+}
+@media all and (min-width: 800px){
+	.partyTitle {
+		font-size: 14px;
+	}
+	.columnBlock {
+		font-size: 12px;
+	}
+	.partyRoll.focus .partyTitle {
+		font-size: 20px;
+	}
+	.partyRoll.focus .columnBlock {
+		font-size: 16px;
+		height: auto;
+	}
+	.columnBlock.twoColumn {
+		column-count: 2;
+	}
 }
 .columnBlock ol{
 	margin: 0;
-}
-.partyRoll.focus .partyTitle {
-	font-size: 20px;
-}
-.partyRoll.focus .columnBlock {
-	font-size: 16px;
-	height: auto;
-}
-.columnBlock.twoColumn {
-	column-count: 2;
 }
 .actions {
 	text-align: center;

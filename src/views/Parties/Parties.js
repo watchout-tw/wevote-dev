@@ -122,7 +122,7 @@ export default class Parties extends Component {
       </div>
     )
     let containerStyle = (innerWidth <= 800) ? {
-      width: `${Object.keys(partyBlock).length * innerWidth}px`,
+      width: `${Object.keys(partyBlock).length * (innerWidth-50)}px`,
       marginBottom: "50px"
     }:{};
     return (
