@@ -13,9 +13,14 @@
 		width: auto;
 	}
 }
-@keyframes soaring {
+@keyframes soaringMobile {
     from { top: 30px }
     to { top: -20px;
+    	 z-index: 100;}
+}
+@keyframes soaringWeb {
+    from { top: 30px }
+    to { top: 10px;
     	 z-index: 100;}
 }
 @keyframes fading {
@@ -27,11 +32,10 @@
 	width: 100%;
 	text-align: center;
 	top: 10px;
-
 }
 .pointDiff.animate {
 	top: 35px;
-	animation: soaring 1s 1, fading 1s linear 1s 1;
+	animation: soaringMobile 1s 1, fading 1s linear 1s 1;
 	animation-fill-mode: forwards; 
 	opacity: 1;
 }
@@ -39,6 +43,20 @@
 	top: 35px;
 	opacity: 0;
 }
+@media all and (min-width: 450px){
+	.pointDiff {
+		top: auto;
+	}
+	.pointDiff.animate {
+		top: auto;
+		animation: soaringWeb 1s 1, fading 1s linear 1s 1;
+		animation-fill-mode: forwards; 
+	}
+	.styles.hide {
+		top: auto;
+	}
+}
+
 .container {
 	padding: 2px;
 }
@@ -76,6 +94,7 @@
 @media all and (min-width: 450px){
 	.posCard {
 		top: 0;
+		height: auto;
 	}
 	.posCard.front {
 		height: auto;
