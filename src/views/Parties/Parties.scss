@@ -6,21 +6,40 @@
     padding: 50px 0;
     width: 100%;
     overflow: hidden;
+    background-image: url('./images/bg.png'), url('./images/grass.png');
+    background-size: 100%;
+    background-repeat: no-repeat, repeat;
 }
 .partyFlow {
 	position: relative;
 	overflow: scroll;
 	margin-bottom: 40px;
+	margin-top: 120px;
+}
+.partyRollItem {
+	display: inline-block;
+}
+.partyRollTop {
+	background-image: url('./images/top.png');
+	background-size: 100%;
+
+	width: calc(100% - 50px);
+    height: calc(0.2 * (100vw - 50px));
+    position: absolute;
+    top: -10px;
 }
 .partyRoll {
 	display: inline-block;
 	vertical-align: top;
 	
-    background-image: url('./images/roll-long.png');
+    background-image: url('./images/main.png');
     background-size: 100%;
     width: calc(100vw - 50px);
-    height: calc(2.35 * (100vw - 50px));
-    padding: 100px 10vw;
+    height: calc(100vw - 50px);
+    padding: 18vw 10vw;
+
+    border-bottom: 5px solid #423902;
+    overflow: scroll;
 }
 
 @media all and (min-width: 800px){
@@ -32,7 +51,11 @@
     	width: 100%;
     	-webkit-perspective: 600px;
     	overflow: visible;
-
+    	margin-top: 0;
+    	border-bottom: none;
+	}
+	.partyRollTop {
+		display: none;
 	}
 	.partyRoll {
 		display: inline-block;

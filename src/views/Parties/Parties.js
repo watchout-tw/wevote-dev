@@ -80,12 +80,15 @@ export default class Parties extends Component {
     let partyRollItems = Object.keys(partyBlock).map((partyId, index)=>{
        
         return (
-            <PartyRoll key={`party-roll-${partyId}-${index}`}
-                       data={partyBlock[partyId]}
+        <div  className={styles.partyRollItem}
+              key={`party-roll-${partyId}-${index}`}>
+            <div className={styles.partyRollTop}></div>
+            <PartyRoll data={partyBlock[partyId]}
                        index={index}
                        focus={focus}
                        innerWidth={innerWidth}
                        onChangeFocus={this._onChangeFocus.bind(this)} />
+        </div>
         )
     })
     
