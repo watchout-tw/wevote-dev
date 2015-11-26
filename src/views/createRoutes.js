@@ -70,7 +70,7 @@ export default function(store) {
             <Route path="/parties" component={Parties}/>
             <Route path="/parties-table" component={PartiesTable}/>
             
-            <Route path="/parties/:partyId/records/" component={Party}/>
+            <Route path="/parties/:partyId/:category/" component={Party}/>
             <Route path="/parties/:partyId/records/:issueName" component={PartyIssue}/>
             
             <Route path="/records/:recordId" component={Record}/>
