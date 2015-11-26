@@ -1,0 +1,11 @@
+.PKerBillboard {
+	text-align: center;
+	width: 100%;
+	padding-bottom: 5px;
+	overflow: visible;
+}
+@media all and (min-width: 450px){/* break size need to be re-confirm */
+	.PKerBillboard {
+		padding-bottom: 10px;
+	}
+}

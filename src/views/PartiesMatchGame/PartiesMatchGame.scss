@@ -2,7 +2,20 @@
 .wrap {
 	position: relative;
 	padding-bottom: 150px;
+  
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+
+  background-size: 100%;
+  background-image: url('../images/bg.png'), url('../images/grass.png');
+  background-repeat: no-repeat, repeat;
+  background-attachment:fixed;
 }
+
+/* -----------------
+/* CONFIG */
+
 .configSection {
 	max-width: 400px;
 	margin: 80px auto;
@@ -82,6 +95,23 @@ $primaryColor: #16a085;
   padding: 3px 30px;
   color: white;
 }
+/* -----------------
+/* GAME */
+.billboard {
+  position: fixed;
+  width: 400px;
+  top: 100px;
+}
+.billboard.left {
+  left: 10px;
+}
+.billboard.right {
+  right: 10px;
+}
+
+
+/* -----------------
+/* RESULT */
 
 .rankResultSection {
 	text-align: center;
@@ -134,9 +164,6 @@ $primaryColor: #16a085;
 @media all and (min-width: 400px){
 	.peopleInfo {
 		display: inline-block
-	}
-	.avatarImg {
-		
 	}
 }
 

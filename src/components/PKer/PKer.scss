@@ -5,7 +5,8 @@
 	width: 32px;
 	cursor: pointer;
 	position: relative;
-	padding-top: 50px;/* space for animation */
+	padding-top: 24px;/* space for animation */
+	margin: 3px;
 }
 @media all and (min-width: 450px){
 	.wrap {
@@ -50,13 +51,12 @@
 	.pointDiff.animate {
 		top: auto;
 		animation: soaringWeb 1s 1, fading 1s linear 1s 1;
-		animation-fill-mode: forwards; 
+		animion-fill-mode: forwards; 
 	}
 	.styles.hide {
 		top: auto;
 	}
 }
-
 .container {
 	padding: 2px;
 }
@@ -66,7 +66,7 @@
 	}
 }
 .cardWrap {
-	height: 30px;
+	height: 24px;
 	text-align: center;
 	position: relative;
 }
@@ -79,14 +79,15 @@
 	transition: 0.5s;
 }
 .posCard {
-	background: black;
-	color: white;
 	backface-visibility: hidden;
 	position: absolute;
 	width: 100%;
     top: -44px;
     height: 65px;
     padding-top: 2px;
+
+    font-size: 14px;
+    font-weight: 600;
 }
 .posCard.front {
     padding-top: 24px;
@@ -130,7 +131,7 @@
 @media all and (min-width: 400px){
 	.avatarImg {
 		width: 50px;
-		height: 30px;
+		height: 50px;
 	}
 }
 .name {
@@ -139,14 +140,43 @@
 @media all and (min-width: 450px){
 	.name {
 		display: block;
-		background: white;
-    	width: 74px;
-    	height: 40px;
+		text-align: center;
+		color: black;
 	}
 }
-
 .points {
-	background: white;
-	font-size: 18px;
 	font-weight: 800;
+    width: 20px;
+    position: absolute;
+    bottom: -18px;
+    left: calc(50% - 10px);
+    z-index: 1;
+}
+.hexagon {
+	width: 100px;
+	height: 55px;
+	background: white;
+	position: relative;
+}
+.hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid white;
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid white;
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import QAItem from '../../components/QAItem/QAItem';
-import CandidatesHoldSigns from '../../components/CandidatesHoldSigns/CandidatesHoldSigns';
+import PKerBillboard from '../../components/PKerBillboard/PKerBillboard';
 import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar';
 
 import people_name2id from '../../utils/people_name2id';
@@ -282,10 +282,20 @@ export default class PartiesMatchGame extends Component {
         return (
             <div className={styles.wrap}>
                 {qaItems}
-                <CandidatesHoldSigns matchData={matchData}
-                                     userChoices={userChoices}
-                                     currentQAItemIndex={currentQAItemIndex}
-                                     showAnswerSection={showAnswerSection}/>
+                <div className={`${styles.billboard} ${styles.left}`}>
+                    <PKerBillboard matchData={matchData}
+                                   userChoices={userChoices}
+                                   currentQAItemIndex={currentQAItemIndex}
+                                   showAnswerSection={showAnswerSection}
+                                   side={1}/>
+                    </div>
+                <div className={`${styles.billboard} ${styles.right}`}>
+                    <PKerBillboard matchData={matchData}
+                                   userChoices={userChoices}
+                                   currentQAItemIndex={currentQAItemIndex}
+                                   showAnswerSection={showAnswerSection}
+                                   side={2}/>
+                </div>
             </div>
         )
       break;

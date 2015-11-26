@@ -1,20 +1,14 @@
 @import '../../common.scss';
+$rollWebBreak: 800px;
 .wrap {
 	position: relative;
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #333 ), color-stop(100%,black));
-    background: -webkit-radial-gradient(center, ellipse cover, #333 0%, black 100%);
-    padding: 50px 0;
-    width: 100%;
-    overflow: hidden;
-    background-image: url('./images/bg.png'), url('./images/grass.png');
-    background-size: 100%;
-    background-repeat: no-repeat, repeat;
+	background-size: 100%;
+	min-height: 100vh;
+	background-image: url('../images/bg.png'), url('../images/grass.png');
+	background-repeat: no-repeat, repeat;
 }
 .partyFlow {
-	position: relative;
-	overflow: scroll;
-	margin-bottom: 40px;
-	margin-top: 120px;
+	
 }
 .partyRollItem {
 	display: inline-block;
@@ -42,71 +36,31 @@
     overflow: scroll;
 }
 
-@media all and (min-width: 800px){
-	.wrap {
-		padding: 200px 0;
-	}
+@media all and (min-width: $rollWebBreak){
 	.partyFlow {
-		min-height: 600px;
-    	width: 100%;
-    	-webkit-perspective: 600px;
-    	overflow: visible;
-    	margin-top: 0;
-    	border-bottom: none;
+		text-align: center;
 	}
 	.partyRollTop {
 		display: none;
 	}
 	.partyRoll {
+		text-align: left;
 		display: inline-block;
+		margin: 0 auto;
 		vertical-align: top;
 		
 		border: none;
-		background: none;
-
 		background-image: url('./images/roll.png');
 		background-size: 100%;
 	
-		width: 400px;
-		height: 400px;
+		width: 700px;
+		height: 680px;
 	
-		transform-style: preserve-3d;
-	    transition-property: all;
-	    transition-duration: 300ms;
-	    transition-timing-function: ease-out; 
-	
-	    position: absolute;
-	    top: -100px;
-	    left: 50%;
-	
-	    cursor: pointer;
-	
-	    padding: 90px 80px 10px 80px;
+	    padding: 160px 120px 10px 120px;
 	    overflow: hidden;
-	}
-	.partyRoll.focus {
-		width: 600px;
-		height: 600px;
-		padding: 140px 180px 10px 120px;
 	}
 }
 
-.tempAction {
-	width: 100%;
-	text-align: center;
-	margin-top: 140px;
-}
-.tempAction button {
-	height: 80px;
-	padding: 0 100px;
-}
-.control {
-	background: white;
-	display: flex;
-}
-.controlItem {
-	flex: 1;
-}
 .partyTitle {
 	font-weight: bolder;
 	margin: 0 0 0 10px;
@@ -122,21 +76,21 @@
 .columnBlock {
 	font-size: 16px;
 }
-@media all and (min-width: 800px){
+@media all and (min-width: $rollWebBreak){
 	.partyTitle {
 		font-size: 14px;
 	}
 	.columnBlock {
 		font-size: 12px;
 	}
-	.partyRoll.focus .partyTitle {
+	.partyTitle {
 		font-size: 20px;
 	}
-	.partyRoll.focus .columnBlock {
+	.columnBlock {
 		font-size: 16px;
 		height: auto;
 	}
-	.columnBlock.twoColumn {
+	.columnBlock.twoColumns {
 		column-count: 2;
 	}
 }
