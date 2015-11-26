@@ -1,4 +1,6 @@
 @import '../../common.scss';
+@import '../../innerTag.scss';
+
 $breakLarge: 1400px;
 .wrap {
 	margin: 0;
@@ -66,45 +68,7 @@ $breakLarge: 1400px;
 	}
 }
 
-.innerTag {
-	width: 100%;
-	position: absolute;
-	top: 100%;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-@media all and (min-width: 600px){
-}
-.innerTag li {
- 	@include inline-middle;
-	float: none;
-	cursor: pointer;
-}
-.innerTag a, .innerTag a:visited {
-	display: block;
-	padding: 0.5em 1em;
-	background: $lightGrey;
-	color: $black;
-	text-decoration: none;
-}
-.innerTag a:hover, .innerTag a.active {
-	background: $black;
-	color: $white;
-}
-/*
-@media (max-width: 420px) {
-  .innerTag li {
-  	font-size: 13px;
-  }
-  .innerTag li {
- 		width: 80px;
-  }
-  .about .innerTag a {
-  	height: 50px;
-  	text-align: center;
-  }
-}*/
+
 /* main content */
 .content {
 	max-width: 560px;

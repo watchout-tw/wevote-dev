@@ -1,24 +1,26 @@
 @import '../../common.scss';
+@import '../../innerTag.scss';
+
 .wrap {
 	position: relative;
 	text-align: center;
+	min-height: 60vh;
 }
 
 // 因為Party.js沒有用IssueGroup
 // 以下從IssueGroup.scss直接複製貼上的
-.issueWrap {
-}
+
 .issueBlock, .issueBlock:visited {
 	display: block;
 	vertical-align: top;
 	padding: 20px;
-  color: $textColor;
+  	color: $textColor;
 }
 .issueBlock:hover {
 	background: $lightGrey;
 }
 @media all and (min-width: 400px){
-	.issueWrap {
+	.innerWrap {
 		padding: 20px 0;
 	}
 	.issueBlock, .issueBlock:visited {
