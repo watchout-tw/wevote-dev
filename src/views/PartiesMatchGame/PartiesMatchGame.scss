@@ -141,95 +141,108 @@ $primaryColor: #16a085;
 .rankResultTitle {
 	font-size: 20px;
 }
-.resultPKer {
-	padding: 10px;
-	background: white;
-    border: 1px solid #C2BDBD;
-    display: inline-block;
-    vertical-align: top;
-    min-height: 190px;
-    margin: 10px 4px;
+.spectrum {
+  display: flex;
+  border-top: 1px solid white;
 }
-/* 和你相同的議題是這些 */
-.opinionGroups {
-	display: inline-block;
-	text-align: left;
+.hue {
+  flex: 1;
+  position: relative;
 }
-@media all and (min-width: 400px){
-	.opinionGroups {
-		vertical-align: top;
-		margin-top: 14px;
-	}
+.hue:after {
+    content: '';
+    width: 2px;
+    height: 10px;
+    background: #FFFFFF;
+    position: absolute;
+    top: -10px;
+    left: 0;
 }
-.opinionGroup {
-	margin-bottom: 10px;
-	border-bottom: 1px dotted gray;
-    margin: 0 14px 20px 14px;
-    padding: 5px 0;
-}
-.peopleInfo {
-	display: block;
-	height: 200px;
-}
-.avatarImg {
-	width: 120px;
-	height: 80px;
-	margin: 20px auto 0 auto;
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-}
-@media all and (min-width: 400px){
-	.peopleInfo {
-		display: inline-block
-	}
+.hueItem {
+  margin: 35px auto;
+  cursor: pointer;
 }
 
-.avatarName {
-	font-size: 24px;
-	margin: 8px;
-	width: 150px;
+$hexagonSize: 60px;
+$innerHexagonSize: 50px;
+$hexagonColor1: cyan;
+$hexagonColor2: #348FB1;
+$hexagonColor3: #696E6E;//#145456;
+$hexagonColor4: #252727;//#111;
+
+.hexagon {
+  width: $hexagonSize;
+  height: $hexagonSize/2 + 5px;
+  background: linear-gradient(180deg,$hexagonColor1,$hexagonColor2);
+  position: relative;
 }
-.totalPoints {
-	font-size: 22px;
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -$hexagonSize/4;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: $hexagonSize/2 solid transparent;
+  border-right: $hexagonSize/2 solid transparent;
+  border-bottom: $hexagonSize/4 solid $hexagonColor1;
 }
-.opinionCount {
-	font-size: 20px;
-	font-weight: 800;
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -$hexagonSize/4;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: $hexagonSize/2 solid transparent;
+  border-right: $hexagonSize/2 solid transparent;
+  border-top: $hexagonSize/4 solid $hexagonColor2;
+  filter: drop-shadow(0px 2px 2px #FFF);
+
 }
-.circleCount {
-	display: inline-block;
-	text-align: center;
-	font-size: 14px;
-    padding: 0 10px;
+
+.innerHexagon {
+  width: $innerHexagonSize;
+  height: $innerHexagonSize/2 + 5px;
+  background: linear-gradient(210deg,$hexagonColor3,$hexagonColor4);
+  position: relative;
+  top: 2px;
+  left: 6px; 
 }
-.issueCircles {
-	display: inline-block;
-	vertical-align: top;
-	min-width: calc(100vw - 160px);
+
+.innerHexagon:before {
+  content: "";
+  position: absolute;
+  top: -$innerHexagonSize/4;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: $innerHexagonSize/2 solid transparent;
+  border-right: $innerHexagonSize/2 solid transparent;
+  border-bottom: $innerHexagonSize/4 solid $hexagonColor3;
 }
-@media all and (min-width: 450px){
-	.issueCircles {
-		min-width: 200px;
-	}
+.party {
+  position: absolute;
+  top: -6px;
+  left: 14px;
 }
-.issueCircle {
-	border-radius: 100%;
-    background: #005060;
-    border: 3px solid #A9C6CB;
-    color: white;
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    vertical-align: top;
-    margin: 2px;
-    font-size: 13px;
-    padding: 5px 2px;
-    text-align: center;
+.name, .name:after {
+  z-index: 12;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  width: 100%;
 }
-.replay {
-	cursor: pointer;
-	border: 1px solid;
-	display: inline-block;
-	padding: 8px 20px;
+.innerHexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -$innerHexagonSize/4;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: $innerHexagonSize/2 solid transparent;
+  border-right: $innerHexagonSize/2 solid transparent;
+  border-top: $innerHexagonSize/4+1 solid $hexagonColor4;
+  z-index: 11;//?
 }

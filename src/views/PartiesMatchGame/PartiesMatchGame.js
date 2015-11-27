@@ -7,6 +7,7 @@ import PKerBillboard from '../../components/PKerBillboard/PKerBillboard';
 import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar';
 
 import people_name2id from '../../utils/people_name2id';
+import eng2party_short from '../../utils/eng2party_short';
 import eng2cht from '../../utils/eng2cht';
 import url2eng from '../../utils/url2eng';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
@@ -172,21 +173,21 @@ export default class PartiesMatchGame extends Component {
     let currentRank = [];
     let {matchData, userChoices} = this.state;
 
-    Object.keys(matchData).map((peopleName, index)=>{
+    Object.keys(matchData).map((partyId, index)=>{
         let points = 0;
         let samePositionCount = 0;
-        let currentPeople = matchData[peopleName].positions;
+        let currentParty = matchData[partyId].positions;
 
-        Object.keys(currentPeople).map((issueName,k)=>{
+        Object.keys(currentParty).map((issueName,k)=>{
             // 如果立場相同，並且使用者選擇的不是「沒意見」，加一分
-            if((userChoices[issueName] === currentPeople[issueName])&&(userChoices[issueName]!=="none")){
+            if((userChoices[issueName] === currentParty[issueName])&&(userChoices[issueName]!=="none")){
                 points++;
                 samePositionCount++;
             }  
             // 如果立場相反，扣一分
             if(
-                (userChoices[issueName] === "aye" && currentPeople[issueName] === "nay")||
-                (userChoices[issueName] === "nay" && currentPeople[issueName] === "aye")
+                (userChoices[issueName] === "aye" && currentParty[issueName] === "nay")||
+                (userChoices[issueName] === "nay" && currentParty[issueName] === "aye")
                ){
                 points--;
             }
@@ -194,8 +195,8 @@ export default class PartiesMatchGame extends Component {
         });
 
         currentRank.push(
-          Object.assign(currentPeople, {
-            name: peopleName,
+          Object.assign(currentParty, {
+            id: partyId,
             points: points
           })
         ) 
@@ -307,7 +308,6 @@ export default class PartiesMatchGame extends Component {
             <div className={styles.wrap}>
                 {qaItems}
                 <ResultSection currentRank={currentRank}
-                               matchData={matchData}
                                userChoices={userChoices}
                                replay={this._replay.bind(this)} />
             </div>
@@ -323,123 +323,64 @@ export default class PartiesMatchGame extends Component {
     );
   }
 }
-
+@connect(
+    state => ({
+      parties: state.parties
+    }),
+    dispatch => bindActionCreators({}, dispatch))
 class ResultSection extends Component {
 
   render(){
     const styles = require("./PartiesMatchGame.scss")
-    const {currentRank, matchData, userChoices, replay} = this.props;
+    const {parties, currentRank, userChoices, replay} = this.props;
 
-    // Best Fit
-    let bestPKers = currentRank.map((party,index)=>{
-
-        if(party.points === currentRank[0].points)
-          return <ResultPKer rank={party} 
-                             data={matchData[party.name]}
-                             userChoices={userChoices} 
-                             key={`resultPKer${index}`} />
+    let resultPKers = {};
+    //依照分數排
+    currentRank.map((party,index)=>{
+        let point = party.points;
+        if(!resultPKers[point]){
+          resultPKers[point] = [];
+        }
+        resultPKers[point].push(party)
+       
     })
     
-    // Worst Fit
-    let lastIndex = currentRank.length-1;
-    let worstPKers = currentRank.map((party,index)=>{
-        if(party.points === currentRank[lastIndex].points)
-          return <ResultPKer rank={party} 
-                             data={matchData[party.name]}
-                             userChoices={userChoices}
-                             key={`resultPKer${index}`} />
-    })
+    let array = [];
+    for(let i=-4;i<=4;i++){
+      array.push(i);
+    }
     
-    // Everyone
-    let resultPKers = currentRank.map((party,index)=>{
-        return <ResultPKer rank={party} 
-                           data={matchData[party.name]}
-                           userChoices={userChoices}
-                           key={`resultPKer${index}`} />
+    let resultSpectrum = array.map((i,index)=>{
+        let hue = (resultPKers[i] || []).map((v,j)=>{
+          return (
+             
+              <div className={`${styles.hueItem} ${styles.hexagon}`}
+                   key={`${i}-${j}`}>
+                  <div className={`${styles.innerHexagon}`}>
+                      <div className={`${styles.party} ${styles.partyFlag} ${styles.small} ${styles[v.id]}`}></div>
+                  </div>
+                  <div className={styles.name}>{eng2party_short(v.id)}</div>
+              </div>
+
+            
+          )
+        })
+        return (
+            <div className={styles.hue}>
+                <div>得分{i}</div>
+                {hue}
+            </div>
+        );
     })
+  
     
     return (
       <div id="rankResultSection"
            className={styles.rankResultSection}>
-          <div className={styles.rankResultWrap}>
-              <div className={styles.rankResultTitle}>和你立場最相近的政黨</div>
-              {bestPKers}
-          </div>
-    
-          <div className={styles.rankResultWrap}>
-              <div className={styles.rankResultTitle}>和你立場最不同的政黨</div>
-              {worstPKers}
-          </div>
-
+          <div className={styles.spectrum}>{resultSpectrum}</div>
           <div className={styles.replay}
                onClick={replay.bind(null)}>REPLAY</div>
       </div>
-    )
-  }
-}
-class ResultPKer extends Component {
-  
-  render() {
-    const styles = require("./PartiesMatchGame.scss")
-    const {rank, data, userChoices} = this.props;
-    let sameOpinions = [];
-    let oppositeOpinions = [];
-
-    Object.keys(rank).map((issueName,i)=>{
-      
-      if(rank[issueName] === userChoices[issueName] && userChoices[issueName] !== "none"){
-          sameOpinions.push(issueName);
-      }
-
-      if(
-       (rank[issueName] === "aye" && userChoices[issueName] === "nay")||
-       (rank[issueName] === "nay" && userChoices[issueName] === "aye")
-      ){
-          oppositeOpinions.push(issueName);       
-      } 
-
-    })
-
-    //相同意見
-    let sameOpinionItems = sameOpinions.map((id, index)=>{
-        return <div className={styles.issueCircle}>{eng2cht(id)}</div>
-    })
-    
-    //相反意見
-    let oppositeOpinionItems = oppositeOpinions.map((id, index)=>{
-        return <div className={styles.issueCircle}>{eng2cht(id)}</div>
-    })
-
-    return (
-        <div className={styles.resultPKer}>
-            
-            <div className={styles.peopleInfo}>
-                <div className={styles.avatarImg}>
-                    <div className={`${styles.partyFlag} ${styles.large} ${styles[data.id]}`}></div>
-                </div>
-                <div className={styles.avatarName}>{data.name}</div>
-                <div className={styles.totalPoints}>總分：{rank.points}</div>
-            </div>
-
-            <div className={styles.opinionGroups}>
-
-                <div className={styles.opinionGroup}>
-                    <div className={styles.circleCount}>
-                        <div className={styles.opinionCount}>{sameOpinions.length}</div>
-                        <div>個意見相同</div>
-                    </div>
-                    <div className={styles.issueCircles}>{sameOpinionItems}</div>
-                </div>
-                <div className={styles.opinionGroup}>
-                    <div className={styles.circleCount}>
-                        <div className={styles.opinionCount}>{oppositeOpinions.length}</div>
-                        <div>個意見不同</div>
-                    </div>
-                    <div className={styles.issueCircles}>{oppositeOpinionItems}</div>
-                </div>
-            </div>
-
-        </div>
     )
   }
 }
