@@ -2,9 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from "react-router";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import classnames from 'classnames';
+
 import QAItem from '../../components/QAItem/QAItem';
-import PKerBillboard from '../../components/PKerBillboard/PKerBillboard';
-import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar';
+import PKer from '../../components/PKer/PKer';
 
 import people_name2id from '../../utils/people_name2id';
 import eng2party_short from '../../utils/eng2party_short';
@@ -12,6 +13,7 @@ import eng2cht from '../../utils/eng2cht';
 import url2eng from '../../utils/url2eng';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 import getPartiesMatchgameData from '../../utils/getPartiesMatchgameData';
+import scrollTo from '../../utils/scrollTo';
 
 @connect(
     state => ({
@@ -38,111 +40,48 @@ export default class PartiesMatchGame extends Component {
             statement: props.issues[issueUrl].statement,
         }
       })
-
       this.state = {
           qaSet: qaSet,
           currentQAItemIndex: 0,
           userChoices: {
             // Format // "marriage-equality":"aye"
           },
-          showAnswerSection: -1,
           progress: 'config', // config->game->result
           completed: false,
           currentRank: [],
 
-          matchData: {}
-          
+          matchData: {}  
       }
-      
-
   }
-  componentDidMount(){
-      window.addEventListener('scroll', this._onScroll.bind(this));
-      // default set to 以過去紀錄為準
-      this.refs.recordFirst.getDOMNode().checked = true;
-  }
-  componentWillUnmount(){
-      window.removeEventListener('scroll', this._onScroll.bind(this));
-  }
-  _onSetConfig(){
+  _onSetConfig(recordFirst, event){
       
       // 使用者選擇要用過去或是承諾
       // update match data
       // prepare party positiom
       const {records, issues, partyPromises} = this.props;
       let partyPositions = parseToPartyPosition(records, issues);
-      let recordFirst = this.refs.recordFirst.getDOMNode().checked;
       let matchData = getPartiesMatchgameData(partyPositions, partyPromises, recordFirst);
       this.setState({
         progress: 'game',
         matchData: matchData
       })
-  }
-  _onScroll(){
-      const {qaSet, currentQAItemIndex} = this.state;
-      let showAnswerSection = -1;
-      let scrollTop = document.body.scrollTop;
-      
-      //check each Answer's scrollTop
-      qaSet.map((v,i)=>{
-        
-        if(i <= currentQAItemIndex){
-            let ansId = `Question${i}-Answer`;
-            let node = document.getElementById(ansId);
-            let nodePos = document.body.scrollTop + node.getBoundingClientRect().top;
-            
-            let viewHeight = window.innerHeight;
-            let viewWidth = window.innerWidth;
-            let topBorder, bottomBorder; 
 
-            if(viewHeight < 700){
-                
-                // mobile version
-                // 答案在畫面的上方 80%
-                topBorder = (scrollTop + 0);
-                bottomBorder = (scrollTop + viewHeight - viewHeight*0.2);
+      setTimeout(()=>{
+         // Scroll to 1st question
+        let target = document.getElementById("Question0");
+        let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
+    
+        scrollTo(document.body, targetPos, 120);
 
-            }else if(viewHeight >= 700){
-                // web version
-                // 答案全部都在目前畫面的中間 80%
-                topBorder = (scrollTop + 0) + viewHeight*0.1;
-                bottomBorder = (scrollTop + viewHeight - viewHeight*0.1);
-            }
-
-            // console.log(i+"*"+nodePos);
-            // console.log("viewHeight:"+viewHeight)
-            // console.log("top:"+topBorder)
-            // console.log("bottom:"+bottomBorder)
-            
-            if(nodePos > topBorder && nodePos < bottomBorder){//top border in
-                let objectHeight = 250;
-                if(nodePos + objectHeight > topBorder && nodePos + objectHeight < bottomBorder){//bottom border in
-                  //console.log("======"+i+"=======")
-                  showAnswerSection = i;
-               } 
-            }
-
-
-        }
-      });
-      //console.log("-> to be:"+showAnswerSection)
-
-      this.setState({
-        showAnswerSection: showAnswerSection
-      })
-
-      //console.log(scrollTop);
-      //console.log(this.state.showAnswerSection)
+      }, 50)
   }
   _recordUserChoice(issueName, order, choice) {
       //console.log("record user choice:"+issueName+"-"+choice)
-      
       let currentChoices = this.state.userChoices;
 
       // if(currentChoices[issueName]){
       //    return;//如果已經回答過，不再重複登記
       // }
-
 
       if(this.state.completed === false){// 開始作答了
         this.setState({
@@ -156,9 +95,9 @@ export default class PartiesMatchGame extends Component {
       });
 
       const {showRank} = this.state;
-      if(showRank){
+
+      if(showRank){//如果已經算答案，重新計算
          this._onShowMatchResult();
-        //如果已經算答案，重新計算
       }
   }
   _unlockNext(){
@@ -218,11 +157,9 @@ export default class PartiesMatchGame extends Component {
   }
   _replay(){
     //console.log("*replay")
-   
     this.setState({
         currentQAItemIndex: 0,
         userChoices: {},
-        showAnswerSection: -1,
         progress: 'config',
         completed: false
     })
@@ -255,25 +192,7 @@ export default class PartiesMatchGame extends Component {
       case 'config':
         return (
             <div className={styles.wrap}>
-                <section className={styles.configSection}>
-                    如果過去四年的立法院紀錄和政黨目前的承諾不同⋯⋯
-                    <ul className={styles.list}>
-                      <li className={styles.listItem}>
-                        <label className={styles.radioLabel}>
-                          <input type="radio" className={styles.radio} name="conflictResolver" value="recordFirst" ref="recordFirst" />
-                            我選擇以紀錄為準
-                        </label>
-                      </li>
-                      <li className={styles.listItem}>
-                        <label className={styles.radioLabel}>
-                          <input type="radio" className={styles.radio} name="conflictResolver" value="promiseFirst" />
-                            我選擇以承諾為準
-                        </label>
-                      </li> 
-                    </ul>
-                    <button onClick={this._onSetConfig.bind(this)}
-                            className={styles.button}>開始</button>
-                </section>
+                <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
             </div>
         )
         
@@ -282,22 +201,7 @@ export default class PartiesMatchGame extends Component {
       case 'game':
         return (
             <div className={styles.wrap}>
-                <div className={styles.billboardBlock}>
-                    <div className={`${styles.billboard} ${styles.left}`}>
-                        <PKerBillboard matchData={matchData}
-                                       userChoices={userChoices}
-                                       currentQAItemIndex={currentQAItemIndex}
-                                       showAnswerSection={showAnswerSection}
-                                       side={1}/>
-                        </div>
-                    <div className={`${styles.billboard} ${styles.right}`}>
-                        <PKerBillboard matchData={matchData}
-                                       userChoices={userChoices}
-                                       currentQAItemIndex={currentQAItemIndex}
-                                       showAnswerSection={showAnswerSection}
-                                       side={2}/>
-                    </div>
-                </div>
+                <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
                 {qaItems}
             </div>
         )
@@ -306,6 +210,7 @@ export default class PartiesMatchGame extends Component {
       case 'result':
         return (
             <div className={styles.wrap}>
+                <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
                 {qaItems}
                 <ResultSection currentRank={currentRank}
                                userChoices={userChoices}
@@ -314,8 +219,6 @@ export default class PartiesMatchGame extends Component {
         )
       break;
 
-
-
     }
     
     return (//default
@@ -323,6 +226,50 @@ export default class PartiesMatchGame extends Component {
     );
   }
 }
+
+class ConfigSection extends Component {
+    componentDidMount(){
+      // default set to 以過去紀錄為準
+      this.refs.recordFirst.getDOMNode().checked = true;
+    }
+    _onClick(){
+      const {onSetConfig} = this.props;
+      let recordFirst = this.refs.recordFirst.getDOMNode().checked;
+      onSetConfig(recordFirst);
+    }
+    render(){
+      const styles = require("./PartiesMatchGame.scss")
+      const {onSetConfig} = this.props;
+      return (
+        <div>
+          <section className={styles.configSection}>
+              如果過去四年的立法院紀錄和政黨目前的承諾不同⋯⋯
+              <ul className={styles.list}>
+                <li className={styles.listItem}>
+                  <label className={styles.radioLabel}>
+                    <input type="radio" className={styles.radio} name="conflictResolver" value="recordFirst" ref="recordFirst" />
+                      我選擇以紀錄為準
+                  </label>
+                </li>
+                <li className={styles.listItem}>
+                  <label className={styles.radioLabel}>
+                    <input type="radio" className={styles.radio} name="conflictResolver" value="promiseFirst" />
+                      我選擇以承諾為準
+                  </label>
+                </li> 
+              </ul>
+              
+          </section>
+
+          <div className={styles.actionButtons}>
+              <div onClick={this._onClick.bind(this)}
+                  className={styles.actionButton}>繼續</div>
+          </div>
+      </div>
+      )
+    }
+}
+
 @connect(
     state => ({
       parties: state.parties
@@ -353,33 +300,35 @@ class ResultSection extends Component {
     let resultSpectrum = array.map((i,index)=>{
         let hue = (resultPKers[i] || []).map((v,j)=>{
           return (
-             
-              <div className={`${styles.hueItem} ${styles.hexagon}`}
+              <div className={styles.hueItem}
                    key={`${i}-${j}`}>
-                  <div className={`${styles.innerHexagon}`}>
-                      <div className={`${styles.party} ${styles.partyFlag} ${styles.small} ${styles[v.id]}`}></div>
-                  </div>
-                  <div className={styles.name}>{eng2party_short(v.id)}</div>
+                  <PKer id={v.id} />
               </div>
-
-            
           )
         })
+        let hueClasses = classnames({
+          [styles.hue]: true,
+          [styles.empty] : !resultPKers[i]
+        })
         return (
-            <div className={styles.hue}>
-                <div>得分{i}</div>
+            <div className={hueClasses}>
+                <div className={styles.huePoint}>{i}</div>
                 {hue}
             </div>
         );
     })
   
-    
     return (
       <div id="rankResultSection"
            className={styles.rankResultSection}>
+          <div className={`${styles.positionTitle} ${styles.right}`}>與你立場最相同</div>
+          <div className={`${styles.positionTitle} ${styles.left}`}>與你立場最不同</div>
           <div className={styles.spectrum}>{resultSpectrum}</div>
-          <div className={styles.replay}
-               onClick={replay.bind(null)}>REPLAY</div>
+         
+          <div className={styles.actionButtons}>
+              <div onClick={replay.bind(null)}
+                   className={styles.actionButton}>再玩一次</div>
+          </div>
       </div>
     )
   }

@@ -225,7 +225,6 @@ $rollWebBreak: 800px;
 	}
 }
 
-
 .partyMenuItem {
 	display: inline-block;
 	margin: 12px 4px;
@@ -233,86 +232,4 @@ $rollWebBreak: 800px;
     text-align: center;
 }
 
-$hexagonSize: 60px;
-$innerHexagonSize: 50px;
-$hexagonColor1: cyan;
-$hexagonColor2: #348FB1;
-$hexagonColor3: #696E6E;//#145456;
-$hexagonColor4: #252727;//#111;
-$hexagonColor5: #4DC1C1;
-$hexagonColor6: #1B728B;
-
-.hexagon {
-  width: $hexagonSize;
-  height: $hexagonSize/2 + 5px;
-  background: linear-gradient(180deg,$hexagonColor1,$hexagonColor2);
-  position: relative;
-}
-.hexagon:before {
-  content: "";
-  position: absolute;
-  top: -$hexagonSize/4;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: $hexagonSize/2 solid transparent;
-  border-right: $hexagonSize/2 solid transparent;
-  border-bottom: $hexagonSize/4 solid $hexagonColor1;
-}
-.hexagon:after {
-  content: "";
-  position: absolute;
-  bottom: -$hexagonSize/4;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: $hexagonSize/2 solid transparent;
-  border-right: $hexagonSize/2 solid transparent;
-  border-top: $hexagonSize/4 solid $hexagonColor2;
-  filter: drop-shadow(0px 2px 2px #FFF);
-  z-index: -1;
-}
-
-.innerHexagon {
-  width: $innerHexagonSize;
-  height: $innerHexagonSize/2 + 5px;
-  background: linear-gradient(210deg,$hexagonColor3,$hexagonColor4);
-  position: relative;
-  top: 2px;
-  left: 5px;
-  padding-top: 8px;
-  font-size: 14px;
-  color: white;
-}
-.hexagon:hover .innerHexagon, .innerHexagon.active {
-  background: linear-gradient(210deg,$hexagonColor5,$hexagonColor6);	
-}
-.innerHexagon:before {
-  content: "";
-  position: absolute;
-  top: -$innerHexagonSize/4;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: $innerHexagonSize/2 solid transparent;
-  border-right: $innerHexagonSize/2 solid transparent;
-  border-bottom: $innerHexagonSize/4 solid $hexagonColor3;
-}
-.hexagon:hover .innerHexagon:before, .innerHexagon.active:before {
-   border-bottom: $innerHexagonSize/4 solid $hexagonColor5;
-}
-.innerHexagon:after {
-  content: "";
-  position: absolute;
-  bottom: -$innerHexagonSize/4;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: $innerHexagonSize/2 solid transparent;
-  border-right: $innerHexagonSize/2 solid transparent;
-  border-top: $innerHexagonSize/4+1 solid $hexagonColor4;
-}
-.hexagon:hover .innerHexagon:after, .innerHexagon.active:after {
-  border-top: $innerHexagonSize/4+1 solid $hexagonColor6;	
-}
 

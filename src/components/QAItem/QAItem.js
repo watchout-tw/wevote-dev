@@ -4,19 +4,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classnames from 'classnames';
 import eng2cht from '../../utils/eng2cht';
-
-
-function scrollTo(element, to, duration){ 
-    if (duration <= 0) return;
-    let difference = to - element.scrollTop;
-    let perTick = difference / duration * 10;
-    
-    setTimeout(()=>{
-        element.scrollTop = element.scrollTop + perTick;
-        if (element.scrollTop == to) return;
-        scrollTo(element, to, duration - 10);
-    }, 10);
-}
+import scrollTo from '../../utils/scrollTo';
 
 @connect(
     state => ({}),
@@ -44,23 +32,7 @@ export default class QAItem extends Component {
     })
  
     recordHandler(data.issueName, data.order, choice);
-    this._scrollToAnswer();
-  }
-  _onShowAnser(){
-    this.setState({
-      completed: "answer"
-    })
-    this._scrollToAnswer();
-  }
-  _scrollToAnswer(){
-    const {data} = this.props;
-    let ansId = `${data.id}-Answer`;
-    
-    // Scroll to answer section
-    let target = document.getElementById(ansId);
-    let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
-    
-    scrollTo(document.body, targetPos, 120);  
+    this._scrollToNextQuestion();
   }
   _scrollToNextQuestion(){
     const {data, currentQAItemIndex, maxIndex, unlockNext, onShowMatchResult} = this.props;
@@ -151,15 +123,7 @@ export default class QAItem extends Component {
                                 onAnswerHandler={this._onAnswer.bind(this)}/>
                 </div>
             </div>
-            
-            <div className={styles.resultContnet}>
-                <Answer completed={completed} 
-                        qid={data.id}
-                        issueName={data.issueName}
-                        userVote={userVote}
-                        matchData={matchData}/>
-                {toNextItem}
-            </div>
+           
         </div>
     );
   }
@@ -178,42 +142,5 @@ class OptionItem extends Component {
         <div className={`${optionClasses} ${styles[value]}`}
              onClick={onAnswerHandler.bind(null, value)}>{title}</div>
     );
-  }
-}
-class Answer extends Component {
-  
-  render() {
-    const styles = require("./QAItem.scss")
-    const {completed, qid, issueName, userVote, matchData} = this.props;
-    let answerClasses = classnames({
-        [styles.Answer]: true,
-        [styles.isCompleted]: completed === "answer"
-    });
-
-    let samePositionTitle = (userVote === "none") ? "跟你一樣沒意見的是" : `跟你一樣${eng2cht(userVote)}的是`;
-    let samePositionList = [];
-    Object.keys(matchData).map((partyId, i)=>{
-        if(matchData[partyId].positions[issueName] === userVote){
-            samePositionList.push(matchData[partyId]);
-        }
-    })
-    
-    let samePositionItems = samePositionList.map((value, i)=>{
-        return (
-            <div className={styles.samePositionItem}
-                 key={`${qid}-${i}`}>
-                   {value.name}
-                   {(i < samePositionList.length-1) ? "、":""}
-            </div>
-        )
-    })
-
-    return (
-        <div className={answerClasses}
-             id={`${qid}-Answer`}>
-            <div className={styles.answerTitle}>{samePositionTitle}</div>
-            <div>{samePositionItems}</div>
-        </div>
-    )
   }
 }

@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import classnames from 'classnames';
 import prefixr from 'react-prefixr';
 import eng2party_short from '../../utils/eng2party_short';
+import PKer from '../../components/PKer/PKer';
 @connect(
     state => ({
                 partyBlock: state.partyBlock   
@@ -139,21 +140,12 @@ class PartyMenu extends Component {
           })
     let currentSide = (side ===1) ? side1parties : side2parties;
     let partyMenuItems = currentSide.map((value, index)=>{
-      let outerClasses = classnames({
-        [styles.hexagon]: true,
-        [styles.partyMenuItem]: true
-      })
-      let innerClasses = classnames({
-        [styles.innerHexagon]: true,
-        [styles.active]: focus === value.id
-      })
+      let active = (focus === value.id);
       return (
-        <div className={outerClasses}
+        <div className={styles.partyMenuItem}
              key={`side-${side}-${index}`}
              onClick={onChangeFocus.bind(null,value.id)}>
-             <div className={innerClasses}>
-                {eng2party_short(value.id)}
-             </div>
+             <PKer id={value.id} active={active} />
         </div>
       ) 
     })

@@ -89,48 +89,6 @@
 .optionItem.isChoosed {
 	transition: background 1s;
 }
-/* ----------------- */
-.Answer {
-	height: 0px;
-	overflow: hidden;
-	position: relative;
-}
-.Answer.isCompleted {
-	height: auto;
-	min-height: 300px;
-    margin: 50px 0 25px 0;
-    padding: 120px 10px 0 10px;
-    border: 1px dashed gray;
-    background: white;
-}
-.samePositionItem {
-	margin: 2px;
-	display: inline-block;
-}
-.answerTitle {
-	font-size: 20px;
-	display: inline-block;
-	margin-bottom: 5px;
-    border-bottom: 1px solid;
-    padding: 2px 4px;
-}
 
-.button {
-	cursor: pointer;
-    display: inline-block;
-    margin: 0 auto;
-    padding: 6px 20px;
-    background: rgb(53,55,54);
-    color: white;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 2px 0 rgba(250,250,250,0.8), -2px -2px 2px 0 rgba(250,250,250,0.8);
-    
-}
-.button:hover {
-	box-shadow: 2px 2px 12px 0 rgba(250,250,250,0.8),-2px -2px 12px 0 rgba(250,250,250,0.8);
-}
-.resultContnet {
-	text-align: center;
-}
 
 

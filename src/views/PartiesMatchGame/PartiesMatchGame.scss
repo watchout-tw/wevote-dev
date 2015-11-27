@@ -1,4 +1,5 @@
 @import '../../common.scss';
+@import '../../styles/actionButton.scss';
 .wrap {
 	position: relative;
 	padding-bottom: 150px;
@@ -17,12 +18,12 @@
 /* CONFIG */
 
 .configSection {
-	max-width: 400px;
-	margin: 80px auto;
+	max-width: 360px;
+	margin: 40px auto;
 	line-height: 2;
   padding: 10px;
   background: white;
-  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.12);
+  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.12);
 }
 /* should be refine later */
 
@@ -133,6 +134,23 @@ $primaryColor: #16a085;
 
 .rankResultSection {
 	text-align: center;
+  margin-top: 180px;
+  position: relative;
+}
+.positionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  position: absolute;
+  top: -100px;
+  max-width: 40%;
+  background: rgba(250,250,250,0.82);
+  padding: 2px 10px;
+}
+.positionTitle.left {
+  left: 30px;
+}
+.positionTitle.right {
+  right: 30px;
 }
 .rankResultWrap {
 	text-align: center;
@@ -149,100 +167,36 @@ $primaryColor: #16a085;
   flex: 1;
   position: relative;
 }
+.hue.empty {
+  display: none;
+}
+@media all and (min-width: 800px){
+  .hue.empty {
+    display: block;
+  }
+}
 .hue:after {
-    content: '';
-    width: 2px;
-    height: 10px;
-    background: #FFFFFF;
-    position: absolute;
-    top: -10px;
-    left: 0;
+  content: '';
+  width: 2px;
+  height: 10px;
+  background: #FFFFFF;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+.hue:first-child{
+  background: transparent;
+}
+.huePoint {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  font-size: 26px;
+  color: white;
+  font-weight: 600;
 }
 .hueItem {
-  margin: 35px auto;
+  display: inline-block;
+  margin: 16px 2px;
   cursor: pointer;
-}
-
-$hexagonSize: 60px;
-$innerHexagonSize: 50px;
-$hexagonColor1: cyan;
-$hexagonColor2: #348FB1;
-$hexagonColor3: #696E6E;//#145456;
-$hexagonColor4: #252727;//#111;
-
-.hexagon {
-  width: $hexagonSize;
-  height: $hexagonSize/2 + 5px;
-  background: linear-gradient(180deg,$hexagonColor1,$hexagonColor2);
-  position: relative;
-}
-.hexagon:before {
-  content: "";
-  position: absolute;
-  top: -$hexagonSize/4;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: $hexagonSize/2 solid transparent;
-  border-right: $hexagonSize/2 solid transparent;
-  border-bottom: $hexagonSize/4 solid $hexagonColor1;
-}
-.hexagon:after {
-  content: "";
-  position: absolute;
-  bottom: -$hexagonSize/4;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: $hexagonSize/2 solid transparent;
-  border-right: $hexagonSize/2 solid transparent;
-  border-top: $hexagonSize/4 solid $hexagonColor2;
-  filter: drop-shadow(0px 2px 2px #FFF);
-
-}
-
-.innerHexagon {
-  width: $innerHexagonSize;
-  height: $innerHexagonSize/2 + 5px;
-  background: linear-gradient(210deg,$hexagonColor3,$hexagonColor4);
-  position: relative;
-  top: 2px;
-  left: 6px; 
-}
-
-.innerHexagon:before {
-  content: "";
-  position: absolute;
-  top: -$innerHexagonSize/4;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: $innerHexagonSize/2 solid transparent;
-  border-right: $innerHexagonSize/2 solid transparent;
-  border-bottom: $innerHexagonSize/4 solid $hexagonColor3;
-}
-.party {
-  position: absolute;
-  top: -6px;
-  left: 14px;
-}
-.name, .name:after {
-  z-index: 12;
-  font-size: 14px;
-  color: white;
-  position: absolute;
-  top: 20px;
-  width: 100%;
-}
-.innerHexagon:after {
-  content: "";
-  position: absolute;
-  bottom: -$innerHexagonSize/4;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: $innerHexagonSize/2 solid transparent;
-  border-right: $innerHexagonSize/2 solid transparent;
-  border-top: $innerHexagonSize/4+1 solid $hexagonColor4;
-  z-index: 11;//?
 }

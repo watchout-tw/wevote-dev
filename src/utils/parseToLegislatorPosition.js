@@ -30,6 +30,8 @@ export default function parseToLegislatorPosition(records, issues, legislators){
   	return LegislatorPosition;
 
 }
+/*
+// Needs to improve
 function saveToJson(LegislatorPosition){
     
     import fs from "fs";
@@ -64,6 +66,7 @@ function saveToJson(LegislatorPosition){
     });
 
 }
+*/
 function parseToLegislatorPosition_Proceed(records, currentIssue, issues, legislators, LegislatorPosition){
     let Legislators = {};
 

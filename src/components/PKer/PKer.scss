@@ -1,164 +1,13 @@
 @import '../../common.scss';
-.wrap {
-	display: inline-block;
-	text-align: center;
-	width: 32px;
-	cursor: pointer;
-	position: relative;
-	padding-top: 24px;/* space for animation */
-	margin: 4px 2px;
-}
-@media all and (min-width: 450px){
-	.wrap {
-		min-width: 48px;
-		width: auto;
-	}
-}
-@keyframes soaringMobile {
-    from { top: 30px }
-    to { top: -20px;
-    	 z-index: 100;}
-}
-@keyframes soaringWeb {
-    from { top: 30px }
-    to { top: -30px;
-    	 z-index: 100;}
-}
-@keyframes fading {
-    from { top: -30px; opacity: 1; z-index: 100; }
-    to { top: -30px; opacity: 0; z-index: 0;}
-}
-.pointDiff {
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	top: 10px;
-	color: white;
-}
-.pointDiff.animate {
-	top: 35px;
-	animation: soaringMobile 1s 1, fading 1s linear 1s 1;
-	animation-fill-mode: forwards; 
-	opacity: 1;
-}
-.styles.hide {
-	top: -30px;
-	opacity: 0;
-}
-@media all and (min-width: 450px){
-	.pointDiff {
-		top: auto;
-	}
-	.pointDiff.animate {
-		top: auto;
-		animation: soaringWeb 1s 1, fading 1s linear 1s 1;
-		animion-fill-mode: forwards; 
-	}
-	.styles.hide {
-		top: -30px;
-	}
-}
-.container {
-	padding: 2px;
-}
-@media all and (min-width: 450px){
-	.container {
-		background: none;
-	}
-}
-.cardWrap {
-	height: 24px;
-	text-align: center;
-	position: relative;
-}
-.showFront .cardWrap {
-	transition: 0.5s;
-}
-.showBack .cardWrap {
-	transform-style: preserve-3d;
-	transform: rotateY(180deg);
-	transition: 0.5s;
-}
-.posCard {
-	backface-visibility: hidden;
-	position: absolute;
-	width: 100%;
-    top: -44px;
-    height: 65px;
-    padding-top: 2px;
 
-    font-size: 14px;
-    font-weight: 600;
-}
-.posCard.front {
-    padding-top: 24px;
-}
-@media all and (min-width: 450px){
-	.posCard {
-		top: 0;
-		height: auto;
-	}
-	.posCard.front {
-		height: auto;
-		padding: 0;
-	}
-}
-.front {
-	z-index: 10;
-}
-.showBack .cardWrap .front {
-	z-index: 0;
-}
-.back {
- 	transform: rotateY(180deg);
-}
-.posCard.ans.aye {
-	background: $ayeColor;
-}
-.posCard.ans.nay {
-	background: $nayColor;
-}
-.posCard.ans.unknown {
-	background: $unknownColor;
-}
-.posCard.ans.none {
-	background: $noneColor;
-}
-.avatarImg {
-	width: 30px;
-	height: 30px;
-	margin: 0 auto;
-}
-@media all and (min-width: 400px){
-	.avatarImg, .avatarImg:after {
-		width: 50px;
-		height: 50px;
-	}
-}
-.name {
-	display: none;
-}
-@media all and (min-width: 450px){
-	.name {
-		display: block;
-		text-align: center;
-	}
-}
-.points {
-	font-weight: 800;
-    width: 20px;
-    position: absolute;
-    bottom: -18px;
-    left: calc(50% - 10px);
-    z-index: 1;
-}
-
-$hexagonSize: 100px;
-$innerHexagonSize: 84px;
+$hexagonSize: 60px;
+$innerHexagonSize: 50px;
 $hexagonColor1: cyan;
 $hexagonColor2: #348FB1;
 $hexagonColor3: #696E6E;//#145456;
 $hexagonColor4: #252727;//#111;
+$hexagonColor5: #4DC1C1;
+$hexagonColor6: #1B728B;
 
 .hexagon {
   width: $hexagonSize;
@@ -188,7 +37,6 @@ $hexagonColor4: #252727;//#111;
   border-right: $hexagonSize/2 solid transparent;
   border-top: $hexagonSize/4 solid $hexagonColor2;
   filter: drop-shadow(0px 2px 2px #FFF);
-  z-index: -1;
 }
 
 .innerHexagon {
@@ -197,12 +45,15 @@ $hexagonColor4: #252727;//#111;
   background: linear-gradient(210deg,$hexagonColor3,$hexagonColor4);
   position: relative;
   top: 2px;
-  left: 6px;
+  left: 5px;
+  padding-top: 8px;
   font-size: 14px;
   color: white;
 }
-
-.innerHexagon:after {
+.hexagon:hover .innerHexagon, .innerHexagon.active {
+  background: linear-gradient(210deg,$hexagonColor5,$hexagonColor6);  
+}
+.innerHexagon:before {
   content: "";
   position: absolute;
   top: -$innerHexagonSize/4;
@@ -213,8 +64,10 @@ $hexagonColor4: #252727;//#111;
   border-right: $innerHexagonSize/2 solid transparent;
   border-bottom: $innerHexagonSize/4 solid $hexagonColor3;
 }
-
-.innerHexagon:before {
+.hexagon:hover .innerHexagon:before, .innerHexagon.active:before {
+   border-bottom: $innerHexagonSize/4 solid $hexagonColor5;
+}
+.innerHexagon:after {
   content: "";
   position: absolute;
   bottom: -$innerHexagonSize/4;
@@ -224,5 +77,22 @@ $hexagonColor4: #252727;//#111;
   border-left: $innerHexagonSize/2 solid transparent;
   border-right: $innerHexagonSize/2 solid transparent;
   border-top: $innerHexagonSize/4+1 solid $hexagonColor4;
+  z-index: 1;
+}
+.hexagon:hover .innerHexagon:after, .innerHexagon.active:after {
+  border-top: $innerHexagonSize/4+1 solid $hexagonColor6; 
+}
+.party {
+  position: absolute;
+  top: -2px;
+  left: 18px;
+}
+.name, .name:after {
+  z-index: 12;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 18px;
+  width: 100%;
 }
 

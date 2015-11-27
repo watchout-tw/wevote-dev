@@ -1,0 +1,26 @@
+@import '../common.scss';
+.actionButtons {
+  font-size: 24px;
+  position: relative;
+  text-align: center;
+  max-width: 420px;
+  margin: 20px auto 30px auto;
+}
+.actionButton {
+  display: inline;
+  font-size: 24px;
+  position: relative;
+  margin: 0 4px;
+  padding: 10px 20px;
+  background: $awesomeColor;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.25);
+  color: $white;
+  border-radius: 0;
+  cursor: pointer;
+}
+.actionButton:focus {
+  outline: none;
+}
+.actionButton:hover {
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.5);
+}
