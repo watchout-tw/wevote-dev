@@ -281,21 +281,23 @@ export default class PartiesMatchGame extends Component {
       case 'game':
         return (
             <div className={styles.wrap}>
-                {qaItems}
-                <div className={`${styles.billboard} ${styles.left}`}>
-                    <PKerBillboard matchData={matchData}
-                                   userChoices={userChoices}
-                                   currentQAItemIndex={currentQAItemIndex}
-                                   showAnswerSection={showAnswerSection}
-                                   side={1}/>
+                <div className={styles.billboardBlock}>
+                    <div className={`${styles.billboard} ${styles.left}`}>
+                        <PKerBillboard matchData={matchData}
+                                       userChoices={userChoices}
+                                       currentQAItemIndex={currentQAItemIndex}
+                                       showAnswerSection={showAnswerSection}
+                                       side={1}/>
+                        </div>
+                    <div className={`${styles.billboard} ${styles.right}`}>
+                        <PKerBillboard matchData={matchData}
+                                       userChoices={userChoices}
+                                       currentQAItemIndex={currentQAItemIndex}
+                                       showAnswerSection={showAnswerSection}
+                                       side={2}/>
                     </div>
-                <div className={`${styles.billboard} ${styles.right}`}>
-                    <PKerBillboard matchData={matchData}
-                                   userChoices={userChoices}
-                                   currentQAItemIndex={currentQAItemIndex}
-                                   showAnswerSection={showAnswerSection}
-                                   side={2}/>
                 </div>
+                {qaItems}
             </div>
         )
       break;

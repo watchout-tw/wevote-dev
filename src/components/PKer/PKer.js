@@ -93,18 +93,20 @@ export default class PKer extends Component {
         <div className={`${styles.wrap} ${showBackClass}`}>
             <div className={` ${styles.pointDiff} ${animatePointDiffClass} `}>{diffText}</div>
             <div className={`${styles.container} ${styles.hexagon}`}>
-                <div className={`${styles.cardWrap}`}>
-                    <div className={`${styles.posCard} ${styles.front}`}>
-                        <div className={styles.name}>{eng2party_short(matchData.id)}</div>
+                <div className={styles.innerHexagon}>
+                    <div className={`${styles.cardWrap}`}>
+                        <div className={`${styles.posCard} ${styles.front}`}>
+                            <div className={styles.name}>{eng2party_short(matchData.id)}</div>
+                        </div>
+                        <div className={`${styles.posCard} ${styles.back} ${styles.ans} ${styles[currentPos]}`}>{handleCardPos(currentPos)}</div>
                     </div>
-                    <div className={`${styles.posCard} ${styles.back} ${styles.ans} ${styles[currentPos]}`}>{handleCardPos(currentPos)}</div>
-                </div>
-                <div className={styles.avatarImg}>
-                    <div className={`${styles.partyFlag} ${styles.small} ${styles[matchData.id]}`}></div>
-                </div>
-                
-                <div className={styles.points}>
-                    {points}  
+                    <div className={styles.avatarImg}>
+                        <div className={`${styles.partyFlag} ${styles.small} ${styles[matchData.id]}`}></div>
+                    </div>
+                    
+                    <div className={styles.points}>
+                        {points}  
+                    </div>
                 </div>
             </div>
         </div>

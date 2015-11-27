@@ -20,6 +20,11 @@ const initialState = {
         "id"   : "PFP",
         "list" : ["李鴻鈞","陳怡潔","陳秀霞","黃越宏","楊紫宗","何偉真","葉青","胡祖慶","鄭美蘭","任睦杉","劉冠霆","董貞吟","藍姿寬","張克士","黎淑慧","李漢強"]
     },
+    "NP" : {
+        "title" : "新黨",
+        "id"    : "NP",
+        "list"  : ["葉毓蘭","邱毅","唐慧琳","蘇恆","趙家蓉","王炳忠","林明正","侯漢廷","楊世光"]
+    },
     "NSU" : {
        "title": "無黨團結聯盟",
        "id"   : "NSU",
@@ -54,7 +59,12 @@ const initialState = {
       "title": "信心希望聯盟",
        "id"   : "FHL",
        "list" : [] 
-    }    
+    },
+    "PPU" : {
+      "title": "和平鴿聯盟黨",
+      "id": "PPU",
+      "list": ["吳宛甄","鄭文松","莊秉鴻"]
+    }  
 };
 
 export default function reducer(state = initialState, action = {}) {

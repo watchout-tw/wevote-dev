@@ -21,6 +21,8 @@
 	margin: 80px auto;
 	line-height: 2;
   padding: 10px;
+  background: white;
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.12);
 }
 /* should be refine later */
 
@@ -97,16 +99,32 @@ $primaryColor: #16a085;
 }
 /* -----------------
 /* GAME */
+/* billboard only in web version */
+
+.billboardBlock {
+    position: fixed;
+    bottom: 200px;
+    width: 1000px;
+    left: calc(50% - 500px);
+    z-index: 99;
+}
 .billboard {
-  position: fixed;
-  width: 400px;
-  top: 100px;
+   position: absolute;
+  z-index: 10;
+  display: inline-block;
 }
 .billboard.left {
+  width: 340px;
   left: 10px;
 }
 .billboard.right {
   right: 10px;
+  width: 340px;
+  float: left;
+  margin: 0;
+}
+.billboard.right .partyMenuItem:nth-child(5) {
+  margin-left: 70px;
 }
 
 

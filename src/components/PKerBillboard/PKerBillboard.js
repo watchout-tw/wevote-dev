@@ -24,6 +24,7 @@ export default class PKerBillboard extends Component {
       userChoicesArray += `${userChoices[v]} `
     })
 
+    // to be refine <==> Parties
     let side1parties = [], side2parties = [];
     Object.keys(matchData).map((partyId, index)=>{
         if(parties[partyId].side === 1){

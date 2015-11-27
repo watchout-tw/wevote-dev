@@ -3,7 +3,7 @@ $rollWebBreak: 800px;
 .wrap {
 	position: relative;
 	background-size: 100%;
-	min-height: 100vh;
+	min-height: 150vh;
 	background-image: url('../images/bg.png'), url('../images/grass.png');
 	background-repeat: no-repeat, repeat;
 }
@@ -13,30 +13,36 @@ $rollWebBreak: 800px;
 .partyRollItem {
 	display: inline-block;
 }
+.partyWrap {
+	display: inline-block;
+	margin: 50px auto;
+}
 .partyRollTop {
 	background-image: url('./images/top.png');
 	background-size: 100%;
 
-	width: calc(100% - 50px);
-    height: calc(0.2 * (100vw - 50px));
+	width: 100vw;
+    height: calc(0.2 * 100vw);
     position: absolute;
-    top: -10px;
+    top: 0px;
 }
 .partyRoll {
-	display: inline-block;
 	vertical-align: top;
 	
     background-image: url('./images/main.png');
     background-size: 100%;
-    width: calc(100vw - 50px);
-    height: calc(100vw - 50px);
-    padding: 18vw 10vw;
+    width: 100vw;
+    height: 100vw;
+    padding: 10vw 14vw;
 
     border-bottom: 5px solid #423902;
     overflow: scroll;
 }
 
 @media all and (min-width: $rollWebBreak){
+	.partyWrap {
+		display: block;
+	}
 	.partyFlow {
 		text-align: center;
 	}
@@ -56,8 +62,9 @@ $rollWebBreak: 800px;
 		width: 700px;
 		height: 680px;
 	
-	    padding: 160px 120px 10px 120px;
+	    padding: 140px 120px 10px 120px;
 	    overflow: hidden;
+
 	}
 }
 
@@ -69,12 +76,11 @@ $rollWebBreak: 800px;
 	min-height: 280px;
     overflow: hidden;
     padding-top: 10px;
+    font-size: 18px;
+    line-height: 1.4;
 }
 .partyTitle {
 	font-size: 20px;
-}
-.columnBlock {
-	font-size: 16px;
 }
 @media all and (min-width: $rollWebBreak){
 	.partyTitle {
@@ -121,5 +127,192 @@ $rollWebBreak: 800px;
 }
 .goTable:hover {
 	color: white;
+}
+/* -----
+ 左右方政黨選單
+ */
+.toggleMenu {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 1;
+
+}
+.partyMenuBlock {
+	max-height: 0;
+	overflow: hidden; 	
+}
+.partyMenuBlock.show {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+    
+    height: 100vh;
+    max-height: 2000px;
+    top: 0;
+    position: fixed;
+    padding-top: 120px;
+    z-index: 200;
+    background: rgba(0,0,0,0.82);
+}
+.closeMenu {
+	position: absolute;
+    right: 30px;
+    top: 20px;
+    z-index: 1;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    display: none;
+}
+.partyMenuBlock.show .closeMenu {
+	display: block;
+}
+
+@media all and (min-width: $rollWebBreak){
+	.toggleMenu { display: none; }
+	.partyMenuBlock {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+
+		max-height: 2000px;
+		overflow: visible;
+		width: 600px;
+		height: 100px;
+    	padding-top: 20px;
+    	background: none;
+    	z-index: 0;
+	}
+}
+.billboard {
+	text-align: center;
+	z-index: 10;
+	margin: 0 auto;
+}
+.billboard.left {
+	width: 240px;
+}
+.billboard.right {
+	width: 280px;
+	margin-top: 40px;
+}
+.billboard.right .partyMenuItem:nth-child(5) {
+	margin-left: 11px;
+}
+.billboard.right .partyMenuItem:nth-child(8) {
+	margin-left: 80px;
+}
+@media all and (min-width: $rollWebBreak){
+	.billboard {
+		position: absolute;
+		margin: 0;
+	}
+	.billboard.left {
+		left: 10px;
+	}
+	.billboard.right {
+		right: 10px;
+		width: 340px;
+		float: left;
+		margin: 0;
+	}
+	.billboard.right .partyMenuItem:nth-child(5) {
+		margin-left: 70px;
+	}
+	.billboard.right .partyMenuItem:nth-child(8) {
+		margin-left: 0;
+	}
+}
+
+
+.partyMenuItem {
+	display: inline-block;
+	margin: 12px 4px;
+	cursor: pointer;
+    text-align: center;
+}
+
+$hexagonSize: 60px;
+$innerHexagonSize: 50px;
+$hexagonColor1: cyan;
+$hexagonColor2: #348FB1;
+$hexagonColor3: #696E6E;//#145456;
+$hexagonColor4: #252727;//#111;
+$hexagonColor5: #4DC1C1;
+$hexagonColor6: #1B728B;
+
+.hexagon {
+  width: $hexagonSize;
+  height: $hexagonSize/2 + 5px;
+  background: linear-gradient(180deg,$hexagonColor1,$hexagonColor2);
+  position: relative;
+}
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -$hexagonSize/4;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: $hexagonSize/2 solid transparent;
+  border-right: $hexagonSize/2 solid transparent;
+  border-bottom: $hexagonSize/4 solid $hexagonColor1;
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -$hexagonSize/4;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: $hexagonSize/2 solid transparent;
+  border-right: $hexagonSize/2 solid transparent;
+  border-top: $hexagonSize/4 solid $hexagonColor2;
+  filter: drop-shadow(0px 2px 2px #FFF);
+  z-index: -1;
+}
+
+.innerHexagon {
+  width: $innerHexagonSize;
+  height: $innerHexagonSize/2 + 5px;
+  background: linear-gradient(210deg,$hexagonColor3,$hexagonColor4);
+  position: relative;
+  top: 2px;
+  left: 5px;
+  padding-top: 8px;
+  font-size: 14px;
+  color: white;
+}
+.hexagon:hover .innerHexagon, .innerHexagon.active {
+  background: linear-gradient(210deg,$hexagonColor5,$hexagonColor6);	
+}
+.innerHexagon:before {
+  content: "";
+  position: absolute;
+  top: -$innerHexagonSize/4;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: $innerHexagonSize/2 solid transparent;
+  border-right: $innerHexagonSize/2 solid transparent;
+  border-bottom: $innerHexagonSize/4 solid $hexagonColor3;
+}
+.hexagon:hover .innerHexagon:before, .innerHexagon.active:before {
+   border-bottom: $innerHexagonSize/4 solid $hexagonColor5;
+}
+.innerHexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -$innerHexagonSize/4;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: $innerHexagonSize/2 solid transparent;
+  border-right: $innerHexagonSize/2 solid transparent;
+  border-top: $innerHexagonSize/4+1 solid $hexagonColor4;
+}
+.hexagon:hover .innerHexagon:after, .innerHexagon.active:after {
+  border-top: $innerHexagonSize/4+1 solid $hexagonColor6;	
 }
 

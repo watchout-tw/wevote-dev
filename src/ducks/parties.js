@@ -104,6 +104,13 @@ const initialState = {
         "hasBeenCount": 0,
         "side" : 1
     },
+    "PPU": {
+        "id": "PPU",
+        "name": "和平鴿聯盟黨",
+        "seats": 0,
+        "hasBeenCount": 0,
+        "side" : 2 
+    },
     "NONE": {
         "id": "NONE",
         "name": "無黨籍",

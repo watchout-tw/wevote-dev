@@ -123,9 +123,11 @@
     background: rgb(53,55,54);
     color: white;
     margin-bottom: 20px;
+    box-shadow: 2px 2px 2px 0 rgba(250,250,250,0.8), -2px -2px 2px 0 rgba(250,250,250,0.8);
+    
 }
 .button:hover {
-	box-shadow: 5px 5px rgba(0,0,0,0.12);
+	box-shadow: 2px 2px 12px 0 rgba(250,250,250,0.8),-2px -2px 12px 0 rgba(250,250,250,0.8);
 }
 .resultContnet {
 	text-align: center;
