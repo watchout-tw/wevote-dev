@@ -338,8 +338,13 @@ class ResultSection extends Component {
         return (
             <div className={hueClasses}>
                 {label}
+                
+                <div className={styles.huePoint}>
+                  <span className={styles.huePointLable}>總分</span>
+                  {i}
+                </div>
+
                 <div className={styles.hueItemBlock}>{hue}</div>
-                <div className={styles.huePoint}>{i}</div>
             </div>
         );
     })
@@ -357,12 +362,13 @@ class ResultSection extends Component {
            className={styles.rankResultSection}>
           
           <div className={styles.spectrum}>
+              <div className={styles.spectrumPointLabel}>總分</div>
               {resultSpectrum}
           </div>
           
           <div className={styles.noDataBlock}>
               <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
-              <div>{noDataItems}</div>
+              <div className={styles.noDataItems}>{noDataItems}</div>
               <div className={styles.noDataMeta}>註：無資料者為－第八屆無立委席次，並且截至 2015/12/04 前尚未回覆立場表態資料。</div>
           </div>
 

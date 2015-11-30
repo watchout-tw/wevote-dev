@@ -28,9 +28,13 @@ td.head {
 	padding: 0 4px 10px 4px;
 }
 td.partyName {
-	padding-left:20px;
-	width: 200px;
+	width: 220px;
 	padding-top: 10px;
+}
+@media all and (min-width: $tableWebBreak){
+	td.partyName {
+		padding-left:20px;
+	}
 }
 td.bill {
 	padding-left:20px;
