@@ -111,6 +111,27 @@ const initialState = {
         "hasBeenCount": 0,
         "side" : 2 
     },
+    "DASG": {
+        "id": "DASG",
+        "name": "大愛憲改聯盟",
+        "seats": 0,
+        "hasBeenCount": 0,
+        "side" : 2 
+    },
+    "CHTY": {
+        "id": "CHTY",
+        "name": "中華統一促進黨",
+        "seats": 0,
+        "hasBeenCount": 0,
+        "side" : 2 
+    },
+    "NHSA": {
+        "id": "NHSA",
+        "name": "健保免費連線",
+        "seats": 0,
+        "hasBeenCount": 0,
+        "side" : 1 
+    },
     "NONE": {
         "id": "NONE",
         "name": "無黨籍",

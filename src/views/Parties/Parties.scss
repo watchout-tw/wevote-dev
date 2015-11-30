@@ -188,7 +188,7 @@ $rollWebBreak: 800px;
 
 		max-height: 2000px;
 		overflow: visible;
-		width: 600px;
+		width: 800px;
 		height: 100px;
     	padding-top: 20px;
     	background: none;
@@ -220,15 +220,20 @@ $rollWebBreak: 800px;
 	}
 	.billboard.left {
 		left: 10px;
+		width: 330px;
+		text-align: right;
+	}
+	.billboard.left .partyMenuItem:nth-child(8) {
+		margin-right: 37px;
 	}
 	.billboard.right {
 		right: 10px;
-		width: 340px;
+		width: 420px;
 		float: left;
 		margin: 0;
 	}
-	.billboard.right .partyMenuItem:nth-child(5) {
-		margin-left: 70px;
+	.billboard.right .partyMenuItem:nth-child(6) {
+		margin-left: 60px;
 	}
 	.billboard.right .partyMenuItem:nth-child(8) {
 		margin-left: 0;

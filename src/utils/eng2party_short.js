@@ -27,13 +27,22 @@ export default function eng2party_short(input){
         return '樹黨';
       case 'TIP':
         return '台獨黨';
+      case 'PPU':
+        return '和平鴿';
       case 'FHL': 
-        return '信希盟';
+        return '信望盟';
       case 'MPR':
         return '機車黨';
       case 'FTP':
         return '自台黨';
 
+      case 'DASG':
+        return '大愛憲改';
+      case 'CHTY':
+        return '中華統一';
+      case 'NHSA':
+        return '健保免費';
+  
       case 'NONE':
         return '無黨籍'
       

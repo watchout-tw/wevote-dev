@@ -46,6 +46,15 @@ export default function eng2cht(input){
         return '中華民國機車黨';
       case 'FTP':
         return '自由台灣黨';
+      case 'PPU':
+        return '和平鴿聯盟黨';
+
+      case 'DASG':
+        return '大愛憲改聯盟';
+      case 'CHTY':
+        return '中華統一促進黨';
+      case 'NHSA':
+        return '健保免費連線';
 
       case 'NONE':
         return '無黨籍';
