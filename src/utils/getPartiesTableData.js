@@ -1,7 +1,7 @@
 export default function getMatchgamePartyData(partyPositions, partyPromises){
     let TableData = {};
     let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower"];//Hmmm....
-    console.log(partyPromises)
+    
     Object.keys(partyPromises).map((partyId, index)=>{
         
         //TableData

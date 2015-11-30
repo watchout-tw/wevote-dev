@@ -278,17 +278,35 @@ class ConfigSection extends Component {
     }),
     dispatch => bindActionCreators({}, dispatch))
 class ResultSection extends Component {
-
+  constructor(props){super(props)
+    this.state = {
+      "focus" : ""
+    }
+  }
+  _setFocus(value, event){
+    this.setState({
+      "focus" : value
+    })
+  }
   render(){
     const styles = require("./PartiesMatchGame.scss")
     const {parties, partyPromises, currentRank, userChoices, replay} = this.props;
+    const {focus} = this.state;
 
     let resultPKers = {};
     let noData = [];
 
     //高分 -> 低分 sort
     currentRank.sort((a,b)=>{
-      return b.points - a.points;
+      if(b.points !== a.points){
+        return b.points - a.points;
+      }else{
+        // sort by 一樣立場的次數
+
+        // 然後才是名稱
+        if(a.id > b.id) return -1;
+        else return 1;
+      }
     })
     
     //依照分數分組
@@ -313,10 +331,37 @@ class ResultSection extends Component {
     }
     
     let resultSpectrum = array.map((i,index)=>{
+
         let hue = (resultPKers[i] || []).map((v,j)=>{
+
+
+          let detail;
+          if(focus === v.id){
+            let rows = Object.keys(userChoices).map((issueName, i)=>{
+                let userPos = userChoices[issueName];
+                let issueCht = eng2cht(issueName);
+                let partyPos = v[issueName] || "none";
+                return (
+                  <tr><td><div className={`${styles.posIcon} ${styles[userPos]} `}></div></td>
+                      <td>{issueCht}</td>
+                      <td><div className={`${styles.posIcon} ${styles[partyPos]} `}></div></td></tr>
+                  );
+            })
+            detail = (
+              <table className={styles.hoverDetailTable}>
+                <thead><tr><td>你</td>
+                           <td>議題</td>
+                           <td>黨</td></tr></thead>
+                {rows}
+              </table>
+            )
+          }
           return (
               <div className={styles.hueItem}
-                   key={`hue-${i}-${j}`}>
+                   key={`hue-${i}-${j}`}
+                   onMouseEnter={this._setFocus.bind(this, v.id)}
+                   onMouseLeave={this._setFocus.bind(this, "")}>
+                  {detail}
                   <PKer id={v.id} />
               </div>
           )
@@ -351,9 +396,12 @@ class ResultSection extends Component {
 
     //Layout: 沒資料的結果
     let noDataItems = noData.map((partyId, i)=>{
+
       return (
         <div className={styles.noDataItem}
-             key={`no-data-${i}`}><PKer id={partyId} /></div>
+             key={`no-data-${i}`}>
+             <PKer id={partyId} />
+        </div>
       )
     })
   
@@ -372,6 +420,7 @@ class ResultSection extends Component {
               <div className={styles.noDataMeta}>註：無資料者為－第八屆無立委席次，並且截至 2015/12/04 前尚未回覆立場表態資料。</div>
           </div>
 
+          <div className={styles.introToPartyBills}>找到和你屬性最相近的政黨了嗎？再來看看各政黨承諾在當選後優先推動法案：</div>
           <PartyBills />
           <div className={styles.actionButtons}>
               <div onClick={replay.bind(null)}
