@@ -376,6 +376,8 @@ class ResultSection extends Component {
           <div className={styles.actionButtons}>
               <div onClick={replay.bind(null)}
                    className={styles.actionButton}>再玩一次</div>
+              <div><Link to={`/parties-table/`}
+                    className={styles.goTable}>看完整表格</Link></div>
           </div>
       </div>
     )

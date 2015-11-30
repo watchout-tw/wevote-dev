@@ -94,9 +94,12 @@ export default class PartiesTable extends Component {
             </table>
             <img src={legendImg} className={styles.legend}/>
           </div>
-
           <PartyBills/>
-
+          <div className={styles.goMatchSec}>
+              <div className={styles.birdTalk}>想要看看哪個政黨屬性跟你最接近嗎？</div>
+              <Link to={`/parties-matchgame/`}
+                    className={styles.goMatch}>進入攻城戰</Link>
+          </div>
           
       </div>
     );

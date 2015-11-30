@@ -1,4 +1,5 @@
 @import '../../common.scss';
+@import '../../styles/actionButton.scss';
 $rollWebBreak: 800px;
 .wrap {
 	position: relative;
@@ -105,28 +106,6 @@ $rollWebBreak: 800px;
 }
 .actions {
 	text-align: center;
-}
-.goMatch, .goMatch:visited {
-	display:inline-block;
-	margin: 0 auto;
-	background: $awesomeColor;
-	text-decoration: none;
-	color: white;
-	padding: 10px 20px;
-	box-shadow: 0 0 12px 0 rgba(240, 240, 240, 0.3), 0 0 12px 0 rgba(240, 240, 240, 0.3)
-}
-.goMatch:hover {
-	box-shadow: 2px 2px 32px 0 rgba(240, 240, 240, 0.5), -2px -2px 32px 0 rgba(240, 240, 240, 0.5)
-}
-.goTable, .goTable:visited {
-	color: rgb(240,240,240);
-	border-bottom: 1px solid;
-	margin: 20px auto;
-	display: inline-block;
-	text-decoration: none;
-}
-.goTable:hover {
-	color: white;
 }
 /* -----
  左右方政黨選單

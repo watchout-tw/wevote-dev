@@ -171,13 +171,13 @@ $primaryColor: #16a085;
   border-top: 1px solid white;
 }
 .spectrumPointLabel {
-  position: absolute;
-  top: -24px;
-  right: 28px;
+  display: none;
 }
 @media all and (min-width: $tableWebBreak){
   .spectrumPointLabel{
-    display: none;
+    position: absolute;
+    top: -24px;
+    right: 28px;
   }
 }
 .hue {

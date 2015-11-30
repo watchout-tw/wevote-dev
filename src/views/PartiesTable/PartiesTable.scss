@@ -1,11 +1,12 @@
 @import '../../common.scss';
+@import '../../styles/actionButton.scss';
 $tableWebBreak: 500px;
 .wrap {
 	position: relative;
 	padding: 50px 0;
 	background-size: 100%;
-  	background-image: url('../images/bg.png');
-  	background-repeat: no-repeat;
+  	background-image: url('../images/bg.png'),url('../images/grass.png');
+  	background-repeat: no-repeat, repeat;
   	background-attachment:fixed;
 }
 .partyPosition {
@@ -86,4 +87,14 @@ td.position {
 .legend {
 	margin: 100px auto 50px auto;
 	display: block;
+}
+.goMatchSec {
+	text-align: center;
+	margin: 30px 0;
+}
+.birdTalk {
+	font-size: 14px;
+	margin: 10px auto;
+    padding-left: 14px;
+    color: $awesomeColor;
 }
