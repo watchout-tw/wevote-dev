@@ -12,12 +12,16 @@ export default class PKer extends Component {
       [styles.innerHexagon]: true,
       [styles.active]: active === true
     })
+    let nameClasses = classnames({
+      [styles.name]: true,
+      [styles.active]: active === true
+    })
     return (
         <div className={styles.hexagon}>
             <div className={innerClasses}>
                 <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[id]}`}></div>
             </div>
-            <div className={styles.name}>{eng2party_short(id)}</div>
+            <div className={nameClasses}>{eng2party_short(id)}</div>
         </div>
     );
   }

@@ -6,6 +6,7 @@ import classnames from 'classnames';
 
 import QAItem from '../../components/QAItem/QAItem';
 import PKer from '../../components/PKer/PKer';
+import PartyBills from '../../components/PartyBills/PartyBills';
 
 import people_name2id from '../../utils/people_name2id';
 import eng2party_short from '../../utils/eng2party_short';
@@ -272,26 +273,34 @@ class ConfigSection extends Component {
 
 @connect(
     state => ({
-      parties: state.parties
+      parties: state.parties,
+      partyPromises: state.partyPromises
     }),
     dispatch => bindActionCreators({}, dispatch))
 class ResultSection extends Component {
 
   render(){
     const styles = require("./PartiesMatchGame.scss")
-    const {parties, currentRank, userChoices, replay} = this.props;
+    const {parties, partyPromises, currentRank, userChoices, replay} = this.props;
 
     let resultPKers = {};
+    let noData = [];
     //依照分數排
     currentRank.map((party,index)=>{
         let point = party.points;
         if(!resultPKers[point]){
           resultPKers[point] = [];
         }
-        resultPKers[point].push(party)
+        if(partyPromises[party.id].hasReply || parties[party.id].hasBeenCount > 0){
+          //有回覆 或者 第八屆有席次
+          resultPKers[point].push(party)
+        }else{
+          noData.push(party.id);
+        }
        
     })
     
+    //Layout: match 結果
     let array = [];
     for(let i=-4;i<=4;i++){
       array.push(i);
@@ -301,7 +310,7 @@ class ResultSection extends Component {
         let hue = (resultPKers[i] || []).map((v,j)=>{
           return (
               <div className={styles.hueItem}
-                   key={`${i}-${j}`}>
+                   key={`hue-${i}-${j}`}>
                   <PKer id={v.id} />
               </div>
           )
@@ -317,6 +326,14 @@ class ResultSection extends Component {
             </div>
         );
     })
+
+    //Layout: 沒資料的結果
+    let noDataItems = noData.map((partyId, i)=>{
+      return (
+        <div className={styles.noDataItem}
+             key={`no-data-${i}`}><PKer id={partyId} /></div>
+      )
+    })
   
     return (
       <div id="rankResultSection"
@@ -324,7 +341,14 @@ class ResultSection extends Component {
           <div className={`${styles.positionTitle} ${styles.right}`}>與你立場最相同</div>
           <div className={`${styles.positionTitle} ${styles.left}`}>與你立場最不同</div>
           <div className={styles.spectrum}>{resultSpectrum}</div>
-         
+          
+          <div className={styles.noDataBlock}>
+              <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
+              <div>{noDataItems}</div>
+              <div className={styles.noDataMeta}>註：無資料者為－第八屆無立委席次，並且截至 2015/12/04 前尚未回覆立場表態資料。</div>
+          </div>
+
+          <PartyBills />
           <div className={styles.actionButtons}>
               <div onClick={replay.bind(null)}
                    className={styles.actionButton}>再玩一次</div>

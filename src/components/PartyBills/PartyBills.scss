@@ -1,0 +1,47 @@
+@import '../../common.scss';
+$tableWebBreak: 800px;
+.wrap {
+	position: relative;
+	background: #eee;
+    padding: 10px;
+    margin-top: 30px;
+    text-align: left;
+}
+@media all and (min-width: $tableWebBreak){
+	.wrap {
+		width: 800px;
+		margin: 30px auto 0 auto;
+		box-shadow: 3px 3px rgba(0, 0, 0, 0.12);
+	}
+}
+table {
+	margin: 50px auto;
+}
+tr td {
+	padding-bottom: 10px;
+}
+tr:hover {
+	background: rgb(200,200,200);
+}
+td.head {
+	text-align: center;
+	border-bottom: 1px solid gray;
+	padding: 0 4px 10px 4px;
+}
+td.partyName {
+	padding-left:20px;
+	width: 200px;
+	padding-top: 10px;
+}
+td.bill {
+	padding-left:20px;
+	width: 200px;
+	padding-top: 10px;
+}
+
+td.billTitle {
+	padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}

@@ -2,12 +2,15 @@
 
 $hexagonSize: 60px;
 $innerHexagonSize: 50px;
-$hexagonColor1: cyan;
-$hexagonColor2: #348FB1;
-$hexagonColor3: #696E6E;//#145456;
-$hexagonColor4: #252727;//#111;
-$hexagonColor5: #4DC1C1;
-$hexagonColor6: #1B728B;
+/* border */
+$hexagonColor1: #ddd; /* light */
+$hexagonColor2: #333; /* drak */
+/* inner */
+$hexagonColor3: #ccc;
+$hexagonColor4: #111;
+/* active color */
+$hexagonColor5: #fff;
+$hexagonColor6: #ddd;
 
 .hexagon {
   width: $hexagonSize;
@@ -42,7 +45,7 @@ $hexagonColor6: #1B728B;
 .innerHexagon {
   width: $innerHexagonSize;
   height: $innerHexagonSize/2 + 5px;
-  background: linear-gradient(210deg,$hexagonColor3,$hexagonColor4);
+  background: linear-gradient(180deg,$hexagonColor3,$hexagonColor4);
   position: relative;
   top: 2px;
   left: 5px;
@@ -90,9 +93,16 @@ $hexagonColor6: #1B728B;
 .name, .name:after {
   z-index: 12;
   font-size: 14px;
-  color: white;
-  position: absolute;
-  top: 18px;
+  top: 16px;
   width: 100%;
+  position: absolute;
+  color: white;
 }
+.hexagon:hover .name, 
+.hexagon:hover .name:after, 
+.name.active,
+.name.active:after{
+  color: black;
+}
+
 

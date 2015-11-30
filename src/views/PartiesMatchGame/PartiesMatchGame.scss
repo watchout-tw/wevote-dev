@@ -141,7 +141,7 @@ $primaryColor: #16a085;
   font-size: 22px;
   font-weight: 600;
   position: absolute;
-  top: -100px;
+  top: 0px;
   max-width: 40%;
   background: rgba(250,250,250,0.82);
   padding: 2px 10px;
@@ -166,6 +166,7 @@ $primaryColor: #16a085;
 .hue {
   flex: 1;
   position: relative;
+  padding-top: 40px;
 }
 .hue.empty {
   display: none;
@@ -199,4 +200,19 @@ $primaryColor: #16a085;
   display: inline-block;
   margin: 16px 2px;
   cursor: pointer;
+}
+/* 沒有資料區塊 */
+.noDataBlock {
+  position: relative;
+  border-top: 1px solid white;
+  margin: 50px 0 100px 0;
+  padding-top: 50px;
+}
+.noDataMeta{
+  margin: 30px 10px;
+  font-size: 12px;
+}
+.noDataItem {
+  display: inline-block;
+  margin: 3px;
 }
