@@ -133,10 +133,20 @@ $rollWebBreak: 800px;
  */
 .toggleMenu {
 	position: absolute;
-	right: 20px;
+	right: 50px;
 	top: 20px;
 	z-index: 1;
-
+}
+.partyMenuItem {
+	display: inline-block;
+	margin: 12px 4px;
+	cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+}
+.toggleIcon {
+	margin: 0 4px;
+	vertical-align: top;
 }
 .partyMenuBlock {
 	max-height: 0;
@@ -225,11 +235,6 @@ $rollWebBreak: 800px;
 	}
 }
 
-.partyMenuItem {
-	display: inline-block;
-	margin: 12px 4px;
-	cursor: pointer;
-    text-align: center;
-}
+
 
 

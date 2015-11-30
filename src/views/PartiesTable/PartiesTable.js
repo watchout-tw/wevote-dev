@@ -77,21 +77,41 @@ export default class PartiesTable extends Component {
               </td>
             )
         })
+       
+        return <tr>{partyName}{positions}</tr>
+    });
+    let partyBills = Object.keys(tableData).map((partyId, i)=>{
+        let party = tableData[partyId];
+        //政黨名稱
+        let partyName = <td className={styles.partyName}>
+                        <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`} 
+                              to={`/parties/${party.id}/records/`}>{party.name}</Link>
+                        </td>;
         //優先推動
         let bills = party.bills.map((item, k)=>{
             return <td className={styles.bill}>{item.goal.length > 6 ? `${item.goal.substring(0,6)}⋯` : item.goal }</td>
         })
-        return <tr>{partyName}{positions}{bills}</tr>
+        return <tr>{partyName}{bills}</tr>
     });
 
     let legendImg = require("./images/legend.png");
     return (
       <div className={styles.wrap}>
           <table>
-              <thead><tr><td></td><td colSpan="4" className={styles.head}>議題表態</td><td colSpan="3" className={styles.head}>優先推動</td></tr></thead>
+              <thead><tr><td></td><td colSpan="4" className={styles.head}>議題表態</td></tr></thead>
               <tr><td></td>{issueTitles}</tr>
               {partyPositions}
           </table>
+
+          <table>
+              <thead><tr><td></td><td colSpan="3" className={styles.head}>優先推動</td></tr></thead>
+              <tr><td></td>
+                  <td className={styles.positionTitle}>法案1</td>
+                  <td className={styles.positionTitle}>法案2</td>
+                  <td className={styles.positionTitle}>法案3</td></tr>
+              {partyBills}
+          </table>
+
           <img src={legendImg} className={styles.legend}/>
       </div>
     );

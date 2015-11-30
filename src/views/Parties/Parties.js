@@ -83,7 +83,9 @@ export default class Parties extends Component {
           <div className={styles.toggleMenu}>
             <div className={`${styles.hexagon} ${styles.partyMenuItem}`}
                  onClick={this._setMenu.bind(this, true)}>
-                <div className={styles.innerHexagon}>選擇</div>
+                <div className={styles.innerHexagon}>
+                  選擇<i className={`fa fa-sort-desc ${styles.toggleIcon}`}></i>
+                </div>
             </div>
           </div>
           <div className={menuClasses}>
