@@ -2,12 +2,23 @@
 $tableWebBreak: 500px;
 .wrap {
 	position: relative;
+	padding: 50px 0;
+	background-size: 100%;
+  	background-image: url('../images/bg.png');
+  	background-repeat: no-repeat;
+  	background-attachment:fixed;
+}
+.partyPosition {
+	background: #eee;
+	max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.12);
+    padding: 10px 0;
 }
 table {
 	margin: 50px auto;
-	
 }
-tr:hover {
+tr.canHover:hover {
 	background: rgb(200,200,200);
 }
 td.head {

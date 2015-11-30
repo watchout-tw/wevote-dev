@@ -80,21 +80,24 @@ export default class PartiesTable extends Component {
             )
         })
        
-        return <tr>{partyName}{positions}</tr>
+        return <tr className={styles.canHover}>{partyName}{positions}</tr>
     });
    
     let legendImg = require("./images/legend.png");
     return (
       <div className={styles.wrap}>
-          <table>
-              <thead><tr><td></td><td colSpan="4" className={styles.head}>議題表態</td></tr></thead>
-              <tr><td></td>{issueTitles}</tr>
-              {partyPositions}
-          </table>
+          <div className={styles.partyPosition}>
+            <table>
+                <thead><tr><td></td><td colSpan="4" className={styles.head}>議題表態</td></tr></thead>
+                <tr><td></td>{issueTitles}</tr>
+                {partyPositions}
+            </table>
+            <img src={legendImg} className={styles.legend}/>
+          </div>
 
           <PartyBills/>
 
-          <img src={legendImg} className={styles.legend}/>
+          
       </div>
     );
   }

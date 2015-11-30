@@ -42,10 +42,19 @@ export default class PartyBills extends Component {
                               to={`/parties/${party.id}/records/`}>{party.name}</Link>
                         </td>;
         //優先推動
+
         let bills = party.bills.map((item, k)=>{
-            return <td className={styles.bill}>{item.goal.length > 6 ? `${item.goal.substring(0,6)}⋯` : item.goal }</td>
+            let goalItem;
+            if(item.goal){
+              let text = item.goal.length > 6 ? `${item.goal.substring(0,6)}⋯` : item.goal;
+              goalItem = <td className={styles.bill}>{text}</td>
+
+            }else{
+              goalItem = <td className={`${styles.bill} ${styles.noReply}`}>尚未回覆</td>
+            }
+            return goalItem;
         })
-        return <tr>{partyName}{bills}</tr>
+        return <tr className={styles.canHover}>{partyName}{bills}</tr>
     });
 
    

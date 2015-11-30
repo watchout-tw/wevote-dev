@@ -1,5 +1,6 @@
 @import '../../common.scss';
 @import '../../styles/actionButton.scss';
+$tableWebBreak: 1000px;
 .wrap {
 	position: relative;
 	padding-bottom: 150px;
@@ -140,17 +141,17 @@ $primaryColor: #16a085;
 .positionTitle {
   font-size: 22px;
   font-weight: 600;
-  position: absolute;
-  top: 0px;
-  max-width: 40%;
   background: rgba(250,250,250,0.82);
   padding: 2px 10px;
+  margin-bottom: 10px;
 }
-.positionTitle.left {
-  left: 30px;
-}
-.positionTitle.right {
-  right: 30px;
+@media all and (min-width:$tableWebBreak){
+  .positionTitle {
+    position: absolute;
+    top: 0px;
+    max-width: 40%;
+    height: 32px;
+  }
 }
 .rankResultWrap {
 	text-align: center;
@@ -160,45 +161,50 @@ $primaryColor: #16a085;
 	font-size: 20px;
 }
 .spectrum {
-  display: flex;
+  position: relative;
   border-top: 1px solid white;
 }
 .hue {
-  flex: 1;
   position: relative;
-  padding-top: 40px;
+  width: 100%;
+  min-height: 60px;
+  background: rgba(250,250,250,0.3);
+  border-top: 2px dashed rgba(250,250,250,0.4);
 }
 .hue.empty {
   display: none;
+  background: none;
+
 }
 @media all and (min-width: 800px){
   .hue.empty {
     display: block;
+    background: none;
   }
-}
-.hue:after {
-  content: '';
-  width: 2px;
-  height: 10px;
-  background: #FFFFFF;
-  position: absolute;
-  top: -10px;
-  left: 0;
-}
-.hue:first-child{
-  background: transparent;
 }
 .huePoint {
   position: absolute;
-  top: -40px;
-  width: 100%;
+  top: 0;
+  right: 0px;
   font-size: 26px;
-  color: white;
   font-weight: 600;
+  display: inline-block;
+  width: 30px;
+  height: 100%;
 }
+.hueItemBlock {
+  margin-right: 30px; 
+}
+@media all and (min-width:$tableWebBreak){
+  .huePoint {
+    right: 30px;
+    padding-top: 16px;
+  }
+}
+
 .hueItem {
   display: inline-block;
-  margin: 16px 2px;
+  margin: 18px 2px;
   cursor: pointer;
 }
 /* 沒有資料區塊 */
@@ -214,5 +220,5 @@ $primaryColor: #16a085;
 }
 .noDataItem {
   display: inline-block;
-  margin: 3px;
+  margin: 12px 3px;
 }

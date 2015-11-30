@@ -285,7 +285,13 @@ class ResultSection extends Component {
 
     let resultPKers = {};
     let noData = [];
-    //依照分數排
+
+    //高分 -> 低分 sort
+    currentRank.sort((a,b)=>{
+      return b.points - a.points;
+    })
+    
+    //依照分數分組
     currentRank.map((party,index)=>{
         let point = party.points;
         if(!resultPKers[point]){
@@ -302,7 +308,7 @@ class ResultSection extends Component {
     
     //Layout: match 結果
     let array = [];
-    for(let i=-4;i<=4;i++){
+    for(let i=4;i>=-4;i--){
       array.push(i);
     }
     
@@ -319,10 +325,21 @@ class ResultSection extends Component {
           [styles.hue]: true,
           [styles.empty] : !resultPKers[i]
         })
+
+        let label;
+        if(Number(i) === currentRank[0].points){
+          label = <div className={`${styles.positionTitle}`}>與你立場最相同</div>;
+        }
+        let last = currentRank.length-1;
+        if(Number(i) === currentRank[last].points){
+          label = <div className={`${styles.positionTitle}`}>與你立場最不同</div>;
+        }
+        
         return (
             <div className={hueClasses}>
+                {label}
+                <div className={styles.hueItemBlock}>{hue}</div>
                 <div className={styles.huePoint}>{i}</div>
-                {hue}
             </div>
         );
     })
@@ -338,9 +355,10 @@ class ResultSection extends Component {
     return (
       <div id="rankResultSection"
            className={styles.rankResultSection}>
-          <div className={`${styles.positionTitle} ${styles.right}`}>與你立場最相同</div>
-          <div className={`${styles.positionTitle} ${styles.left}`}>與你立場最不同</div>
-          <div className={styles.spectrum}>{resultSpectrum}</div>
+          
+          <div className={styles.spectrum}>
+              {resultSpectrum}
+          </div>
           
           <div className={styles.noDataBlock}>
               <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
