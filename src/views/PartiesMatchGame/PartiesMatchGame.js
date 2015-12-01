@@ -337,21 +337,24 @@ class ResultSection extends Component {
 
           let detail;
           if(focus === v.id){
+            let partyCht = eng2party_short(v.id);
+
             let rows = Object.keys(userChoices).map((issueName, i)=>{
                 let userPos = userChoices[issueName];
                 let issueCht = eng2cht(issueName);
                 let partyPos = v[issueName] || "none";
+                
                 return (
-                  <tr><td><div className={`${styles.posIcon} ${styles[userPos]} `}></div></td>
-                      <td>{issueCht}</td>
-                      <td><div className={`${styles.posIcon} ${styles[partyPos]} `}></div></td></tr>
+                  <tr><td className={styles.hoverDetailTableColumn}><div className={`${styles.posIcon} ${styles[userPos]} `}></div></td>
+                      <td className={styles.hoverDetailTableColumn}>{issueCht}</td>
+                      <td className={styles.hoverDetailTableColumn}><div className={`${styles.posIcon} ${styles[partyPos]} `}></div></td></tr>
                   );
             })
             detail = (
               <table className={styles.hoverDetailTable}>
-                <thead><tr><td>你</td>
-                           <td>議題</td>
-                           <td>黨</td></tr></thead>
+                <thead><tr><td className={styles.hoverDetailTableColumn}>你</td>
+                           <td className={styles.hoverDetailTableColumn}>議題</td>
+                           <td className={styles.hoverDetailTableColumn}>{partyCht}</td></tr></thead>
                 {rows}
               </table>
             )

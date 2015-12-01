@@ -1,5 +1,6 @@
 @import '../../common.scss';
 @import '../../styles/actionButton.scss';
+$smallBreak: 640px;/* 為了比對結果 hover 做的 */
 $tableWebBreak: 1000px;
 .wrap {
 	position: relative;
@@ -232,6 +233,7 @@ $primaryColor: #16a085;
 }
 .hueItemBlock {
   margin-right: 30px; 
+  position: relative;
 }
 @media all and (min-width:$tableWebBreak){
   .huePoint {
@@ -246,32 +248,44 @@ $primaryColor: #16a085;
   display: inline-block;
   margin: 18px 2px;
   cursor: pointer;
-  position: relative;
+}
+@media all and (min-width:$smallBreak){
+  .hueItem {
+      position: relative;
+  }
 }
 table.hoverDetailTable {
   z-index: 12;
   background: white;
   position: absolute;
-  top: -300px;
-  width: 160px;
-  left: calc(50% - 74px);
+  top: -230px;
+  width: 100%;
+  left: 15px;
   box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.48);
 
 }
-@media all and (min-width:$tableWebBreak){
-  table.hoverDetailTable {
-    top: -240px;
-  }
+@media all and (min-width:$smallBreak) {
+    table.hoverDetailTable {
+        width: 200px;
+        top: -250px;
+        left: calc(50% - 74px);
+    }
 }
-table.hoverDetailTable:after {
-  content: '';
-  position: absolute;
-  bottom: -19px;
-  left: 50px;
-  filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.48));
-  border-top: 20px solid white;
-  border-left: 15px solid transparent;
-  border-right: 0px solid transparent;
+@media all and (min-width:$smallBreak){
+    table.hoverDetailTable:after {
+        content: '';
+        position: absolute;
+        bottom: -19px;
+        left: 50px;
+        filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.48));
+        border-top: 20px solid white;
+        border-left: 15px solid transparent;
+        border-right: 0px solid transparent;
+    }
+}
+.hoverDetailTable thead {
+  font-weight: 600;
+  font-size: 18px;
 }
 .hoverDetailTable tr {
   border: 1px solid #D5DEE4;
@@ -279,11 +293,24 @@ table.hoverDetailTable:after {
 .hoverDetailTable td {
   padding: 10px 0;
 }
+.hoverDetailTableColumn {
+  width: 33%;
+}
 .posIcon {
   width: 20px;
   height: 20px;
-  margin: 0 10px;
+  margin: 0 auto;
 }
+@media all and (min-width:$tableWebBreak){
+    .hoverDetailTableColumn{
+        width: auto;
+    }
+    .posIcon {
+        margin: 0 10px;
+    }
+}
+
+
 /* 沒有資料區塊 */
 .noDataBlock {
   position: relative;
@@ -312,6 +339,7 @@ table.hoverDetailTable:after {
 /* 法案區塊 */
 .introToPartyBills {
   text-align: center;
+  margin: 30px 0;
 }
 .introToPartyTitle {
   width: 280px;
