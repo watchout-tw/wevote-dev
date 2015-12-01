@@ -421,8 +421,13 @@ class ResultSection extends Component {
               </div>
           </div>
 
+          <div className={styles.introToPartyBills}>
+              <div className={styles.introToPartyTitle}>看看黨團未來的戰鬥目標，是否也跟你一致</div>
+          </div>
+
           <div className={styles.billSection}>
-            <div className={styles.introToPartyBills}>各政黨承諾在當選後優先推動法案</div>
+            <div className={styles.birdTalk}>各政黨表態在當選後優先推動法案</div>
+            <div className={styles.billTitle}>各政黨第9屆戰鬥目標</div>
             <PartyBills />
           </div>
           <div className={styles.actionButtons}>

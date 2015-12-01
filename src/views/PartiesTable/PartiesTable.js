@@ -87,7 +87,7 @@ export default class PartiesTable extends Component {
     return (
       <div className={styles.wrap}>
           <div className={styles.partyPosition}>
-            <table>
+            <table className={styles.partyPositionTable}>
                 <thead><tr><td></td><td colSpan="4" className={styles.head}>議題表態</td></tr></thead>
                 <tr><td></td>{issueTitles}</tr>
                 {partyPositions}

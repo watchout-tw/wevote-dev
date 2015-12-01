@@ -61,7 +61,6 @@ export default class PartyBills extends Component {
     return (
       <div className={styles.wrap}>
           <table>
-              <thead><tr><td></td><td colSpan="3" className={styles.head}>優先推動</td></tr></thead>
               <tr><td></td>
                   <td className={styles.billTitle}>法案1</td>
                   <td className={styles.billTitle}>法案2</td>
