@@ -304,9 +304,7 @@ table.hoverDetailTable {
 @media all and (min-width:$tableWebBreak){
     .hoverDetailTableColumn{
         width: auto;
-    }
-    .posIcon {
-        margin: 0 10px;
+        min-width: 50px;
     }
 }
 

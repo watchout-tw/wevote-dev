@@ -137,7 +137,8 @@ export default class PartiesMatchGame extends Component {
         currentRank.push(
           Object.assign(currentParty, {
             id: partyId,
-            points: points
+            points: points,
+            samePositionCount: samePositionCount
           })
         ) 
 
@@ -300,12 +301,19 @@ class ResultSection extends Component {
     currentRank.sort((a,b)=>{
       if(b.points !== a.points){
         return b.points - a.points;
+
       }else{
         // sort by 一樣立場的次數
+        if(a.samePositionCount !== b.samePositionCount){
+            return b.samePositionCount - a.samePositionCount;
+            
+        }else{
+            // 然後才是名稱
+            if(a.id > b.id) return -1;
+            else return 1;
 
-        // 然後才是名稱
-        if(a.id > b.id) return -1;
-        else return 1;
+        }
+        
       }
     })
     
