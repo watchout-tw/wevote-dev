@@ -5,9 +5,14 @@ $tableWebBreak: 500px;
 	position: relative;
 	padding: 50px 0;
 	background-size: 100%;
-  	background-image: url('../images/bg.png'),url('../images/grass.png');
+  	background-image: url('../images/bg-mobile.png'),url('../images/grass-mobile.png');
   	background-repeat: no-repeat, repeat;
   	background-attachment:fixed;
+}
+@media all and (min-width:$tableWebBreak){
+	.wrap {
+		background-image: url('../images/bg-web.png'),url('../images/grass-web.png');
+	}
 }
 .partyPosition {
 	background: #eee;

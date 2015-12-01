@@ -5,8 +5,13 @@ $rollWebBreak: 800px;
 	position: relative;
 	background-size: 100%;
 	min-height: 150vh;
-	background-image: url('../images/bg.png'), url('../images/grass.png');
+	background-image: url('../images/bg-mobile.png'), url('../images/grass-mobile.png');
 	background-repeat: no-repeat, repeat;
+}
+@media all and (min-width:$rollWebBreak){
+	.wrap {
+		background-image: url('../images/bg-web.png'), url('../images/grass-web.png');
+	}
 }
 .partyFlow {
 	
