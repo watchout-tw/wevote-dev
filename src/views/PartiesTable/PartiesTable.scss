@@ -3,15 +3,28 @@
 $tableWebBreak: 500px;
 .wrap {
 	position: relative;
-	padding: 50px 0;
-	background-size: 100%;
-  	background-image: url('../images/bg-mobile.png'),url('../images/grass-mobile.png');
-  	background-repeat: no-repeat, repeat;
-  	background-attachment:fixed;
+	padding: 50px 10px;
+
+
+	padding-bottom: 150px;
+	position: relative;
+	background-size: auto 100%;
+	background-image: 
+		url('../images/grass-mobile.png');
+	background-repeat: repeat;
+	background-attachment:fixed;
 }
 @media all and (min-width:$tableWebBreak){
 	.wrap {
-		background-image: url('../images/bg-web.png'),url('../images/grass-web.png');
+		background-size: 100% auto;
+    	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    	background-position: 0 0, 0 33vw, 0 0, 0 0, 0 30vw;
+    	background-image: 
+    	  url('../images/animal-web.png'),
+    	  url('../images/grass-web.png'),
+    	  url('../images/tree-web.png'),
+    	  url('../images/sky-web.png'),
+    	  url('../images/grass-repeat-web.png');
 	}
 }
 .partyPosition {

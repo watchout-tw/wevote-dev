@@ -2,16 +2,28 @@
 @import '../../styles/actionButton.scss';
 $rollWebBreak: 800px;
 .wrap {
+	padding-bottom: 150px;
+	background-size: auto 100%;
 	position: relative;
-	background-size: 100%;
-	min-height: 150vh;
-	background-image: url('../images/bg-mobile.png'), url('../images/grass-mobile.png');
-	background-repeat: no-repeat, repeat;
+	background-image: 
+		url('../images/grass-mobile.png');
+	background-repeat: repeat;
+	background-attachment:fixed;
 }
 @media all and (min-width:$rollWebBreak){
 	.wrap {
-		background-image: url('../images/bg-web.png'), url('../images/grass-web.png');
+		background-attachment: scroll;
+		background-size: 100% auto;
+		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+		background-position: 0 0, 0 33vw, 0 0, 0 0, 0 30vw;
+		background-image: 
+			url('../images/animal-web.png'),
+			url('../images/grass-web.png'),
+			url('../images/tree-web.png'),
+			url('../images/sky-web.png'),
+			url('../images/grass-repeat-web.png');
 	}
+	
 }
 .partyFlow {
 	
