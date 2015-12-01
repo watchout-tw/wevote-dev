@@ -10,7 +10,7 @@ $tableWebBreak: 800px;
 }
 @media all and (min-width: $tableWebBreak){
 	.wrap {
-		width: 800px;
+		max-width: 800px;
 		margin: 30px auto 0 auto;
 		box-shadow: 3px 3px rgba(0, 0, 0, 0.12);
 	}

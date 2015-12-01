@@ -108,6 +108,9 @@ export default class Parties extends Component {
                   {partyRollItem}
               </div>
           </div>
+          <div className={styles.story}>
+            黨團衝突戰，將由各地勇者所組成不同的黨團，以團體戰的方式爭奪立法聖殿中的勇者席位。在這場團體戰鬥中，誰能爭取最多席位，同樣考驗島嶼主人的智慧！
+          </div>
           <div className={styles.actions}>
               <Link to={`/parties-matchgame/`}
                     className={styles.goMatch}>進入挑戰</Link>

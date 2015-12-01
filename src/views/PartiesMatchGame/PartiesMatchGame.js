@@ -359,6 +359,7 @@ class ResultSection extends Component {
           return (
               <div className={styles.hueItem}
                    key={`hue-${i}-${j}`}
+                   onClick={this._setFocus.bind(this, v.id)}
                    onMouseEnter={this._setFocus.bind(this, v.id)}
                    onMouseLeave={this._setFocus.bind(this, "")}>
                   {detail}
@@ -406,22 +407,24 @@ class ResultSection extends Component {
     })
   
     return (
-      <div id="rankResultSection"
-           className={styles.rankResultSection}>
-          
-          <div className={styles.spectrum}>
-              <div className={styles.spectrumPointLabel}>總分</div>
-              {resultSpectrum}
-          </div>
-          
-          <div className={styles.noDataBlock}>
-              <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
-              <div className={styles.noDataItems}>{noDataItems}</div>
-              <div className={styles.noDataMeta}>註：無資料者為－第八屆無立委席次，並且截至 2015/12/04 前尚未回覆立場表態資料。</div>
+      <div id="rankResultSection">
+          <div className={styles.rankResultSection}>
+              <div className={styles.spectrum}>
+                  <div className={styles.spectrumPointLabel}>總分</div>
+                  {resultSpectrum}
+              </div>
+              
+              <div className={styles.noDataBlock}>
+                  <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
+                  <div className={styles.noDataItems}>{noDataItems}</div>
+                  <div className={styles.noDataMeta}>註：無資料者為－第八屆無立委席次，並且截至 2015/12/04 前尚未回覆立場表態資料。</div>
+              </div>
           </div>
 
-          <div className={styles.introToPartyBills}>找到和你屬性最相近的政黨了嗎？再來看看各政黨承諾在當選後優先推動法案：</div>
-          <PartyBills />
+          <div className={styles.billSection}>
+            <div className={styles.introToPartyBills}>各政黨承諾在當選後優先推動法案</div>
+            <PartyBills />
+          </div>
           <div className={styles.actionButtons}>
               <div onClick={replay.bind(null)}
                    className={styles.actionButton}>再玩一次</div>
