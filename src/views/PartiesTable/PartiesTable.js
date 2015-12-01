@@ -18,8 +18,10 @@ function countLevel(count){
   }else if(num > 5 && num <= 25){
      return 'level2';
 
-  }else{
+  }else if(num > 25){
      return 'level3';
+  }else {
+     return '';
   }
 }
 @connect(
