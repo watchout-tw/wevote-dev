@@ -187,6 +187,8 @@ export default class PartiesMatchGame extends Component {
                        completed={completed} />
     })
 
+    // 本頁標題
+    let header = <h1 className={styles.pageTitle}>衝突一觸即發...但，哪個政黨和你立場最接近？</h1>
     // 配對結果
     let BottomSection;
 
@@ -194,6 +196,7 @@ export default class PartiesMatchGame extends Component {
       case 'config':
         return (
             <div className={styles.wrap}>
+                {header}
                 <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
             </div>
         )
@@ -203,6 +206,7 @@ export default class PartiesMatchGame extends Component {
       case 'game':
         return (
             <div className={styles.wrap}>
+                {header}
                 <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
                 {qaItems}
             </div>
@@ -212,6 +216,7 @@ export default class PartiesMatchGame extends Component {
       case 'result':
         return (
             <div className={styles.wrap}>
+                {header}
                 <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
                 {qaItems}
                 <ResultSection currentRank={currentRank}
@@ -245,18 +250,18 @@ class ConfigSection extends Component {
       return (
         <div>
           <section className={styles.configSection}>
-              如果過去四年的立法院紀錄和政黨目前的承諾不同⋯⋯
+              如果政黨過去紀錄和未來承諾不同，你想要讀取的是⋯⋯
               <ul className={styles.list}>
                 <li className={styles.listItem}>
                   <label className={styles.radioLabel}>
                     <input type="radio" className={styles.radio} name="conflictResolver" value="recordFirst" ref="recordFirst" />
-                      我選擇以紀錄為準
+                      舊の紀錄
                   </label>
                 </li>
                 <li className={styles.listItem}>
                   <label className={styles.radioLabel}>
                     <input type="radio" className={styles.radio} name="conflictResolver" value="promiseFirst" />
-                      我選擇以承諾為準
+                      新の承諾
                   </label>
                 </li> 
               </ul>
@@ -428,7 +433,9 @@ class ResultSection extends Component {
               <div className={styles.noDataBlock}>
                   <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
                   <div className={styles.noDataItems}>{noDataItems}</div>
-                  <div className={styles.noDataMeta}>註：無資料者為－第八屆無立委席次，並且截至 2015/12/04 前尚未回覆立場表態資料。</div>
+                  <div className={styles.noDataMeta}>
+                      遊戲說明書：截至12月4日網站更新前，已有自由台灣黨、時代力量、綠社盟回覆，我們歡迎每個政黨進行表態承諾的回覆。而目前立法院內有席次並有歷史表態紀錄的政黨，如果尚未回覆，我們將以他們過去的立院紀錄作為表態資料；如果回覆的承諾書與過去歷史紀錄結果不同，將交由使用者自行選擇要以哪一份資料為準。
+                  </div>
               </div>
           </div>
 

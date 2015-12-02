@@ -2,10 +2,8 @@
 .wrap {
 	position: relative;
 }
-.bunLink, .bunLink:visited {
-    text-decoration: none;
-}
-.bunItem {
+
+.bunItem, .bunItem:visited {
 	display: inline-block;
 	margin: 3px;
     box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.12);
@@ -14,10 +12,21 @@
     width: 120px;
     height: 100px;
     vertical-align: top;
+    cursor: pointer;
+    text-decoration: none;
+    color: $black;
 }
 .bunItem:hover {
 	box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.22);
 }
+.partyNameWrap {
+    margin-top: 4px; 
+}
 .partyName {
-	margin-top: 4px; 
+    border-bottom: 1px solid transparent;
+    display: inline;
+    padding-bottom: 1px;
+}
+.bunItem:hover .partyName {
+    border-bottom: 1px solid $black;
 }

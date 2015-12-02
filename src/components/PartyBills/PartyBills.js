@@ -39,7 +39,7 @@ export default class PartyBills extends Component {
         //政黨名稱
         let partyName = <td className={styles.partyName}>
                         <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`} 
-                              to={`/parties/${party.id}/records/`}>{party.name}</Link>
+                              to={`/parties/${party.id}/promises/`}>{party.name}</Link>
                         </td>;
         //優先推動
 

@@ -9,25 +9,24 @@ import eng2url from '../../utils/eng2url';
     state => ({ partyBlock: state.partyBlock }),
     dispatch => bindActionCreators({}, dispatch))
 export default class PartyBuns extends Component {
-  
+  _goLink(url, link){
+    window.location = url;
+  }
   render() {
     const styles = require('./PartyBuns.scss');
-    const {partyBlock, category} = this.props;
+    let {partyBlock, category} = this.props;
     /* category: records, promises, list */
-
+    
     let bunItems = Object.keys(partyBlock).map((partyId, i)=>{
         let party = partyBlock[partyId];
         return (
-            <Link to={`/parties/${partyId}/${category}/`}
-                  className={styles.bunLink}
-                  key={`pary-bun-${i}`}>
-                <div className={styles.bunItem}>
-                    <Link to={`/parties/${partyId}/${category}/`}>
-                        <div className={`${styles.partyFlag} ${styles.small} ${styles[partyId]}`}></div>
-                    </Link>
+            <Link className={styles.bunItem}
+                  key={`partybun-${category}-${partyId}-${i}`}
+                  to={`/parties/${partyId}/${category}/`}>
+                <div className={`${styles.partyFlag} ${styles.small} ${styles[partyId]}`}></div>
+                <div className={styles.partyNameWrap}>
                     <div className={styles.partyName}>
-                        <Link className={`${styles.ia} ${styles.black} ${styles.small}`} 
-                              to={`/parties/${partyId}/${category}/`}>{party.title}</Link>
+                        {party.title}
                     </div>
                 </div>
             </Link>

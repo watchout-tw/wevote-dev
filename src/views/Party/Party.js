@@ -44,7 +44,6 @@ export default class Party extends Component {
         partyPositions: parseToPartyPosition(props.records, props.issues)
       }
   }
-
   render() {
     const styles = require('./Party.scss');
     const id = this.props.params.partyId;
@@ -80,10 +79,20 @@ export default class Party extends Component {
 
       case 'promises':
         content = <PartyPromises id={id} />
+
+        //todo
+        title = `沃草2016立委出任務`;
+        description = `對於各項重大議題的戰鬥策略大解析！趕快來看看委員在立法院針對下列重大議題講了哪些話！`;
+    
       break;
 
       case 'list':
         content = <PartyBlock id={id} />
+
+        //todo
+        title = `議題表態分析-沃草2016立委出任務`;
+        description = `對於各項重大議題的戰鬥策略大解析！趕快來看看委員在立法院針對下列重大議題講了哪些話！`;
+    
       break;
     }
 
@@ -106,9 +115,12 @@ export default class Party extends Component {
           <DocumentMeta {...metaData}/>
           <PartyProfile id={id}/>
           <ul className={styles.innerTag}>
-              <li><Link to={`/parties/${id}/records/`} className = { category==="records" ? styles.active : ""}>歷史紀錄</Link></li>
-              <li><Link to={`/parties/${id}/promises/`} className = { category==="promises" ? styles.active : ""}>未來承諾</Link></li>
-              <li><Link to={`/parties/${id}/list/`} className = { category==="list" ? styles.active : ""}>不分區名單</Link></li>
+              <li><Link to={`/parties/${id}/records/`} 
+                        className={ category==="records" ? styles.active : ""}>歷史紀錄</Link></li>
+              <li><Link to={`/parties/${id}/promises/`} 
+                        className={ category==="promises" ? styles.active : ""}>未來承諾</Link></li>
+              <li><Link to={`/parties/${id}/list/`} 
+                        className={ category==="list" ? styles.active : ""}>不分區名單</Link></li>
           </ul>
 
           <div className={styles.innerWrap}>
