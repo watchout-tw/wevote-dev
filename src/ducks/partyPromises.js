@@ -1,4 +1,49 @@
 const initialState = {
+    "DPP": {
+        "name": "民主進步黨",
+        "id": "DPP",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
     "KMT": {
         "name": "中國國民黨",
         "id": "KMT",
@@ -44,9 +89,9 @@ const initialState = {
             }
         ]
     },
-    "DPP": {
-        "name": "民主進步黨",
-        "id": "DPP",
+    "PFP": {
+        "name": "親民黨",
+        "id": "PFP",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -85,6 +130,51 @@ const initialState = {
             },
             {
                 "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "NPP": {
+        "name": "時代力量",
+        "id": "NPP",
+        "hasReply": true,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "年金改革",
+                "content": ""
+            },
+            {
+                "goal": "勞工權益",
+                "content": ""
+            },
+            {
+                "goal": "民主憲政",
                 "content": ""
             }
         ]
@@ -134,9 +224,54 @@ const initialState = {
             }
         ]
     },
-    "PFP": {
-        "name": "親民黨",
-        "id": "PFP",
+    "MKT": {
+        "name": "民國黨",
+        "id": "MKT",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "NP": {
+        "name": "新黨",
+        "id": "NP",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -269,47 +404,137 @@ const initialState = {
             }
         ]
     },
-    "NPP": {
-        "name": "時代力量",
-        "id": "NPP",
-        "hasReply": true,
+    "FHL": {
+        "name": "信心希望聯盟",
+        "id": "FHL",
+        "hasReply": false,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "aye",
+                    "position": "none",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "aye",
+                    "position": "none",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "aye",
+                    "position": "none",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "aye",
+                    "position": "none",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "年金改革",
+                "goal": "",
                 "content": ""
             },
             {
-                "goal": "勞工權益",
+                "goal": "",
                 "content": ""
             },
             {
-                "goal": "民主憲政",
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "MCFAP": {
+        "name": "軍公教聯盟黨",
+        "id": "MCFAP",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "TP": {
+        "name": "樹黨",
+        "id": "TP",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
                 "content": ""
             }
         ]
@@ -359,9 +584,54 @@ const initialState = {
             }
         ]
     },
-    "MCFAP": {
-        "name": "軍公教聯盟黨",
-        "id": "MCFAP",
+    "PPU": {
+        "name": "和平鴿聯盟黨",
+        "id": "PPU",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "NHSA": {
+        "name": "健保免費連線",
+        "id": "NHSA",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -497,276 +767,6 @@ const initialState = {
     "TIP": {
         "name": "台灣獨立黨",
         "id": "TIP",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "MKT": {
-        "name": "民國黨",
-        "id": "MKT",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "PPU": {
-        "name": "和平鴿聯盟黨",
-        "id": "PPU",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "FHL": {
-        "name": "信心希望聯盟",
-        "id": "FHL",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "NHSA": {
-        "name": "健保免費連線",
-        "id": "NHSA",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "NP": {
-        "name": "新黨",
-        "id": "NP",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "TP": {
-        "name": "樹黨",
-        "id": "TP",
         "hasReply": false,
         "positions": {
             "marriageEquality": {

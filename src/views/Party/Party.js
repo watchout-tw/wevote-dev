@@ -8,6 +8,7 @@ import classnames from 'classnames';
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
+import PartyBuns from '../../components/PartyBuns/PartyBuns.js';
 
 import eng2url from '../../utils/eng2url';
 import eng2cht from '../../utils/eng2cht';
@@ -112,6 +113,10 @@ export default class Party extends Component {
 
           <div className={styles.innerWrap}>
             {content}
+          </div>
+          <div className={styles.bottomWrap}>
+            <h2>看其他政黨</h2>
+            <PartyBuns category={category} />
           </div>
       </div>
     );
