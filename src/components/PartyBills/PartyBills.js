@@ -69,12 +69,14 @@ export default class PartyBills extends Component {
       <div className={styles.wrap}>
           {title}
           <div className={styles.partyBillTable}>
-              <div className={styles.billTitles}>
+              <div className={styles.billTitles}
+                   id="billTitle">
                   <div className={styles.partyName}></div>
                   <div className={styles.billTitle}>法案1</div>
                   <div className={styles.billTitle}>法案2</div>
                   <div className={styles.billTitle}>法案3</div></div>
               {partyBills}
+              <div id="billEnd"></div>
           </div>
       </div>
     );

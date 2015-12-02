@@ -42,14 +42,61 @@ export default class PartiesTable extends Component {
       let partyPositions = parseToPartyPosition(records, issues);
       let tableData = getPartiesTableData(partyPositions, partyPromises);
       this.state = {
-        tableData: tableData
+        tableData: tableData,
+        focus: ""
       }
 
+  }
+  _onScroll(){
+      let positionNode = document.getElementById("positionTitle");
+      let positionRect = positionNode.getBoundingClientRect();
+
+      let positionEndNode = document.getElementById("positionEnd");
+      let positionEndRect = positionEndNode.getBoundingClientRect();
+
+      let billNode = document.getElementById("billTitle");
+      let billRect = billNode.getBoundingClientRect();
+
+      let billEndNode = document.getElementById("billEnd");
+      let billEndRect = billEndNode.getBoundingClientRect();
+
+      //decide which to fixed on top
+      let current;
+      if(positionRect.top < 0 && positionEndRect.top > 0){
+        current = "position";
+      }
+      if(billRect.top < 0 && billEndRect.top > 0){
+        current = "bill";
+      }
+      if(current && billEndRect.top < 0){
+        current = "NONE";
+      }
+      const {focus} = this.state;
+
+      console.log(positionRect.top + "," +
+                  positionEndRect.top + "," +
+                  billRect.top + "," +
+                  billEndRect.top);
+      console.log(current);
+      if(current){
+        if(focus !== current){
+            this.setState({
+              focus: current
+            })
+        }
+      }
+
+  }
+  componentDidMount(){
+      window.addEventListener("scroll", this._onScroll.bind(this));
+  }
+  componentWillUnmount(){
+     window.removeEventListener("scroll", this._onScroll.bind(this));
   }
   render() {
     const styles = require('./PartiesTable.scss');
     const {issues} = this.props;
-    const {tableData} = this.state;
+    const {tableData, focus} = this.state;
 
     let imgHub = {};
     imgHub.aye = require("./images/promise-aye.png")
@@ -96,17 +143,26 @@ export default class PartiesTable extends Component {
    
     let legendImg = require("./images/legend.png");
 
+    //title class, 處理 scroll fixed on top
+    let fixedClasses = classnames({
+      [styles.titleWrap]: true,
+      [styles.fixed]: focus === "position"
+    })
     return (
       <div className={styles.wrap}>
           <div className={styles.partyPosition}>
             <header><h2>議題表態</h2></header>
             <div className={styles.partyPositionTable}>
-                <div className={styles.issueTitles}>
-                    <div className={styles.partyName}></div>
-                    {issueTitles}
+                <div className={fixedClasses}>
+                    <div className={styles.issueTitles}
+                         id="positionTitle">
+                        <div className={styles.partyName}></div>
+                        {issueTitles}
+                    </div>
                 </div>
                 {partyPositions}
             </div>
+            <div id="positionEnd"></div>
             <img src={legendImg} className={styles.legend}/>
           </div>
 

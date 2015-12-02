@@ -40,6 +40,13 @@ header {
 	width: 100%;
 }
 /* 議題 title */
+.titleWrap.fixed {
+	position: fixed;
+	background: white;
+    top: 0;
+    width: 100%;
+    max-width: 800px;
+}
 .issueTitles {
 	display: flex;
 	padding: 10px 0;
