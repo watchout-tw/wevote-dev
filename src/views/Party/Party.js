@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
+import classnames from 'classnames';
 
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
@@ -10,6 +11,8 @@ import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 
 import eng2url from '../../utils/eng2url';
 import eng2cht from '../../utils/eng2cht';
+import people_name2id from '../../utils/people_name2id';
+import is8thLegislator from '../../utils/is8thLegislator';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
 /*
@@ -79,7 +82,7 @@ export default class Party extends Component {
       break;
 
       case 'list':
-        /// TODO
+        content = <PartyBlock id={id} />
       break;
     }
 
@@ -193,6 +196,58 @@ class PartyPromises extends Component {
           <div className={`${styles.promiseMeta}`}>* 統計更新日期：2015/12/04。
                 <Link className={`${styles.ia} ${styles.bright}`} 
                       to={`/about/FAQ/`}>我們如何統計的</Link></div>
+        </div>
+      )
+    }
+}
+@connect(
+    state => ({
+                 partyBlock: state.partyBlock
+               }),
+    dispatch => bindActionCreators({}, dispatch))
+class PartyBlock extends Component {
+    render(){
+      const styles = require('./Party.scss');
+      const {partyBlock, id} = this.props;
+      const party = partyBlock[id];
+      if(!party) return <div></div>
+
+      
+      let peopleItems = party.list.map((value,i)=>{
+
+          //如果是第八屆候選人，連到他的個人頁面
+          let nameLink;
+          let is8th = is8thLegislator(value.name);
+          let nameItem = (is8th === true) ? (
+              <Link className={`${styles.pbName} ${styles.ia} ${styles.bright}`} 
+                    to={`/people/${people_name2id(value.name)}/records/`}>
+                    {value.name}
+              </Link>
+          ) : (
+              <span className={styles.pbName}>{value.name}</span>
+          );
+
+        
+          
+          // item class
+          let itemClasses = classnames({
+            [styles.pbItem] : true,
+            [styles.current] :is8th === true
+          })
+
+          return (
+            <div className={itemClasses}
+                 key={`pb-${i}`}>
+                <div>
+                    <span className={styles.pbCount}>{i+1}</span>・{nameItem}</div>
+                <div className={styles.pbInfo}>{value.info}六個中文字哇啦</div>
+            </div>
+          )
+      })
+      return (
+        <div className={styles.partyBlockWrap}>
+          <div className={styles.metaInfo}>姓名前有<span className={styles.metaIcon}></span>方塊標示者，為現任立委</div>
+          {peopleItems}
         </div>
       )
     }

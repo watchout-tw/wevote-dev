@@ -100,3 +100,46 @@ $breakWeb: 500px;
 .promiseMeta {
 	font-size: 14px;
 }
+/* 不分區候選人 */
+.partyBlockWrap {
+	text-align: left;
+	line-height: 1.6;
+	max-width: 400px;
+	margin: 0 auto;
+}
+.metaInfo {
+	margin-left: 50px;
+}
+.metaIcon {
+	width: 10px;
+	height: 10px;
+	background: $awesomeColor;
+    display: inline-block;
+    margin: 0 4px
+}
+.pbItem {
+	margin: 10px 0;
+	position: relative;
+}
+.pbItem.current:before {
+	content: '';
+    width: 10px;
+    height: 10px;
+    background: $awesomeColor;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.pbCount {
+	width: 50px;
+	text-align: right;
+	display: inline-block;
+    text-align: right;
+    font-size: 20px;
+}
+.pbName {
+	font-size: 20px;
+}
+.pbInfo {
+	margin-left: 66px;
+}
