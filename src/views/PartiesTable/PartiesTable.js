@@ -20,8 +20,9 @@ function countLevel(count){
 
   }else if(num > 25){
      return 'level3';
+
   }else {
-     return '';
+     return 'empty';
   }
 }
 @connect(
@@ -57,52 +58,65 @@ export default class PartiesTable extends Component {
 
 
     let issueTitles = Object.keys(issues).map((issueId, i)=>{
-        return <td key={`${issueId}-${i}`}
-                   className={styles.positionTitle}>{issues[issueId].title}</td>
+        return <div key={`${issueId}-${i}`}
+                    className={styles.issueTitle}>{issues[issueId].title}</div>
     })
+    // 每一個政黨
     let partyPositions = Object.keys(tableData).map((partyId, i)=>{
         let party = tableData[partyId];
         //政黨名稱
-        let partyName = <td className={styles.partyName}>
-                        <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`} 
-                              to={`/parties/${party.id}/records/`}>{party.name}</Link>
-                        </td>;
+        let partyName = <div className={styles.partyName}>
+                          <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`} 
+                                to={`/parties/${party.id}/records/`}>{party.name}</Link>
+                        </div>;
 
         //表態
         let positions = Object.keys(party.positions).map((issueName, j)=>{
             let pos = party.positions[issueName];
+            let level = countLevel(pos.recordCount);
+            let recordClasses = classnames({
+              [styles.record] : true,
+              [styles.empty] : level==="empty"
+            })
+
             return (
-              <td className={styles.position}>
-                  <div className={styles.record}>
-                      <Link className={`${styles.recordSquare} ${styles[pos.record]} ${styles[countLevel(pos.recordCount)]}`}
+              <div className={styles.position}>
+                  <div className={recordClasses}>
+                      <Link className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}
                             to={`/parties/${party.id}/records/${eng2url(issueName)}`}></Link>
                   </div>
-                  <img className={styles.promise} src={`${imgHub[pos.promise]}`} />
-              </td>
+                  <img className={styles.promise} 
+                       src={`${imgHub[pos.promise]}`} />
+              </div>
             )
         })
        
-        return <tr className={styles.canHover}>{partyName}{positions}</tr>
+        return <div className={styles.partyEntry}>{partyName}{positions}</div>
     });
    
     let legendImg = require("./images/legend.png");
+
     return (
       <div className={styles.wrap}>
           <div className={styles.partyPosition}>
-            <table className={styles.partyPositionTable}>
-                <thead><tr><td></td><td colSpan="4" className={styles.head}>議題表態</td></tr></thead>
-                <tr><td></td>{issueTitles}</tr>
+            <header><h2>議題表態</h2></header>
+            <div className={styles.partyPositionTable}>
+                <div className={styles.issueTitles}>
+                    <div className={styles.partyName}></div>
+                    {issueTitles}
+                </div>
                 {partyPositions}
-            </table>
+            </div>
             <img src={legendImg} className={styles.legend}/>
           </div>
-          <PartyBills/>
+
+          <PartyBills showTitle={true}/>
+
           <div className={styles.goMatchSec}>
               <div className={styles.birdTalk}>想要看看哪個政黨屬性跟你最接近嗎？</div>
               <Link to={`/parties-matchgame/`}
                     className={styles.goMatch}>進入攻城戰</Link>
           </div>
-          
       </div>
     );
   }

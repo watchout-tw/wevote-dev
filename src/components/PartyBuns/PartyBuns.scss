@@ -2,7 +2,6 @@
 .wrap {
 	position: relative;
 }
-
 .bunItem, .bunItem:visited {
 	display: inline-block;
 	margin: 3px;
@@ -30,3 +29,4 @@
 .bunItem:hover .partyName {
     border-bottom: 1px solid $black;
 }
+

@@ -244,8 +244,6 @@ class PartyBlock extends Component {
               <span className={styles.pbName}>{value.name}</span>
           );
 
-        
-          
           // item class
           let itemClasses = classnames({
             [styles.pbItem] : true,
