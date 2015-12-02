@@ -47,6 +47,20 @@ export default class Appbar extends Component {
         issueName: issueName
     })
   }
+  componentDidMount(){
+    this._mountCheck("issues");
+    this._mountCheck("parties");
+    this._mountCheck("about");
+
+  }
+  _mountCheck(v){
+    let path = window.location.pathname;
+    if(path.indexOf(v)!==-1){
+        this.setState({
+          location: v
+        })
+    }
+  }
 
   render() {
 
@@ -60,9 +74,9 @@ export default class Appbar extends Component {
 
     let issuesActive = (location === "issues") ? styles.active : "";
     let constituenciesActive = (location === "constituencies") ? styles.active : "";
-    let partiesActive = (location === "parties") ? styles.active : "";
-
+    let partiesActive = (location.indexOf("parties")!==-1) ? styles.active : "";
     let aboutActive = (location === "about") ? styles.active : "";
+    
 
     let symbol_parties = require('./images/symbols_parties.svg');
     let symbol_about = require('./images/symbols_about.svg');
