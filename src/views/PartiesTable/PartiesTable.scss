@@ -44,8 +44,9 @@ header {
 	position: fixed;
 	background: white;
     top: 0;
-    width: 100%;
+    width: calc(100% - 20px);
     max-width: 800px;
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.08);
 }
 .issueTitles {
 	display: flex;

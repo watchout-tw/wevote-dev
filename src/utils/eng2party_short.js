@@ -39,7 +39,7 @@ export default function eng2party_short(input){
       case 'DASG':
         return '大愛憲改';
       case 'CHTY':
-        return '中華統一';
+        return '統促黨';
       case 'NHSA':
         return '健保免費';
   
