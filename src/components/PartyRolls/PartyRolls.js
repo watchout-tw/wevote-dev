@@ -57,7 +57,9 @@ export default class PartyRolls extends Component {
               </div>
           </div>
       )
+      //標題字體svg
       let partyTitleImg = require(`./images/PartyNames_${focus.toLowerCase()}.svg`);
+      let partyListImg = require("./images/PartyNames_list.svg");
 
       //名單列表
       let nameEntryItems = list.map((v,i)=>{
@@ -92,8 +94,8 @@ export default class PartyRolls extends Component {
                   </section>
                   <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
                       <h2 className={styles.partyTitle}>
-                          <img src={partyTitleImg}
-                               className={styles.partyTitleImg}/>參戰名單
+                          <img src={partyTitleImg}/>
+                          <img src={partyListImg} />
                       </h2>
                   </div>
                   <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
