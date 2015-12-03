@@ -8,7 +8,7 @@ import eng2party_short from '../../utils/eng2party_short';
 import PKer from '../../components/PKer/PKer';
 @connect(
     state => ({
-                partyBlock: state.partyBlock   
+                partyBlock: state.partyBlock
               }),
     dispatch => bindActionCreators({}, dispatch))
 
@@ -40,22 +40,24 @@ export default class Parties extends Component {
       this.setState({
           focus: value,
           showMenu: false
-      })  
+      })
   }
   _setMenu(value, event){
       this.setState({
           showMenu: value
-      }) 
+      })
   }
   render() {
     const styles = require('./Parties.scss');
     const {partyBlock} = this.props;
     const {focus, showMenu} = this.state;
-   
+
     /* current display party */
     let data = partyBlock[focus];
     let list = partyBlock[focus].list || [];
 
+    let partyNameImage = require('./images/PartyNames_' + data.id.toLowerCase() + '.svg');
+    let partyNameListImage = require('./images/PartyNames_list.svg');
     let columnItems = list.map((v,i)=>{
         return <li>{v}</li>
     });
@@ -65,13 +67,14 @@ export default class Parties extends Component {
     })
     let partyRollItem = (
         <div className={styles.partyRoll}>
-              <h2 className={styles.partyTitle}>
-                  {data.title}參戰名單
-              </h2>
+          <p className={styles.partyTitle}>
+              <img src={partyNameImage} alt={data.title} />
+              <img src={partyNameListImage} alt="參戰名單" />
+          </p>
               <section className={columnClasses}>
                   <ol>{columnItems}</ol>
               </section>
-        </div> 
+        </div>
     );
 
     let menuClasses = classnames({
@@ -94,11 +97,11 @@ export default class Parties extends Component {
                 <i className="fa fa-times"></i>
               </div>
               <div className={`${styles.billboard} ${styles.left}`}>
-                  <PartyMenu side={1} 
+                  <PartyMenu side={1}
                              onChangeFocus={this._onChangeFocus.bind(this)}
                              focus={focus}/></div>
               <div className={`${styles.billboard} ${styles.right}`}>
-                  <PartyMenu side={2} 
+                  <PartyMenu side={2}
                              onChangeFocus={this._onChangeFocus.bind(this)}
                              focus={focus}/></div>
           </div>
@@ -154,7 +157,7 @@ class PartyMenu extends Component {
              onClick={onChangeFocus.bind(null,value.id)}>
              <PKer id={value.id} active={active} />
         </div>
-      ) 
+      )
     })
 
     return (
@@ -162,4 +165,3 @@ class PartyMenu extends Component {
     )
   }
 }
-

@@ -5,7 +5,7 @@ $rollWebBreak: 800px;
 	padding-bottom: 150px;
 	background-size: auto 100%;
 	position: relative;
-	background-image: 
+	background-image:
 		url('../images/grass-mobile.png');
 	background-repeat: repeat;
 	background-attachment:fixed;
@@ -16,17 +16,17 @@ $rollWebBreak: 800px;
 		background-size: 100% auto;
 		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
 		background-position: 0 0, 0 33vw, 0 0, 0 0, 0 30vw;
-		background-image: 
+		background-image:
 			url('../images/animal-web.png'),
 			url('../images/grass-web.png'),
 			url('../images/tree-web.png'),
 			url('../images/sky-web.png'),
 			url('../images/grass-repeat-web.png');
 	}
-	
+
 }
 .partyFlow {
-	
+
 }
 .partyRollItem {
 	display: inline-block;
@@ -46,7 +46,7 @@ $rollWebBreak: 800px;
 }
 .partyRoll {
 	vertical-align: top;
-	
+
     background-image: url('./images/main.png');
     background-size: 100%;
     width: 100vw;
@@ -72,23 +72,26 @@ $rollWebBreak: 800px;
 		display: inline-block;
 		margin: 0 auto;
 		vertical-align: top;
-		
+
 		border: none;
 		background-image: url('./images/roll.png');
 		background-size: 100%;
-	
+
 		width: 700px;
 		height: 680px;
-	
+
 	    padding: 140px 120px 10px 120px;
 	    overflow: hidden;
 
 	}
 }
-
+/*
 .partyTitle {
 	font-weight: bolder;
 	margin: 0 0 0 10px;
+}*/
+.partyTitle {
+	text-align: center;
 }
 .columnBlock {
 	min-height: 280px;
@@ -153,13 +156,13 @@ $rollWebBreak: 800px;
 }
 .partyMenuBlock {
 	max-height: 0;
-	overflow: hidden; 	
+	overflow: hidden;
 }
 .partyMenuBlock.show {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
-    
+
     height: 100vh;
     max-height: 2000px;
     top: 0;
@@ -242,7 +245,3 @@ $rollWebBreak: 800px;
 		margin-left: 0;
 	}
 }
-
-
-
-
