@@ -59,11 +59,11 @@ export default class PartiesTable extends Component {
       if(positionRect.top < 0 && positionEndRect.top > 100){
         current = "position";
       }
-      
+
       const {focus} = this.state;
 
       //console.log(positionRect.top + "," + positionEndRect.top);
-      
+
       if(current){
         if(focus !== current){
             this.setState({
@@ -92,9 +92,9 @@ export default class PartiesTable extends Component {
     const {tableData, focus} = this.state;
 
     let imgHub = {};
-    imgHub.aye = require("./images/promise-aye.png")
-    imgHub.nay = require("./images/promise-nay.png")
-    imgHub.none = require("./images/promise-none.png")
+    imgHub.aye = require("./images/answers_aye.svg")
+    imgHub.nay = require("./images/answers_nay.svg")
+    imgHub.none = require("./images/answers_unknown.svg")
 
 
     let issueTitles = Object.keys(issues).map((issueId, i)=>{
@@ -106,7 +106,7 @@ export default class PartiesTable extends Component {
         let party = tableData[partyId];
         //政黨名稱
         let partyName = <div className={styles.partyName}>
-                          <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`} 
+                          <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}
                                 to={`/parties/${party.id}/records/`}>{party.name}</Link>
                         </div>;
 
@@ -125,15 +125,15 @@ export default class PartiesTable extends Component {
                       <Link className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}
                             to={`/parties/${party.id}/records/${eng2url(issueName)}`}></Link>
                   </div>
-                  <img className={styles.promise} 
+                  <img className={styles.promise}
                        src={`${imgHub[pos.promise]}`} />
               </div>
             )
         })
-       
+
         return <div className={styles.partyEntry}>{partyName}{positions}</div>
     });
-   
+
     let legendImg = require("./images/legend.png");
 
     //title class, 處理 scroll fixed on top
