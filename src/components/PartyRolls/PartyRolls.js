@@ -12,11 +12,29 @@ export default class PartyRolls extends Component {
     constructor(props){ super(props)
         this.state = {
             focus: "KMT",
-            showMenu: false
+            showMenu: false,
+            outside: false
         }
     }
+    _onScroll(){  
+      const {outside} = this.state;
+      let footerNode = document.getElementById("pbFooter");
+      let footerRect = footerNode.getBoundingClientRect();
+      let current = (footerRect.top - window.innerHeight < 0) ? true : false;
+      if(current!==outside){
+        this.setState({
+          outside: current
+        })
+      }
+    }
+    componentDidMount(){
+        window.addEventListener("scroll", this._onScroll.bind(this));
+    }
+    componentWillUnmount(){
+       window.removeEventListener("scroll", this._onScroll.bind(this));
+    }
     _onChangeFocus(value, event){
-        console.log(value)
+        window.scrollTo(0,0);
         this.setState({
             focus: value,
             showMenu: false
@@ -30,30 +48,34 @@ export default class PartyRolls extends Component {
     render(){
       const styles = require("./PartyRolls.scss");
       const {partyBlock} = this.props;
-      const {focus, showMenu} = this.state;
+      const {focus, showMenu, outside} = this.state;
+      
       /* current display party */
       let data = partyBlock[focus];
       let list = partyBlock[focus].list || [];
 
-      
-   
+      let wrapClasses = classnames({
+        [styles.pbWrap]: true,
+        [styles.show] : showMenu === true
+      })
       let menuClasses = classnames({
         [styles.partyMenuBlock]: true,
         [styles.show] : showMenu === true
       })
-      let mobileMenuToggle = (
-          <div>
+      let mobileMenuButtonClasses = classnames({
+        [styles.mobileMenuButton]: true,
+        [styles.hide] : outside === true
+      })
+      //mobile 選單: 選擇 & 關閉
+      let mobileMenuButton = (
+          <div className={mobileMenuButtonClasses}>
               <div className={styles.closeMenu}
                    onClick={this._setMenu.bind(this, false)}>
                    <i className="fa fa-times"></i>
               </div>
-              <div className={styles.toggleMenu}>
-                <div className={styles.partyMenuItem}
-                     onClick={this._setMenu.bind(this, true)}>
-                    <div className={styles.innerHexagon}>
-                      選擇<i className={`fa fa-sort-desc ${styles.toggleIcon}`}></i>
-                    </div>
-                </div>
+              <div className={styles.toggleMenu}
+                    onClick={this._setMenu.bind(this, true)}>
+                  <i className={`fa fa-map-o ${styles.toggleIcon}`}></i>
               </div>
           </div>
       )
@@ -73,9 +95,8 @@ export default class PartyRolls extends Component {
       });
       
       return (
-          <div className={styles.pbWrap}>
-              {mobileMenuToggle}
-              
+          <div className={wrapClasses} id="pbWrap">
+              {mobileMenuButton}
               <div className={menuClasses}>
                   <div className={`${styles.billboard} ${styles.left}`}>
                       <PartyMenu side={1} 
@@ -88,7 +109,6 @@ export default class PartyRolls extends Component {
               </div>
           
               <div className={styles.partyWrap}>
-                  
                   <section className={styles.partyRoll}>
                     <ol>{nameEntryItems}</ol>
                   </section>
@@ -98,9 +118,8 @@ export default class PartyRolls extends Component {
                           <img src={partyListImg} />
                       </h2>
                   </div>
-                  <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
-                 
-                  
+                  <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}
+                       id="pbFooter"></div>
               </div>
 
           </div>
@@ -116,11 +135,9 @@ export default class PartyRolls extends Component {
     dispatch => bindActionCreators({}, dispatch))
 
 class PartyMenu extends Component {
-  
-  render(){
-    const {parties, partyBlock, side, onChangeFocus, focus} = this.props;
-    const styles = require("./PartyRolls.scss");
-
+  constructor(props){ super(props)
+    const {partyBlock, parties} = props;
+    //prepare 左右兩邊的政黨列表
     let side1parties = [], side2parties = [];
     Object.keys(partyBlock)
           .map((partyId, index)=>{
@@ -129,12 +146,23 @@ class PartyMenu extends Component {
               }else{
                  side2parties.push(parties[partyId])
               }
-          })
+          });
+
+    this.state = {
+      side1parties: side1parties,
+      side2parties: side2parties
+    }
+  }
+  render(){
+    const {side, onChangeFocus, focus} = this.props;
+    const {side1parties, side2parties} = this.state;
+    const styles = require("./PartyRolls.scss");
+
     let currentSide = (side ===1) ? side1parties : side2parties;
     let partyMenuItems = currentSide.map((value, index)=>{
       let active = (focus === value.id);
       return (
-        <div className={styles.partyMenuItem}
+        <div className={styles.partyItem}
              key={`side-${side}-${index}`}
              onClick={onChangeFocus.bind(null,value.id)}>
              <PKer id={value.id} active={active} />

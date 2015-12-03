@@ -1,4 +1,6 @@
-$rollWebBreak: 800px;
+@import '../../common.scss';
+$rollSmallBreak: 500px;
+$rollLargeBreak: 800px;
 .pbWrap {
 	position: relative;
 	text-align: center;
@@ -24,12 +26,22 @@ $rollWebBreak: 800px;
 	right: 0;
 }
 .partyRollEndpoint.top {
-	top: 0px;
+	top: 30px;
+}
+@media all and (min-width: $rollSmallBreak) and (max-width: $rollLargeBreak){
+	.partyRollEndpoint.top {
+		top: 20px;
+	}
+}
+@media all and (min-width: $rollLargeBreak){
+	.partyRollEndpoint.top {
+		top: 0px;
+	}
 }
 .partyRollEndpoint.bottom {
-	bottom: 40px;
+	bottom: -15vw;
 }
-@media all and (min-width: $rollWebBreak){
+@media all and (min-width: $rollLargeBreak){
 	.partyRollEndpoint {
 		width: 700px;
 		height: 140px;
@@ -44,15 +56,20 @@ $rollWebBreak: 800px;
     line-height: 1.4;
     
     display: inline-block;
-    margin: 30px auto 0 auto;
+    margin: 40px auto 0 auto;
     
     background-image: url(./images/main.png);
     background-size: 100%;
     width: 100vw;
     min-height: 100vw;
-    padding: 30px 40px 0px 10px;
+    padding: 20vw 13vw 80px 6vw;
 }
-@media all and (min-width: $rollWebBreak){
+@media all and (min-width: $rollSmallBreak) and (max-width: $rollLargeBreak){
+	.partyRoll {
+		padding: 20vw 13vw 80px 8vw;
+	}
+}
+@media all and (min-width: $rollLargeBreak){
 	.partyRoll {
 		width: 700px;
 		min-height: 600px;
@@ -65,10 +82,10 @@ $rollWebBreak: 800px;
 */
 
 .partyTitle {
-	margin-top: calc(30px + 10vw);
+	margin-top: 8vw;
 	font-size: 20px;
 }
-@media all and (min-width: $rollWebBreak){
+@media all and (min-width: $rollLargeBreak){
 	.partyTitle {
 		margin-top: 50px;
 		padding-top: 10px;
@@ -80,16 +97,27 @@ $rollWebBreak: 800px;
 	margin: 0;
 }
 .partyRoll li{
-	display: flex;
+	margin: 0 0 8px 18px;
 }
 .partyEntryCount{
-	flex: 40px 0 0;
-	text-align: right;
+	display: none;
 }
+@media all and (min-width: $rollSmallBreak){
+	.partyRoll li{
+		display: flex;
+		margin: 6px 0;
+	}
+	.partyEntryCount{
+		display: block;
+		flex: 40px 0 0;
+		text-align: right;
+	}
+}
+
 .peopleEntryName {
 	font-size: 18px;
 	font-weight: 600;
-	flex: 100px 0 0;
+	flex: 60px 0 0;
 }
 .peopleEntryInfo {
 	color: rgb(27, 25, 25);
@@ -100,24 +128,40 @@ $rollWebBreak: 800px;
 
 
 /* -----
- 左右方政黨選單
+政黨列表選單
  */
+
+.mobileMenuButton {
+ 	position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    background: $awesomeColor;
+    color: white;
+    border-radius: 100%;
+    box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.2);
+}
+.mobileMenuButton.hide {
+	display: none;
+}
+.pbWrap.show .mobileMenuButton{
+	z-index: 201;
+}
+@media all and (min-width: $rollLargeBreak){
+	.mobileMenuButton {
+		display: none;
+	}
+}
 .toggleMenu {
-	position: absolute;
-	right: 50px;
-	top: 20px;
-	z-index: 1;
-}
-.partyMenuItem {
-	display: inline-block;
-	margin: 16px 4px;
-	cursor: pointer;
-    text-align: center;
-    font-weight: 600;
-}
-.toggleIcon {
-	margin: 0 4px;
 	vertical-align: top;
+	padding-top: 17px;
+	font-size: 22px;
+	cursor: pointer;
+}
+.pbWrap.show .toggleMenu {
+	display: none;
 }
 .partyMenuBlock {
 	max-height: 0;
@@ -138,19 +182,15 @@ $rollWebBreak: 800px;
     background: rgba(0,0,0,0.82);
 }
 .closeMenu {
-	position: absolute;
-    right: 30px;
-    top: 20px;
-    z-index: 1;
-    cursor: pointer;
-    color: white;
-    font-size: 30px;
+	cursor: pointer;
+	font-size: 30px;
+	padding-top: 10px;
     display: none;
 }
-.partyMenuBlock.show .closeMenu {
+.pbWrap.show .closeMenu {
 	display: block;
 }
-@media all and (min-width: $rollWebBreak){
+@media all and (min-width: $rollLargeBreak){
 	.toggleMenu { display: none; }
 	.partyMenuBlock {
 		position: fixed;
@@ -160,7 +200,7 @@ $rollWebBreak: 800px;
     	top: 20vw;
 	}
 }
-
+/* 左右兩塊 */
 .billboard {
 	text-align: center;
 	z-index: 10;
@@ -173,8 +213,16 @@ $rollWebBreak: 800px;
 	width: 280px;
 	margin-top: 40px;
 }
-@media all and (min-width: $rollWebBreak){
-	.billboard {
+@media all and (min-width: $rollSmallBreak){
+	.billboard.left {
+		max-width: 240px;
+	}
+	.billboard.right {
+		max-width: 280px;
+	}
+}
+@media all and (min-width: $rollLargeBreak){
+	.billboard, .billboard.left, .billboard.right {
 		position: absolute;
 		margin: 0;
 		width: calc(50vw - 280px);
@@ -190,4 +238,10 @@ $rollWebBreak: 800px;
 		float: left;
 		margin: 0;
 	}
+}
+.partyItem {
+	display: inline-block;
+	margin: 16px 4px;
+	text-align: center;
+	cursor: pointer;
 }
