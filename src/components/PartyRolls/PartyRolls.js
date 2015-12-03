@@ -35,15 +35,7 @@ export default class PartyRolls extends Component {
       let data = partyBlock[focus];
       let list = partyBlock[focus].list || [];
 
-      //名單列表
-      let columnItems = list.map((v,i)=>{
-        return (
-          <li>
-            <div className={styles.peopleEntryName}>{v.name}</div>
-            <div className={styles.peopleEntryInfo}>{v.info}</div>
-          </li>
-        )
-      });
+      
    
       let menuClasses = classnames({
         [styles.partyMenuBlock]: true,
@@ -66,6 +58,17 @@ export default class PartyRolls extends Component {
           </div>
       )
       let partyTitleImg = require(`./images/PartyNames_${focus.toLowerCase()}.svg`);
+
+      //名單列表
+      let nameEntryItems = list.map((v,i)=>{
+        return (
+          <li>
+            <div className={styles.partyEntryCount}>{i+1}・</div>
+            <div className={styles.peopleEntryName}>{v.name}</div>
+            <div className={styles.peopleEntryInfo}>{v.info}</div>
+          </li>
+        )
+      });
       
       return (
           <div className={styles.pbWrap}>
@@ -83,17 +86,19 @@ export default class PartyRolls extends Component {
               </div>
           
               <div className={styles.partyWrap}>
-                  <div className={styles.partyRollTop}>
+                  
+                  <section className={styles.partyRoll}>
+                    <ol>{nameEntryItems}</ol>
+                  </section>
+                  <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
                       <h2 className={styles.partyTitle}>
                           <img src={partyTitleImg}
                                className={styles.partyTitleImg}/>參戰名單
                       </h2>
                   </div>
-                  <div className={styles.partyRoll}>
-                      <section className={styles.columnBlock}>
-                          <ol>{columnItems}</ol>
-                      </section>
-                  </div> 
+                  <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
+                 
+                  
               </div>
 
           </div>
