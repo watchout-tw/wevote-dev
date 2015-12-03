@@ -11,7 +11,7 @@ import {connect} from 'react-redux';
 export default class Home extends Component {
   render() {
     const styles = require('./Home.scss');
-    
+
     const title = "沃草！立委出任務 - 2016立委投票攻略";
     const description = "2016立委選舉票該投給誰？「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委與下任候選人立場，並分析政黨針對議題的整體立場。想透過議題更了解你的選區立委嗎？請上「立委出任務」！";
     const metaData = {
@@ -24,6 +24,18 @@ export default class Home extends Component {
         'og:type' : 'website'
       }
     };
+
+    let stonehenge = require('./images/stonehenge.png');
+    let stargate = require('./images/stargate.png');
+
+    let mountain = require('./images/mountain.png');
+    let field = require('./images/field.png');
+    let coliseum = require('./images/coliseum.png');
+
+    let symbols_issues = require('./images/symbols_issues.svg');
+    let symbols_parties = require('./images/symbols_parties.svg');
+    let symbols_constituencies = require('./images/symbols_constituencies.svg');
+
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
@@ -36,6 +48,26 @@ export default class Home extends Component {
                 <Link to={`/embed`}>embed</Link>
               </div>
 
+              <div className={styles.sky}></div>
+              <img src={stonehenge} className={styles.stonehenge}/>
+              <div className={styles.stargates}>
+                <Link className={styles.stargate} to={`/issues/`}>
+                  <img src={mountain} className={styles.destination}/>
+                  <img src={stargate} className={styles.glow}/>
+                  <div><img src={symbols_issues} className={styles.icon}/><p className={styles.title}>議題攻城戰</p></div>
+                </Link>
+                <Link className={styles.stargate} to={`/parties/`}>
+                  <img src={field} className={styles.destination}/>
+                  <img src={stargate} className={styles.glow}/>
+                  <div><img src={symbols_parties} className={styles.icon}/><p className={styles.title}>黨團衝突戰</p></div>
+                </Link>
+                <Link className={styles.stargate}>
+                  <img src={coliseum} className={styles.destination}/>
+                  <img src={stargate} className={styles.glow}/>
+                  <div><img src={symbols_constituencies} className={styles.icon}/><p className={styles.title}>勇者競技場</p></div>
+                </Link>
+              </div>
+
               <Link className={styles.tempLink} to={`/issues/`}>議題攻城戰</Link>
               <Link className={styles.tempLink} to={`/parties/`}>黨團衝突戰</Link>
               <div className={styles.tempLink}>勇者競技場<br/>(12/10 啟動)</div>
@@ -45,6 +77,3 @@ export default class Home extends Component {
     );
   }
 }
-
-
-

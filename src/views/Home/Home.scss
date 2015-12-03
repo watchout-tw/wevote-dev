@@ -2,7 +2,7 @@
 $breakMedium: 600px;
 $breakLarge: 800px;
 .innerWrap {
-  padding: 20vh 0;
+  //padding: 20vh 0;
   text-align: center;
 }
 .tempLink, .tempLink:visited {
@@ -14,6 +14,7 @@ $breakLarge: 800px;
   margin: 10px;
   height: 100px;
   vertical-align: top;
+  display: none;
 }
 /* ------------- */
 .home {
@@ -29,6 +30,63 @@ $breakLarge: 800px;
   border-top: 1px solid rgb(232, 246, 251);
 }
 .innerWrap {
-  max-width: 1200px;
+  //max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+}
+
+.sky {
+  width: 100%;
+  min-height: 600px;
+  background-image: url(./images/sky.png);
+  background-size: cover;
+  background-position: center center;
+}
+.stonehenge {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.stargates {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+
+  .stargate {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s ease;
+
+    &, &:active, &:visited {
+      text-decoration: none;
+      color: $black;
+    }
+    &:hover {
+      transform: scale(1.5);
+      -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+      filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+    }
+    .destination {
+      display: block;
+      width: 320px;
+    }
+    .glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 320px;
+    }
+    .icon {
+      display: block;
+      width: 32px;
+      margin: 0 auto;
+    }
+    .title {
+      text-align: center;
+      margin: 0;
+    }
+  }
 }
