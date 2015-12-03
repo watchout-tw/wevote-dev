@@ -36,6 +36,8 @@ export default class Home extends Component {
     let symbols_parties = require('./images/symbols_parties.svg');
     let symbols_constituencies = require('./images/symbols_constituencies.svg');
 
+    let lock = require('./images/lock.png');
+
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
@@ -48,24 +50,24 @@ export default class Home extends Component {
                 <Link to={`/embed`}>embed</Link>
               </div>
 
-              <div className={styles.sky}></div>
               <img src={stonehenge} className={styles.stonehenge}/>
-              <div className={styles.stargates}>
+              <div className={styles.sky}>
                 <Link className={styles.stargate} to={`/issues/`}>
                   <img src={mountain} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
-                  <div><img src={symbols_issues} className={styles.icon}/><p className={styles.title}>議題攻城戰</p></div>
+                  <div className={styles.label}><img src={symbols_issues} className={styles.icon}/><p className={styles.title}>議題攻城戰</p></div>
                 </Link>
                 <Link className={styles.stargate} to={`/parties/`}>
                   <img src={field} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
-                  <div><img src={symbols_parties} className={styles.icon}/><p className={styles.title}>黨團衝突戰</p></div>
+                  <div className={styles.label}><img src={symbols_parties} className={styles.icon}/><p className={styles.title}>黨團衝突戰</p></div>
                 </Link>
-                <Link className={styles.stargate}>
+                <div className={styles.stargate}>
                   <img src={coliseum} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
-                  <div><img src={symbols_constituencies} className={styles.icon}/><p className={styles.title}>勇者競技場</p></div>
-                </Link>
+                  <img src={lock} className={styles.lock}/>
+                  <div className={styles.label}><img src={symbols_constituencies} className={styles.icon}/><p className={styles.title}>勇者競技場</p></div>
+                </div>
               </div>
 
               <Link className={styles.tempLink} to={`/issues/`}>議題攻城戰</Link>

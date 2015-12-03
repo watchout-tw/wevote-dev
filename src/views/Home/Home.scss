@@ -1,6 +1,6 @@
 @import '../../common.scss';
-$breakMedium: 600px;
-$breakLarge: 800px;
+$break: 1024px;
+
 .innerWrap {
   //padding: 20vh 0;
   text-align: center;
@@ -34,24 +34,18 @@ $breakLarge: 800px;
   width: 100%;
   margin: 0 auto;
 }
-
-.sky {
-  width: 100%;
-  min-height: 600px;
-  background-image: url(./images/sky.png);
-  background-size: cover;
-  background-position: center center;
-}
 .stonehenge {
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.stargates {
-  position: absolute;
-  bottom: 80px;
+.sky {
   width: 100%;
+  padding: 200px 0 100px;
+  background-image: url(./images/sky.png);
+  background-size: cover;
+  background-position: center center;
   text-align: center;
   cursor: pointer;
 
@@ -64,29 +58,35 @@ $breakLarge: 800px;
       text-decoration: none;
       color: $black;
     }
-    &:hover {
-      transform: scale(1.5);
-      -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
-      filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
-    }
     .destination {
       display: block;
       width: 320px;
     }
-    .glow {
+    .glow, .lock {
       position: absolute;
       top: 0;
       left: 0;
       width: 320px;
     }
-    .icon {
-      display: block;
-      width: 32px;
-      margin: 0 auto;
+    .label {
+      margin-top: -20px;
+      .icon {
+        display: block;
+        width: 32px;
+        margin: 0 auto;
+      }
+      .title {
+        text-align: center;
+        margin: 0;
+      }
     }
-    .title {
-      text-align: center;
-      margin: 0;
-    }
+  }
+}
+@media all and (min-width: $break) {
+  .stargate:hover {
+    transform: scale(1.5);
+    -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+    filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+
   }
 }

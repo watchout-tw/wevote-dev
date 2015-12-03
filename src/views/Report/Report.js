@@ -195,8 +195,8 @@ export default class Report extends Component {
         <div className={styles.footerSection} ref="SPfooterSection">
 
           <ul>
-            <li>統計資料範圍：2015/11/03 - 2015/11/06</li>
-            <li>澄清請 email 至 wevote@watchout.tw</li>
+            <li>統計資料範圍：2015/11/03—2015/11/06</li>
+            <li>澄清請email至wevote@watchout.tw</li>
           </ul>
 
         </div>
@@ -206,14 +206,14 @@ export default class Report extends Component {
   }
 }
 class Fig extends Component {
-    
+
     _scrollTo(value, e){
         let target = $("#Section"+value);
-  
+
         $("html,body").animate({
             scrollTop: target.offset().top
         }, 500);
-  
+
     }
 
     render(){
@@ -224,15 +224,15 @@ class Fig extends Component {
 
         let chapters = (
             <div>
-                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 1)}>***時間大事紀告訴你到底發生了什麼事？</div></div>
-                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 2)}>***勇者黨團又各有什麼立場？</div></div>
-                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 3)}>***立委勇者又各自說了什麼話？</div></div>
+                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 1)}><span className={styles.hand}>☞</span>時間大事紀告訴你到底發生了什麼事？</div></div>
+                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 2)}><span className={styles.hand}>☞</span>勇者黨團又各有什麼立場？</div></div>
+                <div className={styles.chapterItem}><div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 3)}><span className={styles.hand}>☞</span>立委勇者又各自說了什麼話？</div></div>
             </div>
         )
         let backToContents = (
             <div>
               <div className={styles.chapterItem}>
-                <div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 0)}>《回到出發點》</div></div>
+                <div className={styles.chapterItemText} onClick={this._scrollTo.bind(this, 0)}><span className={styles.hand}>☞</span>回到出發點</div></div>
                 {chapters}
             </div>
         )
@@ -243,12 +243,12 @@ class Fig extends Component {
                     <h1 id="Section0">警鐘響起！【馬習會】特殊副本深夜來襲～</h1>
                     <p>即將卸任的島嶼總統，為了兩塊土地的和平和一個握手的心願，<br/>
                        在費盡千辛萬苦後，終於促成這次歷史性的會面──11/7決戰新加坡！</p>
-    
+
                     <p>但因為沒有跟民主殿堂的立委勇者們進行事前溝通，當消息走漏時引發了軒然大波。<br/>
                        有些勇者認為是黑箱會議，有些勇者則認為這是為了兩岸和平。</p>
-    
+
                     {chapters}
-                    
+
                     <p>你不可錯過的世紀之戰，快往下進入副本！</p>
 
                 </div>
@@ -267,7 +267,7 @@ class Fig extends Component {
                     <p>目前看來，民進黨沒有其他反制或出招，也受到社民黨批評未盡在野黨監督責任，認為民進黨既不採取體制內彈劾、罷免、釋憲等手段，也不採取體制外抗議。面對國民黨的出招，民進黨被動防禦，下週立院的攻防會如何進行？週六（7日）馬習會決戰新加坡，也將點燃立院的新戰場。</p>
                     {backToContents}
                 </div>
-                
+
 
                 <img src={fig2} className={styles.figCover}
                      id="Section2" />
@@ -283,7 +283,7 @@ class Fig extends Component {
                        註2：政黨圖的大小依照發言次數比例。</p>
                     {backToContents}
                 </div>
-                
+
 
                 <img src={fig3} className={styles.figCover}
                      id="Section3" />
@@ -320,7 +320,7 @@ class Fig extends Component {
                     <p>台灣政治的一個特點，就是立委都不只在立法院內處理問題，更經常在立法院外的媒體上交鋒。馬習會這次引起的爭議，也有類似現象。國民黨立委面對一開始民進黨立委在內政委員會挑起的「變更議程」之戰，選擇消極避戰不開會，而是在媒體上大動作開記者會，反批民進黨「鬼叫」。當國民黨出招「國情報告」而民進黨被動防禦後，更是在媒體上批判民進黨「假監督」。這些立法院外的口水砲，雖然增加了許多看頭，但是對於馬習會是否黑箱、國會如何監督等問題，其實沒有太大幫助。仍應回歸到立院內的表態，避免一再因爭議而延宕議事，才是立委的職責所在。</p>
                     {backToContents}
                 </div>
-                
+
 
             </div>
         )
