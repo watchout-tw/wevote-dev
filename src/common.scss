@@ -107,16 +107,21 @@ $noneColor: gray;
   width: 74px;
   height: 74px;
 }
-.partyFlag.KMT { background-image: url(images/flag-kmt.svg); }
-.partyFlag.DPP { background-image: url(images/flag-dpp.svg); }
-.partyFlag.GSD { background-image: url(images/flag-gsd.svg); }
-.partyFlag.MKT { background-image: url(images/flag-mkt.svg); }
-.partyFlag.NONE { background-image: url(images/flag-none.svg); }
-.partyFlag.NP { background-image: url(images/flag-np.svg); }
-.partyFlag.NPP { background-image: url(images/flag-npp.svg); }
-.partyFlag.PFP { background-image: url(images/flag-pfp.svg); }
-.partyFlag.TSU { background-image: url(images/flag-tsu.svg); }
-.partyFlag.NSU { background-image: url(images/flag-nsu.svg); }
+$parties: 'chty','dasg','dpp','fhl','ftp','gsd','kmt','mcfap','mkt','mpr','nhsa','none','np','npp','nsu','pfp','ppu','tip','tp','tsu';
+@each $party in $parties {
+  .partyFlag.#{to-upper-case($party)} { background-image: url(images/flags_#{$party}.svg); };
+}
 
-
-
+/*
+.partyFlag.CHTY { background-image: url(images/flag_chty.svg); }
+.partyFlag.KMT { background-image: url(images/flag_kmt.svg); }
+.partyFlag.DPP { background-image: url(images/flag_dpp.svg); }
+.partyFlag.GSD { background-image: url(images/flag_gsd.svg); }
+.partyFlag.MKT { background-image: url(images/flag_mkt.svg); }
+.partyFlag.NONE { background-image: url(images/flag_none.svg); }
+.partyFlag.NP { background-image: url(images/flag_np.svg); }
+.partyFlag.NPP { background-image: url(images/flag_npp.svg); }
+.partyFlag.PFP { background-image: url(images/flag_pfp.svg); }
+.partyFlag.TSU { background-image: url(images/flag_tsu.svg); }
+.partyFlag.NSU { background-image: url(images/flag_nsu.svg); }
+*/

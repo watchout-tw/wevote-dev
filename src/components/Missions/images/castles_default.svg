@@ -3,16 +3,18 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px"
 	 height="320px" viewBox="0 0 320 320" enable-background="new 0 0 320 320" xml:space="preserve">
+<g id="Layer_3">
+</g>
 <g id="Layer_1">
-	<polygon fill="none" stroke="#CCCCCC" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" points="105.072,207.652 
+	<polygon fill="none" stroke="#CCCCCC" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" points="105.072,207.652 
 		160,179.436 214.928,207.652 160,233.803 	"/>
-	<polygon fill="none" stroke="#CCCCCC" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" points="160.5,125.672 
-		204.292,150.955 160.5,176.238 	"/>
+	<polygon fill="none" stroke="#CCCCCC" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="160,125.672 
+		203.792,150.955 160,176.238 	"/>
 	
 		<line fill="none" stroke="#CCCCCC" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="160" y1="207" x2="160" y2="126"/>
-	<polygon fill="none" stroke="#29ABE2" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" points="160,289.544 
+	<polygon fill="none" stroke="#808080" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" points="160,289.544 
 		105.072,263.393 105.072,207.652 160,233.803 	"/>
-	<polygon fill="none" stroke="#00FFFF" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" points="160,289.544 
+	<polygon fill="none" stroke="#E6E6E6" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" points="160,289.544 
 		214.928,263.393 214.928,207.652 160,233.803 	"/>
 </g>
 <g id="Layer_2" display="none">
