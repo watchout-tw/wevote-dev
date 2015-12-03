@@ -1,248 +1,26 @@
 @import '../../common.scss';
 @import '../../styles/actionButton.scss';
-$rollWebBreak: 800px;
 .wrap {
-	padding-bottom: 150px;
-	background-size: auto 100%;
-	position: relative;
-	background-image: 
-		url('../images/grass-mobile.png');
-	background-repeat: repeat;
-	background-attachment:fixed;
+	min-height: 60vw;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-image: url('../images/bg-web.png');
 }
-@media all and (min-width:$rollWebBreak){
-	.wrap {
-		background-attachment: scroll;
-		background-size: 100% auto;
-		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-		background-position: 0 0, 0 33vw, 0 0, 0 0, 0 30vw;
-		background-image: 
-			url('../images/animal-web.png'),
-			url('../images/grass-web.png'),
-			url('../images/tree-web.png'),
-			url('../images/sky-web.png'),
-			url('../images/grass-repeat-web.png');
-	}
-	
-}
+
 /* 說明 */
+.initialWrap {
+	padding-top: 40px;
+}
 .story {
 	max-width: 400px;
-    margin: 0px auto;
-    padding: 70px 20px 20px 20px;
+    margin: 0px auto 40px auto;
+    padding: 20px;
     line-height: 1.6;
-    color: white;
+    background: white;
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
 }
 .actions {
 	text-align: center;
 }
-
-/* 名單 */
-.pbWrap {
-	position: relative;
-}
-.partyFlow {
-	
-}
-.partyRollItem {
-	display: inline-block;
-}
-.partyWrap {
-	display: inline-block;
-	margin: 50px auto;
-}
-.partyRollTop {
-	background-image: url('./images/top.png');
-	background-size: 100%;
-
-	width: 100vw;
-    height: calc(0.2 * 100vw);
-    position: absolute;
-    top: 0px;
-}
-.partyRoll {
-	vertical-align: top;
-	
-    background-image: url('./images/main.png');
-    background-size: 100%;
-    width: 100vw;
-    height: 100vw;
-    padding: 10vw 14vw;
-
-    border-bottom: 5px solid #423902;
-    overflow: scroll;
-}
-
-@media all and (min-width: $rollWebBreak){
-	.partyWrap {
-		display: block;
-	}
-	.partyFlow {
-		text-align: center;
-	}
-	.partyRollTop {
-		display: none;
-	}
-	.partyRoll {
-		text-align: left;
-		display: inline-block;
-		margin: 0 auto;
-		vertical-align: top;
-		
-		border: none;
-		background-image: url('./images/roll.png');
-		background-size: 100%;
-	
-		width: 700px;
-		height: 680px;
-	
-	    padding: 30px 80px 10px 80px;
-	    overflow: hidden;
-
-	}
-}
-.columnBlock {
-	min-height: 280px;
-    overflow: hidden;
-    padding-top: 10px;
-    font-size: 18px;
-    line-height: 1.4;
-}
-.partyTitle {
-	font-weight: bolder;
-	font-size: 20px;
-}
-@media all and (min-width: $rollWebBreak){
-	.partyTitle {
-		font-size: 20px;
-		padding-top: 10px;
-		text-align: center;
-	}
-	.columnBlock {
-		font-size: 16px;
-		height: auto;
-		margin-top: 50px;
-	}
-}
-.columnBlock ol{
-	margin: 0;
-}
-.columnBlock li{
-	display: flex;
-}
-.peopleEntryName {
-	font-size: 18px;
-	font-weight: 600;
-	flex: 100px 0 0;
-}
-.peopleEntryInfo {
-	color: rgb(27, 25, 25);
-	flex: 1;
-	padding-top: 2px;
-}
-/* -----
- 左右方政黨選單
- */
-.toggleMenu {
-	position: absolute;
-	right: 50px;
-	top: 20px;
-	z-index: 1;
-}
-.partyMenuItem {
-	display: inline-block;
-	margin: 12px 4px;
-	cursor: pointer;
-    text-align: center;
-    font-weight: 600;
-}
-.toggleIcon {
-	margin: 0 4px;
-	vertical-align: top;
-}
-.partyMenuBlock {
-	max-height: 0;
-	overflow: hidden; 	
-}
-.partyMenuBlock.show {
-	position: relative;
-	width: 100%;
-	margin: 0 auto;
-    
-    height: 100vh;
-    max-height: 2000px;
-    top: 0;
-    position: fixed;
-    padding-top: 120px;
-    z-index: 200;
-    background: rgba(0,0,0,0.82);
-}
-.closeMenu {
-	position: absolute;
-    right: 30px;
-    top: 20px;
-    z-index: 1;
-    cursor: pointer;
-    color: white;
-    font-size: 30px;
-    display: none;
-}
-.partyMenuBlock.show .closeMenu {
-	display: block;
-}
-@media all and (min-width: $rollWebBreak){
-	.toggleMenu { display: none; }
-	.partyMenuBlock {
-		position: absolute;
-    	width: 100%;
-    	margin: 0 auto;
-    	overflow: visible;
-    	top: 20vw;
-	}
-}
-.billboard {
-	text-align: center;
-	z-index: 10;
-	margin: 0 auto;
-}
-.billboard.left {
-	width: 240px;
-}
-.billboard.right {
-	width: 280px;
-	margin-top: 40px;
-}
-.billboard.right .partyMenuItem:nth-child(5) {
-	margin-left: 11px;
-}
-.billboard.right .partyMenuItem:nth-child(8) {
-	margin-left: 80px;
-}
-@media all and (min-width: $rollWebBreak){
-	.billboard {
-		position: absolute;
-		margin: 0;
-	}
-	.billboard.left {
-		left: 0px;
-		width: 310px;
-		text-align: right;
-	}
-	.billboard.left .partyMenuItem:nth-child(8) {
-		margin-right: 37px;
-	}
-	.billboard.right {
-		right: 0px;
-		width: 320px;
-		float: left;
-		margin: 0;
-	}
-	
-	.billboard.right .partyMenuItem:nth-child(8) {
-		margin-left: 0;
-	}
-}
-
-
-
-
