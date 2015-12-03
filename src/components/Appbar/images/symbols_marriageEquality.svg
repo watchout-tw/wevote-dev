@@ -4,14 +4,12 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
 	 height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
 <g id="Layer_1">
-	<g>
-		<polygon fill="#29ABE2" points="11.867,27.573 6.391,24.966 6.391,9.008 11.867,11.615 		"/>
-		<polygon fill="#00FFFF" points="11.867,27.573 17.342,24.966 17.342,9.008 11.867,11.615 		"/>
-		<polygon fill="#29ABE2" points="20.138,27.573 16.036,25.602 16.036,9.644 20.138,11.615 		"/>
-		<polygon fill="#00FFFF" points="20.138,27.573 25.614,24.966 25.614,9.008 20.138,11.615 		"/>
-		<polygon fill="#CCCCCC" points="14.663,9.008 20.138,6.195 25.614,9.008 20.138,11.615 		"/>
-		<polygon fill="#CCCCCC" points="6.391,9.008 11.867,6.195 17.342,9.008 11.867,11.615 		"/>
-	</g>
+	<polygon fill="#808080" points="11.867,27.573 6.391,24.966 6.391,9.008 11.867,11.615 	"/>
+	<polygon fill="#E6E6E6" points="11.867,27.573 17.342,24.966 17.342,9.008 11.867,11.615 	"/>
+	<polygon fill="#808080" points="20.138,27.573 16.036,25.602 16.036,9.644 20.138,11.615 	"/>
+	<polygon fill="#E6E6E6" points="20.138,27.573 25.614,24.966 25.614,9.008 20.138,11.615 	"/>
+	<polygon fill="#CCCCCC" points="14.663,9.008 20.138,6.195 25.614,9.008 20.138,11.615 	"/>
+	<polygon fill="#CCCCCC" points="6.391,9.008 11.867,6.195 17.342,9.008 11.867,11.615 	"/>
 </g>
 <g id="Layer_2" display="none">
 </g>
