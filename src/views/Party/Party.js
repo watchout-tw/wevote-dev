@@ -255,7 +255,7 @@ class PartyBlock extends Component {
                  key={`pb-${i}`}>
                 <div>
                     <span className={styles.pbCount}>{i+1}</span>・{nameItem}</div>
-                <div className={styles.pbInfo}>{value.info}六個中文字哇啦</div>
+                <div className={styles.pbInfo}>{value.info}</div>
             </div>
           )
       })
