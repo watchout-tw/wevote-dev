@@ -51,3 +51,10 @@
 	overflow: hidden;
 	transition: all 500ms ease-in;
 }
+
+.divider {
+	width: 30px;
+	height: 2px;
+	background: $awesomeColor;
+	margin: 60px auto;
+}

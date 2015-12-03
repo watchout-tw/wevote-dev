@@ -5,8 +5,9 @@ export default class MaXiCastel extends Component {
   render() {
     const styles = require('./MaXiCastle.scss');
     const {embed} = this.props;
-    let MaXi = require("./images/castles_maxi.svg");
-    
+    let MaXi = require("./images/castles_maXi.svg");
+    let MaXiTitle = require("./images/castles_maXiTitle.svg");
+
     let coverItemClasses = classnames({
       [styles.coverItem]  : true,
       [styles.embed] : embed
@@ -18,9 +19,9 @@ export default class MaXiCastel extends Component {
             <a className={coverItemClasses}
                href={linkURL}
                target="_blank">
-                <img src={MaXi} 
+                <img src={MaXi}
                      className={styles.coverImg}/>
-                <div>超展開SP：馬習會</div>
+                <img src={MaXiTitle} className={styles.coverTitleImg}/>
             </a>
         </div>
     ):
@@ -28,9 +29,9 @@ export default class MaXiCastel extends Component {
         <div className={styles.wrap}>
             <Link className={coverItemClasses}
                   to={`/SP/ma-xi-meet/`}>
-                <img src={MaXi} 
+                <img src={MaXi}
                      className={styles.coverImg}/>
-                <div>超展開SP：馬習會</div>
+                <img src={MaXiTitle} className={styles.coverTitleImg}/>
             </Link>
         </div>
     );

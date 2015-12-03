@@ -6,15 +6,21 @@ export default class Footer extends Component {
   render() {
 
     const styles = require('./Footer.scss');
+
+    let SaySomething = require('./images/SaySomething.svg');
+
     return (
       <div className={styles.wrap}>
           <div className={styles.innerWrap}>
-              <div>
-                   歡迎政黨及候選人針對本網站之重大議題進行表態回覆！
-                   <a className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} 
-                      href="//wevote.tw/form.pdf">表單下載</a>/
-                   <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} 
-                         to={`/about/FAQ`}>我們是如何收集資料的</Link>
+              <div className={styles.say}>
+                <img src={SaySomething}/>
+                  <div className={styles.welcome}>歡迎<b>政黨</b>及<b>候選人</b>針對我們列出的重大議題表態回覆！</div>
+                  <div className={styles.links}>
+                    <div><Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`}
+                      to={"//wevote.tw/form.pdf"}>下載表態表單</Link></div>
+                    <div><Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`}
+                      to={`/about/FAQ`}>我們是如何蒐集資料的？</Link></div>
+                  </div>
               </div>
               <SubscribeComponent showExternal={true}/>
               <div className={styles.rightFooterLinks}>
@@ -29,4 +35,3 @@ export default class Footer extends Component {
     );
   }
 }
-

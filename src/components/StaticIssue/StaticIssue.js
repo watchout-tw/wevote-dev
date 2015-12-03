@@ -95,7 +95,7 @@ export default class StaticIssue extends Component {
       // 顯示處理中
       const {processingState} = this.props;
       let processingItem;
-     
+
       switch(processingState.processing){
           case 'processing':
               processingItem = <div className={styles.processingItem}><div className={styles.content}><img src={runner_animated}/><div>立場分析中</div></div></div>;
@@ -133,7 +133,7 @@ export default class StaticIssue extends Component {
                              currentIssue={currentIssue}
                              currentIssueName={currentIssueName}
                              setCurrentView={setCurrentView} />
-
+                <div className={styles.divider}></div>
                 <Missions issues={issues}
                           skipIssue={currentIssueName}
                           showComingMission={false}/>

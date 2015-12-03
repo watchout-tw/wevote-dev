@@ -40,7 +40,7 @@ $breakLarge: 800px;
   margin: 60px auto;
   position: relative;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 .mobileHint {
   padding: 20px;
@@ -49,7 +49,7 @@ $breakLarge: 800px;
   color: #5A5656;
   border: 1px solid #766F6F;
   display: inline-block;
-    
+
 }
 @media screen and (min-width: $appBarBreakLarge) {
   .mobileHint {
