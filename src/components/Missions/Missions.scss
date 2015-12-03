@@ -12,6 +12,7 @@ $itemSize: 240px;
 }
 /* 手機上 safari 需要指定 block */
 .coverItem, .coverItem:visited {
+	position: relative;
 	text-decoration: none;
 	display: block;
 	vertical-align: middle;
@@ -30,7 +31,7 @@ $itemSize: 240px;
 	margin: 10px;
 	padding: 20px 10px;
 	vertical-align: top;
-	
+
 }
 
 @media all and (min-width: 480px) {
@@ -46,10 +47,14 @@ $itemSize: 240px;
 	}
 }
 .coverItem:hover .coverImg {
-	@include prefix(filter, drop-shadow(0 0 15px rgba(0, 255, 255, 0.75)));
+	@include prefix(filter, drop-shadow(0 0 15px rgba(255, 255, 0, 0.75)));
 }
 .coverImg {
-    display: block;
+  display: block;
+	width: 100%;
+}
+.coverTitleImg {
+	display: block;
 	width: 100%;
 }
 .coverTitleBlock {
@@ -81,6 +86,11 @@ $itemSize: 240px;
 }
 .star {
   transition: transform 0.5s ease-in-out;
+}
+.missionAccomplishBadge {
+	position: absolute;
+	top: 0;
+	left: 20px;
 }
 .coverItem:hover .star {
 	@include prefix(filter, drop-shadow(0 0 3px gold));

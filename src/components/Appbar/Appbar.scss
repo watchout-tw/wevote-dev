@@ -70,26 +70,28 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	height: $appBarHeight;
 }
 .navItem:hover, .navItem.active {
-	background: rgba($glow, 0.25);
+	background: rgba($glow, 0.5);
 }
 .navItem > * {
 	display: inline-block;
 	vertical-align: middle;
 }
 .lockedNav {
-	color: gray;
 	display: inline-block;
 	position: relative;
+	img, span {
+		opacity: 0.5;
+	}
 }
 .lockedNav:after {
 	position: absolute;
-	content: '即將上線';
+	content: '即將啟動';
 	left: 20%;
     bottom: 0;
     text-align: center;
     width: 100%;
     font-size: 14px;
-    color: #FF0055;
+    color: red;
 }
 .rightToggle {
 	position: absolute;

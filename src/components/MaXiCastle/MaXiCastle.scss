@@ -38,5 +38,9 @@
 }
 .coverItem:hover .coverImg {
   animation: toChina 4s;
-  -webkit-animation-fill-mode: forwards; 
+  -webkit-animation-fill-mode: forwards;
+}
+.coverTitleImg {
+	display: block;
+	width: 100%;
 }

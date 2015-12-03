@@ -34,7 +34,7 @@ export default class Missions extends Component {
       if(window && checkedLocal === false){
           const {issues} = this.props;
           const {completed} = this.state;
-          
+
           Object.keys(issues).map((currentIssueName, index)=>{
               let local = window.localStorage.getItem(currentIssueName);
               if(local === "true"){
@@ -52,13 +52,15 @@ export default class Missions extends Component {
   componentDidMount(){//Only runs in client side
       this._checkLocalStorage();
   }
-  
+
   render() {
     const styles = require('./Missions.scss');
     const {issues, skipIssue, showComingMission, embed} = this.props;
     const {completed} = this.state;
-    const castle_default = require("./images/castles_default.svg");
+    const castle_default = require('./images/castles_default.svg');
+    const title_default = require('./images/castles_defaultTitle.svg');
     const symbol_star = require('./images/symbols_star.svg');
+    const badge = require('./images/missionAccomplishBadge.svg');
 
     const {setToProecessing} = this.props;
 
@@ -70,19 +72,27 @@ export default class Missions extends Component {
     let missonItems = Object.keys(issues).map((currentIssue, index)=>{
 
         let imgURL;
+        let titleURL;
 
         try {
           imgURL = require(`./images/castles_${issues[currentIssue].titleEng}.svg`);
+          titleURL = require(`./images/castles_${issues[currentIssue].titleEng}Title.svg`);
         } catch (e){
           imgURL = castle_default;
+          titleURL = title_default;
         }
 
-        let completedOrStatement = (completed[currentIssue] === true) ? (
+/*        let completedOrStatement = (completed[currentIssue] === true) ? (
           <div className={styles.missionStatusBlock}>
             <img src={symbol_star} className={`${styles.symbol} ${styles.star}`}/>
             <div className={styles.missionStatusText}>任務完成</div>
           </div>
-        ) : (<div>{issues[currentIssue].question}</div>);
+        ) : (<div>{issues[currentIssue].question}</div>);*/
+        let missionAccomplishBadge = (
+          (completed[currentIssue] === true) ?
+          (<img src={badge} className={styles.missionAccomplishBadge}/>) :
+          (<div></div>)
+        );
 
         let titleStyle = (completed[currentIssue] === true) ? styles.completedCoverTitle : styles.coverTitle;
 
@@ -91,15 +101,13 @@ export default class Missions extends Component {
               let linkURL = `//wevote.tw/issues/${currentIssue}/`;
               return (
                   <a href={linkURL}
-                     target="_blank" 
-                     key={index} 
+                     target="_blank"
+                     key={index}
                      className={coverItemClasses}
                      onClick={setToProecessing}>
                       <img src={imgURL} className={styles.coverImg}/>
-                      <div className={styles.coverTitleBlock}>
-                          <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
-                      </div>
-                      <div className={styles.coverQuestion}>{completedOrStatement}</div>
+                      <img src={titleURL} className={styles.coverTitleImg}/>
+                      {missionAccomplishBadge}
                   </a>
               )
 
@@ -108,17 +116,20 @@ export default class Missions extends Component {
                   <Link to={`/issues/${currentIssue}/`} key={index} className={coverItemClasses}
                         onClick={setToProecessing}>
                       <img src={imgURL} className={styles.coverImg}/>
-                      <div className={styles.coverTitleBlock}>
-                          <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
-                      </div>
-                      <div className={styles.coverQuestion}>{completedOrStatement}</div>
+                      <img src={titleURL} className={styles.coverTitleImg}/>
+                      {missionAccomplishBadge}
                   </Link>
               )
 
             }
-            
+
         }
     });
+
+//                      <div className={styles.coverTitleBlock}>
+//                          <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
+//                      </div>
+//<div className={styles.coverQuestion}>{completedOrStatement}</div>
 
     /* 更多任務 */
     let comingMissionItem = (showComingMission === true) ? (
