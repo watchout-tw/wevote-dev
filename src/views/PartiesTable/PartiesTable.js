@@ -135,6 +135,8 @@ export default class PartiesTable extends Component {
     });
 
     let legendImg = require("./images/legend.png");
+    let legendRecord = require('./images/legend-expanded_record.svg');
+    let legendPromise = require('./images/legend-expanded_promise.svg');
 
     //title class, 處理 scroll fixed on top
     let fixedClasses = classnames({
@@ -155,7 +157,10 @@ export default class PartiesTable extends Component {
                 {partyPositions}
             </div>
             <div id="positionEnd"></div>
-            <img src={legendImg} className={styles.legend}/>
+            <p className={styles.legend}>
+              <img src={legendRecord}/>
+              <img src={legendPromise}/>
+            </p>
           </div>
 
           <PartyBills showTitle={true}/>
