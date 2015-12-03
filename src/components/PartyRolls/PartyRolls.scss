@@ -8,7 +8,7 @@ $rollWebBreak: 800px;
 }
 .partyWrap {
 	display: inline-block;
-	padding-top: 30px;
+	padding: 30px 0 150px 0;
 }
 .partyRollTop {
 	background-image: url('./images/top.png');
@@ -36,7 +36,6 @@ $rollWebBreak: 800px;
 	.partyWrap {
 		display: block;
 	}
-	
 	.partyRollTop {
 		width: 700px;
     	margin: 0 auto;
@@ -72,12 +71,15 @@ $rollWebBreak: 800px;
     line-height: 1.4;
 }
 .partyTitle {
-	font-weight: bolder;
+	margin-top: 50px;
 	font-size: 20px;
+}
+.partyTitleImg {
+	vertical-align: top;
+	margin-right: 4px;
 }
 @media all and (min-width: $rollWebBreak){
 	.partyTitle {
-		font-size: 20px;
 		padding-top: 10px;
 		text-align: center;
 	}

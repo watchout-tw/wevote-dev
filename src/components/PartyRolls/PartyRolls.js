@@ -65,7 +65,8 @@ export default class PartyRolls extends Component {
               </div>
           </div>
       )
-   
+      let partyTitleImg = require(`./images/PartyNames_${focus.toLowerCase()}.svg`);
+      
       return (
           <div className={styles.pbWrap}>
               {mobileMenuToggle}
@@ -84,7 +85,8 @@ export default class PartyRolls extends Component {
               <div className={styles.partyWrap}>
                   <div className={styles.partyRollTop}>
                       <h2 className={styles.partyTitle}>
-                          {data.title}參戰名單
+                          <img src={partyTitleImg}
+                               className={styles.partyTitleImg}/>參戰名單
                       </h2>
                   </div>
                   <div className={styles.partyRoll}>
