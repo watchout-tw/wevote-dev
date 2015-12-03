@@ -76,9 +76,10 @@ export default class Appbar extends Component {
     let constituenciesActive = (location === "constituencies") ? styles.active : "";
     let partiesActive = (location.indexOf("parties")!==-1) ? styles.active : "";
     let aboutActive = (location === "about") ? styles.active : "";
-    
 
+    let symbol_issues = require('./images/symbols_issues.svg');
     let symbol_parties = require('./images/symbols_parties.svg');
+    let symbol_constituencies = require('./images/symbols_constituencies.svg');
     let symbol_about = require('./images/symbols_about.svg');
     let symbol_maxi = require('./images/symbols_maXi.svg');
     let menu = require('./images/menu.svg');
@@ -98,7 +99,7 @@ export default class Appbar extends Component {
                     <Link className={`${styles.navItem} ${issuesActive}`}
                           to={`/issues/`}
                           onClick={this._hideMenu.bind(this)}>
-                            <img src={symbol_about} className={styles.symbol}/>
+                            <img src={symbol_issues} className={styles.symbol}/>
                             <span>議題攻城戰</span>
                     </Link>
                 </li>
@@ -107,7 +108,7 @@ export default class Appbar extends Component {
                     <Link className={`${styles.navItem} ${partiesActive}`}
                           to={`/parties/`}
                           onClick={this._hideMenu.bind(this)}>
-                            <img src={symbol_about} className={styles.symbol}/>
+                            <img src={symbol_parties} className={styles.symbol}/>
                             <span>黨團衝突戰</span>
                     </Link>
                 </li>
@@ -115,7 +116,7 @@ export default class Appbar extends Component {
 
                 <li >
                     <div className={`${styles.navItem} ${constituenciesActive} ${styles.lockedNav}`}>
-                        <img src={symbol_about} className={styles.symbol}/>
+                        <img src={symbol_constituencies} className={styles.symbol}/>
                         <span>勇者競技場</span>
                     </div>
                 </li>
