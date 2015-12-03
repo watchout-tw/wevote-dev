@@ -57,7 +57,12 @@ export default class Parties extends Component {
     let list = partyBlock[focus].list || [];
 
     let columnItems = list.map((v,i)=>{
-        return <li>{v}</li>
+        return (
+          <li>
+            <div className={styles.peopleEntryName}>{v.name}</div>
+            <div className={styles.peopleEntryInfo}>{v.info}</div>
+          </li>
+      )
     });
     let columnClasses = classnames({
       [styles.columnBlock] : true,
@@ -78,47 +83,60 @@ export default class Parties extends Component {
       [styles.partyMenuBlock]: true,
       [styles.show] : showMenu === true
     })
+    /*
+    <div className={styles.closeMenu}
+         onClick={this._setMenu.bind(this, false)}>
+      <i className="fa fa-times"></i>
+    </div>
+    <div className={styles.toggleMenu}>
+      <div className={`${styles.hexagon} ${styles.partyMenuItem}`}
+           onClick={this._setMenu.bind(this, true)}>
+          <div className={styles.innerHexagon}>
+            選擇<i className={`fa fa-sort-desc ${styles.toggleIcon}`}></i>
+          </div>
+      </div>
+    </div>
+    */
     return (
       <div className={styles.wrap}>
-          <div className={styles.toggleMenu}>
-            <div className={`${styles.hexagon} ${styles.partyMenuItem}`}
-                 onClick={this._setMenu.bind(this, true)}>
-                <div className={styles.innerHexagon}>
-                  選擇<i className={`fa fa-sort-desc ${styles.toggleIcon}`}></i>
-                </div>
-            </div>
-          </div>
-          <div className={menuClasses}>
-              <div className={styles.closeMenu}
-                   onClick={this._setMenu.bind(this, false)}>
-                <i className="fa fa-times"></i>
-              </div>
-              <div className={`${styles.billboard} ${styles.left}`}>
-                  <PartyMenu side={1} 
-                             onChangeFocus={this._onChangeFocus.bind(this)}
-                             focus={focus}/></div>
-              <div className={`${styles.billboard} ${styles.right}`}>
-                  <PartyMenu side={2} 
-                             onChangeFocus={this._onChangeFocus.bind(this)}
-                             focus={focus}/></div>
-          </div>
-          <div className={styles.partyWrap}>
-              <div className={styles.partyRollTop}></div>
-              <div className={styles.partyFlow}>
-                  {partyRollItem}
-              </div>
-          </div>
+
           <div className={styles.story}>
             <p>黨團衝突戰，將由各地勇者所組成不同的黨團，以團體戰的方式爭奪立法聖殿中的勇者席位。在這場團體戰鬥中，誰能爭取最多席位，同樣考驗島嶼主人的智慧。</p>
             <p>挑戰任務即刻啟動！</p>
             <p>黨團成分分析，快來看誰最適合你？</p>
           </div>
+
           <div className={styles.actions}>
               <Link to={`/parties-matchgame/`}
                     className={styles.goMatch}>進入挑戰</Link>
               <div><Link to={`/parties-table/`}
                     className={styles.goTable}>直接看結果</Link></div>
           </div>
+
+          <div className={styles.pbWrap}>
+              
+              <div className={menuClasses}>
+                  <div className={`${styles.billboard} ${styles.left}`}>
+                      <PartyMenu side={1} 
+                                 onChangeFocus={this._onChangeFocus.bind(this)}
+                                 focus={focus}/></div>
+                  <div className={`${styles.billboard} ${styles.right}`}>
+                      <PartyMenu side={2} 
+                                 onChangeFocus={this._onChangeFocus.bind(this)}
+                                 focus={focus}/></div>
+              </div>
+          
+              <div className={styles.partyWrap}>
+                  <div className={styles.partyRollTop}></div>
+                  <div className={styles.partyFlow}>
+                      {partyRollItem}
+                  </div>
+              </div>
+
+          </div>
+
+          
+          
       </div>
     );
   }

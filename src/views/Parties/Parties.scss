@@ -25,6 +25,22 @@ $rollWebBreak: 800px;
 	}
 	
 }
+/* 說明 */
+.story {
+	max-width: 400px;
+    margin: 0px auto;
+    padding: 70px 20px 20px 20px;
+    line-height: 1.6;
+    color: white;
+}
+.actions {
+	text-align: center;
+}
+
+/* 名單 */
+.pbWrap {
+	position: relative;
+}
 .partyFlow {
 	
 }
@@ -80,15 +96,10 @@ $rollWebBreak: 800px;
 		width: 700px;
 		height: 680px;
 	
-	    padding: 140px 120px 10px 120px;
+	    padding: 30px 80px 10px 80px;
 	    overflow: hidden;
 
 	}
-}
-
-.partyTitle {
-	font-weight: bolder;
-	margin: 0 0 0 10px;
 }
 .columnBlock {
 	min-height: 280px;
@@ -98,38 +109,36 @@ $rollWebBreak: 800px;
     line-height: 1.4;
 }
 .partyTitle {
+	font-weight: bolder;
 	font-size: 20px;
 }
 @media all and (min-width: $rollWebBreak){
 	.partyTitle {
-		font-size: 14px;
-	}
-	.columnBlock {
-		font-size: 12px;
-	}
-	.partyTitle {
 		font-size: 20px;
+		padding-top: 10px;
+		text-align: center;
 	}
 	.columnBlock {
 		font-size: 16px;
 		height: auto;
-	}
-	.columnBlock.twoColumns {
-		column-count: 2;
+		margin-top: 50px;
 	}
 }
 .columnBlock ol{
 	margin: 0;
 }
-.story {
-	max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    line-height: 1.6;
-    color: white;
+.columnBlock li{
+	display: flex;
 }
-.actions {
-	text-align: center;
+.peopleEntryName {
+	font-size: 18px;
+	font-weight: 600;
+	flex: 100px 0 0;
+}
+.peopleEntryInfo {
+	color: rgb(27, 25, 25);
+	flex: 1;
+	padding-top: 2px;
 }
 /* -----
  左右方政黨選單
@@ -181,21 +190,14 @@ $rollWebBreak: 800px;
 .partyMenuBlock.show .closeMenu {
 	display: block;
 }
-
 @media all and (min-width: $rollWebBreak){
 	.toggleMenu { display: none; }
 	.partyMenuBlock {
-		position: relative;
-		width: 100%;
-		margin: 0 auto;
-
-		max-height: 2000px;
-		overflow: visible;
-		width: 800px;
-		height: 100px;
-    	padding-top: 20px;
-    	background: none;
-    	z-index: 0;
+		position: absolute;
+    	width: 100%;
+    	margin: 0 auto;
+    	overflow: visible;
+    	top: 20vw;
 	}
 }
 .billboard {
@@ -222,22 +224,20 @@ $rollWebBreak: 800px;
 		margin: 0;
 	}
 	.billboard.left {
-		left: 10px;
-		width: 330px;
+		left: 0px;
+		width: 310px;
 		text-align: right;
 	}
 	.billboard.left .partyMenuItem:nth-child(8) {
 		margin-right: 37px;
 	}
 	.billboard.right {
-		right: 10px;
-		width: 420px;
+		right: 0px;
+		width: 320px;
 		float: left;
 		margin: 0;
 	}
-	.billboard.right .partyMenuItem:nth-child(6) {
-		margin-left: 60px;
-	}
+	
 	.billboard.right .partyMenuItem:nth-child(8) {
 		margin-left: 0;
 	}
