@@ -31,12 +31,13 @@ $breakWebVersion : 730px;
 	cursor: pointer;
 	display: inline-block;
     padding: 3px 10px;
-    color: #873633;
+    color: $awesomeColor;
     font-weight: bold;
+		line-height: 1.5em;
 }
 .chapterItemText:hover {
-	background: #873633;
-	color: white;
+	background: $awesomeColor;
+	color: $white;
 }
 
 .figSection h3 {
@@ -143,4 +144,11 @@ $breakWebVersion : 730px;
 }
 .footerSection {
 	padding: 100px 40px;
+}
+
+.hand {
+	font-size: 1.5em;
+	display: inline-block;
+  transform: translateY(2px);
+  margin-right: 2px;
 }
