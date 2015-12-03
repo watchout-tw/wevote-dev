@@ -2,96 +2,93 @@ $rollWebBreak: 800px;
 .pbWrap {
 	position: relative;
 	text-align: center;
-}
-.partyRollItem {
-	display: inline-block;
+	padding-bottom: 150px;
+	min-height: 300px;
 }
 .partyWrap {
-	display: inline-block;
-	padding-top: 30px;
+	display: block;
+	position: relative;
 }
-.partyRollTop {
+/* -----
+捲軸造型
+*/
+.partyRollEndpoint {
 	background-image: url('./images/top.png');
 	background-size: 100%;
 
 	width: 100vw;
-    height: calc(0.2 * 100vw);
-    position: absolute;
-    top: 0px;
+	height: 20vw;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.partyRollEndpoint.top {
+	top: 0px;
+}
+.partyRollEndpoint.bottom {
+	bottom: 40px;
+}
+@media all and (min-width: $rollWebBreak){
+	.partyRollEndpoint {
+		width: 700px;
+		height: 140px;
+		margin: 0 auto;
+	}
+	.partyRollEndpoint.bottom {
+		bottom: -100px;
+	}
 }
 .partyRoll {
-	vertical-align: top;
-	
-    background-image: url('./images/main.png');
+	text-align: left;
+    line-height: 1.4;
+    
+    display: inline-block;
+    margin: 30px auto 0 auto;
+    
+    background-image: url(./images/main.png);
     background-size: 100%;
     width: 100vw;
-    height: 100vw;
-    padding: 10vw 14vw;
-
-    border-bottom: 5px solid #423902;
-    overflow: scroll;
+    min-height: 100vw;
+    padding: 30px 40px 0px 10px;
 }
-
 @media all and (min-width: $rollWebBreak){
-	.partyWrap {
-		display: block;
-	}
-	
-	.partyRollTop {
-		width: 700px;
-    	margin: 0 auto;
-    	height: 140px;
-    	position: absolute;
-    	top: 0px;
-    	left: 0;
-    	right: 0;
-	}
 	.partyRoll {
-		text-align: left;
-		display: inline-block;
-		margin: 0 auto;
-		vertical-align: top;
-		
-		border: none;
-		background-image: url('./images/main.png');
-		background-size: 100%;
-	
 		width: 700px;
-		height: auto;
-	
-	    padding: 30px 80px 10px 80px;
-	    overflow: hidden;
-
+		min-height: 600px;
+		padding: 100px 80px 50px 80px;
+		font-size: 18px;
 	}
 }
-.columnBlock {
-	min-height: 280px;
-    overflow: hidden;
-    padding-top: 10px;
-    font-size: 18px;
-    line-height: 1.4;
-}
+/* ----
+名單本體
+*/
+
 .partyTitle {
-	font-weight: bolder;
+	margin-top: calc(30px + 10vw);
 	font-size: 20px;
+}
+.partyTitleImg {
+	vertical-align: top;
+	margin-right: 4px;
 }
 @media all and (min-width: $rollWebBreak){
 	.partyTitle {
-		font-size: 20px;
+		margin-top: 50px;
 		padding-top: 10px;
 		text-align: center;
 	}
-	.columnBlock {
-		font-size: 16px;
-		height: auto;
-		margin-top: 50px;
-	}
+	
 }
-.columnBlock ol{
+.partyRoll ol{
 	margin: 0;
 }
-.columnBlock li{
+.partyRoll li{
 	display: flex;
+}
+.partyEntryCount{
+	flex: 40px 0 0;
+	text-align: right;
 }
 .peopleEntryName {
 	font-size: 18px;
@@ -103,6 +100,9 @@ $rollWebBreak: 800px;
 	flex: 1;
 	padding-top: 2px;
 }
+
+
+
 /* -----
  左右方政黨選單
  */
@@ -114,7 +114,7 @@ $rollWebBreak: 800px;
 }
 .partyMenuItem {
 	display: inline-block;
-	margin: 12px 4px;
+	margin: 16px 4px;
 	cursor: pointer;
     text-align: center;
     font-weight: 600;
@@ -125,7 +125,8 @@ $rollWebBreak: 800px;
 }
 .partyMenuBlock {
 	max-height: 0;
-	overflow: hidden; 	
+	overflow: hidden; 
+	z-index: 1;	
 }
 .partyMenuBlock.show {
 	position: relative;
@@ -163,6 +164,7 @@ $rollWebBreak: 800px;
     	top: 20vw;
 	}
 }
+
 .billboard {
 	text-align: center;
 	z-index: 10;
@@ -175,33 +177,21 @@ $rollWebBreak: 800px;
 	width: 280px;
 	margin-top: 40px;
 }
-.billboard.right .partyMenuItem:nth-child(5) {
-	margin-left: 11px;
-}
-.billboard.right .partyMenuItem:nth-child(8) {
-	margin-left: 80px;
-}
 @media all and (min-width: $rollWebBreak){
 	.billboard {
 		position: absolute;
 		margin: 0;
+		width: calc(50vw - 280px);
 	}
 	.billboard.left {
 		left: 0px;
-		width: 310px;
+		max-width: 310px;
 		text-align: right;
-	}
-	.billboard.left .partyMenuItem:nth-child(8) {
-		margin-right: 37px;
 	}
 	.billboard.right {
 		right: 0px;
-		width: 320px;
+		max-width: 320px;
 		float: left;
 		margin: 0;
-	}
-	
-	.billboard.right .partyMenuItem:nth-child(8) {
-		margin-left: 0;
 	}
 }
