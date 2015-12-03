@@ -23,8 +23,39 @@ $breakMedium: 800px;
 }
 .linkItem {
 	display: inline-block;
-	margin: 10px;
 	font-size: 16px;
+	margin: 16px;
 }
 
+.say {
+	padding: 25px 0;
+	border-bottom: 1px solid rgba($white, 0.25);
+	line-height: 1.5;
 
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 20px;
+	}
+	.welcome, .links {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.welcome {
+		width: 12em;
+		margin: 20px 0;
+		font-size: 14px;
+		opacity: 0.5;
+	}
+	.links .linkItem.ia.inverted {
+		font-size: 16px;
+		border-bottom-color: $white;
+		display: inline-block;
+		margin: 2px 0;
+	}
+}
+@media all and (min-width: 640px) {
+	.say .links {
+		margin-left: 20px;
+	}
+}
