@@ -54,34 +54,27 @@ export default class PartiesTable extends Component {
       let positionEndNode = document.getElementById("positionEnd");
       let positionEndRect = positionEndNode.getBoundingClientRect();
 
-      let billNode = document.getElementById("billTitle");
-      let billRect = billNode.getBoundingClientRect();
-
-      let billEndNode = document.getElementById("billEnd");
-      let billEndRect = billEndNode.getBoundingClientRect();
-
       //decide which to fixed on top
       let current;
-      if(positionRect.top < 0 && positionEndRect.top > 0){
+      if(positionRect.top < 0 && positionEndRect.top > 100){
         current = "position";
       }
-      if(billRect.top < 0 && billEndRect.top > 0){
-        current = "bill";
-      }
-      if(current && billEndRect.top < 0){
-        current = "NONE";
-      }
+      
       const {focus} = this.state;
 
-      console.log(positionRect.top + "," +
-                  positionEndRect.top + "," +
-                  billRect.top + "," +
-                  billEndRect.top);
-      console.log(current);
+      //console.log(positionRect.top + "," + positionEndRect.top);
+      
       if(current){
         if(focus !== current){
             this.setState({
               focus: current
+            })
+        }
+      }
+      if(positionRect.top > 0 && focus === "position"){
+        if(focus !== current){
+            this.setState({
+              focus: ""
             })
         }
       }
@@ -152,10 +145,9 @@ export default class PartiesTable extends Component {
       <div className={styles.wrap}>
           <div className={styles.partyPosition}>
             <header><h2>議題表態</h2></header>
-            <div className={styles.partyPositionTable}>
+            <div className={styles.partyPositionTable} id="positionTitle">
                 <div className={fixedClasses}>
-                    <div className={styles.issueTitles}
-                         id="positionTitle">
+                    <div className={styles.issueTitles}>
                         <div className={styles.partyName}></div>
                         {issueTitles}
                     </div>

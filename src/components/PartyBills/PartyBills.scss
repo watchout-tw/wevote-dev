@@ -18,9 +18,20 @@ header {
 	text-align: center;
 }
 .partyBillTable {
-
+	position: relative;
 }
 /* 法案 title */
+.billTitleWrap {
+	position: relative;
+}
+.billTitleWrap.fixed {
+	position: fixed;
+	top: 0;
+	width: calc(100% - 20px);
+	max-width: 800px;
+	background: white;
+	box-shadow: 0 2px 1px 0 rgba(0,0,0,0.08);
+}
 .billTitles {
 	display: flex;
 	padding: 10px 0;
