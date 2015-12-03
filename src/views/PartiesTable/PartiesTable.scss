@@ -1,10 +1,9 @@
 @import '../../common.scss';
 @import '../../styles/actionButton.scss';
-$tableWebBreak: 500px;
+$positionTableWebBreak: 500px;
 .wrap {
 	position: relative;
 	padding: 50px 10px;
-
 
 	padding-bottom: 150px;
 	position: relative;
@@ -14,7 +13,7 @@ $tableWebBreak: 500px;
 	background-repeat: repeat;
 	background-attachment:fixed;
 }
-@media all and (min-width:$tableWebBreak){
+@media all and (min-width:$positionTableWebBreak){
 	.wrap {
 		background-size: 100% auto;
     	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
@@ -34,48 +33,73 @@ $tableWebBreak: 500px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.12);
     padding: 10px 0;
 }
-table.partyPositionTable {
-	margin: 50px auto;
+header {
+	text-align: center;
 }
-tr.canHover:hover {
+.partyPositionTable {
+	width: 100%;
+}
+/* 議題 title */
+.titleWrap.fixed {
+	position: fixed;
+	background: white;
+    top: 0;
+    width: 100%;
+    max-width: 800px;
+}
+.issueTitles {
+	display: flex;
+	padding: 10px 0;
+}
+.issueTitle {
+	flex: 1;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+}
+@media all and (min-width: $positionTableWebBreak){
+	.issueTitle {
+		padding: 10px 20px;
+    	font-size: 20px;
+	}
+}
+.partyEntry {
+	display: flex;
+	padding: 10px 0;
+}
+.partyEntry:hover {
 	background: rgb(200,200,200);
 }
-td.head {
-	text-align: center;
-	border-bottom: 1px solid gray;
-	padding: 0 4px 10px 4px;
-}
-tr td {
-	padding-bottom: 10px;
-}
-@media all and (min-width: $tableWebBreak){
-	td.partyName {
-		padding-left:20px;
-		width: 200px;
-    	padding-top: 10px;
-	}
-}
-td.positionTitle {
-	padding: 10px 20px;
+.partyName {
+	flex: 1;
     text-align: center;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 14px;
+    padding: 0 10px;
 }
-td.position {
-	text-align: center;
-}
-@media all and (min-width: $tableWebBreak){
-	td.position {
-		padding: 10px 20px 0 20px;
+@media all and (min-width: $positionTableWebBreak){
+	.partyName {
+		text-align: left;
+    	font-size: 16px;
+    	padding: 10px;
 	}
+}
+.position {
+	text-align: center;
+	flex: 1;
 }
 .record {
-	display: inline-block;
-    vertical-align: top; 
+	vertical-align: top; 
 }
-@media all and (min-width: $tableWebBreak){
+.record.empty {
+	display: none;
+}
+@media all and (min-width: $positionTableWebBreak){
 	.record {
 		width: 80px;
+		display: inline-block;
+	}
+	.record.empty {
+		display: inline-block;
 	}
 }
 .recordSquare {
@@ -95,16 +119,17 @@ td.position {
 	height: 50px;
 }
 .promise {
-
+	width: 20px;
 }
-@media all and (min-width: $tableWebBreak){
-	td.bill {
+@media all and (min-width: $positionTableWebBreak){
+	.bill {
 		padding: 0 20px;
 	}
 }
 .legend {
-	margin: 100px auto 50px auto;
+	margin: 50px auto;
 	display: block;
+	width: 100%;
 }
 .goMatchSec {
 	text-align: center;
@@ -114,5 +139,10 @@ td.position {
 	font-size: 14px;
 	margin: 10px auto;
     padding-left: 14px;
-    color: $awesomeColor;
+    color: white;
+}
+@media all and (min-width: $positionTableWebBreak){
+	.birdTalk {
+		color: $awesomeColor;
+	}
 }

@@ -31,42 +31,53 @@ export default class PartyBills extends Component {
   }
   render() {
     const styles = require('./PartyBills.scss');
-    const {issues} = this.props;
+    const {issues, showTitle} = this.props;
     const {tableData} = this.state;
 
     let partyBills = Object.keys(tableData).map((partyId, i)=>{
         let party = tableData[partyId];
+        
         //政黨名稱
-        let partyName = <td className={styles.partyName}>
+        let partyName = <div className={styles.partyName}>
                         <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`} 
-                              to={`/parties/${party.id}/records/`}>{party.name}</Link>
-                        </td>;
+                              to={`/parties/${party.id}/promises/`}>{party.name}</Link>
+                        </div>;
         //優先推動
 
         let bills = party.bills.map((item, k)=>{
             let goalItem;
             if(item.goal){
               let text = item.goal.length > 6 ? `${item.goal.substring(0,6)}⋯` : item.goal;
-              goalItem = <td className={styles.bill}>{text}</td>
+              goalItem = <div className={styles.bill}>{text}</div>
 
             }else{
-              goalItem = <td className={`${styles.bill} ${styles.noReply}`}>尚未回覆</td>
+              goalItem = <div className={`${styles.bill} ${styles.noReply}`}>尚未回覆</div>
             }
             return goalItem;
         })
-        return <tr className={styles.canHover}>{partyName}{bills}</tr>
+        return (
+          <div className={styles.partyEntry}>
+                  {partyName}{bills}
+          </div>
+        )
     });
 
-   
+    let title = (showTitle === true) ? (
+      <header><h2>優先推動法案</h2></header>
+    ) : "";
     return (
       <div className={styles.wrap}>
-          <table>
-              <tr><td></td>
-                  <td className={styles.billTitle}>法案1</td>
-                  <td className={styles.billTitle}>法案2</td>
-                  <td className={styles.billTitle}>法案3</td></tr>
+          {title}
+          <div className={styles.partyBillTable}>
+              <div className={styles.billTitles}
+                   id="billTitle">
+                  <div className={styles.partyName}></div>
+                  <div className={styles.billTitle}>法案1</div>
+                  <div className={styles.billTitle}>法案2</div>
+                  <div className={styles.billTitle}>法案3</div></div>
               {partyBills}
-          </table>
+              <div id="billEnd"></div>
+          </div>
       </div>
     );
   }

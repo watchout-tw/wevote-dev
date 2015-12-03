@@ -109,9 +109,9 @@ export default class Parties extends Component {
               </div>
           </div>
           <div className={styles.story}>
-            黨團衝突戰，將由各地勇者所組成不同的黨團，以團體戰的方式爭奪立法聖殿中的勇者席位。在這場團體戰鬥中，誰能爭取最多席位，同樣考驗島嶼主人的智慧！<br/>
-            挑戰任務即刻啟動！<br/>
-            黨團成分分析，快來看誰最適合你？
+            <p>黨團衝突戰，將由各地勇者所組成不同的黨團，以團體戰的方式爭奪立法聖殿中的勇者席位。在這場團體戰鬥中，誰能爭取最多席位，同樣考驗島嶼主人的智慧。</p>
+            <p>挑戰任務即刻啟動！</p>
+            <p>黨團成分分析，快來看誰最適合你？</p>
           </div>
           <div className={styles.actions}>
               <Link to={`/parties-matchgame/`}

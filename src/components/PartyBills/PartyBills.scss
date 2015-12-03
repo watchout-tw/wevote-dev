@@ -1,52 +1,73 @@
 @import '../../common.scss';
-$tableWebBreak: 800px;
+$billTableWebBreak: 800px;
 .wrap {
 	position: relative;
 	background: #eee;
-    padding: 10px;
+    padding: 10px 0;
     margin-top: 30px;
     text-align: left;
-
 }
-@media all and (min-width: $tableWebBreak){
+@media all and (min-width: $billTableWebBreak){
 	.wrap {
 		max-width: 800px;
 		margin: 30px auto 0 auto;
 		box-shadow: 3px 3px rgba(0, 0, 0, 0.12);
 	}
 }
-
-tr td {
-	padding-bottom: 10px;
-}
-tr.canHover:hover {
-	background: rgb(200,200,200);
-}
-td.head {
+header {
 	text-align: center;
-	border-bottom: 1px solid gray;
-	padding: 0 4px 10px 4px;
 }
-td.partyName {
-	width: 220px;
-	padding-top: 10px;
+.partyBillTable {
+
 }
-@media all and (min-width: $tableWebBreak){
-	td.partyName {
-		padding-left:20px;
+/* 法案 title */
+.billTitles {
+	display: flex;
+	padding: 10px 0;
+}
+.billTitle {
+	flex: 1;
+	font-size: 14px;
+	font-weight: 600;
+}
+@media all and (min-width: $billTableWebBreak){
+	.billTitle {
+		padding: 10px 20px;
+    	font-size: 20px;
 	}
 }
-td.bill {
-	padding-left:20px;
-	width: 200px;
-	padding-top: 10px;
+.partyEntry {
+	display: flex;
+	padding: 10px 0;
+}
+.partyEntry:hover {
+	background: rgb(200,200,200);
+}
+.partyName {
+	flex: 1;
+	text-align: center;
+	font-size: 14px;
+	padding: 0 10px;
+}
+@media all and (min-width: $billTableWebBreak){
+	.partyName {
+		text-align: left;
+		font-size: 16px;
+	}
+}
+.bill {
+	flex: 1;
+	padding: 0 10px;
+	font-size: 14px;
+}
+@media all and (min-width: $billTableWebBreak){
+	.bill {
+		font-size: 16px;
+	}
 }
 .bill.noReply {
 	font-size: 12px;
 	color: rgb(100,100,100);
 }
-td.billTitle {
-	padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 600;
-}
+
+
