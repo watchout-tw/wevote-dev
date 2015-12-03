@@ -84,14 +84,18 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	}
 }
 .lockedNav:after {
-	position: absolute;
 	content: '即將啟動';
-	left: 20%;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    font-size: 14px;
-    color: red;
+	position: absolute;;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 14px;
+	color: red;
+  width: 4em;
+  border: 2px solid red;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.75);
 }
 .rightToggle {
 	position: absolute;
@@ -107,7 +111,7 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 }
 @media all and (min-width: 400px) {
 	.lists li {
-		width: 20%;
+		width: 25%;
 	}
 	.navItem {
 		height: auto;
