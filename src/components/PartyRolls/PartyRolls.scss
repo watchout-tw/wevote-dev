@@ -1,0 +1,207 @@
+$rollWebBreak: 800px;
+.pbWrap {
+	position: relative;
+	text-align: center;
+}
+.partyRollItem {
+	display: inline-block;
+}
+.partyWrap {
+	display: inline-block;
+	padding-top: 30px;
+}
+.partyRollTop {
+	background-image: url('./images/top.png');
+	background-size: 100%;
+
+	width: 100vw;
+    height: calc(0.2 * 100vw);
+    position: absolute;
+    top: 0px;
+}
+.partyRoll {
+	vertical-align: top;
+	
+    background-image: url('./images/main.png');
+    background-size: 100%;
+    width: 100vw;
+    height: 100vw;
+    padding: 10vw 14vw;
+
+    border-bottom: 5px solid #423902;
+    overflow: scroll;
+}
+
+@media all and (min-width: $rollWebBreak){
+	.partyWrap {
+		display: block;
+	}
+	
+	.partyRollTop {
+		width: 700px;
+    	margin: 0 auto;
+    	height: 140px;
+    	position: absolute;
+    	top: 0px;
+    	left: 0;
+    	right: 0;
+	}
+	.partyRoll {
+		text-align: left;
+		display: inline-block;
+		margin: 0 auto;
+		vertical-align: top;
+		
+		border: none;
+		background-image: url('./images/main.png');
+		background-size: 100%;
+	
+		width: 700px;
+		height: auto;
+	
+	    padding: 30px 80px 10px 80px;
+	    overflow: hidden;
+
+	}
+}
+.columnBlock {
+	min-height: 280px;
+    overflow: hidden;
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.partyTitle {
+	font-weight: bolder;
+	font-size: 20px;
+}
+@media all and (min-width: $rollWebBreak){
+	.partyTitle {
+		font-size: 20px;
+		padding-top: 10px;
+		text-align: center;
+	}
+	.columnBlock {
+		font-size: 16px;
+		height: auto;
+		margin-top: 50px;
+	}
+}
+.columnBlock ol{
+	margin: 0;
+}
+.columnBlock li{
+	display: flex;
+}
+.peopleEntryName {
+	font-size: 18px;
+	font-weight: 600;
+	flex: 100px 0 0;
+}
+.peopleEntryInfo {
+	color: rgb(27, 25, 25);
+	flex: 1;
+	padding-top: 2px;
+}
+/* -----
+ 左右方政黨選單
+ */
+.toggleMenu {
+	position: absolute;
+	right: 50px;
+	top: 20px;
+	z-index: 1;
+}
+.partyMenuItem {
+	display: inline-block;
+	margin: 12px 4px;
+	cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+}
+.toggleIcon {
+	margin: 0 4px;
+	vertical-align: top;
+}
+.partyMenuBlock {
+	max-height: 0;
+	overflow: hidden; 	
+}
+.partyMenuBlock.show {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+    
+    height: 100vh;
+    max-height: 2000px;
+    top: 0;
+    position: fixed;
+    padding-top: 120px;
+    z-index: 200;
+    background: rgba(0,0,0,0.82);
+}
+.closeMenu {
+	position: absolute;
+    right: 30px;
+    top: 20px;
+    z-index: 1;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    display: none;
+}
+.partyMenuBlock.show .closeMenu {
+	display: block;
+}
+@media all and (min-width: $rollWebBreak){
+	.toggleMenu { display: none; }
+	.partyMenuBlock {
+		position: fixed;
+    	width: 100%;
+    	margin: 0 auto;
+    	overflow: visible;
+    	top: 20vw;
+	}
+}
+.billboard {
+	text-align: center;
+	z-index: 10;
+	margin: 0 auto;
+}
+.billboard.left {
+	width: 240px;
+}
+.billboard.right {
+	width: 280px;
+	margin-top: 40px;
+}
+.billboard.right .partyMenuItem:nth-child(5) {
+	margin-left: 11px;
+}
+.billboard.right .partyMenuItem:nth-child(8) {
+	margin-left: 80px;
+}
+@media all and (min-width: $rollWebBreak){
+	.billboard {
+		position: absolute;
+		margin: 0;
+	}
+	.billboard.left {
+		left: 0px;
+		width: 310px;
+		text-align: right;
+	}
+	.billboard.left .partyMenuItem:nth-child(8) {
+		margin-right: 37px;
+	}
+	.billboard.right {
+		right: 0px;
+		width: 320px;
+		float: left;
+		margin: 0;
+	}
+	
+	.billboard.right .partyMenuItem:nth-child(8) {
+		margin-left: 0;
+	}
+}

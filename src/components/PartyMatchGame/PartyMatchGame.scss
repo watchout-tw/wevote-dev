@@ -3,29 +3,7 @@
 $smallBreak: 640px;/* 為了比對結果 hover 做的 */
 $tableWebBreak: 1000px;
 .wrap {
-	padding-bottom: 150px;
-  background-size: cover;
-  position: absolute;
-  width: 100%;
-  min-height: 100vh;
-
-  background-image: 
-    url('../images/grass-mobile.png');
-  background-repeat: repeat;
-  background-attachment:fixed;
-}
-@media all and (min-width:$tableWebBreak){
-  .wrap {
-    background-size: 100% auto;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-    background-position: 0 0, 0 33vw, 0 0, 0 0, 0 30vw;
-    background-image: 
-      url('../images/animal-web.png'),
-      url('../images/grass-web.png'),
-      url('../images/tree-web.png'),
-      url('../images/sky-web.png'),
-      url('../images/grass-repeat-web.png');
-  }
+	
 }
 .pageTitle {
     margin: 0 auto;

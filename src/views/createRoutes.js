@@ -31,8 +31,6 @@ import Embed from 'views/Embed/Embed.js';
 import WithoutFooter from 'views/WithoutFooter/WithoutFooter.js';
 import WithAppbarOnly from 'views/WithAppbarOnly/WithAppbarOnly.js';
 
-import PartiesMatchGame from 'views/PartiesMatchGame/PartiesMatchGame.js';
-
 import Issues from 'views/Issues/Issues.js';
 import Constituencies from 'views/Constituencies/Constituencies.js';
 import Constituency from 'views/Constituency/Constituency.js';
@@ -43,9 +41,7 @@ export default function(store) {
   return (
     <Route component={App}>
         <Route path="/embed" component={Embed}/>
-        <Route component={WithAppbarOnly}>
-            <Route path="/parties-matchgame" component={PartiesMatchGame}/>
-        </Route>
+        
         <Route component={WithoutFooter}>
             <Route path="/subscribe" component={Subscribe}/>
         </Route>

@@ -25,7 +25,7 @@ import scrollTo from '../../utils/scrollTo';
     }),
     dispatch => bindActionCreators({}, dispatch))
 
-export default class PartiesMatchGame extends Component {
+export default class PartyMatchGame extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired
   }
@@ -168,7 +168,7 @@ export default class PartiesMatchGame extends Component {
     window.scrollTo(-100,0);
   }
   render() {
-    const styles = require("./PartiesMatchGame.scss")
+    const styles = require("./PartyMatchGame.scss")
     const {issues} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
          currentRank, progress, completed, 
@@ -245,7 +245,7 @@ class ConfigSection extends Component {
       onSetConfig(recordFirst);
     }
     render(){
-      const styles = require("./PartiesMatchGame.scss")
+      const styles = require("./PartyMatchGame.scss")
       const {onSetConfig} = this.props;
       return (
         <div>
@@ -295,7 +295,7 @@ class ResultSection extends Component {
     })
   }
   render(){
-    const styles = require("./PartiesMatchGame.scss")
+    const styles = require("./PartyMatchGame.scss")
     const {parties, partyPromises, currentRank, userChoices, replay} = this.props;
     const {focus} = this.state;
 
