@@ -13,6 +13,7 @@ import PartyMatchGame from '../../components/PartyMatchGame/PartyMatchGame';
 /* Stage3: bill */
 import PartyBills from '../../components/PartyBills/PartyBills';
 
+
 export default class Parties extends Component {
   constructor(props){ super(props)
         this.state = {
@@ -62,8 +63,7 @@ export default class Parties extends Component {
     }
    
     return <div className={styles.wrap}>{content}</div>;
+
   }
 }
-
-
 

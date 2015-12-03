@@ -8,7 +8,7 @@ $positionTableWebBreak: 500px;
 	padding-bottom: 150px;
 	position: relative;
 	background-size: auto 100%;
-	background-image: 
+	background-image:
 		url('../images/grass-mobile.png');
 	background-repeat: repeat;
 	background-attachment:fixed;
@@ -18,7 +18,7 @@ $positionTableWebBreak: 500px;
 		background-size: 100% auto;
     	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
     	background-position: 0 0, 0 33vw, 0 0, 0 0, 0 30vw;
-    	background-image: 
+    	background-image:
     	  url('../images/animal-web.png'),
     	  url('../images/grass-web.png'),
     	  url('../images/tree-web.png'),
@@ -89,7 +89,7 @@ header {
 	flex: 1;
 }
 .record {
-	vertical-align: top; 
+	vertical-align: top;
 }
 .record.empty {
 	display: none;
@@ -112,8 +112,8 @@ header {
 	height: 10px;
 }
 .recordSquare.level2 {
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 }
 .recordSquare.level3 {
 	width: 50px;
@@ -128,10 +128,15 @@ header {
 	}
 }
 .legend {
+	text-align: center;
+	margin: 20px 0;
+}
+/*
+.legend {
 	margin: 50px auto;
 	display: block;
 	width: 100%;
-}
+}*/
 .goMatchSec {
 	text-align: center;
 	margin: 30px 0;
