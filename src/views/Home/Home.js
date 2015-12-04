@@ -75,7 +75,7 @@ export default class Home extends Component {
                   <img src={stargate} className={styles.glow}/>
                   <div className={styles.label}><img src={symbols_parties} className={styles.icon}/><p className={styles.title}>黨團衝突戰</p></div>
                 </Link>
-                <div className={styles.stargate}>
+                <div className={`${styles.stargate} ${styles.locked}`}>
                   <img src={coliseum} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
                   <img src={lock} className={styles.lock}/>

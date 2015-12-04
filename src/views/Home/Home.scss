@@ -58,6 +58,10 @@ $break: 960px;
       text-decoration: none;
       color: $black;
     }
+    &.locked > .destination {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
     .destination {
       display: block;
       width: 320px;
