@@ -32,7 +32,8 @@ export default class Home extends Component {
       var firstDate = new Date();
       return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
     })();
-    if(diffDays < 0) diffDays = 0;
+    if(diffDays > 42) diffDays = 42;
+    else if(diffDays < 0) diffDays = 0;
     let countdown = require(`./images/countdown/countdown_${diffDays}.svg`);
 
     let stonehenge = require('./images/stonehenge.png');
@@ -74,7 +75,7 @@ export default class Home extends Component {
                   <img src={stargate} className={styles.glow}/>
                   <div className={styles.label}><img src={symbols_parties} className={styles.icon}/><p className={styles.title}>黨團衝突戰</p></div>
                 </Link>
-                <div className={styles.stargate}>
+                <div className={`${styles.stargate} ${styles.locked}`}>
                   <img src={coliseum} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
                   <img src={lock} className={styles.lock}/>
