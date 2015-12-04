@@ -1,4 +1,5 @@
 @import '../../common.scss';
+@import '../../styles/actionButton.scss';
 $rollSmallBreak: 500px;
 $rollLargeBreak: 800px;
 $rollExtraWideBreak: 1200px;
@@ -7,6 +8,10 @@ $rollExtraWideBreak: 1200px;
 	text-align: center;
 	padding-bottom: 150px;
 	min-height: 300px;
+}
+.pbInner {
+	position: relative;
+	margin-bottom: 200px;
 }
 .partyWrap {
 	display: block;
@@ -200,14 +205,10 @@ $rollExtraWideBreak: 1200px;
     	overflow: visible;
     	top: 20vw;
 	}
-	.placeHolder {
-		height: 100px;
-		width: 100%;
-	}
 	.partyMenuBlock.notFixed {
-		position: relative;
+		position: absolute;
+		bottom: 0;
 		top: auto;
-		left: auto;
 	}
 }
 @media all and (min-width: $rollLargeBreak) and (max-width: $rollExtraWideBreak) {

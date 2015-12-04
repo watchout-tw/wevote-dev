@@ -78,21 +78,18 @@ export default class PartyMatchGame extends Component {
   }
   _recordUserChoice(issueName, order, choice) {
       //console.log("record user choice:"+issueName+"-"+choice)
+      
       let currentChoices = this.state.userChoices;
 
       // if(currentChoices[issueName]){
       //    return;//如果已經回答過，不再重複登記
       // }
 
-      if(this.state.completed === false){// 開始作答了
-        this.setState({
-          completed: true
-        })
-      }
       currentChoices[issueName] = choice;
 
       this.setState({
-          userChoices: currentChoices
+          userChoices: currentChoices,
+          completed: true
       });
 
       const {showRank} = this.state;
@@ -102,8 +99,10 @@ export default class PartyMatchGame extends Component {
       }
   }
   _unlockNext(){
+      console.log("unlock next")
+      let next = this.state.currentQAItemIndex + 1;
       this.setState({
-          currentQAItemIndex: this.state.currentQAItemIndex+1
+          currentQAItemIndex: next
       });
   }
   _onShowMatchResult(){
@@ -169,7 +168,7 @@ export default class PartyMatchGame extends Component {
   }
   render() {
     const styles = require("./PartyMatchGame.scss")
-    const {issues} = this.props;
+    const {issues, onSetStage} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
          currentRank, progress, completed, 
          matchData} = this.state;
@@ -187,8 +186,6 @@ export default class PartyMatchGame extends Component {
                        completed={completed} />
     })
 
-    // 本頁標題
-    let header = <h1 className={styles.pageTitle}>衝突一觸即發...但，哪個政黨和你立場最接近？</h1>
     // 配對結果
     let BottomSection;
 
@@ -196,7 +193,6 @@ export default class PartyMatchGame extends Component {
       case 'config':
         return (
             <div className={styles.wrap}>
-                {header}
                 <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
             </div>
         )
@@ -206,7 +202,6 @@ export default class PartyMatchGame extends Component {
       case 'game':
         return (
             <div className={styles.wrap}>
-                {header}
                 <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
                 {qaItems}
             </div>
@@ -216,12 +211,12 @@ export default class PartyMatchGame extends Component {
       case 'result':
         return (
             <div className={styles.wrap}>
-                {header}
                 <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
                 {qaItems}
                 <ResultSection currentRank={currentRank}
                                userChoices={userChoices}
-                               replay={this._replay.bind(this)} />
+                               replay={this._replay.bind(this)}
+                               onSetStage={onSetStage} />
             </div>
         )
       break;
@@ -296,7 +291,7 @@ class ResultSection extends Component {
   }
   render(){
     const styles = require("./PartyMatchGame.scss")
-    const {parties, partyPromises, currentRank, userChoices, replay} = this.props;
+    const {parties, partyPromises, currentRank, userChoices, replay, onSetStage} = this.props;
     const {focus} = this.state;
 
     let resultPKers = {};
@@ -439,21 +434,17 @@ class ResultSection extends Component {
               </div>
           </div>
 
-          <div className={styles.introToPartyBills}>
-              <div className={styles.introToPartyTitle}>看看黨團未來的戰鬥目標，是否也跟你一致</div>
+          <div className={styles.actionBlock}>
+              <div className={styles.actionText}>看看黨團未來的戰鬥目標，是否也跟你一致</div>
+
+              <div className={styles.goMatch}
+                   onClick={onSetStage.bind(null, "bill")}>來去看看</div>
+
+              <div><div className={styles.goTable}
+                        onClick={replay.bind(null)}>再玩一次</div></div>
           </div>
 
-          <div className={styles.billSection}>
-            <div className={styles.birdTalk}>各政黨表態在當選後優先推動法案</div>
-            <div className={styles.billTitle}>各政黨第9屆戰鬥目標</div>
-            <PartyBills />
-          </div>
-          <div className={styles.actionButtons}>
-              <div onClick={replay.bind(null)}
-                   className={styles.actionButton}>再玩一次</div>
-              <div><Link to={`/parties-table/`}
-                    className={styles.goTable}>看完整表格</Link></div>
-          </div>
+
       </div>
     )
   }

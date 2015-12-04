@@ -3,7 +3,9 @@
 $smallBreak: 640px;/* 為了比對結果 hover 做的 */
 $tableWebBreak: 1000px;
 .wrap {
-	
+    border: 1px solid transparent;
+    padding-bottom: 350px;	
+    min-height: 3000px;
 }
 .pageTitle {
     margin: 0 auto;
@@ -350,30 +352,6 @@ table.hoverDetailTable {
   border-radius: 50%;
   color: #0F0F0F;
 }
-.billSection {
-  margin: 10px;
-  max-width: 800px;
-  margin: 0 auto;
-  background: white;
+.actionBlock {
   text-align: center;
-  padding-top: 20px;
-}
-.birdTalk {
-  font-size: 14px;
-  margin-top: 30px;
-}
-.billTitle {
-  font-size: 20px;
-  font-weight: 600;
- 
-  border-bottom: 2px solid;
-  display: inline-block;
-  padding: 4px;
-  margin: 0 auto;
-}
-@media all and (min-width:$tableWebBreak){
-  .billTitle {
-    color: black;
-    padding: 0;
-  }
 }

@@ -32,7 +32,7 @@ export default class PartyRolls extends Component {
         window.addEventListener("scroll", this._onScroll.bind(this));
     }
     componentWillUnmount(){
-       window.removeEventListener("scroll", this._onScroll.bind(this));
+        window.removeEventListener("scroll", this._onScroll.bind(this));
     }
     _onChangeFocus(value, event){
         window.scrollTo(0,0);
@@ -48,7 +48,7 @@ export default class PartyRolls extends Component {
     }
     render(){
       const styles = require("./PartyRolls.scss");
-      const {partyBlock} = this.props;
+      const {partyBlock, onSetStage} = this.props;
       const {focus, showMenu, outside} = this.state;
       
       /* current display party */
@@ -98,33 +98,44 @@ export default class PartyRolls extends Component {
       
       return (
           <div className={wrapClasses} id="pbWrap">
-              {mobileMenuButton}
-              
-              <div className={styles.partyWrap}>
-                  <section className={styles.partyRoll}>
-                    <ol>{nameEntryItems}</ol>
-                  </section>
-                  <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
-                      <h2 className={styles.partyTitle}>
-                          <img src={partyTitleImg}/>
-                          <img src={partyListImg} />
-                      </h2>
+              <div className={styles.pbInner}>
+                  {mobileMenuButton}
+                  
+                  <div className={styles.partyWrap}>
+                      <section className={styles.partyRoll}>
+                        <ol>{nameEntryItems}</ol>
+                      </section>
+                      <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
+                          <h2 className={styles.partyTitle}>
+                              <img src={partyTitleImg}/>
+                              <img src={partyListImg} />
+                          </h2>
+                      </div>
+                      <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
                   </div>
-                  <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
+    
+                  <div className={menuClasses}>
+                      <div className={`${styles.billboard} ${styles.left}`}>
+                          <PartyMenu side={1} 
+                                     onChangeFocus={this._onChangeFocus.bind(this)}
+                                     focus={focus}/></div>
+                      <div className={`${styles.billboard} ${styles.right}`}>
+                          <PartyMenu side={2} 
+                                     onChangeFocus={this._onChangeFocus.bind(this)}
+                                     focus={focus}/></div>
+                  </div>
+                  
               </div>
+             
+              <div className={styles.actionBlock}>
+                  <div className={styles.actionText}>黨團成分分析，快來看誰最適合你？</div>
+                  <div className={styles.actions}>
+                      <div className={styles.goMatch}
+                           onClick={onSetStage.bind(null, "matchgame")}>開始分析</div>
+                  </div>
+              </div>
+                 
 
-              <div className={styles.placeHolder}></div>
-              <div className={menuClasses}>
-                  <div className={`${styles.billboard} ${styles.left}`}>
-                      <PartyMenu side={1} 
-                                 onChangeFocus={this._onChangeFocus.bind(this)}
-                                 focus={focus}/></div>
-                  <div className={`${styles.billboard} ${styles.right}`}>
-                      <PartyMenu side={2} 
-                                 onChangeFocus={this._onChangeFocus.bind(this)}
-                                 focus={focus}/></div>
-              </div>
-              <div className={styles.placeHolder}></div>
 
           </div>
       )
