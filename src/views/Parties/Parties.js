@@ -66,10 +66,6 @@ export default class Parties extends Component {
                   <PartyBills/>
                   <div className={styles.billComplete}>
                       <div>黨團衝突戰任務完成了！</div>
-                      <div>戰況緊急，揪團參戰。share:</div>
-                      <div>
-                          <div className='shareaholic-canvas' data-app='share_buttons' data-app-id='21223043'></div>
-                      </div>
                   </div>
               </div>
           )

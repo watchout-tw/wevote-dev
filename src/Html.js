@@ -74,9 +74,9 @@ export default class Html extends Component {
                   rel="stylesheet" type="text/css"/>
           )}
 
-         
-          {/* shareaholic THIS IS DEV*/}
-          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='6f03c30df4bd0fe0dc18bab5908becce' data-cfasync='false' async='async'></script>
+          {/* shareaholic */}
+          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
+
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
