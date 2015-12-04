@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import DocumentMeta from 'react-document-meta';
+
 import classnames from 'classnames';
 
 import eng2party_short from '../../utils/eng2party_short';
@@ -66,8 +68,28 @@ export default class Parties extends Component {
         break;
 
     }
-   
-    return <div className={styles.wrap}>{content}</div>;
+
+    const title = `政黨票投票攻略-各政黨議題表態大公開-沃草2016立委出任務`;
+    const description = `2016立委選舉「政黨票」怎麼投？想知道各政黨的不分區參戰名單嗎？想知道各政黨對於議題表態與優先法案的未來承諾嗎？快來進行政黨成分分析，政黨票投票最佳攻略！`;
+    const metaData = {
+      title: title,
+      description: description,
+      meta: {
+          charSet: 'utf-8',
+          property: {
+            'og:title': title,
+            'og:description': description,
+            'og:type' : 'website'
+          }
+      }
+    };
+    
+    return (
+      <div>
+          <DocumentMeta {...metaData}/>
+          <div className={styles.wrap}>{content}</div>
+      </div>
+    );
 
   }
 }

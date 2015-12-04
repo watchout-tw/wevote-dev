@@ -80,18 +80,16 @@ export default class Party extends Component {
       case 'promises':
         content = <PartyPromises id={id} />
 
-        //todo
-        title = `沃草2016立委出任務`;
-        description = `對於各項重大議題的戰鬥策略大解析！趕快來看看委員在立法院針對下列重大議題講了哪些話！`;
+        title = `${eng2cht(id)}對於議題與法案的未來承諾-沃草2016立委出任務`;
+        description = `${eng2cht(id)}的未來承諾大公開！趕快來看看${eng2cht(id)}各項重大議題的戰鬥策略與優先法案的戰鬥目標！`;
     
       break;
 
       case 'list':
         content = <PartyBlock id={id} />
 
-        //todo
-        title = `議題表態分析-沃草2016立委出任務`;
-        description = `對於各項重大議題的戰鬥策略大解析！趕快來看看委員在立法院針對下列重大議題講了哪些話！`;
+        title = `${eng2cht(id)}不分區名單完整公開-沃草2016立委出任務`;
+        description = `${eng2cht(id)}的不分區名單完整公開！你不能錯過的${eng2cht(id)}參戰勇者介紹！`;
     
       break;
     }
