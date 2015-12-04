@@ -1,5 +1,5 @@
 @import '../../common.scss';
-$break: 1024px;
+$break: 960px;
 
 .innerWrap {
   //padding: 20vh 0;
@@ -42,7 +42,7 @@ $break: 1024px;
 }
 .sky {
   width: 100%;
-  padding: 200px 0 100px;
+  padding: 300px 0 80px;
   background-image: url(./images/sky.png);
   background-size: cover;
   background-position: center center;
@@ -82,11 +82,21 @@ $break: 1024px;
     }
   }
 }
+.countdown {
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media all and (min-width: $break) {
+  .countdown {
+    top: 120px;
+  }
   .stargate:hover {
     transform: scale(1.35);
     -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
     filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
-
   }
 }

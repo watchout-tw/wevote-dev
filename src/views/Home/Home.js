@@ -25,6 +25,16 @@ export default class Home extends Component {
       }
     };
 
+    // http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
+    var diffDays=(function(){
+      var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+      var secondDate = new Date(2016,0,16);
+      var firstDate = new Date();
+      return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+    })();
+    if(diffDays < 0) diffDays = 0;
+    let countdown = require(`./images/countdown/countdown_${diffDays}.svg`);
+
     let stonehenge = require('./images/stonehenge.png');
     let stargate = require('./images/stargate.png');
 
@@ -49,6 +59,8 @@ export default class Home extends Component {
                 <Link to={`/8th-legislators`}>8th-legislators</Link>
                 <Link to={`/embed`}>embed</Link>
               </div>
+
+              <img src={countdown} className={styles.countdown}/>
 
               <img src={stonehenge} className={styles.stonehenge}/>
               <div className={styles.sky}>
