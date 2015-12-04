@@ -28,7 +28,7 @@ function countLevel(count){
 function recordsOrPromises(party){
   let hasRecords = ["KMT","DPP","PFP","TSU","NSU"];
   if(hasRecords.indexOf(party)!==-1){
-    return "recrods";
+    return "records";
   }else{
     return "promises";
   }
