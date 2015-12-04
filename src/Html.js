@@ -4,7 +4,8 @@ import DocumentMeta from 'react-document-meta';
 const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
 const IMP = '!important';
-const cheatCSS = `
+
+const cheatCSS = ""/* = `
 .shareaholic-share-buttons-container ul.shareaholic-share-buttons
 { margin: 0 ${IMP}; padding: 4px ${IMP}; }
 i.shareaholic-service-icon
@@ -21,7 +22,7 @@ i.shareaholic-service-icon
 { font-size: 15px ${IMP}; padding-top: 1px ${IMP}; }
 .shareaholic-share-buttons-container li.shareaholic-share-button .shareaholic-share-button-container:hover
 { opacity: 0.5 ${IMP}; }
-`;
+`;*/
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
  * Used in server-side code only to wrap the string output of the
@@ -73,8 +74,9 @@ export default class Html extends Component {
                   rel="stylesheet" type="text/css"/>
           )}
 
-          {/* shareaholic */}
-          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
+         
+          {/* shareaholic THIS IS DEV*/}
+          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='6f03c30df4bd0fe0dc18bab5908becce' data-cfasync='false' async='async'></script>
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
