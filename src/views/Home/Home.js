@@ -32,7 +32,8 @@ export default class Home extends Component {
       var firstDate = new Date();
       return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
     })();
-    if(diffDays < 0) diffDays = 0;
+    if(diffDays > 42) diffDays = 42;
+    else if(diffDays < 0) diffDays = 0;
     let countdown = require(`./images/countdown/countdown_${diffDays}.svg`);
 
     let stonehenge = require('./images/stonehenge.png');
