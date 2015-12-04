@@ -75,6 +75,7 @@ export default class PartyBills extends Component {
     const styles = require('./PartyBills.scss');
     const {issues, showTitle} = this.props;
     const {tableData, focus} = this.state;
+    let noReplyImg = require('./images/promise-none.png');
 
     let partyBills = Object.keys(tableData).map((partyId, i)=>{
         let party = tableData[partyId];
@@ -93,7 +94,11 @@ export default class PartyBills extends Component {
               goalItem = <div className={styles.bill}>{text}</div>
 
             }else{
-              goalItem = <div className={`${styles.bill} ${styles.noReply}`}>尚未回覆</div>
+              goalItem = (
+                <div className={`${styles.bill} ${styles.noReply}`}>
+                    <img className={styles.noReplyImg} 
+                         src={noReplyImg} />
+                </div>)
             }
             return goalItem;
         })
