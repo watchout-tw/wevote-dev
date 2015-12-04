@@ -250,13 +250,13 @@ class ConfigSection extends Component {
                 <li className={styles.listItem}>
                   <label className={styles.radioLabel}>
                     <input type="radio" className={styles.radio} name="conflictResolver" value="recordFirst" ref="recordFirst" />
-                      舊の紀錄
+                      舊的紀錄
                   </label>
                 </li>
                 <li className={styles.listItem}>
                   <label className={styles.radioLabel}>
                     <input type="radio" className={styles.radio} name="conflictResolver" value="promiseFirst" />
-                      新の承諾
+                      新的承諾
                   </label>
                 </li> 
               </ul>

@@ -122,8 +122,7 @@ export default class PartiesTable extends Component {
             return (
               <div className={styles.position}>
                   <div className={recordClasses}>
-                      <Link className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}
-                            to={`/parties/${party.id}/records/${eng2url(issueName)}`}></Link>
+                      <div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div>
                   </div>
                   <img className={styles.promise}
                        src={`${imgHub[pos.promise]}`} />
