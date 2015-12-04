@@ -64,11 +64,19 @@ export default class Parties extends Component {
           content = (
               <div className={styles.billWrap}>
                   <PartyBills/>
+                  <div className={styles.billComplete}>
+                      <div>黨團衝突戰任務完成了！</div>
+                      <div>戰況緊急，揪團參戰。share:</div>
+                      <div>
+                          <div className='shareaholic-canvas' data-app='share_buttons' data-app-id='21223043'></div>
+                      </div>
+                  </div>
               </div>
           )
         break;
 
     }
+    /* <div className='shareaholic-canvas' data-app='share_buttons' data-app-id='21117200'></div> prod */
 
     const title = `政黨票投票攻略-各政黨議題表態大公開-沃草2016立委出任務`;
     const description = `2016立委選舉「政黨票」怎麼投？想知道各政黨的不分區參戰名單嗎？想知道各政黨對於議題表態與優先法案的未來承諾嗎？快來進行政黨成分分析，政黨票投票最佳攻略！`;
@@ -88,10 +96,63 @@ export default class Parties extends Component {
     return (
       <div>
           <DocumentMeta {...metaData}/>
-          <div className={styles.wrap}>{content}</div>
+          <div className={styles.wrap}>
+            <ProgressBar stage={stage} />
+            {content}
+          </div>
       </div>
     );
 
   }
+}
+class ProgressBar extends Component {
+    render(){
+      const styles = require('./Parties.scss');
+      const {stage} = this.props;
+      if(stage === "initial") return <div></div>;
+
+      const allStages = [
+      {
+        "id":"roll",
+        "title":"參戰名單" 
+      }, 
+      { 
+        "id":"matchgame",
+        "title":"成分分析"
+      }, 
+      {
+        "id":"bill",
+        "title":"戰鬥目標"
+      }];
+      let complete = true;
+      let stageItems = allStages.map((s,i)=>{
+          let current = false;
+          if(s.id === stage){
+             complete = false;
+             current = true;
+          }
+          let sClasses = classnames({
+            [styles.sItem] : true,
+            [styles.complete] : complete === true,
+            [styles.current] : current === true
+          })
+          let cClasses = classnames({
+            [styles.circle] : true,
+            [styles.complete] : complete === true,
+            [styles.current] : current === true
+          })
+          return (
+            <div className={sClasses}>
+               <div className={cClasses}></div>
+               {s.title}
+            </div>
+          )
+      });
+      return (
+          <div className={styles.stageWrap}>
+              {stageItems}
+          </div>
+      )
+    }
 }
 
