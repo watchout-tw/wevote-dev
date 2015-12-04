@@ -23,21 +23,39 @@
 
 ### start the app
 
-- $npm install && npm start
+- `$npm install && npm start`
 
 - http://localhost:8080/
 
 ### develop mode
 
-- $npm run dev
+- `$npm run dev`
 
 - http://localhost:3000/
 
 ### build to static site
 
-- $npm run build && npm start
+- `$npm run build && npm start`
 
-- (open another console) $./bin/gen-static
+- (open another console) `$./bin/gen-static`
+
+### depoy to Heroku
+
+- In `.gitignore`, remove `static/dist/` and `webpack-stats.json`
+
+- In `package.json`, modify “betterScripts” as follows:
+
+``` 
+"betterScripts": {
+    "start": {
+      "command": "node ./bin/server.js",
+      "env": {
+        "NODE_PATH": "./src",
+        "NODE_ENV": “production"
+      }
+    },
+```
+- `$npm run build`, then commit and push to your heroku repository.
 
 
 ### note
