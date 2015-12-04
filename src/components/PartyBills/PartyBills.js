@@ -30,7 +30,7 @@ export default class PartyBills extends Component {
         focus: ""
       }
   }
-  _onScroll(){  
+  _onScroll(){
       const {focus} = this.state;
 
       let billNode = document.getElementById("billTitle");
@@ -45,7 +45,7 @@ export default class PartyBills extends Component {
       if(billRect.top < 0 && billEndRect.top > 100){
         current = "bill";
       }
-      
+
       //console.log(billRect.top + "," + billEndRect.top + "," + current)
 
       if(current){
@@ -75,11 +75,11 @@ export default class PartyBills extends Component {
     const styles = require('./PartyBills.scss');
     const {issues, showTitle} = this.props;
     const {tableData, focus} = this.state;
-    let noReplyImg = require('./images/promise-none.png');
+    let noReplyImg = require('./images/answers_unknown.svg');
 
     let partyBills = Object.keys(tableData).map((partyId, i)=>{
         let party = tableData[partyId];
-        
+
         //政黨名稱
         let partyName = (
             <div className={styles.partyName}>
@@ -101,14 +101,14 @@ export default class PartyBills extends Component {
             }else{
               goalItem = (
                 <div className={`${styles.bill} ${styles.noReply}`}>
-                    <img className={styles.noReplyImg} 
+                    <img className={styles.noReplyImg}
                          src={noReplyImg} />
                 </div>)
             }
             return goalItem;
         })
         return (
-          <Link to={`/parties/${party.id}/promises/`} 
+          <Link to={`/parties/${party.id}/promises/`}
                 className={styles.partyEntry}>
                {partyName}{bills}
           </Link>
