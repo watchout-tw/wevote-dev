@@ -58,7 +58,6 @@ export default class Parties extends Component {
         break;
 
         case 'bill':
-          let shareImg = require("./images/animal-fight.png");
           content = (
               <div className={styles.billWrap}>
                   <PartyBills/>
