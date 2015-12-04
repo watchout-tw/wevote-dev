@@ -114,10 +114,14 @@ export default class PartiesTable extends Component {
     let partyPositions = Object.keys(tableData).map((partyId, i)=>{
         let party = tableData[partyId];
         //政黨名稱
-        let partyName = <div className={styles.partyName}>
-                          <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}
-                                to={`/parties/${party.id}/${recordsOrPromises(party.id)}/`}>{party.name}</Link>
-                        </div>;
+        let partyName = (
+          <div className={styles.partyName}>
+            <div className={styles.nameFlex}>
+                <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[party.id]}`}></div>
+                <div className={`${styles.partyTitle}`}>{party.name}</div>
+            </div>
+          </div>
+          );
 
         //表態
         let positions = Object.keys(party.positions).map((issueName, j)=>{
@@ -139,7 +143,8 @@ export default class PartiesTable extends Component {
             )
         })
 
-        return <div className={styles.partyEntry}>{partyName}{positions}</div>
+        return <Link className={styles.partyEntry}
+                     to={`/parties/${party.id}/${recordsOrPromises(party.id)}/`}>{partyName}{positions}</Link>
     });
 
     let legendImg = require("./images/legend.png");
@@ -173,11 +178,7 @@ export default class PartiesTable extends Component {
 
           <PartyBills showTitle={true}/>
 
-          <div className={styles.goMatchSec}>
-              <div className={styles.birdTalk}>想要看看哪個政黨屬性跟你最接近嗎？</div>
-              <Link to={`/parties-matchgame/`}
-                    className={styles.goMatch}>進入攻城戰</Link>
-          </div>
+          
       </div>
     );
   }

@@ -48,9 +48,12 @@ header {
     	font-size: 20px;
 	}
 }
-.partyEntry {
+.partyEntry, .partyEntry:visited {
 	display: flex;
 	padding: 10px 0;
+	color: $black;
+	text-decoration: none;
+	cursor: pointer;
 }
 .partyEntry:hover {
 	background: rgb(200,200,200);
@@ -67,6 +70,17 @@ header {
 		font-size: 16px;
 	}
 }
+.nameFlex {
+	display: flex;
+}
+.party {
+	margin: 4px 4px 0 0;
+	flex: 14px 0 0;
+}
+.partyTitle {
+	flex: 1;
+}
+
 .bill {
 	flex: 1;
 	padding: 0 10px;
