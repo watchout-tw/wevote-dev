@@ -10,7 +10,7 @@ export default class Footer extends Component {
     let SaySomething = require('./images/SaySomething.svg');
 
     return (
-      <div className={styles.wrap}>
+      <div className={styles.wrap} id="footer">
           <div className={styles.innerWrap}>
               <div className={styles.say}>
                 <img src={SaySomething}/>

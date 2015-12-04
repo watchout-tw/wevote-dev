@@ -1,6 +1,7 @@
 @import '../../common.scss';
 $rollSmallBreak: 500px;
 $rollLargeBreak: 800px;
+$rollExtraWideBreak: 1200px;
 .pbWrap {
 	position: relative;
 	text-align: center;
@@ -194,10 +195,31 @@ $rollLargeBreak: 800px;
 	.toggleMenu { display: none; }
 	.partyMenuBlock {
 		position: fixed;
-    	width: 100%;
+	    width: 100%;
     	margin: 0 auto;
     	overflow: visible;
     	top: 20vw;
+	}
+	.placeHolder {
+		height: 100px;
+		width: 100%;
+	}
+	.partyMenuBlock.notFixed {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+}
+@media all and (min-width: $rollLargeBreak) and (max-width: $rollExtraWideBreak) {
+	.partyMenuBlock.notFixed .billboard.left, .partyMenuBlock.notFixed .billboard.right {
+		width: 40%;
+		max-width: 40%;
+	}
+}
+@media all and (min-width: $rollExtraWideBreak){
+	.partyMenuBlock {
+		max-width: 1200px;
+    	left: calc(50vw - 600px);
 	}
 }
 /* 左右兩塊 */

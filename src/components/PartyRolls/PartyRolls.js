@@ -18,9 +18,10 @@ export default class PartyRolls extends Component {
     }
     _onScroll(){  
       const {outside} = this.state;
-      let footerNode = document.getElementById("pbFooter");
+      let footerNode = document.getElementById("footer");
       let footerRect = footerNode.getBoundingClientRect();
       let current = (footerRect.top - window.innerHeight < 0) ? true : false;
+      
       if(current!==outside){
         this.setState({
           outside: current
@@ -60,7 +61,8 @@ export default class PartyRolls extends Component {
       })
       let menuClasses = classnames({
         [styles.partyMenuBlock]: true,
-        [styles.show] : showMenu === true
+        [styles.show] : showMenu === true,
+        [styles.notFixed] : outside === true
       })
       let mobileMenuButtonClasses = classnames({
         [styles.mobileMenuButton]: true,
@@ -97,17 +99,7 @@ export default class PartyRolls extends Component {
       return (
           <div className={wrapClasses} id="pbWrap">
               {mobileMenuButton}
-              <div className={menuClasses}>
-                  <div className={`${styles.billboard} ${styles.left}`}>
-                      <PartyMenu side={1} 
-                                 onChangeFocus={this._onChangeFocus.bind(this)}
-                                 focus={focus}/></div>
-                  <div className={`${styles.billboard} ${styles.right}`}>
-                      <PartyMenu side={2} 
-                                 onChangeFocus={this._onChangeFocus.bind(this)}
-                                 focus={focus}/></div>
-              </div>
-          
+              
               <div className={styles.partyWrap}>
                   <section className={styles.partyRoll}>
                     <ol>{nameEntryItems}</ol>
@@ -118,9 +110,21 @@ export default class PartyRolls extends Component {
                           <img src={partyListImg} />
                       </h2>
                   </div>
-                  <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}
-                       id="pbFooter"></div>
+                  <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
               </div>
+
+              <div className={styles.placeHolder}></div>
+              <div className={menuClasses}>
+                  <div className={`${styles.billboard} ${styles.left}`}>
+                      <PartyMenu side={1} 
+                                 onChangeFocus={this._onChangeFocus.bind(this)}
+                                 focus={focus}/></div>
+                  <div className={`${styles.billboard} ${styles.right}`}>
+                      <PartyMenu side={2} 
+                                 onChangeFocus={this._onChangeFocus.bind(this)}
+                                 focus={focus}/></div>
+              </div>
+              <div className={styles.placeHolder}></div>
 
           </div>
       )
