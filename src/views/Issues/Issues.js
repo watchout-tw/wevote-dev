@@ -19,9 +19,24 @@ export default class Issues extends Component {
     const styles = require('./issues.scss');
     const {issues} = this.props;
 
+    const title = `議題攻城戰-立委議題表態大公開-沃草2016立委出任務`;
+    const description = `立委對於各項重大議題的戰鬥策略大解析！趕快來看看立委針對下列重大議題講了哪些話！`;
+    const metaData = {
+      title: title,
+      description: description,
+      meta: {
+          charSet: 'utf-8',
+          property: {
+            'og:title': title,
+            'og:description': description,
+            'og:type' : 'website'
+          }
+      }
+    };
 
     return (
-      <div className={styles.home}>        
+      <div className={styles.home}> 
+          <DocumentMeta {...metaData}/>       
           <div className={styles.contentWrap}>
               <div className={styles.innerWrap}>
                   <MaXiCastle />

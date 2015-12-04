@@ -7,24 +7,14 @@ $positionTableWebBreak: 500px;
 
 	padding-bottom: 150px;
 	position: relative;
-	background-size: auto 100%;
-	background-image:
-		url('../images/grass-mobile.png');
-	background-repeat: repeat;
+	
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/bg-web.png');
 	background-attachment:fixed;
 }
 @media all and (min-width:$positionTableWebBreak){
-	.wrap {
-		background-size: 100% auto;
-    	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-    	background-position: 0 0, 0 33vw, 0 0, 0 0, 0 30vw;
-    	background-image:
-    	  url('../images/animal-web.png'),
-    	  url('../images/grass-web.png'),
-    	  url('../images/tree-web.png'),
-    	  url('../images/sky-web.png'),
-    	  url('../images/grass-repeat-web.png');
-	}
+
 }
 .partyPosition {
 	background: #eee;
@@ -64,9 +54,12 @@ header {
     	font-size: 20px;
 	}
 }
-.partyEntry {
+.partyEntry, .partyEntry:visited {
 	display: flex;
 	padding: 10px 0;
+	color: $black;
+	text-decoration: none;
+	cursor: pointer;
 }
 .partyEntry:hover {
 	background: rgb(200,200,200);
@@ -76,6 +69,16 @@ header {
     text-align: center;
     font-size: 14px;
     padding: 0 10px;
+}
+.nameFlex {
+	display: flex;
+}
+.party {
+	margin: 4px 4px 0 0;
+	flex: 14px 0 0;
+}
+.partyTitle {
+	flex: 1;
 }
 @media all and (min-width: $positionTableWebBreak){
 	.partyName {
@@ -131,24 +134,4 @@ header {
 	text-align: center;
 	margin: 20px 0;
 }
-/*
-.legend {
-	margin: 50px auto;
-	display: block;
-	width: 100%;
-}*/
-.goMatchSec {
-	text-align: center;
-	margin: 30px 0;
-}
-.birdTalk {
-	font-size: 14px;
-	margin: 10px auto;
-    padding-left: 14px;
-    color: white;
-}
-@media all and (min-width: $positionTableWebBreak){
-	.birdTalk {
-		color: $awesomeColor;
-	}
-}
+

@@ -75,15 +75,21 @@ export default class PartyBills extends Component {
     const styles = require('./PartyBills.scss');
     const {issues, showTitle} = this.props;
     const {tableData, focus} = this.state;
+    let noReplyImg = require('./images/promise-none.png');
 
     let partyBills = Object.keys(tableData).map((partyId, i)=>{
         let party = tableData[partyId];
         
         //政黨名稱
-        let partyName = <div className={styles.partyName}>
-                        <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`} 
-                              to={`/parties/${party.id}/promises/`}>{party.name}</Link>
-                        </div>;
+        let partyName = (
+            <div className={styles.partyName}>
+                <div className={styles.nameFlex}>
+                    <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[party.id]}`}></div>
+                    <div className={`${styles.partyTitle}`}>{party.name}</div>
+                </div>
+            </div>
+        );
+
         //優先推動
 
         let bills = party.bills.map((item, k)=>{
@@ -93,14 +99,19 @@ export default class PartyBills extends Component {
               goalItem = <div className={styles.bill}>{text}</div>
 
             }else{
-              goalItem = <div className={`${styles.bill} ${styles.noReply}`}>尚未回覆</div>
+              goalItem = (
+                <div className={`${styles.bill} ${styles.noReply}`}>
+                    <img className={styles.noReplyImg} 
+                         src={noReplyImg} />
+                </div>)
             }
             return goalItem;
         })
         return (
-          <div className={styles.partyEntry}>
-                  {partyName}{bills}
-          </div>
+          <Link to={`/parties/${party.id}/promises/`} 
+                className={styles.partyEntry}>
+               {partyName}{bills}
+          </Link>
         )
     });
 
@@ -126,7 +137,7 @@ export default class PartyBills extends Component {
               </div>
 
               {partyBills}
-              <div className={styles.billMeta}>點選政黨名稱可到政黨頁面看詳細資料。</div>
+              <div className={styles.billMeta}>截至網站更新前(12/4)，已有自由台灣黨、時代力量、綠社盟回覆，我們歡迎每個政黨進行表態承諾的回覆。</div>
               <div id="billEnd"></div>
           </div>
       </div>

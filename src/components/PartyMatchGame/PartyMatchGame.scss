@@ -321,6 +321,10 @@ table.hoverDetailTable {
   padding: 10px;
   line-height: 1.5;
   color: white;
+  text-align: center;
+}
+.noDataMetaDes {
+  text-align: left;
 }
 @media all and (min-width:$tableWebBreak){
   .noDataItems {
