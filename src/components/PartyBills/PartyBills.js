@@ -34,6 +34,7 @@ export default class PartyBills extends Component {
       const {focus} = this.state;
 
       let billNode = document.getElementById("billTitle");
+      if(!billNode) return;
       let billRect = billNode.getBoundingClientRect();
 
       let billEndNode = document.getElementById("billEnd");
