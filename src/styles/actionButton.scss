@@ -1,5 +1,11 @@
 @import '../common.scss';
 
+.actionText {
+  margin: 0 0 20px 0;
+}
+.actions {
+  line-height: 1.6;
+}
 .actionButtons {
   font-size: 22px;
   position: relative;
@@ -12,7 +18,8 @@
   font-size: 24px;
   position: relative;
   margin: 0 4px;
-  padding: 10px 20px;
+  padding: 8px 20px;
+  height: 40px;
   background: $awesomeColor;
   box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.25);
   color: $white;
@@ -46,4 +53,5 @@
   text-decoration: none;
   font-size: 16px;
   font-weight: 100;
+  cursor: pointer;
 }

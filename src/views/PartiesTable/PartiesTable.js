@@ -25,6 +25,14 @@ function countLevel(count){
      return 'empty';
   }
 }
+function recordsOrPromises(party){
+  let hasRecords = ["KMT","DPP","PFP","TSU","NSU"];
+  if(hasRecords.indexOf(party)!==-1){
+    return "recrods";
+  }else{
+    return "promises";
+  }
+}
 @connect(
     state => ({
       records: state.records,
@@ -49,6 +57,7 @@ export default class PartiesTable extends Component {
   }
   _onScroll(){
       let positionNode = document.getElementById("positionTitle");
+      if(!positionNode) return;
       let positionRect = positionNode.getBoundingClientRect();
 
       let positionEndNode = document.getElementById("positionEnd");
@@ -107,7 +116,7 @@ export default class PartiesTable extends Component {
         //政黨名稱
         let partyName = <div className={styles.partyName}>
                           <Link className={`${styles.partyTitle} ${styles.ia} ${styles.bright}`}
-                                to={`/parties/${party.id}/records/`}>{party.name}</Link>
+                                to={`/parties/${party.id}/${recordsOrPromises(party.id)}/`}>{party.name}</Link>
                         </div>;
 
         //表態
@@ -122,8 +131,7 @@ export default class PartiesTable extends Component {
             return (
               <div className={styles.position}>
                   <div className={recordClasses}>
-                      <Link className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}
-                            to={`/parties/${party.id}/records/${eng2url(issueName)}`}></Link>
+                      <div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div>
                   </div>
                   <img className={styles.promise}
                        src={`${imgHub[pos.promise]}`} />

@@ -7,11 +7,13 @@
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-image: url('../images/bg-web.png');
+	border: 1px solid transparent;
 }
 
 /* 說明 */
 .initialWrap {
 	padding-top: 40px;
+	min-height: 600px;
 }
 .story {
 	max-width: 400px;
@@ -24,4 +26,6 @@
 .actions {
 	text-align: center;
 }
-
+.billWrap {
+	padding-bottom: 150px;
+}

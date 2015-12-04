@@ -34,6 +34,7 @@ export default class PartyBills extends Component {
       const {focus} = this.state;
 
       let billNode = document.getElementById("billTitle");
+      if(!billNode) return;
       let billRect = billNode.getBoundingClientRect();
 
       let billEndNode = document.getElementById("billEnd");
@@ -125,7 +126,7 @@ export default class PartyBills extends Component {
               </div>
 
               {partyBills}
-
+              <div className={styles.billMeta}>點選政黨名稱可到政黨頁面看詳細資料。</div>
               <div id="billEnd"></div>
           </div>
       </div>

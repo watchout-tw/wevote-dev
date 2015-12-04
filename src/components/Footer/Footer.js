@@ -10,14 +10,14 @@ export default class Footer extends Component {
     let SaySomething = require('./images/SaySomething.svg');
 
     return (
-      <div className={styles.wrap}>
+      <div className={styles.wrap} id="footer">
           <div className={styles.innerWrap}>
               <div className={styles.say}>
                 <img src={SaySomething}/>
                   <div className={styles.welcome}>歡迎<b>政黨</b>及<b>候選人</b>針對我們列出的重大議題表態回覆！</div>
                   <div className={styles.links}>
                     <div><Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`}
-                      to={"//wevote.tw/form.pdf"}>下載表態表單</Link></div>
+                      to={"//wevote.tw/form.pdf"}>下載表態承諾書</Link></div>
                     <div><Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`}
                       to={`/about/FAQ`}>我們是如何蒐集資料的？</Link></div>
                   </div>

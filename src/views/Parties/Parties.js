@@ -21,6 +21,7 @@ export default class Parties extends Component {
         }
   }
   _onSetStage(value){
+    window.scrollTo(0,0);
     this.setState({
       stage: value
     })
@@ -49,15 +50,19 @@ export default class Parties extends Component {
         break;
 
         case 'roll':
-          content = <PartyRolls/>
+          content = <PartyRolls onSetStage={this._onSetStage.bind(this)}/>
         break;
 
         case 'matchgame':
-          content = <PartiesMatchGame/>
+          content = <PartyMatchGame onSetStage={this._onSetStage.bind(this)}/>
         break;
 
         case 'bill':
-          content = <PartyBills/>
+          content = (
+              <div className={styles.billWrap}>
+                  <PartyBills/>
+              </div>
+          )
         break;
 
     }
