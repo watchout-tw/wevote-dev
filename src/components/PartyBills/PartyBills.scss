@@ -1,16 +1,17 @@
 @import '../../common.scss';
-$billTableWebBreak: 800px;
+$billTableWebBreak: 500px;
+$maxWidth: 720px;
 .wrap {
 	position: relative;
 	background: #eee;
-    padding: 10px 0;
-    margin-top: 30px;
-    text-align: left;
+  padding: 10px 0;
+  margin-top: 80px;
+  text-align: left;
 }
 @media all and (min-width: $billTableWebBreak){
 	.wrap {
-		max-width: 800px;
-		margin: 30px auto 0 auto;
+		max-width: $maxWidth;
+		margin: 80px auto 0 auto;
 		box-shadow: 3px 3px rgba(0, 0, 0, 0.12);
 	}
 }
@@ -29,7 +30,7 @@ header {
 	position: fixed;
 	top: 0;
 	width: calc(100% - 20px);
-	max-width: 800px;
+	max-width: $maxWidth;
 	background: white;
 	box-shadow: 0 2px 1px 0 rgba(0,0,0,0.08);
 }
@@ -44,8 +45,7 @@ header {
 }
 @media all and (min-width: $billTableWebBreak){
 	.billTitle {
-		padding: 10px 20px;
-    	font-size: 20px;
+    font-size: 18px;
 	}
 }
 .partyEntry, .partyEntry:visited {
@@ -56,15 +56,18 @@ header {
 	cursor: pointer;
 }
 .partyEntry:hover {
-	background: rgb(200,200,200);
+	background: rgba($awesomeColor, 0.15);
 }
 .partyName {
 	flex: 1;
-	text-align: center;
+	//text-align: center;
 	font-size: 14px;
 	padding: 0 10px;
 }
 @media all and (min-width: $billTableWebBreak){
+	.party {
+		margin: 3px 4px 3px 0;
+	}
 	.partyName {
 		text-align: left;
 		font-size: 16px;
@@ -74,7 +77,7 @@ header {
 	display: flex;
 }
 .party {
-	margin: 4px 4px 0 0;
+	margin-right: 4px;
 	flex: 14px 0 0;
 }
 .partyTitle {
@@ -103,5 +106,3 @@ header {
 	margin-top: 30px;
 	padding-left: 20px;
 }
-
-

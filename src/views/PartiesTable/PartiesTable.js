@@ -134,9 +134,7 @@ export default class PartiesTable extends Component {
 
             return (
               <div className={styles.position}>
-                  <div className={recordClasses}>
-                      <div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div>
-                  </div>
+                  <div className={recordClasses}><div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div></div>
                   <img className={styles.promise}
                        src={`${imgHub[pos.promise]}`} />
               </div>
@@ -148,8 +146,8 @@ export default class PartiesTable extends Component {
     });
 
     let legendImg = require("./images/legend.png");
-    let legendRecord = require('./images/legend-expanded_record.svg');
-    let legendPromise = require('./images/legend-expanded_promise.svg');
+    let legendRecord = require('./images/legend_record.svg');
+    let legendPromise = require('./images/legend_promise.svg');
 
     //title class, 處理 scroll fixed on top
     let fixedClasses = classnames({
@@ -170,15 +168,15 @@ export default class PartiesTable extends Component {
                 {partyPositions}
             </div>
             <div id="positionEnd"></div>
-            <p className={styles.legend}>
+            <div className={styles.legend}>
               <img src={legendRecord}/>
               <img src={legendPromise}/>
-            </p>
+            </div>
           </div>
 
           <PartyBills showTitle={true}/>
 
-          
+
       </div>
     );
   }

@@ -130,14 +130,14 @@ export default class PartyBills extends Component {
               <div className={fixedClasses}>
                   <div className={styles.billTitles}>
                       <div className={styles.partyName}></div>
-                      <div className={styles.billTitle}>法案1</div>
-                      <div className={styles.billTitle}>法案2</div>
-                      <div className={styles.billTitle}>法案3</div>
+                      <div className={styles.billTitle}>法案一</div>
+                      <div className={styles.billTitle}>法案二</div>
+                      <div className={styles.billTitle}>法案三</div>
                   </div>
               </div>
 
               {partyBills}
-              <div className={styles.billMeta}>截至網站更新前(12/4)，已有自由台灣黨、時代力量、綠社盟回覆，我們歡迎每個政黨進行表態承諾的回覆。</div>
+              <div className={styles.billMeta}>截至網站更新前（12月4日），已有自由台灣黨、時代力量、綠社盟回覆，我們歡迎每個政黨進行表態承諾的回覆。</div>
               <div id="billEnd"></div>
           </div>
       </div>
