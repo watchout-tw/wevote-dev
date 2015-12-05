@@ -60,7 +60,6 @@ header {
 }
 .partyName {
 	flex: 1.2;
-	//text-align: center;
 	font-size: 14px;
 	padding: 0 10px;
 }
@@ -82,6 +81,11 @@ header {
 }
 .partyTitle {
 	flex: 1;
+}
+.exLink {
+	margin: 2px 0 0 4px;
+    font-size: 8px;
+    color: grey;
 }
 
 .bill {

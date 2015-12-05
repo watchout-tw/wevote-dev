@@ -63,7 +63,7 @@ export default class Parties extends Component {
         case 'bill':
           content = (
               <div className={styles.billWrap}>
-                  <PartyBills/>
+                  <PartyBills outerLink={true}/>
                   <div className={styles.billComplete}>
                       <div>黨團衝突戰任務完成了！</div>
                   </div>

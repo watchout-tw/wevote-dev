@@ -75,7 +75,11 @@ export default class PartyBills extends Component {
     const styles = require('./PartyBills.scss');
     const {issues, showTitle} = this.props;
     const {tableData, focus} = this.state;
+    const {outerLink} = this.props;
+
     let noReplyImg = require('./images/answers_unknown.svg');
+    let outerLinkItem = (outerLink) ? <i className={`fa fa-external-link ${styles.exLink}`}></i> : "";
+
 
     let partyBills = Object.keys(tableData).map((partyId, i)=>{
         let party = tableData[partyId];
@@ -85,7 +89,9 @@ export default class PartyBills extends Component {
             <div className={styles.partyName}>
                 <div className={styles.nameFlex}>
                     <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[party.id]}`}></div>
-                    <div className={`${styles.partyTitle}`}>{party.name}</div>
+                    <div className={`${styles.partyTitle}`}>
+                        {party.name}{outerLinkItem}
+                    </div>
                 </div>
             </div>
         );
@@ -107,12 +113,28 @@ export default class PartyBills extends Component {
             }
             return goalItem;
         })
-        return (
-          <Link to={`/parties/${party.id}/promises/`}
-                className={styles.partyEntry}>
-               {partyName}{bills}
-          </Link>
-        )
+
+        //決定要另開新視窗或是直接連結
+        
+
+        if(outerLink){
+            return (
+                <a href={`/parties/${party.id}/promises/`}
+                   className={styles.partyEntry}
+                   target="_blank">
+                     {partyName}{bills}
+                </a>
+            )
+
+        }else{
+            return (
+                <Link to={`/parties/${party.id}/promises/`}
+                      className={styles.partyEntry}>
+                     {partyName}{bills}
+                </Link>
+            )
+        }
+
     });
 
     let title = (showTitle === true) ? (
