@@ -14,9 +14,6 @@ $maxWidth: 720px;
     background-image: url('../images/bg-web.png');
 	background-attachment:fixed;
 }
-@media all and (min-width:$positionTableWebBreak){
-
-}
 .partyPosition {
 	background: #eee;
 	max-width: $maxWidth;
