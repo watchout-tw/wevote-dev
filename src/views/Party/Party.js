@@ -192,11 +192,18 @@ class PartyPromises extends Component {
           )
       })
       let billItems = bills.map((value,i)=>{
+          let content = value.content;
+          if(!content){
+              if(!value.goal){
+                  //因為有可能只有回覆目標，沒有寫內容描述
+                  content = "尚未回覆";
+              }
+          }
           return (
               <div className={styles.billItem}
                    key={`billItem-${id}-${i}`}>
                   <div className={styles.billItemTitle}>{i+1}・{value.goal}</div>
-                  <div>{value.content || "尚未回覆"}</div>
+                  <div>{content}</div>
               </div>
           )
       })
