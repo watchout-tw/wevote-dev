@@ -44,6 +44,31 @@ $rollLargeBreak: 800px;
 		width: 200px;
 	}
 }
+.billCompleteShare {
+	display: none;
+}
+.billCompleteShare.show {
+	display: block;
+	font-size: 18px;
+    position: fixed;
+    bottom: 90px;
+    left: calc(50% - 150px);
+    background: white;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+.billCompleteShare.show:after {
+	content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 50px solid white;
+
+}
 /* ProgressBar */
 .stageWrap {
 	background: rgba($awesomeColor, 0.6);//rgba(0,0,0,0.8);
