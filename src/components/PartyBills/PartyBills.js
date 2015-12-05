@@ -93,7 +93,7 @@ export default class PartyBills extends Component {
                 <div className={styles.nameFlex}>
                     <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[party.id]}`}></div>
                     <div className={`${styles.partyTitle}`}>
-                        {party.name}{outerLinkItem}
+                        <div className={styles.partyTitleText}>{party.name}</div>{outerLinkItem}
                     </div>
                 </div>
             </div>

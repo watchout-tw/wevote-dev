@@ -2,17 +2,19 @@
 @import '../../styles/actionButton.scss';
 $positionTableWebBreak: 500px;
 $maxWidth: 720px;
+$rollLargeBreak: 800px;
 .wrap {
-	position: relative;
-	padding: 80px 0;
-
-	padding-bottom: 150px;
-	position: relative;
-
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('../images/bg-web.jpg');
-	background-attachment:fixed;
+	min-height: 60vw;
+	background-image: url('../images/bg-mobile.jpg');
+}
+@media all and (min-width: $rollLargeBreak){
+	.wrap {
+		background-attachment: fixed;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-image: url('../images/bg-web.jpg');
+	}
 }
 .partyPosition {
 	background: #eee;

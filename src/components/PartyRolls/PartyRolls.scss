@@ -11,7 +11,7 @@ $rollExtraWideBreak: 1200px;
 }
 .pbInner {
 	position: relative;
-	margin-bottom: 200px;
+	margin-bottom: 150px;
 }
 .partyWrap {
 	display: block;
@@ -139,6 +139,43 @@ $rollExtraWideBreak: 1200px;
 		flex: 40px 0 0;
 	}
 }
+/* 現任立委小方塊 */
+.metaInfo {
+	margin: 0 0 4px 18px;
+    font-size: 12px;
+}
+@media all and (min-width: $rollLargeBreak){
+	.metaInfo {
+		margin: 0 0 20px 0px;
+		text-align: center;
+    }
+}
+.metaIcon {
+	width: 10px;
+	height: 10px;
+	background: $awesomeColor;
+    display: inline-block;
+    margin: 0 4px
+
+}
+.pbItem {
+	position: relative;
+}
+.pbItem.current:before {
+	content: '';
+    width: 10px;
+    height: 10px;
+    background: $awesomeColor;
+    position: absolute;
+    left: -46px;
+    top: 8px;
+}
+@media all and (min-width: $rollLargeBreak){
+	.pbItem.current:before {
+    	left: -6px;
+    	top: 7px;
+	}
+}
 
 .peopleEntryName {
 	font-size: 18px;
@@ -183,7 +220,7 @@ $rollExtraWideBreak: 1200px;
 }
 .toggleMenu {
 	vertical-align: top;
-	padding-top: 14px;
+	padding-top: 13px;
 	font-size: 22px;
 	cursor: pointer;
 }
