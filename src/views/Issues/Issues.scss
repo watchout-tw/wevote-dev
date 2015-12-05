@@ -16,7 +16,7 @@ $breakLarge: 800px;
 }
 .contentWrap {
   padding: 60px 0 0;
-  border-top: 1px solid rgb(232, 246, 251);
+  //border-top: 1px solid rgb(232, 246, 251);
 }
 .innerWrap {
   max-width: 1200px;
@@ -49,7 +49,7 @@ $breakLarge: 800px;
 }
 .coverItem:hover .coverImg {
   animation: toChina 4s;
-  -webkit-animation-fill-mode: forwards; 
+  -webkit-animation-fill-mode: forwards;
 }
 .pageTitle {
   text-align: center;

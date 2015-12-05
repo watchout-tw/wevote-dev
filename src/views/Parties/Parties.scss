@@ -60,53 +60,46 @@ $strokeWright: 2px;
 	position: relative;
 	font-size: 0.85em;
 	color: $lockColor;
-}
-.sItem:after {
-	content: '';
 
-	position: absolute;
-	top: 18px;
-    left: 0;
-    width: 100%;
-    height: $strokeWright;
-    background: $lockColor;
+	&:not(:first-child):after {
+		content: '';
+		position: absolute;
+		top: 18px;
+		right: 50%;
+		width: 100%;
+		height: $strokeWright;
+		background: $lockColor;
+	}
+	&.current {
+		font-size: 1em;
+		color: $completeColor;
+		z-index: 1;
+		&:after {
+			background: $completeColor;
+		}
+	}
+	&.complete {
+		color: $completeColor;
+		&:after {
+			background: $completeColor;
+		}
+	}
 }
-.sItem.complete:after {
-	background: $completeColor;
-}
-.sItem.current:after {
-	width: 50%;//calc(50% - 10px);
-	background: $completeColor;
-}
-.sItem.current:before {
-	content: '';
-	position: absolute;
-	top: 18px;
-    right: 0;
-    width: calc(50% - 8px);
-    height: $strokeWright;
-    background: $lockColor;
-}
-.sItem.complete {
-	color: $completeColor;
-}
-.sItem.current {
-	font-size: 1em;
-	color: $completeColor;
-}
+
 .circle {
 	width: 10px;
 	height: 10px;
 	margin: 4px auto;
 	border-radius: 100%;
 	background: $lockColor;
-}
-.circle.complete {
-	background: $completeColor;
-}
-.circle.current {
-	background: $completeColor;
-	width: 16px;
-	height: 16px;
-	margin-top: 1px;
+
+	&.complete {
+		background: $completeColor;
+	}
+	&.current {
+		background: $completeColor;
+		width: 16px;
+		height: 16px;
+		margin-top: 1px;
+	}
 }

@@ -97,9 +97,10 @@ $rollExtraWideBreak: 1200px;
 .keywords {
 	font-size: 20px;
 	font-weight: 600;
-    margin: 0 auto 10px auto;
-    border-bottom: 1px solid;
-    display: inline-block;
+  margin: 0 auto 10px auto;
+	padding: 0 4px;
+  border: 1px solid $black;
+  display: inline-block;
 }
 .partyTitle {
 	margin-top: 6.8vw;
