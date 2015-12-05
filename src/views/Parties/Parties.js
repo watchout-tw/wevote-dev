@@ -99,7 +99,7 @@ export default class Parties extends Component {
                   <div id="completeBadge"></div>
                   <div className={styles.billComplete}>
                       <img src={missionAccomplishedImg}/>
-                      <div className={shareClasses}><p className={styles.urgent}>戰況緊急</p><p>按這裡分享，跟你的朋友<br/>一起揪團參戰！</p></div>
+                      <div className={shareClasses}><p className={styles.urgent}>戰況緊急<br/>揪團參戰</p><p>按這裡分享</p></div>
                   </div>
               </div>
           )
