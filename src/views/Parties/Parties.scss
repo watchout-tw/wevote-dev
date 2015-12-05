@@ -58,7 +58,7 @@ $strokeWright: 2px;
 	vertical-align: top;
 	padding: 10px;
 	position: relative;
-
+	font-size: 0.85em;
 	color: $lockColor;
 }
 .sItem:after {
@@ -91,7 +91,7 @@ $strokeWright: 2px;
 	color: $completeColor;
 }
 .sItem.current {
-	font-weight: bold;
+	font-size: 1em;
 	color: $completeColor;
 }
 .circle {
