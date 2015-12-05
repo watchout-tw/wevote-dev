@@ -4,6 +4,7 @@ import DocumentMeta from 'react-document-meta';
 const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
 const IMP = '!important';
+
 const cheatCSS = `
 .shareaholic-share-buttons-container ul.shareaholic-share-buttons
 { margin: 0 ${IMP}; padding: 4px ${IMP}; }
@@ -75,6 +76,7 @@ export default class Html extends Component {
 
           {/* shareaholic */}
           <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
+
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>

@@ -1,6 +1,6 @@
 @import '../../common.scss';
 @import '../../styles/actionButton.scss';
-$rollSmallBreak: 500px;
+$rollSmallBreak: 800px;
 $rollLargeBreak: 800px;
 $rollExtraWideBreak: 1200px;
 .pbWrap {
@@ -211,6 +211,7 @@ $rollExtraWideBreak: 1200px;
 		position: absolute;
 		bottom: 0;
 		top: auto;
+		display: none; /* ---- to be refined */
 	}
 }
 @media all and (min-width: $rollLargeBreak) and (max-width: $rollExtraWideBreak) {

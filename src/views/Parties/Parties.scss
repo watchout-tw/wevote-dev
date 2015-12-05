@@ -30,3 +30,79 @@
 .billWrap {
 	padding-bottom: 150px;
 }
+.billComplete {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 600;
+	margin-top: 40px;
+}
+/* ProgressBar */
+.stageWrap {
+	background: rgba(0,0,0,0.8);
+	text-align: center;
+	margin-top: 20px;
+}
+@media all and (min-width: 840px){/* appbar */
+	.stageWrap {
+		margin-top: 0;
+	}
+}
+$lockColor: gray;
+$completeColor: #FAFA7B;
+.sItem {
+	display: inline-block;
+	padding: 10px;
+	position: relative;
+
+	color: $lockColor;
+}
+.sItem:after {
+	content: '';
+
+	position: absolute;
+	top: 18px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $lockColor;
+}
+.sItem.complete:after {
+	background: $completeColor;
+}
+.sItem.current:after {
+	width: calc(50% - 10px);
+	background: $completeColor;
+}
+.sItem.current:before {
+	content: '';
+	position: absolute;
+	top: 18px;
+    right: 0;
+    width: calc(50% - 10px);
+    height: 1px;
+    background: $lockColor;
+}
+.sItem.complete {
+	color: $completeColor;
+}
+.sItem.current {
+	color: $completeColor;
+}
+.circle {
+	width: 10px;
+	height: 10px;
+	margin: 4px auto;
+	border-radius: 100%;
+	background: $lockColor;
+}
+.circle.complete {
+	background: $completeColor;
+}
+.circle.current {
+	background: $completeColor;
+}
+
+
+
+
+

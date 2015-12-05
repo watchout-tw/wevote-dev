@@ -182,7 +182,7 @@ const initialState = {
     "TSU": {
         "name": "台灣團結聯盟",
         "id": "TSU",
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -192,35 +192,35 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法",
+                "content": "不當黨產處理"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "公投國會改革",
+                "content": "降低公投連署門檻並廢除審議委員會。降低罷免門檻。國會調查權、議長中立、議長警察權、降低黨團門檻、不信任案審查方式改革，強化監督能力。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "廣電三法",
+                "content": "降低基本收視費、無線頻道免費且必載、反對垂直及水平壟斷。"
             }
         ]
     },
@@ -497,45 +497,45 @@ const initialState = {
     "TP": {
         "name": "樹黨",
         "id": "TP",
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "TPP要公投",
+                "content": "捍衛糧食主權和食品安全。我們不捲入中美經濟戰，「跨太平洋夥伴協定\n」應釐清受害者權益，和重建生機配套。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "能源稅碳減稅",
+                "content": "能源稅條例不是加稅。汙染財團幫我們繳所得稅，社會有公義。產業結構\r\n調整有經濟效率。空汙減量，復育環境。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "推動公費選舉",
+                "content": "取消選後個人選票補助款，移作選前補助。競選經費超過上限當選無效。\r鼓勵青年參政。十八歲就能投票和參選。"
             }
         ]
     },
@@ -677,7 +677,7 @@ const initialState = {
     "DASG": {
         "name": "大愛憲改聯盟",
         "id": "DASG",
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -687,27 +687,27 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權、法治之普世價值、推動人類安全和永續發展；以行政、立法、司法、檢察四權相互制衡，並透過民選機制，完善國家體制"
             },
             {
                 "goal": "",
