@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import classnames from 'classnames';
 import PKer from '../../components/PKer/PKer';
-
+import is8thLegislator from '../../utils/is8thLegislator';
 @connect(
     state => ({ partyBlock: state.partyBlock }),
     dispatch => bindActionCreators({}, dispatch))
@@ -89,8 +89,14 @@ export default class PartyRolls extends Component {
 
       //名單列表
       let nameEntryItems = list.map((v,i)=>{
+        let is8th = is8thLegislator(v.name);
+        // item class
+        let itemClasses = classnames({
+          [styles.pbItem] : true,
+          [styles.current] :is8th === true
+        })
         return (
-          <li>
+          <li className={itemClasses}>
             <div className={styles.partyEntryCount}>{i+1}</div>
             <div className={styles.peopleEntryName}>{v.name}</div>
             <div className={styles.peopleEntryInfo}>{v.info}</div>
@@ -108,6 +114,7 @@ export default class PartyRolls extends Component {
                         <div className={styles.kwWrap}>
                             <div className={styles.keywords}>勇者關鍵字</div>
                         </div>
+                        <div className={styles.metaInfo}>姓名前有<span className={styles.metaIcon}></span>方塊標示者，為現任立委</div>
                         <ol>{nameEntryItems}</ol>
                       </section>
                       <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
