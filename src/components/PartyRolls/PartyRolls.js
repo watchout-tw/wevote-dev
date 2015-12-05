@@ -103,6 +103,9 @@ export default class PartyRolls extends Component {
                   
                   <div className={styles.partyWrap}>
                       <section className={styles.partyRoll}>
+                        <div className={styles.kwWrap}>
+                            <div className={styles.keywords}>勇者關鍵字</div>
+                        </div>
                         <ol>{nameEntryItems}</ol>
                       </section>
                       <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
