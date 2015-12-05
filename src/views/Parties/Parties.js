@@ -37,7 +37,6 @@ export default class Parties extends Component {
       let badgeRect = badgeNode.getBoundingClientRect();
 
       let current = false;
-      console.log(badgeRect.top);
       if(badgeRect.top < window.innerHeight/3 ){
         current = true;
       }
