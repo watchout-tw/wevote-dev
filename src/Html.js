@@ -50,14 +50,16 @@ export default class Html extends Component {
         <head>
           <meta charSet="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
-          <meta property="og:title" content={title}/>
           <meta property="og:site_name" content={title}/>
+          <meta property="og:title" content={title}/>
           <meta property="og:description" content={description}/>
           <meta property="og:image" content="http://wevote.tw/facebook.jpg"/>
           <meta property="og:type" content="website"/>
           <meta property="article:publisher" content="https://www.facebook.com/WatchOutTW"/>
           <meta property="article:author" content="https://www.facebook.com/WatchOutTW"/>
           <meta property='shareaholic:article_author' content='https://www.facebook.com/WatchOutTW' />
+          <meta property="fb:app_id" content="1640384482880194" /> 
+
           <meta name="google-site-verification" content="lcgCkeejw-aJgK6-JoOR9a8ivs5MWZA66UavjFBxCJA" />
           <meta name="msvalidate.01" content="2CB93BE9E9E2D38CAD7DA93479BA8E30" />
           {DocumentMeta.renderAsReact()}
@@ -83,6 +85,7 @@ export default class Html extends Component {
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
           <script async src='//www.google-analytics.com/analytics.js'></script>
+          
         </body>
         <style>{cheatCSS}</style>
       </html>
