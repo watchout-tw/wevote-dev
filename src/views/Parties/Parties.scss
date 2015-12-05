@@ -1,14 +1,18 @@
 @import '../../common.scss';
 @import '../../styles/actionButton.scss';
-
+$rollLargeBreak: 800px;
 .wrap {
 	min-height: 60vw;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	background-image: url('../images/bg-web.jpg');
-	//border: 1px solid transparent;
+	background-image: url('../images/bg-mobile.jpg');
+}
+@media all and (min-width: $rollLargeBreak){
+	.wrap {
+		background-attachment: fixed;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-image: url('../images/bg-web.jpg');
+	}
 }
 
 /* 說明 */

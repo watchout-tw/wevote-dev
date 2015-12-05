@@ -1,5 +1,5 @@
 @import '../common.scss';
-
+$rollLargeBreak: 800px;
 .actionText {
   margin: 0 0 20px 0;
 }
@@ -46,7 +46,7 @@
   box-shadow: 2px 2px 32px 0 rgba(240, 240, 240, 0.5), -2px -2px 32px 0 rgba(240, 240, 240, 0.5)
 }
 .goTable, .goTable:visited {
-  color: $black;
+  color: $white;
   border-bottom: 1px solid;
   margin: 20px auto;
   display: inline-block;
@@ -54,4 +54,9 @@
   font-size: 16px;
   font-weight: normal;
   cursor: pointer;
+}
+@media all and (min-width:$rollLargeBreak){
+  .goTable, .goTable:visited {
+    color: $black;
+  }
 }
