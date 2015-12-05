@@ -60,26 +60,31 @@ $rollExtraWideBreak: 1200px;
 .partyRoll {
 	text-align: left;
     line-height: 1.4;
-    
+
     display: inline-block;
     margin: 40px auto 0 auto;
-    
+
     background-image: url(./images/main.png);
     background-size: 100%;
     width: 100vw;
     min-height: 100vw;
-    padding: 20vw 13vw 80px 6vw;
+    padding: 20vw 20vw 80px;//20vw 13vw 80px 6vw;
+
+		> ol {
+			margin: 0;
+			padding: 0;
+		}
 }
 @media all and (min-width: $rollSmallBreak) and (max-width: $rollLargeBreak){
 	.partyRoll {
-		padding: 20vw 13vw 80px 8vw;
+		//padding: 20vw 20vw 80px;//20vw 13vw 80px 8vw;
 	}
 }
 @media all and (min-width: $rollLargeBreak){
 	.partyRoll {
 		width: 700px;
 		min-height: 600px;
-		padding: 100px 80px 50px 80px;
+		padding: 100px 120px 50px; //100px 80px 50px 80px;
 		font-size: 18px;
 	}
 }
@@ -97,8 +102,13 @@ $rollExtraWideBreak: 1200px;
     display: inline-block;
 }
 .partyTitle {
-	margin-top: 8vw;
+	margin-top: 6.8vw;
 	font-size: 20px;
+}
+@media all and (min-width: 500px) {
+	.partyTitle {
+		transform: scale(1.25);
+	}
 }
 @media all and (min-width: $rollLargeBreak){
 	.partyTitle {
@@ -106,7 +116,6 @@ $rollExtraWideBreak: 1200px;
 		padding-top: 10px;
 		text-align: center;
 	}
-	
 }
 .partyRoll ol{
 	margin: 0;
@@ -116,6 +125,8 @@ $rollExtraWideBreak: 1200px;
 }
 .partyEntryCount{
 	display: none;
+	font-weight: bold;
+	text-align: center;
 }
 @media all and (min-width: $rollSmallBreak){
 	.partyRoll li{
@@ -125,19 +136,19 @@ $rollExtraWideBreak: 1200px;
 	.partyEntryCount{
 		display: block;
 		flex: 40px 0 0;
-		text-align: right;
 	}
 }
 
 .peopleEntryName {
 	font-size: 18px;
 	font-weight: 600;
-	flex: 60px 0 0;
+	flex: 80px 0 0;
 }
 .peopleEntryInfo {
 	color: rgb(27, 25, 25);
 	flex: 1;
 	padding-top: 2px;
+	font-size: 16px;
 }
 
 
@@ -180,14 +191,15 @@ $rollExtraWideBreak: 1200px;
 }
 .partyMenuBlock {
 	max-height: 0;
-	overflow: hidden; 
-	z-index: 1;	
+	max-width: 1200px;
+	overflow: hidden;
+	z-index: 1;
 }
 .partyMenuBlock.show {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
-    
+
     height: 100vh;
     max-height: 2000px;
     top: 0;
@@ -209,10 +221,11 @@ $rollExtraWideBreak: 1200px;
 	.toggleMenu { display: none; }
 	.partyMenuBlock {
 		position: fixed;
-	    width: 100%;
-    	margin: 0 auto;
-    	overflow: visible;
-    	top: 20vw;
+    width: 100%;
+  	margin: 0 auto;
+  	overflow: visible;
+  	top: 20vw;
+		left: 0;
 	}
 	.partyMenuBlock.notFixed {
 		position: absolute;
@@ -221,19 +234,48 @@ $rollExtraWideBreak: 1200px;
 		display: none; /* ---- to be refined */
 	}
 }
+@media all and (min-width: $rollExtraWideBreak){
+	.partyMenuBlock {
+		//max-width: 1200px;
+		//left: calc(50vw - 600px);
+	}
+}
+@media all and (min-width: 1200px) {
+	.partyMenuBlock {
+		left: 50%;
+		margin-left: -600px;
+	}
+}
+.billboard {
+	width: 80%;
+	max-width: 360px;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 10;
+}
+@media all and (min-width: $rollLargeBreak) {
+	.billboard {
+		position: absolute;
+		width: 25%;
+		max-width: 300px;
+
+		&.left {
+			left: 0;
+		}
+		&.right {
+			right: 0;
+		}
+	}
+}
+/*
 @media all and (min-width: $rollLargeBreak) and (max-width: $rollExtraWideBreak) {
 	.partyMenuBlock.notFixed .billboard.left, .partyMenuBlock.notFixed .billboard.right {
 		width: 40%;
 		max-width: 40%;
 	}
 }
-@media all and (min-width: $rollExtraWideBreak){
-	.partyMenuBlock {
-		max-width: 1200px;
-    	left: calc(50vw - 600px);
-	}
-}
-/* 左右兩塊 */
+
+// 左右兩塊
 .billboard {
 	text-align: center;
 	z-index: 10;
@@ -271,7 +313,7 @@ $rollExtraWideBreak: 1200px;
 		float: left;
 		margin: 0;
 	}
-}
+}*/
 .partyItem {
 	display: inline-block;
 	margin: 16px 4px;

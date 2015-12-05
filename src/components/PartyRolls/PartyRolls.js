@@ -16,12 +16,12 @@ export default class PartyRolls extends Component {
             outside: false
         }
     }
-    _onScroll(){  
+    _onScroll(){
       const {outside} = this.state;
       let footerNode = document.getElementById("footer");
       let footerRect = footerNode.getBoundingClientRect();
       let current = (footerRect.top - window.innerHeight < 0) ? true : false;
-      
+
       if(current!==outside){
         this.setState({
           outside: current
@@ -39,18 +39,18 @@ export default class PartyRolls extends Component {
         this.setState({
             focus: value,
             showMenu: false
-        })  
+        })
     }
     _setMenu(value, event){
         this.setState({
             showMenu: value
-        }) 
+        })
     }
     render(){
       const styles = require("./PartyRolls.scss");
       const {partyBlock, onSetStage} = this.props;
       const {focus, showMenu, outside} = this.state;
-      
+
       /* current display party */
       let data = partyBlock[focus];
       let list = partyBlock[focus].list || [];
@@ -89,18 +89,18 @@ export default class PartyRolls extends Component {
       let nameEntryItems = list.map((v,i)=>{
         return (
           <li>
-            <div className={styles.partyEntryCount}>{i+1}・</div>
+            <div className={styles.partyEntryCount}>{i+1}</div>
             <div className={styles.peopleEntryName}>{v.name}</div>
             <div className={styles.peopleEntryInfo}>{v.info}</div>
           </li>
         )
       });
-      
+
       return (
           <div className={wrapClasses} id="pbWrap">
               <div className={styles.pbInner}>
                   {mobileMenuButton}
-                  
+
                   <div className={styles.partyWrap}>
                       <section className={styles.partyRoll}>
                         <div className={styles.kwWrap}>
@@ -116,20 +116,20 @@ export default class PartyRolls extends Component {
                       </div>
                       <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
                   </div>
-    
+
                   <div className={menuClasses}>
                       <div className={`${styles.billboard} ${styles.left}`}>
-                          <PartyMenu side={1} 
+                          <PartyMenu side={1}
                                      onChangeFocus={this._onChangeFocus.bind(this)}
                                      focus={focus}/></div>
                       <div className={`${styles.billboard} ${styles.right}`}>
-                          <PartyMenu side={2} 
+                          <PartyMenu side={2}
                                      onChangeFocus={this._onChangeFocus.bind(this)}
                                      focus={focus}/></div>
                   </div>
-                  
+
               </div>
-             
+
               <div className={styles.actionBlock}>
                   <div className={styles.actionText}>黨團成分分析，快來看誰最適合你？</div>
                   <div className={styles.actions}>
@@ -137,7 +137,7 @@ export default class PartyRolls extends Component {
                            onClick={onSetStage.bind(null, "matchgame")}>開始分析</div>
                   </div>
               </div>
-                 
+
 
 
           </div>
@@ -185,7 +185,7 @@ class PartyMenu extends Component {
              onClick={onChangeFocus.bind(null,value.id)}>
              <PKer id={value.id} active={active} />
         </div>
-      ) 
+      )
     })
 
     return (

@@ -7,14 +7,14 @@ $hexagonColor1: #ddd; /* light */
 $hexagonColor2: #333; /* drak */
 /* inner */
 $hexagonColor3: #ccc;
-$hexagonColor4: #111;
+$hexagonColor4: #444;
 /* active color */
 $hexagonColor5: #fff;
-$hexagonColor6: #ddd;
+$hexagonColor6: #eee;
 
 .hexagon {
   width: $hexagonSize;
-  height: $hexagonSize/2 + 5px;
+  height: $hexagonSize/2 + 8px;
   background: linear-gradient(180deg,$hexagonColor1,$hexagonColor2);
   position: relative;
 }
@@ -44,7 +44,7 @@ $hexagonColor6: #ddd;
 
 .innerHexagon {
   width: $innerHexagonSize;
-  height: $innerHexagonSize/2 + 5px;
+  height: $innerHexagonSize/2 + 7px;
   background: linear-gradient(180deg,$hexagonColor3,$hexagonColor4);
   position: relative;
   top: 2px;
@@ -54,7 +54,7 @@ $hexagonColor6: #ddd;
   color: white;
 }
 .hexagon:hover .innerHexagon, .innerHexagon.active {
-  background: linear-gradient(210deg,$hexagonColor5,$hexagonColor6);  
+  background: linear-gradient(210deg,$hexagonColor5,$hexagonColor6);
 }
 .innerHexagon:before {
   content: "";
@@ -83,26 +83,24 @@ $hexagonColor6: #ddd;
   z-index: 1;
 }
 .hexagon:hover .innerHexagon:after, .innerHexagon.active:after {
-  border-top: $innerHexagonSize/4+1 solid $hexagonColor6; 
+  border-top: $innerHexagonSize/4+1 solid $hexagonColor6;
 }
 .party {
   position: absolute;
-  top: -2px;
+  top: 0px;
   left: 18px;
 }
 .name, .name:after {
   z-index: 12;
   font-size: 14px;
-  top: 16px;
+  top: 20px;
   width: 100%;
   position: absolute;
   color: white;
 }
-.hexagon:hover .name, 
-.hexagon:hover .name:after, 
+.hexagon:hover .name,
+.hexagon:hover .name:after,
 .name.active,
 .name.active:after{
   color: black;
 }
-
-

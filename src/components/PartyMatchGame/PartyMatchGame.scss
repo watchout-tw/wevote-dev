@@ -3,8 +3,8 @@
 $smallBreak: 640px;/* 為了比對結果 hover 做的 */
 $tableWebBreak: 1000px;
 .wrap {
-    border: 1px solid transparent;
-    padding-bottom: 350px;	
+    //border: 1px solid transparent;
+    padding-bottom: 350px;
     min-height: 3000px;
 }
 .pageTitle {
@@ -42,7 +42,7 @@ $primaryColor: #16a085;
 }
 .list {
   padding: .5rem 1rem;
-  margin: .5rem .5rem 2rem .5rem;    
+  margin: .5rem .5rem 2rem .5rem;
   list-style-type: none;
 }
 .listItem {
@@ -61,7 +61,7 @@ $primaryColor: #16a085;
   position: relative;
   margin: 0 1rem 0 0 ;
   cursor: pointer;
-  
+
   &:before {
     transition: all .4s cubic-bezier(.45,1.8,.5,.75);
     transform: scale(0,0);
@@ -74,26 +74,26 @@ $primaryColor: #16a085;
     height: rem(12);
     border-radius: 50%;
   }
-  
+
   &:checked {
     &:before {
      background: $awesomeColor;
-     transform: scale(1,1); 
+     transform: scale(1,1);
     }
   }
-  
+
   &:after {
     content: "";
-    
+
     position: absolute;
     top: rem(-4);
     left: rem(-2);
-    
+
     width: 1rem;
     height: 1rem;
-    
+
     background: #fff;
-    
+
     border: 2px solid $awesomeColor;
     border-radius: 50%;
   }
@@ -233,7 +233,7 @@ $primaryColor: #16a085;
   }
 }
 .hueItemBlock {
-  margin-right: 30px; 
+  margin-right: 30px;
   position: relative;
 }
 @media all and (min-width:$tableWebBreak){
