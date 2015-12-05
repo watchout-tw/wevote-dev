@@ -31,6 +31,7 @@ export default class Parties extends Component {
   render() {
     const styles = require('./Parties.scss');
     const {stage} = this.state;
+    let missionAccomplishedImg = require('./images/MissionAccomplished-01.png');
     let content;
     switch(stage){
         case 'initial':
@@ -39,7 +40,7 @@ export default class Parties extends Component {
                 <div className={styles.story}>
                   <p>黨團衝突戰，將由各地勇者所組成不同的黨團，以團體戰的方式爭奪立法聖殿中的勇者席位。在這場團體戰鬥中，誰能爭取最多席位，同樣考驗島嶼主人的智慧。</p>
                   <p>挑戰任務即刻啟動！</p>
-                  
+
                 </div>
                 <div className={styles.actions}>
                     <div className={styles.goMatch}
@@ -48,7 +49,7 @@ export default class Parties extends Component {
                           className={styles.goTable}>直接看結果</Link></div>
                 </div>
             </div>
-            
+
           );
         break;
 
@@ -65,7 +66,7 @@ export default class Parties extends Component {
               <div className={styles.billWrap}>
                   <PartyBills outerLink={true}/>
                   <div className={styles.billComplete}>
-                      <div>黨團衝突戰任務完成了！</div>
+                      <img src={missionAccomplishedImg}/>
                   </div>
               </div>
           )
@@ -88,7 +89,7 @@ export default class Parties extends Component {
           }
       }
     };
-    
+
     return (
       <div>
           <DocumentMeta {...metaData}/>
@@ -110,12 +111,12 @@ class ProgressBar extends Component {
       const allStages = [
       {
         "id":"roll",
-        "title":"參戰名單" 
-      }, 
-      { 
+        "title":"參戰名單"
+      },
+      {
         "id":"matchgame",
         "title":"成分分析"
-      }, 
+      },
       {
         "id":"bill",
         "title":"戰鬥目標"
@@ -151,4 +152,3 @@ class ProgressBar extends Component {
       )
     }
 }
-
