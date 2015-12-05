@@ -447,21 +447,21 @@ class ResultSection extends Component {
       )
     })
 
+//<div className={styles.spectrumPointLabel}>總分</div>
     return (
       <div id="rankResultSection">
           <div className={styles.rankResultSection}>
               <div className={styles.spectrum}>
-                  <div className={styles.spectrumPointLabel}>總分</div>
                   {resultSpectrum}
               </div>
 
               <div className={styles.noDataBlock}>
                   <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
                   <div className={styles.noDataItems}>{noDataItems}</div>
-                  <div className={styles.noDataMeta}>
-                      <div className={styles.noDataMetaTitle}>遊戲說明書</div>
-                      <div className={styles.noDataMetaDes}>截至網站更新前（12月4日），已有自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯回覆，我們歡迎每個政黨進行表態承諾的回覆。而目前立法院內有席次並有歷史表態紀錄的政黨，如果尚未回覆，我們將以他們過去的立院紀錄作為表態資料；如果回覆的承諾書與過去歷史紀錄結果不同，將交由使用者自行選擇要以哪一份資料為準。</div>
-                  </div>
+              </div>
+              <div className={styles.noDataMeta}>
+                  <div className={styles.noDataMetaTitle}>遊戲說明書</div>
+                  <div className={styles.noDataMetaDes}>截至網站更新前（12月4日），已有自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯回覆，我們歡迎每個政黨進行表態承諾的回覆。而目前立法院內有席次並有歷史表態紀錄的政黨，如果尚未回覆，我們將以他們過去的立院紀錄作為表態資料；如果回覆的承諾書與過去歷史紀錄結果不同，將交由使用者自行選擇要以哪一份資料為準。</div>
               </div>
           </div>
 
