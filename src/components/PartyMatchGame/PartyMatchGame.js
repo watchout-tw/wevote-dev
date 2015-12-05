@@ -51,11 +51,11 @@ export default class PartyMatchGame extends Component {
           completed: false,
           currentRank: [],
 
-          matchData: {}  
+          matchData: {}
       }
   }
   _onSetConfig(recordFirst, event){
-      
+
       // 使用者選擇要用過去或是承諾
       // update match data
       // prepare party positiom
@@ -71,14 +71,14 @@ export default class PartyMatchGame extends Component {
          // Scroll to 1st question
         let target = document.getElementById("Question0");
         let targetPos = document.body.scrollTop + target.getBoundingClientRect().top;
-    
+
         scrollTo(document.body, targetPos, 120);
 
       }, 50)
   }
   _recordUserChoice(issueName, order, choice) {
       //console.log("record user choice:"+issueName+"-"+choice)
-      
+
       let currentChoices = this.state.userChoices;
 
       // if(currentChoices[issueName]){
@@ -107,7 +107,7 @@ export default class PartyMatchGame extends Component {
   }
   _onShowMatchResult(){
     //console.log("i'm in charge. i'll take care of that. -by MatchGame")
-    
+
     // 計算 rank
     let currentRank = [];
     let {matchData, userChoices} = this.state;
@@ -122,7 +122,7 @@ export default class PartyMatchGame extends Component {
             if((userChoices[issueName] === currentParty[issueName])&&(userChoices[issueName]!=="none")){
                 points++;
                 samePositionCount++;
-            }  
+            }
             // 如果立場相反，扣一分
             if(
                 (userChoices[issueName] === "aye" && currentParty[issueName] === "nay")||
@@ -130,7 +130,7 @@ export default class PartyMatchGame extends Component {
                ){
                 points--;
             }
-            
+
         });
 
         currentRank.push(
@@ -139,10 +139,10 @@ export default class PartyMatchGame extends Component {
             points: points,
             samePositionCount: samePositionCount
           })
-        ) 
+        )
 
     })
-   
+
     currentRank.sort((a,b)=>{
       if(b.points === a.points){
         return b.samePositionCount - a.samePositionCount;
@@ -169,8 +169,8 @@ export default class PartyMatchGame extends Component {
   render() {
     const styles = require("./PartyMatchGame.scss")
     const {issues, onSetStage} = this.props;
-    let {qaSet, currentQAItemIndex, userChoices, showAnswerSection, 
-         currentRank, progress, completed, 
+    let {qaSet, currentQAItemIndex, userChoices, showAnswerSection,
+         currentRank, progress, completed,
          matchData} = this.state;
 
     let qaItems = qaSet.map((value,index)=>{
@@ -196,7 +196,7 @@ export default class PartyMatchGame extends Component {
                 <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
             </div>
         )
-        
+
       break;
 
       case 'game':
@@ -222,7 +222,7 @@ export default class PartyMatchGame extends Component {
       break;
 
     }
-    
+
     return (//default
         <div></div>
     );
@@ -258,9 +258,9 @@ class ConfigSection extends Component {
                     <input type="radio" className={styles.radio} name="conflictResolver" value="promiseFirst" />
                       新的承諾
                   </label>
-                </li> 
+                </li>
               </ul>
-              
+
           </section>
 
           <div className={styles.actionButtons}>
@@ -306,17 +306,17 @@ class ResultSection extends Component {
         // sort by 一樣立場的次數
         if(a.samePositionCount !== b.samePositionCount){
             return b.samePositionCount - a.samePositionCount;
-            
+
         }else{
             // 然後才是名稱
             if(a.id > b.id) return -1;
             else return 1;
 
         }
-        
+
       }
     })
-    
+
     //依照分數分組
     currentRank.map((party,index)=>{
         let point = party.points;
@@ -329,15 +329,15 @@ class ResultSection extends Component {
         }else{
           noData.push(party.id);
         }
-       
+
     })
-    
+
     //Layout: match 結果
     let array = [];
     for(let i=4;i>=-4;i--){
       array.push(i);
     }
-    
+
     let resultSpectrum = array.map((i,index)=>{
 
         let hue = (resultPKers[i] || []).map((v,j)=>{
@@ -351,7 +351,7 @@ class ResultSection extends Component {
                 let userPos = userChoices[issueName];
                 let issueCht = eng2cht(issueName);
                 let partyPos = v[issueName] || "none";
-                
+
                 return (
                   <tr><td className={styles.hoverDetailTableColumn}><div className={`${styles.posIcon} ${styles[userPos]} `}></div></td>
                       <td className={styles.hoverDetailTableColumn}>{issueCht}</td>
@@ -391,11 +391,11 @@ class ResultSection extends Component {
         if(Number(i) === currentRank[last].points){
           label = <div className={`${styles.positionTitle}`}>與你立場最不同</div>;
         }
-        
+
         return (
             <div className={hueClasses}>
                 {label}
-                
+
                 <div className={styles.huePoint}>
                   <span className={styles.huePointLable}>總分</span>
                   {i}
@@ -416,7 +416,7 @@ class ResultSection extends Component {
         </div>
       )
     })
-  
+
     return (
       <div id="rankResultSection">
           <div className={styles.rankResultSection}>
@@ -424,13 +424,13 @@ class ResultSection extends Component {
                   <div className={styles.spectrumPointLabel}>總分</div>
                   {resultSpectrum}
               </div>
-              
+
               <div className={styles.noDataBlock}>
                   <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
                   <div className={styles.noDataItems}>{noDataItems}</div>
                   <div className={styles.noDataMeta}>
                       <div className={styles.noDataMetaTitle}>遊戲說明書</div>
-                      <div className={styles.noDataMetaDes}>截至網站更新前(12/4)，已有自由台灣黨、時代力量、綠社盟回覆，我們歡迎每個政黨進行表態承諾的回覆。而目前立法院內有席次並有歷史表態紀錄的政黨，如果尚未回覆，我們將以他們過去的立院紀錄作為表態資料；如果回覆的承諾書與過去歷史紀錄結果不同，將交由使用者自行選擇要以哪一份資料為準。</div>
+                      <div className={styles.noDataMetaDes}>截至網站更新前（12月4日），已有自由台灣黨、時代力量、綠社盟回覆，我們歡迎每個政黨進行表態承諾的回覆。而目前立法院內有席次並有歷史表態紀錄的政黨，如果尚未回覆，我們將以他們過去的立院紀錄作為表態資料；如果回覆的承諾書與過去歷史紀錄結果不同，將交由使用者自行選擇要以哪一份資料為準。</div>
                   </div>
               </div>
           </div>
