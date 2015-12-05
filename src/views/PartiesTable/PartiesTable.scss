@@ -3,7 +3,7 @@
 $positionTableWebBreak: 500px;
 .wrap {
 	position: relative;
-	padding: 50px 10px;
+	padding: 80px 0;
 
 	padding-bottom: 150px;
 	position: relative;
@@ -18,13 +18,20 @@ $positionTableWebBreak: 500px;
 }
 .partyPosition {
 	background: #eee;
-	max-width: 800px;
+	max-width: 720px;
     margin: 0 auto;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.12);
     padding: 10px 0;
 }
 header {
 	text-align: center;
+	h2 {
+	  margin: 20px 10px 0;
+	  border-bottom: 1px solid #aaa;
+	  padding-bottom: 10px;
+	  font-size: 1.75em;
+	  font-weight: normal;
+	}
 }
 .partyPositionTable {
 	width: 100%;
@@ -40,18 +47,17 @@ header {
 }
 .issueTitles {
 	display: flex;
-	padding: 10px 0;
+	padding: 8px 0;
 }
 .issueTitle {
 	flex: 1;
 	text-align: center;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: bold;
 }
 @media all and (min-width: $positionTableWebBreak){
 	.issueTitle {
-		padding: 10px 20px;
-    	font-size: 20px;
+		font-size: 18px;
 	}
 }
 .partyEntry, .partyEntry:visited {
@@ -62,29 +68,33 @@ header {
 	cursor: pointer;
 }
 .partyEntry:hover {
-	background: rgb(200,200,200);
+	background: rgba($awesomeColor, 0.15);
 }
 .partyName {
 	flex: 1;
-    text-align: center;
-    font-size: 14px;
-    padding: 0 10px;
+  //text-align: center;
+  font-size: 14px;
+  padding: 0 10px;
 }
 .nameFlex {
 	display: flex;
 }
 .party {
-	margin: 4px 4px 0 0;
+	margin-right: 4px;
 	flex: 14px 0 0;
 }
 .partyTitle {
 	flex: 1;
 }
 @media all and (min-width: $positionTableWebBreak){
+	.party {
+		margin: 3px 4px 3px 0;
+	}
 	.partyName {
 		text-align: left;
-    	font-size: 16px;
-    	padding: 16px 10px;
+  	font-size: 16px;
+		padding: 10px 0;
+		margin-left: 10px;
 	}
 }
 .position {
@@ -93,9 +103,10 @@ header {
 }
 .record {
 	vertical-align: middle;
+	font-size: 0;
 }
 .record.empty {
-	display: none;
+	//display: none;
 }
 @media all and (min-width: $positionTableWebBreak){
 	.record {
@@ -107,20 +118,26 @@ header {
 	}
 }
 .recordSquare {
-	margin: 0 5px;
+	margin-bottom: 5px;
 	display: inline-block;
-}
-.recordSquare.level1 {
-	width: 10px;
-	height: 10px;
-}
-.recordSquare.level2 {
-	width: 25px;
-	height: 25px;
-}
-.recordSquare.level3 {
-	width: 50px;
-	height: 50px;
+
+	&.level1 {
+		width: 10px;
+		height: 10px;
+	}
+	&.level2 {
+		width: 20px;
+		height: 20px;
+	}
+	&.level3 {
+		width: 40px;
+		height: 40px;
+	}
+	&.empty {
+		width: 10px;
+		height: 10px;
+		border: 1px solid $lightGrey;
+	}
 }
 .promise {
 	width: 20px;
@@ -128,8 +145,11 @@ header {
 	vertical-align: middle;
 }
 @media all and (min-width: $positionTableWebBreak){
+	.recordSquare {
+		margin: 0;
+	}
 	.promise {
-		margin: 12.5px 0;
+		margin: 10px 0;
 	}
 	.bill {
 		padding: 0 20px;
@@ -138,4 +158,9 @@ header {
 .legend {
 	text-align: center;
 	margin: 20px 0;
+
+	> img {
+		display: inline-block;
+		vertical-align: top;
+	}
 }

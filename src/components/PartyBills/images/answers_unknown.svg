@@ -2,14 +2,9 @@
 <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="20px" height="25px" viewBox="0 0 20 25" enable-background="new 0 0 20 25" xml:space="preserve">
-<g>
-	<rect x="1" y="1" fill="#FFFFFF" width="18" height="23"/>
-	<g>
-		<path fill="#808080" d="M18,2v21H2V2H18 M20,0H0v25h20V0L20,0z"/>
-	</g>
-</g>
-<path fill="none" stroke="#808080" stroke-width="2" stroke-miterlimit="10" d="M9.881,16.071l0.001-3.452
+	 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<circle fill="#808080" cx="10" cy="10" r="10"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" d="M9.881,13.417l0.001-2.798
 	c1.94,0,3.512-1.572,3.512-3.512c0-1.94-1.572-3.512-3.512-3.512c-1.898,0-3.506,1.458-3.506,3.388"/>
-<circle fill="#808080" cx="9.881" cy="19.167" r="1.541"/>
+<circle fill="#FFFFFF" cx="9.881" cy="16.167" r="1.291"/>
 </svg>

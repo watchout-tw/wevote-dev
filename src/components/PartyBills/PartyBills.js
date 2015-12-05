@@ -130,9 +130,9 @@ export default class PartyBills extends Component {
               <div className={fixedClasses}>
                   <div className={styles.billTitles}>
                       <div className={styles.partyName}></div>
-                      <div className={styles.billTitle}>法案1</div>
-                      <div className={styles.billTitle}>法案2</div>
-                      <div className={styles.billTitle}>法案3</div>
+                      <div className={styles.billTitle}>法案一</div>
+                      <div className={styles.billTitle}>法案二</div>
+                      <div className={styles.billTitle}>法案三</div>
                   </div>
               </div>
 
