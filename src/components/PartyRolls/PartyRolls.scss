@@ -183,10 +183,21 @@ $rollExtraWideBreak: 1200px;
 }
 .toggleMenu {
 	vertical-align: top;
-	padding-top: 17px;
+	padding-top: 14px;
 	font-size: 22px;
 	cursor: pointer;
 }
+.toggleIcon {
+	width: 42px;
+    font-size: 15px;
+    margin: 0 auto;
+}
+.removeIcon {
+	width: 20px;
+}
+
+
+
 .pbWrap.show .toggleMenu {
 	display: none;
 }
@@ -222,10 +233,10 @@ $rollExtraWideBreak: 1200px;
 	.toggleMenu { display: none; }
 	.partyMenuBlock {
 		position: fixed;
-    width: 100%;
-  	margin: 0 auto;
-  	overflow: visible;
-  	top: 20vw;
+    	width: 100%;
+  		margin: 0 auto;
+  		overflow: visible;
+  		top: 20vw;
 		left: 0;
 	}
 	.partyMenuBlock.notFixed {
@@ -233,12 +244,6 @@ $rollExtraWideBreak: 1200px;
 		bottom: 0;
 		top: auto;
 		display: none; /* ---- to be refined */
-	}
-}
-@media all and (min-width: $rollExtraWideBreak){
-	.partyMenuBlock {
-		//max-width: 1200px;
-		//left: calc(50vw - 600px);
 	}
 }
 @media all and (min-width: 1200px) {
@@ -268,53 +273,6 @@ $rollExtraWideBreak: 1200px;
 		}
 	}
 }
-/*
-@media all and (min-width: $rollLargeBreak) and (max-width: $rollExtraWideBreak) {
-	.partyMenuBlock.notFixed .billboard.left, .partyMenuBlock.notFixed .billboard.right {
-		width: 40%;
-		max-width: 40%;
-	}
-}
-
-// 左右兩塊
-.billboard {
-	text-align: center;
-	z-index: 10;
-	margin: 0 auto;
-}
-.billboard.left {
-	width: 240px;
-}
-.billboard.right {
-	width: 280px;
-	margin-top: 40px;
-}
-@media all and (min-width: $rollSmallBreak){
-	.billboard.left {
-		max-width: 240px;
-	}
-	.billboard.right {
-		max-width: 280px;
-	}
-}
-@media all and (min-width: $rollLargeBreak){
-	.billboard, .billboard.left, .billboard.right {
-		position: absolute;
-		margin: 0;
-		width: calc(50vw - 280px);
-	}
-	.billboard.left {
-		left: 0px;
-		max-width: 310px;
-		text-align: right;
-	}
-	.billboard.right {
-		right: 0px;
-		max-width: 320px;
-		float: left;
-		margin: 0;
-	}
-}*/
 .partyItem {
 	display: inline-block;
 	margin: 16px 4px;

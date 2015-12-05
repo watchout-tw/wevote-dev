@@ -33,7 +33,7 @@ i.shareaholic-service-icon
  * by the server.js file.
  */
 const title = "沃草！立委出任務 - 2016立委投票攻略";
-const description = "2016立委選舉票該投給誰？「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委與下任候選人立場，並分析政黨針對議題的整體立場。想透過議題更了解你的選區立委嗎？請上「立委出任務」！";
+const description = "2016立委選舉票該投給誰？「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委與下任候選人立場，並分析政黨對於議題表態和優先法案的未來承諾。想了解你的選區立委嗎？想知道政黨票怎麼投嗎？請上「立委出任務」！";
 
 export default class Html extends Component {
   static propTypes = {
@@ -65,11 +65,8 @@ export default class Html extends Component {
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />
-          <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
+          <script async src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
           
-          <link href={cdn + 'font-awesome/4.4.0/css/font-awesome.min.css'}
-                media="screen, projection" rel="stylesheet" type="text/css" />
-
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>
             <link href={assets.styles[style]} key={i} media="screen, projection"
@@ -77,7 +74,7 @@ export default class Html extends Component {
           )}
 
           {/* shareaholic */}
-          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
+          <script async type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false'></script>
 
         </head>
         <body>

@@ -26,9 +26,13 @@ export default class SubscribeComponent extends Component {
     const {showAlert} = this.state;
 
     let alertStyle = showAlert ? styles.showAlert : styles.hideAlert;
+    let externalIconImg = require('../../images/icon_external_link_white.svg');
     let externalIcon = showExternal ? (
       <Link to={`/subscribe/`}
-            className={`${styles.ia} ${styles.inverted} ${styles.smallIcon}`}><i className="fa fa-external-link"></i></Link>
+            className={`${styles.ia} ${styles.inverted}`}>
+            <img src={externalIconImg} 
+                 className={styles.smallIcon}/>
+      </Link>
     ) : "";
 
     return (

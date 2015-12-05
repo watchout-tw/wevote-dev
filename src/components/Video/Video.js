@@ -57,11 +57,14 @@ export default class Video extends Component {
     const youtubeId = "sxmD7gj4eIU";
     const youtubeURL = `http://youtube.com/embed/${youtubeId}?autoplay=1&showinfo=0&rel=0&playlist=${youtubeId}`;
 
+    let removeIconImg = require('../../images/icon_remove.svg');
+
     let playingFullScreen = (playVideo === true) ? (
         <div className={styles.playingSection }>
             <div className={styles.close}
                  onClick={this._handlePlay.bind(this)}>
-                <i className="fa fa-times"></i>
+                <img src={removeIconImg}
+                     className={styles.removeIcon}/>
                 <div className={styles.closeText}>關閉影片</div>
             </div>
             <div className={styles.iframWrap}>

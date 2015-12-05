@@ -78,7 +78,10 @@ export default class PartyBills extends Component {
     const {outerLink} = this.props;
 
     let noReplyImg = require('./images/answers_unknown.svg');
-    let outerLinkItem = (outerLink) ? <i className={`fa fa-external-link ${styles.exLink}`}></i> : "";
+    let externalIconImg = require('../../images/icon_external_link_gray.svg');
+    
+    let outerLinkItem = (outerLink) ? <img src={externalIconImg} 
+                                           className={styles.exLink}/> : "";
 
 
     let partyBills = Object.keys(tableData).map((partyId, i)=>{

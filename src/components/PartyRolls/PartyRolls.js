@@ -69,15 +69,17 @@ export default class PartyRolls extends Component {
         [styles.hide] : outside === true
       })
       //mobile 選單: 選擇 & 關閉
+      let removeIconImg = require('../../images/icon_remove.svg');
+
       let mobileMenuButton = (
           <div className={mobileMenuButtonClasses}>
               <div className={styles.closeMenu}
                    onClick={this._setMenu.bind(this, false)}>
-                   <i className="fa fa-times"></i>
+                   <img src={removeIconImg} className={styles.removeIcon}/>
               </div>
               <div className={styles.toggleMenu}
                     onClick={this._setMenu.bind(this, true)}>
-                  <i className={`fa fa-map-o ${styles.toggleIcon}`}></i>
+                  <div className={styles.toggleIcon}>其他政黨</div>
               </div>
           </div>
       )
