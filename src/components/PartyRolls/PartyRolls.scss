@@ -91,7 +91,16 @@ $rollExtraWideBreak: 1200px;
 /* ----
 名單本體
 */
-
+.kwWrap {
+	text-align: center;
+}
+.keywords {
+	font-size: 20px;
+	font-weight: 600;
+    margin: 0 auto 10px auto;
+    border-bottom: 1px solid;
+    display: inline-block;
+}
 .partyTitle {
 	margin-top: 6.8vw;
 	font-size: 20px;

@@ -51,22 +51,12 @@ export default class PartyMatchGame extends Component {
           completed: false,
           currentRank: [],
 
-          matchData: {}
+          matchData: {},
+          recordFirst: ""
       }
   }
-  _onSetConfig(recordFirst, event){
-
-      // 使用者選擇要用過去或是承諾
-      // update match data
-      // prepare party positiom
-      const {records, issues, partyPromises} = this.props;
-      let partyPositions = parseToPartyPosition(records, issues);
-      let matchData = getPartiesMatchgameData(partyPositions, partyPromises, recordFirst);
-      this.setState({
-        progress: 'game',
-        matchData: matchData
-      })
-
+  _onSetConfigAndMove(recordFirst, event){
+      this._onSetConfig(recordFirst, event);
       setTimeout(()=>{
          // Scroll to 1st question
         let target = document.getElementById("Question0");
@@ -75,6 +65,34 @@ export default class PartyMatchGame extends Component {
         scrollTo(document.body, targetPos, 120);
 
       }, 50)
+  }
+  _onSetConfig(recordFirst, event){
+
+      // 使用者選擇要用過去或是承諾
+      // update match data, prepare party position
+      const {records, issues, partyPromises} = this.props;
+     
+      // 計算新的比對資料
+      let partyPositions = parseToPartyPosition(records, issues);
+      let matchData = getPartiesMatchgameData(partyPositions, partyPromises, recordFirst);
+      this.setState({
+        matchData: matchData
+      })
+
+      const {progress} = this.state;
+      if(progress !== "config"){
+         //如果已經開始作答後又重新選擇 config，重新計算分數
+         //必須在設定了新的 matchData 後，再算分數！
+         this._onShowMatchResult(matchData);
+      }
+
+      let nextProgress = (progress === "config") ? "game" : progress;
+      this.setState({
+        progress: nextProgress,
+        recordFirst: recordFirst
+      })
+
+      
   }
   _recordUserChoice(issueName, order, choice) {
       //console.log("record user choice:"+issueName+"-"+choice)
@@ -92,25 +110,24 @@ export default class PartyMatchGame extends Component {
           completed: true
       });
 
-      const {showRank} = this.state;
-
-      if(showRank){//如果已經算答案，重新計算
+      const {progress} = this.state;
+      if(progress==="result"){//如果已經算答案，重新計算
          this._onShowMatchResult();
       }
   }
   _unlockNext(){
-      console.log("unlock next")
       let next = this.state.currentQAItemIndex + 1;
       this.setState({
           currentQAItemIndex: next
       });
   }
-  _onShowMatchResult(){
+  _onShowMatchResult(input){
     //console.log("i'm in charge. i'll take care of that. -by MatchGame")
 
     // 計算 rank
     let currentRank = [];
-    let {matchData, userChoices} = this.state;
+    let {userChoices} = this.state;
+    let matchData = input || this.state.matchData;
 
     Object.keys(matchData).map((partyId, index)=>{
         let points = 0;
@@ -155,6 +172,7 @@ export default class PartyMatchGame extends Component {
       progress: 'result',
       currentRank: currentRank
     });
+
   }
   _replay(){
     //console.log("*replay")
@@ -171,7 +189,7 @@ export default class PartyMatchGame extends Component {
     const {issues, onSetStage} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection,
          currentRank, progress, completed,
-         matchData} = this.state;
+         matchData, recordFirst} = this.state;
 
     let qaItems = qaSet.map((value,index)=>{
         return <QAItem key={`qaitem${index}`}
@@ -186,6 +204,10 @@ export default class PartyMatchGame extends Component {
                        completed={completed} />
     })
 
+    // config 設定選單
+    let configPanel = <ConfigSection onSetConfig={this._onSetConfig.bind(this)}
+                                     onSetConfigAndMove={this._onSetConfigAndMove.bind(this)} />
+
     // 配對結果
     let BottomSection;
 
@@ -193,7 +215,7 @@ export default class PartyMatchGame extends Component {
       case 'config':
         return (
             <div className={styles.wrap}>
-                <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
+                {configPanel}
             </div>
         )
 
@@ -202,7 +224,7 @@ export default class PartyMatchGame extends Component {
       case 'game':
         return (
             <div className={styles.wrap}>
-                <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
+                {configPanel}
                 {qaItems}
             </div>
         )
@@ -211,12 +233,13 @@ export default class PartyMatchGame extends Component {
       case 'result':
         return (
             <div className={styles.wrap}>
-                <ConfigSection onSetConfig={this._onSetConfig.bind(this)} />
+                {configPanel}
                 {qaItems}
                 <ResultSection currentRank={currentRank}
                                userChoices={userChoices}
                                replay={this._replay.bind(this)}
-                               onSetStage={onSetStage} />
+                               onSetStage={onSetStage}
+                               recordFirst={recordFirst} />
             </div>
         )
       break;
@@ -239,9 +262,13 @@ class ConfigSection extends Component {
       let recordFirst = this.refs.recordFirst.getDOMNode().checked;
       onSetConfig(recordFirst);
     }
+    _onClickMove(){
+      const {onSetConfigAndMove} = this.props;
+      let recordFirst = this.refs.recordFirst.getDOMNode().checked;
+      onSetConfigAndMove(recordFirst);
+    }
     render(){
       const styles = require("./PartyMatchGame.scss")
-      const {onSetConfig} = this.props;
       return (
         <div>
           <section className={styles.configSection}>
@@ -249,13 +276,15 @@ class ConfigSection extends Component {
               <ul className={styles.list}>
                 <li className={styles.listItem}>
                   <label className={styles.radioLabel}>
-                    <input type="radio" className={styles.radio} name="conflictResolver" value="recordFirst" ref="recordFirst" />
+                    <input type="radio" className={styles.radio} name="conflictResolver" value="recordFirst" ref="recordFirst"
+                           onChange={this._onClick.bind(this)} />
                       舊的紀錄
                   </label>
                 </li>
                 <li className={styles.listItem}>
                   <label className={styles.radioLabel}>
-                    <input type="radio" className={styles.radio} name="conflictResolver" value="promiseFirst" />
+                    <input type="radio" className={styles.radio} name="conflictResolver" value="promiseFirst" 
+                           onChange={this._onClick.bind(this)}/>
                       新的承諾
                   </label>
                 </li>
@@ -264,7 +293,7 @@ class ConfigSection extends Component {
           </section>
 
           <div className={styles.actionButtons}>
-              <div onClick={this._onClick.bind(this)}
+              <div onClick={this._onClickMove.bind(this)}
                   className={styles.actionButton}>繼續</div>
           </div>
       </div>
@@ -278,6 +307,7 @@ class ConfigSection extends Component {
       partyPromises: state.partyPromises
     }),
     dispatch => bindActionCreators({}, dispatch))
+
 class ResultSection extends Component {
   constructor(props){super(props)
     this.state = {
@@ -291,8 +321,8 @@ class ResultSection extends Component {
   }
   render(){
     const styles = require("./PartyMatchGame.scss")
-    const {parties, partyPromises, currentRank, userChoices, replay, onSetStage} = this.props;
-    const {focus} = this.state;
+    let {parties, partyPromises, currentRank, userChoices, replay, onSetStage, recordFirst} = this.props;
+    let {focus} = this.state;
 
     let resultPKers = {};
     let noData = [];
@@ -369,7 +399,7 @@ class ResultSection extends Component {
           }
           return (
               <div className={styles.hueItem}
-                   key={`hue-${i}-${j}`}
+                   key={`hue-${i}-${j}-${recordFirst}`}
                    onClick={this._setFocus.bind(this, v.id)}
                    onMouseEnter={this._setFocus.bind(this, v.id)}
                    onMouseLeave={this._setFocus.bind(this, "")}>

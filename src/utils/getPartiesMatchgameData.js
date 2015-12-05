@@ -29,7 +29,6 @@ export default function getPartiesMatchgameData(partyPositions, partyPromises, r
         })
       
     })
-    console.log(MatchData)
     
     return MatchData;
     
