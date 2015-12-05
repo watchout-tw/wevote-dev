@@ -82,6 +82,15 @@ header {
 .partyTitle {
 	flex: 1;
 }
+.partyTitleText {
+	display: inline;
+	border-bottom: 1px solid rgba(15, 15, 15, 0.86);
+}
+@media all and (min-width: 1000px){
+	.partyTitleText {
+		border-bottom: none;
+	}
+}
 .exLink {
 	width: 16px;
     height: 16px;
