@@ -85,23 +85,7 @@ export default class Html extends Component {
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
           <script async src='//www.google-analytics.com/analytics.js'></script>
-          <script>
-            window.fbAsyncInit = function() {
-              FB.init({
-                appId      : '1640384482880194',
-                xfbml      : true,
-                version    : 'v2.5'
-              });
-            };
           
-            (function(d, s, id){
-               var js, fjs = d.getElementsByTagName(s)[0];
-               if (d.getElementById(id)) {return;}
-               js = d.createElement(s); js.id = id;
-               js.src = "//connect.facebook.net/zh_TW/sdk.js";
-               fjs.parentNode.insertBefore(js, fjs);
-             }(document, 'script', 'facebook-jssdk'));
-          </script>
         </body>
         <style>{cheatCSS}</style>
       </html>
