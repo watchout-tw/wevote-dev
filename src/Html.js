@@ -65,7 +65,7 @@ export default class Html extends Component {
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />
-          <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
+          <script async src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
           
           <link href={cdn + 'font-awesome/4.4.0/css/font-awesome.min.css'}
                 media="screen, projection" rel="stylesheet" type="text/css" />
@@ -77,7 +77,7 @@ export default class Html extends Component {
           )}
 
           {/* shareaholic */}
-          <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false' async='async'></script>
+          <script async type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false'></script>
 
         </head>
         <body>
