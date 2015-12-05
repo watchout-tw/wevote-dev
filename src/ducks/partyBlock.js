@@ -211,7 +211,7 @@ const initialState = {
             },
             {
                 "name": "徐巧芯",
-                "info": "朱立倫競選發言人"
+                "info": "朱立倫競選發言人／前國民黨青年團團長"
             },
             {
                 "name": "陳玉梅",
@@ -243,7 +243,7 @@ const initialState = {
             },
             {
                 "name": "王桂芸",
-                "info": "護理"
+                "info": " 國防醫學院護理學系教授"
             },
             {
                 "name": "林信華",

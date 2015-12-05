@@ -19,7 +19,8 @@ import PartyBills from '../../components/PartyBills/PartyBills';
 export default class Parties extends Component {
   constructor(props){ super(props)
         this.state = {
-             stage: "initial" /* initial, roll, matchgame, bill */
+             stage: "initial", /* initial, roll, matchgame, bill */
+             showBedge: false
         }
   }
   _onSetStage(value){
@@ -28,9 +29,35 @@ export default class Parties extends Component {
       stage: value
     })
   }
+  _onScroll(){
+      const {focus, showBedge} = this.state;
+
+      let badgeNode = document.getElementById("completeBadge");
+      if(!badgeNode) return;
+      let badgeRect = badgeNode.getBoundingClientRect();
+
+      let current = false;
+      if(badgeRect.top < 0 ){
+        current = true;
+      }
+
+      if(showBedge !== current){
+          this.setState({
+            showBedge: current
+          })
+      }
+     
+
+  }
+  componentDidMount(){
+      window.addEventListener("scroll", this._onScroll.bind(this));
+  }
+  componentWillUnmount(){
+     window.removeEventListener("scroll", this._onScroll.bind(this));
+  }
   render() {
     const styles = require('./Parties.scss');
-    const {stage} = this.state;
+    const {stage, showBedge} = this.state;
     let missionAccomplishedImg = require('./images/MissionAccomplished-01.png');
     let content;
     switch(stage){
@@ -62,11 +89,19 @@ export default class Parties extends Component {
         break;
 
         case 'bill':
+          let shareClasses = classnames({
+            [styles.billCompleteShare] : true,
+            [styles.show]: showBedge === true
+          })
           content = (
               <div className={styles.billWrap}>
                   <PartyBills outerLink={true}/>
+                  <div id="completeBadge"></div>
                   <div className={styles.billComplete}>
                       <img src={missionAccomplishedImg}/>
+                      <div className={shareClasses}>
+                          戰況緊急，揪團參戰。請分享給更多朋友加入！
+                      </div>
                   </div>
               </div>
           )
