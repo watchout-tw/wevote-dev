@@ -67,9 +67,6 @@ export default class Html extends Component {
           <link rel="shortcut icon" href="/favicon.ico" />
           <script async src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
           
-          <link href={cdn + 'font-awesome/4.4.0/css/font-awesome.min.css'}
-                media="screen, projection" rel="stylesheet" type="text/css" />
-
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>
             <link href={assets.styles[style]} key={i} media="screen, projection"
