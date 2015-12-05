@@ -21,7 +21,7 @@ $hexagonColor6: #eee;
 .hexagon:before {
   content: "";
   position: absolute;
-  top: -$hexagonSize/4;
+  top: -$hexagonSize/4;// + 0.5;
   left: 0;
   width: 0;
   height: 0;
@@ -32,7 +32,7 @@ $hexagonColor6: #eee;
 .hexagon:after {
   content: "";
   position: absolute;
-  bottom: -$hexagonSize/4;
+  bottom: -$hexagonSize/4;// + 0.5;
   left: 0;
   width: 0;
   height: 0;
