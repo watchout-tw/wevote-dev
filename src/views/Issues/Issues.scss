@@ -3,7 +3,7 @@ $breakMedium: 600px;
 $breakLarge: 800px;
 .home {
   position: relative;
-  background-image: url('./images/bg-mobile.png');
+  background-image: url('./images/bg-mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ $breakLarge: 800px;
 }
 @media all and (min-width:$breakLarge){
   .home {
-    background-image: url('./images/bg-web.png');
+    background-image: url('./images/bg-web.jpg');
   }
 }
 .contentWrap {
