@@ -5,7 +5,7 @@ const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
 const IMP = '!important';
 
-const cheatCSS = ""/* = `
+const cheatCSS = `
 .shareaholic-share-buttons-container ul.shareaholic-share-buttons
 { margin: 0 ${IMP}; padding: 4px ${IMP}; }
 i.shareaholic-service-icon
@@ -22,7 +22,7 @@ i.shareaholic-service-icon
 { font-size: 15px ${IMP}; padding-top: 1px ${IMP}; }
 .shareaholic-share-buttons-container li.shareaholic-share-button .shareaholic-share-button-container:hover
 { opacity: 0.5 ${IMP}; }
-`;*/
+`;
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
  * Used in server-side code only to wrap the string output of the
