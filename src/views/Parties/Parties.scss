@@ -44,30 +44,43 @@ $rollLargeBreak: 800px;
 		width: 200px;
 	}
 }
+$bubbleColor: yellow;
 .billCompleteShare {
 	display: none;
 }
 .billCompleteShare.show {
 	display: block;
-	font-size: 18px;
-    position: fixed;
-    bottom: 90px;
-    left: calc(50% - 150px);
-    background: white;
-    padding: 20px;
-    max-width: 300px;
-    margin: 0 auto;
-    line-height: 1.4;
+  position: fixed;
+  bottom: 60px;
+  left: calc(50% - 100px);
+  width: 200px;
+	margin: 0 auto;
+  padding: 0;
+	background: $bubbleColor;
+	font-size: 16px;
+  line-height: 1.25;
+	box-shadow: 0 0 25px rgba(0,0,0,0.3);
+	z-index: 99;
+
+	> p {
+		margin: 0;
+		padding: 8px;
+
+		&.urgent {
+			background: black;
+			color: yellow;
+			font-size: 24px;
+		}
+	}
 }
 .billCompleteShare.show:after {
 	content: '';
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    border-left: 0px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 50px solid white;
-
+	position: absolute;
+	bottom: -20px;
+	left: calc(50% - 10px);
+	border-left: 0px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid $bubbleColor;
 }
 /* ProgressBar */
 .stageWrap {
