@@ -29,7 +29,7 @@ export default class People extends Component {
       this.state = {
         legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
       }
-      console.log(parseToLegislatorPosition(props.records, props.issues, props.legislators))
+      //console.log(parseToLegislatorPosition(props.records, props.issues, props.legislators))
   }
   render() {
     const styles = require('./People.scss');
