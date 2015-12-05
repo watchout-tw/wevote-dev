@@ -272,19 +272,22 @@ table.hoverDetailTable {
   position: absolute;
   top: -230px;
   width: 100%;
-  left: 15px;
+  left: 0;
+  //left: 15px;
   box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.48);
 
 }
 @media all and (min-width:$smallBreak) {
     table.hoverDetailTable {
         width: 200px;
-        top: -250px;
-        left: calc(50% - 74px);
+        //top: -250px;
+        //left: calc(50% - 74px);
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 @media all and (min-width:$smallBreak){
-    table.hoverDetailTable:after {
+    /*table.hoverDetailTable:after {
         content: '';
         position: absolute;
         bottom: -19px;
@@ -293,7 +296,7 @@ table.hoverDetailTable {
         border-top: 20px solid white;
         border-left: 15px solid transparent;
         border-right: 0px solid transparent;
-    }
+    }*/
 }
 .hoverDetailTable thead {
   font-weight: 600;
