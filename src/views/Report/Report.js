@@ -32,8 +32,8 @@ export default class Report extends Component {
       }
   }
   _onScroll(){
+      if(!this.refs.positionSection) return;
       let node = this.refs.positionSection.getDOMNode();
-      if(!node) return;
       
       let rect = node.getBoundingClientRect();
       let {fixedStream} = this.state;
