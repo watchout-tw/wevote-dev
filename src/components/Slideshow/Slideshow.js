@@ -112,10 +112,18 @@ export default class Slideshow extends Component {
     const {currentIssue, topic} = this.props;
     const dataWeb = currentIssue.slideshows;
     const dataMobile = currentIssue.slideshowsMobile;
-
     let {currentIndex, mobile} = this.state;
+    
+    // fail-save, is no data, just return empty div
+    if(dataWeb.length === 0 && mobile !== true){
+      return <div></div>
+    }
+    if(dataMobile.length === 0 && mobile === true){
+      return <div></div>
+    }
 
-    let pageItems =  (mobile === false) ? dataWeb.map((value,index)=>{
+    // otherwise render the following:
+    let pageItems =  (mobile === false) ? (dataWeb || []).map((value,index)=>{
         let activePageClass = (index===currentIndex) ? styles.activePage : "";
         return (
           <div className={`${styles.page} ${activePageClass}`}
@@ -126,7 +134,7 @@ export default class Slideshow extends Component {
     }) : "" ;
 
     //web version
-    let slideImages = dataWeb.map((value,index)=>{
+    let slideImages = (dataWeb || []).map((value,index)=>{
         let imageClass = styles.inactiveSlideImg;
 
         if(index===currentIndex){
@@ -142,7 +150,7 @@ export default class Slideshow extends Component {
     });
 
     //mobile version
-    let slideImagesMobile = dataMobile.map((value,index)=>{
+    let slideImagesMobile = (dataMobile || []).map((value,index)=>{
         let url = require(`./images/${value.filename}`)
         return (
           <div key={value.filename}>
@@ -179,6 +187,8 @@ export default class Slideshow extends Component {
              onClick={this._setCurrentIndex.bind(this, currentIndex+1)}><img src={prev_next} className={styles.prev_next}/></div>
       </div>
     );
+
+
 
     return (
       <div className={styles.wrap}>
