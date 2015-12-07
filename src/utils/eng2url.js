@@ -6,9 +6,14 @@ export default function eng2url(input){
         return 'recall';
       case 'referendum': 
       	return 'referendum';
-       case 'nuclearPower': 
+      case 'nuclearPower': 
         return 'nuclear-power';
       
+      case 'courseGuide':
+          return 'course-guide';
+      case 'justiceReform':
+          return 'justice-reform';
+         
       default:
       	return '找不到:eng2url';
     }

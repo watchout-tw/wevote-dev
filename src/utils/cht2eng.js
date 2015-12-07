@@ -63,6 +63,11 @@ export default function cht_to_eng(cht){
     	    	return 'referendum';
     	    case '核能':
     	    	return 'nuclearPower';
+            case '課綱':
+                return 'courseGuide';
+            case '司法改革':
+                return 'justiceReform';
+                
     		default: 
     			throw new Error("Oh-Oh-找不到這個詞的英文捏！<o> "+cht);
     

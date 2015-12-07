@@ -567,11 +567,41 @@ const initialState = {
           "link" : "http://www.gcaa.org.tw/"
         }
       ]
+    },
+    "course-guide" : {
+      "title" : "課綱",
+      "titleEng" : "courseGuide",
+      "question" : "你支持課綱制定程序完全公開透明嗎？",
+      "statement" : "課綱制定程序完全公開透明",
+      "slideshows" : [],
+      "description" : "",
+      "collaborators" : [
+        {
+          "name" : "課綱盟",
+          "link" : "https://www.facebook.com/%E5%8F%8D%E9%BB%91%E7%AE%B1%E8%AA%B2%E7%B6%B1%E8%A1%8C%E5%8B%95%E8%81%AF%E7%9B%9F-429607783867331/?fref=nf"
+        },
+        {
+          "name" : "國會調查兵團",
+          "link" : "https://cic.tw"
+
+        }
+      ]
+    },
+    "justice-reform" : {
+      "title" : "司法改革",
+      "titleEng" : "justiceReform",
+      "question" : "你是否支持人民一起參與做出判決？",
+      "statement" : "人民一起參與做出判決明",
+      "slideshows" : [],
+      "description" : "",
+      "collaborators" : [
+        {
+          "name" : "司改會",
+          "link" : "http://www.jrf.org.tw/"
+        }
+      ]
     }
-
 }
-//你支持停建核四嗎？你知道核四蓋了十六年嗎？關於核能來看看還有哪些你知道或不知道的。
-
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     default:
