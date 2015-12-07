@@ -16,7 +16,7 @@ import Missions from '../../components/Missions/Missions.js';
 
 export default class Issues extends Component {
   render() {
-    const styles = require('./issues.scss');
+    const styles = require('./Issues.scss');
     const {issues} = this.props;
 
     const title = `議題攻城戰-立委議題表態大公開-沃草2016立委出任務`;
