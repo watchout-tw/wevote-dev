@@ -35,16 +35,19 @@ export default class Issues extends Component {
     };
 
     return (
-      <div className={styles.home}> 
-          <DocumentMeta {...metaData}/>       
-          <div className={styles.contentWrap}>
-              <div className={styles.innerWrap}>
-                  <MaXiCastle />
-                  <Missions issues={issues}
-                            showComingMission={true}/>
+      <div>
+          <div className={styles.home}> 
+              <DocumentMeta {...metaData}/>       
+              <div className={styles.contentWrap}>
+                  <div className={styles.innerWrap}>
+                      <MaXiCastle />
+                      <Missions issues={issues}
+                                showComingMission={true}/>
+                  </div>
               </div>
+              
           </div>
-          
+          <div className={styles.bgHolder}></div>
       </div>
     );
   }

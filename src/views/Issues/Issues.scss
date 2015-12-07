@@ -3,15 +3,25 @@ $breakMedium: 600px;
 $breakLarge: 800px;
 .home {
   position: relative;
-  background-image: url('./images/bg-mobile.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   padding-bottom: 140px;
 }
+.bgHolder {
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  position: fixed;
+  background-image: url('./images/bg-mobile.jpg');
+  background-size: cover;
+  transform: translateZ(0);
+  pointer-events: none;
+  z-index: -1;
+}
 @media all and (min-width:$breakLarge){
-  .home {
-    background-image: url('./images/bg-web.jpg');
+  .home { 
+  }
+  .bgHolder {
+    background-image: url('./images/bg-web.jpg');  
   }
 }
 .contentWrap {

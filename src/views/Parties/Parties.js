@@ -130,6 +130,7 @@ export default class Parties extends Component {
             <ProgressBar stage={stage} />
             {content}
           </div>
+          <div className={styles.bgHolder}></div>
       </div>
     );
 
