@@ -15,6 +15,7 @@ import PartyMatchGame from '../../components/PartyMatchGame/PartyMatchGame';
 /* Stage3: bill */
 import PartyBills from '../../components/PartyBills/PartyBills';
 
+import Social from '../../components/Social/Social.js';
 
 export default class Parties extends Component {
   constructor(props){ super(props)
@@ -99,8 +100,8 @@ export default class Parties extends Component {
                   <div id="completeBadge"></div>
                   <div className={styles.billComplete}>
                       <img src={missionAccomplishedImg}/>
-                      <div className={shareClasses}><p className={styles.urgent}>戰況緊急<br/>揪團參戰</p><p>按這裡分享</p></div>
                   </div>
+                  <Social />
               </div>
           )
         break;
