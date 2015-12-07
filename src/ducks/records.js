@@ -34923,7 +34923,7 @@ const initialState =
     "1941": {
         "id": 1941,
         "issue": "課綱",
-        "legislator": "孔文吉 ",
+        "legislator": "孔文吉",
         "party": "KMT",
         "date": 1393257600,
         "category": "發言",
@@ -36453,7 +36453,7 @@ const initialState =
     "2026": {
         "id": 2026,
         "issue": "課綱",
-        "legislator": "鄭麗君 ",
+        "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1430841600,
         "category": "發言",
@@ -36561,7 +36561,7 @@ const initialState =
     "2032": {
         "id": 2032,
         "issue": "課綱",
-        "legislator": "薛凌 ",
+        "legislator": "薛凌",
         "party": "DPP",
         "date": 1430841600,
         "category": "發言",
@@ -38343,7 +38343,7 @@ const initialState =
     "2131": {
         "id": 2131,
         "issue": "司法改革",
-        "legislator": "謝國棟",
+        "legislator": "謝國樑",
         "party": "KMT",
         "date": 1380729600,
         "category": "發言",
@@ -39117,7 +39117,7 @@ const initialState =
     "2174": {
         "id": 2174,
         "issue": "司法改革",
-        "legislator": "尤美女　",
+        "legislator": "尤美女",
         "party": "DPP",
         "date": 1351008000,
         "category": "提案",
@@ -39279,7 +39279,7 @@ const initialState =
     "2183": {
         "id": 2183,
         "issue": "司法改革",
-        "legislator": "尤美女　",
+        "legislator": "尤美女",
         "party": "DPP",
         "date": 1382889600,
         "category": "提案",
@@ -39423,7 +39423,7 @@ const initialState =
     "2191": {
         "id": 2191,
         "issue": "司法改革",
-        "legislator": "高志鵬　",
+        "legislator": "高志鵬",
         "party": "DPP",
         "date": 1389628800,
         "category": "提案",
@@ -39459,7 +39459,7 @@ const initialState =
     "2193": {
         "id": 2193,
         "issue": "司法改革",
-        "legislator": "林鴻池　",
+        "legislator": "林鴻池",
         "party": "KMT",
         "date": 1389628800,
         "category": "提案",
@@ -39495,7 +39495,7 @@ const initialState =
     "2195": {
         "id": 2195,
         "issue": "司法改革",
-        "legislator": "許忠信　",
+        "legislator": "許忠信",
         "party": "TSU",
         "date": 1389628800,
         "category": "提案",
@@ -39531,7 +39531,7 @@ const initialState =
     "2197": {
         "id": 2197,
         "issue": "司法改革",
-        "legislator": "尤美女　",
+        "legislator": "尤美女",
         "party": "DPP",
         "date": 1389628800,
         "category": "提案",
@@ -39549,7 +39549,7 @@ const initialState =
     "2198": {
         "id": 2198,
         "issue": "司法改革",
-        "legislator": "吳宜臻　",
+        "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1389628800,
         "category": "提案",
@@ -39567,7 +39567,7 @@ const initialState =
     "2199": {
         "id": 2199,
         "issue": "司法改革",
-        "legislator": "王惠美　",
+        "legislator": "王惠美",
         "party": "KMT",
         "date": 1389628800,
         "category": "提案",
@@ -39621,7 +39621,7 @@ const initialState =
     "2202": {
         "id": 2202,
         "issue": "司法改革",
-        "legislator": "尤美女　",
+        "legislator": "尤美女",
         "party": "DPP",
         "date": 1421596800,
         "category": "提案",
@@ -39639,7 +39639,7 @@ const initialState =
     "2203": {
         "id": 2203,
         "issue": "司法改革",
-        "legislator": "柯建銘　",
+        "legislator": "柯建銘",
         "party": "DPP",
         "date": 1421596800,
         "category": "提案",
@@ -39693,7 +39693,7 @@ const initialState =
     "2206": {
         "id": 2206,
         "issue": "司法改革",
-        "legislator": "廖正井　",
+        "legislator": "廖正井",
         "party": "KMT",
         "date": 1421596800,
         "category": "提案",
@@ -39711,7 +39711,7 @@ const initialState =
     "2207": {
         "id": 2207,
         "issue": "司法改革",
-        "legislator": "尤美女　",
+        "legislator": "尤美女",
         "party": "DPP",
         "date": 1421596800,
         "category": "提案",
@@ -39729,7 +39729,7 @@ const initialState =
     "2208": {
         "id": 2208,
         "issue": "司法改革",
-        "legislator": "高志鵬　",
+        "legislator": "高志鵬",
         "party": "DPP",
         "date": 1421596800,
         "category": "提案",
@@ -39765,7 +39765,7 @@ const initialState =
     "2210": {
         "id": 2210,
         "issue": "司法改革",
-        "legislator": "蔡其昌　",
+        "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1421942400,
         "category": "提案",
