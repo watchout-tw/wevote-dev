@@ -33,7 +33,7 @@ $rollLargeBreak: 800px;
 	text-align: center;
 }
 .billWrap {
-	padding-bottom: 150px;
+	padding-bottom: 120px;
 }
 .billComplete {
 	text-align: center;
@@ -44,6 +44,7 @@ $rollLargeBreak: 800px;
 		width: 200px;
 	}
 }
+/*
 $bubbleColor: yellow;
 .billCompleteShare {
 	display: none;
@@ -81,7 +82,7 @@ $bubbleColor: yellow;
 	border-left: 0px solid transparent;
 	border-right: 20px solid transparent;
 	border-top: 20px solid $bubbleColor;
-}
+}*/
 /* ProgressBar */
 .stageWrap {
 	background: rgba($awesomeColor, 0.6);//rgba(0,0,0,0.8);

@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 import Appbar from '../../components/Appbar/Appbar.js';
 import Footer from '../../components/Footer/Footer.js';
-import Social from '../../components/Social/Social.js';
 
 export default class Shell extends Component {
   render() {
@@ -16,7 +15,6 @@ export default class Shell extends Component {
         <div className={styles.spaceBar}></div>
          {this.props.children}
         <Footer/>
-        <Social />
         <Appbar params={params}/>
       </div>
     );

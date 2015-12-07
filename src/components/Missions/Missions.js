@@ -142,7 +142,8 @@ export default class Missions extends Component {
 
     let wrapClasses = classnames({
       [styles.wrap]  : true,
-      [styles.embed] : embed
+      [styles.embed] : embed,
+      [styles.showingOtherIssues] : (skipIssue !== undefined),
     })
 
     return (

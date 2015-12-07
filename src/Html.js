@@ -22,6 +22,7 @@ i.shareaholic-service-icon
 { font-size: 15px ${IMP}; padding-top: 1px ${IMP}; }
 .shareaholic-share-buttons-container li.shareaholic-share-button .shareaholic-share-button-container:hover
 { opacity: 0.5 ${IMP}; }
+i.shareaholic-service-icon { color: black ${IMP}; }
 `;
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
@@ -58,7 +59,7 @@ export default class Html extends Component {
           <meta property="article:publisher" content="https://www.facebook.com/WatchOutTW"/>
           <meta property="article:author" content="https://www.facebook.com/WatchOutTW"/>
           <meta property='shareaholic:article_author' content='https://www.facebook.com/WatchOutTW' />
-          <meta property="fb:app_id" content="1640384482880194" /> 
+          <meta property="fb:app_id" content="1640384482880194" />
 
           <meta name="google-site-verification" content="lcgCkeejw-aJgK6-JoOR9a8ivs5MWZA66UavjFBxCJA" />
           <meta name="msvalidate.01" content="2CB93BE9E9E2D38CAD7DA93479BA8E30" />
@@ -66,7 +67,7 @@ export default class Html extends Component {
 
           <link rel="shortcut icon" href="/favicon.ico" />
           <script async src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
-          
+
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>
             <link href={assets.styles[style]} key={i} media="screen, projection"
@@ -82,7 +83,7 @@ export default class Html extends Component {
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
           <script async src='//www.google-analytics.com/analytics.js'></script>
-          
+
         </body>
         <style>{cheatCSS}</style>
       </html>

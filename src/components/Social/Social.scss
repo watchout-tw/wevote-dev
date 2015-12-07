@@ -1,12 +1,25 @@
 @import '../../common.scss';
 
 .socialWrap {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height: 32px;
-	padding: 2px 0;
-	background: rgba(0, 54, 64, 0.85); // 不在調色盤裡可是蠻好看的所以管他的！
+	width: 100px;
+	margin: 20px auto;
+  padding: 0;
+  background: yellow;
+	color: black;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+	.urgentText {
+		margin: 0;
+		padding: 10px;
+		background: black;
+		color: yellow;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.shareText {
+		margin: 10px 10px 4px;
+	}
 }
 .watchoutLogo {
 	position: absolute;

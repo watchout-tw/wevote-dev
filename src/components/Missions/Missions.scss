@@ -6,9 +6,13 @@ $itemSize: 240px;
 	max-width: 720px; /* 3 castles */
 	margin: 0 auto;
 	text-align: center;
-}
-.wrap.embed {
-	display: inline;
+
+	&.embed {
+		display: inline;
+	}
+	&.showingOtherIssues { // 某個議題底下的「其他議題」
+		padding-top: 50px;
+	}
 }
 /* 手機上 safari 需要指定 block */
 .coverItem, .coverItem:visited {

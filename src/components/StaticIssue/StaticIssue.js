@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
 import Missions from '../../components/Missions/Missions.js';
+import Social from '../../components/Social/Social.js';
 
 import {done, none} from '../../ducks/processingState.js';
 
@@ -133,15 +134,11 @@ export default class StaticIssue extends Component {
                              currentIssue={currentIssue}
                              currentIssueName={currentIssueName}
                              setCurrentView={setCurrentView} />
-                <div className={styles.divider}></div>
+                <Social />
+                <div className={styles.collaboratorInfo}>本議題特別感謝{collaboratorItems}的協助</div>
                 <Missions issues={issues}
                           skipIssue={currentIssueName}
                           showComingMission={false}/>
-
-                <div className={styles.collaboratorInfo}>
-                    本議題特別感謝{collaboratorItems}的協助
-                </div>
-
              </div>
         </div>
       )
