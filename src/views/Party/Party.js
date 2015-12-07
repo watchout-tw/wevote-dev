@@ -169,6 +169,7 @@ class PartyPromises extends Component {
     render(){
       const styles = require('./Party.scss');
       const {partyPromises, issues, id} = this.props;
+      console.log(id);
       const {positions, bills} = partyPromises[id];
       
       if(!positions){
