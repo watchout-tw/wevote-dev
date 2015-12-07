@@ -574,6 +574,7 @@ const initialState = {
       "question" : "你支持課綱制定程序完全公開透明嗎？",
       "statement" : "課綱制定程序完全公開透明",
       "slideshows" : [],
+      "slideshowsMobile" : [], 
       "description" : "",
       "collaborators" : [
         {
@@ -591,8 +592,9 @@ const initialState = {
       "title" : "司法改革",
       "titleEng" : "justiceReform",
       "question" : "你是否支持人民一起參與做出判決？",
-      "statement" : "人民一起參與做出判決明",
+      "statement" : "人民一起參與做出判決",
       "slideshows" : [],
+      "slideshowsMobile" : [],
       "description" : "",
       "collaborators" : [
         {
