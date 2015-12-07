@@ -4,7 +4,7 @@ import DocumentMeta from 'react-document-meta';
 const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
 const IMP = '!important';
-
+const iconDimensions = `width: 28px ${IMP}; height: 28px ${IMP}`;
 const cheatCSS = `
 .shareaholic-share-buttons-container ul.shareaholic-share-buttons
 { margin: 0 ${IMP}; padding: 4px ${IMP}; }
@@ -12,18 +12,14 @@ i.shareaholic-service-icon
 { border: none ${IMP}; background: none ${IMP}; color: white ${IMP}; box-shadow: none ${IMP}; }
 .shareaholic-share-buttons-container li.shareaholic-share-button
 { padding: 0 10px ${IMP}; }
-.shareaholic-share-buttons-container.mini .shareaholic-share-button-container .shareaholic-service-icon
-{ font-size: 16px ${IMP}; }
-.shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-twitter
-{ font-size: 18px ${IMP}; margin-top: -1px ${IMP}; }
-.shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-google_plus
-{ font-size: 22px ${IMP}; width: 26px ${IMP}; height: 22px ${IMP}; margin-top: -3px ${IMP}; margin-left: -3px ${IMP};}
-.shareaholic-share-buttons-container.mini .shareaholic-share-button-container i.shareaholic-service-icon.service-plurk
-{ font-size: 15px ${IMP}; padding-top: 1px ${IMP}; }
-.shareaholic-share-buttons-container li.shareaholic-share-button .shareaholic-share-button-container:hover
-{ opacity: 0.5 ${IMP}; }
 i.shareaholic-service-icon { color: black ${IMP}; }
-`;
+.shareaholic-share-buttons-container.mini li.shareaholic-share-button
+{ ${iconDimensions} }
+.shareaholic-share-buttons-container.mini .shareaholic-share-button-container .shareaholic-service-icon
+{ font-size: 22px ${IMP}; ${iconDimensions} }
+.shareaholic-service-icon.service-line_me
+{ transform: scale(1.1); }`;
+
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
  * Used in server-side code only to wrap the string output of the
