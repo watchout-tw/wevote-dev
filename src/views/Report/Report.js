@@ -33,6 +33,8 @@ export default class Report extends Component {
   }
   _onScroll(){
       let node = this.refs.positionSection.getDOMNode();
+      if(!node) return;
+      
       let rect = node.getBoundingClientRect();
       let {fixedStream} = this.state;
 
@@ -40,12 +42,6 @@ export default class Report extends Component {
       let Frect = Fnode.getBoundingClientRect();
 
       let Rnode = this.refs.recordStream.getDOMNode();
-
-      // console.log(rect.top)
-      // console.log(rect.bottom)
-      // console.log("*"+Frect.top)
-      // console.log(">"+window.innerHeight)
-      // console.log(document.body.scrollTop)
 
       if(rect.top <= 0){//set fixed
           //scroll to bottom, set back to default

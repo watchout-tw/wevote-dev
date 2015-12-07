@@ -59,7 +59,7 @@ $hexagonColor6: #eee;
 .innerHexagon:before {
   content: "";
   position: absolute;
-  top: -$innerHexagonSize/4;
+  top: -$innerHexagonSize/4+1;
   left: 0;
   width: 0;
   height: 0;
