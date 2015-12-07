@@ -45,10 +45,10 @@ export default class PartyBills extends Component {
       if(billRect.top < 0 && billEndRect.top > 100){
         current = "bill";
       }
-
+     
       //console.log(billRect.top + "," + billEndRect.top + "," + current)
 
-      if(current){
+      if(current){ 
         if(focus !== current){
             this.setState({
               focus: current
@@ -61,6 +61,13 @@ export default class PartyBills extends Component {
               focus: ""
             })
         }
+      }
+      if(billEndRect.top < 50 && focus === "bill"){
+        this.setState({
+            focus: "after"
+        })
+        
+        
       }
 
 
@@ -146,7 +153,8 @@ export default class PartyBills extends Component {
     //title class, 處理 scroll fixed on top
     let fixedClasses = classnames({
       [styles.billTitleWrap]: true,
-      [styles.fixed]: focus === "bill"
+      [styles.fixed]: focus === "bill",
+      [styles.after]: focus === "after"
     })
     return (
       <div className={styles.wrap}>
