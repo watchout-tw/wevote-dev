@@ -69,13 +69,13 @@ export default class Embed extends Component {
     }
 
     return (
-      <div className={`${styles.wrap} ${styles[view]}`}>
-          <nav className={styles.navWrap}>
-              {viewItems}
-          </nav>
+      <div className={`${styles.wrap} ${styles[view]}`}> 
           <div className={`${styles.contentWrap}`}>
                 <div className={styles.embedSection}>
                     <img src={embedLogo} className={styles.embedImg}/>
+                    <nav className={styles.navWrap}>
+                          {viewItems}
+                    </nav>
                 </div>
                 {mainContent}
            </div>
@@ -95,7 +95,7 @@ class EmbedIssues extends Component {
         const flyingImg = require("./images/flying-inverse.png");
 
         return (
-          <div>
+          <div className={styles.initialWrap}>
               <h1 className={styles.topic}>立委勇者大選・最強解析</h1>
               <img src={flyingImg} className={styles.flyingImg} />
               <img src={missionImg}
@@ -114,7 +114,10 @@ class EmbedParties extends Component {
     render(){
         const styles = require('./Embed.scss');
         return (
-          <div div className={styles.initialWrap}>
+          <div className={styles.initialWrap}>
+              <h1 className={styles.topic}>立委勇者大選・最強解析</h1>
+              <div>立即進入挑戰!</div>
+              
               <div className={styles.story}>
                 <p>黨團衝突戰，將由各地勇者所組成不同的黨團，以團體戰的方式爭奪立法聖殿中的勇者席位。在這場團體戰鬥中，誰能爭取最多席位，同樣考驗島嶼主人的智慧。</p>
                 <p>挑戰任務即刻啟動！</p>
@@ -123,11 +126,6 @@ class EmbedParties extends Component {
                   <a href='//wevote.tw/parties-game/'
                      target='_blank'
                      className={styles.goMatch}>進入挑戰</a>
-                  <div>
-                      <a href='//wevote.tw/parties-table/'
-                         target='_blank'
-                         className={styles.goTable}>直接看結果</a>
-                  </div>
               </div>
           </div>
            

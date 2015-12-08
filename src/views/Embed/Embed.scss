@@ -10,14 +10,35 @@
 .wrap.parties {
 	background-image: url('../images/parties-web.jpg');  
 }
+/* 不同 tab 的內容 */
+.contentWrap {
+	position: relative;
+}
+
+.embedSection {
+	background: rgba(255,255,255,0.4);
+	text-align: left;
+	position: relative;
+}
+.embedImg {
+	width: 300px;
+	margin: 10px 0 0 20px;
+}
 /* 上方的 tab */
 .navWrap {
-	text-align: left;
+	text-align: center;
+    bottom: 0px;
+    width: 100%;
+}
+@media all and (min-width: 900px){
+	.navWrap {
+		position: absolute;
+	}
 }
 .viewItem {
 	cursor: pointer;
 	display: inline-block;
-    padding: 8px 10px;
+    padding: 12px 10px;
     text-align: center;
     background: #E6E6E6;
     border-bottom: 3px solid transparent;
@@ -33,19 +54,8 @@
     vertical-align: top;
 
 }
-/* 不同 tab 的內容 */
-.contentWrap {
-	position: relative;
-}
 
-.embedSection {
-	background: rgba(255,255,255,0.4);
-	text-align: left;
-}
-.embedImg {
-	width: 300px;
-	margin: 10px 0 0 20px;
-}
+
 h1.topic {
 	margin: 20px auto;
 	font-size: 28px;
