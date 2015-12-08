@@ -1,116 +1,35 @@
 @import '../../common.scss';
 .bgWrap {
 	width: 100%;
-	height: 116vw;
 	overflow: hidden;
 	position: relative;
 }
 .bgGif {
+	display: block;
 	width: 100%;
 	z-index: -1000;
 	overflow: hidden;
 	background-size: cover;
 	top: 80px;
 }
-.coverTextBlock {
-  	position: absolute;
-	width: 100%;
-	top: 0;
-	height: 116vw;
-	color: white;
-	
-}
-@media screen and (min-width: $appBarBreakLarge) {
-	.bgWrap {
-	  height: 50vw;
-	}
-	.bgGif {
-	  top: 4px;
-	}
-	.coverTextBlock {
-		height: 50vw;
-	}
-}
-.coverTitle {
-	position: relative;
-	width: 100%;
-	margin-top: 45vw;
-}
-.coverTitleMain {
-	display: block;
-  	width: 90%;
-	margin: 0 auto;
-}
-.diffTensImg {
-    position: absolute;
-    top: 3.6vw;
-    width: 5%;
-    left: 73.5vw;
-}
-.diffOnesImg {
-    position: absolute;
-    top: 3.6vw;
-    width: 5%;
-    left: 78.5vw;
-}
-.actions {
-	width: 100%;
-}
 .storyBeginsHereImg {
 	display: block;
+	width: 100%;
 	margin: 0 auto;
-	width: 85%;
-  	cursor: pointer;
-  	@include prefix(filter, drop-shadow(0 0 8px $trueWhite));
+  cursor: pointer;
+  @include prefix(filter, drop-shadow(0 0 8px $trueWhite));
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
-.missionImg {
-	display: block;
-	width: 55%;
-	margin: 10vw auto 0;
-  	padding: 0 10px;
-  	cursor: pointer;
-  	@include prefix(filter, drop-shadow(0 0 8px aqua));
-}
-@media all and (min-width: $appBarBreakLarge) {
-	.coverTitle {
-		margin-top: 17vw;
-	}
-	.coverTitleMain {
-		width: 60%;
-	}
-	.diffTensImg {
-		position: absolute;
-		top: 2.5vw;
-		width: 3.25%;
-		left: 65.75vw;
-	}
-	.diffOnesImg {
-		position: absolute;
-		top: 2.5vw;
-		width: 3.25vw;
-		left: 68.95vw;
-	}
-	.actions {
-		bottom: -4vw;
-	}
+@media all and (min-width: 640px) { // same with widthBreak in _handleResize() in Video.js
 	.storyBeginsHereImg {
-		width: 36%;
-	}
-	.missionImg {
-		width: 20%;
-		margin: 4vw auto 0 auto;
-		display: block;
-		padding: 0;
-		background: none;
-		cursor: pointer;
-		@include prefix(filter, drop-shadow(0 0 15px aqua));
-	}
-	.missionImg:hover {
-	  	@include prefix(filter, drop-shadow(0 0 8px aqua));
+		width: 50%;
 	}
 }
 
-/* 播放影片 */
+// 播放影片
 .playingSection {
 	position: fixed;
 	width: 100%;

@@ -24,12 +24,13 @@ export default class Video extends Component {
   }
   _handleResize(){
       const {mode} = this.state;
-      if((window.innerWidth >= 720)&&(mode!=="web")){
+      const widthBreak = 640;
+      if((window.innerWidth >= widthBreak)&&(mode!=="web")){
           this.setState({
             mode: "web"
           })
       }
-      if((window.innerWidth < 720)&&(mode!=="mobile")){
+      if((window.innerWidth < widthBreak)&&(mode!=="mobile")){
           this.setState({
             mode: "mobile"
           })
@@ -40,7 +41,7 @@ export default class Video extends Component {
   render() {
   	const styles = require('./Video.scss');
     const {mode} = this.state;
-   
+
 
     // Background GIF
     let bgImg;
@@ -86,26 +87,8 @@ export default class Video extends Component {
     return (
         <div className={styles.bgWrap}>
       	    {playingFullScreen}
-
-            <img className={styles.bgGif}
-                 src={bgImg} />
-
-            <div className={styles.coverTextBlock}>
-                <div className={styles.coverTitle}>
-                    <img src={title}
-                         className={styles.coverTitleMain}/>
-                    <img src={diffTensImg}
-                         className={styles.diffTensImg} />
-                    <img src={diffOnesImg}
-                         className={styles.diffOnesImg} />
-                </div>
-                <div className={styles.actions}>
-                  <img src={storyBeginsHereImg}
-                       className={styles.storyBeginsHereImg}
-                       onClick={this._handlePlay.bind(this)} />
-                  
-                </div>
-            </div>
+            <img className={styles.bgGif} src={bgImg} />
+            <img src={storyBeginsHereImg} className={styles.storyBeginsHereImg} onClick={this._handlePlay.bind(this)} />
         </div>
     );
   }
