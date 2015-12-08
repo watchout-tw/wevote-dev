@@ -35,7 +35,7 @@ export default class Embed extends Component {
     },
     {
       id: 'parties',
-      title: '黨團攻城戰'
+      title: '黨團衝突戰'
     }];
     let viewItems = views.map((item, i)=>{
         let img = require(`./images/symbols_${item.id}.svg`);
@@ -47,15 +47,14 @@ export default class Embed extends Component {
             <div className={`${viewClasses} ${styles[item.id]}`}
                  key={`viewTab-${i}`}
                  onClick={this._onChangeView.bind(this, item.id)}>
-                <img src={img} className={styles.iconImg}/>
-                {item.title}
+                <img src={img} className={styles.iconImg}/><p className={styles.iconTitle}>{item.title}</p>
             </div>
         )
     })
 
     /* watchout logo */
     const embedLogo = require("./images/embedLogo.svg");
-    
+
     /* display content */
     let mainContent;
     switch(view){
@@ -69,7 +68,7 @@ export default class Embed extends Component {
     }
 
     return (
-      <div className={`${styles.wrap} ${styles[view]}`}> 
+      <div className={`${styles.wrap} ${styles[view]}`}>
           <div className={`${styles.contentWrap}`}>
                 <div className={styles.embedSection}>
                     <img src={embedLogo} className={styles.embedImg}/>
@@ -90,16 +89,15 @@ class EmbedIssues extends Component {
     render(){
         const styles = require('./Embed.scss');
         const {issues} = this.props;
-    
+
         const missionImg = require("./images/VideoTitles_mission.svg");
         const flyingImg = require("./images/flying-inverse.png");
+        const goImg = require("./images/go-mission.svg");
 
         return (
           <div className={styles.initialWrap}>
-              <h1 className={styles.topic}>立委勇者大選・最強解析</h1>
               <img src={flyingImg} className={styles.flyingImg} />
-              <img src={missionImg}
-                   className={styles.missionImg}/>
+              <img src={goImg} className={styles.goImg} />
               <div className={styles.container}>
                   <MaXiCastle embed={true}/>
                   <Missions issues={issues}
@@ -113,11 +111,10 @@ class EmbedIssues extends Component {
 class EmbedParties extends Component {
     render(){
         const styles = require('./Embed.scss');
+        const goImg = require("./images/go-challenge.svg");
         return (
           <div className={styles.initialWrap}>
-              <h1 className={styles.topic}>立委勇者大選・最強解析</h1>
-              <div>立即進入挑戰!</div>
-              
+          <img src={goImg} className={styles.goImg} />
               <div className={styles.story}>
                 <p>黨團衝突戰，將由各地勇者所組成不同的黨團，以團體戰的方式爭奪立法聖殿中的勇者席位。在這場團體戰鬥中，誰能爭取最多席位，同樣考驗島嶼主人的智慧。</p>
                 <p>挑戰任務即刻啟動！</p>
@@ -128,9 +125,7 @@ class EmbedParties extends Component {
                      className={styles.goMatch}>進入挑戰</a>
               </div>
           </div>
-           
+
         )
     }
 }
-
-

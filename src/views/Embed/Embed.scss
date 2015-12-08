@@ -4,11 +4,15 @@
 	position: relative;
 	background-size: cover;
 	min-height: 100vh;
-	text-align: center;	
-	background-image: url('../images/issues-web.jpg');  
+	text-align: center;
+	background-image: url('../images/issues-web.jpg');
+	background-position: center center;
+	background-size: cover;
 }
 .wrap.parties {
-	background-image: url('../images/parties-web.jpg');  
+	background-image: url('../images/parties-web.jpg');
+	background-position: center center;
+	background-size: cover;
 }
 /* 不同 tab 的內容 */
 .contentWrap {
@@ -16,43 +20,61 @@
 }
 
 .embedSection {
-	background: rgba(255,255,255,0.4);
-	text-align: left;
 	position: relative;
+	background: $lightGrey;
+	box-shadow: 0 0 10px rgba($black, 0.5);
+	text-align: left;
 }
 .embedImg {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 300px;
-	margin: 10px 0 0 20px;
+	margin: 4px;
 }
 /* 上方的 tab */
 .navWrap {
 	text-align: center;
-    bottom: 0px;
-    width: 100%;
-}
-@media all and (min-width: 900px){
-	.navWrap {
-		position: absolute;
-	}
+  width: 100%;
+	padding-top: 100px;
 }
 .viewItem {
 	cursor: pointer;
 	display: inline-block;
-    padding: 12px 10px;
-    text-align: center;
-    background: #E6E6E6;
-    border-bottom: 3px solid transparent;
-}
+	width: 50%;
+  padding: 4px;
+  border-bottom: 4px solid transparent;
+	text-align: center;
+	background: $lightGrey;
 
+	.iconImg {
+		display: block;
+		width: 32px;
+		margin: 0 auto;
+	}
+	.iconTitle {
+		margin: 0;
+	}
+}
 .viewItem.active {
-	border-bottom: 3px solid #FF0055;
+	border-bottom-color: $black;
 	background: white;
 }
-.iconImg {
-	width: 20px;
-	margin: 0px 3px;
-    vertical-align: top;
-
+@media all and (min-width: 500px) {
+	.navWrap {
+		text-align: right;
+		padding: 0;
+	}
+	.viewItem {
+		display: inline-block;
+		width: auto;
+		padding: 7px 12px 5px;
+	}
+}
+@media all and (min-width: 840px) {
+	.navWrap {
+		text-align: center;
+	}
 }
 
 
@@ -80,7 +102,7 @@ h1.topic {
    		top: 150px;
    		left: calc(50% + 160px);
    		z-index: 1;
-	}	
+	}
 }
 .missionImg {
 	display: block;
@@ -112,11 +134,19 @@ h1.topic {
 }
 .story {
 	max-width: 400px;
-    margin: 0px auto 40px auto;
-    padding: 10px 20px;
-    line-height: 1.6;
-    background: rgba(0,0,0,0.8);
-    color: white;
-    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.22);
-    text-align: left;
+  margin: 20px auto 40px auto;
+  padding: 10px 20px;
+  line-height: 1.6;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.22);
+  text-align: left;
+}
+
+.goImg {
+	display: block;
+	width: 280px;
+	margin: 0 auto;
+	-webkit-filter: drop-shadow(0 0 10px white);
+	filter: drop-shadow(0 0 10px white);
 }
