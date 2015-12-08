@@ -1,11 +1,43 @@
 @import '../../common.scss';
+@import '../../styles/actionButton.scss';
 .wrap {
 	position: relative;
-	background-image: url(./images/hall.jpg);
 	background-size: cover;
 	min-height: 100vh;
-	text-align: center;
+	text-align: center;	
+	background-image: url('../images/issues-web.jpg');  
 }
+.wrap.parties {
+	background-image: url('../images/parties-web.jpg');  
+}
+/* 上方的 tab */
+.navWrap {
+	text-align: left;
+}
+.viewItem {
+	cursor: pointer;
+	display: inline-block;
+    padding: 8px 10px;
+    text-align: center;
+    background: #E6E6E6;
+    border-bottom: 3px solid transparent;
+}
+
+.viewItem.active {
+	border-bottom: 3px solid #FF0055;
+	background: white;
+}
+.iconImg {
+	width: 20px;
+	margin: 0px 3px;
+    vertical-align: top;
+
+}
+/* 不同 tab 的內容 */
+.contentWrap {
+	position: relative;
+}
+
 .embedSection {
 	background: rgba(255,255,255,0.4);
 	text-align: left;
@@ -61,4 +93,20 @@ h1.topic {
   .missionImg:hover {
     @include prefix(filter, drop-shadow(0 0 8px aqua));
   }
+}
+
+/* parties */
+.initialWrap {
+	padding-top: 40px;
+	min-height: 600px;
+}
+.story {
+	max-width: 400px;
+    margin: 0px auto 40px auto;
+    padding: 10px 20px;
+    line-height: 1.6;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.22);
+    text-align: left;
 }

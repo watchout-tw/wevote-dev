@@ -3,7 +3,7 @@
 $rollLargeBreak: 800px;
 .wrap {
 	min-height: 60vw;
-	background-image: url('../images/bg-mobile.jpg');
+	background-image: url('../images/parties-mobile.jpg');
 }
 @media all and (min-width: $rollLargeBreak){
 	.wrap {
@@ -15,14 +15,13 @@ $rollLargeBreak: 800px;
 	 	bottom: 0px;
 	 	top: 0px;
 	 	position: fixed;
-	 	background-image: url('../images/bg-web.jpg');
+	 	background-image: url('../images/parties-web.jpg');
 	 	background-size: cover;
 	 	transform: translateZ(0);
 	 	pointer-events: none;
 	 	z-index: -1;
 	}
 }
-
 /* 說明 */
 .initialWrap {
 	padding-top: 40px;
@@ -39,121 +38,4 @@ $rollLargeBreak: 800px;
 }
 .actions {
 	text-align: center;
-}
-.billWrap {
-	padding-bottom: 120px;
-}
-.billComplete {
-	text-align: center;
-	font-size: 22px;
-	font-weight: 600;
-	margin-top: 40px;
-	> img {
-		width: 200px;
-	}
-}
-/*
-$bubbleColor: yellow;
-.billCompleteShare {
-	display: none;
-}
-.billCompleteShare.show {
-	display: block;
-  position: fixed;
-  bottom: 60px;
-  left: calc(50% - 4em);
-  width: 8em;
-	margin: 0 auto;
-  padding: 0;
-	background: $bubbleColor;
-	font-size: 16px;
-  line-height: 1.25;
-	box-shadow: 0 0 25px rgba(0,0,0,0.3);
-	z-index: 99;
-
-	> p {
-		margin: 0;
-		padding: 8px;
-
-		&.urgent {
-			background: black;
-			color: yellow;
-			font-size: 24px;
-		}
-	}
-}
-.billCompleteShare.show:after {
-	content: '';
-	position: absolute;
-	bottom: -20px;
-	left: calc(50% - 10px);
-	border-left: 0px solid transparent;
-	border-right: 20px solid transparent;
-	border-top: 20px solid $bubbleColor;
-}*/
-/* ProgressBar */
-.stageWrap {
-	background: rgba($awesomeColor, 0.6);//rgba(0,0,0,0.8);
-	text-align: center;
-	padding-top: 20px;
-	margin-bottom: 20px;
-}
-@media all and (min-width: 840px){/* appbar */
-	.stageWrap {
-		margin-top: 0;//-1px;
-		padding-top: 0;
-	}
-}
-$lockColor: $awesomeColor;//gray;
-$completeColor: $white;//#FAFA7B;
-$strokeWright: 2px;
-.sItem {
-	display: inline-block;
-	vertical-align: top;
-	padding: 10px;
-	position: relative;
-	font-size: 0.85em;
-	color: $lockColor;
-
-	&:not(:first-child):after {
-		content: '';
-		position: absolute;
-		top: 18px;
-		right: 50%;
-		width: 100%;
-		height: $strokeWright;
-		background: $lockColor;
-	}
-	&.current {
-		font-size: 1em;
-		color: $completeColor;
-		z-index: 1;
-		&:after {
-			background: $completeColor;
-		}
-	}
-	&.complete {
-		color: $completeColor;
-		&:after {
-			background: $completeColor;
-		}
-	}
-}
-
-.circle {
-	width: 10px;
-	height: 10px;
-	margin: 4px auto;
-	border-radius: 100%;
-	background: $lockColor;
-
-	&.complete {
-		background: $completeColor;
-	}
-	&.current {
-		background: $completeColor;
-		width: 16px;
-		height: 16px;
-		margin-top: 1px;
-	}
 }
