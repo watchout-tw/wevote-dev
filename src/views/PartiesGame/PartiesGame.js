@@ -86,8 +86,8 @@ export default class PartiesGame extends Component {
         break;
 
     }
-    const title = `政黨票投票攻略-各政黨議題表態大公開-沃草2016立委出任務`;
-    const description = `2016立委選舉「政黨票」怎麼投？想知道各政黨的不分區參戰名單嗎？想知道各政黨對於議題表態與優先法案的未來承諾嗎？快來進行政黨成分分析，政黨票投票最佳攻略！`;
+    const title = `政黨票投票攻略-各政黨議題表態配對遊戲-沃草2016立委出任務`;
+    const description = `2016立委選舉「政黨票」怎麼投？想知道各政黨的不分區參戰名單嗎？想知道各政黨對於議題表態與優先法案的未來承諾嗎？快來進行政黨成分分析，配對最適合你的政黨，政黨票投票最佳攻略！`;
     const metaData = {
       title: title,
       description: description,
