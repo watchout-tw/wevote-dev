@@ -341,10 +341,14 @@ export default class InteractiveIssue extends Component {
 
       const { collaborators } = currentIssue;
       let collaboratorItems = collaborators.map((ngo, index)=>{
-          return <a className={`${styles.ia} ${styles.bright}`}
-                    href={ngo.link}
-                    target="_blank"
-                    key={index}>{ngo.name}</a>
+          return (
+            <span key={index}>
+                <a className={`${styles.ia} ${styles.bright}`}
+                   href={ngo.link}
+                   target="_blank">{ngo.name}</a>
+                { (last===true) ? "":"、" }
+            </span>
+          )
       });
 
       let resultsItem = (stage === "results") ? (
