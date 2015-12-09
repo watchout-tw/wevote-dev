@@ -573,9 +573,143 @@ const initialState = {
       "titleEng" : "courseGuide",
       "question" : "你支持課綱制定程序完全公開透明嗎？",
       "statement" : "課綱制定程序完全公開透明",
-      "slideshows" : [],
-      "slideshowsMobile" : [], 
-      "description" : "",
+      "slideshows" : [
+        {
+            "filename": "slides-desktop-36.jpg",
+            "alt": "你支持課綱制定程序完全公開透明嗎？-課綱"
+        },
+        {
+            "filename": "slides-desktop-37.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-desktop-38.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-desktop-39.png",
+            "alt": "課綱制定流程-課綱"
+        },
+        {
+            "filename": "slides-desktop-40.png",
+            "alt": "課綱制定法源-課綱"
+        },
+        {
+            "filename": "slides-desktop-41.png",
+            "alt": "程序爭議：課綱法律性質-課綱"
+        },
+        {
+            "filename": "slides-desktop-42.png",
+            "alt": "程序爭議：教科書-課綱"
+        },
+        {
+            "filename": "slides-desktop-43.png",
+            "alt": "程序爭議：資訊公開-課綱"
+        },
+        {
+            "filename": "slides-desktop-44.png",
+            "alt": "程序爭議：公聽程序-課綱"
+        },
+        {
+            "filename": "slides-desktop-45.png",
+            "alt": "課綱制定程序修法進度-課綱"
+        }
+    ],
+     "slideshowsMobile" : [
+        {
+            "filename": "slides-mobile-p2-01.jpg",
+            "alt": "你支持課綱制定程序完全公開透明嗎？-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-02.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-03.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-04.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-05.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-06.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-07.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-08.png",
+            "alt": "課綱微調事件簿-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-09.png",
+            "alt": "課綱制定流程-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-10.png",
+            "alt": "課綱制定流程-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-11.png",
+            "alt": "課綱制定流程-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-12.png",
+            "alt": "課綱制定法源-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-13.png",
+            "alt": "課綱制定法源-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-14.png",
+            "alt": "程序爭議：課綱法律性質-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-15.png",
+            "alt": "程序爭議：課綱法律性質-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-16.png",
+            "alt": "程序爭議：教科書-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-17.png",
+            "alt": "程序爭議：教科書-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-18.png",
+            "alt": "程序爭議：資訊公開-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-19.png",
+            "alt": "程序爭議：資訊公開-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-20.png",
+            "alt": "程序爭議：公聽程序-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-21.png",
+            "alt": "程序爭議：公聽程序-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-22.png",
+            "alt": "課綱制定程序修法進度-課綱"
+        },
+        {
+            "filename": "slides-mobile-p2-23.png",
+            "alt": "課綱制定程序修法進度-課綱"
+        }
+      ], 
+      "description" : "你支持課綱制定程序完全公開透明嗎？一起來了解課綱微調的問題在哪裡？",
       "collaborators" : [
         {
           "name" : "課綱盟",
@@ -593,9 +727,99 @@ const initialState = {
       "titleEng" : "justiceReform",
       "question" : "你是否支持人民一起參與做出判決？",
       "statement" : "人民一起參與做出判決",
-      "slideshows" : [],
-      "slideshowsMobile" : [],
-      "description" : "",
+      "slideshows" : [
+        {
+            "filename": "slides-desktop-46.png",
+            "alt": "你支持人民一起參與做出判決嗎？-司法改革"
+        },
+        {
+            "filename": "slides-desktop-47.png",
+            "alt": "台灣法官的判決公正嗎？-司法改革"
+        },
+        {
+            "filename": "slides-desktop-48.png",
+            "alt": "人民參與判決：各國制度比較-司法改革"
+        },
+        {
+            "filename": "slides-desktop-49.png",
+            "alt": "參審陪審制的配套修法：起訴狀一本主義-司法改革"
+        },
+        {
+            "filename": "slides-desktop-50.png",
+            "alt": "觀審制，好不好？-司法改革"
+        },
+        {
+            "filename": "slides-desktop-51.png",
+            "alt": "人民參與判決修法進度-司法改革"
+        }
+      ],
+      "slideshowsMobile" : [
+        {
+            "filename": "slides-mobile-p2-24.png",
+            "alt": "你支持人民一起參與做出判決嗎？-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-25.png",
+            "alt": "台灣法官的判決公正嗎？-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-26.png",
+            "alt": "台灣法官的判決公正嗎？-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-27.png",
+            "alt": "台灣法官的判決公正嗎？-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-28.png",
+            "alt": "人民參與判決：各國制度比較-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-29.png",
+            "alt": "人民參與判決：各國制度比較-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-30.png",
+            "alt": "人民參與判決：各國制度比較-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-31.png",
+            "alt": "參審陪審制的配套修法：起訴狀一本主義-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-32.png",
+            "alt": "參審陪審制的配套修法：起訴狀一本主義-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-33.png",
+            "alt": "參審陪審制的配套修法：起訴狀一本主義-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-34.png",
+            "alt": "參審陪審制的配套修法：起訴狀一本主義-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-35.png",
+            "alt": "觀審制，好不好？-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-36.png",
+            "alt": "觀審制，好不好？-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-37.png",
+            "alt": "觀審制，好不好？-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-38.png",
+            "alt": "人民參與判決修法進度-司法改革"
+        },
+        {
+            "filename": "slides-mobile-p2-39.png",
+            "alt": "人民參與判決修法進度-司法改革"
+        }
+      ],
+      "description" : "你支持司法改革嗎？你知道參審制、陪審制，跟台灣司法院獨創觀審制大不同嗎？一起深入了解司法改革二三事。",
       "collaborators" : [
         {
           "name" : "司改會",
