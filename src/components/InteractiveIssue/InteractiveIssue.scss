@@ -163,12 +163,12 @@ $breakLarge: 800px;
   text-align: center;
   padding: 10px 0;
   background: $lightGrey;
+  border-bottom: 1px solid silver;
 }
 .completeMessage {
   text-align: left;
   max-width: 600px;
-  margin: 100px auto 20px auto;
-  padding: 30px;
+  margin: 50px auto 0;
   position: relative;
   font-size: 18px;
   text-align: center;

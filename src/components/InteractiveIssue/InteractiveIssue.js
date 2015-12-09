@@ -7,6 +7,7 @@ import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
 import IssueFigure from '../../components/IssueFigure/IssueFigure.js';
 import Missions from '../../components/Missions/Missions.js';
+import Social from '../../components/Social/Social.js';
 
 //handle key down event, key code
 const SPACE = 32,
@@ -352,8 +353,9 @@ export default class InteractiveIssue extends Component {
                          currentIssue={currentIssue}
                          currentIssueName={currentIssueName}
                          setCurrentView={setCurrentView} />
-            
 
+            <Social />
+            <div className={styles.collaboratorInfo}>本議題特別感謝{collaboratorItems}的協助</div>
             <div className={styles.completeMessage}>
                 <div>{currentIssue.title}之城任務完成了！</div>
                 <div>選擇其他任務吧！</div>
@@ -361,9 +363,6 @@ export default class InteractiveIssue extends Component {
             <Missions issues={issues}
                       skipIssue={currentIssueName}
                       showComingMission={false}/>
-            <div className={styles.collaboratorInfo}>
-                  本議題特別感謝{collaboratorItems}的協助
-            </div>
         </div>
       ):"";
 

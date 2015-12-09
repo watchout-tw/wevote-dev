@@ -69,7 +69,7 @@ export default class Issue extends Component {
 
           if((stage === "intro")&&(completed[currentIssueName]===false)&&localChecked[currentIssueName]===false){
               // add 'checked' to avoid overly checked local storage
-              
+
               if(window){
                   let current =  window.localStorage.getItem(currentIssueName);
                   if(current === "true"){
@@ -128,7 +128,7 @@ export default class Issue extends Component {
   }
   _handleCompleted(issueName){
       this._markLocalStorageCompleted(issueName);
-      
+
   }
   _handleSetUserPosition(issueName, position){
       let {userPosition} = this.state;
@@ -140,7 +140,7 @@ export default class Issue extends Component {
       this._markLocalStorageUserPosition(issueName, position);
   }
   _handleClearCompleted(){
-      
+
       const issueName = this.props.params.issueName;
 
       let {completed, localChecked, userPosition} = this.state;
@@ -245,7 +245,7 @@ export default class Issue extends Component {
   _checkLocalUserPosition(){
       const currentIssueName = this.props.params.issueName;
       let value = currentIssueName + "-userPosition"
-  
+
       if(window){
           let position =  window.localStorage.getItem(value);
           if(["aye","nay"].indexOf(position)!==-1){
@@ -258,7 +258,7 @@ export default class Issue extends Component {
       }
   }
   componentDidMount(){//Only runs in client side
-      
+
       this._checkLocalInteractive();
       this._checkLocalNotificationPref();
       this._checkLocalUserPosition();

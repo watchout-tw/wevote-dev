@@ -47,10 +47,12 @@ export default function(store) {
         </Route>
         <Route component={Shell}>
             <Route path="/" component={Home}/>
+            <Route path="/index.html" component={Home}/>
             
             <Route path="/SP/ma-xi-meet" component={Report}/>
   
             <Route path="/issues/" component={Issues}/>
+            <Route path="/issues/index.html" component={Issues}/>
 
             <Route path="/constituencies/" component={Constituencies}/>
             <Route path="/constituencies/:area/:areaNo" component={Constituency}/>
@@ -61,12 +63,16 @@ export default function(store) {
             <Route path="/8th-legislators" component={LegislatorList}/>
             
             <Route path="/people/:peopleId/records/" component={People}/>
+            <Route path="/people/:peopleId/records/index.html" component={People}/>
             <Route path="/people/:peopleId/records/:issueName" component={PeopleIssue}/>
             
-            <Route path="/parties" component={Parties}/>
-            <Route path="/parties-table" component={PartiesTable}/>
+            <Route path="/parties/" component={Parties}/>
+            <Route path="/parties/index.html" component={Parties}/>
+            <Route path="/parties-table/" component={PartiesTable}/>
+            <Route path="/parties-table/index.html" component={PartiesTable}/>
             
             <Route path="/parties/:partyId/:category/" component={Party}/>
+            <Route path="/parties/:partyId/:category/index.html" component={Party}/>
             <Route path="/parties/:partyId/records/:issueName" component={PartyIssue}/>
             
             <Route path="/records/:recordId" component={Record}/>

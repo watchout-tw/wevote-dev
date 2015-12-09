@@ -155,28 +155,28 @@ export default class PartiesTable extends Component {
       [styles.fixed]: focus === "position"
     })
     return (
-      <div className={styles.wrap}>
-          <div className={styles.partyPosition}>
-            <header><h2>議題表態</h2></header>
-            <div className={styles.partyPositionTable} id="positionTitle">
-                <div className={fixedClasses}>
-                    <div className={styles.issueTitles}>
-                        <div className={styles.partyName}></div>
-                        {issueTitles}
+      <div>
+          <div className={styles.wrap}>
+              <div className={styles.partyPosition}>
+                <header><h2>議題表態</h2></header>
+                <div className={styles.partyPositionTable} id="positionTitle">
+                    <div className={fixedClasses}>
+                        <div className={styles.issueTitles}>
+                            <div className={styles.partyName}></div>
+                            {issueTitles}
+                        </div>
                     </div>
+                    {partyPositions}
                 </div>
-                {partyPositions}
-            </div>
-            <div id="positionEnd"></div>
-            <div className={styles.legend}>
-              <img src={legendRecord}/>
-              <img src={legendPromise}/>
-            </div>
+                <div id="positionEnd"></div>
+                <div className={styles.legend}>
+                  <img src={legendRecord}/>
+                  <img src={legendPromise}/>
+                </div>
+              </div>
+              <PartyBills showTitle={true}/>
           </div>
-
-          <PartyBills showTitle={true}/>
-
-
+          <div className={styles.bgHolder}></div>
       </div>
     );
   }

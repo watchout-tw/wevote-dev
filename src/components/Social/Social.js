@@ -4,8 +4,10 @@ export default class Social extends Component {
   	const styles = require('./Social.scss');
     return (
         <div className={styles.socialWrap}>
+          <p className={styles.urgentText}>戰況緊急<br/>揪團參戰</p>
+          <p className={styles.shareText}>按這裡分享</p>
         	<div className='shareaholic-canvas' data-app='share_buttons' data-app-id='21117200'></div>
-          	<a className={styles.watchoutLogo} href="https://www.facebook.com/WatchOutTW" target="_blank"></a>
+          <a className={styles.watchoutLogo} href="https://www.facebook.com/WatchOutTW" target="_blank"></a>
         </div>
     );
   }
