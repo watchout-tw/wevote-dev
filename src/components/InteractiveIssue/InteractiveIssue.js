@@ -341,6 +341,7 @@ export default class InteractiveIssue extends Component {
 
       const { collaborators } = currentIssue;
       let collaboratorItems = collaborators.map((ngo, index)=>{
+          let last = (index === collaborators.length -1);
           return (
             <span key={index}>
                 <a className={`${styles.ia} ${styles.bright}`}
