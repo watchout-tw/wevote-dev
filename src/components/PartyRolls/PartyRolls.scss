@@ -197,7 +197,7 @@ $rollExtraWideBreak: 1200px;
 
 .mobileMenuButton {
  	position: fixed;
-    bottom: 50px;
+    bottom: 40px;
     right: 20px;
     width: 60px;
     height: 60px;
@@ -249,19 +249,19 @@ $rollExtraWideBreak: 1200px;
 	width: 100%;
 	margin: 0 auto;
 
-    height: 100vh;
-    max-height: 2000px;
-    top: 0;
-    position: fixed;
-    padding-top: 120px;
-    z-index: 200;
-    background: rgba(0,0,0,0.82);
+  height: 100vh;
+  max-height: 2000px;
+  top: 0;
+  position: fixed;
+
+  z-index: 200;
+  background: rgba(0,0,0,0.82);
 }
 .closeMenu {
 	cursor: pointer;
 	font-size: 30px;
 	padding-top: 10px;
-    display: none;
+  display: none;
 }
 .pbWrap.show .closeMenu {
 	display: block;
@@ -270,10 +270,10 @@ $rollExtraWideBreak: 1200px;
 	.toggleMenu { display: none; }
 	.partyMenuBlock {
 		position: fixed;
-    	width: 100%;
-  		margin: 0 auto;
-  		overflow: visible;
-  		top: 20vw;
+  	width: 100%;
+		margin: 0 auto;
+		overflow: visible;
+		top: 20vw;
 		left: 0;
 	}
 	.partyMenuBlock.notFixed {
@@ -290,17 +290,27 @@ $rollExtraWideBreak: 1200px;
 	}
 }
 .billboard {
-	width: 80%;
-	max-width: 360px;
 	margin: 0 auto;
+	width: 100%;
 	text-align: center;
 	z-index: 10;
+
+	&:first-child {
+		margin-top: 12vh;
+	}
+}
+@media all and (min-width: 321px) {
+	.billboard {
+		width: 80%;
+		max-width: 300px;
+	}
 }
 @media all and (min-width: $rollLargeBreak) {
 	.billboard {
 		position: absolute;
 		width: 25%;
 		max-width: 300px;
+		margin-top: 20px !important;
 
 		&.left {
 			left: 0;
