@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import DocumentMeta from 'react-document-meta';
 
 import PartyBills from '../../components/PartyBills/PartyBills';
+import Social from '../../components/Social/Social.js';
 
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 import getPartiesTableData from '../../utils/getPartiesTableData';
@@ -193,6 +194,7 @@ export default class PartiesTable extends Component {
                 </div>
               </div>
               <PartyBills showTitle={true}/>
+              <Social />
           </div>
           <div className={styles.bgHolder}></div>
       </div>
