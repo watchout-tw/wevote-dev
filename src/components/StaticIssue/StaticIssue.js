@@ -136,9 +136,12 @@ export default class StaticIssue extends Component {
                              setCurrentView={setCurrentView} />
                 <Social />
                 <div className={styles.collaboratorInfo}>本議題特別感謝{collaboratorItems}的協助</div>
-                <Missions issues={issues}
-                          skipIssue={currentIssueName}
-                          showComingMission={false}/>
+                <Missions skipIssue={currentIssueName}
+                          showComingMission={false}
+                          shipmentsType={"2"}/>
+                <Missions skipIssue={currentIssueName}
+                          showComingMission={false}
+                          shipmentsType={"1"}/>          
              </div>
         </div>
       )

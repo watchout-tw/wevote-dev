@@ -360,9 +360,12 @@ export default class InteractiveIssue extends Component {
                 <div>{currentIssue.title}之城任務完成了！</div>
                 <div>選擇其他任務吧！</div>
             </div>
-            <Missions issues={issues}
-                      skipIssue={currentIssueName}
-                      showComingMission={false}/>
+            <Missions skipIssue={currentIssueName}
+                          showComingMission={false}
+                          shipmentsType={"2"}/>
+                <Missions skipIssue={currentIssueName}
+                          showComingMission={false}
+                          shipmentsType={"1"}/>   
         </div>
       ):"";
 
