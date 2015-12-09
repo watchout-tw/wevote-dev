@@ -17,6 +17,7 @@ import PeopleIssue from 'views/PeopleIssue/PeopleIssue.js';
 
 import PartyList from 'views/PartyList/PartyList.js';
 import Parties from 'views/Parties/Parties.js';
+import PartiesGame from 'views/PartiesGame/PartiesGame.js';
 import PartiesTable from 'views/PartiesTable/PartiesTable.js';
 import Party from 'views/Party/Party.js';
 import PartyIssue from 'views/PartyIssue/PartyIssue.js';
@@ -68,6 +69,8 @@ export default function(store) {
             
             <Route path="/parties/" component={Parties}/>
             <Route path="/parties/index.html" component={Parties}/>
+            <Route path="/parties-game/" component={PartiesGame}/>
+            <Route path="/parties-game/index.html" component={PartiesGame}/>
             <Route path="/parties-table/" component={PartiesTable}/>
             <Route path="/parties-table/index.html" component={PartiesTable}/>
             

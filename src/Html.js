@@ -62,7 +62,6 @@ export default class Html extends Component {
           {DocumentMeta.renderAsReact()}
 
           <link rel="shortcut icon" href="/favicon.ico" />
-          <script async src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>
@@ -72,6 +71,8 @@ export default class Html extends Component {
 
           {/* shareaholic */}
           <script async type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false'></script>
+          {/* justfont */}
+          <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
 
         </head>
         <body>
