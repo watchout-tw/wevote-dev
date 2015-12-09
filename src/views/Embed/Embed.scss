@@ -10,9 +10,14 @@
 	background-size: cover;
 }
 .wrap.parties {
-	background-image: url('../images/parties-web.jpg');
-	background-position: center center;
+	background-image: url('../images/parties-embed.jpg');
+	background-position: center 160px;
 	background-size: cover;
+}
+@media all and (min-width: 500px){
+	.wrap.parties {
+		background-position: center top;
+	}
 }
 /* 不同 tab 的內容 */
 .contentWrap {

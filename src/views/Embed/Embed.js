@@ -71,7 +71,8 @@ export default class Embed extends Component {
       <div className={`${styles.wrap} ${styles[view]}`}>
           <div className={`${styles.contentWrap}`}>
                 <div className={styles.embedSection}>
-                    <img src={embedLogo} className={styles.embedImg}/>
+                    <a href='//wevote.tw'
+                       target='_blank'><img src={embedLogo} className={styles.embedImg}/></a>
                     <nav className={styles.navWrap}>
                           {viewItems}
                     </nav>
