@@ -7,12 +7,11 @@ import cht2eng from '../../utils/cht2eng';
 
 @connect(
     state => ({
-      legislators: state.legislators,
-      candidates: state.candidates
-
+        legislators: state.legislators,
+        candidates: state.candidates,
+        people: state.people
     }),
     dispatch => bindActionCreators({}, dispatch))
-
 
 export default class PeoplePhoto extends Component {
   static propTypes = {
@@ -24,12 +23,21 @@ export default class PeoplePhoto extends Component {
   render () {
 
     const styles = require('./PeoplePhoto.scss');
-    const {legislators, candidates, id} = this.props;
-    let people = legislators[id];//candidate 之後再處理
-   
-    let {name} = people;
-    let partyIndex = people.parties.length - 1;//選取最新的政黨
-    let party = cht2eng(people.parties[partyIndex].partyCht);
+    const {legislators, candidates, people, id} = this.props;
+    let currentPeople = people[id];
+    let {name} = currentPeople;
+
+    //party: 如果是候選人，優先選擇參選代表政黨
+    let party;
+    if(candidates[id]){
+        party = candidates[id].party;
+    }else{
+        // 否則選擇目前在立法院代表的政黨
+        let legislatorData = legislators[id];
+        let partyIndex = legislatorData.parties.length - 1;//選取最新的政黨
+        party = cht2eng(legislatorData.parties[partyIndex].partyCht);
+    }
+  
     let imgURL;
 
     try {

@@ -50,6 +50,7 @@ export default class Appbar extends Component {
   componentDidMount(){
     this._mountCheck("issues");
     this._mountCheck("parties");
+    this._mountCheck("constituencies");
     this._mountCheck("about");
 
   }
@@ -73,8 +74,9 @@ export default class Appbar extends Component {
     let showStyle = (showMenu) ? styles.showMenu : "";
 
     let issuesActive = (location === "issues") ? styles.active : "";
-    let constituenciesActive = (location === "constituencies") ? styles.active : "";
     let partiesActive = (location.indexOf("parties")!==-1) ? styles.active : "";
+    let constituenciesActive = (location === "constituencies") ? styles.active : "";
+    
     let aboutActive = (location === "about") ? styles.active : "";
 
     let symbol_issues = require('./images/symbols_issues.svg');
@@ -114,11 +116,13 @@ export default class Appbar extends Component {
                 </li>
 
 
-                <li >
-                    <div className={`${styles.navItem} ${constituenciesActive} ${styles.lockedNav}`}>
+                <li onClick={this._updateLocation.bind(this,'constituencies')}>
+                    <Link className={`${styles.navItem} ${constituenciesActive}`}
+                          to={`/constituencies/`}
+                          onClick={this._hideMenu.bind(this)}>
                         <img src={symbol_constituencies} className={styles.symbol}/>
                         <span>勇者競技場</span>
-                    </div>
+                    </Link>
                 </li>
 
                 <li onClick={this._updateLocation.bind(this,'about')}>

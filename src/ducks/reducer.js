@@ -8,7 +8,7 @@ import MaXiRecords from './MaXiRecords';
 import FAQ from './FAQ';
 
 import candidates from './candidates';
-import candidateDynamicData from './candidateDynamicData';
+import people from './people';
 
 import partyBlock from './partyBlock';
 import partyPromises from './partyPromises';
@@ -24,11 +24,12 @@ export default combineReducers({
   FAQ,
   
   candidates,
-  candidateDynamicData,
 
   partyBlock,
   partyPromises,
 
-  processingState
+  processingState,
+
+  people
 
 });

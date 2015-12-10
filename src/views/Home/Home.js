@@ -75,16 +75,14 @@ export default class Home extends Component {
                   <img src={stargate} className={styles.glow}/>
                   <div className={styles.label}><img src={symbols_parties} className={styles.icon}/><p className={styles.title}>黨團衝突戰</p></div>
                 </Link>
-                <div className={`${styles.stargate} ${styles.locked}`}>
+                <Link className={styles.stargate} to={`/constituencies/`}>
                   <img src={coliseum} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
                   <img src={lock} className={styles.lock}/>
                   <div className={styles.label}><img src={symbols_constituencies} className={styles.icon}/><p className={styles.title}>勇者競技場</p></div>
-                </div>
+                </Link>
               </div>
 
-              <Link className={styles.tempLink} to={`/issues/`}>議題攻城戰</Link>
-              <Link className={styles.tempLink} to={`/parties/`}>黨團衝突戰</Link>
               <div className={styles.tempLink}>勇者競技場<br/>(12/10 啟動)</div>
 
           </div>

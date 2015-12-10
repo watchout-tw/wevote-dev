@@ -15,7 +15,8 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
                  legislators: state.legislators,
                  candidates: state.candidates,
                  records: state.records,
-                 issues: state.issues
+                 issues: state.issues,
+                 people: state.people
                }),
     dispatch => bindActionCreators({}, dispatch))
 
@@ -35,13 +36,8 @@ export default class People extends Component {
     const styles = require('./People.scss');
     
     const id = this.props.params.peopleId;
-    const {legislators, candidates} = this.props;
-    let name;
-    if(legislators[id]){
-      name = legislators[id].name;
-    }else{
-      name = candidates[id].name;
-    }
+    const {people} = this.props;
+    let name = people[id].name;
     
     const {legislatorPositions} = this.state;
     const currentLegislatorPosition = legislatorPositions[name];

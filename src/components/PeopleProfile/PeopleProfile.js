@@ -10,7 +10,8 @@ import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 @connect(
     state => ({
       legislators: state.legislators,
-      candidates: state.candidates
+      candidates: state.candidates,
+      people: state.people
     }),
     dispatch => bindActionCreators({}, dispatch))
 
@@ -20,31 +21,52 @@ export default class PeopleProfile extends Component {
     legislators: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired
   }
-
+  
   render () {
     const styles = require('./PeopleProfile.scss');
 
-    const {legislators, candidates, id} = this.props;
-    const people = legislators[id] || candidates[id];
-
-    let {name, parties, gender, age, constituency1, constituency2,
-         isCandidate, candidateConstituency1, candidateConstituency2, hasResigned} = people;
-
-    let info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateConstituency1, candidateConstituency2);
-    let partiesItem = (parties || []).map((p,index)=>{
-        let partyEng = cht2eng(p.partyCht);
-        return (
-          <div key={index}>
-              <div className={styles.partyEng}>
-                <div className={`${styles.partyFlag} ${styles.small} ${styles[partyEng]}`}></div>
-                <Link to={`/parties/${partyEng}/records/`} className={`${styles.partyTitle} ${styles.ia} ${styles.black}`}>{p.partyCht}</Link>
+    const {legislators, candidates, people, id} = this.props;
+    const peopleData = people[id];
+    const legislatorData = legislators[id];
+    const candidateData = candidates[id];
+    let {name, age} = peopleData;
+    let isCandidate = legislatorData || false;
+    let parties, constituency1, constituency2, hasResigned;
+    let candidateDistrict1, candidateDistrict2;
+    
+    if(legislatorData){
+        parties = legislatorData.parties;
+        constituency1 = legislatorData.constituency1;
+        constituency2 = legislatorData.constituency2;
+        hasResigned = legislatorData.hasResigned;
+    }
+    if(candidateData){
+      candidateDistrict1 = candidateData.districtArea;
+      candidateDistrict2 = candidateData.districtNo;
+    }
+    /* maybe move to contructor later */
+    let info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateDistrict1, candidateDistrict2);
+        
+    let partiesItem;
+    if(parties){
+        partiesItem = (parties).map((p,index)=>{
+            let partyEng = cht2eng(p.partyCht);
+            return (
+              <div key={index}>
+                  <div className={styles.partyEng}>
+                    <div className={`${styles.partyFlag} ${styles.small} ${styles[partyEng]}`}></div>
+                    <Link to={`/parties/${partyEng}/records/`} className={`${styles.partyTitle} ${styles.ia} ${styles.black}`}>{p.partyCht}</Link>
+                  </div>
+                  <div className={styles.partyPeriod}>{`（${p.startDate}-${p.endDate}）`}</div>
               </div>
-              <div className={styles.partyPeriod}>{`（${p.startDate}-${p.endDate}）`}</div>
-          </div>
-        )
-    })
+            )
+        })
+    }
     let hasResignedText = (hasResigned===true) ? "已離職" : "";
-    //<p>{info.candidateTitle}</p>
+    
+    //needs to refine
+    let ageItem = (info.ageText) ? <p>{info.ageText}</p> : "";
+    let legInfoItem = (info.legislatorTitle) ? <p>{info.legislatorTitle}</p> : "";
     
     return (
       <div className={styles.wrap}>
@@ -57,8 +79,8 @@ export default class PeopleProfile extends Component {
                
               </div>
               <div className={styles.peopleDetail}>
-                <p>{info.ageText}</p>
-                <p>{info.legislatorTitle}</p>
+                {ageItem}
+                {legInfoItem}
                 <div>{partiesItem}</div>
                 <p>{hasResignedText}</p>
                 

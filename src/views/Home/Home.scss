@@ -1,20 +1,7 @@
 @import '../../common.scss';
 $break: 960px;
-
 .innerWrap {
-  //padding: 20vh 0;
   text-align: center;
-}
-.tempLink, .tempLink:visited {
-  text-decoration: none;
-  border: 1px solid;
-  display: inline-block;
-  color: black;
-  padding: 30px 20px;
-  margin: 10px;
-  height: 100px;
-  vertical-align: top;
-  display: none;
 }
 /* ------------- */
 .home {

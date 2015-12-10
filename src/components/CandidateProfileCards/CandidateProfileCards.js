@@ -7,57 +7,56 @@ import {load} from '../../ducks/candidateDynamicData.js';
 
 import people_name2id from '../../utils/people_name2id';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
-import parseDynamicData from '../../utils/parseDynamicData';
-
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 
 @connect(
     state => ({
-      candidateDynamicData: state.candidateDynamicData.data,
       candidates: state.candidates
     }),
-    dispatch => bindActionCreators({load}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class CandidateProfileCards extends Component {
-  static propTypes = {
-  }
   constructor(props){ super(props)
-    this.state = {
-      candidateDynamicLoad: ""
-    }
-  }
-  componentWillMount(){
-    this.props.load();
-  }
-  componentWillReceiveProps(nextProps){
-    if(nextProps.candidateDynamicData){
-      this.setState({
-        candidateDynamicLoad: parseDynamicData(nextProps.candidateDynamicData.value)
-      })
-    }
-  }
-  
-  render() {
-    const styles = require("./CandidateProfileCards.scss")
-    const {candidates, area, areaNo} = this.props;
-    const {candidateDynamicLoad} = this.state;
-    
-    let candidateList = getDistrictCandidates(candidates, area, areaNo);
-    let candidateCardItems = candidateList.map((value, index)=>{
-        let goals;
-        if(candidateDynamicLoad[value.name])
-            goals = candidateDynamicLoad[value.name].goals
+    const {candidates, area, areaNo} = props;
+    let hasReplyList = [];
+    let otherList = [];
 
-        return <Card candidates={candidates} 
-                     id={value.id}
-                     goals={goals}
-                     key={`candiate-card-${index}`} />
+    //might be refine later
+    let candidateList = getDistrictCandidates(candidates, area, areaNo);
+    (candidateList || []).map((value, index)=>{
+        hasReplyList.push(value);
+        // if(value.hasReply){
+        //     hasReplyList.push(value);
+        // }else{
+        //     otherList.push(value);
+        // }
     })
 
+    this.state = {
+        hasReplyList: hasReplyList,
+        otherList: otherList
+    }
+
+  }
+ 
+  render() {
+    const styles = require("./CandidateProfileCards.scss")
+    const {hasReplyList, otherList} = this.state;
+
+    let candidateCardItems = (hasReplyList || []).map((value, index)=>{
+        return <Card id={value.id}
+                     key={`candiate-card-${index}`} 
+                     people={value}/>
+    })
+
+    let otherItems = (otherList || []).map((value, index)=>{
+        return <Simple people={value}/>
+    })
 
     return (
         <div className={styles.wrap}>
             <div className={styles.cardItems}>{candidateCardItems}</div>
+            <div className={styles.simpleItems}>{otherItems}</div>
         </div>
     );
   }
@@ -66,28 +65,63 @@ export default class CandidateProfileCards extends Component {
 class Card extends Component {
   render() {
     const styles = require("./CandidateProfileCards.scss")
-    const {id, candidates, goals} = this.props;
-    const people = candidates[id];
+    const {people} = this.props;
     if(!people) return <div></div>
 
-    let goalItems = (goals||[]).map((value, index)=>{
+    let billItems = (people.bills||[]).map((value, index)=>{
         return (
-            <li key={`${id}-${index}`}>{value.goal}</li>
+            <li key={`${people.id}-${index}`}>{value.goal}</li>
         )
     })
+    let billSection;
+    if(people.bill){
+      billSection = (
+        <div className={styles.billSection}>
+            <ul className={styles.billList}>{billItems}</ul>        
+        </div>
+      )
+    }else{
+      let text = (people.contactAvaliable === true) ? "尚未回覆" : "無公開聯絡資訊";
+      billSection = (
+        <div className={`${styles.billSection} ${styles.noReply}`}>
+            {text}  
+        </div>
+      )
+
+    }
 
     return (
-        <div className={`${styles.cardItem} ${styles.reflectBelow}`}>
+        <Link to={`/people/${people.id}/records/`}
+              className={`${styles.cardItem}`}>
+            <div className={styles.partyItem}>
+                <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+            </div>
+            <div className={styles.name}>{people.name}</div>
+            <div className={styles.peoplePhoto}><PeoplePhoto id={people.id}/></div>
+            {billSection}
+        </Link>
+    );
+  }
+
+}
+/* might be removed later */
+class Simple extends Component {
+  render() {
+    const styles = require("./CandidateProfileCards.scss")
+    const {people} = this.props;
+    let contactNotAvail;
+    if(people.contactAvaliable === false){
+        contactNotAvail = <div>失聯中</div>
+    }
+    return (
+        <Link to={`/people/${people.id}/records/`}
+              className={`${styles.simpleItem}`}>
             <div className={styles.partyItem}>
               <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
             </div>
             <div className={styles.name}>{people.name}</div>
-            <div className={styles.peoplePhoto}><PeoplePhoto id={id}/></div>
-            <div className={styles.goalSection}>
-                <div className={styles.goalTitle}>戰鬥目標</div>
-                <ul className={styles.goalList}>{goalItems}</ul>
-            </div>
-        </div>
+            {contactNotAvail}
+        </Link>
     );
   }
 

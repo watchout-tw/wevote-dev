@@ -32,8 +32,6 @@ export default function cht_to_eng(cht){
                 return 'TIP';
             case '信心希望聯盟':
                 return 'FHL';
-            case '中華民國機車黨':
-                return 'MPR'
             case '自由台灣黨':
                 return 'FTP'
             case '和平鴿聯盟黨':
@@ -44,6 +42,27 @@ export default function cht_to_eng(cht){
                 return 'CHTY';
             case '健保免費連線':
                 return 'NHSA';
+
+            case '台灣工黨':
+                return 'TLP';
+            case '泛盟黨':
+                return 'PEUP';
+            case '人民民主陣線':
+                return 'PDF';
+            case '社會福利黨':
+                return 'SWP';
+            case '勞工黨':
+                return 'LP';
+            case '台灣第一民族黨':
+                return 'TFNP';
+            case '台灣未來黨':
+                return 'TWP';
+            case '正黨':
+                return 'JP';
+            case '中國生產黨':
+                return 'CPP';
+            case '中華民國機車黨':
+                return 'MPR';
 
     		case '無黨':
     			return 'NONE';
