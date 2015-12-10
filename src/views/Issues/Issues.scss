@@ -11,7 +11,7 @@ $breakLarge: 800px;
   bottom: 0px;
   top: 0px;
   position: fixed;
-  background-image: url('./images/bg-mobile.jpg');
+  background-image: url('../images/issues-mobile.jpg');
   background-size: cover;
   transform: translateZ(0);
   pointer-events: none;
@@ -21,7 +21,7 @@ $breakLarge: 800px;
   .home { 
   }
   .bgHolder {
-    background-image: url('./images/bg-web.jpg');  
+    background-image: url('../images/issues-web.jpg');  
   }
 }
 .contentWrap {
