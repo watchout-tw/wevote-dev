@@ -64,8 +64,8 @@ export default function(store) {
             
             <Route path="/8th-legislators" component={LegislatorList}/>
             
-            <Route path="/people/:peopleId/records/" component={People}/>
-            <Route path="/people/:peopleId/records/index.html" component={People}/>
+            <Route path="/people/:peopleId/:category/" component={People}/>
+            <Route path="/people/:peopleId/:category/index.html" component={People}/>
             <Route path="/people/:peopleId/records/:issueName" component={PeopleIssue}/>
             
             <Route path="/parties/" component={Parties}/>

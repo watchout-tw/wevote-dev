@@ -111,7 +111,7 @@ export default class PositionTable extends Component {
 
       if(unit === "parties"){
           let hasRecords = ["KMT","DPP","PFP","TSU","NSU"];
-          if(hasRecords.indexOf(party)!==-1){
+          if(hasRecords.indexOf(unitId)!==-1){
             return "records";
           }else{
             return "promises";
