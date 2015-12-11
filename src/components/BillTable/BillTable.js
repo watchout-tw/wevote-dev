@@ -13,18 +13,32 @@ import eng2url from '../../utils/eng2url';
     state => ({
       records: state.records,
       issues: state.issues,
-      partyPromises: state.partyPromises
+      partyPromises: state.partyPromises,
+      candidates: state.candidates,
+      dataMeta: state.dataMeta
     }),
     dispatch => bindActionCreators({}, dispatch))
 
-export default class PartyBills extends Component {
+export default class BillTable extends Component {
   static propTypes = {
   }
   constructor(props){ super(props)
       //calculate party positions
-      const {records, issues, partyPromises} = props;
-      let partyPositions = parseToPartyPosition(records, issues);
-      let tableData = getPartiesTableData(partyPositions, partyPromises);
+      const {records, issues, partyPromises, candidates, unit} = props;
+      let tableData;
+
+      if(unit === "parties"){
+        let partyPositions = parseToPartyPosition(records, issues);
+        tableData = getPartiesTableData(partyPositions, partyPromises);
+      
+      }else{//unit === "people"
+
+      }
+
+      console.log("=== BillTable Contructor ===");
+      console.log("unit:"+unit);
+      console.log(tableData);
+
       this.state = {
         tableData: tableData,
         focus: ""
@@ -35,6 +49,7 @@ export default class PartyBills extends Component {
 
       let billNode = document.getElementById("billTitle");
       if(!billNode) return;
+      
       let billRect = billNode.getBoundingClientRect();
 
       let billEndNode = document.getElementById("billEnd");
@@ -45,31 +60,28 @@ export default class PartyBills extends Component {
       if(billRect.top < 0 && billEndRect.top > 100){
         current = "bill";
       }
-     
+   
       //console.log(billRect.top + "," + billEndRect.top + "," + current)
 
       if(current){ 
-        if(focus !== current){
-            this.setState({
-              focus: current
-            })
-        }
+          if(focus !== current){
+              this.setState({
+                focus: current
+              })
+          }
       }
       if(billRect.top > 0 && focus === "bill"){
-        if(focus !== current){
-            this.setState({
-              focus: ""
-            })
-        }
+          if(focus !== current){
+              this.setState({
+                focus: ""
+              })
+          }
       }
       if(billEndRect.top < 50 && focus === "bill"){
-        this.setState({
-            focus: "after"
-        })
-        
-        
+          this.setState({
+              focus: "after"
+          })  
       }
-
 
   }
   componentDidMount(){
@@ -79,11 +91,12 @@ export default class PartyBills extends Component {
      window.removeEventListener("scroll", this._onScroll.bind(this));
   }
   render() {
-    const styles = require('./PartyBills.scss');
-    const {issues, showTitle} = this.props;
+    const styles = require('./BillTable.scss');
+    const {issues, dataMeta,
+           showTitle, outerLink, unit} = this.props;
+    
     const {tableData, focus} = this.state;
-    const {outerLink} = this.props;
-
+   
     let noReplyImg = require('./images/answers_unknown.svg');
     let externalIconImg = require('../../images/icon_external_link_gray.svg');
     
@@ -91,16 +104,22 @@ export default class PartyBills extends Component {
                                            className={styles.exLink}/> : "";
 
 
-    let partyBills = Object.keys(tableData).map((partyId, i)=>{
-        let party = tableData[partyId];
+    let unitBills = Object.keys(tableData).map((unitId, i)=>{
+        let unit = tableData[unitId];
 
-        //政黨名稱
-        let partyName = (
-            <div className={styles.partyName}>
+        let party;
+        //如果是政黨
+        party = tableData[unitId];
+        //候選人 todo
+        //..........
+
+        //政黨名稱 or 候選人名稱
+        let unitName = (
+            <div className={styles.unitName}>
                 <div className={styles.nameFlex}>
-                    <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[party.id]}`}></div>
-                    <div className={`${styles.partyTitle}`}>
-                        <div className={styles.partyTitleText}>{party.name}</div>{outerLinkItem}
+                    <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unit.id]}`}></div>
+                    <div className={`${styles.unitTitle}`}>
+                        <div className={styles.unitTitleText}>{unit.name}</div>{outerLinkItem}
                     </div>
                 </div>
             </div>
@@ -129,18 +148,18 @@ export default class PartyBills extends Component {
 
         if(outerLink){
             return (
-                <a href={`/parties/${party.id}/promises/`}
-                   className={styles.partyEntry}
+                <a href={`/${unit}/${unit.id}/promises/`}
+                   className={styles.unitEntry}
                    target="_blank">
-                     {partyName}{bills}
+                     {unitName}{bills}
                 </a>
             )
 
         }else{
             return (
-                <Link to={`/parties/${party.id}/promises/`}
-                      className={styles.partyEntry}>
-                     {partyName}{bills}
+                <Link to={`/${unit}/${unit.id}/promises/`}
+                      className={styles.unitEntry}>
+                     {unitName}{bills}
                 </Link>
             )
         }
@@ -159,18 +178,18 @@ export default class PartyBills extends Component {
     return (
       <div className={styles.wrap}>
           {title}
-          <div className={styles.partyBillTable} id="billTitle">
+          <div className={styles.billTable} id="billTitle">
               <div className={fixedClasses}>
                   <div className={styles.billTitles}>
-                      <div className={styles.partyName}></div>
+                      <div className={styles.unitName}></div>
                       <div className={styles.billTitle}>法案一</div>
                       <div className={styles.billTitle}>法案二</div>
                       <div className={styles.billTitle}>法案三</div>
                   </div>
               </div>
 
-              {partyBills}
-              <div className={styles.billMeta}>截至網站更新前（12月7日），已有自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯回覆，我們歡迎每個政黨進行表態承諾的回覆。</div>
+              {unitBills}
+              <div className={styles.billMeta}>{dataMeta[unit]}</div>
               <div id="billEnd"></div>
           </div>
       </div>

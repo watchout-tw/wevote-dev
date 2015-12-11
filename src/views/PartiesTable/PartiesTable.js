@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import classnames from 'classnames';
 import DocumentMeta from 'react-document-meta';
 
-import PartyBills from '../../components/PartyBills/PartyBills';
+import BillTable from '../../components/BillTable/BillTable';
 import Social from '../../components/Social/Social.js';
 
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
@@ -193,7 +193,7 @@ export default class PartiesTable extends Component {
                   <img src={legendPromise}/>
                 </div>
               </div>
-              <PartyBills showTitle={true}/>
+              <BillTable showTitle={true} unit="parties"/>
               <Social />
           </div>
           <div className={styles.bgHolder}></div>

@@ -13,6 +13,8 @@ import people from './people';
 import partyBlock from './partyBlock';
 import partyPromises from './partyPromises';
 
+import dataMeta from './dataMeta';
+
 import processingState from './processingState';
 
 export default combineReducers({
@@ -30,6 +32,7 @@ export default combineReducers({
 
   processingState,
 
-  people
+  people,
+  dataMeta
 
 });
