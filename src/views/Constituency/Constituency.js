@@ -28,6 +28,8 @@ export default class Constituency extends Component {
               <div className={styles.areaFlag}>
                   <div>{district2cht(area)}</div>
                   {noItem}
+                  <Link to={`/constituencies/`} 
+                        className={styles.flagMeta}>看其他選區</Link>
               </div>
               <CandidateProfileCards area={area}
                                      areaNo={areaNo}/>

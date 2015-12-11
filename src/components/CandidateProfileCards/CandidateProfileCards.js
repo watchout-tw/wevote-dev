@@ -74,7 +74,7 @@ class Card extends Component {
         )
     })
     let billSection;
-    if(people.bill){
+    if(people.bills[0].goal){
       billSection = (
         <div className={styles.billSection}>
             <ul className={styles.billList}>{billItems}</ul>        

@@ -9,8 +9,8 @@
 }
 .cardItem, .cardItem:visited {
 	display: inline-block;
-	border: 1px solid;
-    margin: 30px 8px;
+    vertical-align: top;
+	margin: 30px 8px;
     width: 200px;
     height: 280px;
     background-image: url(./images/card.png);
@@ -19,7 +19,6 @@
     position: relative;
     
     text-decoration: none;
-    border: none;
     color: $black;
 
     box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.5);
