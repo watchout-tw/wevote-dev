@@ -30,7 +30,7 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
                  records: state.records,
                  issues: state.issues,
                  parties: state.parties,
-                 partyPromises: stat.partyPromises
+                 partyPromises: state.partyPromises
                }),
     dispatch => bindActionCreators({}, dispatch))
 

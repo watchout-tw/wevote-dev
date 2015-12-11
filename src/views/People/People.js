@@ -111,8 +111,8 @@ export default class People extends Component {
             {content}
           </div>
           <div className={styles.bottomWrap}>
-            <h2>看同選區其他立委</h2>
-            非參選人怎麼辦？
+            <h2>看-臺北市第1選區-的立委參選人</h2>
+            
           </div>
       </div>
     );
