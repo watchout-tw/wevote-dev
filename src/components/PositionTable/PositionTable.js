@@ -10,6 +10,11 @@ import Social from '../../components/Social/Social.js';
 
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 import getPartiesTableData from '../../utils/getPartiesTableData';
+
+import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
+import getPeopleTableData from '../../utils/getPeopleTableData';
+
+
 import eng2url from '../../utils/eng2url';
 
 function countLevel(count){
@@ -32,7 +37,8 @@ function countLevel(count){
     state => ({
       records: state.records,
       issues: state.issues,
-      partyPromises: state.partyPromises
+      partyPromises: state.partyPromises,
+      legislators: state.legislators
     }),
     dispatch => bindActionCreators({}, dispatch))
 
@@ -40,8 +46,8 @@ export default class PositionTable extends Component {
   static propTypes = {
   }
   constructor(props){ super(props)
-      const {records, issues, partyPromises} = props;
-      const {unit} = props;
+      const {records, issues, partyPromises, legislators} = props;
+      const {unit, districtCandidates} = props;
       
       //calculate positions
       let tableData;
@@ -50,6 +56,8 @@ export default class PositionTable extends Component {
           tableData = getPartiesTableData(partyPositions, partyPromises);
 
       }else{//people
+          let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
+          tableData = getPeopleTableData(legislatorPositions, districtCandidates);
 
       }
       this.state = {
@@ -97,8 +105,10 @@ export default class PositionTable extends Component {
   componentWillUnmount(){
      window.removeEventListener("scroll", this._onScroll.bind(this));
   }
-  _recordsOrPromises(party){
+  _recordsOrPromises(unitId){
+      const {legislators} = this.props;
       const {unit} = this.props;
+
       if(unit === "parties"){
           let hasRecords = ["KMT","DPP","PFP","TSU","NSU"];
           if(hasRecords.indexOf(party)!==-1){
@@ -107,12 +117,16 @@ export default class PositionTable extends Component {
             return "promises";
           }
       }else{
-
+          if(legislators[unitId]){
+            return "records";
+          }else{
+            return "promises";
+          }
       }
   }
   render() {
     const styles = require('./PositionTable.scss');
-    const {issues} = this.props;
+    const {issues, unit} = this.props;
     const {tableData, focus} = this.state;
 
     let imgHub = {};
@@ -127,20 +141,20 @@ export default class PositionTable extends Component {
     })
     // 每一個政黨 or 候選人
     let unitPositions = Object.keys(tableData).map((unitId, i)=>{
-        let unit = tableData[unitId];
+        let unitItem = tableData[unitId];
         //政黨名稱 or 候選人姓名
         let unitName = (
           <div className={styles.unitName}>
             <div className={styles.nameFlex}>
-                <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unit.party]}`}></div>
-                <div className={`${styles.unitTitle}`}>{unit.name}</div>
+                <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitItem.party]}`}></div>
+                <div className={`${styles.unitTitle}`}>{unitItem.name}</div>
             </div>
           </div>
           );
 
         //表態
-        let positions = Object.keys(unit.positions).map((issueName, j)=>{
-            let pos = unit.positions[issueName];
+        let positions = Object.keys(unitItem.positions).map((issueName, j)=>{
+            let pos = unitItem.positions[issueName];
             let level = countLevel(pos.recordCount);
             let recordClasses = classnames({
               [styles.record] : true,
@@ -156,10 +170,10 @@ export default class PositionTable extends Component {
             )
         })
         
-        let linkChoice = this._recordsOrPromises.bind(this, unit.id);
+        let linkChoice = this._recordsOrPromises.bind(this, unitItem.id).call();
 
         return <Link className={styles.unitEntry}
-                     to={`/${unit}/${unit.id}/${linkChoice}/`}>{unitName}{positions}</Link>
+                     to={`/${unit}/${unitItem.id}/${linkChoice}/`}>{unitName}{positions}</Link>
     });
 
     let legendImg = require("./images/legend.png");

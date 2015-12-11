@@ -3,7 +3,10 @@ import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
+
+import PositionTable from '../../components/PositionTable/PositionTable';
 import BillTable from '../../components/BillTable/BillTable';
+import Social from '../../components/Social/Social.js';
 
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
 
@@ -22,8 +25,13 @@ export default class ConstituencyTable extends Component {
     const {area, areaNo} = this.props.params;
     const {districtCandidates} = this.state;
     return (
-      <div className={styles.wrap}>
-          <BillTable showTitle={true} unit="people" districtCandidates={districtCandidates}/>
+      <div>
+          <div className={styles.wrap}>
+              <PositionTable unit="people" districtCandidates={districtCandidates}/>
+              <BillTable showTitle={true} unit="people" districtCandidates={districtCandidates}/>
+              <Social />
+          </div>
+          <div className={styles.bgHolder}></div>
       </div>
     );
   }

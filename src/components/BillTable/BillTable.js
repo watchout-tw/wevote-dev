@@ -40,10 +40,6 @@ export default class BillTable extends Component {
         tableData = getPeopleTableData(legislatorPositions, districtCandidates);
       }
 
-      console.log("=== BillTable Contructor ===");
-      console.log("unit:"+unit);
-      console.log(tableData);
-
       this.state = {
         tableData: tableData,
         focus: ""

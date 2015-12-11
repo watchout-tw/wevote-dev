@@ -22,7 +22,7 @@ export default class Constituencies extends Component {
               <p className={styles.paragraph}>島嶼主人！請選出你想觀戰的競技場區域：</p>
               <DistrictSelector />
           </div>
-          
+          <div className={styles.bgHolder}></div>
       </div>
     );
   }
