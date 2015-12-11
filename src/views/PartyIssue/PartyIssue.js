@@ -59,11 +59,6 @@ export default class PartyIssue extends Component {
 
         let recordsCount = currentPartyPositions.positions[dataName].totalCounts;
 
-        /*return  <Link className={` ${styles.menu} ${active}`}
-                      to={`/parties/${id}/records/${currentIssueName}`}
-                      key={i}>
-                     {` ${issues[currentIssueName].title}(${recordsCount}) `}
-                </Link>;*/
         return  <div className={`${styles.menu} ${active}`}>
           <Link className={`${styles.ia} ${styles.black}`}
             to={`/parties/${id}/records/${currentIssueName}`}
