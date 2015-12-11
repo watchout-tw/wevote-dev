@@ -8,7 +8,10 @@ export default function cht2url(input){
         	return 'referendum';
       case '核能':
           return 'nuclear-power';
-      
+      case '課綱':
+          return 'course-guide';
+      case '司法改革':
+          return 'justice-reform';
       default:
       		return '<>找不到<>';
     }

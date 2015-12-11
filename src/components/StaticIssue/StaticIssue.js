@@ -116,10 +116,15 @@ export default class StaticIssue extends Component {
        // 協力 NGO
       const { collaborators } = currentIssue;
       let collaboratorItems = collaborators.map((ngo, index)=>{
-          return <a className={`${styles.ia} ${styles.bright}`}
-                    href={ngo.link}
-                    target="_blank"
-                    key={index}>{ngo.name}</a>
+          let last = (index === collaborators.length -1);
+          return (
+            <span key={index}>
+                <a className={`${styles.ia} ${styles.bright}`}
+                   href={ngo.link}
+                   target="_blank">{ngo.name}</a>
+                { (last===true) ? "":"、" }
+            </span>
+          )
       });
 
       return (
@@ -136,9 +141,12 @@ export default class StaticIssue extends Component {
                              setCurrentView={setCurrentView} />
                 <Social />
                 <div className={styles.collaboratorInfo}>本議題特別感謝{collaboratorItems}的協助</div>
-                <Missions issues={issues}
-                          skipIssue={currentIssueName}
-                          showComingMission={false}/>
+                <Missions skipIssue={currentIssueName}
+                          showComingMission={false}
+                          shipmentsType={"2"}/>
+                <Missions skipIssue={currentIssueName}
+                          showComingMission={false}
+                          shipmentsType={"1"}/>          
              </div>
         </div>
       )

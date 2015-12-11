@@ -45,6 +45,24 @@ export default class IssueArticle extends Component {
           mainContent = <NuclearPowerContent />
           break;
 
+        case 'courseGuide':
+          previewContent = (
+          <div>
+              <p>「阿草眉頭一皺，案情不單純，還在分析中」</p>
+              <p>coming soon...</p>
+          </div>
+          )
+          break;
+
+        case 'justiceReform':
+          previewContent = (
+          <div>
+              <p>「阿草眉頭一皺，案情不單純，還在分析中」</p>
+              <p>coming soon...</p>
+          </div>
+          )
+          break;
+
         default:
           break;
     }

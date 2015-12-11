@@ -41,19 +41,25 @@ export default class Issue extends Component {
           "marriage-equality" :false,
           "recall" : false,
           "referendum" : false,
-          "nuclear-power" : false
+          "nuclear-power" : false,
+          "course-guide" : false,
+          "justice-reform" : false
         },
         userPosition: {
           "marriage-equality" : "none",
           "recall" : "none",
           "referendum" : "none",
-          "nuclear-power" : "none"
+          "nuclear-power" : "none",
+          "course-guide" : "none",
+          "justice-reform" : "none"
         },
         localChecked: {
           "marriage-equality" :false,
           "recall" : false,
           "referendum" : false,
-          "nuclear-power" : false
+          "nuclear-power" : false,
+          "course-guide" : false,
+          "justice-reform" : false
         }
       }
   }
