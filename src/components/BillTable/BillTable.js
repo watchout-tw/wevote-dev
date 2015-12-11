@@ -6,6 +6,10 @@ import classnames from 'classnames';
 
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 import getPartiesTableData from '../../utils/getPartiesTableData';
+
+import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
+import getPeopleTableData from '../../utils/getPeopleTableData';
+
 import eng2url from '../../utils/eng2url';
 
 
@@ -14,7 +18,7 @@ import eng2url from '../../utils/eng2url';
       records: state.records,
       issues: state.issues,
       partyPromises: state.partyPromises,
-      candidates: state.candidates,
+      legislators: state.legislators,
       dataMeta: state.dataMeta
     }),
     dispatch => bindActionCreators({}, dispatch))
@@ -24,7 +28,7 @@ export default class BillTable extends Component {
   }
   constructor(props){ super(props)
       //calculate party positions
-      const {records, issues, partyPromises, candidates, unit} = props;
+      const {records, issues, partyPromises, districtCandidates, unit} = props;
       let tableData;
 
       if(unit === "parties"){
@@ -32,7 +36,8 @@ export default class BillTable extends Component {
         tableData = getPartiesTableData(partyPositions, partyPromises);
       
       }else{//unit === "people"
-
+        let legislatorPositions = parseToLegislatorPosition(props.records, props.issues, props.legislators);
+        tableData = getPeopleTableData(legislatorPositions, districtCandidates);
       }
 
       console.log("=== BillTable Contructor ===");
@@ -106,13 +111,8 @@ export default class BillTable extends Component {
 
     let unitBills = Object.keys(tableData).map((unitId, i)=>{
         let unit = tableData[unitId];
-
-        let party;
-        //如果是政黨
-        party = tableData[unitId];
-        //候選人 todo
-        //..........
-
+        let party = unit.party;
+        
         //政黨名稱 or 候選人名稱
         let unitName = (
             <div className={styles.unitName}>
@@ -127,7 +127,7 @@ export default class BillTable extends Component {
 
         //優先推動
 
-        let bills = party.bills.map((item, k)=>{
+        let bills = unit.bills.map((item, k)=>{
             let goalItem;
             if(item.goal){
               let text = item.goal.length > 6 ? `${item.goal.substring(0,6)}⋯` : item.goal;
