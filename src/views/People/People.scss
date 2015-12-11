@@ -4,3 +4,28 @@
 	position: relative;
 	text-align: center;
 }
+.innerWrap {
+  padding: 20px 0 100px 0;
+}
+.bottomWrap {
+  background: #DDD;
+    padding: 20px 0 150px 0;
+}
+.issueBlock, .issueBlock:visited {
+  display: block;
+  vertical-align: top;
+  padding: 20px;
+    color: $textColor;
+}
+.issueBlock:hover {
+  background: $lightGrey;
+}
+@media all and (min-width: 400px){
+  .innerWrap {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .issueBlock, .issueBlock:visited {
+    display: inline-block;
+  }
+}

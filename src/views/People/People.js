@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
+import Promises from '../../components/Promises/Promises.js';
 
 import eng2url from '../../utils/eng2url';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
@@ -69,7 +70,9 @@ export default class People extends Component {
       break;
 
       case 'promises':
-        content = <PartyPromises id={id} />
+        const {candidates} = this.props;
+        let promises = candidates[id];
+        content = <Promises id={id} promises={promises}/>
 
         title = `${currentPeople.name}對於議題與法案的未來承諾-沃草2016立委出任務`;
         description = `${currentPeople.name}的未來承諾大公開！趕快來看看${currentPeople.name}各項重大議題的戰鬥策略與優先法案的戰鬥目標！`;
