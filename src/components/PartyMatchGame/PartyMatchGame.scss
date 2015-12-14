@@ -205,7 +205,7 @@ $primaryColor: #16a085;
 }
 
 // a true spectrum
-$n: 4;
+$n: 6;
 @for $i from 1 through ($n*2+1) {
   .hue:nth-child(n+#{$i}) {
     $c: 255 - floor(255/($n*2+1))*($i - 1);
