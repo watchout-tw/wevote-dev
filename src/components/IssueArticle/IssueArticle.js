@@ -88,18 +88,13 @@ class MarriageEqualityContent extends Component {
     return (
       <div>
           <section>
-              <ul className={styles.customList}>
-                <li className={styles.myth}>民進黨就是支持婚姻平權，國民黨就是反對？</li>
-                <li className={styles.myth}>國民黨立委席次比較多，在立法院裡他們的聲音應該比較大吧？</li>
-                <li className={styles.myth}>看起來支持方的表態次數比反對方多，法案應該很容易通過吧？</li>
-              </ul>
-              <div>
-                  <p>你可能聽過婚姻平權，也可能聽過每年盛大的同志遊行，甚至看過新聞大篇幅報導今年6月美國邁向同性婚姻合法化的消息。那麼，在立法院內又是怎麼討論這個議題呢？</p>
-                  <p>讓阿草用數據破解你對於立法院的迷思！</p>
-              </div>
+              <h1>婚姻平權：沉默的立院</h1>
+              <p>從每年盛大的同志遊行，到今年6月美國同性婚姻合法化的消息，在在說明婚姻平權受到社會的矚目。不管你是否支持婚姻平權，都應該關心各政黨及立委對此議題的表態，因為明年116，你的一票將選出新的國會，也決定這個法案的未來。</p>
+              <p>過去四年，立法院是怎麼討論這個議題的？</p>
+              <p>就讓阿草用數據告訴你：事實可能跟你想的不一樣。</p>
           </section>
           <section>
-            <h1>迷思一：民進黨就是支持婚姻平權，國民黨就是反對？</h1>
+            <h1>民進黨就是支持婚姻平權，國民黨就是反對？</h1>
             <p>圖表中可以看到民進黨共有37筆表態紀錄，全都是支持，而國民黨則有9筆表態紀錄，以反對居多。這樣看起來標題的說法似乎沒錯？</p>
             <img className={styles.IssueArticleFigure} src={figure1} />
             <p>不過，民進黨其實只有28%的立委（即12位）曾經表態。更重要的是，婚姻平權法案交由司法法制委員會審查，屬於這個委員會的立委應該都有責任表態，但實際上
@@ -123,7 +118,7 @@ class MarriageEqualityContent extends Component {
           </section>
 
           <section>
-            <h1>迷思二：國民黨立委席次比較多，那在立法院裡他們的聲音應該比較大吧？</h1>
+            <h1>誰是沉默的多數？</h1>
             <p>在立法院中，立委總席次是國民黨65席：民進黨40席，就算只看司法法制委員會內的席次，長期以來都是國民黨9席，民進黨4席。可見國民黨有人數的絕對優勢，但是直接比較兩方發言討論這個議題的次數卻是國民黨9次：民進黨17次，顯然不成比例。也就是說，國民黨立委有著惜字如金的美德，或許他們不是想打混，只是想扮演好「沉默的多數」這個角色，但這樣的角色可能不太符合立委「為民喉舌」的形象。</p>
             <p>說到這裡，你可能會反駁：不對吧！明明新聞中常看到
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("賴士葆")}/records/marriage-equality`}>賴士葆</Link>、
@@ -142,7 +137,7 @@ class MarriageEqualityContent extends Component {
           </section>
 
           <section>
-            <h1>迷思三：看起來支持方的表態次數比反對方多，那法案應該很容易通過吧？</h1>
+            <h1>支持比反對多，法案卻無法通過？</h1>
             <p>
               由圖表來看，
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/marriage-equality`}>尤美女(8)</Link>
@@ -168,7 +163,8 @@ class MarriageEqualityContent extends Component {
           <section>
             <h1>結論</h1>
             <p>整體來說，雖然民進黨看起來是偏向支持婚姻平權，但表態紀錄高度集中在少數幾個立委身上（有趣的是，幾乎都是不分區立委），且也有許多不表態的立委，因此很難肯定下一屆民進黨立委的態度就是全面支持。國民黨雖然整體偏向反對，但其實表態的人數和次數都更少。其他小黨的立委，則幾乎未曾對這個議題發聲。</p>
-            <p>儘管這個議題近年來在社會上引起大規模討論，但各黨立委不表態的現象卻十分嚴重，這也導致在立法院中欠缺足夠的溝通對話。站在民主的角度，無論是支持或反對同性婚姻合法化的選民，都應該要求代表你意見的立委多在立法院裡明確表態，才能促進討論、真正解決問題。</p>
+            <p>儘管這個議題近年來在社會上引起大規模討論，但各黨立委不表態的現象卻十分嚴重，這說明了：「婚姻平權法案，真正的困境是沉默的立院。」</p>
+            <p>回到民主政治的本質，無論是支持或反對婚姻平權的選民，都應該要求代表你意見的立委多在立院內明確表態，才能藉由溝通討論凝聚共識，真正解決問題。而在投票前夕，理性負責的選民也應該基於這些真實的表態紀錄進行投票選擇，才能選出真正代表民意的新國會。</p>
           </section>
       </div>
     )
@@ -185,12 +181,14 @@ class ReferendumContent extends Component {
     return (
       <div>
           <section>
+              <h1>公投：「少數」反對卡住修法，能否期待新國會？</h1>
               <p>公民投票是人民直接行使權利的方式，向來被認為是民主國家的重要制度。台灣在2004年立法通過後，成為東亞第一個採行公投制度的國家。</p>
-              <p>每當有社會重大爭議時，不管朝野藍綠，都曾經提出以公投解決問題的想法，如軍購案公投、入聯公投、ECFA公投、核四公投等等，但全國公投從來沒有一次真正成功進行。</p>
-              <p>那麼，在台灣立法院內又是怎麼討論這個議題呢？讓阿草用數據告訴你立法院中公投法修法三大真相，誰說真相永遠只有一個？</p>
+              <p>每當有社會重大爭議時，不管朝野藍綠，都曾經提出以公投解決問題的想法，如軍購案公投、入聯公投、ECFA公投、核四公投等等，但全國公投從來沒有一次真正成功通過。不少人都指出問題在於高門檻，也因此有「鳥籠公投」的批評。</p>
+              <p>然而，立法院的修法進度仍然卡住，本屆立院已幾乎沒有機會通過。</p>
+              <p>就讓阿草用數據告訴你：在立法院內怎麼討論這個議題？修法為何卡住？如何從公投表態選擇新國會的立委？</p>
           </section>
           <section>
-              <h1>真相一：不只是藍綠對決，其實是朝野政黨大亂鬥</h1>
+              <h1>不只是藍綠對決，其實是朝野政黨大亂鬥</h1>
               <p>大家常常會以為立法院是藍綠對決，但在公投法的討論上，實際上是朝野政黨的大亂鬥。圖表顯示有表態紀錄的立委總共51人，包含：</p>
               <ul className={styles.customList}>
                 <li className={`${styles.partisan} ${styles.ruling}`}>國民黨13人</li>
@@ -207,7 +205,7 @@ class ReferendumContent extends Component {
           </section>
 
           <section>
-              <h1>真相二：國民黨模糊反對分不清，在野黨修法內容很分歧</h1>
+              <h1>國民黨模糊反對分不清，在野黨修法內容很分歧</h1>
               <ul className={styles.customList}>
                 <li className={`${styles.partyPosition} ${styles.DPP_aye}`}>
                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳其邁")}/records/referendum`}>陳其邁(7)</Link>、
@@ -248,7 +246,7 @@ class ReferendumContent extends Component {
           </section>
 
           <section>
-              <h1>真相三：修法的關鍵在於席次分布</h1>
+              <h1>修法關鍵在於席次分布，改革能否期待新國會？</h1>
               <p>從2012年，第八屆立委剛上任時開始，就有許多公投法的修法草案陸續提出，但在內政委員會的審查過程並不順利，一直到2015年4月（立法院第八屆立委第七會期）才順利初審通過，送入二讀協商討論中。</p>
               <p>延宕兩年多，其中的原因是什麼？我們分析了這七個會期中內政委員會的席次分布，發現以下狀況：</p>
               <img className={styles.IssueArticleFigure} src={figure3} />
@@ -282,12 +280,8 @@ class ReferendumContent extends Component {
               <p className={styles.editorialComment}>贊成反對數相同時，召委主席就可參與投票</p>
               <p>在這樣的背景下，國民黨對法案及議事的控制力最弱。2015年4月22日，公投法在內政委員會的審查，正是因為當天國民黨立委<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("鄭天財Sra·Kacaw")}/records/referendum`}>鄭天財Sra·Kacaw</Link>請假未出席，形成國民黨：在野黨席次比為6：7的局勢，最後國民黨立委集體退席，終於初審通過。</p>
               <p>雖然還未正式修法通過，但這個例子說明法案在立法院委員會審查中，最關鍵的因素是委員會的席次分布。各黨立委如何運用席次的變化，進行結盟和合作，就是成功推動修法的關鍵。</p>
-          </section>
-
-          <section>
-              <h1>結論</h1>
               <p>在野黨立委普遍非常關心公投法，修法過程也出現了在野黨團結對抗國民黨的現象。但在野黨立委的修法內容和程度也有分歧，民進黨和台聯接近，親民黨雖然偏向贊成，但在民進黨和國民黨之間擺盪。另一方面，國民黨立委大多數也不願明確表態，立場偏向模糊。這些表態紀錄正說明「公投門檻下修幾乎是共識，但修法進度卻十分緩慢」的結果。</p>
-              <p>公投法初審通過的關鍵，在於在野黨立委團結起來，利用委員會席次分布的變化，國民黨立委控制力最弱的時刻出擊。這是政黨及立委的策略，但對選民來說，這個例子說明的是：</p>
+              <p>然而，通過初審後的法案送入院會，此時國民黨的「黨意」不再模糊，而是明確地把法案拉下協商，至今仍無機會修法通過，只能寄望下一屆國會。但是新國會能否期待？民進黨立委在選後，若成為執政黨，是否還會維持推動修法的態度？關鍵還是在於人民是否能夠依據這些表態紀錄，選出真正重視這個議題的新國會。</p>
               <blockquote>
                 <p>如果你有關心的議題，請選出真正關心這些議題的立委，才能推動改革。</p>
                 <p>怎麼判斷哪些立委真正關心這些議題？答案是關注他們的表態紀錄。</p>
@@ -307,17 +301,18 @@ class RecallContent extends Component {
     return (
       <div>
           <section>
+              <h1>罷免：多少立委願意違反人性？</h1>
               <p>罷免權是人民收回當選官員權力的制度，美國光是2011年這一年當中，就舉行了150次罷免選舉，其中75位官員被罷免成功，9位官員自行辭職。但反觀台灣，針對立委提出的罷免，主要有三次，卻從來沒有成功過。</p>
               <ul>
                 <li>1994年，反核團體提出罷免擁核立委林志嘉、<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("洪秀柱")}/records/recall`}>洪秀柱</Link>、詹裕仁、韓國瑜、魏鏞等5人，最後未達投票門檻而失敗。</li>
                 <li>2013年，憲法133實踐聯盟提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/marriage-equality`}>吳育昇</Link>，最後未達連署門檻而失敗。</li>
                 <li>2015年，割闌尾計畫提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("蔡正元")}/records/recall`}>蔡正元</Link>，最後未達投票門檻而失敗。</li>
               </ul>
-              <p>在立法院第八屆任期期間（2012年─2015年），就發生了兩次對立委的罷免行動，罷免可說是攸關立委個人去留的議題。那麼，在立法院內是怎麼討論罷免呢？</p>
-              <p>讓阿草用數據告訴你立法院裡的修法真相！</p>
+              <p>在立法院第八屆任期期間（2012年~2015年），就發生了兩次對立委的罷免行動，罷免可說是攸關立委個人去留的議題。那麼，在立法院內是怎麼討論這個議題呢？</p>
+              <p>就讓阿草用數據告訴你：多少立委願意「違反人性」？</p>
           </section>
           <section>
-            <h1>真相一：藍綠正反對決，親民黨游移不表態</h1>
+            <h1>藍綠正反對決，親民黨游移不表態</h1>
             <p>憲法明定人民有選舉、罷免、創制、複決的權利，後兩者屬於公投議題，且公投和罷免的修法都分配到內政委員會中審查，因此近年來兩者經常被一起討論。</p>
             <p>但比較兩者在立法院內的紀錄，卻發現罷免的表態人數和次數顯然都較少，立委很明顯比較不願意討論罷免。即使有門檻下修的提案，大部分都卡在程序委員會，甚至連討論機會都沒有。這些現象可能說明的是：</p>
 
@@ -337,7 +332,7 @@ class RecallContent extends Component {
           </section>
 
           <section>
-            <h1>真相二：人性衝突，被罷免立委的真實反應？</h1>
+            <h1>人性衝突，被罷免立委的真實反應</h1>
             <p>由於立法院第八屆任期期間，民間提出許多罷免立委的行動，因此立院的表態紀錄也成為觀察立委人性衝突的最佳範本。經過分析整理，我們發現被罷免的立委有以下這幾種類型：</p>
 
             <h2>（一）訴苦型：<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("張慶忠")}/records/recall`}>張慶忠</Link>立委</h2>
@@ -375,7 +370,7 @@ class RecallContent extends Component {
             <img className={styles.IssueArticleFigure} src={figure3} />
             <p>幾位之前被提出罷免的立委，都在尋求連任中。在保住自己官位的「人性衝突」下，要如何同時說服選民自己高舉「代表民意」的旗幟？不但考驗立委，更考驗選民的智慧。</p>
             <p>另一個值得觀察的重點，如果2016選後民進黨取得新國會最大黨地位，是否會繼續維持現在偏向贊成罷免門檻下修的表態，而促成修法？</p>
-            <p>隨著現在公民意識的提升，未來針對不適任立委提出的罷免，應該會更加頻繁，討論也會更熱烈。到底在新國會中，罷免門檻下修會完成修法，還是像過去經驗反而加高呢？這就有賴關心這個議題的選民，依照這些表態紀錄，選擇真正關心這個議題並願意表態的立委了。</p>
+            <p>隨著現在公民意識的提升，未來針對不適任立委提出的罷免，應該會更加頻繁，討論也會更熱烈。到底在新國會中，罷免門檻下修會完成修法，還是像過去經驗反而加高呢？這就有賴關心這個議題的選民，依照這些真實的表態紀錄做出投票選擇，才能使直接民權有更前進的機會。</p>
           </section>
       </div>
     )
@@ -551,8 +546,8 @@ class CourseGuideContent extends Component {
         const styles = require('./IssueArticle.scss');
         return (
             <div>
-                <h1>課綱：立法院的一堂公民教育課</h1>
                 <section>
+                  <h1>課綱：立法院的一堂公民教育課</h1>
                   <p>課綱爭議是從2013年9月國教院以「檢核小組」調整課綱開始，過程屢屢被批評為黑箱，經歷2014年2月公民教師的抗議，到2015年7月因反課綱學生林冠華的自殺而引發學生佔領教育部的行動，引起社會與立法院的熱烈討論。</p>
                   <p>事實上，在李、扁政府時期開始增加「認識台灣」等課程，就曾被批評涉及台獨史觀及去中國化。到馬政府時期這次的課綱微調，則引起「撥亂反正」與「大中華統一史觀」的正反兩極評價。課綱可以說是每個執政黨都免不了要進行「調整」的重要政策方向，相信未來類似的爭議隨時可能再上演。</p>
                   <p>然而比起調整的內容，調整的過程更能彰顯民主精神。這兩年在立法院中的討論，可說是一堂「程序正義」的公民教育課。</p>
@@ -643,8 +638,8 @@ class JusticeReformContent extends Component {
         const styles = require('./IssueArticle.scss');
         return (
             <div>
-                <h1>司改：人民參審，改革再等幾個四年？</h1>
                 <section>
+                  <h1>司改：人民參審，改革再等幾個四年？</h1>
                   <p>「恐龍法官」是台灣這幾年，每當遇到重大爭議司法案件不符社會期待時就會出現的批評。台灣的法官真的活在恐龍時代嗎？當然不能以偏概全。但是，讓人民真正實質參與審判，避免法官過高的自由心證，促進「司法透明化」而建立司法公信力，確實成為近幾年司法改革的重要目標。從兩大黨的總統候選人的政見中，蔡英文提出「建立人民的法院」、朱立倫提出「推動人民參與審判機制」，都可看出這個議題的重要性。</p>
                   <p>民間學者陸續主張推動參審制或陪審制，司法院也在這樣的壓力下創造全世界獨一無二的「觀審制」。然而，觀審制備受批評之處，在於「只讓你看，不讓你判」，被認為是「玩假的」人民參與審判制度。參審、陪審、觀審，立委們討論了四年徒勞無功，終究沒有一個制度走出立院，改革之路遙遙無期。</p>
                   <p>頂新案又再度喚起了人民對司法判決的不信任，但在立院中討論人民參與審判制度，到底發生了什麼事？為什麼又浪費了四年？</p>
@@ -656,11 +651,11 @@ class JusticeReformContent extends Component {
                   <p>而目前在立法院中總共有以下六個法案：
                       <ul>
                         <li>司法院版「人民觀審試行條例草案」：觀審制</li>
-                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("謝國樑")}/records/justice-reform`}>謝國樑</Link>版「人民觀審試行條例草案」：觀審制</li>
-                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("呂學樟")}/records/justice-reform`}>呂學樟</Link>版「人民參與審判試行條例草案」：偏向觀審制</li>
-                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳宜臻")}/records/justice-reform`}>吳宜臻</Link>版「國民參與刑事審判法草案」：偏向參審制</li>
-                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("柯建銘")}/records/justice-reform`}>柯建銘</Link>版「國民參與刑事審判法草案」：偏向陪審制</li>
-                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("田秋堇")}/records/justice-reform`}>田秋堇</Link>版「陪審團法草案」：陪審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("謝國樑")}/records/justice-reform`}>謝國樑</Link> 版「人民觀審試行條例草案」：觀審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("呂學樟")}/records/justice-reform`}>呂學樟</Link> 版「人民參與審判試行條例草案」：偏向觀審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳宜臻")}/records/justice-reform`}>吳宜臻</Link> 版「國民參與刑事審判法草案」：偏向參審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("柯建銘")}/records/justice-reform`}>柯建銘</Link> 版「國民參與刑事審判法草案」：偏向陪審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("田秋堇")}/records/justice-reform`}>田秋堇</Link> 版「陪審團法草案」：陪審制</li>
                       </ul>
                   </p>
                   <p>
