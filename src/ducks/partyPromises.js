@@ -4,18 +4,6 @@ const initialState = {
         "id": "DPP",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -35,6 +23,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -61,18 +61,6 @@ const initialState = {
         "id": "KMT",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -92,6 +80,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -118,18 +118,6 @@ const initialState = {
         "id": "PFP",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -149,6 +137,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -175,18 +175,6 @@ const initialState = {
         "id": "NPP",
         "hasReply": true,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "aye",
@@ -208,6 +196,18 @@ const initialState = {
             "nuclearPower": {
                 "promise": {
                     "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
                     "statement": ""
                 }
             }
@@ -232,18 +232,6 @@ const initialState = {
         "id": "TSU",
         "hasReply": true,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -265,6 +253,18 @@ const initialState = {
             "nuclearPower": {
                 "promise": {
                     "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
                     "statement": ""
                 }
             }
@@ -289,18 +289,6 @@ const initialState = {
         "id": "MKT",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -320,6 +308,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -346,18 +346,6 @@ const initialState = {
         "id": "NP",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -377,6 +365,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -403,18 +403,6 @@ const initialState = {
         "id": "NSU",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -434,6 +422,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -460,18 +460,6 @@ const initialState = {
         "id": "GSD",
         "hasReply": true,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "aye",
@@ -493,6 +481,18 @@ const initialState = {
             "nuclearPower": {
                 "promise": {
                     "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
                     "statement": ""
                 }
             }
@@ -517,18 +517,6 @@ const initialState = {
         "id": "FHL",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -548,6 +536,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -574,18 +574,6 @@ const initialState = {
         "id": "MCFAP",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -605,6 +593,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -631,18 +631,6 @@ const initialState = {
         "id": "TP",
         "hasReply": true,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "aye",
@@ -664,6 +652,18 @@ const initialState = {
             "nuclearPower": {
                 "promise": {
                     "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
                     "statement": ""
                 }
             }
@@ -688,18 +688,6 @@ const initialState = {
         "id": "FTP",
         "hasReply": true,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "aye",
@@ -723,6 +711,18 @@ const initialState = {
                     "position": "aye",
                     "statement": "強烈要求政府投資綠色能源"
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -745,18 +745,6 @@ const initialState = {
         "id": "PPU",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -776,6 +764,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -802,18 +802,6 @@ const initialState = {
         "id": "NHSA",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -833,6 +821,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -859,18 +859,6 @@ const initialState = {
         "id": "DASG",
         "hasReply": true,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -892,6 +880,18 @@ const initialState = {
             "nuclearPower": {
                 "promise": {
                     "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
                     "statement": ""
                 }
             }
@@ -916,18 +916,6 @@ const initialState = {
         "id": "CHTY",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -947,6 +935,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -973,18 +973,6 @@ const initialState = {
         "id": "TIP",
         "hasReply": false,
         "positions": {
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
             "marriageEquality": {
                 "promise": {
                     "position": "none",
@@ -1004,6 +992,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
