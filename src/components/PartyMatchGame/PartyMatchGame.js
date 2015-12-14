@@ -363,7 +363,7 @@ class ResultSection extends Component {
 
     //Layout: match 結果
     let array = [];
-    for(let i=4;i>=-4;i--){
+    for(let i=6;i>=-6;i--){
       array.push(i);
     }
 
@@ -396,6 +396,7 @@ class ResultSection extends Component {
               </table>
             )
           }
+
           return (
               <div className={styles.hueItem}
                    key={`hue-${i}-${j}-${recordFirst}`}
@@ -460,7 +461,7 @@ class ResultSection extends Component {
               </div>
               <div className={styles.noDataMeta}>
                   <div className={styles.noDataMetaTitle}>遊戲說明書</div>
-                  <div className={styles.noDataMetaDes}>截至網站更新前（12月7日），已有自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯回覆，我們歡迎每個政黨進行表態承諾的回覆。而目前立法院內有席次並有歷史表態紀錄的政黨，如果尚未回覆，我們將以他們過去的立院紀錄作為表態資料；如果回覆的承諾書與過去歷史紀錄結果不同，將交由使用者自行選擇要以哪一份資料為準。</div>
+                  <div className={styles.noDataMetaDes}>截至網站更新前（12月14日），已有自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯回覆，我們歡迎每個政黨進行表態承諾的回覆。而目前立法院內有席次並有歷史表態紀錄的政黨，如果尚未回覆，我們將以他們過去的立院紀錄作為表態資料；如果回覆的承諾書與過去歷史紀錄結果不同，將交由使用者自行選擇要以哪一份資料為準。</div>
               </div>
           </div>
 

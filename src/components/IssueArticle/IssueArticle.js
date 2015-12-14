@@ -5,62 +5,35 @@ import people_name2id from '../../utils/people_name2id';
 export default class IssueArticle extends Component {
   static propTypes = {
   }
-  constructor(props) { super(props)
-    this.state = {
-        active : true
-    }
-  }
-  _toggleActive(){
-    this.setState({
-      active: !this.state.active
-    })
-  }
-
   render(){
     const styles = require('./IssueArticle.scss');
     const {issue} = this.props;//e.g. marriageEquality
-    const {active} = this.state;
-
-    let previewContent;
-    let mainContent;
+    
+    let content;
 
     switch(issue){
         case 'marriageEquality':
-          previewContent = <MarriageEqualityPreview />
-          mainContent = <MarriageEqualityContent />
+          content = <MarriageEqualityContent />
           break;
 
         case 'referendum':
-          previewContent = <ReferendumPreview />
-          mainContent = <ReferendumContent />
+          content = <ReferendumContent />
           break;
 
         case 'recall':
-          previewContent = <RecallPreview />
-          mainContent = <RecallContent />
+          content = <RecallContent />
           break;
 
         case 'nuclearPower':
-          previewContent = <NuclearPowerPreview />
-          mainContent = <NuclearPowerContent />
+          content = <NuclearPowerContent />
           break;
 
         case 'courseGuide':
-          previewContent = (
-          <div>
-              <p>「阿草眉頭一皺，案情不單純，還在分析中」</p>
-              <p>coming soon...</p>
-          </div>
-          )
+          content = <CourseGuideContent />
           break;
 
         case 'justiceReform':
-          previewContent = (
-          <div>
-              <p>「阿草眉頭一皺，案情不單純，還在分析中」</p>
-              <p>coming soon...</p>
-          </div>
-          )
+          content = <JusticeReformContent />
           break;
 
         default:
@@ -68,9 +41,7 @@ export default class IssueArticle extends Component {
     }
 
     let imgURL = require("./images/flying.png");
-    let mainContentIsActive = (active === true) ? styles.active : "";
-    let buttonText = (active === true) ? "隱藏文章" : "繼續閱讀";
-
+   
     return (
        <div className={styles.articleWrap}>
           <div className={styles.article}>
@@ -78,9 +49,8 @@ export default class IssueArticle extends Component {
                    className={styles.img}/>
               <div className={styles.bigTitle}>阿草放大鏡</div>
               <div className={styles.bigSubtitle}>數據背後，你可能不知道的事</div>
-              <article>
-                <div className={styles.previewContent}>{previewContent}</div>
-                <div className={`${styles.mainContent} ${mainContentIsActive}`}>{mainContent}</div>
+              <article className={styles.mainContent}>
+                  {content}
               </article>
 
            </div>
@@ -109,26 +79,7 @@ export default class IssueArticle extends Component {
 - 編註用 .editorialComment，並儘量獨立一個段落。CSS 會自動加上「編註：」還有【】
 
 */
-class MarriageEqualityPreview extends Component {
-    render(){
-      const styles = require('./IssueArticle.scss');
-      return (
-        <div>
-          <section>
-            <ul className={styles.customList}>
-              <li className={styles.myth}>民進黨就是支持婚姻平權，國民黨就是反對？</li>
-              <li className={styles.myth}>國民黨立委席次比較多，在立法院裡他們的聲音應該比較大吧？</li>
-              <li className={styles.myth}>看起來支持方的表態次數比反對方多，法案應該很容易通過吧？</li>
-            </ul>
-            <div>
-                <p>你可能聽過婚姻平權，也可能聽過每年盛大的同志遊行，甚至看過新聞大篇幅報導今年6月美國邁向同性婚姻合法化的消息。那麼，在立法院內又是怎麼討論這個議題呢？</p>
-                <p>讓阿草用數據破解你對於立法院的迷思！</p>
-            </div>
-          </section>
-        </div>
-      )
-    }
-}
+
 class MarriageEqualityContent extends Component {
   render(){
     const styles = require('./IssueArticle.scss');
@@ -137,7 +88,13 @@ class MarriageEqualityContent extends Component {
     return (
       <div>
           <section>
-            <h1>迷思一：民進黨就是支持婚姻平權，國民黨就是反對？</h1>
+              <h1>婚姻平權：沉默的立院</h1>
+              <p>從每年盛大的同志遊行，到2015年6月美國同性婚姻合法化的消息，在在說明婚姻平權受到社會的矚目。不管你是否支持婚姻平權，都應該關心各政黨及立委對此議題的表態，因為2016年，你的一票將選出新的國會，也決定這個法案的未來。</p>
+              <p>過去四年，立法院是怎麼討論這個議題的？</p>
+              <p>就讓阿草用數據告訴你：事實可能跟你想的不一樣。</p>
+          </section>
+          <section>
+            <h1>民進黨就是支持婚姻平權，國民黨就是反對？</h1>
             <p>圖表中可以看到民進黨共有37筆表態紀錄，全都是支持，而國民黨則有9筆表態紀錄，以反對居多。這樣看起來標題的說法似乎沒錯？</p>
             <img className={styles.IssueArticleFigure} src={figure1} />
             <p>不過，民進黨其實只有28%的立委（即12位）曾經表態。更重要的是，婚姻平權法案交由司法法制委員會審查，屬於這個委員會的立委應該都有責任表態，但實際上
@@ -161,7 +118,7 @@ class MarriageEqualityContent extends Component {
           </section>
 
           <section>
-            <h1>迷思二：國民黨立委席次比較多，那在立法院裡他們的聲音應該比較大吧？</h1>
+            <h1>誰是沉默的多數？</h1>
             <p>在立法院中，立委總席次是國民黨65席：民進黨40席，就算只看司法法制委員會內的席次，長期以來都是國民黨9席，民進黨4席。可見國民黨有人數的絕對優勢，但是直接比較兩方發言討論這個議題的次數卻是國民黨9次：民進黨17次，顯然不成比例。也就是說，國民黨立委有著惜字如金的美德，或許他們不是想打混，只是想扮演好「沉默的多數」這個角色，但這樣的角色可能不太符合立委「為民喉舌」的形象。</p>
             <p>說到這裡，你可能會反駁：不對吧！明明新聞中常看到
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("賴士葆")}/records/marriage-equality`}>賴士葆</Link>、
@@ -180,7 +137,7 @@ class MarriageEqualityContent extends Component {
           </section>
 
           <section>
-            <h1>迷思三：看起來支持方的表態次數比反對方多，那法案應該很容易通過吧？</h1>
+            <h1>支持比反對多，法案卻無法通過？</h1>
             <p>
               由圖表來看，
               <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/marriage-equality`}>尤美女(8)</Link>
@@ -206,27 +163,17 @@ class MarriageEqualityContent extends Component {
           <section>
             <h1>結論</h1>
             <p>整體來說，雖然民進黨看起來是偏向支持婚姻平權，但表態紀錄高度集中在少數幾個立委身上（有趣的是，幾乎都是不分區立委），且也有許多不表態的立委，因此很難肯定下一屆民進黨立委的態度就是全面支持。國民黨雖然整體偏向反對，但其實表態的人數和次數都更少。其他小黨的立委，則幾乎未曾對這個議題發聲。</p>
-            <p>儘管這個議題近年來在社會上引起大規模討論，但各黨立委不表態的現象卻十分嚴重，這也導致在立法院中欠缺足夠的溝通對話。站在民主的角度，無論是支持或反對同性婚姻合法化的選民，都應該要求代表你意見的立委多在立法院裡明確表態，才能促進討論、真正解決問題。</p>
+            <p>儘管這個議題近年來在社會上引起大規模討論，但各黨立委不表態的現象卻十分嚴重，這說明了：
+                <blockquote>「婚姻平權法案，真正的困境是沉默的立院。」</blockquote>
+            </p>
+            <p>回到民主政治的本質，無論是支持或反對婚姻平權的選民，都應該要求代表你意見的立委多在立院內明確表態，才能藉由溝通討論凝聚共識，真正解決問題。而在投票前夕，理性負責的選民也應該基於這些真實的表態紀錄進行投票選擇，才能選出真正代表民意的新國會。</p>
           </section>
       </div>
     )
   }
 }
 
-class ReferendumPreview extends Component {
-  render(){
-    const styles = require('./IssueArticle.scss');
-    return (
-      <div>
-        <section>
-          <p>公民投票是人民直接行使權利的方式，向來被認為是民主國家的重要制度。台灣在2004年立法通過後，成為東亞第一個採行公投制度的國家。</p>
-          <p>每當有社會重大爭議時，不管朝野藍綠，都曾經提出以公投解決問題的想法，如軍購案公投、入聯公投、ECFA公投、核四公投等等，但全國公投從來沒有一次真正成功進行。</p>
-          <p>那麼，在台灣立法院內又是怎麼討論這個議題呢？讓阿草用數據告訴你立法院中公投法修法三大真相，誰說真相永遠只有一個？</p>
-        </section>
-      </div>
-    )
-  }
-}
+
 class ReferendumContent extends Component {
   render(){
     const styles = require('./IssueArticle.scss');
@@ -236,7 +183,14 @@ class ReferendumContent extends Component {
     return (
       <div>
           <section>
-              <h1>真相一：不只是藍綠對決，其實是朝野政黨大亂鬥</h1>
+              <h1>公投：「少數」反對卡住修法，能否期待新國會？</h1>
+              <p>公民投票是人民直接行使權利的方式，向來被認為是民主國家的重要制度。台灣在2004年立法通過後，成為東亞第一個採行公投制度的國家。</p>
+              <p>每當有社會重大爭議時，不管朝野藍綠，都曾經提出以公投解決問題的想法，如軍購案公投、入聯公投、ECFA公投、核四公投等等，但全國公投從來沒有一次真正成功通過。不少人都指出問題在於高門檻，也因此有「鳥籠公投」的批評。</p>
+              <p>然而，立法院的修法進度仍然卡住，本屆立院已幾乎沒有機會通過。</p>
+              <p>就讓阿草用數據告訴你：在立法院內怎麼討論這個議題？修法為何卡住？如何從公投表態選擇新國會的立委？</p>
+          </section>
+          <section>
+              <h1>不只是藍綠對決，其實是朝野政黨大亂鬥</h1>
               <p>大家常常會以為立法院是藍綠對決，但在公投法的討論上，實際上是朝野政黨的大亂鬥。圖表顯示有表態紀錄的立委總共51人，包含：</p>
               <ul className={styles.customList}>
                 <li className={`${styles.partisan} ${styles.ruling}`}>國民黨13人</li>
@@ -253,7 +207,7 @@ class ReferendumContent extends Component {
           </section>
 
           <section>
-              <h1>真相二：國民黨模糊反對分不清，在野黨修法內容很分歧</h1>
+              <h1>國民黨模糊反對分不清，在野黨修法內容很分歧</h1>
               <ul className={styles.customList}>
                 <li className={`${styles.partyPosition} ${styles.DPP_aye}`}>
                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳其邁")}/records/referendum`}>陳其邁(7)</Link>、
@@ -294,7 +248,7 @@ class ReferendumContent extends Component {
           </section>
 
           <section>
-              <h1>真相三：修法的關鍵在於席次分布</h1>
+              <h1>修法關鍵在於席次分布，改革能否期待新國會？</h1>
               <p>從2012年，第八屆立委剛上任時開始，就有許多公投法的修法草案陸續提出，但在內政委員會的審查過程並不順利，一直到2015年4月（立法院第八屆立委第七會期）才順利初審通過，送入二讀協商討論中。</p>
               <p>延宕兩年多，其中的原因是什麼？我們分析了這七個會期中內政委員會的席次分布，發現以下狀況：</p>
               <img className={styles.IssueArticleFigure} src={figure3} />
@@ -328,12 +282,8 @@ class ReferendumContent extends Component {
               <p className={styles.editorialComment}>贊成反對數相同時，召委主席就可參與投票</p>
               <p>在這樣的背景下，國民黨對法案及議事的控制力最弱。2015年4月22日，公投法在內政委員會的審查，正是因為當天國民黨立委<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("鄭天財Sra·Kacaw")}/records/referendum`}>鄭天財Sra·Kacaw</Link>請假未出席，形成國民黨：在野黨席次比為6：7的局勢，最後國民黨立委集體退席，終於初審通過。</p>
               <p>雖然還未正式修法通過，但這個例子說明法案在立法院委員會審查中，最關鍵的因素是委員會的席次分布。各黨立委如何運用席次的變化，進行結盟和合作，就是成功推動修法的關鍵。</p>
-          </section>
-
-          <section>
-              <h1>結論</h1>
               <p>在野黨立委普遍非常關心公投法，修法過程也出現了在野黨團結對抗國民黨的現象。但在野黨立委的修法內容和程度也有分歧，民進黨和台聯接近，親民黨雖然偏向贊成，但在民進黨和國民黨之間擺盪。另一方面，國民黨立委大多數也不願明確表態，立場偏向模糊。這些表態紀錄正說明「公投門檻下修幾乎是共識，但修法進度卻十分緩慢」的結果。</p>
-              <p>公投法初審通過的關鍵，在於在野黨立委團結起來，利用委員會席次分布的變化，國民黨立委控制力最弱的時刻出擊。這是政黨及立委的策略，但對選民來說，這個例子說明的是：</p>
+              <p>然而，通過初審後的法案送入院會，此時國民黨的「黨意」不再模糊，而是明確地把法案拉下協商，至今仍無機會修法通過，只能寄望下一屆國會。但是新國會能否期待？民進黨立委在選後，若成為執政黨，是否還會維持推動修法的態度？關鍵還是在於人民是否能夠依據這些表態紀錄，選出真正重視這個議題的新國會。</p>
               <blockquote>
                 <p>如果你有關心的議題，請選出真正關心這些議題的立委，才能推動改革。</p>
                 <p>怎麼判斷哪些立委真正關心這些議題？答案是關注他們的表態紀錄。</p>
@@ -344,25 +294,6 @@ class ReferendumContent extends Component {
   }
 }
 
-class RecallPreview extends Component {
-    render(){
-      const styles = require('./IssueArticle.scss');
-      return (
-        <div>
-            <section>
-                <p>罷免權是人民收回當選官員權力的制度，美國光是2011年這一年當中，就舉行了150次罷免選舉，其中75位官員被罷免成功，9位官員自行辭職。但反觀台灣，針對立委提出的罷免，主要有三次，卻從來沒有成功過。</p>
-                <ul>
-                  <li>1994年，反核團體提出罷免擁核立委林志嘉、<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("洪秀柱")}/records/recall`}>洪秀柱</Link>、詹裕仁、韓國瑜、魏鏞等5人，最後未達投票門檻而失敗。</li>
-                  <li>2013年，憲法133實踐聯盟提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/marriage-equality`}>吳育昇</Link>，最後未達連署門檻而失敗。</li>
-                  <li>2015年，割闌尾計畫提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("蔡正元")}/records/recall`}>蔡正元</Link>，最後未達投票門檻而失敗。</li>
-                </ul>
-                <p>在立法院第八屆任期期間（2012年─2015年），就發生了兩次對立委的罷免行動，罷免可說是攸關立委個人去留的議題。那麼，在立法院內是怎麼討論罷免呢？</p>
-                <p>讓阿草用數據告訴你立法院裡的修法真相！</p>
-            </section>
-        </div>
-      )
-    }
-}
 class RecallContent extends Component {
   render(){
     const styles = require('./IssueArticle.scss');
@@ -372,7 +303,18 @@ class RecallContent extends Component {
     return (
       <div>
           <section>
-            <h1>真相一：藍綠正反對決，親民黨游移不表態</h1>
+              <h1>罷免：多少立委願意違反人性？</h1>
+              <p>罷免權是人民收回當選官員權力的制度，美國光是2011年這一年當中，就舉行了150次罷免選舉，其中75位官員被罷免成功，9位官員自行辭職。但反觀台灣，針對立委提出的罷免，主要有三次，卻從來沒有成功過。</p>
+              <ul>
+                <li>1994年，反核團體提出罷免擁核立委林志嘉、<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("洪秀柱")}/records/recall`}>洪秀柱</Link>、詹裕仁、韓國瑜、魏鏞等5人，最後未達投票門檻而失敗。</li>
+                <li>2013年，憲法133實踐聯盟提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳育昇")}/records/marriage-equality`}>吳育昇</Link>，最後未達連署門檻而失敗。</li>
+                <li>2015年，割闌尾計畫提出罷免<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("蔡正元")}/records/recall`}>蔡正元</Link>，最後未達投票門檻而失敗。</li>
+              </ul>
+              <p>在立法院第八屆任期期間（2012年～2015年），就發生了兩次對立委的罷免行動，罷免可說是攸關立委個人去留的議題。那麼，在立法院內是怎麼討論這個議題呢？</p>
+              <p>就讓阿草用數據告訴你：多少立委願意「違反人性」？</p>
+          </section>
+          <section>
+            <h1>藍綠正反對決，親民黨游移不表態</h1>
             <p>憲法明定人民有選舉、罷免、創制、複決的權利，後兩者屬於公投議題，且公投和罷免的修法都分配到內政委員會中審查，因此近年來兩者經常被一起討論。</p>
             <p>但比較兩者在立法院內的紀錄，卻發現罷免的表態人數和次數顯然都較少，立委很明顯比較不願意討論罷免。即使有門檻下修的提案，大部分都卡在程序委員會，甚至連討論機會都沒有。這些現象可能說明的是：</p>
 
@@ -392,7 +334,7 @@ class RecallContent extends Component {
           </section>
 
           <section>
-            <h1>真相二：人性衝突，被罷免立委的真實反應？</h1>
+            <h1>人性衝突，被罷免立委的真實反應</h1>
             <p>由於立法院第八屆任期期間，民間提出許多罷免立委的行動，因此立院的表態紀錄也成為觀察立委人性衝突的最佳範本。經過分析整理，我們發現被罷免的立委有以下這幾種類型：</p>
 
             <h2>（一）訴苦型：<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("張慶忠")}/records/recall`}>張慶忠</Link>立委</h2>
@@ -404,7 +346,7 @@ class RecallContent extends Component {
             <p>蔡正元立委則是惱怒，甚至在主題完全無關罷免的會議上兩度嗆聲：
               <blockquote>
                 <p>「跟那些什麼爛花一起搞要罷免我，明明講好了，不管法律對不對都要遵守，最起碼媒體不准宣傳，我也沒有宣傳罷免活動啊！要宣傳我會輸他嗎？」</p>
-                <p>「我是所謂割「藍尾」名單第一名，我告訴你，我不怕。」</p>
+                <p>「我是所謂割『藍尾』名單第一名，我告訴你，我不怕。」</p>
               </blockquote>
             </p>
 
@@ -430,31 +372,13 @@ class RecallContent extends Component {
             <img className={styles.IssueArticleFigure} src={figure3} />
             <p>幾位之前被提出罷免的立委，都在尋求連任中。在保住自己官位的「人性衝突」下，要如何同時說服選民自己高舉「代表民意」的旗幟？不但考驗立委，更考驗選民的智慧。</p>
             <p>另一個值得觀察的重點，如果2016選後民進黨取得新國會最大黨地位，是否會繼續維持現在偏向贊成罷免門檻下修的表態，而促成修法？</p>
-            <p>隨著現在公民意識的提升，未來針對不適任立委提出的罷免，應該會更加頻繁，討論也會更熱烈。到底在新國會中，罷免門檻下修會完成修法，還是像過去經驗反而加高呢？這就有賴關心這個議題的選民，依照這些表態紀錄，選擇真正關心這個議題並願意表態的立委了。</p>
+            <p>隨著現在公民意識的提升，未來針對不適任立委提出的罷免，應該會更加頻繁，討論也會更熱烈。到底在新國會中，罷免門檻下修會完成修法，還是像過去經驗反而加高呢？這就有賴關心這個議題的選民，依照這些真實的表態紀錄做出投票選擇，才能使直接民權有更前進的機會。</p>
           </section>
       </div>
     )
   }
 }
 
-class NuclearPowerPreview extends Component {
-  render(){
-    const styles = require('./IssueArticle.scss');
-    return (
-      <div>
-        <section>
-          <p>核四工程興建案，是台灣史上最具爭議的公共工程，耗費2,838億元的預算，卻一度停工再復工，最終在2014年4月27日宣布封存停工。這個工程引發社會各界激辯，從核四的工程品質、核廢料貯存問題、核一二三是否延役到經濟發展、核能綠能之間的取捨等等，都是各種熱議話題。</p>
-          <p>那麼，在立法院內又是怎麼討論這個議題呢？讓阿草用數據告訴你，核四在立法院第八屆任期中，所創下的三大「歷史之最」！</p>
-          <ul className={styles.customList}>
-            <li className={styles.est}>立委角色最複雜</li>
-            <li className={styles.est}>最多立委參戰、最多次表態</li>
-            <li className={styles.est}>最常提到的話──沒有核安，就沒有核電</li>
-          </ul>
-        </section>
-      </div>
-    )
-  }
-}
 class NuclearPowerContent extends Component {
   render(){
     const styles = require('./IssueArticle.scss');
@@ -463,7 +387,14 @@ class NuclearPowerContent extends Component {
     return (
       <div>
           <section>
-              <h1>一、立委角色最複雜</h1>
+              <h1>核四：封存之後，非核家園需要新國會</h1>
+              <p>核四工程興建案，是台灣史上最具爭議的公共工程，耗費2,838億元的預算，卻一度停工再復工，最終在2014年4月27日宣布封存停工。這個工程引發社會各界激辯，從核四的工程品質、核廢料貯存問題、核一二三是否延役到經濟發展、核能綠能之間的取捨等等，都是各種熱議話題。</p>
+              <p>然而，封存並非終點。台電主張「為未來的能源，保留選擇機會」，提出封存三年而非直接停建的計畫，意謂著2018年又將面對核四存廢問題。即使「2025非核家園」是朱立倫與蔡英文同時提出的主張，但具體要如何達成，也需要國會在相關法案的推動。</p>
+              <p>過去在立法院內又是怎麼討論這個議題呢？到底各政黨和立委，如何表態？誰贊成停建，誰又反對停建？讓阿草用數據告訴你：核四在立法院第八屆任期中，所創下的三大「歷史之最」！</p>
+          </section>
+
+          <section>
+              <h1>立委角色最複雜</h1>
               <p>因為核四這個議題牽涉的問題層面實在太廣，相比其他議題，每位立委的行為模式更多元複雜。經過分析，我們發現全體立委可以分成以下幾個類型：</p>
               <img className={styles.IssueArticleFigure} src={figure1} />
           </section>
@@ -554,7 +485,7 @@ class NuclearPowerContent extends Component {
           </section>
 
           <section>
-              <h1>二、最多立委參戰、最多次表態</h1>
+              <h1>最多立委參戰、最多次表態</h1>
               <p>核四因為爭議不斷，經常成為各黨立委發言焦點，也變成全體表決大戰。核四在第八屆立院中總共進行12次表決（請記得這個數字，很重要！），因此除了2015年2月立委補選的五位立委之外，幾乎每位立委都對核四表態過，這造就核四成為最多立委參戰的議題。</p>
               <p>因為有這12次表決，幾乎每位立委都對核四至少會有12次的表態紀錄，因此有高達1,341次的表決次數！再加上其他發言和提案，整個核四總計1,632次的表態紀錄！這是公投的11倍、罷免的16倍，甚至是婚姻平權的34倍之多！</p>
 
@@ -567,7 +498,7 @@ class NuclearPowerContent extends Component {
           </section>
 
           <section>
-              <h1>三、最常提到的話：沒有核安，就沒有核電</h1>
+              <h1>最常提到的話：沒有核安，就沒有核電</h1>
               <p>在整個核四的討論過程中，最常被指出的一個爭論就是核安，尤其是核四本身的工程安全問題。贊成停建的論述中，多數都是以實際案例指出核四本身不安全的問題，也有部分直接論述核能就是不安全的能源，例如：</p>
 
               <blockquote>
@@ -587,9 +518,9 @@ class NuclearPowerContent extends Component {
           </section>
 
           <section>
-              <h1>結論</h1>
-              <blockquote>凝聚社會共識、進而解決問題，需要更多更完整的論述和表態。</blockquote>
+              <h1>了解過去紀錄，慎選新國會立委</h1>
               <p>由於核四是表態立委最多、表態紀錄最完整的議題，可說是各議題在立院中討論過程的縮影。真正對一個議題比較關心也比較多論述的立委，大概不到全體人數的20%，而在重大爭議的議題上，往往需要更多委員、更頻繁的發言或表態，才能凝聚共識、解決問題。</p>
+              <blockquote>凝聚社會共識、進而解決問題，需要更多更完整的論述和表態。</blockquote>
               <p>以核四為例，即使是贊成停建方的立委頻繁排案討論，並有許多完整的表態發言，甚至發動高達12次的表決，在第八屆中仍然要經過兩年多才能促成封存停工的共識，可見其困難程度。</p>
 
               <blockquote>另一方面，高達一半的立委立場模糊或甚至不發言，也是造成難以凝聚共識而法案停滯的原因之一。</blockquote>
@@ -600,11 +531,187 @@ class NuclearPowerContent extends Component {
               <blockquote>表決很重要，即使沒有通過法案，至少留下表態紀錄，才能監督立院。</blockquote>
 
               <p>相對其他議題，核四最特別的一點，在於在野黨提出大量的表決提案。雖然表決實際上都沒有通過，但至少使前述都不發言的立委留下表態紀錄，才能檢視立院運作的問題。因此，對於未來任何的國會少數黨來說，除了任何的協商運作外，也許透過公開表決等方式迫使全體立委表態，也是一個可以考慮的手段。</p>
-              <p>不過，對選民來說，這些表態紀錄真正重要的價值在於，有具體證據說明立委的態度和作為。不論你贊成或反對核四停建，未來都可能再有變化，因此最重要的是：</p>
+              <p>兩大黨都宣示「2025非核家園」的目標，但替代能源、核廢等等整體政策也需要相同理念價值的立委推動完成相關立法，才能具體執行。況且2018年又要面對核四問題，到底能否徹底解決核四問題，走向非核家園？2016所選出的新國會，可說是影響重大。</p>
+              <p>因此，對選民來說，這些表態紀錄最重要的價值在於，有具體證據說明立委的態度和作為。不論你贊成或反對核四停建，都應該基於這些資訊，選擇符合你價值主張的政黨和立委。台灣能源政策的未來，就在你的選票上。</p>
 
-              <blockquote>依據你關心議題的表態紀錄，投票時選擇真正代表你態度的候選人！</blockquote>
           </section>
       </div>
     )
   }
+}
+
+class CourseGuideContent extends Component {
+    render(){
+        const styles = require('./IssueArticle.scss');
+        return (
+            <div>
+                <section>
+                  <h1>課綱：立法院的一堂公民教育課</h1>
+                  <p>課綱爭議是從2013年9月國教院以「檢核小組」調整課綱開始，過程屢屢被批評為黑箱，經歷2014年2月公民教師的抗議，到2015年7月因反課綱學生林冠華的自殺而引發學生佔領教育部的行動，引起社會與立法院的熱烈討論。</p>
+                  <p>事實上，在李、扁政府時期開始增加「認識台灣」等課程，就曾被批評涉及台獨史觀及去中國化。到馬政府時期這次的課綱微調，則引起「撥亂反正」與「大中華統一史觀」的正反兩極評價。課綱可以說是每個執政黨都免不了要進行「調整」的重要政策方向，相信未來類似的爭議隨時可能再上演。</p>
+                  <p>然而比起調整的內容，調整的過程更能彰顯民主精神。這兩年在立法院中的討論，可說是一堂「程序正義」的公民教育課。</p>
+                  <p>讓阿草用數據，幫你在這堂公民課畫重點！</p>
+                </section>
+                <section>
+                  <h1>程序公開透明？執政黨和在野黨想得不一樣</h1>
+                  <p>這次課綱主要有兩大爭議：「內容是否為大中華統一史觀」和「課綱制定程序是否應該公開透明」。內容應該採取何種史觀的問題，各黨立委各有表態，但都偏向個人主觀判斷，較難有交集。比起來，程序公開透明更是各方爭論重點。</p>
+                  <p>【圖一】</p>
+                  <p>民進黨與台聯立場相對一致，都有將近半數的立委表態，大部分也都主張應立法公開透明。例如：</p>
+                  <blockquote>
+                    <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("鄭麗君")}/records/course-guide`}>鄭麗君</Link>：「先改革課綱制度，讓立法院通過法律案，讓課綱訂定的制度能夠公開透明、由下而上、專業治理。」</p>
+                    <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("周倪安")}/records/course-guide`}>周倪安</Link>：「課綱調整的過程應該公開，固屬行政決策透明（transparency）、避免黑箱作業所必須，更係現代社會公務員問責（accountability）之根本。」</p>
+                  </blockquote>
+                </section>
+                <section>
+                  <p>國民黨大多數都是模糊態度，少數表明反對的理由，是認為公開會議記錄及審查委員名單不尊重專業，另一種說法則是拉前朝扁政府時期的作法來救援，彷彿「你們以前沒公開，現在我們當然也可以不公開」的態度。例如：</p>
+                  <blockquote>
+                    <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("孔文吉")}/records/course-guide`}>孔文吉</Link>：「教育部必須保障這些評審委員，甚至必須提起上訴，並依據資訊公開法規定，該提供的就提供，不該提供的就不要提供。否則一旦起了寒蟬效應，將來會沒人敢參與教課書修訂的！」</p>
+                    <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("蔣乃辛")}/records/course-guide`}>蔣乃辛</Link>：「過去的扁政府，3年修了10次，一共五千多項，他們也沒有向立法院報告，當時有請部長到立法院備詢，結果部長也不來，更沒有經過立法院同意便逕行公布，之後也沒有公布他們開會的逐字稿。」</p>
+                  </blockquote>
+                </section>
+                <section>
+                  <p>從課綱的程序正義問題，可以看出執政黨與在野黨心態的不同：</p>
+                  <blockquote>「執政黨往往希望越少公開越難監督的程序，以免造成行政機關的麻煩；但在野黨往往希望資訊越公開透明，以便監督。」</blockquote>
+                  <p>可惜的是，親民黨立委並沒有對這個議題，無從觀察親民黨是否抱持與其他在野黨相同的態度，或是如一般社會認知傾向國民黨的想法。</p>
+                </section>
+                <section>
+                  <h1>另一種軟性反對：模糊發言</h1>
+                  <p>課綱這個議題還有一個現象：模糊發言特別多。但是各黨的模糊狀況都不同，民進黨與台聯的模糊發言多是在課綱的實質內容打轉，批判課綱微調灌輸學生錯誤史觀。但另外一方陣營的模糊發言，則展現高明的話術，看起來原意在於打圓場或是暗批對方。例如：</p>
+                  <blockquote>
+                    <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("高金素梅")}/records/course-guide`}>高金素梅</Link>（無黨團結聯盟）：「至於課綱的問題，社會上有非常多不同的聲音和評論，但本席仍希望您可以花更多時間，在其他教育事務上面，好嗎？」</p>
+                    <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("王育敏")}/records/course-guide`}>王育敏</Link>：「台灣的民粹力量，已經蒙蔽了民主包容尊重與良善的價值。本席憂心的是，從太陽花學運攻佔立法院，到課綱微調學生衝進教育部，主事者堅持他們的主張才是唯一的正見，曾幾何時，中華民國竟成了只容許一種聲音的國家？」</p>
+                  </blockquote>
+                  <p>更有甚者，如<Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("潘維剛")}/records/course-guide`}>潘維剛</Link>則是提出「合法、合憲、合程序」這種跳針的主觀言論（甚至在不同時間說了三次之多），並無具體理由，幾乎可說是單純護航之詞。</p>
+                  <p>或許是因為立委本身大概也不太敢直接說出「課綱程序不必公開透明」，所以只好模糊表態。而這類發言造成會議討論發散，容易導致會議沒結論，其實也可說是一種軟性反對。</p>
+                </section>
+                <section>
+                  <h1>人格分裂的立委：孔文吉、黃志雄、陳碧涵</h1>
+                  <p>【圖二】</p>
+                  <p>整個課綱程序正義的主戰立委，大致上可以區分為：</p>
+                 
+                  <p>贊成方：<br/>
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("鄭麗君")}/records/course-guide`}>鄭麗君</Link>(13)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳亭妃")}/records/course-guide`}>陳亭妃</Link>(13)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("賴振昌")}/records/course-guide`}>賴振昌</Link>(13)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("許智傑")}/records/course-guide`}>許智傑</Link>(10)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("何欣純")}/records/course-guide`}>何欣純</Link>(8)
+                  </p>
+                  <p>反對方：<br/>
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("蔣乃辛")}/records/course-guide`}>蔣乃辛</Link>(2)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("楊瓊瓔")}/records/course-guide`}>楊瓊瓔</Link>(1)
+                  </p>
+                  <p>模糊方：<br/>
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("呂玉玲")}/records/course-guide`}>呂玉玲</Link>(8)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("孔文吉")}/records/course-guide`}>孔文吉</Link>(6)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳淑慧")}/records/course-guide`}>陳淑慧</Link>(6)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳碧涵")}/records/course-guide`}>陳碧涵</Link>(5)、
+                      <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("潘維剛")}/records/course-guide`}>潘維剛</Link>(5)
+                  </p>
+                  <p>（取表態較多者，括號內代表表態次數）</p>
+                 
+                  <p>不過，
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("孔文吉")}/records/course-guide`}>孔文吉</Link>、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("黃志雄")}/records/course-guide`}>黃志雄</Link>、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳碧涵")}/records/course-guide`}>陳碧涵</Link>
+                     這三位立委十分特別，他們一邊提出資訊應該透明的進步說法，例如：</p>
+                  <blockquote>
+                      <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("孔文吉")}/records/course-guide`}>孔文吉</Link>：「我不是很支持課綱微調的過程，我覺得過程有一點像黑箱作業。」</p>
+                      <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("黃志雄")}/records/course-guide`}>黃志雄</Link>：「我們不能還是用過去那種官僚的想法或者一直傾向資訊保護的原則去做任何的政策決定，包括去年的學運、占中等等都凸顯年輕人希望政府是公開透明的。」</p>
+                      <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("陳碧涵")}/records/course-guide`}>陳碧涵</Link>：「在沒有政治立場的情況，在憲法合法的架構之下，任何人主張的內容，都是可以被公開檢視的。」</p>
+                  </blockquote>
+                  <p>但同時又會主張教育部不公開相關資訊，是合法合理。這兩種自相矛盾的言論，使他們看起來似乎人格分裂。從他們發言時間上來看，這可能是因為台北高等行政法院判決教育部敗訴並應公開政府資訊。從這個例子來看，法院的判決對社會輿論，甚至是立委發言，具有很重要的影響力。</p>
+                </section>
+                <section>
+                  <h1>對新國會的期望：程序正義是課綱爭議的最佳解</h1>
+                  <p>課綱爭議，最後在立法院要求教育部重新檢討課綱的決議下，暫時告一段落。但是過去各執政黨在調整課綱時，往往都引起「政治力干預」的批評，可以證明「換黨執政就能解決課綱問題」是不切實際的想法。最佳解是落實程序正義，課綱制定程序公開透明，才能真正達到尊重教育專業，避免爭議。</p>
+                  <p>這堂立法院的公民課，教會我們最重要的一點是：</p>
+                  <blockquote>「民主程序的核心精神是資訊公開和公民參與，而非多數決。」</blockquote>
+                  <p>目前看來民進黨非常有機會取得2016執政黨的寶座，然而選後民進黨會維持現在主張公開透明的態度，進一步完成相關立法，還是「換了位置就換了腦袋」轉變為執政黨相對保守的想法？就有賴人民在選前慎選和選後監督了。</p>
+                </section>
+            </div>
+        )
+    }
+}
+class JusticeReformContent extends Component {
+    render(){
+        const styles = require('./IssueArticle.scss');
+        return (
+            <div>
+                <section>
+                  <h1>司改：人民參審，改革再等幾個四年？</h1>
+                  <p>「恐龍法官」是台灣這幾年，每當遇到重大爭議司法案件不符社會期待時就會出現的批評。台灣的法官真的活在恐龍時代嗎？當然不能以偏概全。但是，讓人民真正實質參與審判，避免法官過高的自由心證，促進「司法透明化」而建立司法公信力，確實成為近幾年司法改革的重要目標。從兩大黨的總統候選人的政見中，蔡英文提出「建立人民的法院」、朱立倫提出「推動人民參與審判機制」，都可看出這個議題的重要性。</p>
+                  <p>民間學者陸續主張推動參審制或陪審制，司法院也在這樣的壓力下創造全世界獨一無二的「觀審制」。然而，觀審制備受批評之處，在於「只讓你看，不讓你判」，被認為是「玩假的」人民參與審判制度。參審、陪審、觀審，立委們討論了四年徒勞無功，終究沒有一個制度走出立院，改革之路遙遙無期。</p>
+                  <p>頂新案又再度喚起了人民對司法判決的不信任，但在立院中討論人民參與審判制度，到底發生了什麼事？為什麼又浪費了四年？</p>
+                  <p>讓阿草用數據，還原立院現場。</p>
+                </section>
+                <section>
+                  <h1>無關藍綠對決，參審觀審真假大戰</h1>
+                  <p>在參審、陪審、觀審的討論中，最核心的問題是：「人民是否能參與做出判決結果？」也就是說，在判決是否有罪時，人民有沒有表決權？參審、陪審較為接近，制度設計都允許人民有表決權，陪審更是直接將判決結果交由人民組成的「陪審團」來決定，法官僅具引導法庭程序功能。相較之下，觀審制中，人民沒有表決權，則被批評為改革「玩假的」。</p>
+                  <p>而目前在立法院中總共有以下六個法案：
+                      <ul>
+                        <li>司法院版「人民觀審試行條例草案」：觀審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("謝國樑")}/records/justice-reform`}>謝國樑</Link> 版「人民觀審試行條例草案」：觀審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("呂學樟")}/records/justice-reform`}>呂學樟</Link> 版「人民參與審判試行條例草案」：偏向觀審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳宜臻")}/records/justice-reform`}>吳宜臻</Link> 版「國民參與刑事審判法草案」：偏向參審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("柯建銘")}/records/justice-reform`}>柯建銘</Link> 版「國民參與刑事審判法草案」：偏向陪審制</li>
+                        <li><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("田秋堇")}/records/justice-reform`}>田秋堇</Link> 版「陪審團法草案」：陪審制</li>
+                      </ul>
+                  </p>
+                  <p>
+                    很明顯，國民黨立委主要提的是觀審制的方案，而民進黨立委提的則是參審制或陪審制，雙方進行一場參審制、陪審制對決觀審制的大戰。以表態紀錄來看，民進黨、台聯、親民黨都偏向支持「人民有表決權」的參審制或陪審制，國民黨則傾向支持觀審制。
+                  </p>
+                  <p>圖一</p>
+                  <p>
+                    但是，要特別注意的是，這其實不能單純理解成藍綠對決。國民黨有表態紀錄的17位立委中，其實有
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("王惠美")}/records/justice-reform`}>王惠美</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("賴士葆")}/records/justice-reform`}>賴士葆</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("李貴敏")}/records/justice-reform`}>李貴敏</Link>、
+                    <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("曾巨威")}/records/justice-reform`}>曾巨威</Link>
+                    等4位立委明確發言支持陪審制。換言之，在這個議題上，區分正反雙方立場的未必是黨籍，更可能是理念或價值觀，這和其他議題動輒陷入黨派之爭，有很明顯的不同。
+                  </p>
+                  <p>另外，值得注意的是，親民黨僅有林正二表態支持陪審制，但他因涉及賄選而遭到法院判決當選無效，喪失立委資格，只當了兩個會期的立委。親民黨也沒有其他立委對此議題表態，因此親民黨的態度是否就真的是支持陪審制？仍待觀察。</p>
+                </section>
+                <section>
+                  <h1>有方向，沒共識，改革之路還要再等幾個四年？</h1>
+                  <p>圖二</p>
+                  <p>這個議題的主戰立委，大致可以區分為：</p>
+                  <p>參、陪審制：<br/>
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/justice-reform`}>尤美女</Link>(20)、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("柯建銘")}/records/justice-reform`}>柯建銘</Link>(15)、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳宜臻")}/records/justice-reform`}>吳宜臻</Link>(12)、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("高志鵬")}/records/justice-reform`}>高志鵬</Link>(5)、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("王惠美")}/records/justice-reform`}>王惠美</Link>(5)、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("潘孟安")}/records/justice-reform`}>潘孟安</Link>(5)</p>
+                  <p>觀審制：<br/>
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("呂學樟")}/records/justice-reform`}>呂學樟</Link>(13)、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("謝國樑")}/records/justice-reform`}>謝國樑</Link>(6)、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("林鴻池")}/records/justice-reform`}>林鴻池</Link>(4)、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("廖正井")}/records/justice-reform`}>廖正井</Link>(3)</p>
+                  <p>（取表態較多者，括號內代表表態次數）</p>
+                  <p>在整個討論過程，可以發現幾乎大家都認同建立人民參與審判制度的大方向，也都認同觀審制並不能真的達到人民參審的目的，但是觀審制的擁護者則以循序漸進改革來辯護：</p>
+                  <blockquote><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("呂學樟")}/records/justice-reform`}>呂學樟</Link>：「先求有，再求好。我們也沒有辦法一步到位，直接到陪審或是參審。」</blockquote>
+                  <p>不過，支持參、陪審制的立委則反駁：</p>
+                  <blockquote>
+                    <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/justice-reform`}>尤美女</Link>：「觀審制度的重要目的，只是要打開門讓人民進來看看你們不是恐龍法官，讓人民瞭解法官是非常辛苦的……目的是要促進人民瞭解整個訴訟制度，而不是實現國民參審的主權。」</p>
+                    <p><Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("王惠美")}/records/justice-reform`}>王惠美</Link>：「你們設計的這個制度（指觀審制）和現在的公開旁聽沒有什麼區別」</p>
+                  </blockquote>
+
+                  <p>從表態次數來看，發言幾乎都集中在有提案的立委身上，甚至可以說是
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("尤美女")}/records/justice-reform`}>尤美女</Link>、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("柯建銘")}/records/justice-reform`}>柯建銘</Link>、
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("吳宜臻")}/records/justice-reform`}>吳宜臻</Link>對決
+                     <Link className={`${styles.peopleLink} ${styles.ia} ${styles.bright}`} to={`/people/${people_name2id("呂學樟")}/records/justice-reform`}>呂學樟</Link>的態勢。其他立委幾乎都只有一兩次表態，參考意義不大。較少的發言討論，難以凝聚共識，導致司法改革雷聲大雨點小的結果：
+                  </p>
+
+                  <blockquote>
+                    「觀審制備受批評，但參、陪審制又無法成為共識，人民參與審判制度有方向、沒共識，只能無奈卡關。」
+                  </blockquote>
+
+                  <p>這樣喧騰四年後，司法改革之路仍然未見曙光。隨著第八屆立委任期結束，這些法案只能宣判死刑。不幸中的大幸是，至少朝野各立委都認識到「人民具表決權」的核心問題，就連支持觀審制的立委也提出預算提案，要求司法院舉辦的模擬審判必須加入「觀審員具有表決權」的機制。</p>
+                  <p>兩大黨總統候選人都將這個議題列入政見，下一屆新國會能否通過真正的人民參審制度，使「恐龍法官」不再是台灣司法的代名詞？還是這條改革之路繼續空等幾個四年？就看人民能否選出真正關心這個議題又有決心推動改革的立委了。</p>
+                </section>
+                
+            </div>
+        )
+    }
 }

@@ -183,7 +183,6 @@ export default class BillTable extends Component {
                       <div className={styles.billTitle}>法案三</div>
                   </div>
               </div>
-
               {unitBills}
               <div className={styles.billMeta}>{dataMeta[unit]}</div>
               <div id="billEnd"></div>
