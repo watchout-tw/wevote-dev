@@ -105,16 +105,6 @@ export default {
             "party": "PFP"
         }
     },
-    "courseGuide": {
-        "鄭天財Sra·Kacaw": {
-            "name": "鄭天財Sra·Kacaw",
-            "party": "KMT"
-        },
-        "李桐豪": {
-            "name": "李桐豪",
-            "party": "PFP"
-        }
-    },
     "justiceReform": {
         "王金平": {
             "name": "王金平",
