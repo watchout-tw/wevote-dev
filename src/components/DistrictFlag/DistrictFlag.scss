@@ -1,0 +1,30 @@
+@import '../../common.scss';
+.areaFlag {
+    background-image: url('./images/flag.png');
+	position: absolute;
+    background-size: 100% auto;
+    right: 0;
+    top: 0;
+    width: 200px;
+    color: white;
+    text-align: center;
+    padding: 70px 0;
+    font-size: 22px;
+}
+.flagMeta, .flagMeta:visited {
+    font-size: 14px;
+    color: $black;
+    padding-bottom: 1px;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    display: inline-block;
+    
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 35px);
+    cursor: pointer;
+    text-align: center;
+
+    z-index: 1;
+    
+}

@@ -5,6 +5,7 @@ import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
 import CandidateProfileCards from '../../components/CandidateProfileCards/CandidateProfileCards.js';
+import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
 
 import district2cht from '../../utils/district2cht';
 
@@ -25,12 +26,7 @@ export default class Constituency extends Component {
       <div className={styles.wrap}>
           
           <div className={styles.mainContent}>
-              <div className={styles.areaFlag}>
-                  <div>{district2cht(area)}</div>
-                  {noItem}
-                  <Link to={`/constituencies/`} 
-                        className={styles.flagMeta}>看其他選區</Link>
-              </div>
+              <DistrictFlag area={area} areaNo={areaNo} />
               <CandidateProfileCards area={area}
                                      areaNo={areaNo}/>
               <div className={styles.action}>

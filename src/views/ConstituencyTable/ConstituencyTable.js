@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import {connect} from 'react-redux';
 
+import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
 import PositionTable from '../../components/PositionTable/PositionTable';
 import BillTable from '../../components/BillTable/BillTable';
 import Social from '../../components/Social/Social.js';
@@ -27,6 +28,7 @@ export default class ConstituencyTable extends Component {
     return (
       <div>
           <div className={styles.wrap}>
+              <DistrictFlag area={area} areaNo={areaNo} />
               <PositionTable unit="people" districtCandidates={districtCandidates}/>
               <BillTable showTitle={true} unit="people" districtCandidates={districtCandidates}/>
               <Social />
