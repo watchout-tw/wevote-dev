@@ -397,12 +397,13 @@ class ResultSection extends Component {
               </table>
             )
           }
+          //onMouseLeave={this._setFocus.bind(this, "")}
           return (
               <div className={styles.hueItem}
                    key={`hue-${i}-${j}-${recordFirst}`}
                    onClick={this._setFocus.bind(this, v.id)}
                    onMouseEnter={this._setFocus.bind(this, v.id)}
-                   onMouseLeave={this._setFocus.bind(this, "")}>
+                   >
                   {detail}
                   <PKer id={v.id} />
               </div>

@@ -79,30 +79,29 @@ header {
 	background: rgba($awesomeColor, 0.15);
 }
 .partyName {
-	flex: 1.2;
-  //text-align: center;
+  flex: 1.2;
   font-size: 14px;
   padding: 0 10px;
 }
-.nameFlex {
-	display: flex;
-}
 .party {
 	margin-right: 4px;
-	flex: 14px 0 0;
-}
-.partyTitle {
-	flex: 1;
 }
 @media all and (min-width: $positionTableWebBreak){
+	.nameFlex {
+		display: flex;
+	}
 	.party {
 		margin: 3px 4px 3px 0;
+		flex: 14px 0 0;
 	}
 	.partyName {
 		text-align: left;
-  	font-size: 16px;
+  		font-size: 16px;
 		padding: 10px 0;
 		margin-left: 10px;
+	}
+	.partyTitle {
+		flex: 1;
 	}
 }
 .position {
@@ -112,9 +111,6 @@ header {
 .record {
 	vertical-align: middle;
 	font-size: 0;
-}
-.record.empty {
-	//display: none;
 }
 @media all and (min-width: $positionTableWebBreak){
 	.record {

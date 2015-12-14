@@ -1,6 +1,6 @@
 export default function getPartiesMatchgameData(partyPositions, partyPromises, recordFirst){
     let MatchData = {};
-    let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower"];//Hmmm....
+    let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower", "courseGuide", "justiceReform"];//Hmmm....
 
     Object.keys(partyPromises).map((partyId, index)=>{
         
