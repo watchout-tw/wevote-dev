@@ -12,18 +12,26 @@ export default function getPartiesMatchgameData(partyPositions, partyPromises, r
         };
        
         issueList.map((issueName, i)=>{
-            //第八屆有這個政黨，並且使用者決定 recordFist
+            let promisePosition = partyPromises[partyId].positions[issueName].promise.position;;
+            //第八屆有這個政黨 & 有表態紀錄
             if(partyPositions[partyId]){
                 if(partyPositions[partyId].positions[issueName]){
+
+                    let recordPosition = partyPositions[partyId].positions[issueName].dominantPosition;
+                        
+                    //並且使用者決定 recordFist
                     if(recordFirst === true){
-                        let recordPosition = partyPositions[partyId].positions[issueName].dominantPosition;
+                        MatchData[partyId].positions[issueName] = recordPosition;
+                    }
+                    //或者還沒有承諾，就沒有衝突的問題
+                    if(promisePosition === "none"){
                         MatchData[partyId].positions[issueName] = recordPosition;
                     }
                 }
             }
-            //如果沒有，用承諾資料當作 match 基準
+            //如果判斷到現在還沒有資料，用承諾資料當作 match 基準
             if(!MatchData[partyId].positions[issueName]){
-                MatchData[partyId].positions[issueName] = partyPromises[partyId].positions[issueName].promise.position;
+                MatchData[partyId].positions[issueName] = promisePosition;
             }
 
         })
