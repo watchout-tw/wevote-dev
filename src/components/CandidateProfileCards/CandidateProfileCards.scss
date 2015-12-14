@@ -74,27 +74,3 @@
     vertical-align: top;
     padding: 0 10px;
 }
-/* 還沒回覆的，簡單呈現 */
-.simpleItems {
-    text-align: center;
-
-}
-.simpleItem, .simpleItem:visited {
-    display: inline-block;
-    background: white;
-    position: relative;
-    color: $black;
-    text-decoration: none;
-    padding: 0 0 0 24px;
-    margin: 3px;
-    width: 220px;
-    height: 80px;
-    vertical-align: top;
-    box-shadow: 2px 2px 20px 0 rgba(0,0,0,0.4);
-}
-.simpleItem:hover {
-    box-shadow: 2px 2px 20px 0 rgba(0,0,0,0.7);
-}
-.simpleItem .name {
-    padding: 12px 12px 0px 0;
-}

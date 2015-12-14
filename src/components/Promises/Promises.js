@@ -16,11 +16,12 @@ export default class Promises extends Component {
     render(){
       const styles = require('./Promises.scss');
       const {issues, promises, id} = this.props;
-      const {positions, bills} = promises;
-      
-      if(!positions){
+      if(!promises){//不是本屆參選人，沒有這樣資料
         return <div></div>
       }
+
+      const {positions, bills} = promises;
+      
       let postionItems = Object.keys(positions).map((issueName,i)=>{
           let pos = positions[issueName].promise.position;
           let statement = positions[issueName].promise.statement;

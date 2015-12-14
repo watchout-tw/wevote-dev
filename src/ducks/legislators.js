@@ -37,6 +37,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -64,6 +65,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -77,6 +79,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -118,6 +121,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -173,6 +177,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -200,6 +205,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -213,6 +219,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -281,6 +288,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -294,6 +302,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -321,6 +330,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -353,6 +363,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -366,6 +377,7 @@ const initialState = {
                 "endDate": "2013/7/15"
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -519,6 +531,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -574,6 +587,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -587,6 +601,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -600,6 +615,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -613,6 +629,7 @@ const initialState = {
                 "endDate": "2015/7/16"
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -639,6 +656,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -783,6 +801,7 @@ const initialState = {
                 "endDate": "2013/3/17"
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -810,6 +829,7 @@ const initialState = {
                 "endDate": "2014/2/1"
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -865,6 +885,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -878,6 +899,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -960,6 +982,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1006,6 +1029,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1019,6 +1043,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1059,6 +1084,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1072,6 +1098,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1099,6 +1126,7 @@ const initialState = {
                 "endDate": "2014/2/1"
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -1168,6 +1196,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1250,6 +1279,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1276,6 +1306,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1386,6 +1417,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1427,6 +1459,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1496,6 +1529,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1537,6 +1571,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1564,6 +1599,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1577,6 +1613,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1688,6 +1725,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
