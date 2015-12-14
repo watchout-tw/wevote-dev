@@ -12,10 +12,9 @@ import eng2url from '../../utils/eng2url';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 
 /*
-:category => {"records", "promises", "list"}
+:category => {"records", "promises"}
 歷史紀錄
 未來承諾
-不分區名單
 */
 
 @connect(

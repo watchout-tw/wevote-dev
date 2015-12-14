@@ -31,6 +31,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -79,6 +91,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -123,6 +147,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -176,6 +212,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -221,6 +269,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -274,6 +334,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -319,6 +391,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -372,6 +456,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -416,6 +512,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -469,6 +577,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -514,6 +634,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -567,6 +699,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -612,6 +756,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -665,6 +821,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -709,6 +877,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -762,6 +942,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -807,6 +999,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -860,6 +1064,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -905,6 +1121,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -958,6 +1186,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1003,6 +1243,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1056,6 +1308,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1101,6 +1365,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1154,6 +1430,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1203,6 +1491,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1247,6 +1547,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1300,6 +1612,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1345,6 +1669,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1398,6 +1734,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1443,6 +1791,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1496,6 +1856,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1540,6 +1912,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1593,6 +1977,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1638,6 +2034,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1691,6 +2099,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1736,6 +2156,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1789,6 +2221,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1834,6 +2278,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1887,6 +2343,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -1932,6 +2400,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -1985,6 +2465,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2029,6 +2521,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2082,6 +2586,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2126,6 +2642,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2179,6 +2707,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2224,6 +2764,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2277,6 +2829,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2322,6 +2886,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2375,6 +2951,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2419,6 +3007,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2472,6 +3072,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2517,6 +3129,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2570,6 +3194,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2619,6 +3255,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2663,6 +3311,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2716,6 +3376,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2761,6 +3433,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2814,6 +3498,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2858,6 +3554,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -2911,6 +3619,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -2956,6 +3676,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3009,6 +3741,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3058,6 +3802,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3102,6 +3858,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3155,6 +3923,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3200,6 +3980,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3253,6 +4045,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3297,6 +4101,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3350,6 +4166,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3394,6 +4222,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3447,6 +4287,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3492,6 +4344,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3545,6 +4409,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3590,6 +4466,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3643,6 +4531,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3688,6 +4588,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3741,6 +4653,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3786,6 +4710,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3839,6 +4775,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3884,6 +4832,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -3937,6 +4897,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -3982,6 +4954,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4035,6 +5019,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4080,6 +5076,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4133,6 +5141,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4178,6 +5198,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4231,6 +5263,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4276,6 +5320,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4329,6 +5385,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4374,6 +5442,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4427,6 +5507,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4472,6 +5564,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4525,6 +5629,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4570,6 +5686,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4623,6 +5751,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4668,6 +5808,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4721,6 +5873,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4770,6 +5934,18 @@ const initialState = {
                     "position": "aye",
                     "statement": "在核電廠上班的父親據理反對"
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4815,6 +5991,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4868,6 +6056,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -4913,6 +6113,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -4966,6 +6178,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5011,6 +6235,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5064,6 +6300,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5113,6 +6361,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5158,6 +6418,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5211,6 +6483,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5256,6 +6540,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5309,6 +6605,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5354,6 +6662,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5407,6 +6727,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5452,6 +6784,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5505,6 +6849,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5550,6 +6906,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5603,6 +6971,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5648,6 +7028,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5701,6 +7093,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5746,6 +7150,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5799,6 +7215,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5844,6 +7272,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5897,6 +7337,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -5942,6 +7394,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -5995,6 +7459,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6040,6 +7516,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6093,6 +7581,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6138,6 +7638,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6191,6 +7703,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6236,6 +7760,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6289,6 +7825,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6334,6 +7882,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6387,6 +7947,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6432,6 +8004,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6485,6 +8069,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6530,6 +8126,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6583,6 +8191,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6628,6 +8248,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6681,6 +8313,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6726,6 +8370,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6779,6 +8435,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6824,6 +8492,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6877,6 +8557,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -6922,6 +8614,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -6975,6 +8679,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7020,6 +8736,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7073,6 +8801,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7118,6 +8858,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7171,6 +8923,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7216,6 +8980,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7269,6 +9045,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7314,6 +9102,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7367,6 +9167,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7412,6 +9224,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7465,6 +9289,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7510,6 +9346,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7563,6 +9411,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7608,6 +9468,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7661,6 +9533,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7706,6 +9590,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7759,6 +9655,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7804,6 +9712,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7857,6 +9777,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -7902,6 +9834,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -7955,6 +9899,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8000,6 +9956,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8053,6 +10021,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8098,6 +10078,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8151,6 +10143,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8196,6 +10200,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8249,6 +10265,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8294,6 +10322,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8347,6 +10387,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8392,6 +10444,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8445,6 +10509,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8490,6 +10566,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8543,6 +10631,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8588,6 +10688,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8641,6 +10753,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8690,6 +10814,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8735,6 +10871,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8788,6 +10936,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8833,6 +10993,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -8886,6 +11058,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8935,6 +11119,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -8980,6 +11176,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9033,6 +11241,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9078,6 +11298,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9131,6 +11363,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9176,6 +11420,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9229,6 +11485,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9274,6 +11542,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9327,6 +11607,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9372,6 +11664,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9425,6 +11729,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9470,6 +11786,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9523,6 +11851,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9568,6 +11908,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9621,6 +11973,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9666,6 +12030,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9719,6 +12095,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9764,6 +12152,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9817,6 +12217,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9862,6 +12274,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -9915,6 +12339,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -9960,6 +12396,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10013,6 +12461,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10058,6 +12518,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10111,6 +12583,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10156,6 +12640,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10209,6 +12705,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10254,6 +12762,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10307,6 +12827,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10352,6 +12884,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10405,6 +12949,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10450,6 +13006,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10503,6 +13071,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10548,6 +13128,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10601,6 +13193,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10646,6 +13250,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10699,6 +13315,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10744,6 +13372,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10797,6 +13437,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10842,6 +13494,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10895,6 +13559,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -10940,6 +13616,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -10993,6 +13681,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11038,6 +13738,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11091,6 +13803,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11136,6 +13860,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11189,6 +13925,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11234,6 +13982,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11287,6 +14047,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11332,6 +14104,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11385,6 +14169,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11430,6 +14226,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11483,6 +14291,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11528,6 +14348,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11581,6 +14413,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11626,6 +14470,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11679,6 +14535,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11724,6 +14592,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11777,6 +14657,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11822,6 +14714,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11875,6 +14779,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -11920,6 +14836,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -11973,6 +14901,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12018,6 +14958,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12071,6 +15023,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12116,6 +15080,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12169,6 +15145,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12214,6 +15202,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12267,6 +15267,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12312,6 +15324,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12365,6 +15389,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12410,6 +15446,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12463,6 +15511,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12508,6 +15568,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12561,6 +15633,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12606,6 +15690,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12659,6 +15755,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12704,6 +15812,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12757,6 +15877,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12802,6 +15934,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12855,6 +15999,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12900,6 +16056,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -12953,6 +16121,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -12998,6 +16178,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13051,6 +16243,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13096,6 +16300,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13149,6 +16365,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13194,6 +16422,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13247,6 +16487,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13292,6 +16544,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13345,6 +16609,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13390,6 +16666,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13443,6 +16731,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13488,6 +16788,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13540,6 +16852,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13584,6 +16908,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13636,6 +16972,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13680,6 +17028,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13732,6 +17092,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13776,6 +17148,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13828,6 +17212,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13872,6 +17268,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -13925,6 +17333,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -13970,6 +17390,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14023,6 +17455,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14068,6 +17512,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14121,6 +17577,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14166,6 +17634,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14219,6 +17699,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14264,6 +17756,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14317,6 +17821,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14362,6 +17878,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14415,6 +17943,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14460,6 +18000,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14513,6 +18065,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14558,6 +18122,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14611,6 +18187,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14656,6 +18244,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14709,6 +18309,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14754,6 +18366,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14807,6 +18431,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14852,6 +18488,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -14905,6 +18553,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -14950,6 +18610,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15003,6 +18675,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15048,6 +18732,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15101,6 +18797,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15146,6 +18854,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15199,6 +18919,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15244,6 +18976,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15297,6 +19041,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15342,6 +19098,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15395,6 +19163,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15440,6 +19220,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15493,6 +19285,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15538,6 +19342,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15591,6 +19407,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15636,6 +19464,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15689,6 +19529,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15733,6 +19585,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15785,6 +19649,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15829,6 +19705,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15881,6 +19769,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -15925,6 +19825,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -15977,6 +19889,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16021,6 +19945,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16073,6 +20009,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16117,6 +20065,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16169,6 +20129,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16213,6 +20185,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16265,6 +20249,18 @@ const initialState = {
                     "position": "aye",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16309,6 +20305,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16361,6 +20369,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16405,6 +20425,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16457,6 +20489,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16501,6 +20545,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16553,6 +20609,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16597,6 +20665,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16649,6 +20729,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16693,6 +20785,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16745,6 +20849,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16789,6 +20905,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16841,6 +20969,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16885,6 +21025,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -16937,6 +21089,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -16981,6 +21145,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17033,6 +21209,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17077,6 +21265,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17129,6 +21329,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17173,6 +21385,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17225,6 +21449,18 @@ const initialState = {
                     "position": "aye",
                     "statement": "核四建造過程屢傳弊案，工程品質低落，若運轉後出現意外將會是台灣的災難。我主張停建核四，開發再生能源"
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17269,6 +21505,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17321,6 +21569,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17365,6 +21625,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17417,6 +21689,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17461,6 +21745,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17513,6 +21809,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17557,6 +21865,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17609,6 +21929,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17653,6 +21985,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17705,6 +22049,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17749,6 +22105,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17801,6 +22169,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17845,6 +22225,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17897,6 +22289,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -17941,6 +22345,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -17993,6 +22409,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -18037,6 +22465,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -18089,6 +22529,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -18133,6 +22585,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -18185,6 +22649,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -18229,6 +22705,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -18281,6 +22769,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -18325,6 +22825,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""
@@ -18377,6 +22889,18 @@ const initialState = {
                     "position": "none",
                     "statement": ""
                 }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
             }
         },
         "bills": [
@@ -18421,6 +22945,18 @@ const initialState = {
                 }
             },
             "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
                 "promise": {
                     "position": "none",
                     "statement": ""

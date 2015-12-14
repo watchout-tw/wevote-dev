@@ -1,6 +1,6 @@
 export default function getPeopleTableData(legislatorPositions, disctrictCandidates){
     let TableData = {};
-    let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower"];//Hmmm....
+    let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower", "courseGuide", "justiceReform"];//Hmmm....
     console.log(disctrictCandidates)
     console.log(legislatorPositions)
     
