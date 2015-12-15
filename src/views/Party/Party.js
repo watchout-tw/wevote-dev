@@ -216,7 +216,7 @@ class PartyPromises extends Component {
           <div className={styles.sectionTitle}>優先法案</div>
           <div>{billItems}</div>
           
-          <div className={`${styles.promiseMeta}`}>* 統計更新日期：2015/12/07。
+          <div className={`${styles.promiseMeta}`}>* 統計更新日期：2015/12/15。
                 <Link className={`${styles.ia} ${styles.bright}`} 
                       to={`/about/FAQ/`}>我們如何統計的</Link></div>
         </div>
