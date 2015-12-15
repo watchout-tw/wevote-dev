@@ -9,13 +9,14 @@ import eng2cht from '../../utils/eng2cht';
 @connect(
     state => ({
                  partyPromises: state.partyPromises,
-                 issues: state.issues
+                 issues: state.issues,
+                 dataMeta: state.dataMeta
                }),
     dispatch => bindActionCreators({}, dispatch))
 export default class Promises extends Component {
     render(){
       const styles = require('./Promises.scss');
-      const {issues, promises, id} = this.props;
+      const {issues, dataMeta, promises, id} = this.props;
       if(!promises){//不是本屆參選人，沒有這樣資料
         return <div></div>
       }
@@ -63,7 +64,7 @@ export default class Promises extends Component {
           <div className={styles.sectionTitle}>優先法案</div>
           <div>{billItems}</div>
           
-          <div className={`${styles.promiseMeta}`}>* 統計更新日期：2015/12/07。
+          <div className={`${styles.promiseMeta}`}>* 統計更新日期：{dataMeta.updateTime}。
                 <Link className={`${styles.ia} ${styles.bright}`} 
                       to={`/about/FAQ/`}>我們如何統計的</Link></div>
         </div>

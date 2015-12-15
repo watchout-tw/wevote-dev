@@ -42,7 +42,7 @@ export default class CandidateBuns extends Component {
                 <Link className={styles.bunItem}
                       key={`partybun-${category}-${candidate.id}-${i}`}
                       to={`/people/${candidate.id}/${category}/`}>
-                      <PeopleAvatar id={candidate.id} />
+                      <div className={styles.bunImg}><PeopleAvatar id={candidate.id} /></div>
                       <div>{candidate.name}</div>
                 </Link>
             )

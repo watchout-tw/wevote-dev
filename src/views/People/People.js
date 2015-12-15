@@ -92,7 +92,7 @@ export default class People extends Component {
     /////// NEEDS REFINE
     //頁面最下方看其他候選人
     let morePeopleSection;
-    if(currentIdentity.is9thCandidate){
+    if(currentIdentity.is9thCandidate){//是第九屆區域參選人
       morePeopleSection = (
           <div className={styles.bottomWrap}>
               <div>看{currentPeople.name}的競爭對手</div>
@@ -101,7 +101,7 @@ export default class People extends Component {
           </div>
       )
     }
-    if(currentIdentity.is8thProportional){
+    if(currentIdentity.is8thProportional){//在第八屆是不分區候選人
       let parties = legislators[id].parties;
       let partyCht = parties[parties.length-1].partyCht;
 
