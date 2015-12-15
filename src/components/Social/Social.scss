@@ -1,5 +1,4 @@
 @import '../../common.scss';
-
 .socialWrap {
 	width: 120px;
 	margin: 40px auto;
@@ -19,29 +18,5 @@
 	}
 	.shareText {
 		margin: 10px 10px 4px;
-	}
-}
-.watchoutLogo {
-	position: absolute;
-	top: 5px;
-	display: block;
-	float: left;
-	width: 32px;
-	height: 18px;
-	margin: 0 10px;
-	background: url(./images/watchout-logo-w.png);
-	background-size: auto 100%;
-	background-position: right top;
-	overflow: hidden;
-	text-indent: -500px;
-	cursor: pointer;
-
-	&:hover {
-		opacity: 0.5;
-	}
-}
-@media all and (min-width: 600px) {
-	.watchoutLogo {
-		width: 125px;
 	}
 }
