@@ -98,7 +98,7 @@ class EmbedIssues extends Component {
               <img src={flyingImg} className={styles.flyingImg} />
               <img src={goImg} className={styles.goImg} />
               <div className={styles.container}>
-                  <Missions showComingMission={true}
+                  <Missions showComingMission={false}
                             embed={true}
                             shipmentsType={"2"}/>
                   <MaXiCastle embed={true}/>
