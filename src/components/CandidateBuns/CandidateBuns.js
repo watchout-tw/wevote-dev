@@ -43,7 +43,8 @@ export default class CandidateBuns extends Component {
                       key={`partybun-${category}-${candidate.id}-${i}`}
                       to={`/people/${candidate.id}/${category}/`}>
                       <div className={styles.bunImg}><PeopleAvatar id={candidate.id} /></div>
-                      <div>{candidate.name}</div>
+                      <div className={`${styles.bunParty} ${styles.partyFlag} ${styles.small} ${styles[candidate.party]}`}></div>
+                      <div className={styles.bunName}>{candidate.name}</div>
                 </Link>
             )
 

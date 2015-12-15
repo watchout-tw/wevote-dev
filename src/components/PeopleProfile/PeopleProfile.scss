@@ -47,3 +47,15 @@
 		margin: 4px 0;
 	}
 }
+.candidateParty {
+	margin-top: 14px;
+
+	&:before {
+		content: '';
+		display: block;
+		margin: 0 auto 10px auto;
+		width: 2*$defaultFontSize;
+		height: 1px;
+		background: $grey;
+	}
+}

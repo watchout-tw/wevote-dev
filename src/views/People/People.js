@@ -93,6 +93,7 @@ export default class People extends Component {
     /////// NEEDS REFINE
     //頁面最下方看其他候選人
     let morePeopleSection;
+    // 順序為優先順序
     if(currentIdentity.is9thCandidate){//是第九屆區域參選人
       morePeopleSection = (
           <div className={styles.bottomWrap}>
@@ -102,7 +103,7 @@ export default class People extends Component {
           </div>
       )
     }
-    if(currentIdentity.is8thProportional){//在第八屆是不分區候選人
+    if(!morePeopleSection && currentIdentity.is8thProportional){//在第八屆是不分區候選人
       let parties = legislators[id].parties;
       let partyCht = parties[parties.length-1].partyCht;
 
@@ -115,7 +116,7 @@ export default class People extends Component {
         </div>
       )
     }
-    if(!currentIdentity.is9thCandidate && !currentIdentity.is8thProportional){
+    if(!morePeopleSection && !currentIdentity.is9thCandidate && !currentIdentity.is8thProportional){
       morePeopleSection =  (
         <div className={styles.bottomWrap}>
           <div>{currentPeople.name}沒有繼續參選下一屆的區域立委，看看這一區有誰選？</div>

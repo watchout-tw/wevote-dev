@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import { connect } from 'react-redux';
-
+import eng2cht from '../../utils/eng2cht';
 import cht2eng from '../../utils/cht2eng';
 import peopleInfo from '../../utils/peopleInfo';
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
@@ -63,10 +63,20 @@ export default class PeopleProfile extends Component {
     }
     let hasResignedText = (hasResigned===true) ? "已離職" : "";
     
-    //needs to refine
+    //年齡
     let ageItem = (info.ageText) ? <p>{info.ageText}</p> : "";
+    
     let legInfoItem = (info.legislatorTitle) ? <p>{info.legislatorTitle}</p> : "";
-    let candidateInfoItem = (info.candidateTitle) ? <p>{info.candidateTitle}</p> : "";
+    let candidateInfoItem = (info.candidateTitle) ? (
+      <div className={styles.candidateParty}>
+          <p>{info.candidateTitle}</p>
+          <div className={styles.partyEng}>
+              <div className={`${styles.partyFlag} ${styles.small} ${styles[candidateData.party]}`}></div>
+              <Link to={`/parties/${candidateData.party}/records/`} 
+                    className={`${styles.partyTitle} ${styles.ia} ${styles.black}`}>{eng2cht(candidateData.party)}</Link>
+          </div>
+      </div>) : "";
+
     return (
       <div className={styles.wrap}>
         <header>
