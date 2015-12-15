@@ -110,8 +110,8 @@ export default class People extends Component {
       morePeopleSection =  (
         <div className={styles.bottomWrap}>
           <div>
-              {currentPeople.name}是{partyCht}本屆不分區立委。
-              看看{partyCht}這一次的名單有哪些？
+              <div>{currentPeople.name}是{partyCht}本屆不分區立委。</div>
+              <Link to={`/parties/${cht2eng(partyCht)}`}>看{partyCht}這一屆的不分區名單。</Link>
           </div>
         </div>
       )

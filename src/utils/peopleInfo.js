@@ -15,16 +15,18 @@ export default function peopleInfo(name, age, a1, a2, isC, c1, c2) {
   if(age){
       ageText = (isCaucus ? '' : `${age}歲`);
   }
-  let legislatorTitle;
+  let legislatorTitle, legislatorDistrict;
   if(a1){
       legislatorTitle = (isCaucus ? '第八屆黨團' : `第八屆${district2cht(a1)}${a2}立委`);
+      legislatorDistrict = (isCaucus || a1 === 'Proportional') ? '' : `${district2cht(a1)}${a2}`;
   }
-  let candidateTitle = (isC ? (isCaucus ? '' : `2016第九屆${district2cht(c1)}${c2}立委候選人`) : '');
+  let candidateTitle = (isC ? (isCaucus ? '' : `${district2cht(c1)}${c2}`) : '');
 
   return {
     isCaucus: isCaucus,
     ageText: ageText,
     legislatorTitle: legislatorTitle,
+    legislatorDistrict: legislatorDistrict,
     candidateTitle: candidateTitle,
   }
 }

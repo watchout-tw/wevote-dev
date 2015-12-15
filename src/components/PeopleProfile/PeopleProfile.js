@@ -40,12 +40,13 @@ export default class PeopleProfile extends Component {
         hasResigned = legislatorData.hasResigned;
     }
     if(candidateData){
-      candidateDistrict1 = candidateData.districtArea;
-      candidateDistrict2 = candidateData.districtNo;
+        candidateDistrict1 = candidateData.districtArea;
+        candidateDistrict2 = candidateData.districtNo;
     }
     /* maybe move to contructor later */
     let info = peopleInfo(name, age, constituency1, constituency2, candidateData, candidateDistrict1, candidateDistrict2);
-        
+    
+    //第八屆政黨資訊
     let partiesItem;
     if(parties){
         partiesItem = (parties).map((p,index)=>{
@@ -61,15 +62,31 @@ export default class PeopleProfile extends Component {
             )
         })
     }
+    //是否已經離職（第八屆立委）
     let hasResignedText = (hasResigned===true) ? "已離職" : "";
     
     //年齡
     let ageItem = (info.ageText) ? <p>{info.ageText}</p> : "";
     
-    let legInfoItem = (info.legislatorTitle) ? <p>{info.legislatorTitle}</p> : "";
+    //第八屆立委資訊
+    let legInfoItem;
+    if(info.legislatorTitle && info.legislatorDistrict){//區域立委
+        legInfoItem = <p>第八屆
+        <Link to={`/constituencies/${constituency1}/${constituency2}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {info.legislatorDistrict}
+        </Link>立委</p>;
+    }
+    if(info.legislatorTitle && !info.legislatorDistrict){//不分區或黨團
+        legInfoItem = <p>{info.legislatorTitle}</p>;
+    }
+
+    //第九屆參選資訊
     let candidateInfoItem = (info.candidateTitle) ? (
       <div className={styles.candidateParty}>
-          <p>{info.candidateTitle}</p>
+          <p>2016第九屆
+              <Link to={`/constituencies/${candidateDistrict1}/${candidateDistrict2}/`}
+                    className={`${styles.ia} ${styles.line} ${styles.black}`}>{info.candidateTitle}</Link>立委候選人</p>
           <div className={styles.partyEng}>
               <div className={`${styles.partyFlag} ${styles.small} ${styles[candidateData.party]}`}></div>
               <Link to={`/parties/${candidateData.party}/records/`} 
