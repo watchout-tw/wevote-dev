@@ -1,7 +1,7 @@
 export default function getMatchgamePartyData(partyPositions, partyPromises){
     let TableData = {};
     //表格會有的議題
-    let issueList = ["courseGuide","justiceReform","marriageEquality", "recall", "referendum", "nuclearPower"];
+    let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower","courseGuide","justiceReform"];
     
     Object.keys(partyPromises).map((partyId, index)=>{
         
