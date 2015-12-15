@@ -21,8 +21,9 @@ const districts = {
     "MZG": "澎湖縣",
     "KNH": "金門縣",
     "MFK": "連江縣",
-    "LAB":"平地原住民",
-    "MAB":"山地原住民" 
+    "LAB": "平地原住民",
+    "MAB": "山地原住民",
+    "Proportional": "全國不分區"
 }
 
 export default function district2cht(districtCht){

@@ -46,6 +46,7 @@ export default class People extends Component {
     //立委基本資料
     const {legislators, candidates, people} = this.props;
     const currentPeople = people[id];
+    //是否為第八屆立委，是否為第九屆區域立委參選人
     let currentIdentity = identity(legislators, candidates, id);
 
     //頁面最下方要呈現的候選人選區資料

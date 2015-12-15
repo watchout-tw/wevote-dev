@@ -1,4 +1,5 @@
 import district2cht from './district2cht';
+
 export default function peopleInfo(name, age, a1, a2, isC, c1, c2) {
   const NATIONAL = 'NATIONAL';
   const NA = 'N/A';
@@ -18,7 +19,7 @@ export default function peopleInfo(name, age, a1, a2, isC, c1, c2) {
   if(a1){
       legislatorTitle = (isCaucus ? '第八屆黨團' : `第八屆${district2cht(a1)}${a2}立委`);
   }
-  let candidateTitle = (isC === true ? (isCaucus ? '' : `2016第九屆${c1}${c2}立委候選人`) : '');
+  let candidateTitle = (isC ? (isCaucus ? '' : `2016第九屆${district2cht(c1)}${c2}立委候選人`) : '');
 
   return {
     isCaucus: isCaucus,

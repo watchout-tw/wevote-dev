@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import cht2eng from '../../utils/cht2eng';
 import peopleInfo from '../../utils/peopleInfo';
-
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 @connect(
     state => ({
@@ -45,7 +44,7 @@ export default class PeopleProfile extends Component {
       candidateDistrict2 = candidateData.districtNo;
     }
     /* maybe move to contructor later */
-    let info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateDistrict1, candidateDistrict2);
+    let info = peopleInfo(name, age, constituency1, constituency2, candidateData, candidateDistrict1, candidateDistrict2);
         
     let partiesItem;
     if(parties){
@@ -67,7 +66,7 @@ export default class PeopleProfile extends Component {
     //needs to refine
     let ageItem = (info.ageText) ? <p>{info.ageText}</p> : "";
     let legInfoItem = (info.legislatorTitle) ? <p>{info.legislatorTitle}</p> : "";
-    
+    let candidateInfoItem = (info.candidateTitle) ? <p>{info.candidateTitle}</p> : "";
     return (
       <div className={styles.wrap}>
         <header>
@@ -76,14 +75,13 @@ export default class PeopleProfile extends Component {
             <div className={styles.peopleInfo}>
               <div className={styles.peopleName}>
                 <Link to={`/people/${id}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{name}</Link>
-               
               </div>
               <div className={styles.peopleDetail}>
-                {ageItem}
-                {legInfoItem}
-                <div>{partiesItem}</div>
-                <p>{hasResignedText}</p>
-                
+                  {ageItem}
+                  {legInfoItem}
+                  <div>{partiesItem}</div>
+                  <p>{hasResignedText}</p>
+                  {candidateInfoItem}
               </div>
             </div>
           </div>
