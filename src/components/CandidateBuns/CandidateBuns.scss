@@ -5,17 +5,43 @@
 }
 .bunItem, .bunItem:visited {
 	display: inline-block;
-	margin: 4px;
 	background: white;
+	margin: 4px;
 	padding: 10px;
 	width: 120px;
 	text-decoration: none;
 	color: $black;
 	box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
 	cursor: pointer;
+	position: relative;
 }
 .bunItem:hover {
 	box-shadow: 2px 2px 0 0 rgba(0,0,0,0.22);
+}
+.currentInfo {
+	position: absolute;
+    top: 0px;
+    left: 0;
+    color: white;
+    padding: 2px 4px;
+}
+.currentInfoText {
+	z-index: 1;
+	font-size: 14px;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 30px;
+}
+.currentInfoTriangle:before {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 30px solid #C1271D;
+    border-left: 30px solid #C1272D;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
 }
 .bunImg {
 	height: 90px;

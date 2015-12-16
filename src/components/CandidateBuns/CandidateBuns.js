@@ -8,9 +8,13 @@ import PeopleAvatar from '../PeopleAvatar/PeopleAvatar';
 
 import eng2url from '../../utils/eng2url';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
+import identity_district from '../../utils/identity_district';
 
 @connect(
-    state => ({ candidates: state.candidates }),
+    state => ({ 
+      candidates: state.candidates,
+      legislators: state.legislators
+    }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class CandidateBuns extends Component {
@@ -23,9 +27,9 @@ export default class CandidateBuns extends Component {
   }
   render() {
     const styles = require('./CandidateBuns.scss');
-    const {category, exclude, areaNo} = this.props;
+    const {legislators, category, exclude, area, areaNo} = this.props;
     const {candidateList} = this.state;
-    console.log(candidateList)
+    //console.log(candidateList)
 
     if(!candidateList) return <div></div>;
 
@@ -34,14 +38,28 @@ export default class CandidateBuns extends Component {
         
         if(Number(candidate.id) === Number(exclude)) return;
 
+        //現任資料
+        let currentInfo;
+        let isCurrent = identity_district(legislators[candidate.id], area, areaNo);
+        if(isCurrent === 'D'){
+            currentInfo = (
+                <div className={styles.currentInfo}>
+                    <div className={styles.currentInfoText}>現任</div>
+                    <div className={styles.currentInfoTriangle}></div>
+                </div>
+            );
+        }
+
         return (
-            <Link className={styles.bunItem}
-                  key={`partybun-${category}-${candidate.id}-${i}`}
+            <Link key={`partybun-${category}-${candidate.id}-${i}`}
+                  className={styles.bunItem}
                   to={`/people/${candidate.id}/${category}/`}>
+                   {currentInfo}
                   <div className={styles.bunImg}><PeopleAvatar id={candidate.id} /></div>
                   <div className={`${styles.bunParty} ${styles.partyFlag} ${styles.small} ${styles[candidate.party]}`}></div>
                   <div className={styles.bunName}>{candidate.name}</div>
             </Link>
+            
         )
 
     });

@@ -47,11 +47,17 @@ export default class PeoplePhoto extends Component {
       imgURL = require("./images/default.png");
     }
 
+    //如果不是現任立委，要加上「參選人」
+    let candidateOnly = "";
+    if(!legislators[id]){
+      candidateOnly = "參選人";
+    }
+
     return (
         <div className={styles.peoplePhoto}>
             <img className={`is-${party}`}
                  src={imgURL}
-                 alt={`${name}-${eng2party_short(party)}立委${name}`} />
+                 alt={`${name}-${eng2party_short(party)}立委${candidateOnly}${name}`} />
         </div>
 
     );
