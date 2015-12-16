@@ -61,7 +61,7 @@ export default class Constituency extends Component {
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               
-              <h2 className={styles.electCount}>本區將選出 {shouldElect} 位勇者</h2>
+              <h3 className={styles.electCount}>本區將選出 {shouldElect} 位勇者</h3>
               <div className={styles.currentLegislators}>現任代表：{currentLegislatorItems}</div>
               
               <CandidateProfileCards area={area}

@@ -13,11 +13,13 @@ export default class DistrictFlag extends Component {
     }
 
     return (
-      <div className={styles.areaFlag}>
-          <div>{areaCht}</div>
-          {noItem}
-          <Link to={`/constituencies/`} 
-                className={styles.flagMeta}>看其他選區</Link>
+      <div className={styles.wrap}>
+          <div className={styles.areaFlag}>
+              <div>{areaCht}</div>
+              {noItem}
+              <Link to={`/constituencies/`} 
+                    className={styles.flagMeta}>看其他選區</Link>
+          </div>
       </div>
     );
   }

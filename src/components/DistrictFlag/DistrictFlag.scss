@@ -1,4 +1,10 @@
 @import '../../common.scss';
+.wrap {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    height: 150px;
+}
 .areaFlag {
     background-image: url('./images/flag.png');
 	background-size: 100% auto;
@@ -8,7 +14,9 @@
     padding: 70px 0;
     font-size: 22px;
     margin: 0 auto 10px auto;
-    position: relative;
+    position: absolute;
+    top: 10px;
+    right: 0;
 }
 .flagMeta, .flagMeta:visited {
     font-size: 14px;
