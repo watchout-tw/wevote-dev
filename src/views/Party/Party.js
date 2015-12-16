@@ -9,6 +9,7 @@ import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 import Promises from '../../components/Promises/Promises.js';
+
 import PartyBuns from '../../components/PartyBuns/PartyBuns.js';
 
 import eng2url from '../../utils/eng2url';

@@ -65,6 +65,7 @@ const initialState = {
         "name": "孔文吉",
         "party": "KMT",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -125,6 +126,7 @@ const initialState = {
         "name": "王廷升",
         "party": "KMT",
         "districtArea": "HUN",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -490,6 +492,7 @@ const initialState = {
         "name": "吳育仁",
         "party": "KMT",
         "districtArea": "CYC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -855,6 +858,7 @@ const initialState = {
         "name": "李俊俋",
         "party": "DPP",
         "districtArea": "CYC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -1525,6 +1529,7 @@ const initialState = {
         "name": "柯建銘",
         "party": "DPP",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -1890,6 +1895,7 @@ const initialState = {
         "name": "高金素梅",
         "party": "NSU",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -2499,6 +2505,7 @@ const initialState = {
         "name": "陳雪生",
         "party": "KMT",
         "districtArea": "MFK",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -2620,6 +2627,7 @@ const initialState = {
         "name": "陳歐珀",
         "party": "DPP",
         "districtArea": "ILA",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -2985,6 +2993,7 @@ const initialState = {
         "name": "楊曜",
         "party": "DPP",
         "districtArea": "MZG",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -3289,6 +3298,7 @@ const initialState = {
         "name": "廖國棟",
         "party": "KMT",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -3532,6 +3542,7 @@ const initialState = {
         "name": "劉櫂豪",
         "party": "DPP",
         "districtArea": "TTT",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -3836,6 +3847,7 @@ const initialState = {
         "name": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -4079,6 +4091,7 @@ const initialState = {
         "name": "蕭美琴",
         "party": "DPP",
         "districtArea": "HUN",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -4200,6 +4213,7 @@ const initialState = {
         "name": "簡東明",
         "party": "KMT",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -16826,6 +16840,7 @@ const initialState = {
         "name": "林為洲",
         "party": "KMT",
         "districtArea": "HSZ",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -16886,6 +16901,7 @@ const initialState = {
         "name": "卓恩宗",
         "party": "FHL",
         "districtArea": "HSZ",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -16946,6 +16962,7 @@ const initialState = {
         "name": "李宗華",
         "party": "MCFAP",
         "districtArea": "HSZ",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -17006,6 +17023,7 @@ const initialState = {
         "name": "鄭永金",
         "party": "NONE",
         "districtArea": "HSZ",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -17066,6 +17084,7 @@ const initialState = {
         "name": "邱靖雅",
         "party": "MKT",
         "districtArea": "HSZ",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -17126,6 +17145,7 @@ const initialState = {
         "name": "黃秀龍",
         "party": "NONE",
         "districtArea": "HSZ",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -17186,6 +17206,7 @@ const initialState = {
         "name": "范振揆",
         "party": "CHTY",
         "districtArea": "HSZ",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -17246,6 +17267,7 @@ const initialState = {
         "name": "蘇雯英",
         "party": "NHSA",
         "districtArea": "HSZ",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -19563,6 +19585,7 @@ const initialState = {
         "name": "邱錫奎",
         "party": "NONE",
         "districtArea": "ILA",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -19623,6 +19646,7 @@ const initialState = {
         "name": "李志鏞",
         "party": "KMT",
         "districtArea": "ILA",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -19683,6 +19707,7 @@ const initialState = {
         "name": "吳紹文",
         "party": "GSD",
         "districtArea": "ILA",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -19743,6 +19768,7 @@ const initialState = {
         "name": "孫博萮",
         "party": "NONE",
         "districtArea": "ILA",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -19803,6 +19829,7 @@ const initialState = {
         "name": "郭儒釗",
         "party": "MCFAP",
         "districtArea": "ILA",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -19863,6 +19890,7 @@ const initialState = {
         "name": "林獻山",
         "party": "PEUP",
         "districtArea": "ILA",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -19923,6 +19951,7 @@ const initialState = {
         "name": "吳子維",
         "party": "DASG",
         "districtArea": "ILA",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -19983,6 +20012,7 @@ const initialState = {
         "name": "黄師鵬",
         "party": "NONE",
         "districtArea": "HUN",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20043,6 +20073,7 @@ const initialState = {
         "name": "楊悟空",
         "party": "PEUP",
         "districtArea": "HUN",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20103,6 +20134,7 @@ const initialState = {
         "name": "陳建閣",
         "party": "KMT",
         "districtArea": "TTT",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20163,6 +20195,7 @@ const initialState = {
         "name": "陳雙全",
         "party": "KMT",
         "districtArea": "MZG",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20223,6 +20256,7 @@ const initialState = {
         "name": "冼義哲",
         "party": "TP",
         "districtArea": "MZG",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": true,
         "positions": {
@@ -20283,6 +20317,7 @@ const initialState = {
         "name": "黃漢東",
         "party": "TLP",
         "districtArea": "MZG",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20343,6 +20378,7 @@ const initialState = {
         "name": "楊鎮浯",
         "party": "KMT",
         "districtArea": "KNH",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20403,6 +20439,7 @@ const initialState = {
         "name": "陳滄江",
         "party": "DPP",
         "districtArea": "KNH",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20463,6 +20500,7 @@ const initialState = {
         "name": "張中法",
         "party": "NONE",
         "districtArea": "KNH",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20523,6 +20561,7 @@ const initialState = {
         "name": "洪志恒",
         "party": "NONE",
         "districtArea": "KNH",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20583,6 +20622,7 @@ const initialState = {
         "name": "陳德輝",
         "party": "TLP",
         "districtArea": "KNH",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20643,6 +20683,7 @@ const initialState = {
         "name": "高丹樺",
         "party": "MCFAP",
         "districtArea": "KNH",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20703,6 +20744,7 @@ const initialState = {
         "name": "陳仲立",
         "party": "NONE",
         "districtArea": "KNH",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20763,6 +20805,7 @@ const initialState = {
         "name": "吳成典",
         "party": "NP",
         "districtArea": "KNH",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20823,6 +20866,7 @@ const initialState = {
         "name": "蘇柏豪",
         "party": "TP",
         "districtArea": "MFK",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20883,6 +20927,7 @@ const initialState = {
         "name": "張春寶",
         "party": "CHTY",
         "districtArea": "MFK",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -20943,6 +20988,7 @@ const initialState = {
         "name": "林金官",
         "party": "NONE",
         "districtArea": "MFK",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21003,6 +21049,7 @@ const initialState = {
         "name": "蔡適應",
         "party": "DPP",
         "districtArea": "KEL",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21063,6 +21110,7 @@ const initialState = {
         "name": "郝龍斌",
         "party": "KMT",
         "districtArea": "KEL",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21123,6 +21171,7 @@ const initialState = {
         "name": "楊石城",
         "party": "MKT",
         "districtArea": "KEL",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21183,6 +21232,7 @@ const initialState = {
         "name": "劉文雄",
         "party": "PFP",
         "districtArea": "KEL",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21243,6 +21293,7 @@ const initialState = {
         "name": "歐崇敬",
         "party": "PFP",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21303,6 +21354,7 @@ const initialState = {
         "name": "鄭正鈐",
         "party": "KMT",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21363,6 +21415,7 @@ const initialState = {
         "name": "魏揚",
         "party": "MCFAP",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21423,6 +21476,7 @@ const initialState = {
         "name": "邱顯智",
         "party": "NPP",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": true,
         "positions": {
@@ -21483,6 +21537,7 @@ const initialState = {
         "name": "林家宇",
         "party": "FTP",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21543,6 +21598,7 @@ const initialState = {
         "name": "曾耀澂",
         "party": "NONE",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21603,6 +21659,7 @@ const initialState = {
         "name": "黃源甫",
         "party": "NONE",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21663,6 +21720,7 @@ const initialState = {
         "name": "王榮德",
         "party": "NONE",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21723,6 +21781,7 @@ const initialState = {
         "name": "吳淑敏",
         "party": "NONE",
         "districtArea": "HCC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21783,6 +21842,7 @@ const initialState = {
         "name": "翁壽良",
         "party": "NONE",
         "districtArea": "CYC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21843,6 +21903,7 @@ const initialState = {
         "name": "黃宏成台灣阿成世界偉人財神總統",
         "party": "NONE",
         "districtArea": "CYC",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21903,6 +21964,7 @@ const initialState = {
         "name": "陳瑩",
         "party": "DPP",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -21963,6 +22025,7 @@ const initialState = {
         "name": "吳國譽Rahic Amind",
         "party": "MKT",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": true,
         "hasReply": false,
         "positions": {
@@ -22023,6 +22086,7 @@ const initialState = {
         "name": "馬躍·比吼Mayaw·Biho",
         "party": "NONE",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22083,6 +22147,7 @@ const initialState = {
         "name": "達佶祐·卡造Takiyo·Kacaw",
         "party": "MCFAP",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22143,6 +22208,7 @@ const initialState = {
         "name": "林昊宜",
         "party": "PFP",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22203,6 +22269,7 @@ const initialState = {
         "name": "達摩·阿雄",
         "party": "NONE",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22263,6 +22330,7 @@ const initialState = {
         "name": "林金瑛",
         "party": "NHSA",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22323,6 +22391,7 @@ const initialState = {
         "name": "嘎礌·武拜·哈雅萬Galahe·Wubai·Hayawan",
         "party": "NONE",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22383,6 +22452,7 @@ const initialState = {
         "name": "林光義",
         "party": "TFNP",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22443,6 +22513,7 @@ const initialState = {
         "name": "林琮翰",
         "party": "KMT",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22503,6 +22574,7 @@ const initialState = {
         "name": "柯荏耀",
         "party": "NONE",
         "districtArea": "LAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22563,6 +22635,7 @@ const initialState = {
         "name": "尤命·蘇樣",
         "party": "CPP",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22623,6 +22696,7 @@ const initialState = {
         "name": "林世偉",
         "party": "NONE",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22683,6 +22757,7 @@ const initialState = {
         "name": "伊藍·明基努安",
         "party": "FHL",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22743,6 +22818,7 @@ const initialState = {
         "name": "瓦歷斯·貝林Walis·Perin",
         "party": "DPP",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22803,6 +22879,7 @@ const initialState = {
         "name": "林信義",
         "party": "FHL",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22863,6 +22940,7 @@ const initialState = {
         "name": "全承威",
         "party": "TIP",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {
@@ -22923,6 +23001,7 @@ const initialState = {
         "name": "曾華德",
         "party": "NONE",
         "districtArea": "MAB",
+        "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
         "positions": {

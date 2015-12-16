@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { connect } from 'react-redux';
 import eng2cht from '../../utils/eng2cht';
 import cht2eng from '../../utils/cht2eng';
+import district2url from '../../utils/district2url';
 import peopleInfo from '../../utils/peopleInfo';
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 @connect(
@@ -72,7 +73,7 @@ export default class PeopleProfile extends Component {
     let legInfoItem;
     if(info.legislatorTitle && info.legislatorDistrict){//區域立委
         legInfoItem = <p>第八屆
-        <Link to={`/constituencies/${constituency1}/${constituency2}/`}
+        <Link to={`/constituencies/${district2url(constituency1,constituency2)}/`}
               className={`${styles.ia} ${styles.line} ${styles.black}`}>
               {info.legislatorDistrict}
         </Link>立委</p>;
@@ -85,7 +86,7 @@ export default class PeopleProfile extends Component {
     let candidateInfoItem = (info.candidateTitle) ? (
       <div className={styles.candidateParty}>
           <p>2016第九屆
-              <Link to={`/constituencies/${candidateDistrict1}/${candidateDistrict2}/`}
+              <Link to={`/constituencies/${district2url(candidateDistrict1,candidateDistrict2)}/`}
                     className={`${styles.ia} ${styles.line} ${styles.black}`}>{info.candidateTitle}</Link>立委候選人</p>
           <div className={styles.partyEng}>
               <div className={`${styles.partyFlag} ${styles.small} ${styles[candidateData.party]}`}></div>

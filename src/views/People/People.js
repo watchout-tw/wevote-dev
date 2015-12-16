@@ -9,6 +9,7 @@ import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 import Promises from '../../components/Promises/Promises.js';
 import CandidateBuns from '../../components/CandidateBuns/CandidateBuns.js';
 
+import cht2eng from '../../utils/cht2eng';
 import eng2url from '../../utils/eng2url';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleDistrict from '../../utils/getPeopleDistrict';
@@ -111,7 +112,8 @@ export default class People extends Component {
         <div className={styles.bottomWrap}>
           <div>
               <div>{currentPeople.name}是{partyCht}本屆不分區立委。</div>
-              <Link to={`/parties/${cht2eng(partyCht)}`}>看{partyCht}這一屆的不分區名單。</Link>
+              <Link className={styles.partyLink}
+                    to={`/parties/${cht2eng(partyCht)}/list/`}>看{partyCht}這一屆的不分區名單。</Link>
           </div>
         </div>
       )
