@@ -22,10 +22,18 @@ export default class Constituency extends Component {
     const {area, areaNo} = this.props.params;
     let noItem = (areaNo) ? <div>第{areaNo}選區</div> : "";
 
+    //應選 x 名
+    let shouldElect = 1;
+    if(["LAB","MAB"].indexOf(area) !== -1){
+       shouldElect = 3;
+    }
+
     return (
       <div className={styles.wrap}>
           
           <div className={styles.mainContent}>
+              <h2 className={styles.electCount}>本區將選出 {shouldElect} 位勇者</h2>
+
               <DistrictFlag area={area} areaNo={areaNo} />
               <CandidateProfileCards area={area}
                                      areaNo={areaNo}/>
