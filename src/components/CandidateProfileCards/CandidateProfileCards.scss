@@ -3,15 +3,20 @@
 	position: relative;
     min-height: 300px;
 }
+.cardWrap {
+    display: inline-block;
+    margin: 30px 8px;
+}
+.currentInfo {
+    margin: 4px;
+}
 .cardItems {
 	text-align: center;
-	margin-top: 10vh;
 }
 .cardItem, .cardItem:visited {
 	display: inline-block;
     vertical-align: top;
-	margin: 30px 8px;
-    width: 200px;
+	width: 200px;
     height: 280px;
     background-image: url(./images/card.png);
     background-size: 100% 100%;

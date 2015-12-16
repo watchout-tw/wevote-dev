@@ -17,13 +17,17 @@
     z-index: -1;
 }
 .mainContent {
-    top: 50px;;
-    padding-top: 14vh;
+    padding-top: 50px;
     width: 100%;
     min-height: 100vh;
 }
 .electCount {
     text-align: center;
+    margin: 4px;
+}
+.currentLegislators {
+    text-align: center;
+    font-size: 14px;
 }
 .action {
     display: block;

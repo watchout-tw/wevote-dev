@@ -233,6 +233,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "TYN",
         "constituency2": "5",
         "hasResigned": false
     },
@@ -643,6 +644,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "TYN",
         "constituency2": "6",
         "hasResigned": false
     },
@@ -955,6 +957,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "TYN",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -1071,6 +1074,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "TYN",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -1252,6 +1256,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "TYN",
         "constituency2": "4",
         "hasResigned": false
     },
@@ -1320,6 +1325,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
+        "constituency1": "TYN",
         "constituency2": "2",
         "hasResigned": false
     },

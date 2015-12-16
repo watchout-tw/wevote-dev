@@ -1,15 +1,14 @@
 @import '../../common.scss';
 .areaFlag {
     background-image: url('./images/flag.png');
-	position: absolute;
-    background-size: 100% auto;
-    right: 0;
-    top: 0;
+	background-size: 100% auto;
     width: 200px;
     color: white;
     text-align: center;
     padding: 70px 0;
     font-size: 22px;
+    margin: 0 auto 10px auto;
+    position: relative;
 }
 .flagMeta, .flagMeta:visited {
     font-size: 14px;
@@ -20,11 +19,15 @@
     display: inline-block;
     
     position: absolute;
-    bottom: -10px;
+    bottom: 30px;
+    color: rgb(230,230,230);
     left: calc(50% - 35px);
     cursor: pointer;
     text-align: center;
 
     z-index: 1;
     
+}
+.flagMeta:hover {
+    color: white;
 }

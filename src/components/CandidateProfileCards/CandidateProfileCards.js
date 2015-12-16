@@ -5,17 +5,20 @@ import {connect} from 'react-redux';
 
 import people_name2id from '../../utils/people_name2id';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
+import identity_district from '../../utils/identity_district';
+
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 
 @connect(
     state => ({
+      legislators: state.legislators,
       candidates: state.candidates
     }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class CandidateProfileCards extends Component {
   constructor(props){ super(props)
-    const {candidates, area, areaNo} = props;
+    const {legislators, candidates, area, areaNo} = props;
     let candidateList = getDistrictCandidates(candidates, area, areaNo);
     this.state = {
         candidateList: candidateList
@@ -23,13 +26,28 @@ export default class CandidateProfileCards extends Component {
   }
  
   render() {
-    const styles = require("./CandidateProfileCards.scss")
+    const styles = require("./CandidateProfileCards.scss");
+    const {legislators, area, areaNo} = this.props;
     const {candidateList} = this.state;
 
     let candidateCardItems = (candidateList || []).map((value, index)=>{
-        return <Card id={value.id}
-                     key={`candiate-card-${index}`} 
-                     people={value}/>
+        let currentInfo;//本區現任立委 or 現任立委，但不是本區
+        
+        let isCurrent = identity_district(legislators[value.id], area, areaNo);
+        if(isCurrent === 'D'){
+           currentInfo = <h3 className={styles.currentInfo} >本區現任勇者代表</h3>;
+        }
+        if(isCurrent === 'C'){
+           currentInfo = <h3 className={styles.currentInfo} >現任勇者，但並非本區代表</h3>;
+        }
+        
+        return (
+          <div className={styles.cardWrap} key={`candiate-card-${index}`}>
+              {currentInfo}
+              <Card id={value.id}
+                    people={value}/>
+          </div>
+        );
     })
 
     return (

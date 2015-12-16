@@ -19,6 +19,15 @@ export default function peopleInfo(name, age, a1, a2, isC, c1, c2) {
   if(a1){
       legislatorTitle = (isCaucus ? '第八屆黨團' : `第八屆${district2cht(a1)}${a2}立委`);
       legislatorDistrict = (isCaucus || a1 === 'Proportional') ? '' : `${district2cht(a1)}${a2}`;
+
+      //處理縣市升格的問題，第八屆是「桃園縣」，第九屆是「桃園市」
+      if(legislatorTitle.indexOf("桃園市")!==-1){
+         legislatorTitle = legislatorTitle.replace("桃園市", "桃園縣");
+      }
+      if(legislatorDistrict.indexOf("桃園市")!==-1){
+         legislatorDistrict = legislatorDistrict.replace("桃園市", "桃園縣");
+      }
+
   }
   let candidateTitle = (isC ? (isCaucus ? '' : `${district2cht(c1)}${c2}`) : '');
 
