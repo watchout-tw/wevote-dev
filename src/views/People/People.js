@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 import Promises from '../../components/Promises/Promises.js';
+import Story from '../../components/Story/Story.js';
 import CandidateBuns from '../../components/CandidateBuns/CandidateBuns.js';
 
 import cht2eng from '../../utils/cht2eng';
@@ -15,9 +16,10 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleDistrict from '../../utils/getPeopleDistrict';
 import identity from '../../utils/identity';
 /*
-:category => {"records", "promises"}
+:category => {"records", "promises", "story"}
 歷史紀錄
 未來承諾
+人物誌
 */
 
 @connect(
@@ -87,6 +89,14 @@ export default class People extends Component {
     
       break;
 
+      case 'story':
+        content = <Story id={id}/>
+        title = `${currentPeople.name}-沃草人物誌-沃草2016立委出任務`;
+        description = `${currentPeople.name}-沃草人物誌-沃草2016立委出任務`;//TBD
+    
+      break;
+
+
       
     }
 
@@ -151,6 +161,8 @@ export default class People extends Component {
                         className={ category==="records" ? styles.active : ""}>歷史紀錄</Link></li>
               <li><Link to={`/people/${id}/promises/`} 
                         className={ category==="promises" ? styles.active : ""}>未來承諾</Link></li>
+              <li><Link to={`/people/${id}/story/`} 
+                        className={ category==="story" ? styles.active : ""}>人物誌</Link></li>
           </ul>
 
           <div className={styles.innerWrap}>
