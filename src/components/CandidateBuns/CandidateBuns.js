@@ -27,29 +27,25 @@ export default class CandidateBuns extends Component {
     const {candidateList} = this.state;
     console.log(candidateList)
 
-    if(!candidateList) return <div></div>
+    if(!candidateList) return <div></div>;
 
-    let bunItems;
-    if(areaNo === "N/A"){//TO BE REFINE
-        bunItems = <div>不分區立委</div>
 
-    }else{
-        bunItems = candidateList.map((candidate, i)=>{
-            console.log(candidate)
-            if(Number(candidate.id) === Number(exclude)) return;
+    let bunItems = candidateList.map((candidate, i)=>{
+        
+        if(Number(candidate.id) === Number(exclude)) return;
 
-            return (
-                <Link className={styles.bunItem}
-                      key={`partybun-${category}-${candidate.id}-${i}`}
-                      to={`/people/${candidate.id}/${category}/`}>
-                      <div className={styles.bunImg}><PeopleAvatar id={candidate.id} /></div>
-                      <div className={`${styles.bunParty} ${styles.partyFlag} ${styles.small} ${styles[candidate.party]}`}></div>
-                      <div className={styles.bunName}>{candidate.name}</div>
-                </Link>
-            )
+        return (
+            <Link className={styles.bunItem}
+                  key={`partybun-${category}-${candidate.id}-${i}`}
+                  to={`/people/${candidate.id}/${category}/`}>
+                  <div className={styles.bunImg}><PeopleAvatar id={candidate.id} /></div>
+                  <div className={`${styles.bunParty} ${styles.partyFlag} ${styles.small} ${styles[candidate.party]}`}></div>
+                  <div className={styles.bunName}>{candidate.name}</div>
+            </Link>
+        )
 
-        })
-    }
+    });
+  
     return (
         <div className={styles.wrap}>
            {bunItems}
