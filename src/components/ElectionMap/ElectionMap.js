@@ -5,152 +5,75 @@ import {connect} from 'react-redux';
 import district2eng from '../../utils/district2eng'
 import $ from 'jquery';
 
+const INACTIVE_COLOR = '#cccccc';
+const HOVER_COLOR = 'white';
+const SELECT_COLOR = 'lime';
 export default class ElectionMap extends Component {
   constructor(props){ super(props)
+    this.state = {
+      active_city : '',
+      hover_city : ''
+    }
+  }
+  _onMapEnter(name, e){
+    e.target.setAttribute("fill", HOVER_COLOR); 
+    this.setState({
+      hover_city: name
+    })
+  }
+  _onMapLeave(e){
+    e.target.setAttribute("fill", INACTIVE_COLOR); 
+    this.setState({
+      hover_city: ""
+    })
+  }
+  _hoverClass(city_id){
+    //決定是否顯示縣市名稱
+    const {hover_city} = this.state;
+    const styles = require('./ElectionMap.scss');
+    if(city_id === hover_city){
+       return styles.active;
+    }else{
+       return "";
+    }
+  }
+  _onMapClick(name, e){
+    console.log("active:"+name)
+    this.setState({
+      active_city: name
+    })
+  }
+  _activeClass(city_id){
+    //決定是否顯示詳細選區地圖（該縣市有一個以上選區）
+    const {active_city} = this.state;
+    const styles = require('./ElectionMap.scss');
+    if(city_id === active_city){
+       return styles.active;
+    }else{
+       return "";
+    }
   }
   
   componentDidMount(){
-      var $bigmap = $('#bigmap');
-      var $citymap = $('#citymap');
-      var $cities = $citymap.find('.city');
-      var $info = $citymap.find('#district-info');
-      var $close = $citymap.find('#close');
-      console.log("mount!")
-      
-
-      const INACTIVE_COLOR = 'white';
-      const HOVER_COLOR = '#cccccc';
-      const SELECT_COLOR = 'lime';
-
-
-      //所有人都是 hover 要有效果
+      //hover effect
       const allCities = ['TPE','NTC','KEL','TYN','HCC','HSZ','ZMI','TXG','CHW','NAN','YLN','CYC','CYI','TNN','KHH','PIF','ILA','HUN','TTT','MZG','KNH','MFK','LAB','MAB'];
       allCities.map((city, i)=>{
           let node = document.getElementById(city);
           //default color
-         
-          node.addEventListener("mouseover" , (e)=>{ 
-            e.target.setAttribute("fill", HOVER_COLOR); 
-
-          })
-          node.addEventListener("mouseleave", (e)=>{ 
-            e.target.setAttribute("fill", INACTIVE_COLOR);
-            console.log(e.target)
-            console.log("LEAVE")
-          })
+          node.setAttribute("fill", INACTIVE_COLOR); 
+          //event listener
+          node.addEventListener("mouseenter" , this._onMapEnter.bind(this, city));
+          node.addEventListener("mouseleave", this._onMapLeave.bind(this));
                     
       });
 
       //超過一個以上的選區, click show detail
       const interactiveCities = ['TPE','NTC','TYN','ZMI','TXG','CHW','NAN','YLN','CYI','TNN','KHH','PIF'];
       interactiveCities.map((city, i)=>{
-          //console.log(city)
-          $bigmap.find('#cities > #' + city)
-                 .map((k, el)=>{
-                      //console.log(el)
-                      el.addEventListener("click", ()=>{
-                         console.log("click!")
-                         
-                      })
-                       // var $this = $(this);
-                       // var thisCity = $this.attr('id');
-                       // $this.attr('class', 'active')
-                       // $citymap.show();
-                       // $cities.filter('#' + thisCity).show();
-                 });
-        
-          // console.log("---")
-          // console.log($cities)
-
-          $cities
-            .filter('#' + city)
-            .map((k, el)=>{
-              console.log($(el))
-              console.log(el)
-              console.log(k)
-              $(el).hover(function () {
-                console.log("HHHHHOVER-")
-              })
-              el.addEventListener("hover", function () {
-                console.log("===> HOVER-")
-              })
-               el.addEventListener("click", function () {
-                console.log("===> HOVER-")
-              })
-            
-            // var ids = $(this).attr('id').split('-');
-            // var thisCity = ids[0];
-            // var thisDistrict = parseInt(ids[1]);
-        
-            // var city = db[thisCity];
-            // var district = city.districts[thisDistrict - 1];
-            // var districtName = city.name + '第' + numerals[thisDistrict] + '選區';
-            // var districtDetail = '';
-            
-            // district.subdistricts.map((subdistrict, k)=>{
-            //   var html = '<div class="subdistrict">' + subdistrict + '</div>';
-            //   if(subdistrict.indexOf(':') != -1) {
-            //     // a subdistrict with more details
-            //     var buffer = subdistrict.split(':');
-            //     subdistrict = buffer[0];
-            //     buffer = buffer[1].split(',');
-            //     html = '<div class="subdistrict"><div>' + subdistrict + buffer.length + '里</div>' + '<div class="boroughs">' + buffer.map(function(v) { return '<div class="borough">' + v + '</div>'; }).join('') + '</div></div>'
-            //   }
-            //   districtDetail += html;
-            
-            // });
-            // $info.find('#name').html(districtName);
-            // $info.find('#detail').html(districtDetail);
-            // $info.show();
-            // $close.toggleClass('inactive');
-
-            // $info.hide();
-            // $close.toggleClass('inactive');
-
-          });
-
-          // $cities
-          //   .filter('#' + city)
-          //   .find('> [id^="' + city + '"]:not([id$="disabled"])')
-          //   .hover(function(k, el) {
-            
-          //   var ids = $(this).attr('id').split('-');
-          //   var thisCity = ids[0];
-          //   var thisDistrict = parseInt(ids[1]);
-        
-          //   var city = db[thisCity];
-          //   var district = city.districts[thisDistrict - 1];
-          //   var districtName = city.name + '第' + numerals[thisDistrict] + '選區';
-          //   var districtDetail = '';
-            
-          //   district.subdistricts.map((subdistrict, k)=>{
-          //     var html = '<div class="subdistrict">' + subdistrict + '</div>';
-          //     if(subdistrict.indexOf(':') != -1) {
-          //       // a subdistrict with more details
-          //       var buffer = subdistrict.split(':');
-          //       subdistrict = buffer[0];
-          //       buffer = buffer[1].split(',');
-          //       html = '<div class="subdistrict"><div>' + subdistrict + buffer.length + '里</div>' + '<div class="boroughs">' + buffer.map(function(v) { return '<div class="borough">' + v + '</div>'; }).join('') + '</div></div>'
-          //     }
-          //     districtDetail += html;
-            
-          //   });
-          //   $info.find('#name').html(districtName);
-          //   $info.find('#detail').html(districtDetail);
-          //   $info.show();
-          //   $close.toggleClass('inactive');
-          // }, function() {
-          //   $info.hide();
-          //   $close.toggleClass('inactive');
-          // });
+          let node = document.getElementById(city);
+          node.addEventListener("click" , this._onMapClick.bind(this, city));
       });
 
-      $close.click(function() {
-        $bigmap.find('.active').attr('class', '');
-        $info.hide();
-        $cities.hide();
-        $citymap.hide();
-      });
   }
   render() {
     const styles = require('./ElectionMap.scss');
@@ -163,17 +86,17 @@ export default class ElectionMap extends Component {
                   </g>
                   <g id="cities">
                       <g id="PIF">
-                        <path id="PIF-3" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M194.432,564.097
+                        <path id="PIF-3" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M194.432,564.097
                           l11.299-11.798l26.121,25.573l10.575-10.7l17.705,17.582l-4.102,4.025V606l-16,16.125V647l9.271,9.292l-13.271,13.25V681l-16,16.5
                           h-5.5l-5.5,5.25v13.75h-4V705l-10.924-10.924l-3.25,3.25l-3.826-3.826l8.25-8.25l-4.875-4.75l17.625-17.75V628l3-3.25V597
                           l-16.5-16.5L194.432,564.097z M168.03,587h7.333v-2.174l-3.33-3.33l-2.295,2.295v1.542h-1.708V587z"/>
-                        <polygon id="PIF-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="205.627,552.194
+                        <polygon id="PIF-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="205.627,552.194
                           228.613,529.5 238.03,529.5 238.03,544 226.78,555.5 216.53,555.5 212.803,559.227     "/>
-                        <polygon id="PIF-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="228.613,529.5
+                        <polygon id="PIF-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="228.613,529.5
                           225.038,526.008 244.655,506.5 250.53,512.5 276.03,512.5 276.03,520.5 289.53,520.5 301.655,532.5 314.03,532.5 314.03,548
                           296.113,565.5 279.53,565.5 260.204,584.826 242.488,567.11 231.79,577.809 212.803,559.227 216.53,555.5 226.53,555.5
                           238.03,544 238.03,529.5     "/>
-                        <g id="PIF-name">
+                        <g id="PIF-name" className={`${styles.cityName} ${this._hoverClass('PIF')}`} fill="#000000">
                           <path d="M152.925,606.916c-0.018,3.816-0.666,7.111-1.962,9.849l-1.116-0.973c1.188-2.305,1.782-5.257,1.8-8.876v-5.996h13.433
                             v4.303h-12.154V606.916z M152.925,602.145v1.854h10.894v-1.854H152.925z M157.822,612.623c-0.18,0.685-0.396,1.297-0.684,1.818
                             c-0.612,1.045-1.603,1.855-2.989,2.432l-0.72-1.135c1.278-0.54,2.16-1.242,2.664-2.143c0.145-0.307,0.271-0.631,0.379-0.973
@@ -203,33 +126,33 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="KHH">
-                        <polygon id="KHH-9" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="183.905,545.125
+                        <polygon id="KHH-9" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="183.905,545.125
                           187.28,548.5 190.53,548.5 186.03,543.958 186.03,531.5 189.03,531.5 189.03,539.5 201.03,539.5 201.03,549 197.53,552.5
                           188.196,552.5 182.488,546.792     "/>
-                        <polygon id="KHH-8" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="202.356,525.391
+                        <polygon id="KHH-8" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="202.356,525.391
                           188.748,539.5 201.03,539.5 201.03,536.5 205.03,536.5 205.03,528     "/>
-                        <polygon id="KHH-7" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="196.304,531.444
+                        <polygon id="KHH-7" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="196.304,531.444
                           188.999,523.737 186.03,526.608 186.03,531.5 189.03,531.5 189.03,539.5     "/>
-                        <polygon id="KHH-6" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="200.03,518.833
+                        <polygon id="KHH-6" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="200.03,518.833
                           191.993,526.87 196.435,531.313 202.357,525.391 200.06,523.095     "/>
-                        <path id="KHH-5" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M192.062,526.8
+                        <path id="KHH-5" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M192.062,526.8
                           l-3.092-3.092l-2.116,2.116L184.03,523v-6.448l4.018-3.989l9.154,9.208L192.062,526.8z M183.446,543.833V525.5h-1.417v18.333
                           H183.446z"/>
-                        <polygon id="KHH-4" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="194.53,564.5
+                        <polygon id="KHH-4" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="194.53,564.5
                           189.03,564.5 189.03,552.5 197.53,552.5 201.03,549.125 201.03,536.5 205.03,536.5 205.03,528 200.03,523.125 200.03,517
                           203.78,513.5 208.53,513.5 211.655,516.5 214.53,513.5 218.03,513.5 218.03,517 212.03,523.25 212.03,533 218.51,539.481    "/>
-                        <polygon id="KHH-3" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="189.753,514.278
+                        <polygon id="KHH-3" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="189.753,514.278
                           194.03,509.75 194.03,503.5 200.53,503.5 207.03,509.833 207.03,513.5 203.627,513.5 200.03,517 200.03,519 197.23,521.8    "/>
-                        <polygon id="KHH-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="200.03,455
+                        <polygon id="KHH-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="200.03,455
                           200.03,468 195.03,472.687 195.03,503.5 200.53,503.5 206.459,509.384 209.03,509.333 209.03,496.5 215.53,496.5 221.679,490.351
                           214.315,482.987 217.562,479.782 217.53,476.583 210.03,469 210.03,465    "/>
-                        <polygon id="KHH-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="217.53,476.5
+                        <polygon id="KHH-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="217.53,476.5
                           221.53,476.5 228.03,483 233.53,477.5 239.53,483.312 253.155,469.5 295.53,469.5 324.155,440.5 357.53,440.5 363.655,434.5
                           391.53,434.5 407.933,450.952 385.433,473.5 359.53,473.5 314.03,519.042 314.03,532.5 301.655,532.5 289.53,520.5 276.03,520.5
                           276.03,512.5 250.53,512.5 244.655,506.5 225.092,526.062 228.571,529.542 218.571,539.542 212.03,533 212.03,523 218.03,517
                           218.03,513.5 214.53,513.5 211.655,516.5 208.592,513.5 207.03,513.5 207.03,509.371 209.03,509.333 209.03,496.5 215.53,496.5
                           221.679,490.351 214.315,482.987 217.541,479.762     "/>
-                        <g id="KHH-name">
+                        <g id="KHH-name" className={`${styles.cityName} ${this._hoverClass('KHH')}`} fill="#000000">
                           <path d="M130.812,527.803h7.131v1.188h-15.899v-1.188h7.383c-0.181-0.505-0.396-0.955-0.612-1.369l1.422-0.252
                             C130.435,526.668,130.633,527.208,130.812,527.803z M133.55,542.746l-0.306-1.17l1.439,0.055c0.738,0,1.117-0.289,1.117-0.865
                             v-4.896h-11.596v6.932h-1.242v-8.066h14.08v6.302c0,1.134-0.666,1.71-1.98,1.71H133.55z M135.044,530.16v3.494h-10.064v-3.494
@@ -251,23 +174,23 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="TNN">
-                        <polygon id="TNN-5" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="204.03,459
+                        <polygon id="TNN-5" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="204.03,459
                           210.03,465 210.03,469 217.53,476.5 221.679,476.5 228.03,482.925 233.623,477.406 239.496,483.279 250.75,472.025
                           229.69,450.686 235.234,445.344 226.387,436.859 218.03,444.885 218.03,456.5 204.03,456.5     "/>
-                        <polygon id="TNN-4" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="204.03,459
+                        <polygon id="TNN-4" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="204.03,459
                           200.03,455 200.03,441.5 209.03,441.5 209.03,450.5 212.53,450.5 215.28,447.5 218.03,447.5 218.03,456.5 204.03,456.5    "/>
-                        <polygon id="TNN-3" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="200.03,441.5
+                        <polygon id="TNN-3" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="200.03,441.5
                           200.03,429 196.792,425.762 203.315,419.126 215.803,431.5 221.057,431.5 226.36,436.886 218.03,445.051 218.03,447.5
                           215.53,447.5 212.53,450.5 209.03,450.5 209.03,441.5     "/>
-                        <polygon id="TNN-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="196.25,426.125
+                        <polygon id="TNN-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="196.25,426.125
                           192.03,421.438 192.03,416 198.592,409.5 202.53,409.5 212.49,399.478 218.574,405.5 224.53,405.5 228.28,409.333
                           239.529,409.332 250.473,420.193 247.473,423.078 260.01,435.5 294.03,435.5 294.03,443.5 304.53,443.5 312.907,451.939
                           295.407,469.5 253.53,469.5 250.877,472.152 229.55,450.826 235.133,445.326 221.224,431.5 215.53,431.5 203.235,419.206    "/>
-                        <polygon id="TNN-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="212.545,399.533
+                        <polygon id="TNN-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="212.545,399.533
                           235.332,376.5 237.03,376.5 237.03,386 244.28,393.5 259.53,393.5 266.4,386.5 278.53,386.5 285.196,393.5 295.53,393.5
                           305.321,403.333 302.03,406.583 302.03,414 307.03,418.563 307.03,422.5 301.53,422.5 294.03,429.583 294.03,435.5 260.01,435.5
                           247.473,423.078 250.415,420.241 239.57,409.5 228.53,409.5 224.53,405.5 218.53,405.5     "/>
-                        <g id="TNN-name">
+                        <g id="TNN-name" className={`${styles.cityName} ${this._hoverClass('TNN')}`} fill="#000000">
                           <path d="M138.461,437.028c1.585-0.54,3.548-2.539,5.888-5.978l1.333,0.449c-1.62,2.305-3.259,4.142-4.88,5.475
                             c3.457-0.145,6.734-0.379,9.831-0.666c-0.684-0.973-1.386-1.891-2.106-2.719l1.17-0.559c1.549,1.801,2.989,3.799,4.321,5.978
                             l-1.26,0.612c-0.45-0.756-0.9-1.459-1.333-2.143c-3.799,0.342-8.03,0.594-12.711,0.773L138.461,437.028z M152.02,447.615h-1.314
@@ -284,17 +207,17 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="CYI">
-                        <polygon id="CYI-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="305.321,403.333
+                        <polygon id="CYI-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="305.321,403.333
                           305.28,390.5 316.03,390.5 316.03,383 311.03,378.25 311.03,375.625 302.659,375.63 295.03,368.5 288.03,368.5 288.03,353.5
                           315.03,353.5 315.03,356.5 329.03,356.5 329.03,366 360.78,397.75 371.53,387 381.53,397 373.03,405.5 373.03,422 381.53,430.5
                           391.53,430.5 391.53,434.5 363.655,434.5 357.53,440.5 324.155,440.5 312.907,451.939 304.499,443.5 294.03,443.5 294.03,429.583
                           301.53,422.5 307.03,422.5 307.03,418.563 302.03,414 302.03,406.583    "/>
-                        <polygon id="CYI-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="288.03,353.5
+                        <polygon id="CYI-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="288.03,353.5
                           268.53,353.5 260.492,345.5 255.03,345.5 255.03,350 258.363,353.367 248.89,362.86 248.905,370.875 240.831,370.927
                           235.264,376.5 237.03,376.5 237.03,386 244.28,393.5 259.53,393.5 266.465,386.5 278.53,386.5 285.363,393.5 295.53,393.5
                           305.03,403.312 305.03,390.5 300.03,390.5 300.03,383.5 295.03,383.5 295.03,378 300.059,373.202 295.193,368.5 288.03,368.5
                           "/>
-                        <g id="CYI-name">
+                        <g id="CYI-name" className={`${styles.cityName} ${this._hoverClass('CYI')}`} fill="#000000">
                           <path d="M191.367,353.644v-3.169h11.253v3.169h-1.53l-0.702,1.278h4.609v1.062h-11.218c-0.09,0.45-0.197,0.864-0.306,1.26h3.259
                             c-0.036,2.143-0.234,3.421-0.612,3.835c-0.396,0.415-1.08,0.63-2.053,0.63c-0.252,0-0.576-0.018-0.936-0.054l-0.271-1.044
                             c0.378,0.036,0.685,0.054,0.937,0.072c0.72,0,1.188-0.144,1.368-0.396c0.18-0.234,0.288-0.882,0.324-1.927h-2.395
@@ -335,16 +258,16 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="YLN">
-                        <polygon id="YLN-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="317.209,305.7
+                        <polygon id="YLN-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="317.209,305.7
                           323.196,311.688 334.342,311.688 338.821,316.167 338.821,319.208 357.53,337.917 363.946,337.917 371.03,345 371.03,356.5
                           367.53,356.5 352.03,371.684 352.03,377 359.455,384.5 365.53,384.5 369.78,388.75 360.78,397.75 329.03,366 329.03,356.5
                           315.03,356.5 315.03,353.5 305.946,353.5 314.53,344.5 343.03,344.5 343.03,339.833 339.53,336.5 333.946,336.5 324.53,327.5
                           316.842,327.5 311.53,322.5 306.03,322.5 306.03,316.917    "/>
-                        <polygon id="YLN-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="262.03,347.03
+                        <polygon id="YLN-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="262.03,347.03
                           262.03,338 294.03,305.583 294.03,303.5 290.03,303.5 290.03,301 294.696,296.5 310.53,296.5 318.488,304.417 306.03,316.917
                           306.03,322.5 311.53,322.5 316.842,327.5 324.53,327.5 333.946,336.5 339.53,336.5 343.03,339.833 343.03,344.5 314.53,344.5
                           305.946,353.5 268.53,353.5    "/>
-                        <g id="YLN-name">
+                        <g id="YLN-name" className={`${styles.cityName} ${this._hoverClass('YLN')}`} fill="#000000">
                           <path d="M238.268,310.381v1.134h-4.015c1.387,1.188,2.557,2.341,3.493,3.493l-0.883,0.9c-0.324-0.432-0.666-0.864-1.062-1.296
                             c-3.654,0.432-7.436,0.738-11.361,0.9l-0.342-1.062c0.324-0.054,0.612-0.162,0.864-0.342c0.757-0.594,1.585-1.458,2.521-2.593
                             h-4.645v-1.134H238.268z M237.53,299.938v1.08h-6.355v1.17h6.986v3.673H236.9v-2.628h-5.726v3.889h-1.261v-3.889h-5.726v2.628
@@ -377,18 +300,18 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="NAN">
-                        <polygon id="NAN-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="371.53,387
+                        <polygon id="NAN-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="371.53,387
                           381.53,397 373.03,405.5 373.03,422 381.53,430.5 391.53,430.5 391.53,434.5 407.933,450.952 423.958,434.929 430.03,441
                           476.263,394.766 460.013,378.5 451.772,386.75 431.53,366.5 418.03,366.5 418.03,357.5 414.78,354.083 420.281,348.749
                           420.285,343.589 410.369,353.506 393.196,336.333 403.446,326.083 392.196,314.833 376.03,331 376.03,340.173 381.03,340.167
                           381.03,346.5 371.03,346.5 371.03,356.5 367.53,356.5 352.03,371.684 352.03,377 359.455,384.5 365.53,384.5 369.78,388.75    "/>
-                        <polygon id="NAN-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="392.196,314.833
+                        <polygon id="NAN-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="392.196,314.833
                           392.196,311.125 395.8,307.521 395.8,304.875 400.905,304.875 413.509,317.479 422.405,317.479 429.095,310.789 433.78,310.789
                           439.78,304.789 446,311 457.03,311 465.457,319.427 470.665,314.219 504.405,314.219 513.42,323.234 525.905,323.234
                           530.958,328.287 511.138,348.107 517.03,353.999 476.263,394.766 460.006,378.508 451.768,386.746 431.526,366.504
                           418.03,366.504 418.03,357.5 414.696,354.167 420.197,348.666 420.197,343.589 410.325,353.462 393.196,336.333 403.446,326.083
                               "/>
-                        <g id="NAN-name">
+                        <g id="NAN-name" className={`${styles.cityName} ${this._hoverClass('NAN')}`} fill="#000000">
                           <path d="M445.444,337.982l0.216-1.8l1.314,0.18c-0.054,0.558-0.126,1.098-0.197,1.62h7.237v1.225h-7.418
                             c-0.107,0.63-0.233,1.242-0.378,1.818h6.842v9.939c0,1.134-0.54,1.71-1.603,1.71h-1.765l-0.342-1.26l1.675,0.036
                             c0.504,0,0.756-0.27,0.756-0.774v-8.426h-11.523v10.533h-1.278v-11.758h5.924c0.126-0.612,0.252-1.224,0.36-1.818h-7.274v-1.225
@@ -421,26 +344,26 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="CHW">
-                        <polygon id="CHW-4" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="370.03,293.875
+                        <polygon id="CHW-4" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="370.03,293.875
                           378.405,293.875 388.155,303.625 388.155,311.125 392.196,311.125 392.196,314.833 376.03,331 376.03,340.173 381.03,340.173
                           381.03,346.5 371.03,346.5 371.03,345 363.946,337.917 367.863,334 363.03,329.167 363.03,327.167 365.043,327.167
                           365.043,317.654 356.863,309.474 356.863,304.29 364.846,304.29 370.03,309.474 376.441,309.474 376.441,303.993 370.03,297.581
                               "/>
-                        <polygon id="CHW-3" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="311.616,297.581
+                        <polygon id="CHW-3" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="311.616,297.581
                           316.03,293.167 321.196,293.167 324.363,293.167 339.738,277.792 344.363,277.792 349.759,272.396 352.196,274.833
                           352.196,284.988 359.363,284.988 362.69,281.661 364.78,283.75 364.78,288 370.03,288 370.03,297.581 376.441,303.993
                           376.441,309.474 370.03,309.474 364.846,304.29 356.863,304.29 356.863,309.474 365.043,317.654 365.043,327.167 363.03,327.167
                           363.03,329.167 367.863,334 363.946,337.917 357.53,337.917 338.821,319.208 338.821,316.167 334.342,311.688 323.196,311.688
                           317.209,305.7 318.49,304.419    "/>
-                        <polygon id="CHW-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="399.28,285.125
+                        <polygon id="CHW-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="399.28,285.125
                           399.28,293 394.092,298.188 396.655,300.75 401.155,300.75 401.155,304.875 395.8,304.875 395.8,307.521 392.196,311.125
                           388.155,311.125 388.155,303.625 378.405,293.875 377.53,293.875 377.55,280.688 381.113,277.125 391.28,277.125    "/>
-                        <polygon id="CHW-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="377.53,293.875
+                        <polygon id="CHW-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="377.53,293.875
                           370.03,293.875 370.03,288 364.78,288 364.78,283.75 362.69,281.661 359.363,284.988 352.196,284.988 352.196,274.833
                           354.582,272.448 359.905,272.448 361.12,271.232 357.75,267.863 359.696,265.917 362.28,268.5 369.655,268.5 372.905,265.25
                           369.717,262.062 367.717,264.062 364.936,261.281 367.436,258.781 379.78,258.781 382.108,256.453 391.28,256.453 391.28,277.125
                           381.113,277.125 377.55,280.688    "/>
-                        <g id="CHW-name">
+                        <g id="CHW-name" className={`${styles.cityName} ${this._hoverClass('CHW')}`} fill="#000000">
                           <path d="M303.453,257.861v5.456h-2.899v1.206h3.835v1.134h-3.835v2.053h-1.26v-2.053h-4.34v-1.134h4.34v-1.206h-3.115v-5.456
                             H303.453z M299.149,252.694c-0.162-0.468-0.324-0.918-0.504-1.314l1.296-0.216c0.162,0.45,0.324,0.954,0.486,1.53h3.583v1.117
                             h-1.513c-0.144,0.648-0.306,1.26-0.521,1.836h2.377v1.08h-9.201v-1.08h2.503c-0.181-0.684-0.36-1.296-0.559-1.836h-1.513v-1.117
@@ -471,34 +394,34 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="TXG">
-                        <polygon id="TXG-8" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="429.813,270.033
+                        <polygon id="TXG-8" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="429.813,270.033
                           444.336,284.556 439.78,289.112 439.78,304.789 445.995,311.005 457.03,311.005 465.454,319.429 470.665,314.219 504.405,314.219
                           513.42,323.234 525.905,323.234 530.958,328.287 575.062,284.671 563.875,284.671 555.836,292.75 551.196,292.75 545.946,287.522
                           492.696,287.522 492.696,282.667 480.559,270.529 471.809,279.279 466.363,279.279 457.223,270.14 457.223,265.833 449.71,258.32
                           443.717,264.312 439.625,260.221     "/>
-                        <polygon id="TXG-7" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="439.78,289.112
+                        <polygon id="TXG-7" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="439.78,289.112
                           439.78,304.789 433.78,310.789 429.095,310.789 424.405,315.479 424.405,303.233 419.171,303.233 406.546,290.608 408.155,289
                           408.155,287.15 415.421,287.15 418.213,289.942 421.897,286.258 419.863,284.225 425.905,284.225 430.792,289.112     "/>
-                        <polygon id="TXG-6" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="414.147,278.508
+                        <polygon id="TXG-6" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="414.147,278.508
                           421.897,286.258 418.213,289.942 415.421,287.15 408.155,287.15 408.155,284.5     "/>
-                        <polygon id="TXG-5" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="419.863,284.225
+                        <polygon id="TXG-5" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="419.863,284.225
                           425.905,284.225 430.792,289.112 439.78,289.112 444.363,284.529 435.967,276.188 433.467,278.688 427.78,278.688
                           420.873,271.781 414.147,278.508     "/>
-                        <polygon id="TXG-4" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="408.155,284.5
+                        <polygon id="TXG-4" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="408.155,284.5
                           420.873,271.781 410.807,261.715 400.08,272.442 400.08,275.164 404.037,279.121 404.037,284.5     "/>
-                        <polygon id="TXG-3" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="449.71,258.32
+                        <polygon id="TXG-3" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="449.71,258.32
                           443.717,264.312 439.625,260.221 429.813,270.033 435.967,276.188 433.467,278.688 427.78,278.688 410.807,261.715
                           414.526,257.996 416.444,259.914 428.256,248.102 432.092,251.938 446.981,251.938 449.71,254.667    "/>
-                        <polygon id="TXG-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="391.28,256.453
+                        <polygon id="TXG-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="391.28,256.453
                           392.631,255.102 387.717,250.188 389.248,248.656 390.998,250.406 393.655,247.75 401.78,255.875 407.717,249.938 411.78,249.938
                           419.1,257.258 416.444,259.914 414.526,257.996 400.08,272.442 400.08,275.164 404.037,279.121 404.037,284.5 408.155,284.5
                           408.155,289 406.546,290.608 419.171,303.233 424.405,303.233 424.405,315.479 422.405,317.479 413.509,317.479 401.03,305
                           401.03,300.75 396.655,300.75 394.092,298.188 399.28,293 399.28,285.125 391.28,277.125     "/>
-                        <polygon id="TXG-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="419.1,257.258
+                        <polygon id="TXG-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="419.1,257.258
                           428.256,248.102 432.092,251.938 446.981,251.938 442.536,247.493 442.536,222.167 439.28,222.167 433.613,227.833
                           423.905,227.833 411.071,240.667 407.53,237.125 404.798,239.856 404.798,243.607 395.905,243.607 395.905,245.25 398.905,245.25
                           395.03,249.125 401.78,255.875 407.717,249.938 411.78,249.938    "/>
-                        <g id="TXG-name">
+                        <g id="TXG-name" className={`${styles.cityName} ${this._hoverClass('TXG')}`} fill="#000000">
                           <path d="M359.458,219.231c1.585-0.54,3.548-2.539,5.888-5.978l1.333,0.45c-1.62,2.305-3.259,4.141-4.88,5.474
                             c3.457-0.144,6.734-0.378,9.831-0.666c-0.684-0.972-1.386-1.891-2.106-2.719l1.17-0.558c1.549,1.8,2.989,3.799,4.321,5.978
                             l-1.26,0.612c-0.45-0.756-0.9-1.458-1.333-2.143c-3.799,0.342-8.03,0.594-12.711,0.774L359.458,219.231z M373.017,229.818h-1.314
@@ -511,18 +434,18 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="ZMI">
-                        <polygon id="ZMI-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="477.363,215.167
+                        <polygon id="ZMI-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="477.363,215.167
                           494.696,215.167 506.863,227.333 509.28,224.917 505.738,221.375 505.738,216.667 500.514,211.442 512.409,199.547
                           518.03,205.167 519.946,203.25 524.946,208.25 524.946,228.667 530.785,234.506 530.785,240.5 524.53,240.5 524.53,250
                           520.363,254.167 527.03,260.833 538.363,260.833 545.946,268.417 545.946,287.667 492.696,287.667 492.696,282.667
                           480.559,270.529 471.809,279.279 466.363,279.279 457.223,270.14 457.223,265.833 449.71,258.32 449.71,254.667 466.53,254.667
                           474.863,246.333 474.863,233.333 477.613,230.583 477.613,224.167 474.363,224.167 474.363,221.667 477.28,218.75     "/>
-                        <polygon id="ZMI-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="449.71,254.667
+                        <polygon id="ZMI-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="449.71,254.667
                           442.536,247.493 442.536,222.167 451.196,222.167 471.196,202.167 480.53,202.167 485.03,197.667 506.363,197.667
                           510.946,193.083 517.863,193.083 517.863,200.5 520.363,203 518.113,205.25 512.409,199.547 500.514,211.442 505.738,216.667
                           505.738,221.375 509.28,224.917 506.863,227.333 494.696,215.167 477.363,215.167 477.363,218.75 474.405,221.708
                           474.405,224.167 477.613,224.167 477.613,230.583 474.863,233.333 474.863,246.333 466.53,254.667    "/>
-                        <g id="ZMI-name">
+                        <g id="ZMI-name" className={`${styles.cityName} ${this._hoverClass('ZMI')}`} fill="#000000">
                           <path d="M416.113,186.946v-1.639h1.314v1.639h2.125v1.188h-2.125v1.621h-1.314v-1.621h-3.871v-1.188H416.113z M426.665,201.692
                             h-1.278v-1.116h-10.624v1.116h-1.26v-11.163h13.162V201.692z M419.427,194.94v-3.187h-4.664v3.187H419.427z M419.427,199.37
                             v-3.259h-4.664v3.259H419.427z M423.91,185.308v1.639h3.871v1.188h-3.871v1.621h-1.314v-1.621h-2.143v-1.188h2.143v-1.639H423.91
@@ -550,30 +473,30 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="TYN">
-                        <polygon id="TYN-6" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="612.092,192.688
+                        <polygon id="TYN-6" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="612.092,192.688
                           612.092,197.462 606.53,197.462 606.53,214 601.967,218.562 606.384,222.979 612.092,222.979 612.092,229.833 615.061,232.802
                           615.061,238.5 607.196,238.5 607.196,259.5 600.53,259.5 586.952,273.077 581.875,268 581.875,235.512 584.053,233.333
                           584.053,219.476 582.053,217.476 591.717,207.812 588.589,204.684 596.655,196.619 596.655,192.688 602.936,186.406 603.53,187
                           604.905,185.625 606.405,185.625 606.405,191.5 607.655,191.5 609.28,189.875    "/>
-                        <polygon id="TYN-5" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="596.655,192.688
+                        <polygon id="TYN-5" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="596.655,192.688
                           596.655,196.619 588.589,204.684 591.717,207.812 582.053,217.476 574.244,209.667 574.244,206.452 568.911,201.119
                           575.113,194.917 579.696,194.917 585.905,188.708 585.905,180 589.905,180 589.905,183 593.024,186.12 593.024,192.688    "/>
-                        <polygon id="TYN-4" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="603.53,183.75
+                        <polygon id="TYN-4" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="603.53,183.75
                           601.905,185.375 603.53,187 604.905,185.625 606.405,185.625 606.405,191.5 607.655,191.5 609.28,189.875 612.092,192.688
                           614.457,190.323 614.019,189.885 616.53,187.375 616.53,181.25 614.071,178.792 610.155,178.792 608.925,180.021 608.925,183.75
                               "/>
-                        <polygon id="TYN-3" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="585.905,180
+                        <polygon id="TYN-3" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="585.905,180
                           589.905,180 589.905,183 593.024,186.12 593.024,192.688 596.655,192.688 602.936,186.406 601.905,185.375 603.53,183.75
                           603.53,178.333 602.196,178.333 592.28,168.417 583.3,177.396     "/>
-                        <polygon id="TYN-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="575.113,194.917
+                        <polygon id="TYN-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="575.113,194.917
                           579.696,194.917 585.905,188.708 585.905,180 583.3,177.396 592.28,168.417 602.196,178.333 604.196,178.333 604.196,170.5
                           614.363,170.5 614.363,158.167 596.696,158.167 592.78,154.25 570.03,154.25 557.946,166.333 564.988,173.375 559.28,179.083
                           "/>
-                        <polygon id="TYN-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="614.363,158.167
+                        <polygon id="TYN-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="614.363,158.167
                           619.155,158.167 622.009,161.021 622.009,168.333 630.102,176.427 630.102,180.333 632.566,182.797 632.566,191.5 630.155,191.5
                           627.259,194.396 618.53,194.396 614.019,189.885 616.53,187.375 616.53,181.25 614.071,178.792 610.155,178.792 608.925,180.021
                           608.925,183.75 603.53,183.75 603.53,178.333 604.196,178.333 604.196,170.5 614.363,170.5     "/>
-                        <g id="TYN-name">
+                        <g id="TYN-name" className={`${styles.cityName} ${this._hoverClass('TYN')}`} fill="#000000">
                           <path d="M572.537,143.747h-1.26v-8.949c-0.541,1.729-1.225,3.295-2.071,4.699l-0.558-1.422c1.225-1.764,2.088-3.781,2.61-6.032
                             h-2.251v-1.206h2.27v-3.547h1.26v3.547h1.675v1.206h-1.675v1.062c0.738,0.828,1.477,1.765,2.232,2.809l-0.684,1.008
                             c-0.595-1.008-1.116-1.818-1.549-2.449V143.747z M577.507,127.344h1.242v8.03c-0.054,3.889-1.206,6.752-3.438,8.553l-1.009-0.9
@@ -598,7 +521,7 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="NTC">
-                        <polygon id="NTC-12" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="692.363,163.375
+                        <polygon id="NTC-12" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="692.363,163.375
                           694.259,165.271 694.259,181.625 696.23,183.596 700.405,183.596 700.405,185 697.001,188.403 697.001,190.78 682.03,190.78
                           682.03,193.049 683.703,194.722 681.497,196.929 681.497,205.844 693.654,218.001 699.405,218.001 699.405,214.865
                           697.535,212.995 702.155,208.375 704.905,211.125 711.905,211.125 719.905,219.125 726.342,225.562 722.092,229.812
@@ -606,45 +529,45 @@ export default class ElectionMap extends Component {
                           694.03,251.5 680.792,251.5 691.047,241.244 691.047,236.649 681.652,227.253 681.652,214.312 676.571,214.312 672.04,209.781
                           672.04,202.583 676.847,197.776 674.05,194.979 674.05,191.5 676.03,191.5 676.03,179 677.946,177.083 676.482,175.62
                           678.024,174.078 678.024,170.716 681.863,170.716 685.304,167.274 692.363,167.274     "/>
-                        <polygon id="NTC-11" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="676.571,214.312
+                        <polygon id="NTC-11" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="676.571,214.312
                           681.655,214.312 681.655,227.25 691.053,236.649 691.053,241.25 680.792,251.512 635.03,251.512 635.03,259.5 607.196,259.5
                           607.196,238.5 615.061,238.5 615.061,236.958 622.571,236.958 629.905,229.625 628.113,227.833 628.113,221.906 632.185,221.906
                           636.519,217.572 631.019,212.073 633.53,209.562 645.28,209.562 646.361,208.481 648.988,208.481 652.102,211.595 652.102,215.5
                           659.816,223.214 662.488,220.542 659.238,217.292 664.55,211.979 664.55,210.5 665.53,210.5 667.53,212.5 671.488,212.5
                           674.936,215.948     "/>
-                        <polygon id="NTC-10" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="638.312,209.562
+                        <polygon id="NTC-10" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="638.312,209.562
                           633.53,209.562 631.019,212.073 636.519,217.572 632.185,221.906 628.113,221.906 628.113,227.833 629.905,229.625
                           622.571,236.958 615.061,236.958 615.061,232.802 612.092,229.833 612.092,222.979 606.384,222.979 601.967,218.562 606.53,214
                           606.53,201.312 617.53,201.312 622.061,205.844 624.217,205.844 628.301,201.76 630.243,201.76 631.444,202.96 634.748,199.656
                           637.155,202.062 639.686,199.531 639.686,204.5 638.312,204.5     "/>
-                        <polygon id="NTC-9" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="646.38,200.5
+                        <polygon id="NTC-9" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="646.38,200.5
                           646.38,208.5 648.988,208.5 651.009,206.479 651.009,200.5    "/>
-                        <polygon id="NTC-8" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="639.686,199.531
+                        <polygon id="NTC-8" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="639.686,199.531
                           639.686,204.5 638.312,204.5 638.312,209.562 645.28,209.562 646.361,208.481 646.361,199.531    "/>
-                        <polygon id="NTC-7" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="636.592,193.669
+                        <polygon id="NTC-7" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="636.592,193.669
                           636.592,195.365 630.243,201.714 631.467,202.938 634.748,199.656 637.155,202.062 639.686,199.531 646.38,199.531
                           646.38,197.681 638.655,197.681 638.655,193.669    "/>
-                        <polygon id="NTC-6" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="638.655,193.669
+                        <polygon id="NTC-6" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="638.655,193.669
                           638.655,197.681 646.38,197.681 646.38,194.862 644.567,193.049 643.957,193.659     "/>
-                        <polygon id="NTC-5" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="606.53,201.312
+                        <polygon id="NTC-5" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="606.53,201.312
                           617.53,201.312 622.061,205.844 624.217,205.844 628.301,201.76 630.243,201.76 636.615,195.388 636.615,193.669 634.735,193.669
                           632.566,191.5 630.155,191.5 627.259,194.396 618.53,194.396 614.457,190.323 612.092,192.688 612.092,197.462 606.53,197.462
                           "/>
-                        <polygon id="NTC-4" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="632.566,191.5
+                        <polygon id="NTC-4" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="632.566,191.5
                           634.735,193.669 643.967,193.669 646.38,191.17 646.38,187.306 643.503,187.306 640.03,190.78 636.393,190.78 632.589,186.977
                           "/>
-                        <polyline id="NTC-3" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="646.38,187.306
+                        <polyline id="NTC-3" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="646.38,187.306
                           655.282,187.306 655.282,189.471 649.892,194.862 646.38,194.862 644.567,193.049 646.413,191.203 646.413,187.306    "/>
-                        <polygon id="NTC-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="643.503,187.306
+                        <polygon id="NTC-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="643.503,187.306
                           655.314,187.306 655.314,186.057 651.018,181.761 651.018,178.375 651.961,177.432 647.196,172.667 643.03,172.667
                           639.613,176.083 641.113,177.583 637.446,181.25    "/>
-                        <polygon id="NTC-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="622.196,160.833
+                        <polygon id="NTC-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="622.196,160.833
                           622.196,168.333 630.196,176.333 630.196,180.333 632.613,182.75 632.613,187 636.393,190.78 640.03,190.78 643.503,187.306
                           637.446,181.25 641.113,177.583 639.613,176.083 643.03,172.667 647.196,172.667 651.961,177.431 654.877,174.514
                           658.946,174.514 662.745,170.716 681.863,170.716 685.304,167.274 692.363,167.274 692.363,160.167 686.946,154.75
                           681.196,154.75 678.655,152.208 669.53,152.208 667.592,154.146 662.53,154.146 657.436,159.24 654.025,159.24 647.522,165.742
                           633.863,165.742 628.95,160.829    "/>
-                        <g id="NTC-name">
+                        <g id="NTC-name" className={`${styles.cityName} ${this._hoverClass('NTC')}`} fill="#000000">
                           <path d="M705.637,167.543c-0.45,1.818-1.08,3.403-1.891,4.753l-1.062-0.684c0.828-1.296,1.422-2.737,1.782-4.321L705.637,167.543
                             z M702.918,163.114v-1.17h2.089c-0.252-0.72-0.54-1.404-0.864-2.035l1.135-0.414c0.324,0.684,0.611,1.495,0.882,2.449h1.944
                             c0.307-0.774,0.576-1.584,0.811-2.449l1.17,0.396c-0.252,0.756-0.521,1.44-0.81,2.053h2.053v1.17h-3.529v1.999h3.223v1.17h-3.223
@@ -665,26 +588,26 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="TPE">
-                        <polygon id="TPE-8" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="651.03,206.5
+                        <polygon id="TPE-8" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="651.03,206.5
                           648.988,208.542 652.071,211.625 652.071,215.5 659.8,223.229 662.488,220.542 659.238,217.292 664.55,211.979 664.55,210.5
                           660.53,210.5 660.53,208.5 653.155,208.5     "/>
-                        <polygon id="TPE-7" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="657.03,208.5
+                        <polygon id="TPE-7" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="657.03,208.5
                           660.53,208.5 664.03,205 664.03,201 663.147,201.883 660.334,199.07 657.03,202.25     "/>
-                        <polygon id="TPE-6" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="651.03,200.5
+                        <polygon id="TPE-6" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="651.03,200.5
                           651.03,206.5 653.155,208.5 657.03,208.5 657.03,202.25 660.225,199.179 658.495,197.462 655.514,200.521     "/>
-                        <polygon id="TPE-5" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="649.892,194.862
+                        <polygon id="TPE-5" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="649.892,194.862
                           646.38,194.862 646.38,200.5 655.571,200.5 657.03,199.093 654.025,196.152 652.617,197.559    "/>
-                        <polygon id="TPE-4" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="674.03,191.5
+                        <polygon id="TPE-4" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="674.03,191.5
                           674.03,195 676.821,197.75 672.03,202.583 672.03,209.792 676.571,214.312 674.936,215.948 671.488,212.5 667.53,212.5
                           665.53,210.5 660.53,210.5 660.53,208.5 664.03,205 664.03,200.709 666.03,198.708 666.03,191.5    "/>
-                        <polygon id="TPE-3" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="654.025,196.152
+                        <polygon id="TPE-3" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="654.025,196.152
                           657.036,199.087 658.627,197.486 663.002,201.738 666.03,198.708 666.03,191.5 658.613,191.5     "/>
-                        <polygon id="TPE-2" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="659.113,186.5
+                        <polygon id="TPE-2" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="659.113,186.5
                           651.03,178.375 651.03,181.75 655.316,186.057 655.311,189.5 649.892,194.862 652.642,197.583 658.613,191.5 676.03,191.5
                           676.03,179 677.946,177.083 676.482,175.62 665.68,186.536    "/>
-                        <polygon id="TPE-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="651.03,178.375
+                        <polygon id="TPE-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="651.03,178.375
                           659.113,186.5 665.53,186.5 678.03,174.083 678.03,170.716 662.745,170.716 658.946,174.5 654.863,174.5    "/>
-                        <g id="TPE-name">
+                        <g id="TPE-name" className={`${styles.cityName} ${this._hoverClass('TPE')}`} fill="#000000">
                           <path d="M636.789,133.231c1.585-0.54,3.548-2.539,5.888-5.978l1.333,0.45c-1.62,2.305-3.259,4.141-4.88,5.474
                             c3.457-0.144,6.734-0.378,9.831-0.666c-0.684-0.972-1.386-1.891-2.106-2.719l1.17-0.558c1.549,1.8,2.989,3.799,4.321,5.978
                             l-1.26,0.612c-0.45-0.756-0.9-1.458-1.333-2.143c-3.799,0.342-8.03,0.594-12.711,0.774L636.789,133.231z M650.348,143.818h-1.314
@@ -700,7 +623,7 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="MAB">
-                        <polygon id="MAB-1" fill="#FFFFFF" points="621.678,708.5 610.116,728.525 598.555,708.5 578.732,742.833 601.855,742.833
+                        <polygon id="MAB-1" points="621.678,708.5 610.116,728.525 598.555,708.5 578.732,742.833 601.855,742.833
                           618.377,742.833 641.5,742.833     "/>
                         <g id="MAB-icon">
                           <polygon fill="none" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="578.732,742.833 598.555,708.5
@@ -708,7 +631,7 @@ export default class ElectionMap extends Component {
                           <polygon fill="none" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="601.855,742.833 621.678,708.5
                             641.5,742.833       "/>
                         </g>
-                        <g id="MAB-name">
+                        <g id="MAB-name" className={`${styles.cityName} ${this._hoverClass('MAB')}`} fill="#000000">
                           <path d="M581.097,755.351v13.108h-1.296v-1.207h-11.614v1.188h-1.296v-13.144h1.296v10.713h5.15v-13.612h1.332v13.612h5.132
                             v-10.659H581.097z"/>
                           <path d="M586.079,757.15v-4.789h1.296v4.789h2.017v1.262h-2.017v5.923c0.811-0.288,1.603-0.594,2.377-0.954v1.278
@@ -739,7 +662,7 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="LAB">
-                        <g id="LAB-name">
+                        <g id="LAB-name" className={`${styles.cityName} ${this._hoverClass('LAB')}`} fill="#000000">
                           <path d="M696.295,753.1v1.261h-6.698v6.806h7.383v1.242h-7.383v6.375h-1.332v-6.375h-7.238v-1.242h7.238v-6.806h-6.519V753.1
                             H696.295z M685.888,759.636l-1.206,0.595c-0.612-1.549-1.261-2.918-1.945-4.123l1.207-0.595
                             C684.627,756.773,685.275,758.142,685.888,759.636z M695.341,755.98c-0.54,1.423-1.261,2.809-2.143,4.178l-1.152-0.594
@@ -770,15 +693,15 @@ export default class ElectionMap extends Component {
                             c-0.234-0.539-0.432-1.134-0.612-1.764h-5.888V766.982z M755.997,754.217v2.826h10.317v-2.826H755.997z M755.997,758.268v2.521
                             h5.6c-0.18-0.792-0.306-1.639-0.396-2.521H755.997z"/>
                         </g>
-                        <polygon id="LAB-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="746.664,733.833
+                        <polygon id="LAB-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="746.664,733.833
                           701.737,733.833 696.541,742.833 751.861,742.833     "/>
                       </g>
                       <g id="KEL">
-                        <polygon id="KEL-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="682.03,190.78
+                        <polygon id="KEL-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="682.03,190.78
                           682.03,193.049 683.703,194.722 681.497,196.929 681.497,205.844 693.654,218.001 699.405,218.001 699.405,214.865
                           697.535,212.995 702.155,208.375 704.905,211.125 711.905,211.125 711.905,208.5 704.773,201.369 699.905,201.369
                           699.905,199.531 702.252,197.184 698.934,193.866 698.934,190.78    "/>
-                        <g id="KEL-name">
+                        <g id="KEL-name" className={`${styles.cityName} ${this._hoverClass('KEL')}`} fill="#000000">
                           <path d="M716.627,185.64v-1.369h1.261v1.369h6.212v-1.369h1.261v1.369h3.187v1.098h-3.187v5.96h3.457v1.152h-3.745
                             c0.864,1.08,2.214,1.926,4.015,2.539l-0.522,1.116c-2.232-0.936-3.816-2.161-4.753-3.655h-5.653
                             c-0.937,1.494-2.449,2.737-4.538,3.709l-0.666-1.098c1.782-0.685,3.097-1.549,3.961-2.611h-3.745v-1.152h3.457v-5.96h-3.187
@@ -803,10 +726,10 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="ILA">
-                        <path id="ILA-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M600.53,259.5h34.5v-8h59v-6
+                        <path id="ILA-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M600.53,259.5h34.5v-8h59v-6
                           h27v5h-17.5l-32.5,32.417V313l-19.417,19.5H636.53l-17.014,17.014l-19.092-19.092l-7.907,7.907l-28.86-28.86l-23.347,23.347
                           l-6.939-6.939L600.53,259.5z M702.5,275.354l4,4v-5h-4V275.354z"/>
-                        <g id="ILA-name">
+                        <g id="ILA-name" className={`${styles.cityName} ${this._hoverClass('ILA')}`} fill="#000000">
                           <path d="M695.738,306.144h3.312v1.224H683.17v-1.224h3.26v-9.975h9.309V306.144z M698.187,296.727h-1.26v-2.466h-11.848v2.466
                             h-1.261v-3.655h6.572c-0.216-0.594-0.469-1.134-0.756-1.621l1.35-0.216c0.252,0.541,0.486,1.152,0.721,1.837h6.481V296.727z
                              M694.424,299.554v-2.161h-6.68v2.161H694.424z M694.424,302.831v-2.125h-6.68v2.125H694.424z M694.424,306.144v-2.161h-6.68
@@ -839,10 +762,10 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="HCC">
-                        <polygon id="HCC-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="520.363,203
+                        <polygon id="HCC-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="520.363,203
                           526.387,196.976 538.78,196.976 538.78,203.785 540.905,203.785 544.11,200.58 544.11,190.375 536.07,182.335 536.07,176.5
                           530.405,176.5 519.405,187.5 519.405,191.5 517.842,193.062 517.842,200.5     "/>
-                        <g id="HCC-name">
+                        <g id="HCC-name" className={`${styles.cityName} ${this._hoverClass('HCC')}`} fill="#000000">
                           <path d="M471.637,174.543c-0.45,1.818-1.08,3.403-1.891,4.753l-1.062-0.684c0.828-1.296,1.422-2.737,1.782-4.321L471.637,174.543
                             z M468.918,170.114v-1.17h2.089c-0.252-0.72-0.54-1.404-0.864-2.035l1.135-0.414c0.324,0.684,0.611,1.495,0.882,2.449h1.944
                             c0.307-0.774,0.576-1.584,0.811-2.449l1.17,0.396c-0.252,0.756-0.521,1.44-0.81,2.053h2.053v1.17h-3.529v1.999h3.223v1.17h-3.223
@@ -863,13 +786,13 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="HSZ">
-                        <polygon id="HSZ-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="536.07,176.5
+                        <polygon id="HSZ-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="536.07,176.5
                           540.53,176.5 550.446,166.583 558.196,166.583 564.988,173.375 559.28,179.083 575.113,194.917 568.911,201.119 574.244,206.452
                           574.244,209.667 584.053,219.476 584.053,233.333 581.875,235.512 581.875,268 586.875,273 575.062,284.671 563.875,284.671
                           555.836,292.75 551.196,292.75 546.001,287.667 546.001,268.417 538.39,260.806 527.03,260.806 520.377,254.153 524.53,250
                           524.53,240.5 530.785,240.5 530.785,234.506 524.946,228.667 524.946,208.25 519.863,203.167 526.22,196.809 538.78,196.809
                           538.78,203.785 540.905,203.785 544.11,200.58 544.11,190.375 536.07,182.335    "/>
-                        <g id="HSZ-name">
+                        <g id="HSZ-name" className={`${styles.cityName} ${this._hoverClass('HSZ')}`} fill="#000000">
                           <path d="M501.637,154.543c-0.45,1.818-1.08,3.403-1.891,4.753l-1.062-0.684c0.828-1.296,1.422-2.737,1.782-4.321L501.637,154.543
                             z M498.918,150.114v-1.17h2.089c-0.252-0.72-0.54-1.404-0.864-2.035l1.135-0.414c0.324,0.684,0.611,1.495,0.882,2.449h1.944
                             c0.307-0.774,0.576-1.584,0.811-2.449l1.17,0.396c-0.252,0.756-0.521,1.44-0.81,2.053h2.053v1.17h-3.529v1.999h3.223v1.17h-3.223
@@ -901,11 +824,11 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="HUN">
-                        <polygon id="HUN-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="610.984,368.454
+                        <polygon id="HUN-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="610.984,368.454
                           624.812,354.784 600.352,330.493 592.507,338.32 563.652,309.474 540.274,332.781 533.352,325.896 511.103,348.072
                           517.03,353.999 430.03,441 423.958,434.929 376.434,482.296 424.598,530.432 469.906,484.317 478.53,492.734 517.494,453.714
                           517.494,446.75 560.137,404.107 564.78,404.107 564.78,389.75 586.113,368.417"/>
-                        <g id="HUN-name">
+                        <g id="HUN-name" className={`${styles.cityName} ${this._hoverClass('HUN')}`} fill="#000000">
                           <path d="M547.261,443.371l-0.396-1.297c2.089-1.764,3.619-3.763,4.573-6.014l1.171,0.541c-0.396,0.9-0.864,1.746-1.405,2.574
                             v8.697h-1.314v-6.986C549.115,441.751,548.232,442.579,547.261,443.371z M551.132,432.928v-1.674h1.278v1.674h2.143v1.225h-2.143
                             v1.584h-1.278v-1.584h-3.89v-1.225H551.132z M556.695,447.53c-1.099,0-1.639-0.576-1.639-1.729v-9.507h1.314v3.637l5.996-0.359
@@ -941,7 +864,7 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="MZG">
-                        <path id="MZG-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M161.186,292.5v-3.281
+                        <path id="MZG-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M161.186,292.5v-3.281
                           l-1.844-1.844v-3.062l-1.062-1.062v-2.917h2.75v6.5l2.583,2.583L165.03,288l2.167,2.167l2.833-2.833v-1.914h-3.247l-2.836-2.836
                           l1-1l1.667,1.667l1.167-1.167l-3.208-3.208l3-3l1.542,1.542l1.333-1.333l1.833,1.833l-1.667,1.667l1.917,1.917l3.833-3.833h3
                           l1.333,1.333l-3.583,3.583l1.458,1.458l2.125-2.125h1.75l2.083-2.083l1.667,1.667l-2.253,2.253l1.75,1.75l2.336-2.336l1.25,1.25
@@ -954,7 +877,7 @@ export default class ElectionMap extends Component {
                           l1.25,1.25l1.182-1.182l-1.939-1.939l-1.12,1.12L136.446,312.25z M102.03,328.875v5.375l1.438,1.438l2-2h2.438v-1.406
                           l-2.422-2.422h-2.203L102.03,328.875z M191.592,251.188l1.875,1.875l1.812-1.812l-2.812-2.812l-2.438,2.438v2L191.592,251.188z
                            M193.287,246.883l3.156-3.156l-1.352-1.352v1.562l-2.438,2.438L193.287,246.883z"/>
-                        <g id="MZG-name">
+                        <g id="MZG-name" className={`${styles.cityName} ${this._hoverClass('MZG')}`} fill="#000000">
                           <path d="M87.537,285.751c-0.756,2.088-1.603,4.051-2.538,5.888l-1.207-0.522c1.009-1.891,1.873-3.817,2.611-5.798L87.537,285.751
                             z M87.339,282.528l-0.882,0.882c-0.63-0.811-1.494-1.657-2.61-2.557l0.846-0.829C85.736,280.854,86.619,281.7,87.339,282.528z
                              M87.501,278.369l-0.828,0.828c-0.666-0.774-1.584-1.603-2.772-2.485l0.828-0.81C85.827,276.73,86.745,277.54,87.501,278.369z
@@ -994,10 +917,10 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="CYC">
-                        <polygon id="CYC-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="300.059,373.202
+                        <polygon id="CYC-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="300.059,373.202
                           295.03,377.88 295.03,383.5 300.03,383.5 300.03,390.5 316.03,390.5 316.03,383 311.03,378.25 311.03,375.625 302.659,375.63
                           "/>
-                        <g id="CYC-name">
+                        <g id="CYC-name" className={`${styles.cityName} ${this._hoverClass('CYC')}`} fill="#000000">
                           <path d="M173.367,373.644v-3.169h11.253v3.169h-1.53l-0.702,1.278h4.609v1.062h-11.218c-0.09,0.45-0.197,0.864-0.306,1.26h3.259
                             c-0.036,2.143-0.234,3.421-0.612,3.835c-0.396,0.415-1.08,0.63-2.053,0.63c-0.252,0-0.576-0.018-0.936-0.054l-0.271-1.044
                             c0.378,0.036,0.685,0.054,0.937,0.072c0.72,0,1.188-0.144,1.368-0.396c0.18-0.234,0.288-0.882,0.324-1.927h-2.395
@@ -1027,12 +950,12 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="TTT">
-                        <path id="TTT-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M376.448,482.282
+                        <path id="TTT-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M376.448,482.282
                           l47.746,47.746l45.815-45.815l7.903,7.903L410.53,559.5h-18.083l-27.917,28h-46.333l-68.917,68.833L240.03,647v-24.75l16-16.25
                           v-17.25l23.5-23.25h16.583L314.03,548v-28.917l45.5-45.583h26L376.448,482.282z M394.78,631.25v7.25l3.75,3.75l1.375-1.375
                           l-2.062-2.062l4.312-4.312l-5.562-5.562L394.78,631.25z M338.53,744.667v13l3.833,3.833v5.5h5.833v-2.667l-2.917-2.917v-4.75
                           l5.292-5.292l-9.708-9.708L338.53,744.667z"/>
-                        <g id="TTT-name">
+                        <g id="TTT-name" className={`${styles.cityName} ${this._hoverClass('TTT')}`} fill="#000000">
                           <path d="M318.458,606.231c1.585-0.54,3.548-2.539,5.888-5.978l1.333,0.449c-1.62,2.305-3.259,4.142-4.88,5.475
                             c3.457-0.145,6.734-0.379,9.831-0.666c-0.684-0.973-1.386-1.891-2.106-2.719l1.17-0.559c1.549,1.801,2.989,3.799,4.321,5.978
                             l-1.26,0.612c-0.45-0.756-0.9-1.459-1.333-2.143c-3.799,0.342-8.03,0.594-12.711,0.773L318.458,606.231z M332.017,616.818h-1.314
@@ -1059,11 +982,11 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="KNH">
-                        <path id="KNH-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M180.625,59.333v13.875
+                        <path id="KNH-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M180.625,59.333v13.875
                           l8.208,8.208h7.75L205,73v4.5l3.583-3.583l-2.417-2.417H212l2.5-2.5h2.833v7.833l2.833,2.833V92l-3.333,3.333v7.333l-8.667,8.667
                           h-13.625V99.958l-11.375-11.375h-10.083l-7.583,7.583h-5.167l-6.833-6.833V76.667l5.833,5.833l9.167-9.167V67h5.667v-3.667h-7l4-4
                           H180.625z M132.5,69.667h19.333v-9.5H148l-4.333-4.333L132.5,67V69.667z"/>
-                        <g id="KNH-name">
+                        <g id="KNH-name" className={`${styles.cityName} ${this._hoverClass('KNH')}`} fill="#000000">
                           <path d="M214.584,45.879l-0.756-1.08c3.133-1.404,5.689-3.187,7.67-5.366h1.045c1.729,2.143,4.268,3.907,7.616,5.312
                             l-0.738,1.081c-0.954-0.396-1.837-0.846-2.665-1.333v0.99h-4.087v2.593h6.41v1.207h-6.41v4.807h1.999
                             c0.611-1.17,1.152-2.431,1.62-3.781l1.188,0.414c-0.45,1.26-0.954,2.395-1.495,3.367h3.728v1.243h-15.395V54.09h3.727
@@ -1091,12 +1014,12 @@ export default class ElectionMap extends Component {
                         </g>
                       </g>
                       <g id="MFK">
-                        <path id="MFK-1" fill="#FFFFFF" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M16.625,51.203l4.625,4.625
+                        <path id="MFK-1" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M16.625,51.203l4.625,4.625
                           h-7v-4.5L16.625,51.203z M16,61.328l-2.542,2.542H25l-2.604-2.604L16,61.328z M32.667,49.161l-6.083,6.083l5.583,5.583H40.5
                           v-2.167l-2.5-2.5h-4.458v-7H32.667z M48.427,52.922l-5.667,5.667l1.323,1.323l3.474-3.474H51l3.32,3.32v4.112h1.18v-3.042
                           l2.734-2.734v-2.266l-2.773-2.773L48.427,52.922z M73.833,53.516l-2.24,2.24v3.74l-1.849,1.849l2.073,2.073L74.234,61l4.068,4.068
                           l1.531-1.531l-1.151-1.151v-3.99H73.5l2.784-2.784L73.833,53.516z"/>
-                        <g id="MFK-name">
+                        <g id="MFK-name" className={`${styles.cityName} ${this._hoverClass('MFK')}`} fill="#000000">
                           <path d="M26.149,22.791v1.026c-0.648,1.062-1.368,2.106-2.196,3.115h2.412v0.864c-0.27,1.44-0.611,2.647-1.026,3.601
                             c0.145,0.108,0.307,0.216,0.45,0.36c0.576,0.576,1.152,0.99,1.747,1.26c0.576,0.234,1.386,0.36,2.431,0.396
                             c0.973,0,2.106,0.018,3.367,0.018c1.26,0,2.898-0.036,4.915-0.09l-0.288,1.224h-4.465c-1.351,0-2.557-0.018-3.619-0.054
@@ -1152,43 +1075,43 @@ export default class ElectionMap extends Component {
                       <text transform="matrix(1 0 0 1 -811.4584 33)" fontFamily="'PingFang-TC-Regular-83pv-RKSJ-H'" fontSize="18">連江縣</text>
                   </g>
                   <g id="guides" opacity="0.3">
-    <polyline fill="none" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="292,0 292,140.667 0,140.667   "/>
-    <polyline fill="none" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="94,0 94,94 0,94   "/>
-    <polyline fill="none" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="531,800 531,661 800,661   "/>
-    <g>
-      <polyline fill="none" stroke="#000000" strokeMiterlimit="10" points="682.72,589.896 740.935,488.133 740.935,513.76
-        719.855,501.949     "/>
-      <g>
-        <path d="M746.566,468.582v10.576c0.393-0.098,0.771-0.196,1.135-0.308v0.967c-1.793,0.504-3.712,0.91-5.785,1.247l-0.238-0.953
-          c1.331-0.168,2.619-0.406,3.88-0.7v-5.981h-3.628v-0.966h3.628v-3.88H746.566z M750.418,480.853
-          c-0.925,0-1.387-0.448-1.387-1.317v-10.954h1.008v3.992l3.853-0.252v0.953l-3.853,0.266v5.855c0,0.336,0.196,0.504,0.603,0.504
-          h1.443c0.406,0,0.7-0.112,0.882-0.308c0.168-0.21,0.294-0.938,0.351-2.171l0.925,0.322c-0.085,1.457-0.267,2.339-0.532,2.647
-          c-0.267,0.308-0.757,0.462-1.457,0.462H750.418z"/>
-      </g>
-    </g>
+                      <polyline fill="none" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="292,0 292,140.667 0,140.667   "/>
+                      <polyline fill="none" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="94,0 94,94 0,94   "/>
+                      <polyline fill="none" stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="531,800 531,661 800,661   "/>
+                      <g>
+                        <polyline fill="none" stroke="#000000" strokeMiterlimit="10" points="682.72,589.896 740.935,488.133 740.935,513.76
+                          719.855,501.949"/>
+                        <g>
+                          <path d="M746.566,468.582v10.576c0.393-0.098,0.771-0.196,1.135-0.308v0.967c-1.793,0.504-3.712,0.91-5.785,1.247l-0.238-0.953
+                            c1.331-0.168,2.619-0.406,3.88-0.7v-5.981h-3.628v-0.966h3.628v-3.88H746.566z M750.418,480.853
+                            c-0.925,0-1.387-0.448-1.387-1.317v-10.954h1.008v3.992l3.853-0.252v0.953l-3.853,0.266v5.855c0,0.336,0.196,0.504,0.603,0.504
+                            h1.443c0.406,0,0.7-0.112,0.882-0.308c0.168-0.21,0.294-0.938,0.351-2.171l0.925,0.322c-0.085,1.457-0.267,2.339-0.532,2.647
+                            c-0.267,0.308-0.757,0.462-1.457,0.462H750.418z"/>
+                        </g>
+                      </g>
                   </g>
               </svg>
           </div>
       
           <div id="citymap">
               <div id="close"></div>
-              <div className="city" id="TPE-city">
+              <div className={`${styles.city} ${this._activeClass('TPE')}`} id="TPE-city">
                 <svg x="0px" y="0px"
                      width="130.598px" height="213.469px" viewBox="0 0 130.598 213.469">
                   <g id="TPE">
                     <g id="TPE-1">
-                        <polygon id="TPE-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TPE-1-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         20.598,32.638 52.931,65.138 78.598,65.138 128.598,15.471 128.598,2 67.46,2 52.264,17.138 35.931,17.138    "/>
-                      <g id="TPE-1-index">
+                      <g id="TPE-1-index" fill="#000000">
                         <path d="M43.379,27.414V40.27h-2.106V29.952c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H43.379z"/>
                       </g>
                     </g>
                     <g id="TPE-2">
-                        <polygon id="TPE-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TPE-2-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         52.931,65.138 20.598,32.638 20.598,46.138 37.743,63.367 37.723,77.138 16.046,98.586 27.046,109.471 50.931,85.138
                         120.598,85.138 120.598,35.138 128.264,27.471 122.409,21.616 79.201,65.283     "/>
-                      <g id="TPE-2-index">
+                      <g id="TPE-2-index" fill="#000000">
                         <path d="M110.956,66.242c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
                           c-0.504,0.54-1.404,1.224-2.665,2.07c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421
                           c0.469-0.54,1.459-1.333,2.953-2.358c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035
@@ -1198,9 +1121,9 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TPE-3">
-                        <polygon id="TPE-3-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TPE-3-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         32.577,103.745 44.624,115.484 50.986,109.083 68.486,126.089 80.598,113.971 80.598,85.138 50.931,85.138    "/>
-                      <g id="TPE-3-index">
+                      <g id="TPE-3-index" fill="#000000">
                         <path d="M70.552,99.343c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
                           c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917c-0.864,0.773-1.998,1.17-3.402,1.17
                           c-1.333,0-2.413-0.342-3.224-1.026c-0.9-0.756-1.404-1.872-1.512-3.312h2.143c0.035,0.828,0.288,1.477,0.792,1.927
@@ -1212,18 +1135,18 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TPE-4">
-                        <polygon id="TPE-4-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TPE-4-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         112.598,85.138 112.598,99.138 123.764,110.138 104.598,129.471 104.598,158.305 122.764,176.388 116.223,182.93 102.431,169.138
                         86.598,169.138 78.598,161.138 58.598,161.138 58.598,153.138 72.598,139.138 72.598,121.973 80.598,113.971 80.598,85.138    "/>
-                      <g id="TPE-4-index">
+                      <g id="TPE-4-index" fill="#000000">
                         <path d="M96.168,93.37v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H96.168z M89.668,101.796h4.501
                           v-5.762h-0.054L89.668,101.796z"/>
                       </g>
                     </g>
                     <g id="TPE-5">
-                        <polygon id="TPE-5-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TPE-5-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         16.046,98.586 2,98.586 2,121.138 38.764,121.138 44.598,115.511 32.577,103.745 26.949,109.374    "/>
-                      <g id="TPE-5-index">
+                      <g id="TPE-5-index" fill="#000000" >
                         <path d="M15.223,103.54v1.854H9.083l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
                           c1.207,0,2.197,0.396,2.953,1.188c0.756,0.792,1.152,1.891,1.152,3.276c0,1.333-0.504,2.413-1.513,3.26
                           c-0.936,0.756-2.034,1.134-3.312,1.134c-1.171,0-2.179-0.324-3.007-0.954c-0.937-0.702-1.44-1.656-1.53-2.845h2.07
@@ -1233,9 +1156,9 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TPE-6">
-                        <polygon id="TPE-6-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TPE-6-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         20.598,121.138 20.598,145.138 29.098,153.138 44.598,153.138 44.598,128.138 57.381,115.854 50.459,108.985 38.535,121.221     "/>
-                      <g id="TPE-6-index">
+                      <g id="TPE-6-index" fill="#000000">
                         <path d="M37.897,136.545h-2.053c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
                           c-0.504,0.792-0.738,1.782-0.738,2.971v0.162h0.091c0.359-0.54,0.81-0.918,1.35-1.17c0.505-0.252,1.081-0.36,1.729-0.36
                           c1.261,0,2.27,0.396,3.025,1.206c0.756,0.811,1.134,1.854,1.134,3.115c0,1.297-0.45,2.358-1.313,3.188
@@ -1247,17 +1170,17 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TPE-7">
-                        <polygon id="TPE-7-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TPE-7-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         44.598,153.138 58.598,153.138 72.598,139.138 72.598,123.138 69.066,126.669 57.816,115.419 44.598,128.138    "/>
-                      <g id="TPE-7-index">
+                      <g id="TPE-7-index" fill="#000000">
                         <path d="M59.807,133.286v1.692l-4.501,11.163h-2.232l4.609-10.947h-6.572v-1.908H59.807z"/>
                       </g>
                     </g>
                     <g id="TPE-8">
-                        <polygon id="TPE-8-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TPE-8-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         20.598,145.138 12.431,153.305 24.764,165.638 24.764,181.138 55.681,212.055 66.431,201.305 53.431,188.305 74.681,167.055
                         74.681,161.138 58.598,161.138 58.598,153.138 29.098,153.138     "/>
-                      <g id="TPE-8-index">
+                      <g id="TPE-8-index" fill="#000000">
                         <path d="M53.123,166.123c0.721,0.648,1.099,1.459,1.099,2.431c0,0.648-0.145,1.207-0.432,1.657
                           c-0.324,0.468-0.793,0.846-1.423,1.098v0.036c0.594,0.162,1.116,0.522,1.549,1.08c0.485,0.612,0.737,1.314,0.737,2.106
                           c0,1.152-0.432,2.071-1.26,2.791c-0.847,0.702-2.035,1.062-3.565,1.062c-1.548,0-2.736-0.36-3.564-1.062
@@ -1275,13 +1198,13 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="NTC-city">
+              <div className={`${styles.city} ${this._activeClass('NTC')}`} id="NTC-city">
                 <svg x="0px" y="0px" width="507.414px" height="433.167px" viewBox="0 0 507.414 433.167">
                   <g id="NTC">
                     <g id="NTC-8">
-                        <polygon id="NTC-8-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-8-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         152.289,191.292 152.289,211.167 146.793,211.167 146.793,231.417 174.664,231.417 178.99,227.09 178.99,191.292    "/>
-                      <g id="NTC-8-index">
+                      <g id="NTC-8-index" fill="#000000">
                         <path d="M170.454,213.256c0.721,0.648,1.099,1.459,1.099,2.431c0,0.648-0.145,1.207-0.432,1.657
                           c-0.324,0.468-0.793,0.846-1.423,1.098v0.036c0.594,0.162,1.116,0.522,1.549,1.08c0.485,0.612,0.737,1.314,0.737,2.106
                           c0,1.152-0.432,2.071-1.26,2.791c-0.847,0.702-2.035,1.062-3.565,1.062c-1.548,0-2.736-0.36-3.564-1.062
@@ -1297,22 +1220,22 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="NTC-1">
-                        <polygon id="NTC-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-1-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         82.331,36.5 82.331,66.5 114.331,98.5 114.331,114.5 123.998,124.167 123.998,141.167 139.116,156.285 153.664,156.285
                         167.557,142.393 143.331,118.167 157.998,103.5 151.998,97.5 165.664,83.833 182.331,83.833 201.389,102.891 213.055,91.224
                         229.331,91.224 244.526,76.029 320.998,76.029 334.762,62.264 362.998,62.264 362.998,33.833 341.331,12.167 318.331,12.167
                         308.164,2 271.664,2 263.914,9.75 243.664,9.75 223.289,30.125 209.644,30.125 183.633,56.136 128.998,56.136 109.346,36.485
                         "/>
-                      <g id="NTC-1-index">
+                      <g id="NTC-1-index" fill="#000000">
                         <path d="M349.332,38.911v12.855h-2.106V41.449c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H349.332z"/>
                       </g>
                     </g>
                     <g id="NTC-2">
-                        <polygon id="NTC-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-2-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         167.557,142.393 214.802,142.393 214.802,137.396 197.619,120.212 197.619,106.667 201.392,102.894 182.331,83.833
                         165.664,83.833 151.998,97.5 157.998,103.5 143.331,118.167     "/>
-                      <g id="NTC-2-index">
+                      <g id="NTC-2-index" fill="#000000">
                         <path d="M176.187,94.739c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
                           c-0.504,0.54-1.404,1.224-2.665,2.07c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421
                           c0.469-0.54,1.459-1.333,2.953-2.358c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035
@@ -1322,10 +1245,10 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="NTC-3">
-                        <polyline id="NTC-3-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polyline id="NTC-3-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         179.067,142.393 214.675,142.393 214.675,151.052 193.112,172.615 179.067,172.615 171.814,165.362 179.198,157.978
                         179.198,142.393     "/>
-                      <g id="NTC-3-index">
+                      <g id="NTC-3-index" fill="#000000">
                         <path d="M193.187,151.594c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809
                           c0.757,0.234,1.351,0.576,1.747,1.044c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917
                           c-0.864,0.773-1.998,1.17-3.402,1.17c-1.333,0-2.413-0.342-3.224-1.026c-0.9-0.756-1.404-1.872-1.512-3.312h2.143
@@ -1337,9 +1260,9 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="NTC-9">
-                        <polygon id="NTC-9-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-9-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         179.067,195.167 179.067,227.167 189.498,227.167 197.581,219.083 197.581,195.167     "/>
-                      <g id="NTC-9-index">
+                      <g id="NTC-9-index" fill="#000000">
                         <path d="M192.116,205.851c0.828,1.116,1.242,2.646,1.242,4.627c0,2.089-0.45,3.799-1.313,5.096
                           c-0.883,1.296-2.071,1.944-3.548,1.944c-2.538,0-3.961-1.17-4.267-3.511h2.053c0.252,1.188,0.99,1.782,2.232,1.782
                           c0.846,0,1.53-0.432,2.053-1.26c0.485-0.793,0.738-1.783,0.738-2.972v-0.162h-0.091c-0.378,0.522-0.828,0.919-1.35,1.171
@@ -1351,9 +1274,9 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="NTC-6">
-                        <polygon id="NTC-6-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-6-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         148.164,167.844 148.164,183.891 179.067,183.891 179.067,172.615 171.814,165.362 169.373,167.803     "/>
-                      <g id="NTC-6-index">
+                      <g id="NTC-6-index" fill="#000000">
                         <path d="M164.607,173.669h-2.053c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
                           c-0.504,0.792-0.738,1.782-0.738,2.971v0.162h0.091c0.359-0.54,0.81-0.918,1.35-1.17c0.505-0.252,1.081-0.36,1.729-0.36
                           c1.261,0,2.27,0.396,3.025,1.206c0.756,0.811,1.134,1.854,1.134,3.115c0,1.297-0.45,2.358-1.313,3.188
@@ -1365,28 +1288,28 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="NTC-7">
-                        <polygon id="NTC-7-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-7-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         139.914,167.844 139.914,174.626 114.519,200.021 119.414,204.917 132.539,191.792 142.164,201.417 152.289,191.292
                         179.067,191.292 179.067,183.891 148.164,183.891 148.164,167.844     "/>
-                      <g id="NTC-7-index">
+                      <g id="NTC-7-index" fill="#000000">
                         <path d="M145.017,181.41v1.692l-4.501,11.163h-2.232l4.609-10.947h-6.572v-1.908H145.017z"/>
                       </g>
                     </g>
                     <g id="NTC-4">
-                        <polygon id="NTC-4-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-4-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         123.81,159.167 132.487,167.844 169.414,167.844 179.067,157.847 179.067,142.393 167.557,142.393 153.664,156.285
                         139.116,156.285 123.904,141.073     "/>
-                      <g id="NTC-4-index">
+                      <g id="NTC-4-index" fill="#000000">
                         <path d="M168.061,150.91v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H168.061z M161.561,159.336
                           h4.501v-5.762h-0.054L161.561,159.336z"/>
                       </g>
                     </g>
                     <g id="NTC-5">
-                        <polygon id="NTC-5-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-5-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         19.664,198.417 63.664,198.417 81.789,216.542 90.414,216.542 106.751,200.205 114.519,200.205 140.006,174.718 140.006,167.844
                         132.487,167.844 123.81,159.167 114.164,159.167 102.581,170.75 67.664,170.75 51.373,154.458 41.914,163.917 41.914,183.014
                         19.664,183.014    "/>
-                      <g id="NTC-5-index">
+                      <g id="NTC-5-index" fill="#000000">
                         <path d="M90.997,195.41v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
                           c1.207,0,2.197,0.396,2.953,1.188c0.756,0.792,1.152,1.891,1.152,3.276c0,1.333-0.504,2.413-1.513,3.26
                           c-0.936,0.756-2.034,1.134-3.312,1.134c-1.171,0-2.179-0.324-3.007-0.954c-0.937-0.702-1.44-1.656-1.53-2.845h2.07
@@ -1396,12 +1319,12 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="NTC-10">
-                        <polygon id="NTC-10-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-10-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         146.793,231.417 127.664,231.417 117.623,241.458 139.621,263.456 122.287,280.79 105.998,280.79 105.998,304.5 113.164,311.667
                         83.831,341 53.789,341 53.789,324.375 41.914,312.5 41.914,285.083 19.081,285.083 1.414,267.417 19.664,249.167 19.664,198.417
                         63.664,198.417 81.789,216.542 90.414,216.542 106.751,200.205 114.519,200.205 119.323,205.008 132.539,191.792 142.164,201.417
                         152.289,191.292 152.289,211.167 146.793,211.167     "/>
-                      <g id="NTC-10-index">
+                      <g id="NTC-10-index" fill="#000000">
                         <path d="M54.832,296.41v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H54.832z"/>
                         <path d="M66.436,298.03c0.792,1.188,1.188,2.791,1.188,4.808s-0.396,3.619-1.188,4.808c-0.847,1.242-2.017,1.872-3.512,1.872
@@ -1413,13 +1336,13 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="NTC-11">
-                        <polygon id="NTC-11-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-11-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         299.831,250.417 320.164,250.417 320.164,302.167 357.76,339.762 357.76,358.167 316.712,399.214 133.664,399.214
                         133.664,431.167 22.331,431.167 22.331,347.167 53.789,347.167 53.789,341 83.831,341 113.164,311.667 105.998,304.5
                         105.998,280.79 122.287,280.79 139.621,263.456 117.623,241.458 127.664,231.417 174.664,231.417 178.99,227.09 189.498,227.09
                         201.952,239.545 201.952,255.167 232.808,286.023 243.498,275.333 230.498,262.333 251.748,241.083 251.748,235.167
                         255.664,235.167 263.664,243.167 279.498,243.167 293.289,256.958     "/>
-                      <g id="NTC-11-index">
+                      <g id="NTC-11-index" fill="#000000">
                         <path d="M247.165,286.41v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088
                           c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H247.165z"/>
                         <path d="M255.724,286.41v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088
@@ -1427,7 +1350,7 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="NTC-12">
-                        <polygon id="NTC-12-border" fill="#FFFFFF" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NTC-12-border" stroke="#000000" strokeWidth="4" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         362.998,46.667 370.581,54.25 370.581,119.667 378.465,127.55 395.164,127.55 395.164,133.167 381.551,146.78 381.551,156.285
                         321.664,156.285 321.664,165.362 328.358,172.056 319.532,180.882 319.532,216.542 368.161,265.17 391.164,265.17
                         391.164,252.625 383.685,245.146 402.164,226.667 413.164,237.667 441.164,237.667 473.166,269.668 498.914,295.417
@@ -1436,7 +1359,7 @@ export default class ElectionMap extends Component {
                         320.152,250.417 299.831,250.417 281.706,232.292 281.706,203.5 300.935,184.271 289.748,173.083 289.748,159.167
                         297.664,159.167 297.664,109.167 305.331,101.5 299.476,95.645 305.642,89.478 305.642,76.029 320.998,76.029 334.762,62.264
                         362.998,62.264    "/>
-                      <g id="NTC-12-index">
+                      <g id="NTC-12-index" fill="#000000">
                         <path d="M334.832,285.077v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088
                           c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H334.832z"/>
                         <path d="M345.932,285.905c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
@@ -1455,24 +1378,24 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="TYN-city">
+              <div className={`${styles.city} ${this._activeClass('TYN')}`} id="TYN-city">
                 <svg x="0px" y="0px" width="226.42px" height="359.043px" viewBox="0 0 226.42 359.043">
                   <g id="TYN">
                     <g id="TYN-1">
-                        <polygon id="TYN-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TYN-1-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         170.311,13.25 184.686,13.25 193.248,21.812 193.248,43.75 217.529,68.031 217.529,79.75 224.92,87.141 224.92,113.25
                         217.686,113.25 208.998,121.938 182.811,121.938 169.279,108.406 176.811,100.875 176.811,82.5 169.436,75.125 157.686,75.125
                         153.998,78.812 153.998,90 137.811,90 137.811,73.75 139.811,73.75 139.811,50.25 170.311,50.25    "/>
-                      <g id="TYN-1-index">
+                      <g id="TYN-1-index" fill="#000000">
                         <path d="M188.438,101.937v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088
                           c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H188.438z"/>
                       </g>
                     </g>
                     <g id="TYN-2">
-                        <polygon id="TYN-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TYN-2-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         52.561,123.5 66.311,123.5 84.936,104.875 84.936,78.75 77.123,70.938 104.061,44 133.811,73.75 139.811,73.75 139.811,50.25
                         170.311,50.25 170.311,13.25 117.311,13.25 105.561,1.5 37.311,1.5 1.061,37.75 22.186,58.875 5.061,76     "/>
-                      <g id="TYN-2-index">
+                      <g id="TYN-2-index" fill="#000000">
                         <path d="M77.464,82.163c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043c-0.504,0.54-1.404,1.224-2.665,2.07
                           c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421c0.469-0.54,1.459-1.333,2.953-2.358
                           c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035c0-0.702-0.198-1.225-0.559-1.566
@@ -1481,10 +1404,10 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TYN-3">
-                        <polygon id="TYN-3-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TYN-3-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         84.936,78.75 96.936,78.75 96.936,87.75 106.295,97.109 106.295,116.812 117.186,116.812 136.029,97.969 132.936,94.875
                         137.811,90 137.811,73.75 133.811,73.75 104.061,44 77.123,70.938     "/>
-                      <g id="TYN-3-index">
+                      <g id="TYN-3-index" fill="#000000">
                         <path d="M120.204,94.971c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
                           c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917c-0.864,0.773-1.998,1.17-3.402,1.17
                           c-1.333,0-2.413-0.342-3.224-1.026c-0.9-0.756-1.404-1.872-1.512-3.312h2.143c0.035,0.828,0.288,1.477,0.792,1.927
@@ -1496,10 +1419,10 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TYN-5">
-                        <polygon id="TYN-5-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TYN-5-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         117.186,116.812 117.186,128.607 92.989,152.803 102.373,162.188 73.382,191.178 49.954,167.75 49.954,158.107 33.954,142.107
                         52.561,123.5 66.311,123.5 84.936,104.875 84.936,78.75 96.936,78.75 96.936,87.75 106.295,97.109 106.295,116.812    "/>
-                      <g id="TYN-5-index">
+                      <g id="TYN-5-index" fill="#000000">
                         <path d="M86.075,156.223v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
                           c1.207,0,2.197,0.396,2.953,1.188c0.756,0.792,1.152,1.891,1.152,3.276c0,1.333-0.504,2.413-1.513,3.26
                           c-0.936,0.756-2.034,1.134-3.312,1.134c-1.171,0-2.179-0.324-3.007-0.954c-0.937-0.702-1.44-1.656-1.53-2.845h2.07
@@ -1509,12 +1432,12 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TYN-6">
-                        <polygon id="TYN-6-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TYN-6-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         163.498,116.812 163.498,131.135 146.811,131.135 146.811,180.75 133.123,194.438 146.373,207.688 163.498,207.688
                         163.498,228.25 172.404,237.156 172.404,254.25 148.811,254.25 148.811,317.25 128.811,317.25 88.079,357.982 72.846,342.75
                         72.846,245.286 79.382,238.75 79.382,197.178 73.382,191.178 102.373,162.188 92.989,152.803 117.186,128.607 117.186,116.812
                         136.029,97.969 137.811,99.75 141.936,95.625 146.436,95.625 146.436,113.25 150.186,113.25 155.061,108.375    "/>
-                      <g id="TYN-6-index">
+                      <g id="TYN-6-index" fill="#000000">
                         <path d="M139.175,170.664h-2.053c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
                           c-0.504,0.792-0.738,1.782-0.738,2.971v0.162h0.091c0.359-0.54,0.81-0.918,1.35-1.17c0.505-0.252,1.081-0.36,1.729-0.36
                           c1.261,0,2.27,0.396,3.025,1.206c0.756,0.811,1.134,1.854,1.134,3.115c0,1.297-0.45,2.358-1.313,3.188
@@ -1526,11 +1449,11 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TYN-4">
-                        <polygon id="TYN-4-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TYN-4-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         137.811,90 132.936,94.875 137.811,99.75 141.936,95.625 146.436,95.625 146.436,113.25 150.186,113.25 155.061,108.375
                         163.498,116.812 170.592,109.719 169.279,108.406 176.811,100.875 176.811,82.5 169.436,75.125 157.686,75.125 153.998,78.812
                         153.998,90    "/>
-                      <g id="TYN-4-index">
+                      <g id="TYN-4-index" fill="#000000">
                         <path d="M162.601,91.985v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H162.601z M156.101,100.411
                           h4.501v-5.762h-0.054L156.101,100.411z"/>
                       </g>
@@ -1538,11 +1461,11 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="ZMI-city">
+              <div className={`${styles.city} ${this._activeClass('ZMI')}`} id="ZMI-city">
                 <svg x="0px" y="0px" width="208.82px" height="191.167px" viewBox="0 0 208.82 191.167">
                   <g id="ZMI">
                     <g id="ZMI-1">
-                        <polygon id="ZMI-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="ZMI-1-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         15.347,124.167 1,109.82 1,59.167 18.32,59.167 58.32,19.167 76.986,19.167 85.986,10.167 128.653,10.167 137.82,1 151.653,1
                         151.653,15.833 156.653,20.833 152.153,25.333 140.746,13.927 116.955,37.718 127.403,48.167 127.403,57.583 134.486,64.667
                         129.653,69.5 105.32,45.167 70.653,45.167 70.653,52.333 64.736,58.25 64.736,63.167 71.153,63.167 71.153,76 65.653,81.5
@@ -1553,7 +1476,7 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="ZMI-2">
-                        <polygon id="ZMI-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="ZMI-2-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         70.653,45.167 105.32,45.167 129.653,69.5 134.486,64.667 127.403,57.583 127.403,48.167 116.955,37.718 140.746,13.927
                         151.986,25.167 155.82,21.333 165.82,31.333 165.82,72.167 177.498,83.845 177.498,95.833 164.986,95.833 164.986,114.833
                         156.653,123.167 169.986,136.5 192.653,136.5 207.82,151.667 207.82,190.167 101.32,190.167 101.32,180.167 77.045,155.892
@@ -1570,24 +1493,24 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="TXG-city">
+              <div className={`${styles.city} ${this._activeClass('TXG')}`} id="TXG-city">
                 <svg x="0px" y="0px" width="562.742px" height="320.073px" viewBox="0 0 562.742 320.073">
                   <g id="TXG">
                     <g id="TXG-1">
-                        <polygon id="TXG-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TXG-1-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         94.856,106.273 122.324,78.805 133.832,90.312 178.498,90.312 165.165,76.98 165.165,1 155.395,1 138.395,18 109.27,18
                         70.77,56.5 60.145,45.875 51.951,54.068 51.951,65.32 25.27,65.32 25.27,70.25 34.27,70.25 22.645,81.875 42.895,102.125
                         60.707,84.312 72.895,84.312     "/>
-                      <g id="TXG-1-index">
+                      <g id="TXG-1-index" fill="#000000">
                         <path d="M96.839,78.48v12.855h-2.106V81.018c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H96.839z"/>
                       </g>
                     </g>
                     <g id="TXG-3">
-                        <polygon id="TXG-3-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TXG-3-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         186.685,109.459 168.707,127.438 156.431,115.162 126.994,144.599 145.457,163.062 137.957,170.562 120.895,170.562
                         69.976,119.644 81.133,108.488 86.887,114.242 122.324,78.805 133.832,90.312 178.498,90.312 186.685,98.5    "/>
-                      <g id="TXG-3-index">
+                      <g id="TXG-3-index" fill="#000000">
                         <path d="M125.693,93.163c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
                           c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917c-0.864,0.773-1.998,1.17-3.402,1.17
                           c-1.333,0-2.413-0.342-3.224-1.026c-0.9-0.756-1.404-1.872-1.512-3.312h2.143c0.035,0.828,0.288,1.477,0.792,1.927
@@ -1599,18 +1522,18 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TXG-4">
-                        <polygon id="TXG-4-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TXG-4-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         62.02,188 100.176,149.844 69.976,119.644 37.795,151.826 37.795,159.992 49.667,171.864 49.667,188    "/>
-                      <g id="TXG-4-index">
+                      <g id="TXG-4-index" fill="#000000">
                         <path d="M70.567,132.48v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H70.567z M64.067,140.906h4.501
                           v-5.762h-0.054L64.067,140.906z"/>
                       </g>
                     </g>
                     <g id="TXG-5">
-                        <polygon id="TXG-5-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TXG-5-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         97.146,187.174 115.27,187.174 129.932,201.837 156.895,201.837 170.644,188.088 145.457,163.062 137.957,170.562
                         120.895,170.562 100.176,149.844 79.995,170.024    "/>
-                      <g id="TXG-5-index">
+                      <g id="TXG-5-index" fill="#000000">
                         <path d="M104.504,163.48v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
                           c1.207,0,2.197,0.396,2.953,1.188c0.756,0.792,1.152,1.891,1.152,3.276c0,1.333-0.504,2.413-1.513,3.26
                           c-0.936,0.756-2.034,1.134-3.313,1.134c-1.171,0-2.179-0.324-3.007-0.954c-0.937-0.702-1.44-1.656-1.53-2.845h2.07
@@ -1620,9 +1543,9 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TXG-6">
-                        <polygon id="TXG-6-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TXG-6-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         79.995,170.024 103.245,193.274 92.195,204.325 83.82,195.95 62.02,195.95 62.02,188     "/>
-                      <g id="TXG-6-index">
+                      <g id="TXG-6-index" fill="#000000">
                         <path d="M83.863,181.739h-2.053c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
                           c-0.504,0.792-0.738,1.782-0.738,2.971v0.162h0.091c0.359-0.54,0.81-0.918,1.35-1.17c0.505-0.252,1.081-0.36,1.729-0.36
                           c1.261,0,2.27,0.396,3.025,1.206c0.756,0.811,1.134,1.854,1.134,3.115c0,1.297-0.45,2.358-1.313,3.188
@@ -1634,20 +1557,20 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TXG-7">
-                        <polygon id="TXG-7-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TXG-7-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         156.895,201.837 156.895,248.867 138.895,266.867 124.84,266.867 110.77,280.938 110.77,244.2 95.07,244.2 57.195,206.325
                         62.02,201.5 62.02,195.95 83.82,195.95 92.195,204.325 103.245,193.274 97.146,187.174 115.27,187.174 129.932,201.837    "/>
-                      <g id="TXG-7-index">
+                      <g id="TXG-7-index" fill="#000000">
                         <path d="M147.774,210.48v1.692l-4.501,11.163h-2.232l4.609-10.947h-6.572v-1.908H147.774z"/>
                       </g>
                     </g>
                     <g id="TXG-8">
-                        <polygon id="TXG-8-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TXG-8-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         126.994,144.599 170.563,188.169 156.895,201.837 156.895,248.867 175.542,267.514 208.645,267.514 233.919,292.788
                         249.551,277.156 350.77,277.156 377.816,304.203 415.27,304.203 430.428,319.362 562.742,188.513 529.181,188.513 505.065,212.75
                         491.145,212.75 475.395,197.066 315.645,197.066 315.645,182.5 279.233,146.088 252.983,172.338 236.645,172.338 209.226,144.919
                         209.226,132 186.685,109.459 168.707,127.438 156.431,115.162     "/>
-                      <g id="TXG-8-index">
+                      <g id="TXG-8-index" fill="#000000">
                         <path d="M282.711,161.326c0.721,0.648,1.099,1.459,1.099,2.431c0,0.648-0.145,1.207-0.432,1.657
                           c-0.324,0.468-0.793,0.846-1.423,1.098v0.036c0.594,0.162,1.116,0.522,1.549,1.08c0.485,0.612,0.737,1.314,0.737,2.106
                           c0,1.152-0.432,2.071-1.26,2.791c-0.847,0.702-2.035,1.062-3.565,1.062c-1.548,0-2.736-0.36-3.564-1.062
@@ -1663,12 +1586,12 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TXG-2">
-                        <polygon id="TXG-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TXG-2-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         11.395,103.859 15.449,99.805 0.707,85.062 5.301,80.469 10.551,85.719 18.52,77.75 42.895,102.125 60.707,84.312 72.895,84.312
                         94.856,106.273 86.887,114.242 81.133,108.488 37.795,151.826 37.795,159.992 49.667,171.864 49.667,188 62.02,188 62.02,201.5
                         57.195,206.325 95.07,244.2 110.77,244.2 110.77,280.938 104.77,286.938 78.082,286.938 40.645,249.5 40.645,236.75 27.52,236.75
                         19.832,229.062 35.395,213.5 35.395,189.875 11.395,165.875     "/>
-                      <g id="TXG-2-index">
+                      <g id="TXG-2-index" fill="#000000">
                         <path d="M68.693,95.308c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043c-0.504,0.54-1.404,1.224-2.665,2.07
                           c-1.314,0.864-2.106,1.62-2.395,2.269H69.9v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421c0.469-0.54,1.459-1.333,2.953-2.358
                           c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035c0-0.702-0.198-1.225-0.559-1.566
@@ -1679,28 +1602,28 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="CHW-city">
+              <div className={`${styles.city} ${this._activeClass('CHW')}`} id="CHW-city">
                 <svg x="0px" y="0px" width="180.784px" height="182.094px" viewBox="0 0 180.784 182.094">
                   <g id="CHW">
                     <g id="CHW-1">
-                        <polygon id="CHW-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="CHW-1-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         132.534,75.844 117.534,75.844 117.534,64.094 107.034,64.094 107.034,55.594 102.856,51.415 96.201,58.07 81.868,58.07
                         81.868,37.76 86.638,32.99 97.284,32.99 99.715,30.559 92.976,23.819 96.868,19.927 102.034,25.094 116.784,25.094
                         123.284,18.594 116.909,12.219 112.909,16.219 107.347,10.656 112.347,5.656 137.034,5.656 141.691,1 160.034,1 160.034,42.344
                         139.701,42.344 132.576,49.469     "/>
-                      <g id="CHW-1-index">
+                      <g id="CHW-1-index" fill="#000000">
                         <path d="M125.038,46.37v12.855h-2.106V48.908c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H125.038z"/>
                       </g>
                     </g>
                     <g id="CHW-3">
-                        <polygon id="CHW-3-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="CHW-3-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         0.707,83.255 9.535,74.428 19.868,74.428 26.201,74.428 56.951,43.677 66.201,43.677 76.993,32.886 81.868,37.76 81.868,58.07
                         96.201,58.07 102.856,51.415 107.034,55.594 107.034,64.094 117.534,64.094 117.534,83.255 130.358,96.079 130.358,107.042
                         117.534,107.042 107.166,96.674 91.201,96.674 91.201,107.042 107.56,123.401 107.56,142.427 103.534,142.427 103.534,146.427
                         113.201,156.094 105.368,163.927 92.534,163.927 55.118,126.51 55.118,120.427 46.159,111.469 23.867,111.469 11.892,99.494
                         14.455,96.931     "/>
-                      <g id="CHW-3-index">
+                      <g id="CHW-3-index" fill="#000000">
                         <path d="M74.393,50.054c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
                           c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917c-0.864,0.773-1.998,1.17-3.402,1.17
                           c-1.333,0-2.413-0.342-3.224-1.026c-0.9-0.756-1.404-1.872-1.512-3.312h2.143c0.035,0.828,0.288,1.477,0.792,1.927
@@ -1712,11 +1635,11 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="CHW-2">
-                        <polygon id="CHW-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="CHW-2-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         176.034,58.344 176.034,74.094 165.659,84.469 170.784,89.594 179.784,89.594 179.784,97.844 169.076,97.844 169.076,103.135
                         161.868,110.344 153.784,110.344 153.784,95.344 134.284,75.844 132.534,75.844 132.576,49.469 139.701,42.344 160.034,42.344
                         "/>
-                      <g id="CHW-2-index">
+                      <g id="CHW-2-index" fill="#000000">
                         <path d="M147.893,60.698c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
                           c-0.504,0.54-1.404,1.224-2.665,2.07c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421
                           c0.469-0.54,1.459-1.333,2.953-2.358c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035
@@ -1726,12 +1649,12 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="CHW-4">
-                        <polygon id="CHW-4-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="CHW-4-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         117.534,75.844 134.284,75.844 153.784,95.344 153.784,110.344 161.868,110.344 161.868,117.76 129.534,150.094 129.534,168.439
                         139.534,168.439 139.534,181.094 119.534,181.094 119.534,178.094 105.368,163.927 113.201,156.094 103.534,146.427
                         103.534,142.427 107.56,142.427 107.56,123.401 91.201,107.042 91.201,96.674 107.166,96.674 117.534,107.042 130.358,107.042
                         130.358,96.079 117.534,83.255     "/>
-                      <g id="CHW-4-index">
+                      <g id="CHW-4-index" fill="#000000">
                         <path d="M144.977,97.37v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H144.977z M138.477,105.796
                           h4.501v-5.762h-0.054L138.477,105.796z"/>
                       </g>
@@ -1739,27 +1662,27 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="NAN-city">
+              <div className={`${styles.city} ${this._activeClass('NAN')}`} id="NAN-city">
                 <svg x="0px" y="0px" width="359.563px" height="293.86px" viewBox="0 0 359.563 293.86">
                   <g id="NAN">
                     <g id="NAN-1">
-                        <polygon id="NAN-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NAN-1-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         81.333,20.917 81.333,13.5 88.542,6.292 88.542,1 98.75,1 123.958,26.208 141.75,26.208 155.13,12.828 164.5,12.828 176.5,0.828
                         188.941,13.25 211,13.25 227.854,30.104 238.271,19.688 305.75,19.688 323.781,37.719 348.75,37.719 358.856,47.825
                         319.217,87.464 331.002,99.248 249.468,180.782 216.952,148.267 200.477,164.742 159.992,124.258 133,124.258 133,106.25
                         126.333,99.583 137.336,88.581 137.336,78.428 117.59,98.173 83.333,63.917 103.833,43.417     "/>
-                      <g id="NAN-1-index">
+                      <g id="NAN-1-index" fill="#000000">
                         <path d="M149.271,103.313v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088
                           c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H149.271z"/>
                       </g>
                     </g>
                     <g id="NAN-2">
-                        <polygon id="NAN-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="NAN-2-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         40,165.25 60,185.25 43,202.25 43,235.25 60,252.25 80,252.25 80,260.25 112.806,293.153 144.858,261.108 157,273.25
                         249.468,180.782 216.968,148.251 200.484,164.75 160,124.25 133,124.25 133,106.25 126.5,99.417 137.502,88.748 137.511,78.428
                         117.678,98.261 83.333,63.917 103.833,43.417 81.333,20.917 49,53.25 49,71.596 59,71.583 59,84.25 39,84.25 39,104.25 32,104.25
                         1,134.619 1,145.25 15.851,160.25 28,160.25 36.5,168.75    "/>
-                      <g id="NAN-2-index">
+                      <g id="NAN-2-index" fill="#000000">
                         <path d="M151.126,133.475c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
                           c-0.504,0.54-1.404,1.224-2.665,2.07c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421
                           c0.469-0.54,1.459-1.333,2.953-2.358c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035
@@ -1771,24 +1694,24 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="YLN-city">
+              <div className={`${styles.city} ${this._activeClass('YLN')}`} id="YLN-city">
                 <svg x="0px" y="0px" width="220px" height="204.207px" viewBox="0 0 220 204.207">
                   <g id="YLN">
                     <g id="YLN-1">
-                        <polygon id="YLN-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="YLN-1-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         1,102.061 1,84 65,19.167 65,15 57,15 57,10 66.333,1 98,1 113.917,16.833 89,41.833 89,53 100,53 110.625,63 126,63 144.833,81
                         156,81 163,87.667 163,97 106,97 88.833,115 14,115     "/>
-                      <g id="YLN-1-index">
+                      <g id="YLN-1-index" fill="#000000">
                         <path d="M127.837,76.062v12.855h-2.106V78.6c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H127.837z"/>
                       </g>
                     </g>
                     <g id="YLN-2">
-                        <polygon id="YLN-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="YLN-2-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         111.358,19.4 123.333,31.375 145.625,31.375 154.583,40.333 154.583,46.417 192,83.833 204.833,83.833 219,98 219,121 212,121
                         181,151.369 181,162 195.851,177 208,177 216.5,185.5 198.5,203.5 135,140 135,121 107,121 107,115 88.833,115 106,97 163,97
                         163,87.667 156,81 144.833,81 126,63 110.625,63 100,53 89,53 89,41.833     "/>
-                      <g id="YLN-2-index">
+                      <g id="YLN-2-index" fill="#000000">
                         <path d="M152.025,104.89c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
                           c-0.504,0.54-1.404,1.224-2.665,2.07c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421
                           c0.469-0.54,1.459-1.333,2.953-2.358c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035
@@ -1800,28 +1723,28 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="CYI-city">
+              <div className={`${styles.city} ${this._activeClass('CYI')}`} id="CYI-city">
                 <svg x="0px" y="0px" width="313.531px" height="214.583px" viewBox="0 0 313.531 214.583">
                   <g id="CYI">
                     <polygon id="CYI-disabled" points="129.589,56.404 119.531,65.759 119.531,77 129.531,77 129.531,91 161.531,91 161.531,76
                       151.531,66.501 151.531,61.25 134.79,61.259  "/>
                     <g id="CYI-1">
-                        <polygon id="CYI-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="CYI-1-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         105.531,17 66.531,17 50.455,1 39.531,1 39.531,10 46.197,16.735 27.251,35.719 27.281,51.75 11.134,51.854 0,63 3.531,63
                         3.531,82 18.031,97 48.531,97 62.402,83 86.531,83 100.197,97 120.531,97 139.531,116.625 139.531,91 129.531,91 129.531,77
                         119.531,77 119.531,66 129.589,56.404 119.858,47 105.531,47    "/>
-                      <g id="CYI-1-index">
+                      <g id="CYI-1-index" fill="#000000">
                         <path d="M94.706,25.246v12.855h-2.106V27.784c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H94.706z"/>
                       </g>
                     </g>
                     <g id="CYI-2">
-                        <polygon id="CYI-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="CYI-2-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         139.614,116.667 139.531,91 161.531,91 161.531,76 151.531,66.501 151.531,61.25 134.79,61.259 119.531,47 105.531,47 105.531,17
                         159.531,17 159.531,23 187.531,23 187.531,42 251.031,105.5 272.531,84 292.531,104 275.531,121 275.531,154 292.531,171
                         312.531,171 312.531,179 256.781,179 244.531,191 177.781,191 155.285,213.877 138.469,197 117.531,197 117.531,169.167
                         132.531,155 143.531,155 143.531,147.126 133.531,138 133.531,123.167     "/>
-                      <g id="CYI-2-index">
+                      <g id="CYI-2-index" fill="#000000">
                         <path d="M122.56,25.74c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043c-0.504,0.54-1.404,1.224-2.665,2.07
                           c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421c0.469-0.54,1.459-1.333,2.953-2.358
                           c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035c0-0.702-0.198-1.225-0.559-1.566
@@ -1832,25 +1755,25 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="TNN-city">
+              <div className={`${styles.city} ${this._activeClass('TNN')}`} id="TNN-city">
                 <svg x="0px" y="0px" width="365.196px" height="322.898px" viewBox="0 0 365.196 322.898">
                   <g id="TNN">
                     <g id="TNN-1">
-                        <polygon id="TNN-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TNN-1-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         63.048,70.6 131.408,1.5 136.5,1.5 136.5,30 158.25,52.5 204,52.5 224.613,31.5 261,31.5 281,52.5 312,52.5 341.375,82
                         331.5,91.75 331.5,114 346.5,127.688 346.5,139.5 330,139.5 307.5,160.75 307.5,178.5 205.442,178.5 167.83,141.234
                         176.657,132.722 144.122,100.5 111,100.5 99,88.5 81,88.5     "/>
-                      <g id="TNN-1-index">
+                      <g id="TNN-1-index" fill="#000000">
                         <path d="M89.004,63.276v12.855h-2.106V65.814c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H89.004z"/>
                       </g>
                     </g>
                     <g id="TNN-2">
-                        <polygon id="TNN-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TNN-2-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         14.01,150.482 1.5,136.312 1.5,120 21.188,100.5 33,100.5 62.882,70.434 81.132,88.5 99,88.5 110.25,100 143.997,99.997
                         176.83,132.58 167.83,141.234 205.442,178.5 307.5,178.5 307.5,202.5 339,202.5 364.131,227.816 311.631,280.5 186,280.5
                         178.043,288.457 114.062,224.477 130.81,207.978 89.082,166.5 72,166.5 35.117,129.617     "/>
-                      <g id="TNN-2-index">
+                      <g id="TNN-2-index" fill="#000000">
                         <path d="M65.858,87.104c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043c-0.504,0.54-1.404,1.224-2.665,2.07
                           c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421c0.469-0.54,1.459-1.333,2.953-2.358
                           c0.828-0.576,1.404-1.062,1.765-1.44c0.559-0.631,0.847-1.314,0.847-2.035c0-0.702-0.198-1.225-0.559-1.566
@@ -1859,10 +1782,10 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TNN-3">
-                        <polygon id="TNN-3-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TNN-3-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         25.5,196.5 25.5,159 15.787,149.287 35.358,129.377 72.821,166.5 88.582,166.5 104.491,182.658 79.5,207.152 79.5,214.5 72,214.5
                         63,223.5 52.5,223.5 52.5,196.5    "/>
-                      <g id="TNN-3-index">
+                      <g id="TNN-3-index" fill="#000000">
                         <path d="M86.858,176.96c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
                           c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917c-0.864,0.773-1.998,1.17-3.402,1.17
                           c-1.333,0-2.413-0.342-3.224-1.026c-0.9-0.756-1.404-1.872-1.512-3.312h2.143c0.035,0.828,0.288,1.477,0.792,1.927
@@ -1874,18 +1797,18 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="TNN-4">
-                        <polygon id="TNN-4-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TNN-4-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         37.5,249 25.5,237 25.5,196.5 52.5,196.5 52.5,223.5 63,223.5 71.25,214.5 79.5,214.5 79.5,241.5 37.5,241.5    "/>
-                      <g id="TNN-4-index">
+                      <g id="TNN-4-index" fill="#000000">
                         <path d="M41.732,219.276v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H41.732z M35.232,227.702h4.501
                           v-5.762H39.68L35.232,227.702z"/>
                       </g>
                     </g>
                     <g id="TNN-5">
-                        <polygon id="TNN-5-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="TNN-5-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         37.5,249 55.5,267 55.5,279 78,301.5 90.448,301.5 109.5,320.776 126.281,304.219 143.899,321.837 177.661,288.076
                         114.48,224.058 131.113,208.031 104.571,182.578 79.5,206.654 79.5,241.5 37.5,241.5     "/>
-                      <g id="TNN-5-index">
+                      <g id="TNN-5-index" fill="#000000">
                         <path d="M114.669,202.276v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
                           c1.207,0,2.197,0.396,2.953,1.188c0.756,0.792,1.152,1.891,1.152,3.276c0,1.333-0.504,2.413-1.513,3.26
                           c-0.936,0.756-2.034,1.134-3.312,1.134c-1.171,0-2.179-0.324-3.007-0.954c-0.937-0.702-1.44-1.656-1.53-2.845h2.07
@@ -1897,26 +1820,26 @@ export default class ElectionMap extends Component {
                   </g>
                 </svg>
               </div>
-              <div className="city" id="KHH-city">
+              <div className={`${styles.city} ${this._activeClass('KHH')}`} id="KHH-city">
                 <svg x="0px" y="0px" width="680.228px" height="393px" viewBox="0 0 680.228 393">
                   <g id="KHH">
                     <g id="KHH-1">
-                        <polygon id="KHH-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="KHH-1-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         107.956,127.5 119.956,127.5 139.456,147 155.956,130.5 173.956,147.938 214.831,106.5 341.956,106.5 427.831,19.5 527.956,19.5
                         546.331,1.5 629.956,1.5 679.165,50.855 611.665,118.5 533.956,118.5 397.456,255.125 397.456,295.5 360.331,295.5 323.956,259.5
                         283.456,259.5 283.456,235.5 206.956,235.5 189.331,217.5 130.643,276.188 141.08,286.625 111.08,316.625 91.456,297 91.456,267
                         109.456,249 109.456,238.5 98.956,238.5 90.331,247.5 81.143,238.5 76.456,238.5 76.456,226.113 82.456,226 82.456,187.5
                         101.956,187.5 120.403,169.052 98.313,146.962 107.99,137.285     "/>
-                      <g id="KHH-1-index">
+                      <g id="KHH-1-index" fill="#000000">
                         <path d="M157.418,147.026v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088
                           c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H157.418z"/>
                       </g>
                     </g>
                     <g id="KHH-3">
-                        <polygon id="KHH-3-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="KHH-3-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         24.625,240.835 37.456,227.25 37.456,208.5 56.956,208.5 76.456,227.5 76.456,238.5 66.247,238.5 55.456,249 55.456,255
                         47.056,263.4    "/>
-                      <g id="KHH-3-index">
+                      <g id="KHH-3-index" fill="#000000">
                         <path d="M53.773,217.71c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
                           c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917c-0.864,0.773-1.998,1.17-3.402,1.17
                           c-1.333,0-2.413-0.342-3.224-1.026c-0.9-0.756-1.404-1.872-1.512-3.312h2.143c0.035,0.828,0.288,1.477,0.792,1.927
@@ -1928,20 +1851,20 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="KHH-4">
-                        <polygon id="KHH-4-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="KHH-4-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         38.956,391.5 22.456,391.5 22.456,355.5 47.956,355.5 58.456,345.375 58.456,307.5 70.456,307.5 70.456,282 55.456,267.375
                         55.456,249 66.706,238.5 80.956,238.5 90.331,247.5 98.956,238.5 109.456,238.5 109.456,249 91.456,267.75 91.456,297
                         110.897,316.442     "/>
-                      <g id="KHH-4-index">
+                      <g id="KHH-4-index" fill="#000000">
                         <path d="M71.147,251.526v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H71.147z M64.647,259.952h4.501
                           v-5.762h-0.054L64.647,259.952z"/>
                       </g>
                     </g>
                     <g id="KHH-5">
-                      <path id="KHH-5-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" d="
+                      <path id="KHH-5-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" d="
                         M31.554,278.401l-9.276-9.276l-6.349,6.349L7.456,267v-19.343l12.054-11.968l27.461,27.625L31.554,278.401z M5.75,329.5v-55H1.5
                         v55H5.75z"/>
-                      <g id="KHH-5-index">
+                      <g id="KHH-5-index" fill="#000000">
                         <path d="M23.584,247.526v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
                           c1.207,0,2.197,0.396,2.953,1.188c0.756,0.792,1.152,1.891,1.152,3.276c0,1.333-0.504,2.413-1.513,3.26
                           c-0.936,0.756-2.034,1.134-3.312,1.134c-1.171,0-2.179-0.324-3.007-0.954c-0.937-0.702-1.44-1.656-1.53-2.845h2.07
@@ -1951,9 +1874,9 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="KHH-6">
-                        <polygon id="KHH-6-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="KHH-6-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         55.456,254.5 31.346,278.61 44.673,291.938 62.437,274.174 55.547,267.284     "/>
-                      <g id="KHH-6-index">
+                      <g id="KHH-6-index" fill="#000000">
                         <path d="M51.443,273.118H49.39c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
                           c-0.504,0.792-0.738,1.782-0.738,2.971v0.162h0.091c0.359-0.54,0.81-0.918,1.35-1.17c0.505-0.252,1.081-0.36,1.729-0.36
                           c1.261,0,2.27,0.396,3.025,1.206c0.756,0.811,1.134,1.854,1.134,3.115c0,1.297-0.45,2.358-1.313,3.188
@@ -1965,10 +1888,10 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="KHH-2">
-                        <polygon id="KHH-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="KHH-2-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         55.456,63 55.456,102 40.456,116.06 40.456,208.5 56.956,208.5 74.743,226.152 82.456,226 82.456,187.5 101.956,187.5
                         120.403,169.052 98.313,146.962 108.052,137.347 107.956,127.75 85.456,105 85.456,93    "/>
-                      <g id="KHH-2-index">
+                      <g id="KHH-2-index" fill="#000000">
                         <g>
                           <path d="M100.653,163.045c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
                             c-0.504,0.54-1.404,1.224-2.665,2.07c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421
@@ -1980,9 +1903,9 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="KHH-8">
-                        <polygon id="KHH-8-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="KHH-8-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         62.436,274.173 21.61,316.5 58.456,316.5 58.456,307.5 70.456,307.5 70.456,282    "/>
-                      <g id="KHH-8-index">
+                      <g id="KHH-8-index" fill="#000000">
                         <path d="M63.791,288.705c0.721,0.648,1.099,1.459,1.099,2.431c0,0.648-0.145,1.207-0.432,1.657
                           c-0.324,0.468-0.793,0.846-1.423,1.098v0.036c0.594,0.162,1.116,0.522,1.549,1.08c0.485,0.612,0.737,1.314,0.737,2.106
                           c0,1.152-0.432,2.071-1.26,2.791c-0.847,0.702-2.035,1.062-3.565,1.062c-1.548,0-2.736-0.36-3.564-1.062
@@ -1998,10 +1921,10 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="KHH-9">
-                        <polygon id="KHH-9-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="KHH-9-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         7.125,333.375 17.25,343.5 27,343.5 13.5,329.875 13.5,292.5 22.5,292.5 22.5,316.5 58.5,316.5 58.5,345 48,355.5 20,355.5
                         2.875,338.375     "/>
-                      <g id="KHH-9-index">
+                      <g id="KHH-9-index" fill="#000000">
                         <path d="M48.453,333.967c0.828,1.116,1.242,2.646,1.242,4.627c0,2.089-0.45,3.799-1.313,5.096
                           c-0.883,1.296-2.071,1.944-3.548,1.944c-2.538,0-3.961-1.17-4.267-3.511h2.053c0.252,1.188,0.99,1.782,2.232,1.782
                           c0.846,0,1.53-0.432,2.053-1.26c0.485-0.793,0.738-1.783,0.738-2.972v-0.162h-0.091c-0.378,0.522-0.828,0.919-1.35,1.171
@@ -2013,32 +1936,32 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="KHH-7">
-                        <polygon id="KHH-7-border" fill="#FFFFFF" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="KHH-7-border" stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         44.279,292.332 22.363,269.21 13.456,277.823 13.456,292.5 22.456,292.5 22.456,316.5    "/>
-                      <g id="KHH-7-index">
+                      <g id="KHH-7-index" fill="#000000">
                         <path d="M34.687,287.859v1.692l-4.501,11.163h-2.232l4.609-10.947H25.99v-1.908H34.687z"/>
                       </g>
                     </g>
                   </g>
                 </svg>
               </div>
-              <div className="city" id="PIF-city">
+              <div className={`${styles.city} ${this._activeClass('PIF')}`} id="PIF-city">
                 <svg x="0px" y="0px" width="294px" height="421.709px" viewBox="0 0 294 421.709">
                   <g id="PIF">
                     <g id="PIF-1">
-                        <polygon id="PIF-1-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="PIF-1-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         122.166,46.709 115.017,39.726 154.25,0.709 166,12.709 217,12.709 217,28.709 244,28.709 268.25,52.709 293,52.709 293,83.709
                         257.167,118.709 224,118.709 185.348,157.361 149.917,121.929 128.52,143.327 90.546,106.163 98,98.709 118,98.709 141,75.709
                         141,46.709    "/>
-                      <g id="PIF-1-index">
+                      <g id="PIF-1-index" fill="#000000">
                         <path d="M155.474,14.735v12.855h-2.106V17.274c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757
                           c0.648-0.396,1.171-0.81,1.603-1.26H155.474z"/>
                       </g>
                     </g>
                     <g id="PIF-2">
-                        <polygon id="PIF-2-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
+                        <polygon id="PIF-2-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                         76.194,92.098 122.166,46.709 141,46.709 141,75.709 118.5,98.709 98,98.709 90.546,106.163    "/>
-                      <g id="PIF-2-index">
+                      <g id="PIF-2-index" fill="#000000">
                         <path d="M133.329,56.231c0.792,0.719,1.188,1.639,1.188,2.791c0,1.115-0.433,2.123-1.261,3.043
                           c-0.504,0.539-1.404,1.223-2.665,2.07c-1.314,0.863-2.106,1.619-2.395,2.268h6.338v1.855h-8.967c0-1.314,0.414-2.449,1.278-3.422
                           c0.469-0.539,1.459-1.332,2.953-2.357c0.828-0.576,1.404-1.062,1.765-1.441c0.559-0.631,0.847-1.314,0.847-2.035
@@ -2048,11 +1971,11 @@ export default class ElectionMap extends Component {
                       </g>
                     </g>
                     <g id="PIF-3">
-                      <path id="PIF-3-border" fill="#FFFFFF" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" d="
+                      <path id="PIF-3-border" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" d="
                         M53.805,115.903l22.598-23.597l52.243,51.146l21.149-21.399l35.409,35.164l-8.204,8.05v34.443l-32,32.25v49.75l18.542,18.583
                         L137,326.792v22.917l-32,33H94l-11,10.5v27.5h-8v-23l-21.848-21.848l-6.5,6.5L39,374.709l16.5-16.5l-9.75-9.5l35.25-35.5v-69.5
                         l6-6.5v-55.5l-33-33L53.805,115.903z M1,161.709h14.667v-4.348l-6.659-6.659l-4.591,4.591v3.083H1V161.709z"/>
-                      <g id="PIF-3-index">
+                      <g id="PIF-3-index" fill="#000000">
                         <path d="M153.329,137.419c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809
                           c0.757,0.234,1.351,0.576,1.747,1.044c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917
                           c-0.864,0.773-1.998,1.17-3.402,1.17c-1.333,0-2.413-0.342-3.224-1.026c-0.9-0.756-1.404-1.872-1.512-3.312h2.143
