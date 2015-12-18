@@ -3,57 +3,52 @@ import { Link } from "react-router";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import {load} from '../../ducks/candidateDynamicData.js';
-
 import people_name2id from '../../utils/people_name2id';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
-import parseDynamicData from '../../utils/parseDynamicData';
+import identity_district from '../../utils/identity_district';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 
 @connect(
     state => ({
-      candidateDynamicData: state.candidateDynamicData.data,
+      legislators: state.legislators,
       candidates: state.candidates
     }),
-    dispatch => bindActionCreators({load}, dispatch))
+    dispatch => bindActionCreators({}, dispatch))
 
 export default class CandidateProfileCards extends Component {
-  static propTypes = {
-  }
   constructor(props){ super(props)
-    this.state = {
-      candidateDynamicLoad: ""
-    }
-  }
-  componentWillMount(){
-    this.props.load();
-  }
-  componentWillReceiveProps(nextProps){
-    if(nextProps.candidateDynamicData){
-      this.setState({
-        candidateDynamicLoad: parseDynamicData(nextProps.candidateDynamicData.value)
-      })
-    }
-  }
-  
-  render() {
-    const styles = require("./CandidateProfileCards.scss")
-    const {candidates, area, areaNo} = this.props;
-    const {candidateDynamicLoad} = this.state;
-    
+    const {legislators, candidates, area, areaNo} = props;
     let candidateList = getDistrictCandidates(candidates, area, areaNo);
-    let candidateCardItems = candidateList.map((value, index)=>{
-        let goals;
-        if(candidateDynamicLoad[value.name])
-            goals = candidateDynamicLoad[value.name].goals
+    this.state = {
+        candidateList: candidateList
+    }
+  }
+ 
+  render() {
+    const styles = require("./CandidateProfileCards.scss");
+    const {legislators, area, areaNo} = this.props;
+    const {candidateList} = this.state;
 
-        return <Card candidates={candidates} 
-                     id={value.id}
-                     goals={goals}
-                     key={`candiate-card-${index}`} />
+    let candidateCardItems = (candidateList || []).map((value, index)=>{
+        let currentInfo;//本區現任立委 or 現任立委，但不是本區
+        
+        let isCurrent = identity_district(legislators[value.id], area, areaNo);
+        if(isCurrent === 'D'){
+           currentInfo = <h3 className={styles.currentInfo} >本區現任勇者代表</h3>;
+        }
+        if(isCurrent === 'C'){
+           currentInfo = <h3 className={styles.currentInfo} >現任勇者，但並非本區代表</h3>;
+        }
+        
+        return (
+          <div className={styles.cardWrap} key={`candiate-card-${index}`}>
+              {currentInfo}
+              <Card id={value.id}
+                    people={value}/>
+          </div>
+        );
     })
-
 
     return (
         <div className={styles.wrap}>
@@ -66,29 +61,43 @@ export default class CandidateProfileCards extends Component {
 class Card extends Component {
   render() {
     const styles = require("./CandidateProfileCards.scss")
-    const {id, candidates, goals} = this.props;
-    const people = candidates[id];
+    const {people} = this.props;
     if(!people) return <div></div>
 
-    let goalItems = (goals||[]).map((value, index)=>{
+    let billItems = (people.bills||[]).map((value, index)=>{
         return (
-            <li key={`${id}-${index}`}>{value.goal}</li>
+            <li key={`${people.id}-${index}`}>{value.goal}</li>
         )
     })
+    let billSection;
+    if(people.bills[0].goal){
+      billSection = (
+        <div className={styles.billSection}>
+            <ul className={styles.billList}>{billItems}</ul>        
+        </div>
+      )
+    }else{
+      let text = (people.contactAvaliable === true) ? "尚未回覆" : "無公開聯絡資訊";
+      billSection = (
+        <div className={`${styles.billSection} ${styles.noReply}`}>
+            {text}  
+        </div>
+      )
+
+    }
 
     return (
-        <div className={`${styles.cardItem} ${styles.reflectBelow}`}>
+        <Link to={`/people/${people.id}/records/`}
+              className={`${styles.cardItem}`}>
             <div className={styles.partyItem}>
-              <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+                <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
             </div>
             <div className={styles.name}>{people.name}</div>
-            <div className={styles.peoplePhoto}><PeoplePhoto id={id}/></div>
-            <div className={styles.goalSection}>
-                <div className={styles.goalTitle}>戰鬥目標</div>
-                <ul className={styles.goalList}>{goalItems}</ul>
-            </div>
-        </div>
+            <div className={styles.peoplePhoto}><PeoplePhoto id={people.id}/></div>
+            {billSection}
+        </Link>
     );
   }
 
 }
+

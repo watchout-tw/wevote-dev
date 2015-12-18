@@ -6,7 +6,6 @@ import classnames from 'classnames';
 
 import QAItem from '../../components/QAItem/QAItem';
 import PKer from '../../components/PKer/PKer';
-import PartyBills from '../../components/PartyBills/PartyBills';
 
 import people_name2id from '../../utils/people_name2id';
 import eng2party_short from '../../utils/eng2party_short';

@@ -35,6 +35,7 @@ import WithAppbarOnly from 'views/WithAppbarOnly/WithAppbarOnly.js';
 import Issues from 'views/Issues/Issues.js';
 import Constituencies from 'views/Constituencies/Constituencies.js';
 import Constituency from 'views/Constituency/Constituency.js';
+import ConstituencyTable from 'views/ConstituencyTable/ConstituencyTable.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
 
@@ -63,8 +64,8 @@ export default function(store) {
             
             <Route path="/8th-legislators" component={LegislatorList}/>
             
-            <Route path="/people/:peopleId/records/" component={People}/>
-            <Route path="/people/:peopleId/records/index.html" component={People}/>
+            <Route path="/people/:peopleId/:category/" component={People}/>
+            <Route path="/people/:peopleId/:category/index.html" component={People}/>
             <Route path="/people/:peopleId/records/:issueName" component={PeopleIssue}/>
             
             <Route path="/parties/" component={Parties}/>
@@ -77,6 +78,12 @@ export default function(store) {
             <Route path="/parties/:partyId/:category/" component={Party}/>
             <Route path="/parties/:partyId/:category/index.html" component={Party}/>
             <Route path="/parties/:partyId/records/:issueName" component={PartyIssue}/>
+
+            <Route path="/constituencies/" component={Constituencies}/>
+            <Route path="/constituencies/index.html" component={Constituencies}/>
+            <Route path="/constituencies/:area/:areaNo/" component={Constituency}/>
+            <Route path="/constituencies/:area/:areaNo/index.html" component={Constituency}/>
+            <Route path="/constituencies/:area/:areaNo/table" component={ConstituencyTable}/>
             
             <Route path="/records/:recordId" component={Record}/>
             

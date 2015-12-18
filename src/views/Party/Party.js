@@ -8,6 +8,8 @@ import classnames from 'classnames';
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
+import Promises from '../../components/Promises/Promises.js';
+
 import PartyBuns from '../../components/PartyBuns/PartyBuns.js';
 
 import eng2url from '../../utils/eng2url';
@@ -28,17 +30,12 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
                  legislators: state.legislators,
                  records: state.records,
                  issues: state.issues,
-                 parties: state.parties
+                 parties: state.parties,
+                 partyPromises: state.partyPromises
                }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Party extends Component {
-  static propTypes = {
-      legislators: PropTypes.object.isRequired,
-      records: PropTypes.object.isRequired,
-      issues: PropTypes.object.isRequired,
-      parties: PropTypes.object.isRequired
-  }
   constructor(props){ super(props)
       this.state = {
         partyPositions: parseToPartyPosition(props.records, props.issues)
@@ -78,7 +75,9 @@ export default class Party extends Component {
       break;
 
       case 'promises':
-        content = <PartyPromises id={id} />
+        const {partyPromises} = this.props;
+        let promises = partyPromises[id];
+        content = <Promises id={id} promises={promises}/>
 
         title = `${eng2cht(id)}對於議題與法案的未來承諾-沃草2016立委出任務`;
         description = `${eng2cht(id)}的未來承諾大公開！趕快來看看${eng2cht(id)}各項重大議題的戰鬥策略與優先法案的戰鬥目標！`;
@@ -152,77 +151,7 @@ class PartyRecords extends Component {
 
     }
 }
-function handlePartyPos(value){
-  if(value === "none"){
-    return "尚未回覆"
-  }else{
-    return eng2cht(value);
-  }
-}
-@connect(
-    state => ({
-                 partyPromises: state.partyPromises,
-                 issues: state.issues
-               }),
-    dispatch => bindActionCreators({}, dispatch))
-class PartyPromises extends Component {
-    render(){
-      const styles = require('./Party.scss');
-      const {partyPromises, issues, id} = this.props;
-      console.log(id);
-      const {positions, bills} = partyPromises[id];
-      
-      if(!positions){
-        return <div></div>
-      }
-      let postionItems = Object.keys(positions).map((issueName,i)=>{
-          let pos = positions[issueName].promise.position;
-          let statement = positions[issueName].promise.statement;
-          let issueData = issues[eng2url(issueName)];
-          return (
-              <div className={styles.promiseItem}
-                   key={`promiseItem-${id}-${i}`}>
-                  <div className={styles.promiseTitle}>{eng2cht(issueName)}</div>
-                  <div className={styles.promiseQuestion}>{issueData.question}</div>
-                  <div className={styles.promisePos}>
-                    <div className={`${styles[pos]} ${styles.promiseIcon}`}></div>
-                    <div className={styles.promisePosText}>{handlePartyPos(pos)}</div>
-                  </div>
-                  <div className={styles.promiseStatement}>{statement}</div>
-              </div>
-          )
-      })
-      let billItems = bills.map((value,i)=>{
-          let content = value.content;
-          if(!content){
-              if(!value.goal){
-                  //因為有可能只有回覆目標，沒有寫內容描述
-                  content = "尚未回覆";
-              }
-          }
-          return (
-              <div className={styles.billItem}
-                   key={`billItem-${id}-${i}`}>
-                  <div className={styles.billItemTitle}>{i+1}・{value.goal}</div>
-                  <div>{content}</div>
-              </div>
-          )
-      })
-      return (
-        <div>
-          <div className={styles.sectionTitle}>議題表態</div>
-          <div>{postionItems}</div>
 
-          <div className={styles.sectionTitle}>優先法案</div>
-          <div>{billItems}</div>
-          
-          <div className={`${styles.promiseMeta}`}>* 統計更新日期：2015/12/15。
-                <Link className={`${styles.ia} ${styles.bright}`} 
-                      to={`/about/FAQ/`}>我們如何統計的</Link></div>
-        </div>
-      )
-    }
-}
 @connect(
     state => ({
                  partyBlock: state.partyBlock

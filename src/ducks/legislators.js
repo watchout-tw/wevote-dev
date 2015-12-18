@@ -9,10 +9,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "台北市",
+        "constituency1": "TPE",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -26,10 +23,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "58",
-        "isCurrent": true,
-        "constituency1": "山地原住民",
+        "constituency1": "MAB",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -43,10 +37,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "60",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -60,10 +51,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "50",
-        "isCurrent": true,
-        "constituency1": "花蓮縣",
+        "constituency1": "HUN",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -77,10 +65,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "44",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -94,10 +79,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "74",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -111,10 +93,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "47",
-        "isCurrent": true,
-        "constituency1": "彰化縣",
+        "constituency1": "CHW",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -128,10 +107,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "67",
-        "isCurrent": true,
-        "constituency1": "屏東縣",
+        "constituency1": "PIF",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -145,10 +121,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -162,10 +135,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "43",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "8",
         "hasResigned": false
     },
@@ -179,10 +149,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "52",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "7",
         "hasResigned": false
     },
@@ -196,10 +163,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "42",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "7",
         "hasResigned": false
     },
@@ -213,10 +177,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "46",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -230,10 +191,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "57",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -247,10 +205,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "45",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -264,10 +219,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "49",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -281,10 +233,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "桃園縣",
+        "constituency1": "TYN",
         "constituency2": "5",
         "hasResigned": false
     },
@@ -298,10 +247,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "63",
-        "isCurrent": true,
-        "constituency1": "新竹市",
+        "constituency1": "HCC",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -315,10 +261,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "51",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "6",
         "hasResigned": false
     },
@@ -332,10 +275,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "50",
-        "isCurrent": true,
-        "constituency1": "嘉義市",
+        "constituency1": "CYC",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -349,10 +289,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "60",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -366,10 +303,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -383,10 +317,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "67",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "12",
         "hasResigned": false
     },
@@ -400,10 +331,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "62",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -422,10 +350,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "56",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "4",
         "hasResigned": false
     },
@@ -439,10 +364,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "43",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -456,10 +378,7 @@ const initialState = {
                 "endDate": "2013/7/15"
             }
         ],
-        "gender": "女",
-        "age": "46",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -473,10 +392,7 @@ const initialState = {
                 "endDate": "2013/7/11"
             }
         ],
-        "gender": "男",
-        "age": "63",
-        "isCurrent": true,
-        "constituency1": "平地原住民",
+        "constituency1": "LAB",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -490,10 +406,7 @@ const initialState = {
                 "endDate": "2014/11/25"
             }
         ],
-        "gender": "男",
-        "age": "51",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "6",
         "hasResigned": true
     },
@@ -507,10 +420,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "43",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "4",
         "hasResigned": false
     },
@@ -524,10 +434,7 @@ const initialState = {
                 "endDate": "2014/12/25"
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "南投縣",
+        "constituency1": "NAN",
         "constituency2": "2",
         "hasResigned": true
     },
@@ -541,10 +448,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "台北市",
+        "constituency1": "TPE",
         "constituency2": "5",
         "hasResigned": false
     },
@@ -558,10 +462,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "9",
         "hasResigned": false
     },
@@ -575,10 +476,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "42",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -592,10 +490,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "57",
-        "isCurrent": true,
-        "constituency1": "彰化縣",
+        "constituency1": "CHW",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -609,10 +504,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "62",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "9",
         "hasResigned": false
     },
@@ -626,10 +518,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "60",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "6",
         "hasResigned": false
     },
@@ -643,10 +532,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -660,10 +546,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "43",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -677,10 +560,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "44",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -694,10 +574,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "50",
-        "isCurrent": true,
-        "constituency1": "台北市",
+        "constituency1": "TPE",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -711,10 +588,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -728,10 +602,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "52",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -745,10 +616,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "67",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -762,10 +630,7 @@ const initialState = {
                 "endDate": "2015/7/16"
             }
         ],
-        "gender": "男",
-        "age": "55",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -779,10 +644,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "46",
-        "isCurrent": true,
-        "constituency1": "桃園縣",
+        "constituency1": "TYN",
         "constituency2": "6",
         "hasResigned": false
     },
@@ -796,10 +658,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "74",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -813,10 +672,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "60",
-        "isCurrent": true,
-        "constituency1": "屏東縣",
+        "constituency1": "PIF",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -835,10 +691,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "43",
-        "isCurrent": true,
-        "constituency1": "新竹縣",
+        "constituency1": "HSZ",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -852,10 +705,7 @@ const initialState = {
                 "endDate": "2014/12/25"
             }
         ],
-        "gender": "男",
-        "age": "60",
-        "isCurrent": true,
-        "constituency1": "苗栗縣",
+        "constituency1": "ZMI",
         "constituency2": "2",
         "hasResigned": true
     },
@@ -869,10 +719,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "60",
-        "isCurrent": true,
-        "constituency1": "嘉義縣",
+        "constituency1": "CYI",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -886,10 +733,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "50",
-        "isCurrent": true,
-        "constituency1": "南投縣",
+        "constituency1": "NAN",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -903,10 +747,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "52",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -920,10 +761,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "50",
-        "isCurrent": true,
-        "constituency1": "山地原住民",
+        "constituency1": "MAB",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -937,10 +775,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "34",
-        "isCurrent": true,
-        "constituency1": "雲林縣",
+        "constituency1": "YLN",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -954,10 +789,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "8",
         "hasResigned": false
     },
@@ -971,10 +803,7 @@ const initialState = {
                 "endDate": "2013/3/17"
             }
         ],
-        "gender": "女",
-        "age": "74",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -988,10 +817,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "52",
-        "isCurrent": true,
-        "constituency1": "屏東縣",
+        "constituency1": "PIF",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -1005,10 +831,7 @@ const initialState = {
                 "endDate": "2014/2/1"
             }
         ],
-        "gender": "男",
-        "age": "50",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -1022,10 +845,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "40",
-        "isCurrent": true,
-        "constituency1": "南投縣",
+        "constituency1": "NAN",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -1039,10 +859,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "台南市",
+        "constituency1": "TNN",
         "constituency2": "4",
         "hasResigned": false
     },
@@ -1056,10 +873,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "49",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "8",
         "hasResigned": false
     },
@@ -1073,10 +887,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "51",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1090,10 +901,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "36",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1107,10 +915,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "60",
-        "isCurrent": true,
-        "constituency1": "嘉義縣",
+        "constituency1": "CYI",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -1124,10 +929,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "41",
-        "isCurrent": true,
-        "constituency1": "台南市",
+        "constituency1": "TNN",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -1141,10 +943,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "80",
-        "isCurrent": true,
-        "constituency1": "台南市",
+        "constituency1": "TNN",
         "constituency2": "5",
         "hasResigned": false
     },
@@ -1158,10 +957,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "59",
-        "isCurrent": true,
-        "constituency1": "桃園縣",
+        "constituency1": "TYN",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -1175,10 +971,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "49",
-        "isCurrent": true,
-        "constituency1": "彰化縣",
+        "constituency1": "CHW",
         "constituency2": "4",
         "hasResigned": false
     },
@@ -1192,10 +985,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "58",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1214,10 +1004,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "63",
-        "isCurrent": true,
-        "constituency1": "連江縣",
+        "constituency1": "MFK",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1231,10 +1018,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "苗栗縣",
+        "constituency1": "ZMI",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -1248,10 +1032,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "71",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1265,10 +1046,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "55",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1282,10 +1060,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "54",
-        "isCurrent": true,
-        "constituency1": "宜蘭縣",
+        "constituency1": "ILA",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1299,10 +1074,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "58",
-        "isCurrent": true,
-        "constituency1": "桃園縣",
+        "constituency1": "TYN",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -1316,10 +1088,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "73",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1333,10 +1102,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1350,10 +1116,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "台北市",
+        "constituency1": "TPE",
         "constituency2": "7",
         "hasResigned": false
     },
@@ -1367,10 +1130,7 @@ const initialState = {
                 "endDate": "2014/2/1"
             }
         ],
-        "gender": "女",
-        "age": "46",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": true
     },
@@ -1384,10 +1144,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "39",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "5",
         "hasResigned": false
     },
@@ -1401,10 +1158,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "62",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -1418,10 +1172,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "52",
-        "isCurrent": true,
-        "constituency1": "台南市",
+        "constituency1": "TNN",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -1435,10 +1186,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "51",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "6",
         "hasResigned": false
     },
@@ -1452,10 +1200,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "41",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1469,10 +1214,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "金門縣",
+        "constituency1": "KNH",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1486,10 +1228,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "49",
-        "isCurrent": true,
-        "constituency1": "澎湖縣",
+        "constituency1": "MZG",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1503,10 +1242,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "51",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -1520,10 +1256,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "58",
-        "isCurrent": true,
-        "constituency1": "桃園縣",
+        "constituency1": "TYN",
         "constituency2": "4",
         "hasResigned": false
     },
@@ -1537,10 +1270,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "55",
-        "isCurrent": true,
-        "constituency1": "台南市",
+        "constituency1": "TNN",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -1554,10 +1284,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "68",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1571,10 +1298,6 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "僑居國外國民",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1588,10 +1311,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "59",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1605,10 +1325,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "70",
-        "isCurrent": true,
-        "constituency1": "桃園縣",
+        "constituency1": "TYN",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -1622,10 +1339,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "60",
-        "isCurrent": true,
-        "constituency1": "平地原住民",
+        "constituency1": "LAB",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1639,10 +1353,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "59",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "5",
         "hasResigned": false
     },
@@ -1656,10 +1367,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "42",
-        "isCurrent": true,
-        "constituency1": "高雄市",
+        "constituency1": "KHH",
         "constituency2": "7",
         "hasResigned": false
     },
@@ -1673,10 +1381,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "46",
-        "isCurrent": true,
-        "constituency1": "雲林縣",
+        "constituency1": "YLN",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -1690,10 +1395,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "48",
-        "isCurrent": true,
-        "constituency1": "台東縣",
+        "constituency1": "TTT",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1707,10 +1409,7 @@ const initialState = {
                 "endDate": "2014/12/25"
             }
         ],
-        "gender": "男",
-        "age": "52",
-        "isCurrent": true,
-        "constituency1": "屏東縣",
+        "constituency1": "PIF",
         "constituency2": "3",
         "hasResigned": true
     },
@@ -1724,10 +1423,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "58",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1741,10 +1437,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "62",
-        "isCurrent": true,
-        "constituency1": "台北市",
+        "constituency1": "TPE",
         "constituency2": "4",
         "hasResigned": false
     },
@@ -1758,10 +1451,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "46",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -1775,10 +1465,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "55",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1792,10 +1479,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "57",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "4",
         "hasResigned": false
     },
@@ -1809,10 +1493,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "61",
-        "isCurrent": true,
-        "constituency1": "台北市",
+        "constituency1": "TPE",
         "constituency2": "6",
         "hasResigned": false
     },
@@ -1826,10 +1507,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "59",
-        "isCurrent": true,
-        "constituency1": "平地原住民",
+        "constituency1": "LAB",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1843,10 +1521,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "58",
-        "isCurrent": true,
-        "constituency1": "彰化縣",
+        "constituency1": "CHW",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -1860,10 +1535,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "46",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1877,10 +1549,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "54",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "5",
         "hasResigned": false
     },
@@ -1894,10 +1563,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "63",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "10",
         "hasResigned": false
     },
@@ -1911,10 +1577,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "44",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1928,10 +1591,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "台北市",
+        "constituency1": "TPE",
         "constituency2": "8",
         "hasResigned": false
     },
@@ -1945,10 +1605,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "57",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1962,10 +1619,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "63",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1979,10 +1633,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "40",
-        "isCurrent": true,
-        "constituency1": "基隆市",
+        "constituency1": "KEL",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -1996,10 +1647,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "64",
-        "isCurrent": true,
-        "constituency1": "山地原住民",
+        "constituency1": "MAB",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -2013,10 +1661,7 @@ const initialState = {
                 "endDate": "2012/11/28"
             }
         ],
-        "gender": "男",
-        "age": "55",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "2",
         "hasResigned": true
     },
@@ -2030,10 +1675,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "38",
-        "isCurrent": true,
-        "constituency1": "台中市",
+        "constituency1": "TXG",
         "constituency2": "2",
         "hasResigned": false
     },
@@ -2047,10 +1689,7 @@ const initialState = {
                 "endDate": "2014/11/25"
             }
         ],
-        "gender": "男",
-        "age": "52",
-        "isCurrent": true,
-        "constituency1": "彰化縣",
+        "constituency1": "CHW",
         "constituency2": "4",
         "hasResigned": true
     },
@@ -2064,10 +1703,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "48",
-        "isCurrent": true,
-        "constituency1": "新北市",
+        "constituency1": "NTC",
         "constituency2": "11",
         "hasResigned": false
     },
@@ -2081,10 +1717,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "女",
-        "age": "63",
-        "isCurrent": true,
-        "constituency1": "台北市",
+        "constituency1": "TPE",
         "constituency2": "3",
         "hasResigned": false
     },
@@ -2098,10 +1731,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "58",
-        "isCurrent": true,
-        "constituency1": "全國不分區",
+        "constituency1": "Proportional",
         "constituency2": "N/A",
         "hasResigned": false
     },
@@ -2115,10 +1745,7 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "男",
-        "age": "50",
-        "isCurrent": true,
-        "constituency1": "屏東縣",
+        "constituency1": "PIF",
         "constituency2": "1",
         "hasResigned": false
     },
@@ -2132,10 +1759,6 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "",
-        "age": "",
-        "isCurrent": "",
-        "constituency1": "",
         "constituency2": "",
         "hasResigned": false
     },
@@ -2149,10 +1772,6 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "",
-        "age": "",
-        "isCurrent": "",
-        "constituency1": "",
         "constituency2": "",
         "hasResigned": false
     },
@@ -2166,10 +1785,6 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "gender": "",
-        "age": "",
-        "isCurrent": "",
-        "constituency1": "",
         "constituency2": "",
         "hasResigned": false
     },
@@ -2183,10 +1798,6 @@ const initialState = {
                 "endDate": "2013/7/11"
             }
         ],
-        "gender": "",
-        "age": "",
-        "isCurrent": "",
-        "constituency1": "",
         "constituency2": "",
         "hasResigned": false
     }

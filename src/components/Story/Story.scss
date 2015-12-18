@@ -1,0 +1,48 @@
+
+.Story {
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.Story img {
+	margin-top: 30px;
+	max-width: 100%;
+}
+.Story h2 {
+	color: rgb(192, 80, 77);
+	margin: 30px auto;
+    line-height: 1.4;
+    font-size: 32px;
+}
+.author {
+	font-size: 15px;
+	margin-left: 10px;
+    line-height: 1.6;
+}
+.date {
+	font-size: 16px;
+	color: rgba(15, 15, 15, 0.83);
+}
+.Story h3 {
+	color: rgb(192, 80, 77);
+	text-align: left;
+}
+.Story p.subtitle {
+	padding: 0 0 0 8px;
+    font-weight: 800;
+    color: black;
+}
+.Story p {
+	line-height: 1.6;
+    text-align: left;
+    font-size: 16px;
+    padding: 5px;
+    color: rgb(54, 52, 52);
+}
+@media all and (min-width: 600px){
+	.Story p {
+		line-height: 1.8;
+		font-size: 18px;
+		color: rgba(15, 15, 15, 0.84);
+	}
+}

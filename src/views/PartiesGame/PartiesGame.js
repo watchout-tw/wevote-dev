@@ -13,7 +13,7 @@ import PartyRolls from '../../components/PartyRolls/PartyRolls';
 /* Stage2: matchgame */
 import PartyMatchGame from '../../components/PartyMatchGame/PartyMatchGame';
 /* Stage3: bill */
-import PartyBills from '../../components/PartyBills/PartyBills';
+import BillTable from '../../components/BillTable/BillTable';
 
 import Social from '../../components/Social/Social.js';
 
@@ -75,7 +75,7 @@ export default class PartiesGame extends Component {
           })
           content = (
               <div className={styles.billWrap}>
-                  <PartyBills outerLink={true}/>
+                  <BillTable showTitle={true} unit="parties"/>
                   <div id="completeBadge"></div>
                   <div className={styles.billComplete}>
                       <img src={missionAccomplishedImg}/>

@@ -1,0 +1,41 @@
+@import '../../common.scss';
+.wrap {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    height: 150px;
+}
+.areaFlag {
+    background-image: url('./images/flag.png');
+	background-size: 100% auto;
+    width: 200px;
+    color: white;
+    text-align: center;
+    padding: 70px 0;
+    font-size: 22px;
+    margin: 0 auto 10px auto;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+.flagMeta, .flagMeta:visited {
+    font-size: 14px;
+    color: $black;
+    padding-bottom: 1px;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    display: inline-block;
+    
+    position: absolute;
+    bottom: 30px;
+    color: rgb(230,230,230);
+    left: calc(50% - 35px);
+    cursor: pointer;
+    text-align: center;
+
+    z-index: 1;
+    
+}
+.flagMeta:hover {
+    color: white;
+}

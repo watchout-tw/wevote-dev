@@ -3,38 +3,47 @@
 	position: relative;
     min-height: 300px;
 }
+.cardWrap {
+    display: inline-block;
+    margin: 30px 8px;
+}
+.currentInfo {
+    margin: 4px;
+}
 .cardItems {
 	text-align: center;
-	margin-top: 10vh;
-    margin-bottom: 100px;
 }
-.cardItem {
+.cardItem, .cardItem:visited {
 	display: inline-block;
-	border: 1px solid;
-    margin: 30px 8px;
-    width: 200px;
+    vertical-align: top;
+	width: 200px;
     height: 280px;
-    background: rgba(0,0,0,0.8);
-    background-image: url(./images/card.jpg);
+    background-image: url(./images/card.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: relative;
+    
+    text-decoration: none;
+    color: $black;
+
+    box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.5);
 
 }
-.reflectBelow { /* only works for safari and chrome */
-	-webkit-box-reflect: below 0
-    -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.75, transparent), to(black)); 
+.cardItem:hover {
+    box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.8);
 }
 .partyItem {
 	position: absolute;
-	left: 2px;
-	top: 5px;
+	left: 8px;
+	top: 12px;
 }
 .name {
 	text-align: center;
 	font-size: 20px;
-	padding: 20px;
-	color: white;
+	padding: 12px;
+}
+.cardItem .name {
+    color: white;
 }
 .peoplePhoto {
 	width: 100px;
@@ -45,12 +54,16 @@
     margin: 0 auto;
     border-radius: 50%;
 }
-.goalSection {
+.billSection {
 	display: block;
-    background: rgba(56, 38, 23, 0.7);
-    margin: 10px;
+    margin: 26px;
+    text-align: left;
 }
-.goalTitle {
+.billSection.noReply {
+    padding-top: 20px;
+    text-align: center;
+}
+.billTitle {
 	width: 20px;
     float: left;
     padding: 6px 0;
@@ -58,12 +71,11 @@
     font-size: 14px;
     background: #B28765;
 }
-.goalList {
+.billList {
 	display: inline-block;
     text-align: left;
     width: 120px;
     font-size: 14px;
     vertical-align: top;
     padding: 0 10px;
-    color: #f5f5f5;
 }

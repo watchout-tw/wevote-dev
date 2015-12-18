@@ -1,4 +1,4 @@
-export default function getMatchgamePartyData(partyPositions, partyPromises){
+export default function getPartiesTableData(partyPositions, partyPromises){
     let TableData = {};
     //表格會有的議題
     let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower","courseGuide","justiceReform"];
@@ -9,6 +9,7 @@ export default function getMatchgamePartyData(partyPositions, partyPromises){
         TableData[partyId] = {
             name: partyPromises[partyId].name,
             id: partyId,
+            party: partyId,
             positions: {}
         };
        
@@ -50,8 +51,9 @@ export default function getMatchgamePartyData(partyPositions, partyPromises){
 /*
 data = {
   "KMT": 
-    "title" : "中國國民黨",
+    "name" : "中國國民黨",
     "id" : "KMT",
+    "party" : "KMT",
     "positions" :
       {
         "marriageEquality": {
