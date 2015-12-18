@@ -1,3 +1,4 @@
+$webVersionBreak: 800px;
 .wrap {
 	position: relative;
 	max-width: 400px;
@@ -28,4 +29,9 @@ select.selector {
     color: white;
     background: #026466;
     text-decoration: none;
+}
+@media all and (min-width: $webVersionBreak){
+    .wrap {
+        display: none;
+    }
 }

@@ -80,10 +80,7 @@ export default class ElectionMap extends Component {
   }
   _onSubMapHover(district_count, e){
     e.target.setAttribute("fill", SELECT_COLOR); 
-
     const {active_city} = this.state;
-    console.log(active_city+'-'+district_count)
-
     this.setState({
       sub_active : district_count
     })
@@ -139,10 +136,7 @@ export default class ElectionMap extends Component {
           node.setAttribute("fill", INACTIVE_COLOR); 
           //event listener
           node.addEventListener("mouseenter" , this._onMapEnter.bind(this, city));
-          node.addEventListener("mouseleave", this._onMapLeave.bind(this, city));
-          
-          
-                    
+          node.addEventListener("mouseleave", this._onMapLeave.bind(this, city));    
       });
 
       //超過一個以上的選區, click show detail
@@ -212,7 +206,7 @@ export default class ElectionMap extends Component {
 
     return (
       <div className={styles.wrap}>
-          <div id="bigmap">
+          <div className={styles.bigmap}>
               <svg x="0px" y="0px" width="800px" height="800px" viewBox="0 0 800 800">
                   <g id="background">
                     <rect className={styles.backgroundRect} width="800" height="800"/>
@@ -1201,7 +1195,6 @@ export default class ElectionMap extends Component {
                         </g>
                         </Link>
                       </g>
-
                   </g>
                   <g id="backup">
                       <text transform="matrix(1 0 0 1 -130.4584 171)" fontFamily="'PingFang-TC-Regular-83pv-RKSJ-H'" fontSize="18">新北市</text>
