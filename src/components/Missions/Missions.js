@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import {setToProecessing} from '../../ducks/processingState.js';
 
 @connect(
-    state => ({}),
+    state => ({ issues: state.issues }),
     dispatch => bindActionCreators({setToProecessing}, dispatch))
 export default class Missions extends Component {
   static propTypes = {
@@ -22,8 +22,15 @@ export default class Missions extends Component {
           "marriage-equality" :false,
           "recall" : false,
           "referendum" : false,
-          "nuclear-power" : false
+          "nuclear-power" : false,
+          "course-guide" : false,
+          "justice-reform" : false
+        },
+        shipments: {
+          "1" : ["marriage-equality","recall","referendum","nuclear-power"],
+          "2" : ["course-guide","justice-reform"]
         }
+
       }
 
   }
@@ -55,8 +62,9 @@ export default class Missions extends Component {
 
   render() {
     const styles = require('./Missions.scss');
-    const {issues, skipIssue, showComingMission, embed} = this.props;
-    const {completed} = this.state;
+    const {skipIssue, showComingMission, embed, shipmentsType, issues} = this.props;
+    
+    const {completed, shipments} = this.state;
     const castle_default = require('./images/castles_default.svg');
     const title_default = require('./images/castles_defaultTitle.svg');
     const symbol_star = require('./images/symbols_star.svg');
@@ -69,7 +77,9 @@ export default class Missions extends Component {
       [styles.embed] : embed
     })
 
-    let missonItems = Object.keys(issues).map((currentIssue, index)=>{
+    //As we want to layout newer issues on top of it.
+    const currentShipments = shipments[shipmentsType];
+    let missonItems = currentShipments.map((currentIssue, index)=>{
 
         let imgURL;
         let titleURL;
@@ -82,12 +92,6 @@ export default class Missions extends Component {
           titleURL = title_default;
         }
 
-/*        let completedOrStatement = (completed[currentIssue] === true) ? (
-          <div className={styles.missionStatusBlock}>
-            <img src={symbol_star} className={`${styles.symbol} ${styles.star}`}/>
-            <div className={styles.missionStatusText}>任務完成</div>
-          </div>
-        ) : (<div>{issues[currentIssue].question}</div>);*/
         let missionAccomplishBadge = (
           (completed[currentIssue] === true) ?
           (<img src={badge} className={styles.missionAccomplishBadge}/>) :
@@ -102,7 +106,7 @@ export default class Missions extends Component {
               return (
                   <a href={linkURL}
                      target="_blank"
-                     key={index}
+                     key={`${currentIssue}-index`}
                      className={coverItemClasses}
                      onClick={setToProecessing}>
                       <img src={imgURL} className={styles.coverImg}/>
@@ -113,7 +117,9 @@ export default class Missions extends Component {
 
             }else{
               return (
-                  <Link to={`/issues/${currentIssue}/`} key={index} className={coverItemClasses}
+                  <Link to={`/issues/${currentIssue}/`} 
+                        key={`${currentIssue}-index`} 
+                        className={coverItemClasses}
                         onClick={setToProecessing}>
                       <img src={imgURL} className={styles.coverImg}/>
                       <img src={titleURL} className={styles.coverTitleImg}/>
@@ -125,11 +131,6 @@ export default class Missions extends Component {
 
         }
     });
-
-//                      <div className={styles.coverTitleBlock}>
-//                          <span className={titleStyle}>{issues[currentIssue].title}</span><span>之城</span>
-//                      </div>
-//<div className={styles.coverQuestion}>{completedOrStatement}</div>
 
     /* 更多任務 */
     let comingMissionItem = (showComingMission === true) ? (

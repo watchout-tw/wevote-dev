@@ -56,13 +56,8 @@ $break: 600px;
 }
 
 /* 段落 */
+/*
 .mainContent {
-	max-height: 0;
-	overflow: hidden;
-
-	&.active {
-	  max-height: 10000px;
-	}
 	&:before {
 		content: '';
 		display: block;
@@ -72,6 +67,7 @@ $break: 600px;
 		background: $grey;
 	}
 }
+*/
 article {
 	display: block;
 	margin: 0;

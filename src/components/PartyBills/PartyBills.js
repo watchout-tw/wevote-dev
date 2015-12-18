@@ -170,7 +170,7 @@ export default class PartyBills extends Component {
               </div>
 
               {partyBills}
-              <div className={styles.billMeta}>截至網站更新前（12月7日），已有自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯回覆，我們歡迎每個政黨進行表態承諾的回覆。</div>
+              <div className={styles.billMeta}>截至網站更新前（12月15日），已有自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯回覆，我們歡迎每個政黨進行表態承諾的回覆。</div>
               <div id="billEnd"></div>
           </div>
       </div>

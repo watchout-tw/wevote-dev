@@ -40,9 +40,11 @@ export default class Issues extends Component {
               <DocumentMeta {...metaData}/>       
               <div className={styles.contentWrap}>
                   <div className={styles.innerWrap}>
+                      <Missions showComingMission={false}
+                                shipmentsType={"2"}/>
                       <MaXiCastle />
-                      <Missions issues={issues}
-                                showComingMission={true}/>
+                      <Missions showComingMission={true}
+                                shipmentsType={"1"}/>
                   </div>
               </div>
               

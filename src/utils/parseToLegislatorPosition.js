@@ -76,17 +76,17 @@ function parseToLegislatorPosition_Proceed(records, currentIssue, issues, legisl
         Legislators[name] = {}
         Legislators[name].records = [];
     });
-
+    
     /* 把 表態 依照 立委 分組 */
     // 先分出每個立委底下有哪些 record
     records.map((value, index)=>{
 
         if(!Legislators[value.legislator]){
-            throw new Error("沒有這個立委的資料："+Legislators[value.legislator]);
+            throw new Error("沒有這個立委的資料："+value.legislator);
         }
 
         if(!Legislators[value.legislator].records){
-            throw new Error("沒有這個立委的資料："+Legislators[value.legislator]);
+            throw new Error("沒有這個立委的資料："+value.legislator);
         }
     
         Legislators[value.legislator].records.push(value);

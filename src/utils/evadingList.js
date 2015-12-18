@@ -104,5 +104,23 @@ export default {
             "name": "張曉風",
             "party": "PFP"
         }
+    },
+    "justiceReform": {
+        "王金平": {
+            "name": "王金平",
+            "party": "KMT"
+        },
+        "洪秀柱": {
+            "name": "洪秀柱",
+            "party": "KMT"
+        },
+        "王廷升": {
+            "name": "王廷升",
+            "party": "KMT"
+        },
+        "潘維剛": {
+            "name": "潘維剛",
+            "party": "KMT"
+        }
     }
 }

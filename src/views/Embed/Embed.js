@@ -14,7 +14,6 @@ export default class Embed extends Component {
     this.state = {
       view: 'parties'/* default view */
     }
-
   }
   _onChangeView(id, event){
     const {view} = this.state;
@@ -23,7 +22,6 @@ export default class Embed extends Component {
             view: id
         })
     }
-    console.log(this.state.view)
   }
   render() {
     const styles = require('./Embed.scss');
@@ -100,10 +98,13 @@ class EmbedIssues extends Component {
               <img src={flyingImg} className={styles.flyingImg} />
               <img src={goImg} className={styles.goImg} />
               <div className={styles.container}>
+                  <Missions showComingMission={false}
+                            embed={true}
+                            shipmentsType={"2"}/>
                   <MaXiCastle embed={true}/>
-                  <Missions issues={issues}
-                            showComingMission={true}
-                            embed={true}/>
+                  <Missions showComingMission={true}
+                            embed={true}
+                            shipmentsType={"1"}/>
               </div>
           </div>
         )

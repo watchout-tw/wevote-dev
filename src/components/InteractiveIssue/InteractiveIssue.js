@@ -341,10 +341,15 @@ export default class InteractiveIssue extends Component {
 
       const { collaborators } = currentIssue;
       let collaboratorItems = collaborators.map((ngo, index)=>{
-          return <a className={`${styles.ia} ${styles.bright}`}
-                    href={ngo.link}
-                    target="_blank"
-                    key={index}>{ngo.name}</a>
+          let last = (index === collaborators.length -1);
+          return (
+            <span key={index}>
+                <a className={`${styles.ia} ${styles.bright}`}
+                   href={ngo.link}
+                   target="_blank">{ngo.name}</a>
+                { (last===true) ? "":"、" }
+            </span>
+          )
       });
 
       let resultsItem = (stage === "results") ? (
@@ -360,9 +365,12 @@ export default class InteractiveIssue extends Component {
                 <div>{currentIssue.title}之城任務完成了！</div>
                 <div>選擇其他任務吧！</div>
             </div>
-            <Missions issues={issues}
-                      skipIssue={currentIssueName}
-                      showComingMission={false}/>
+            <Missions skipIssue={currentIssueName}
+                          showComingMission={false}
+                          shipmentsType={"2"}/>
+                <Missions skipIssue={currentIssueName}
+                          showComingMission={false}
+                          shipmentsType={"1"}/>   
         </div>
       ):"";
 

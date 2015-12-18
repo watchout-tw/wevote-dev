@@ -75,6 +75,18 @@ export default function eng2cht(input){
         
       case 'nuclear-power':
         return '核能';
+
+      case 'courseGuide':
+          return '課綱';
+
+      case 'course-guide':
+          return '課綱';
+
+      case 'justiceReform':
+          return '司法改革';
+
+      case 'justice-reform':
+          return '司法改革';
       
       default:
       	return ':undefined-eng-term:'+input;
