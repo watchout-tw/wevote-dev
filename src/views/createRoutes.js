@@ -35,7 +35,6 @@ import WithAppbarOnly from 'views/WithAppbarOnly/WithAppbarOnly.js';
 import Issues from 'views/Issues/Issues.js';
 import Constituencies from 'views/Constituencies/Constituencies.js';
 import Constituency from 'views/Constituency/Constituency.js';
-import ConstituencyTable from 'views/ConstituencyTable/ConstituencyTable.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
 
@@ -83,7 +82,6 @@ export default function(store) {
             <Route path="/constituencies/index.html" component={Constituencies}/>
             <Route path="/constituencies/:area/:areaNo/" component={Constituency}/>
             <Route path="/constituencies/:area/:areaNo/index.html" component={Constituency}/>
-            <Route path="/constituencies/:area/:areaNo/table" component={ConstituencyTable}/>
             
             <Route path="/records/:recordId" component={Record}/>
             

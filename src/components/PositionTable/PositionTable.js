@@ -55,7 +55,7 @@ export default class PositionTable extends Component {
           let partyPositions = parseToPartyPosition(records, issues);
           tableData = getPartiesTableData(partyPositions, partyPromises);
 
-      }else{//people
+      }else{//people, this might not be needed after...
           let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
           tableData = getPeopleTableData(legislatorPositions, districtCandidates);
 

@@ -22,13 +22,27 @@ export default class Constituency extends Component {
 
     let legislatorList = getDistrictLegislators(legislators, area, areaNo);
     this.state = {
-        legislatorList: legislatorList
+        legislatorList: legislatorList,
+        side: 'front'
     }
+  }
+  _toggle(){
+    const {side} = this.state;
+    console.log(side+'-->')
+    
+    if(side === 'front'){
+        this.setState({ side: 'back' });
+        console.log('back')
+    }else{
+        this.setState({ side: 'front' });
+        console.log('front')
+    }
+
   }
   render() {
     const styles = require('./Constituency.scss');
     const {area, areaNo} = this.props.params;
-    const {legislatorList} = this.state;
+    const {legislatorList,side} = this.state;
     let noItem = (areaNo) ? <div>第{areaNo}選區</div> : "";
 
     //應選 x 名
@@ -60,16 +74,16 @@ export default class Constituency extends Component {
           
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
-              
+              <div className={styles.flipButton}
+                   onClick={this._toggle.bind(this)}>開天眼</div>
+
               <h3 className={styles.electCount}>本區將選出 {shouldElect} 位勇者</h3>
               <div className={styles.currentLegislators}>現任代表：{currentLegislatorItems}</div>
               
               <CandidateProfileCards area={area}
-                                     areaNo={areaNo}/>
-              <div className={styles.action}>
-                  <Link className={styles.actionButton}
-                        to={`/constituencies/${area}/${areaNo}/table/`}>進入競技場</Link>   
-              </div>
+                                     areaNo={areaNo}
+                                     side={side}/>
+              
           </div>
           <div className={styles.bgHolder}></div>
 

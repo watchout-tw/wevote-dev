@@ -19,6 +19,15 @@
 .mainContent {
     width: 100%;
     min-height: 100vh;
+    text-align: center;
+}
+.flipButton {
+    cursor: pointer;
+    background: #AD171F;
+    color: white;
+    display: inline-block;
+    margin: 0 auto 40px auto;
+    padding: 10px 20px;
 }
 .electCount {
     text-align: center;
