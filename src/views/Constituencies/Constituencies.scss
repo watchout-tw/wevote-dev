@@ -2,6 +2,7 @@
     min-height: 100vh;
     width: 100%;
     position: relative;
+    text-align: center;
 }
 .bgHolder {
     left: 0px;
@@ -18,11 +19,10 @@
 .instruction {
   	background: rgba(255,255,255,0.8);
   	padding: 20px;
-  	max-width: 400px;
+  	max-width: 800px;
   	margin: 0 auto;
-  	margin-top: 14vw;
 }
 .paragraph {
-	margin: 20px 0;
+	margin: 10px 0;
 	line-height: 1.4;
 }
