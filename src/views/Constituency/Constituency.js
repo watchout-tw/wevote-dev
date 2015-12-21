@@ -8,21 +8,34 @@ import CandidateProfileCards from '../../components/CandidateProfileCards/Candid
 import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
 
 import district2cht from '../../utils/district2cht';
-import getDistrictLegislators from '../../utils/getDistrictLegislators';
-
+import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
+import getDistrictCandidates from '../../utils/getDistrictCandidates';
+import getPeopleTableData from '../../utils/getPeopleTableData';
 @connect(
-    state => ({legislators: state.legislators}),
+    state => ({
+      legislators: state.legislators,
+      records: state.records,
+      issues: state.issues,
+      candidates: state.candidates
+    }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Constituency extends Component {
  
   constructor(props){ super(props)
-    const {legislators} = props;
+    const {records, issues, legislators, candidates} = props;
     const {area, areaNo} = props.params;
 
-    let legislatorList = getDistrictLegislators(legislators, area, areaNo);
+    let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
+    let candidateList = getDistrictCandidates(candidates, area, areaNo);
+    let tableData = getPeopleTableData(legislatorPositions, candidateList);
+    
+    let comparableCandidates = [];//有過去紀錄 or 有未來承諾的候選人
+   
+    console.log(candidateList)
+
     this.state = {
-        legislatorList: legislatorList,
+        candidateList: candidateList,
         side: 'front'
     }
   }
@@ -42,7 +55,7 @@ export default class Constituency extends Component {
   render() {
     const styles = require('./Constituency.scss');
     const {area, areaNo} = this.props.params;
-    const {legislatorList,side} = this.state;
+    const {candidateList,side} = this.state;
     let noItem = (areaNo) ? <div>第{areaNo}選區</div> : "";
 
     //應選 x 名
@@ -52,12 +65,12 @@ export default class Constituency extends Component {
     }
 
     //本區現任立委
-    let currentLegislatorItems = legislatorList.map((people, index)=>{
+    let currentLegislatorItems = candidateList.map((people, index)=>{
         let hasResignInfo, separatorItem;
         if(people.hasResigned === true){
            hasResignInfo = "（已離職）";
         }
-        if(index !== legislatorList.length -1){
+        if(index !== candidateList.length -1){
            separatorItem = "、";
         }
         return (
@@ -82,7 +95,8 @@ export default class Constituency extends Component {
               
               <CandidateProfileCards area={area}
                                      areaNo={areaNo}
-                                     side={side}/>
+                                     side={side}
+                                     candidateList={candidateList}/>
               
           </div>
           <div className={styles.bgHolder}></div>

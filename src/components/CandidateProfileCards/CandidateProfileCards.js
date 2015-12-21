@@ -5,35 +5,18 @@ import {connect} from 'react-redux';
 import classnames from 'classnames';
 
 import people_name2id from '../../utils/people_name2id';
-import getDistrictCandidates from '../../utils/getDistrictCandidates';
 import identity_district from '../../utils/identity_district';
-import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
-import getPeopleTableData from '../../utils/getPeopleTableData';
 import eng2cht from '../../utils/eng2cht';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 
 @connect(
-    state => ({
-      records: state.records,
-      issues: state.issues,
-      legislators: state.legislators,
-      candidates: state.candidates
-    }),
+    state => ({ legislators: state.legislators }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class CandidateProfileCards extends Component {
   constructor(props){ super(props)
-    const {records, issues, legislators, candidates, area, areaNo} = props;
-    
-    let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
-    let candidateList = getDistrictCandidates(candidates, area, areaNo);
-
-    let tableData = getPeopleTableData(legislatorPositions, candidateList);
-
     this.state = {
-        candidateList: candidateList,
-        tableData: tableData,
         activeIssue: ""
     }
   }
@@ -45,8 +28,8 @@ export default class CandidateProfileCards extends Component {
  
   render() {
     const styles = require("./CandidateProfileCards.scss");
-    const {legislators, area, areaNo, side} = this.props;
-    const {candidateList, tableData, activeIssue} = this.state;
+    const {legislators, candidateList, area, areaNo, side} = this.props;
+    const {activeIssue} = this.state;
 
     let candidateCardItems = (candidateList || []).map((value, index)=>{
         let currentInfo;//本區現任立委 or 現任立委，但不是本區
@@ -65,7 +48,6 @@ export default class CandidateProfileCards extends Component {
               <Card id={value.id}
                     people={value}
                     side={side}
-                    data={tableData[value.id]}
                     onSetActiveIssue={this._onSetActiveIssue.bind(this)}
                     activeIssue={activeIssue}/>
           </div>
@@ -83,10 +65,11 @@ export default class CandidateProfileCards extends Component {
 class Card extends Component {
   render() {
     const styles = require("./CandidateProfileCards.scss")
-    const {people, data, side, 
+    const {people, side, 
            onSetActiveIssue, activeIssue} = this.props;
     if(!people) return <div></div>
-   
+
+
     /* ------ 正面：法案 ------ */
     let billItems = (people.bills||[]).map((value, index)=>{
         return (
@@ -117,8 +100,8 @@ class Card extends Component {
     imgHub.nay = require("./images/answers_nay.svg")
     imgHub.none = require("./images/answers_unknown.svg")
 
-    let positionEntries = Object.keys(data.positions).map((issueName, j)=>{
-        let pos = data.positions[issueName];
+    let positionEntries = Object.keys(people.positions).map((issueName, j)=>{
+        let pos = people.positions[issueName];
         let level = countLevel(pos.recordCount);
         let recordClasses = classnames({
           [styles.record] : true,
