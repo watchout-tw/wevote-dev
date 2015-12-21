@@ -28,7 +28,7 @@
     position: relative;
 
     width: 200px;
-    height: 280px;
+    height: 310px;
 
 }
 .cardItem:hover {
@@ -89,7 +89,7 @@
     text-align: left;
 }
 .billSection.noReply {
-    padding-top: 20px;
+    padding-top: 40px;
     text-align: center;
 }
 .billTitle {
@@ -120,7 +120,16 @@
     text-align: center;
     display: flex;
     padding: 10px;
+    height: 45px;
 }
+.position:nth-child(2n+1){
+    background: rgb(220,220,220);
+}
+.position.active, .position:nth-child(2n+1).active {
+    background: $awesomeColor;
+    color: $white;
+}
+
 .issueName {
     flex: 1
 }
@@ -128,9 +137,6 @@
     vertical-align: middle;
     font-size: 0;
     flex: 1;
-    &.empty {
-        padding-top: 4px;
-    }
 }
 .recordSquare {
     margin-bottom: 5px;

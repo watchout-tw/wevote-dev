@@ -33,14 +33,20 @@ export default class CandidateProfileCards extends Component {
 
     this.state = {
         candidateList: candidateList,
-        tableData: tableData
+        tableData: tableData,
+        activeIssue: ""
     }
+  }
+  _onSetActiveIssue(name, e){
+    this.setState({
+        activeIssue: name
+    })
   }
  
   render() {
     const styles = require("./CandidateProfileCards.scss");
     const {legislators, area, areaNo, side} = this.props;
-    const {candidateList, tableData} = this.state;
+    const {candidateList, tableData, activeIssue} = this.state;
 
     let candidateCardItems = (candidateList || []).map((value, index)=>{
         let currentInfo;//本區現任立委 or 現任立委，但不是本區
@@ -59,7 +65,9 @@ export default class CandidateProfileCards extends Component {
               <Card id={value.id}
                     people={value}
                     side={side}
-                    data={tableData[value.id]}/>
+                    data={tableData[value.id]}
+                    onSetActiveIssue={this._onSetActiveIssue.bind(this)}
+                    activeIssue={activeIssue}/>
           </div>
         );
     })
@@ -75,7 +83,8 @@ export default class CandidateProfileCards extends Component {
 class Card extends Component {
   render() {
     const styles = require("./CandidateProfileCards.scss")
-    const {people, data, side} = this.props;
+    const {people, data, side, 
+           onSetActiveIssue, activeIssue} = this.props;
     if(!people) return <div></div>
    
     /* ------ 正面：法案 ------ */
@@ -115,9 +124,14 @@ class Card extends Component {
           [styles.record] : true,
           [styles.empty] : level==="empty"
         })
+        let positionClasses = classnames({
+          [styles.position]: true,
+          [styles.active]: activeIssue === issueName
+        })
 
         return (
-          <div className={styles.position}>
+          <div className={positionClasses}
+               onMouseEnter={onSetActiveIssue.bind(null, issueName)}>
               <div className={styles.issueName}>{eng2cht(issueName)}</div>
               <div className={recordClasses}>
                   <div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div>

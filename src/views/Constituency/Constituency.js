@@ -75,7 +75,7 @@ export default class Constituency extends Component {
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               <div className={styles.flipButton}
-                   onClick={this._toggle.bind(this)}>開天眼</div>
+                   onClick={this._toggle.bind(this)}>比較立場</div>
 
               <h3 className={styles.electCount}>本區將選出 {shouldElect} 位勇者</h3>
               <div className={styles.currentLegislators}>現任代表：{currentLegislatorItems}</div>
