@@ -5,7 +5,7 @@ export default function peopleInfo(name, age, a1, a2, isC, c1, c2) {
   const NA = 'N/A';
 
   //console.log(`'${name}', '${age}', '${a1}', '${a2}', '${isC}', '${c1}', '${c2}'`);
-  console.log(name, age, a1, a2, isC, c1, c2);
+  //console.log(name, age, a1, a2, isC, c1, c2);
 
   a2 = (a1 === NATIONAL || a2 === NA) ? '' : `第${a2}選區`;
   c2 = (c1 === NATIONAL || c2 === NA) ? '' : `第${c2}選區`;

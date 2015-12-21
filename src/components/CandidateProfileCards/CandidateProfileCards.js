@@ -2,33 +2,34 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from "react-router";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import classnames from 'classnames';
 
 import people_name2id from '../../utils/people_name2id';
-import getDistrictCandidates from '../../utils/getDistrictCandidates';
 import identity_district from '../../utils/identity_district';
+import eng2cht from '../../utils/eng2cht';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 
 @connect(
-    state => ({
-      legislators: state.legislators,
-      candidates: state.candidates
-    }),
+    state => ({ legislators: state.legislators }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class CandidateProfileCards extends Component {
   constructor(props){ super(props)
-    const {legislators, candidates, area, areaNo} = props;
-    let candidateList = getDistrictCandidates(candidates, area, areaNo);
     this.state = {
-        candidateList: candidateList
+        activeIssue: ""
     }
+  }
+  _onSetActiveIssue(name, e){
+    this.setState({
+        activeIssue: name
+    })
   }
  
   render() {
     const styles = require("./CandidateProfileCards.scss");
-    const {legislators, area, areaNo} = this.props;
-    const {candidateList} = this.state;
+    const {legislators, candidateList, area, areaNo, side} = this.props;
+    const {activeIssue} = this.state;
 
     let candidateCardItems = (candidateList || []).map((value, index)=>{
         let currentInfo;//本區現任立委 or 現任立委，但不是本區
@@ -45,7 +46,10 @@ export default class CandidateProfileCards extends Component {
           <div className={styles.cardWrap} key={`candiate-card-${index}`}>
               {currentInfo}
               <Card id={value.id}
-                    people={value}/>
+                    people={value}
+                    side={side}
+                    onSetActiveIssue={this._onSetActiveIssue.bind(this)}
+                    activeIssue={activeIssue}/>
           </div>
         );
     })
@@ -61,9 +65,12 @@ export default class CandidateProfileCards extends Component {
 class Card extends Component {
   render() {
     const styles = require("./CandidateProfileCards.scss")
-    const {people} = this.props;
+    const {people, side, 
+           onSetActiveIssue, activeIssue} = this.props;
     if(!people) return <div></div>
 
+
+    /* ------ 正面：法案 ------ */
     let billItems = (people.bills||[]).map((value, index)=>{
         return (
             <li key={`${people.id}-${index}`}>{value.goal}</li>
@@ -85,19 +92,80 @@ class Card extends Component {
       )
 
     }
+    /* ------- 背面：表態 ------ */
+    //表態
+    //REFINE: image duplicated with position table
+    let imgHub = {};
+    imgHub.aye = require("./images/answers_aye.svg")
+    imgHub.nay = require("./images/answers_nay.svg")
+    imgHub.none = require("./images/answers_unknown.svg")
 
-    return (
+    let positionEntries = Object.keys(people.positions).map((issueName, j)=>{
+        let pos = people.positions[issueName];
+        let level = countLevel(pos.recordCount);
+        let recordClasses = classnames({
+          [styles.record] : true,
+          [styles.empty] : level==="empty"
+        })
+        let positionClasses = classnames({
+          [styles.position]: true,
+          [styles.active]: activeIssue === issueName
+        })
+
+        return (
+          <div className={positionClasses}
+               onMouseEnter={onSetActiveIssue.bind(null, issueName)}>
+              <div className={styles.issueName}>{eng2cht(issueName)}</div>
+              <div className={recordClasses}>
+                  <div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div>
+              </div>
+              <img className={styles.promise}
+                   src={`${imgHub[pos.promise]}`} />
+          </div>
+        )
+    })
+    let cardItemClasses = classnames({
+      [styles.cardItem] : true,
+      [styles.front] : side === 'front',
+      [styles.back] : side === 'back'
+    })
+    return ( 
         <Link to={`/people/${people.id}/records/`}
-              className={`${styles.cardItem}`}>
-            <div className={styles.partyItem}>
-                <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+              className={cardItemClasses}>
+            
+            <div className={`${styles.innerCard} ${styles.front}`}>
+                <div className={styles.partyItem}>
+                    <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+                </div>
+                <div className={styles.name}>{people.name}</div>
+                <div className={styles.peoplePhoto}><PeoplePhoto id={people.id}/></div>
+                {billSection}
             </div>
-            <div className={styles.name}>{people.name}</div>
-            <div className={styles.peoplePhoto}><PeoplePhoto id={people.id}/></div>
-            {billSection}
+            
+            <div className={`${styles.innerCard} ${styles.back}`}>
+                <div className={styles.peopleName}>{people.name}</div>
+                {positionEntries}
+            </div>
         </Link>
+        
+        
     );
   }
 
+}
+function countLevel(count){
+  let num = Number(count);
+  if(num >= 0 && num <= 5){
+     return 'level1';
+
+  }else if(num > 5 && num <= 25){
+     return 'level2';
+
+  }else if(num > 25){
+     return 'level3';
+
+  }else {
+     return 'empty';
+  }
 }
 

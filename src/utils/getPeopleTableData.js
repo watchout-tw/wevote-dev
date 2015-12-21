@@ -1,8 +1,8 @@
 export default function getPeopleTableData(legislatorPositions, disctrictCandidates){
     let TableData = {};
     let issueList = ["marriageEquality", "recall", "referendum", "nuclearPower", "courseGuide", "justiceReform"];//Hmmm....
-    console.log(disctrictCandidates)
-    console.log(legislatorPositions)
+    // console.log(disctrictCandidates)
+    // console.log(legislatorPositions)
     
     disctrictCandidates.map((people, index)=>{
         TableData[people.id] = {

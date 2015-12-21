@@ -1,9 +1,7 @@
 export default function getDistrictCandidates(candidates, area, areaNo){
     const NA = 'N/A';
     let result = [];
-    console.log("---")
-    console.log(area)
-    console.log(areaNo)
+   
     Object.keys(candidates).map((id, index)=>{
         let inserted = false;
         let people = candidates[id];

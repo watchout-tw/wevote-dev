@@ -24,6 +24,7 @@ import PartyIssue from 'views/PartyIssue/PartyIssue.js';
 
 import Record from 'views/Record/Record.js';
 import Clarify from 'views/Clarify/Clarify.js';
+import Wanted from 'views/Wanted/Wanted.js';
 
 import Subscribe from 'views/Subscribe/Subscribe.js';
 import SubscribeState from 'views/SubscribeState/SubscribeState.js';
@@ -35,7 +36,6 @@ import WithAppbarOnly from 'views/WithAppbarOnly/WithAppbarOnly.js';
 import Issues from 'views/Issues/Issues.js';
 import Constituencies from 'views/Constituencies/Constituencies.js';
 import Constituency from 'views/Constituency/Constituency.js';
-import ConstituencyTable from 'views/ConstituencyTable/ConstituencyTable.js';
 
 import NotFound from 'views/NotFound/NotFound.js';
 
@@ -83,7 +83,6 @@ export default function(store) {
             <Route path="/constituencies/index.html" component={Constituencies}/>
             <Route path="/constituencies/:area/:areaNo/" component={Constituency}/>
             <Route path="/constituencies/:area/:areaNo/index.html" component={Constituency}/>
-            <Route path="/constituencies/:area/:areaNo/table" component={ConstituencyTable}/>
             
             <Route path="/records/:recordId" component={Record}/>
             
@@ -92,6 +91,7 @@ export default function(store) {
             <Route path="/about/:tabName/:focus" component={About}/>
             
             <Route path="/clarify" component={Clarify}/>
+            <Route path="/wanted" component={Wanted}/>
             <Route path="/subscribe/:state" component={SubscribeState}/>
             
             <Route path="/404" component={NotFound}/>
