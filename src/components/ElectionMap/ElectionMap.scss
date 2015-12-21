@@ -52,13 +52,20 @@ g {
 	  	display: block;
 	}	
 }
-	
 
 $x: 64px;
 $textColor: black;
 $inactiveColor: white;
 $hoverColor: #00ffb0;
 $selectColor: #00ffb0;
+
+/* 下方子區域的地圖 */
+.cityPath {
+	fill: white;
+}
+.cityPath:hover, .cityPath.active {
+	fill: $selectColor
+}
 
 .close.active {
     width: $x;
@@ -92,6 +99,9 @@ $selectColor: #00ffb0;
 /* 詳細選區: xx市, xx區 */
 .info.active {
 	display: block;
+}
+.name, .prompt, .arrow {
+	display: inline-block;
 }
 .info {
   display: none;
@@ -127,7 +137,7 @@ $selectColor: #00ffb0;
       transform: rotate(45deg); }
     .info > .close:after {
       transform: rotate(-45deg); }
-      
+
   .info > .go {
     display: block;
     margin: 0;
@@ -168,14 +178,15 @@ $selectColor: #00ffb0;
         top: 8px;
         transform: rotate(-45deg); }
   .info > .detail {
-    margin: 14px;
+    margin: 7px 14px 14px 14px;
     font-size: 14px; }
   .info .subdistrict {
     display: inline-block;
     vertical-align: top;
     margin-right: 1em; }
   .info .boroughs {
-    font-size: 11px; }
+    font-size: 11px; 
+	margin-top: 5px; }
     .info .boroughs .borough {
       display: inline-block;
       vertical-align: top;

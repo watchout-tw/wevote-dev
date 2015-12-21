@@ -55,15 +55,29 @@ export default class ElectionMap extends Component {
 
     this.setState({
       hover_city: "",
-      active_city: ""
+      active_city: "",
+      sub_active: ""
     })
   }
+
   _activeClass(city_id){
-    //決定是否顯示詳細選區地圖（該縣市有一個以上選區）
+    //(web version) 決定是否顯示詳細選區地圖
     const {active_city} = this.state;
     const styles = require('./ElectionMap.scss');
     if(city_id === active_city){
        return styles.active;
+    }else{
+       return "";
+    }
+  }
+  _activeSubCityMap(city_id, sub_index){
+    //目前臺北市第一選區要不要塗綠色
+    const {active_city, sub_active} = this.state;
+    const styles = require('./ElectionMap.scss');
+    
+    if( city_id === active_city && Number(sub_index) === Number(sub_active)){
+       return styles.active;
+
     }else{
        return "";
     }
@@ -78,27 +92,13 @@ export default class ElectionMap extends Component {
        return styles.active;
     }
   }
-  _onSubMapHover(district_count, e){
-    e.target.setAttribute("fill", SELECT_COLOR); 
+  _onSubMapClick(city, district_count, e){
     this.setState({
-      sub_hover : district_count
-    })
-  }
-  _onSubMapClick(district_count, e){
-    e.target.setAttribute("fill", SELECT_COLOR); 
-    this.setState({
+      active_city: city,
       sub_active : district_count
     })
   }
-  _onSubMapLeave(e){
-    const {sub_active} = this.state;
-    if(sub_active === ""){
-      e.target.setAttribute("fill", "white"); 
-      this.setState({
-        sub_active: ""
-      })
-    }
-  }
+ 
   _handleSubdistrictsDisplay(districts){
     const {sub_active} = this.state;
     if(!sub_active) return;//還沒選子選區時
@@ -117,13 +117,13 @@ export default class ElectionMap extends Component {
             let first = name.split(':')[0];
             let vils = name.split(':')[1].split(',');
             let vilItems = vils.map((v, k)=>{
-                return <span className={styles.vilItem}>{v}</span>
+                return <span className={styles.borough}>{v}</span>
             })
             return (
               <span>
                     {first}
                     {vils.length}里
-                    <div className={styles.vilItems}>{vilItems}</div>
+                    <div className={styles.boroughs}>{vilItems}</div>
                     {separation}
               </span>
             );
@@ -152,9 +152,7 @@ export default class ElectionMap extends Component {
               if(!node){
                   tryNext = false;
               }else{
-                  node.addEventListener("mouseenter" , this._onSubMapHover.bind(this, subChildIndex));
-                  node.addEventListener("mouseleave", this._onSubMapLeave.bind(this));
-                  node.addEventListener("click", this._onSubMapClick.bind(this, subChildIndex));
+                  node.addEventListener("click", this._onSubMapClick.bind(this, city, subChildIndex));
                   subChildIndex++;
               }
           }
@@ -193,24 +191,22 @@ export default class ElectionMap extends Component {
     if(active_city && sub_active){
         detailInfo = (
           <div className={`${styles.info} ${this._showDetailStyle()}`}>
-            <div className={styles.close}></div>
-            <Link to={`/`} className={styles.go}>
-              <p className={styles.name}>{db[active_city].name}第{numerals[sub_active]}選舉區</p>
-              <p className={styles.prompt}>前往選區</p>
-              <p className={styles.arrow}></p>
+            <div className={styles.close}
+                 onClick={this._resetMapClick.bind(this)}></div>
+            <Link to={`/constituencies/${active_city}/${sub_active}/`} 
+                  className={styles.go}>
+              
+              <div className={styles.name}>{db[active_city].name}第{numerals[sub_active]}選舉區</div>
+              <div className={styles.prompt}>前往選區</div>
+              <div className={styles.arrow}></div>
+              
             </Link>
-            <p className={styles.detail}>{this._handleSubdistrictsDisplay(db[active_city].districts)}</p>
+            <div className={styles.detail}>{this._handleSubdistrictsDisplay(db[active_city].districts)}</div>
           </div>
         )
 
     }
-    if(active_city && !sub_active){
-        detailInfo =  (
-          <div className={`${styles.info} ${this._showDetailStyle()}`}>
-              <h3 className={styles.name}>{db[active_city].name}</h3>
-          </div>
-        );
-    }
+    
 
     return (
       <div className={styles.wrap}>
@@ -1229,18 +1225,16 @@ export default class ElectionMap extends Component {
           </div>
       
           <div id="citymap" className={`${styles.cityMap} ${this._showDetailStyle()}`}>
-              <div className={`${styles.close} ${this._showDetailStyle()}`} 
-                   onClick={this._resetMapClick.bind(this)}></div>
-              
               <div className={`${styles.city} ${this._activeClass('KEL')}`} id="citymap-KEL">
                 <div className={styles.title}>基隆市</div>
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="62.816px" height="56.442px" viewBox="0 0 62.816 56.442">
                     <g id="KEL">
-                      <g id="citymap-KEL-1">
+                      <g id="citymap-KEL-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KEL','1')}`}>
                           <polygon id="KEL-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           2.066,1 2.066,5.538 5.413,8.885 1,13.298 1,31.128 25.314,55.442 36.816,55.442 36.816,49.17 33.076,45.43 42.316,36.191
-                          47.816,41.691 61.816,41.691 61.816,36.441 47.554,22.179 37.816,22.179 37.816,18.503 42.51,13.809 35.875,7.173 35.875,1    "/>
+                          47.816,41.691 61.816,41.691 61.816,36.441 47.554,22.179 37.816,22.179 37.816,18.503 42.51,13.809 35.875,7.173 35.875,1"/>
                       </g>
                     </g>
                   </svg>
@@ -1252,14 +1246,16 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="261.195px" height="426.937px" viewBox="0 0 261.195 426.937">
                     <g id="TPE">
-                      <g id="citymap-TPE-1">
-                        <polygon id="TPE-1-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="41.195,65.276 105.862,130.276 157.195,130.276 257.195,30.942 257.195,4 134.919,4 104.529,34.276 71.862,34.276    "/>
+                      <g id="citymap-TPE-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TPE','1')}`}>
+                        <polygon id="TPE-1-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="41.195,65.276 105.862,130.276 157.195,130.276 257.195,30.942 257.195,4 134.919,4 104.529,34.276 71.862,34.276"/>
                         <g id="TPE-1-index" fill="#000000">
                           <path d="M70.302,57.246v12.855h-2.106V59.785c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H70.302z"/>
                         </g>
                       </g>
-                      <g id="citymap-TPE-2">
-                        <polygon id="TPE-2-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="105.862,130.276 41.195,65.276 41.195,92.276 75.486,126.734 75.445,154.276 32.091,197.172 54.091,218.942 101.862,170.276 241.195,170.276 241.195,70.276 256.529,54.942 244.818,43.232 157.195,130.276     "/>
+                      <g id="citymap-TPE-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TPE','2')}`}>
+                        <polygon id="TPE-2-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="105.862,130.276 41.195,65.276 41.195,92.276 75.486,126.734 75.445,154.276 32.091,197.172 54.091,218.942 101.862,170.276 241.195,170.276 241.195,70.276 256.529,54.942 244.818,43.232 157.195,130.276"/>
                         <g id="TPE-2-index" fill="#000000">
                           <path d="M226.933,145.536c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
                             c-0.504,0.54-1.404,1.224-2.665,2.07c-1.314,0.864-2.106,1.62-2.395,2.269h6.338v1.854h-8.967c0-1.314,0.414-2.449,1.278-3.421
@@ -1269,7 +1265,8 @@ export default class ElectionMap extends Component {
                             C225.096,144.456,226.122,144.816,226.933,145.536z"/>
                         </g>
                       </g>
-                      <g id="citymap-TPE-3">
+                      <g id="citymap-TPE-3"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TPE','3')}`}>
                         <polygon id="TPE-3-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="65.155,207.491 89.249,230.969 101.972,218.166 136.972,252.179 161.195,227.942 161.195,170.276 101.862,170.276    "/>
                         <g id="TPE-3-index" fill="#000000">
                           <path d="M149.88,184.024c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
@@ -1282,13 +1279,15 @@ export default class ElectionMap extends Component {
                             c0.81-0.72,1.854-1.062,3.114-1.062C148.025,183.089,149.088,183.395,149.88,184.024z"/>
                         </g>
                       </g>
-                      <g id="citymap-TPE-4">
+                      <g id="citymap-TPE-4"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TPE','4')}`}>
                         <polygon id="TPE-4-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="225.195,170.276 225.195,198.276 247.529,220.276 209.195,258.942 209.195,316.609 245.529,352.776 232.445,365.859 204.862,338.276 173.195,338.276 157.195,322.276 117.195,322.276 117.195,306.276 145.195,278.276 145.195,243.947 161.195,227.942 161.195,170.276    "/>
                         <g id="TPE-4-index" fill="#000000">
                           <path d="M181.248,181.787v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H181.248z M174.748,190.213h4.501v-5.762h-0.054L174.748,190.213z"/>
                         </g>
                       </g>
-                      <g id="citymap-TPE-5">
+                      <g id="citymap-TPE-5"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TPE','5')}`}>
                         <polygon id="TPE-5-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           32.091,197.172 4,197.172 4,242.276 77.529,242.276 89.195,231.022 65.155,207.491 53.897,218.748    "/>
                         <g id="TPE-5-index" fill="#000000">
@@ -1300,7 +1299,8 @@ export default class ElectionMap extends Component {
                             c-0.558,0-1.044,0.091-1.44,0.288c-0.45,0.217-0.792,0.541-1.044,0.991h-1.963l0.702-7.238H24.041z"/>
                         </g>
                       </g>
-                      <g id="citymap-TPE-6">
+                      <g id="citymap-TPE-6"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TPE','6')}`}>
                         <polygon id="TPE-6-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="41.195,242.276 41.195,290.276 58.195,306.276 89.195,306.276 89.195,256.276 114.762,231.709 100.917,217.97 77.07,242.442    "/>
                         <g id="TPE-6-index" fill="#000000">
                           <path d="M77.365,257.607h-2.053c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
@@ -1313,13 +1313,15 @@ export default class ElectionMap extends Component {
                             c-0.468-0.486-1.08-0.72-1.854-0.72C72.215,260.398,71.603,260.632,71.171,261.118z"/>
                         </g>
                       </g>
-                      <g id="citymap-TPE-7">
+                      <g id="citymap-TPE-7"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TPE','7')}`}>
                         <polygon id="TPE-7-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="89.195,306.276 117.195,306.276 145.195,278.276 145.195,246.276 138.132,253.339 115.632,230.839 89.195,256.276    "/>
                         <g id="TPE-7-index" fill="#000000">
                           <path d="M120.26,250.608v1.692l-4.501,11.163h-2.232l4.609-10.947h-6.572v-1.908H120.26z"/>
                         </g>
                       </g>
-                      <g id="citymap-TPE-8">
+                      <g id="citymap-TPE-8"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TPE','8')}`}>
                         <polygon id="TPE-8-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="41.195,290.276 24.862,306.609 49.529,331.276 49.529,362.276 111.362,424.109 132.862,402.609 106.862,376.609 149.362,334.109 149.362,322.276 117.195,322.276 117.195,306.276 58.195,306.276     "/>
                         <g id="TPE-8-index" fill="#000000">
                           <path d="M105.086,318.347c0.721,0.648,1.099,1.459,1.099,2.431c0,0.648-0.145,1.207-0.432,1.657
@@ -1363,7 +1365,8 @@ export default class ElectionMap extends Component {
                             C310.553,439.449,309.94,439.648,309.49,440.062z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-1">
+                      <g id="citymap-NTC-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','1')}`}>
                         <polygon id="NTC-1-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           164.662,73 164.662,133 228.662,197 228.662,229 247.995,248.333 247.995,282.333 278.232,312.57 307.328,312.57 335.114,284.785
                           286.662,236.333 315.995,207 303.995,195 331.328,167.667 364.662,167.667 402.777,205.782 426.11,182.449 458.662,182.449
@@ -1373,7 +1376,8 @@ export default class ElectionMap extends Component {
                           <path d="M404.104,175.421v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H404.104z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-2">
+                      <g id="citymap-NTC-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','2')}`}>
                         <polygon id="NTC-2-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           335.114,284.785 429.605,284.785 429.605,274.791 395.238,240.424 395.238,213.333 402.783,205.788 364.662,167.667
                           331.328,167.667 303.995,195 315.995,207 286.662,236.333     "/>
@@ -1386,7 +1390,8 @@ export default class ElectionMap extends Component {
                             C349.264,178.295,350.291,178.655,351.101,179.375z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-3">
+                      <g id="citymap-NTC-3"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','3')}`}>
                         <polyline id="NTC-3-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           358.133,284.785 429.349,284.785 429.349,302.104 386.224,345.229 358.133,345.229 343.628,330.724 358.395,315.957
                           358.395,284.785     "/>
@@ -1401,7 +1406,8 @@ export default class ElectionMap extends Component {
                             c0.107-1.297,0.576-2.305,1.44-3.025c0.81-0.72,1.854-1.062,3.114-1.062C375.75,295.388,376.812,295.694,377.604,296.324z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-9">
+                      <g id="citymap-NTC-9"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','9')}`}>
                         <polygon id="NTC-9-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="358.133,390.333 358.133,454.333 378.995,454.333 395.162,438.167 395.162,390.333    "/>
                         <g id="NTC-9-index" fill="#000000">
                           <path d="M380.071,402.637c0.828,1.116,1.242,2.646,1.242,4.627c0,2.089-0.45,3.799-1.313,5.096
@@ -1414,7 +1420,8 @@ export default class ElectionMap extends Component {
                             c-0.468-0.468-1.08-0.702-1.8-0.702C375.786,402.69,375.173,402.942,374.706,403.446z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-6">
+                      <g id="citymap-NTC-6"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','6')}`}>
                         <polygon id="NTC-6-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="296.328,335.688 296.328,367.781 358.133,367.781 358.133,345.229 343.628,330.724 338.747,335.606    "/>
                         <g id="NTC-6-index" fill="#000000">
                           <path d="M317.885,348.774h-2.053c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
@@ -1427,7 +1434,8 @@ export default class ElectionMap extends Component {
                             c-0.468-0.486-1.08-0.72-1.854-0.72C312.735,351.565,312.123,351.799,311.691,352.285z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-7">
+                      <g id="citymap-NTC-7"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','7')}`}>
                         <polygon id="NTC-7-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           279.828,335.688 279.828,349.253 229.038,400.043 238.828,409.833 265.078,383.583 284.328,402.833 304.578,382.583
                           358.133,382.583 358.133,367.781 296.328,367.781 296.328,335.688     "/>
@@ -1435,20 +1443,22 @@ export default class ElectionMap extends Component {
                           <path d="M288.58,372.876v1.692l-4.501,11.163h-2.232l4.609-10.947h-6.572v-1.908H288.58z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-4">
+                      <g id="citymap-NTC-4"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','4')}`}>
                         <polygon id="NTC-4-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           247.62,318.333 264.974,335.688 338.828,335.688 358.133,315.695 358.133,284.785 335.114,284.785 307.328,312.57 278.232,312.57
-                          247.808,282.146     "/>
+                          247.808,282.146"/>
                         <g id="NTC-4-index" fill="#000000">
                           <path d="M346.379,295.862v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H346.379z M339.879,304.287
                             h4.501v-5.762h-0.054L339.879,304.287z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-5">
+                      <g id="citymap-NTC-5"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','5')}`}>
                         <polygon id="NTC-5-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           39.328,396.833 127.328,396.833 163.578,433.083 180.828,433.083 213.502,400.41 229.038,400.41 280.012,349.436 280.012,335.688
                           264.974,335.688 247.62,318.333 228.328,318.333 205.162,341.5 135.328,341.5 102.745,308.917 83.828,327.833 83.828,366.028
-                          39.328,366.028    "/>
+                          39.328,366.028"/>
                         <g id="NTC-5-index" fill="#000000">
                           <path d="M257.943,343.848v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
                             c1.207,0,2.197,0.396,2.953,1.188c0.756,0.792,1.152,1.891,1.152,3.276c0,1.333-0.504,2.413-1.513,3.26
@@ -1458,7 +1468,8 @@ export default class ElectionMap extends Component {
                             c-0.558,0-1.044,0.091-1.44,0.288c-0.45,0.217-0.792,0.541-1.044,0.991h-1.963l0.702-7.238H257.943z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-10">
+                      <g id="citymap-NTC-10"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','10')}`}>
                         <polygon id="NTC-10-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           293.586,462.833 255.328,462.833 235.245,482.917 279.241,526.913 244.575,561.58 211.995,561.58 211.995,609 226.328,623.333
                           167.662,682 107.578,682 107.578,648.75 83.828,625 83.828,570.167 38.162,570.167 2.828,534.833 39.328,498.333 39.328,396.833
@@ -1474,7 +1485,8 @@ export default class ElectionMap extends Component {
                             c-0.433-1.152-1.152-1.71-2.161-1.71C267.696,409.072,266.977,409.63,266.562,410.782z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-11">
+                      <g id="citymap-NTC-11"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','11')}`}>
                         <polygon id="NTC-11-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           599.662,500.833 640.328,500.833 640.328,604.333 715.519,679.524 715.519,716.333 633.424,798.429 267.328,798.429
                           267.328,862.333 44.662,862.333 44.662,694.333 107.578,694.333 107.578,682 167.662,682 226.328,623.333 211.995,609
@@ -1486,7 +1498,8 @@ export default class ElectionMap extends Component {
                           <path d="M375.48,469.674v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H375.48z"/>
                         </g>
                       </g>
-                      <g id="citymap-NTC-12">
+                      <g id="citymap-NTC-12"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','12')}`}>
                         <polygon id="NTC-12-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           725.995,93.333 741.162,108.5 741.162,239.333 756.929,255.101 790.328,255.101 790.328,266.333 763.102,293.559 763.102,312.57
                           643.328,312.57 643.328,330.724 656.716,344.112 639.064,361.764 639.064,433.083 736.321,530.34 782.328,530.34 782.328,505.25
@@ -1555,7 +1568,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="226.42px" height="359.043px" viewBox="0 0 226.42 359.043">
                     <g id="TYN">
-                      <g id="citymap-TYN-1">
+                      <g id="citymap-TYN-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TYN','1')}`}>
                         <polygon id="TYN-1-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           170.311,13.25 184.686,13.25 193.248,21.812 193.248,43.75 217.529,68.031 217.529,79.75 224.92,87.141 224.92,113.25
                           217.686,113.25 208.998,121.938 182.811,121.938 169.279,108.406 176.811,100.875 176.811,82.5 169.436,75.125 157.686,75.125
@@ -1564,7 +1578,8 @@ export default class ElectionMap extends Component {
                           <path d="M188.438,101.937v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H188.438z"/>
                         </g>
                       </g>
-                      <g id="citymap-TYN-2">
+                      <g id="citymap-TYN-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TYN','2')}`}>
                         <polygon id="TYN-2-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="52.561,123.5 66.311,123.5 84.936,104.875 84.936,78.75 77.123,70.938 104.061,44 133.811,73.75 139.811,73.75 139.811,50.25 170.311,50.25 170.311,13.25 117.311,13.25 105.561,1.5 37.311,1.5 1.061,37.75 22.186,58.875 5.061,76     "/>
                         <g id="TYN-2-index" fill="#000000">
                           <path d="M77.464,82.163c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043c-0.504,0.54-1.404,1.224-2.665,2.07
@@ -1574,7 +1589,8 @@ export default class ElectionMap extends Component {
                             c0.018-1.44,0.433-2.593,1.261-3.475c0.846-0.937,1.962-1.404,3.349-1.404C75.627,81.083,76.653,81.442,77.464,82.163z"/>
                         </g>
                       </g>
-                      <g id="citymap-TYN-3">
+                      <g id="citymap-TYN-3"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TYN','3')}`}>
                         <polygon id="TYN-3-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="84.936,78.75 96.936,78.75 96.936,87.75 106.295,97.109 106.295,116.812 117.186,116.812 136.029,97.969 132.936,94.875 137.811,90 137.811,73.75 133.811,73.75 104.061,44 77.123,70.938    "/>
                         <g id="TYN-3-index" fill="#000000">
                           <path d="M120.204,94.971c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
@@ -1587,7 +1603,8 @@ export default class ElectionMap extends Component {
                             c0.81-0.72,1.854-1.062,3.114-1.062C118.35,94.035,119.412,94.341,120.204,94.971z"/>
                         </g>
                       </g>
-                      <g id="citymap-TYN-5">
+                      <g id="citymap-TYN-5"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TYN','5')}`}>
                         <polygon id="TYN-5-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="117.186,116.812 117.186,128.607 92.989,152.803 102.373,162.188 73.382,191.178 49.954,167.75 49.954,158.107 33.954,142.107 52.561,123.5 66.311,123.5 84.936,104.875 84.936,78.75 96.936,78.75 96.936,87.75 106.295,97.109 106.295,116.812     "/>
                         <g id="TYN-5-index" fill="#000000">
                           <path d="M86.075,156.223v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
@@ -1598,7 +1615,8 @@ export default class ElectionMap extends Component {
                             c-0.558,0-1.044,0.091-1.44,0.288c-0.45,0.217-0.792,0.541-1.044,0.991H77.54l0.702-7.238H86.075z"/>
                         </g>
                       </g>
-                      <g id="citymap-TYN-6">
+                      <g id="citymap-TYN-6"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TYN','6')}`}>
                         <polygon id="TYN-6-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           163.498,116.812 163.498,131.135 146.811,131.135 146.811,180.75 133.123,194.438 146.373,207.688 163.498,207.688
                           163.498,228.25 172.404,237.156 172.404,254.25 148.811,254.25 148.811,317.25 128.811,317.25 88.079,357.982 72.846,342.75
@@ -1615,11 +1633,12 @@ export default class ElectionMap extends Component {
                             c-0.468-0.486-1.08-0.72-1.854-0.72C134.026,173.455,133.413,173.688,132.982,174.175z"/>
                         </g>
                       </g>
-                      <g id="citymap-TYN-4">
+                      <g id="citymap-TYN-4"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TYN','4')}`}>
                         <polygon id="TYN-4-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           137.811,90 132.936,94.875 137.811,99.75 141.936,95.625 146.436,95.625 146.436,113.25 150.186,113.25 155.061,108.375
                           163.498,116.812 170.592,109.719 169.279,108.406 176.811,100.875 176.811,82.5 169.436,75.125 157.686,75.125 153.998,78.812
-                          153.998,90    "/>
+                          153.998,90"/>
                         <g id="TYN-4-index" fill="#000000">
                           <path d="M162.601,91.985v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H162.601z M156.101,100.411h4.501v-5.762h-0.054L156.101,100.411z"/>
                         </g>
@@ -1634,7 +1653,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="54.535px" height="56.57px" viewBox="0 0 54.535 56.57">
                     <g id="HCC">
-                      <g id="citymap-HCC-1">
+                      <g id="citymap-HCC-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('HCC','1')}`}>
                         <polygon id="HCC-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="6.042,54 18.089,41.952 42.875,41.952 42.875,55.57 47.125,55.57 53.535,49.16 53.535,28.75 37.455,12.67 37.455,1 26.125,1 4.125,23 4.125,31 1,34.125 1,49    "/>
                       </g>
                     </g>
@@ -1649,7 +1669,8 @@ export default class ElectionMap extends Component {
                      width="135.438px" height="254.333px" viewBox="0 0 135.438 254.333" enableBackground="new 0 0 135.438 254.333"
                      >
                     <g id="HSZ">
-                      <g id="citymap-HSZ-1">
+                      <g id="citymap-HSZ-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('HSZ','1')}`}>
                           <polygon id="HSZ-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           33.121,20.833 42.04,20.833 61.874,1 77.374,1 90.957,14.583 79.54,26 111.207,57.667 98.803,70.071 109.469,80.738
                           109.469,87.167 129.088,106.786 129.088,134.5 124.731,138.857 124.731,203.833 134.731,213.833 111.105,237.176 88.731,237.176
@@ -1667,7 +1688,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="208.82px" height="191.167px" viewBox="0 0 208.82 191.167">
                     <g id="ZMI">
-                      <g id="citymap-ZMI-1">
+                      <g id="citymap-ZMI-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('ZMI','1')}`}>
                         <polygon id="ZMI-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           15.347,124.167 1,109.82 1,59.167 18.32,59.167 58.32,19.167 76.986,19.167 85.986,10.167 128.653,10.167 137.82,1 151.653,1
                           151.653,15.833 156.653,20.833 152.153,25.333 140.746,13.927 116.955,37.718 127.403,48.167 127.403,57.583 134.486,64.667
@@ -1678,7 +1700,8 @@ export default class ElectionMap extends Component {
                             c0.648-0.396,1.171-0.81,1.603-1.26H57.976z"/>
                         </g>
                       </g>
-                      <g id="citymap-ZMI-2">
+                      <g id="citymap-ZMI-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('ZMI','2')}`}>
                         <polygon id="ZMI-2-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           70.653,45.167 105.32,45.167 129.653,69.5 134.486,64.667 127.403,57.583 127.403,48.167 116.955,37.718 140.746,13.927
                           151.986,25.167 155.82,21.333 165.82,31.333 165.82,72.167 177.498,83.845 177.498,95.833 164.986,95.833 164.986,114.833
@@ -1703,7 +1726,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg  x="0px" y="0px" width="562.742px" height="320.073px" viewBox="0 0 562.742 320.073">
                     <g id="TXG">
-                      <g id="citymap-TXG-1">
+                      <g id="citymap-TXG-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TXG','1')}`}>
                         <polygon id="TXG-1-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           94.856,106.273 122.324,78.805 133.832,90.312 178.498,90.312 165.165,76.98 165.165,1 155.395,1 138.395,18 109.27,18
                           70.77,56.5 60.145,45.875 51.951,54.068 51.951,65.32 25.27,65.32 25.27,70.25 34.27,70.25 22.645,81.875 42.895,102.125
@@ -1712,7 +1736,8 @@ export default class ElectionMap extends Component {
                           <path d="M96.839,78.48v12.855h-2.106V81.018c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H96.839z"/>
                         </g>
                       </g>
-                      <g id="citymap-TXG-3">
+                      <g id="citymap-TXG-3"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TXG','3')}`}>
                         <polygon id="TXG-3-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="186.685,109.459 168.707,127.438 156.431,115.162 126.994,144.599 145.457,163.062 137.957,170.562 120.895,170.562 69.976,119.644 81.133,108.488 86.887,114.242 122.324,78.805 133.832,90.312 178.498,90.312 186.685,98.5     "/>
                         <g id="TXG-3-index" fill="#000000">
                           <path d="M125.693,93.163c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
@@ -1725,13 +1750,15 @@ export default class ElectionMap extends Component {
                             c0.81-0.72,1.854-1.062,3.114-1.062C123.839,92.228,124.901,92.534,125.693,93.163z"/>
                         </g>
                       </g>
-                      <g id="citymap-TXG-4">
+                      <g id="citymap-TXG-4"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TXG','4')}`}>
                         <polygon id="TXG-4-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="62.02,188 100.176,149.844 69.976,119.644 37.795,151.826 37.795,159.992 49.667,171.864 49.667,188     "/>
                         <g id="TXG-4-index" fill="#000000">
                           <path d="M70.567,132.48v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H70.567z M64.067,140.906h4.501v-5.762h-0.054L64.067,140.906z"/>
                         </g>
                       </g>
-                      <g id="citymap-TXG-5">
+                      <g id="citymap-TXG-5"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TXG','5')}`}>
                         <polygon id="TXG-5-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="97.146,187.174 115.27,187.174 129.932,201.837 156.895,201.837 170.644,188.088 145.457,163.062 137.957,170.562 120.895,170.562 100.176,149.844 79.995,170.024     "/>
                         <g id="TXG-5-index" fill="#000000">
                           <path d="M104.504,163.48v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
@@ -1742,7 +1769,8 @@ export default class ElectionMap extends Component {
                             c-0.558,0-1.044,0.091-1.44,0.288c-0.45,0.217-0.792,0.541-1.044,0.991h-1.963l0.702-7.238H104.504z"/>
                         </g>
                       </g>
-                      <g id="citymap-TXG-6">
+                      <g id="citymap-TXG-6"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TXG','6')}`}>
                         <polygon id="TXG-6-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="79.995,170.024 103.245,193.274 92.195,204.325 83.82,195.95 62.02,195.95 62.02,188    "/>
                         <g id="TXG-6-index" fill="#000000">
                           <path d="M83.863,181.739h-2.053c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
@@ -1755,7 +1783,8 @@ export default class ElectionMap extends Component {
                             c-0.468-0.486-1.08-0.72-1.854-0.72C78.714,184.53,78.102,184.763,77.67,185.249z"/>
                         </g>
                       </g>
-                      <g id="citymap-TXG-7">
+                      <g id="citymap-TXG-7"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TXG','7')}`}>
                         <polygon id="TXG-7-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="156.895,201.837 156.895,248.867 138.895,266.867 124.84,266.867 110.77,280.938 110.77,244.2 95.07,244.2 57.195,206.325 62.02,201.5 62.02,195.95 83.82,195.95 92.195,204.325 103.245,193.274 97.146,187.174 115.27,187.174 129.932,201.837     "/>
                         <g id="TXG-7-index" fill="#000000">
                           <path d="M147.774,210.48v1.692l-4.501,11.163h-2.232l4.609-10.947h-6.572v-1.908H147.774z"/>
@@ -1782,7 +1811,8 @@ export default class ElectionMap extends Component {
                             C186.158,124.562,185.546,124.76,185.095,125.174z"/>
                         </g>
                       </g>
-                      <g id="citymap-TXG-2">
+                      <g id="citymap-TXG-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TXG','2')}`}>
                         <polygon id="TXG-2-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           11.395,103.859 15.449,99.805 0.707,85.062 5.301,80.469 10.551,85.719 18.52,77.75 42.895,102.125 60.707,84.312 72.895,84.312
                           94.856,106.273 86.887,114.242 81.133,108.488 37.795,151.826 37.795,159.992 49.667,171.864 49.667,188 62.02,188 62.02,201.5
@@ -1806,7 +1836,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="180.784px" height="182.094px" viewBox="0 0 180.784 182.094">
                     <g id="CHW">
-                      <g id="citymap-CHW-1">
+                      <g id="citymap-CHW-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('CHW','1')}`}>
                         <polygon id="CHW-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           132.534,75.844 117.534,75.844 117.534,64.094 107.034,64.094 107.034,55.594 102.856,51.415 96.201,58.07 81.868,58.07
                           81.868,37.76 86.638,32.99 97.284,32.99 99.715,30.559 92.976,23.819 96.868,19.927 102.034,25.094 116.784,25.094
@@ -1816,13 +1847,14 @@ export default class ElectionMap extends Component {
                           <path d="M125.038,46.37v12.855h-2.106V48.908c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H125.038z"/>
                         </g>
                       </g>
-                      <g id="citymap-CHW-3">
+                      <g id="citymap-CHW-3"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('CHW','3')}`}>
                         <polygon id="CHW-3-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           0.707,83.255 9.535,74.428 19.868,74.428 26.201,74.428 56.951,43.677 66.201,43.677 76.993,32.886 81.868,37.76 81.868,58.07
                           96.201,58.07 102.856,51.415 107.034,55.594 107.034,64.094 117.534,64.094 117.534,83.255 130.358,96.079 130.358,107.042
                           117.534,107.042 107.166,96.674 91.201,96.674 91.201,107.042 107.56,123.401 107.56,142.427 103.534,142.427 103.534,146.427
                           113.201,156.094 105.368,163.927 92.534,163.927 55.118,126.51 55.118,120.427 46.159,111.469 23.867,111.469 11.892,99.494
-                          14.455,96.931     "/>
+                          14.455,96.931"/>
                         <g id="CHW-3-index" fill="#000000">
                           <path d="M74.393,50.054c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
                             c0.432,0.486,0.647,1.116,0.647,1.873c0,1.188-0.414,2.16-1.242,2.917c-0.864,0.773-1.998,1.17-3.402,1.17
@@ -1834,7 +1866,8 @@ export default class ElectionMap extends Component {
                             c0.81-0.72,1.854-1.062,3.114-1.062C72.538,49.118,73.601,49.424,74.393,50.054z"/>
                         </g>
                       </g>
-                      <g id="citymap-CHW-2">
+                      <g id="citymap-CHW-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('CHW','2')}`}>
                         <polygon id="CHW-2-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="176.034,58.344 176.034,74.094 165.659,84.469 170.784,89.594 179.784,89.594 179.784,97.844 169.076,97.844 169.076,103.135 161.868,110.344 153.784,110.344 153.784,95.344 134.284,75.844 132.534,75.844 132.576,49.469 139.701,42.344 160.034,42.344"/>
                         <g id="CHW-2-index" fill="#000000">
                           <path d="M147.893,60.698c0.792,0.72,1.188,1.639,1.188,2.791c0,1.116-0.433,2.124-1.261,3.043
@@ -1845,12 +1878,13 @@ export default class ElectionMap extends Component {
                             C146.056,59.618,147.082,59.978,147.893,60.698z"/>
                         </g>
                       </g>
-                      <g id="citymap-CHW-4">
+                      <g id="citymap-CHW-4"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('CHW','4')}`}>
                         <polygon id="CHW-4-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           117.534,75.844 134.284,75.844 153.784,95.344 153.784,110.344 161.868,110.344 161.868,117.76 129.534,150.094 129.534,168.439
                           139.534,168.439 139.534,181.094 119.534,181.094 119.534,178.094 105.368,163.927 113.201,156.094 103.534,146.427
                           103.534,142.427 107.56,142.427 107.56,123.401 91.201,107.042 91.201,96.674 107.166,96.674 117.534,107.042 130.358,107.042
-                          130.358,96.079 117.534,83.255     "/>
+                          130.358,96.079 117.534,83.255"/>
                         <g id="CHW-4-index" fill="#000000">
                           <path d="M144.977,97.37v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H144.977z M138.477,105.796h4.501v-5.762h-0.054L138.477,105.796z"/>
                         </g>
@@ -1865,7 +1899,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="359.563px" height="293.86px" viewBox="0 0 359.563 293.86">
                     <g id="NAN">
-                      <g id="citymap-NAN-1">
+                      <g id="citymap-NAN-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NAN','1')}`}>
                         <polygon id="NAN-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           81.333,20.917 81.333,13.5 88.542,6.292 88.542,1 98.75,1 123.958,26.208 141.75,26.208 155.13,12.828 164.5,12.828 176.5,0.828
                           188.941,13.25 211,13.25 227.854,30.104 238.271,19.688 305.75,19.688 323.781,37.719 348.75,37.719 358.856,47.825
@@ -1875,7 +1910,8 @@ export default class ElectionMap extends Component {
                           <path d="M149.271,103.313v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H149.271z"/>
                         </g>
                       </g>
-                      <g id="citymap-NAN-2">
+                      <g id="citymap-NAN-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NAN','2')}`}>
                         <polygon id="NAN-2-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           40,165.25 60,185.25 43,202.25 43,235.25 60,252.25 80,252.25 80,260.25 112.806,293.153 144.858,261.108 157,273.25
                           249.468,180.782 216.968,148.251 200.484,164.75 160,124.25 133,124.25 133,106.25 126.5,99.417 137.502,88.748 137.511,78.428
@@ -1900,13 +1936,15 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="220px" height="204.207px" viewBox="0 0 220 204.207">
                     <g id="YLN">
-                      <g id="citymap-YLN-1">
+                      <g id="citymap-YLN-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('YLN','1')}`}>
                         <polygon id="YLN-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="1,102.061 1,84 65,19.167 65,15 57,15 57,10 66.333,1 98,1 113.917,16.833 89,41.833 89,53 100,53 110.625,63 126,63 144.833,81 156,81 163,87.667 163,97 106,97 88.833,115 14,115    "/>
                         <g id="YLN-1-index" fill="#000000">
                           <path d="M127.837,76.062v12.855h-2.106V78.6c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H127.837z"/>
                         </g>
                       </g>
-                      <g id="citymap-YLN-2">
+                      <g id="citymap-YLN-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('YLN','2')}`}>
                         <polygon id="YLN-2-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           111.358,19.4 123.333,31.375 145.625,31.375 154.583,40.333 154.583,46.417 192,83.833 204.833,83.833 219,98 219,121 212,121
                           181,151.369 181,162 195.851,177 208,177 216.5,185.5 198.5,203.5 135,140 135,121 107,121 107,115 88.833,115 106,97 163,97
@@ -1931,7 +1969,8 @@ export default class ElectionMap extends Component {
                   <svg x="0px" y="0px" width="313.531px" height="214.583px" viewBox="0 0 313.531 214.583">
                     <g id="CYI">
                       <polygon id="CYI-disabled" fill="#000000" points="129.589,56.404 119.531,65.759 119.531,77 129.531,77 129.531,91 161.531,91 161.531,76 151.531,66.501 151.531,61.25 134.79,61.259  "/>
-                      <g id="citymap-CYI-1">
+                      <g id="citymap-CYI-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('CYI','1')}`}>
                         <polygon id="CYI-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           105.531,17 66.531,17 50.455,1 39.531,1 39.531,10 46.197,16.735 27.251,35.719 27.281,51.75 11.134,51.854 0,63 3.531,63
                           3.531,82 18.031,97 48.531,97 62.402,83 86.531,83 100.197,97 120.531,97 139.531,116.625 139.531,91 129.531,91 129.531,77
@@ -1940,7 +1979,8 @@ export default class ElectionMap extends Component {
                           <path d="M94.706,25.246v12.855h-2.106V27.784c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H94.706z"/>
                         </g>
                       </g>
-                      <g id="citymap-CYI-2">
+                      <g id="citymap-CYI-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('CYI','2')}`}>
                         <polygon id="CYI-2-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           139.614,116.667 139.531,91 161.531,91 161.531,76 151.531,66.501 151.531,61.25 134.79,61.259 119.531,47 105.531,47 105.531,17
                           159.531,17 159.531,23 187.531,23 187.531,42 251.031,105.5 272.531,84 292.531,104 275.531,121 275.531,154 292.531,171
@@ -1964,7 +2004,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="44px" height="36.328px" viewBox="0 0 44 36.328">
                     <g id="CYC">
-                      <g id="citymap-CYC-1">
+                      <g id="citymap-CYC-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('CYC','1')}`}>
                         <polygon id="CYC-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="11.058,0.732 1,10.087 1,21.328 11,21.328 11,35.328 43,35.328 43,20.328 33,10.829 33,5.578 16.259,5.587     "/>
                       </g>
                     </g>
@@ -1977,7 +2018,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="365.196px" height="322.898px" viewBox="0 0 365.196 322.898">
                     <g id="TNN">
-                      <g id="citymap-TNN-1">
+                      <g id="citymap-TNN-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TNN','1')}`}>
                         <polygon id="TNN-1-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           63.048,70.6 131.408,1.5 136.5,1.5 136.5,30 158.25,52.5 204,52.5 224.613,31.5 261,31.5 281,52.5 312,52.5 341.375,82
                           331.5,91.75 331.5,114 346.5,127.688 346.5,139.5 330,139.5 307.5,160.75 307.5,178.5 205.442,178.5 167.83,141.234
@@ -1986,7 +2028,8 @@ export default class ElectionMap extends Component {
                           <path d="M89.004,63.276v12.855h-2.106V65.814c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H89.004z"/>
                         </g>
                       </g>
-                      <g id="citymap-TNN-2">
+                      <g id="citymap-TNN-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TNN','2')}`}>
                         <polygon id="TNN-2-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           14.01,150.482 1.5,136.312 1.5,120 21.188,100.5 33,100.5 62.882,70.434 81.132,88.5 99,88.5 110.25,100 143.997,99.997
                           176.83,132.58 167.83,141.234 205.442,178.5 307.5,178.5 307.5,202.5 339,202.5 364.131,227.816 311.631,280.5 186,280.5
@@ -1999,7 +2042,8 @@ export default class ElectionMap extends Component {
                             c0.018-1.44,0.433-2.593,1.261-3.475c0.846-0.937,1.962-1.404,3.349-1.404C64.021,86.024,65.048,86.384,65.858,87.104z"/>
                         </g>
                       </g>
-                      <g id="citymap-TNN-3">
+                      <g id="citymap-TNN-3"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TNN','3')}`}>
                         <polygon id="TNN-3-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="25.5,196.5 25.5,159 15.787,149.287 35.358,129.377 72.821,166.5 88.582,166.5 104.491,182.658 79.5,207.152 79.5,214.5 72,214.5 63,223.5 52.5,223.5 52.5,196.5    "/>
                         <g id="TNN-3-index" fill="#000000">
                           <path d="M86.858,176.96c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
@@ -2012,13 +2056,15 @@ export default class ElectionMap extends Component {
                             c0.81-0.72,1.854-1.062,3.114-1.062C85.004,176.024,86.066,176.33,86.858,176.96z"/>
                         </g>
                       </g>
-                      <g id="citymap-TNN-4">
+                      <g id="citymap-TNN-4"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TNN','4')}`}>
                         <polygon id="TNN-4-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="37.5,249 25.5,237 25.5,196.5 52.5,196.5 52.5,223.5 63,223.5 71.25,214.5 79.5,214.5 79.5,241.5 37.5,241.5     "/>
                         <g id="TNN-4-index" fill="#000000">
                           <path d="M41.732,219.276v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H41.732z M35.232,227.702h4.501v-5.762H39.68L35.232,227.702z"/>
                         </g>
                       </g>
-                      <g id="citymap-citymap-TNN-5">
+                      <g id="citymap-TNN-5"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TNN','5')}`}>
                         <polygon id="TNN-5-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="37.5,249 55.5,267 55.5,279 78,301.5 90.448,301.5 109.5,320.776 126.281,304.219 143.899,321.837 177.661,288.076 114.48,224.058 131.113,208.031 104.571,182.578 79.5,206.654 79.5,241.5 37.5,241.5     "/>
                         <g id="TNN-5-index" fill="#000000">
                           <path d="M114.669,202.276v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
@@ -2039,7 +2085,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="680.228px" height="393px" viewBox="0 0 680.228 393">
                     <g id="KHH">
-                      <g id="citymap-KHH-1">
+                      <g id="citymap-KHH-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','1')}`}>
                         <polygon id="KHH-1-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           107.956,127.5 119.956,127.5 139.456,147 155.956,130.5 173.956,147.938 214.831,106.5 341.956,106.5 427.831,19.5 527.956,19.5
                           546.331,1.5 629.956,1.5 679.165,50.855 611.665,118.5 533.956,118.5 397.456,255.125 397.456,295.5 360.331,295.5 323.956,259.5
@@ -2050,7 +2097,8 @@ export default class ElectionMap extends Component {
                           <path d="M157.418,147.026v12.855h-2.106v-10.317c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H157.418z"/>
                         </g>
                       </g>
-                      <g id="citymap-KHH-3">
+                      <g id="citymap-KHH-3"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','3')}`}>
                         <polygon id="KHH-3-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="24.625,240.835 37.456,227.25 37.456,208.5 56.956,208.5 76.456,227.5 76.456,238.5 66.247,238.5 55.456,249 55.456,255 47.056,263.4     "/>
                         <g id="KHH-3-index" fill="#000000">
                           <path d="M53.773,217.71c0.774,0.631,1.17,1.495,1.17,2.611c0,1.404-0.72,2.341-2.143,2.809c0.757,0.234,1.351,0.576,1.747,1.044
@@ -2063,7 +2111,8 @@ export default class ElectionMap extends Component {
                             c0.81-0.72,1.854-1.062,3.114-1.062C51.918,216.774,52.981,217.08,53.773,217.71z"/>
                         </g>
                       </g>
-                      <g id="citymap-KHH-4">
+                      <g id="citymap-KHH-4"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','4')}`}>
                         <polygon id="KHH-4-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           38.956,391.5 22.456,391.5 22.456,355.5 47.956,355.5 58.456,345.375 58.456,307.5 70.456,307.5 70.456,282 55.456,267.375
                           55.456,249 66.706,238.5 80.956,238.5 90.331,247.5 98.956,238.5 109.456,238.5 109.456,249 91.456,267.75 91.456,297
@@ -2072,7 +2121,8 @@ export default class ElectionMap extends Component {
                           <path d="M71.147,251.526v8.426h1.908v1.675h-1.908v2.755h-1.999v-2.755h-6.212v-1.999l6.284-8.102H71.147z M64.647,259.952h4.501v-5.762h-0.054L64.647,259.952z"/>
                         </g>
                       </g>
-                      <g id="citymap-KHH-5">
+                      <g id="citymap-KHH-5"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','5')}`}>
                         <path id="KHH-5-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" d="M31.554,278.401l-9.276-9.276l-6.349,6.349L7.456,267v-19.343l12.054-11.968l27.461,27.625L31.554,278.401z M5.75,329.5v-55H1.5v55H5.75z"/>
                         <g id="KHH-5-index" fill="#000000">
                           <path d="M23.584,247.526v1.854h-6.141l-0.359,3.528h0.054c0.396-0.396,0.846-0.684,1.368-0.864c0.469-0.18,0.99-0.27,1.566-0.27
@@ -2083,7 +2133,8 @@ export default class ElectionMap extends Component {
                             c-0.558,0-1.044,0.091-1.44,0.288c-0.45,0.217-0.792,0.541-1.044,0.991h-1.963l0.702-7.238H23.584z"/>
                         </g>
                       </g>
-                      <g id="citymap-KHH-6">
+                      <g id="citymap-KHH-6"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','6')}`}>
                         <polygon id="KHH-6-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="55.456,254.5 31.346,278.61 44.673,291.938 62.437,274.174 55.547,267.284    "/>
                         <g id="KHH-6-index" fill="#000000">
                           <path d="M51.443,273.118H49.39c-0.252-1.188-1.008-1.782-2.232-1.782c-0.864,0-1.548,0.414-2.053,1.26
@@ -2096,7 +2147,8 @@ export default class ElectionMap extends Component {
                             c-0.468-0.486-1.08-0.72-1.854-0.72C46.293,275.909,45.681,276.143,45.25,276.629z"/>
                         </g>
                       </g>
-                      <g id="citymap-KHH-2">
+                      <g id="citymap-KHH-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','2')}`}>
                         <polygon id="KHH-2-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="55.456,63 55.456,102 40.456,116.06 40.456,208.5 56.956,208.5 74.743,226.152 82.456,226 82.456,187.5 101.956,187.5 120.403,169.052 98.313,146.962 108.052,137.347 107.956,127.75 85.456,105 85.456,93     "/>
                         <g id="KHH-2-index" fill="#000000">
                           <g>
@@ -2109,7 +2161,8 @@ export default class ElectionMap extends Component {
                           </g>
                         </g>
                       </g>
-                      <g id="citymap-KHH-8">
+                      <g id="citymap-KHH-8"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','8')}`}>
                         <polygon id="KHH-8-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="62.436,274.173 21.61,316.5 58.456,316.5 58.456,307.5 70.456,307.5 70.456,282     "/>
                         <g id="KHH-8-index" fill="#000000">
                           <path d="M63.791,288.705c0.721,0.648,1.099,1.459,1.099,2.431c0,0.648-0.145,1.207-0.432,1.657
@@ -2126,7 +2179,8 @@ export default class ElectionMap extends Component {
                             C59.74,289.281,59.127,289.479,58.677,289.894z"/>
                         </g>
                       </g>
-                      <g id="citymap-KHH-9">
+                      <g id="citymap-KHH-9"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','9')}`}>
                         <polygon id="KHH-9-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="7.125,333.375 17.25,343.5 27,343.5 13.5,329.875 13.5,292.5 22.5,292.5 22.5,316.5 58.5,316.5 58.5,345 48,355.5 20,355.5 2.875,338.375     "/>
                         <g id="KHH-9-index" fill="#000000">
                           <path d="M48.453,333.967c0.828,1.116,1.242,2.646,1.242,4.627c0,2.089-0.45,3.799-1.313,5.096
@@ -2139,7 +2193,8 @@ export default class ElectionMap extends Component {
                             c-0.468-0.468-1.08-0.702-1.8-0.702C44.168,334.021,43.555,334.272,43.087,334.776z"/>
                         </g>
                       </g>
-                      <g id="citymap-KHH-7">
+                      <g id="citymap-KHH-7"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KHH','7')}`}>
                         <polygon id="KHH-7-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="44.279,292.332 22.363,269.21 13.456,277.823 13.456,292.5 22.456,292.5 22.456,316.5     "/>
                         <g id="KHH-7-index" fill="#000000">
                           <path d="M34.687,287.859v1.692l-4.501,11.163h-2.232l4.609-10.947H25.99v-1.908H34.687z"/>
@@ -2155,7 +2210,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="294px" height="421.709px" viewBox="0 0 294 421.709">
                     <g id="PIF">
-                      <g id="citymap-PIF-1">
+                      <g id="citymap-PIF-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('PIF','1')}`}>
                         <polygon id="PIF-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           122.166,46.709 115.017,39.726 154.25,0.709 166,12.709 217,12.709 217,28.709 244,28.709 268.25,52.709 293,52.709 293,83.709
                           257.167,118.709 224,118.709 185.348,157.361 149.917,121.929 128.52,143.327 90.546,106.163 98,98.709 118,98.709 141,75.709
@@ -2164,7 +2220,8 @@ export default class ElectionMap extends Component {
                           <path d="M155.474,14.735v12.855h-2.106V17.274c-0.774,0.702-1.747,1.225-2.936,1.566v-2.088c0.576-0.145,1.188-0.396,1.854-0.757c0.648-0.396,1.171-0.81,1.603-1.26H155.474z"/>
                         </g>
                       </g>
-                      <g id="citymap-PIF-2">
+                      <g id="citymap-PIF-2"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('PIF','2')}`}>
                         <polygon id="PIF-2-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="76.194,92.098 122.166,46.709 141,46.709 141,75.709 118.5,98.709 98,98.709 90.546,106.163     "/>
                         <g id="PIF-2-index" fill="#000000">
                           <path d="M133.329,56.231c0.792,0.719,1.188,1.639,1.188,2.791c0,1.115-0.433,2.123-1.261,3.043
@@ -2175,7 +2232,8 @@ export default class ElectionMap extends Component {
                             C131.492,55.15,132.518,55.51,133.329,56.231z"/>
                         </g>
                       </g>
-                      <g id="citymap-PIF-3">
+                      <g id="citymap-PIF-3"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('PIF','3')}`}>
                         <path id="PIF-3-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" d="
                           M53.805,115.903l22.598-23.597l52.243,51.146l21.149-21.399l35.409,35.164l-8.204,8.05v34.443l-32,32.25v49.75l18.542,18.583
                           L137,326.792v22.917l-32,33H94l-11,10.5v27.5h-8v-23l-21.848-21.848l-6.5,6.5L39,374.709l16.5-16.5l-9.75-9.5l35.25-35.5v-69.5
@@ -2201,7 +2259,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="377.025px" height="209.735px" viewBox="0 0 377.025 209.735">
                     <g id="ILA">
-                      <g id="citymap-ILA-1">
+                      <g id="citymap-ILA-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('ILA','1')}`}>
                         <path id="ILA-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" d="M135.025,29h69V13h118V1h54v10h-35l-65,64.833V136l-38.833,39h-30.167l-34.028,34.028l-38.184-38.184l-15.815,15.815l-57.719-57.719l-46.694,46.694L0.707,161.755L135.025,29z M338.966,60.708l8,8v-10h-8V60.708z"/>
                       </g>
                     </g>
@@ -2214,7 +2273,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="498.167px" height="443.331px" viewBox="0 0 498.167 443.331">
                     <g id="HUN">
-                      <g id="citymap-HUN-1">
+                      <g id="citymap-HUN-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('HUN','1')}`}>
                         <polygon id="HUN-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="
                           469.807,118.668 497.462,91.329 448.543,42.747 432.854,58.401 375.143,0.708 328.387,47.323 314.543,33.552 270.045,77.904
                           281.9,89.759 107.898,263.76 95.756,251.618 0.707,346.353 97.034,442.624 187.65,350.395 204.898,367.229 282.826,289.189
@@ -2230,7 +2290,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="477.473px" height="589px" viewBox="0 0 477.473 589">
                     <g id="TTT">
-                      <g id="citymap-TTT-1">
+                      <g id="citymap-TTT-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('TTT','1')}`}>
                         <path id="TTT-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" d="
                           M273.837,18.565l95.492,95.492l91.629-91.629l15.807,15.807L342,173h-36.167L250,229h-92.667L19.5,366.667L1,348v-49.5L33,266
                           v-34.5L80,185h33.167L149,150V92.167L240,1h52L273.837,18.565z M310.5,316.5V331l7.5,7.5l2.75-2.75l-4.125-4.125L325.25,323
@@ -2247,7 +2308,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="190.535px" height="188.039px" viewBox="0 0 190.535 188.039">
                     <g id="MZG">
-                      <g id="citymap-MZG-1">
+                      <g id="citymap-MZG-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('MZG','1')}`}>
                         <path id="MZG-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" d="
                           M119.312,100.957v-6.562l-3.688-3.688v-6.125l-2.125-2.125v-5.833h5.5v13l5.167,5.167L127,91.957l4.333,4.333L137,90.624v-3.827
                           h-6.494l-5.673-5.673l2-2l3.333,3.333l2.333-2.333l-6.417-6.417l6-6l3.083,3.083l2.667-2.667l3.667,3.667l-3.333,3.333L142,78.957
@@ -2272,7 +2334,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="177.333px" height="112.707px" viewBox="0 0 177.333 112.707">
                     <g id="KNH">
-                      <g id="citymap-KNH-1">
+                      <g id="citymap-KNH-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('KNH','1')}`}>
                         <path id="KNH-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" d="
                           M97.25,7.707v27.75l16.417,16.417h15.5L146,35.04v9l7.167-7.167l-4.833-4.833H160l5-5h5.667v15.667l5.667,5.667V73.04
                           l-6.667,6.667v14.667l-17.333,17.333h-27.25v-22.75l-22.75-22.75H82.167L67,81.374H56.667L43,67.707V42.374L54.667,54.04
@@ -2288,7 +2351,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="133.457px" height="33.52px" viewBox="0 0 133.457 33.52">
                     <g id="MFK">
-                      <g id="citymap-MFK-1">
+                      <g id="citymap-MFK-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('MFK','1')}`}>
                         <path id="MFK-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" d="
                           M6.333,5.083l9.25,9.25h-14v-9L6.333,5.083z M5.083,25.333L0,30.417h23.083l-5.208-5.208L5.083,25.333z M38.417,1L26.25,13.167
                           l11.167,11.167h16.667V20l-5-5h-8.917V1H38.417z M69.938,8.521L58.604,19.854L61.25,22.5l6.948-6.948h6.885l6.641,6.641v8.224
@@ -2305,7 +2369,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="127.267px" height="70.167px" viewBox="0 0 127.267 70.167">
                     <g id="MAB">
-                      <g id="citymap-MAB-1">
+                      <g id="citymap-MAB-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('MAB','1')}`}>
                         <polygon id="MAB-1-border"  points="86.757,0.5 63.634,40.55 40.511,0.5 0.866,69.167 47.112,69.167 80.155,69.167 126.401,69.167    "/>
                         <g id="MAB-1-icon">
                           <polygon fill="none" stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="0.866,69.167 40.511,0.5 80.155,69.167       "/>
@@ -2321,7 +2386,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="111.506px" height="20px" viewBox="0 0 111.506 20">
                     <g id="LAB">
-                      <g id="citymap-LAB-1">
+                      <g id="citymap-LAB-1"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('LAB','1')}`}>
                         <polygon id="LAB-1-border"  stroke="#000000" strokeWidth="2" strokeLinejoin="bevel" strokeMiterlimit="10" points="100.248,1 10.392,1 0,19 110.64,19    "/>
                       </g>
                     </g>
