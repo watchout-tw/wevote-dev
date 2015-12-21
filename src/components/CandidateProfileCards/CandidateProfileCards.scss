@@ -64,12 +64,13 @@
 .partyItem {
 	position: absolute;
 	left: 8px;
-	top: 12px;
+	top: 16px;
 }
 .name {
 	text-align: center;
 	font-size: 20px;
 	padding: 12px;
+    margin-top: 2px;
 }
 .cardItem .name {
     color: white;

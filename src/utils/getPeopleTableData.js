@@ -5,6 +5,8 @@ export default function getPeopleTableData(legislatorPositions, disctrictCandida
     console.log(legislatorPositions)
     
     disctrictCandidates.map((people, index)=>{
+        console.log("*")
+        console.log(people)
         TableData[people.id] = {
             name: people.name,
             id: people.id,
@@ -37,7 +39,7 @@ export default function getPeopleTableData(legislatorPositions, disctrictCandida
                 }
             }
             //紀錄承諾的立場
-            
+            console.log(people)
             TableData[people.id].positions[issueName].promise = people.positions[issueName].promise.position;
 
         })
