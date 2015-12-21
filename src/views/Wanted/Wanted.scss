@@ -1,0 +1,29 @@
+@import '../../common.scss';
+$breakLarge: 1400px;
+.wrap {
+	margin: 0;
+}
+.title {
+	text-align: center;
+    font-size: 40px;
+    width: 100%;
+    margin: 70px auto 0 auto;
+    display: inline-block;
+}
+
+@media all and (min-width: $breakLarge){
+	.title {
+		margin-top: 100px;
+	}
+}
+.content {
+	max-width: 800px;
+	margin: 0 auto;
+	
+	line-height: 1.5;
+    font-size: 18px;
+
+    padding: 0 10px 300px 10px;
+    
+
+}

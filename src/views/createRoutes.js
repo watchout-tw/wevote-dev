@@ -24,6 +24,7 @@ import PartyIssue from 'views/PartyIssue/PartyIssue.js';
 
 import Record from 'views/Record/Record.js';
 import Clarify from 'views/Clarify/Clarify.js';
+import Wanted from 'views/Wanted/Wanted.js';
 
 import Subscribe from 'views/Subscribe/Subscribe.js';
 import SubscribeState from 'views/SubscribeState/SubscribeState.js';
@@ -90,6 +91,7 @@ export default function(store) {
             <Route path="/about/:tabName/:focus" component={About}/>
             
             <Route path="/clarify" component={Clarify}/>
+            <Route path="/wanted" component={Wanted}/>
             <Route path="/subscribe/:state" component={SubscribeState}/>
             
             <Route path="/404" component={NotFound}/>

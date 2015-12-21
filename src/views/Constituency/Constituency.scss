@@ -39,6 +39,7 @@
     display: inline-block;
     margin: 0 auto 40px auto;
     padding: 10px 20px;
+    width: 120px;
     box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.08);
 }
 .flipButton:hover {
@@ -137,5 +138,18 @@
 .nameItem {
     display: inline-block;
     vertical-align: top;
+}
+.wantedLinkWrap {
+    text-align: center;
+    margin-top: 40px;
+}
+.wantedLink, .wantedLink:visited {
+    display: inline;
+    margin: 0 auto;
+    color: #0f0f0f;
+    border-bottom: 2px solid #0f0f0f;
+    text-decoration: none;
+    padding-bottom: 2px;
+    font-size: 20px;
 }
 

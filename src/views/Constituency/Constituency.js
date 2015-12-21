@@ -147,8 +147,12 @@ export default class Constituency extends Component {
                   <div className={styles.partyRollMain}>
                       <div className={styles.intro}>以下立委沒有過去表態資料（非第八屆立委），亦尚未回覆未來表態資料。</div>
                       {noDataCandidateItems}
+                      <div className={styles.wantedLinkWrap}>
+                        <Link className={styles.wantedLink}
+                              to={`/wanted/`}>前往協尋</Link>
+                      </div>
                   </div>
-                   <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
+                  <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
               </div>
           </div>
           <div className={styles.bgHolder}></div>
