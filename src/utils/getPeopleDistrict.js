@@ -20,8 +20,6 @@ export default function getPeopleDistrict(legislators, candidates, id){
             //代表是黨團
         }
     }
-    console.log("getPeopleDistrict")
-    console.log(DistrictData)
    
     return DistrictData;
     

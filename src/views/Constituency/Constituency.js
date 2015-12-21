@@ -63,14 +63,10 @@ export default class Constituency extends Component {
   }
   _toggle(){
     const {side} = this.state;
-    console.log(side+'-->')
-    
     if(side === 'front'){
         this.setState({ side: 'back' });
-        console.log('back')
     }else{
         this.setState({ side: 'front' });
-        console.log('front')
     }
 
   }
@@ -98,7 +94,7 @@ export default class Constituency extends Component {
         return (
           <span key={index}>
             <Link to={`/people/${people.id}/records/`}
-                  className={`${styles.ia} ${styles.bright}`}>{people.name}</Link>
+                  className={`${styles.ia} ${styles.black}`}>{people.name}</Link>
             {hasResignInfo}{separatorItem}
           </span>
         )
@@ -112,13 +108,21 @@ export default class Constituency extends Component {
         }
         return (
           <span>
+              <div className={styles.partyItem}>
+                  <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+              </div>
               <Link to={`/people/${people.id}/promises/`}
-                    className={`${styles.ia} ${styles.line}`} >{people.name}</Link>{separatorItem}
+                    className={`${styles.nameItem} ${styles.ia} ${styles.black} ${styles.line}`} >{people.name}
+              </Link>
+              {separatorItem}
           </span>
         );
     });
     let missingTitle = require("./images/missing.svg");
 
+
+    //上方的 toggle 按鈕 text
+    let toggleText = (side==="front")? "立場PK" : "戰鬥目標";
     return (
       <div className={styles.wrap}>
           
@@ -129,21 +133,22 @@ export default class Constituency extends Component {
                   <div className={styles.currentLegislators}>現任代表：{currentLegislatorItems}</div>
               </div>
               <div className={styles.flipButton}
-                   onClick={this._toggle.bind(this)}>立場PK</div>
+                   onClick={this._toggle.bind(this)}>{toggleText}</div>
               
               <CandidateProfileCards area={area}
                                      areaNo={areaNo}
                                      side={side}
                                      candidateList={comparableCandidates}/>
               <div className={styles.partyRoll}>
-                  <div className={styles.partyRollEndpoint}>
+                  <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
                       <img src={missingTitle} 
                            className={styles.missingTitle}/>
                   </div>
                   <div className={styles.partyRollMain}>
+                      <div className={styles.intro}>以下立委沒有過去表態資料（非第八屆立委），亦尚未回覆未來表態資料。</div>
                       {noDataCandidateItems}
                   </div>
-                  <div className={styles.partyRollEndpoint}></div>
+                   <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
               </div>
           </div>
           <div className={styles.bgHolder}></div>

@@ -9,11 +9,7 @@ export default function identity(legislator, c1, c2){
         	&& 
         	((legislator.constituency2 === c2) || (legislator.constituency2 === "N/A"))
         );
-        console.log(legislator.constituency1)
-        console.log(legislator.constituency2)
-        console.log(c1)
-        console.log(c2)
-
+        
         if(sameDistrict === true){
             return 'D';//current DISTRICT legislator
             
