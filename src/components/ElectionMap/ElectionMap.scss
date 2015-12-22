@@ -29,28 +29,47 @@ g {
   display: block;
 	}
 /* 詳細選區 */
-.cityMap.active {
-  	background: rgba(0,0,0,0.8);
-  	position: fixed;
-  	left: 0;
-  	right: 0;
-  	top: 0;
-  	height: 100vh;
-  	padding-top: 10vh;
+@media all and (min-width: $webVersionBreak){
+	.cityMap.active {
+	  	background: rgba(0,0,0,0.8);
+	  	position: fixed;
+	  	left: 0;
+	  	right: 0;
+	  	top: 0;
+	  	height: 100vh;
+	  	padding-top: 10vh;
+	}
 }
 
 .city {
   fill: white;
   marign: 0 auto;
+  background: #9ce5ff;
+  margin: 30px 0;
+  padding: 30px 0;
+  font-size: 22px;
+  font-weight: 600;
 }
 @media all and (min-width: $webVersionBreak){
 	.city {
-	  	fill: white;
 	  	display: none;
 	}
 	.city.active {
 	  	display: block;
+	  	background: none;
+	  	margin: 0;
+	  	padding: 0;
+	  	font-size: 16px;
+  		font-weight: 100;
 	}	
+}
+.map {
+	margin-top: 20px;
+}
+@media all and (min-width: $webVersionBreak){
+	.map {
+		margin: 0;
+	}
 }
 
 $x: 64px;
@@ -65,6 +84,18 @@ $selectColor: #00ffb0;
 }
 .cityPath:hover, .cityPath.active {
 	fill: $selectColor
+}
+/* 處理手機部分某些縣市需要 transform */
+.citymapNTC {
+	transform: translate3d(-508px,0,0) translateX(50vw);
+}
+.citymapKHH {
+	transform: translate3d(-140px,0,0) translateX(50vw);
+}
+@media all and (min-width: 1015px){
+	.citymapNTC, .citymapKHH {
+		transform: none;
+	}
 }
 
 .close.active {
