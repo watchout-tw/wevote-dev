@@ -816,8 +816,8 @@ const initialState = {
         "gender": "男",
         "age": "60",
         "isCurrent": true,
-        "constituency1": "屏東縣",
-        "constituency2": "3",
+        "constituency1": "苗栗縣",
+        "constituency2": "2",
         "hasResigned": false
     },
     "49": {
