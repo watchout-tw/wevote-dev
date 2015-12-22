@@ -1358,7 +1358,8 @@ export default class ElectionMap extends Component {
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="1014.828px" height="866.333px" viewBox="0 0 1014.828 866.333">
                     <g id="NTC" className={styles.citymapNTC}>
-                      <g id="citymap-NTC-8">
+                      <g id="citymap-NTC-8"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','8')}`}>
                         <polygon id="NTC-8-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="304.578,382.583 304.578,422.333 293.586,422.333 293.586,462.833 349.328,462.833 357.981,454.181 357.981,382.583    "/>
                         <g id="NTC-8-index" fill="#000000">
                           <path d="M314.604,438.873c0.721,0.648,1.099,1.459,1.099,2.431c0,0.648-0.145,1.207-0.432,1.657
