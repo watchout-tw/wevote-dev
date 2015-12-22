@@ -44,9 +44,20 @@ export default class ElectionMap extends Component {
     }
   }
   _onMapClick(name, e){
-    this.setState({
-      active_city: name
-    })
+    
+    if(interactiveCities.indexOf(name)===-1){
+        //如果該選區只有單一選區，直接選 sub_active = 1
+        this.setState({
+          active_city: name,
+          sub_active: 1
+        })
+
+    }else{
+        this.setState({
+          active_city: name
+        })
+    }
+    
   }
   _resetMapClick(){
     const {active_city} = this.state;
@@ -175,8 +186,7 @@ export default class ElectionMap extends Component {
               if(!node){
                   tryNext = false;
               }else{
-                  node.removeEventListener("mouseenter" , this._onSubMapHover.bind(this, subChildIndex));
-                  node.removeEventListener("mouseleave", this._onSubMapLeave.bind(this));
+                  node.removeEventListener("click" , this._onSubMapClick.bind(this, subChildIndex));
                   subChildIndex++;
               }
           }
@@ -1347,8 +1357,9 @@ export default class ElectionMap extends Component {
                 <div className={styles.title}>新北市</div>
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="1014.828px" height="866.333px" viewBox="0 0 1014.828 866.333">
-                    <g id="NTC">
-                      <g id="citymap-NTC-8">
+                    <g id="NTC" className={styles.citymapNTC}>
+                      <g id="citymap-NTC-8"
+                         className={`${styles.cityPath} ${this._activeSubCityMap('NTC','8')}`}>
                         <polygon id="NTC-8-border"  stroke="#000000" strokeWidth="8" strokeLinejoin="bevel" strokeMiterlimit="10" points="304.578,382.583 304.578,422.333 293.586,422.333 293.586,462.833 349.328,462.833 357.981,454.181 357.981,382.583    "/>
                         <g id="NTC-8-index" fill="#000000">
                           <path d="M314.604,438.873c0.721,0.648,1.099,1.459,1.099,2.431c0,0.648-0.145,1.207-0.432,1.657
@@ -2084,7 +2095,7 @@ export default class ElectionMap extends Component {
                 <div className={styles.title}>高雄市</div>
                 <div className={styles.map}>
                   <svg x="0px" y="0px" width="680.228px" height="393px" viewBox="0 0 680.228 393">
-                    <g id="KHH">
+                    <g id="KHH" className={styles.citymapKHH}>
                       <g id="citymap-KHH-1"
                          className={`${styles.cityPath} ${this._activeSubCityMap('KHH','1')}`}>
                         <polygon id="KHH-1-border"  stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
@@ -2868,6 +2879,24 @@ const db = {
       {
         index: 1,
         subdistricts: ['金湖鎮','金寧鄉','金城鎮','金沙鎮','烏坵鄉','烈嶼鄉']
+      }
+    ]
+  },
+  MAB: {
+    name: '山地原住民',
+    districts: [
+      {
+        index: 1,
+        subdistricts: ['全國:台北市,新北市,桃園市,台中市,台南市,高雄市,基隆市,新竹市,嘉義市,宜蘭縣,新竹縣,苗栗縣,彰化縣,南投縣,雲林縣,嘉義縣,屏東縣,台東縣,花蓮縣,澎湖縣,金門縣,連江縣']
+      }
+    ]
+  },
+  LAB: {
+    name: '平地原住民',
+    districts: [
+      {
+        index: 1,
+        subdistricts: ['阿美族','卑南族','邵族','噶瑪蘭族','撒奇萊雅族','賽夏族:苗栗縣南莊鄉,獅潭鄉','泰雅族:新竹縣關西鎮','排灣族:台東縣太麻里鄉,大武鄉','魯凱族:台東縣卑南鄉,太麻里鄉,屏東滿州鄉']
       }
     ]
   }
