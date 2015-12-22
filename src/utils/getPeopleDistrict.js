@@ -1,7 +1,7 @@
 export default function getPeopleDistrict(legislators, candidates, id){
     let DistrictData = {};
     
-    //是現任候選人
+    //是第九屆參選人
     if(candidates[id]){
         DistrictData = {
             area: candidates[id].districtArea,
