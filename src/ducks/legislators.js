@@ -672,8 +672,8 @@ const initialState = {
                 "endDate": ""
             }
         ],
-        "constituency1": "PIF",
-        "constituency2": "3",
+        "constituency1": "ZMI",
+        "constituency2": "2",
         "hasResigned": false
     },
     "49": {
