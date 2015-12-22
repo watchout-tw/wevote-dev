@@ -3056,29 +3056,29 @@ const initialState = {
         "districtArea": "TXG",
         "districtNo": "3",
         "contactAvaliable": false,
-        "hasReply": true,
+        "hasReply": false,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "aye",
+                    "position": "none",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "aye",
+                    "position": "none",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "aye",
+                    "position": "none",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "aye",
+                    "position": "none",
                     "statement": ""
                 }
             },
@@ -3097,15 +3097,15 @@ const initialState = {
         },
         "bills": [
             {
-                "goal": "勞動權益",
+                "goal": "",
                 "content": ""
             },
             {
-                "goal": "司法改革",
+                "goal": "",
                 "content": ""
             },
             {
-                "goal": "婦幼保障",
+                "goal": "",
                 "content": ""
             }
         ]
@@ -4580,7 +4580,7 @@ const initialState = {
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -4824,7 +4824,7 @@ const initialState = {
         "party": "FTP",
         "districtArea": "TPE",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -4885,7 +4885,7 @@ const initialState = {
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5557,7 +5557,7 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "3",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -5567,47 +5567,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
@@ -5617,7 +5617,7 @@ const initialState = {
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5951,14 +5951,14 @@ const initialState = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "公民參與司法體系更可公證司法之公信"
                 }
             }
         },
@@ -6195,13 +6195,13 @@ const initialState = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -6411,7 +6411,7 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "5",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -6421,47 +6421,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
@@ -7082,7 +7082,7 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -7092,47 +7092,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
@@ -7570,7 +7570,7 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "7",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -7580,47 +7580,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
@@ -8668,7 +8668,7 @@ const initialState = {
         "districtArea": "NTC",
         "districtNo": "3",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -8678,47 +8678,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
@@ -9095,7 +9095,7 @@ const initialState = {
         "districtArea": "NTC",
         "districtNo": "4",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -9105,47 +9105,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
@@ -9217,41 +9217,41 @@ const initialState = {
         "districtArea": "NTC",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -10193,7 +10193,7 @@ const initialState = {
         "districtArea": "NTC",
         "districtNo": "8",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -10203,47 +10203,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
@@ -10831,13 +10831,13 @@ const initialState = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -11230,56 +11230,56 @@ const initialState = {
         "districtArea": "TYN",
         "districtNo": "2",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "國會改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "年金改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "勞動政策",
                 "content": ""
             }
         ]
@@ -11412,7 +11412,7 @@ const initialState = {
         "party": "DPP",
         "districtArea": "TYN",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11473,7 +11473,7 @@ const initialState = {
         "party": "MKT",
         "districtArea": "TYN",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11652,11 +11652,11 @@ const initialState = {
     },
     "247": {
         "id": 247,
-        "name": "黃志浩",
-        "party": "NONE",
+        "name": "鄭寶清",
+        "party": "DPP",
         "districtArea": "TYN",
-        "districtNo": "5",
-        "contactAvaliable": false,
+        "districtNo": "4",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11713,11 +11713,11 @@ const initialState = {
     },
     "248": {
         "id": 248,
-        "name": "鄭寶清",
+        "name": "張肇良",
         "party": "DPP",
         "districtArea": "TYN",
-        "districtNo": "4",
-        "contactAvaliable": false,
+        "districtNo": "5",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11774,67 +11774,6 @@ const initialState = {
     },
     "249": {
         "id": 249,
-        "name": "張肇良",
-        "party": "DPP",
-        "districtArea": "TYN",
-        "districtNo": "5",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "250": {
-        "id": 250,
         "name": "黃國華",
         "party": "NHSA",
         "districtArea": "TYN",
@@ -11894,10 +11833,71 @@ const initialState = {
             }
         ]
     },
-    "251": {
-        "id": 251,
+    "250": {
+        "id": 250,
         "name": "張誠",
         "party": "MKT",
+        "districtArea": "TYN",
+        "districtNo": "5",
+        "contactAvaliable": true,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "251": {
+        "id": 251,
+        "name": "黃志浩",
+        "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "5",
         "contactAvaliable": false,
@@ -12018,67 +12018,6 @@ const initialState = {
     },
     "253": {
         "id": 253,
-        "name": "羅文欽",
-        "party": "NONE",
-        "districtArea": "TYN",
-        "districtNo": "5",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "254": {
-        "id": 254,
         "name": "趙正宇",
         "party": "NONE",
         "districtArea": "TYN",
@@ -12138,13 +12077,13 @@ const initialState = {
             }
         ]
     },
-    "255": {
-        "id": 255,
+    "254": {
+        "id": 254,
         "name": "呂東杰",
         "party": "GSD",
         "districtArea": "TYN",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12199,8 +12138,8 @@ const initialState = {
             }
         ]
     },
-    "256": {
-        "id": 256,
+    "255": {
+        "id": 255,
         "name": "鄭振源",
         "party": "TWP",
         "districtArea": "TYN",
@@ -12260,8 +12199,8 @@ const initialState = {
             }
         ]
     },
-    "257": {
-        "id": 257,
+    "256": {
+        "id": 256,
         "name": "藍大山",
         "party": "TIP",
         "districtArea": "TYN",
@@ -12321,8 +12260,8 @@ const initialState = {
             }
         ]
     },
-    "258": {
-        "id": 258,
+    "257": {
+        "id": 257,
         "name": "楊金軒",
         "party": "NONE",
         "districtArea": "TYN",
@@ -12382,13 +12321,13 @@ const initialState = {
             }
         ]
     },
-    "259": {
-        "id": 259,
+    "258": {
+        "id": 258,
         "name": "顏秋月",
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12443,8 +12382,8 @@ const initialState = {
             }
         ]
     },
-    "260": {
-        "id": 260,
+    "259": {
+        "id": 259,
         "name": "陳軍元",
         "party": "CHTY",
         "districtArea": "TXG",
@@ -12504,14 +12443,14 @@ const initialState = {
             }
         ]
     },
-    "261": {
-        "id": 261,
+    "260": {
+        "id": 260,
         "name": "王淑芬",
         "party": "DASG",
         "districtArea": "TXG",
         "districtNo": "1",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -12521,52 +12460,52 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
-    "262": {
-        "id": 262,
+    "261": {
+        "id": 261,
         "name": "黃金推",
         "party": "NONE",
         "districtArea": "TXG",
@@ -12626,13 +12565,13 @@ const initialState = {
             }
         ]
     },
-    "263": {
-        "id": 263,
+    "262": {
+        "id": 262,
         "name": "陳世凱",
         "party": "DPP",
         "districtArea": "TXG",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12687,8 +12626,8 @@ const initialState = {
             }
         ]
     },
-    "264": {
-        "id": 264,
+    "263": {
+        "id": 263,
         "name": "鍾文龍",
         "party": "NONE",
         "districtArea": "TXG",
@@ -12748,69 +12687,69 @@ const initialState = {
             }
         ]
     },
-    "265": {
-        "id": 265,
+    "264": {
+        "id": 264,
         "name": "洪慈庸",
         "party": "NPP",
         "districtArea": "TXG",
         "districtNo": "3",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "勞動權益",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "司法改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "婦幼保障",
                 "content": ""
             }
         ]
     },
-    "266": {
-        "id": 266,
+    "265": {
+        "id": 265,
         "name": "黃信吉",
         "party": "MCFAP",
         "districtArea": "TXG",
@@ -12870,13 +12809,74 @@ const initialState = {
             }
         ]
     },
-    "267": {
-        "id": 267,
+    "266": {
+        "id": 266,
         "name": "葉春幸",
         "party": "FHL",
         "districtArea": "TXG",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "267": {
+        "id": 267,
+        "name": "張廖萬堅",
+        "party": "DPP",
+        "districtArea": "TXG",
+        "districtNo": "4",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12933,11 +12933,11 @@ const initialState = {
     },
     "268": {
         "id": 268,
-        "name": "張廖萬堅",
-        "party": "DPP",
+        "name": "吳淑慧",
+        "party": "MKT",
         "districtArea": "TXG",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12994,67 +12994,6 @@ const initialState = {
     },
     "269": {
         "id": 269,
-        "name": "吳淑慧",
-        "party": "MKT",
-        "districtArea": "TXG",
-        "districtNo": "4",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "270": {
-        "id": 270,
         "name": "游壽元",
         "party": "FTP",
         "districtArea": "TXG",
@@ -13114,8 +13053,8 @@ const initialState = {
             }
         ]
     },
-    "271": {
-        "id": 271,
+    "270": {
+        "id": 270,
         "name": "顏惠莉",
         "party": "NONE",
         "districtArea": "TXG",
@@ -13175,13 +13114,13 @@ const initialState = {
             }
         ]
     },
-    "272": {
-        "id": 272,
+    "271": {
+        "id": 271,
         "name": "簡孟軒",
         "party": "FHL",
         "districtArea": "TXG",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13236,8 +13175,8 @@ const initialState = {
             }
         ]
     },
-    "273": {
-        "id": 273,
+    "272": {
+        "id": 272,
         "name": "苗豐隆",
         "party": "NONE",
         "districtArea": "TXG",
@@ -13297,13 +13236,74 @@ const initialState = {
             }
         ]
     },
-    "274": {
-        "id": 274,
+    "273": {
+        "id": 273,
         "name": "劉國隆",
         "party": "TSU",
         "districtArea": "TXG",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "274": {
+        "id": 274,
+        "name": "沈智慧",
+        "party": "KMT",
+        "districtArea": "TXG",
+        "districtNo": "6",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13360,67 +13360,6 @@ const initialState = {
     },
     "275": {
         "id": 275,
-        "name": "沈智慧",
-        "party": "KMT",
-        "districtArea": "TXG",
-        "districtNo": "6",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "276": {
-        "id": 276,
         "name": "賀姿華",
         "party": "NONE",
         "districtArea": "TXG",
@@ -13480,8 +13419,8 @@ const initialState = {
             }
         ]
     },
-    "277": {
-        "id": 277,
+    "276": {
+        "id": 276,
         "name": "石大哉",
         "party": "MCFAP",
         "districtArea": "TXG",
@@ -13541,13 +13480,13 @@ const initialState = {
             }
         ]
     },
-    "278": {
-        "id": 278,
+    "277": {
+        "id": 277,
         "name": "賴義鍠",
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13602,8 +13541,8 @@ const initialState = {
             }
         ]
     },
-    "279": {
-        "id": 279,
+    "278": {
+        "id": 278,
         "name": "王政棋",
         "party": "NONE",
         "districtArea": "TXG",
@@ -13663,13 +13602,74 @@ const initialState = {
             }
         ]
     },
-    "280": {
-        "id": 280,
+    "279": {
+        "id": 279,
         "name": "謝志忠",
         "party": "DPP",
         "districtArea": "TXG",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "280": {
+        "id": 280,
+        "name": "黃瑞坤",
+        "party": "KMT",
+        "districtArea": "TNN",
+        "districtNo": "1",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13726,67 +13726,6 @@ const initialState = {
     },
     "281": {
         "id": 281,
-        "name": "黃瑞坤",
-        "party": "KMT",
-        "districtArea": "TNN",
-        "districtNo": "1",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "282": {
-        "id": 282,
         "name": "陳柏志",
         "party": "CHTY",
         "districtArea": "TNN",
@@ -13846,8 +13785,8 @@ const initialState = {
             }
         ]
     },
-    "283": {
-        "id": 283,
+    "282": {
+        "id": 282,
         "name": "林德旺",
         "party": "NONE",
         "districtArea": "TNN",
@@ -13907,8 +13846,8 @@ const initialState = {
             }
         ]
     },
-    "284": {
-        "id": 284,
+    "283": {
+        "id": 283,
         "name": "黃耀盛",
         "party": "KMT",
         "districtArea": "TNN",
@@ -13968,8 +13907,8 @@ const initialState = {
             }
         ]
     },
-    "285": {
-        "id": 285,
+    "284": {
+        "id": 284,
         "name": "黃泯甄",
         "party": "CHTY",
         "districtArea": "TNN",
@@ -14029,8 +13968,8 @@ const initialState = {
             }
         ]
     },
-    "286": {
-        "id": 286,
+    "285": {
+        "id": 285,
         "name": "黃憲清",
         "party": "FTP",
         "districtArea": "TNN",
@@ -14090,8 +14029,8 @@ const initialState = {
             }
         ]
     },
-    "287": {
-        "id": 287,
+    "286": {
+        "id": 286,
         "name": "王國棟",
         "party": "NONE",
         "districtArea": "TNN",
@@ -14151,13 +14090,13 @@ const initialState = {
             }
         ]
     },
-    "288": {
-        "id": 288,
+    "287": {
+        "id": 287,
         "name": "謝龍介",
         "party": "KMT",
         "districtArea": "TNN",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14212,8 +14151,8 @@ const initialState = {
             }
         ]
     },
-    "289": {
-        "id": 289,
+    "288": {
+        "id": 288,
         "name": "翁琬甯",
         "party": "CHTY",
         "districtArea": "TNN",
@@ -14273,13 +14212,74 @@ const initialState = {
             }
         ]
     },
-    "290": {
-        "id": 290,
+    "289": {
+        "id": 289,
         "name": "鄧秀寶",
         "party": "MKT",
         "districtArea": "TNN",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "290": {
+        "id": 290,
+        "name": "林俊憲",
+        "party": "DPP",
+        "districtArea": "TNN",
+        "districtNo": "4",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14336,11 +14336,11 @@ const initialState = {
     },
     "291": {
         "id": 291,
-        "name": "林俊憲",
-        "party": "DPP",
+        "name": "楊智達",
+        "party": "GSD",
         "districtArea": "TNN",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14397,67 +14397,6 @@ const initialState = {
     },
     "292": {
         "id": 292,
-        "name": "楊智達",
-        "party": "GSD",
-        "districtArea": "TNN",
-        "districtNo": "4",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "293": {
-        "id": 293,
         "name": "傅建峰",
         "party": "CHTY",
         "districtArea": "TNN",
@@ -14517,75 +14456,75 @@ const initialState = {
             }
         ]
     },
-    "294": {
-        "id": 294,
+    "293": {
+        "id": 293,
         "name": "蔡郁芝",
         "party": "NPP",
         "districtArea": "TNN",
         "districtNo": "4",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "國會改革",
+                "content": "修正「立法院職權行使法」：黨團協商公開透明，確立「委員會中心主義」，建立國會聽證制度"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "年金改革",
+                "content": "修訂「公務人員退休法」、「勞工退休金條例」、「勞工保險條例」、「學校教職員退休條例」、「國民年金條例」"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "完善托育政策",
+                "content": "補助、定價、管理，三位一體；兒童及少年福利與權益保障"
             }
         ]
     },
-    "295": {
-        "id": 295,
+    "294": {
+        "id": 294,
         "name": "陳皇州",
         "party": "DASG",
         "districtArea": "TNN",
         "districtNo": "4",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -14595,52 +14534,52 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
-    "296": {
-        "id": 296,
+    "295": {
+        "id": 295,
         "name": "李盈蒔",
         "party": "CHTY",
         "districtArea": "TNN",
@@ -14700,13 +14639,74 @@ const initialState = {
             }
         ]
     },
-    "297": {
-        "id": 297,
+    "296": {
+        "id": 296,
         "name": "林易煌",
         "party": "KMT",
         "districtArea": "TNN",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "297": {
+        "id": 297,
+        "name": "王定宇",
+        "party": "DPP",
+        "districtArea": "TNN",
+        "districtNo": "5",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14763,67 +14763,6 @@ const initialState = {
     },
     "298": {
         "id": 298,
-        "name": "王定宇",
-        "party": "DPP",
-        "districtArea": "TNN",
-        "districtNo": "5",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "299": {
-        "id": 299,
         "name": "晏揚清",
         "party": "TLP",
         "districtArea": "TNN",
@@ -14883,8 +14822,8 @@ const initialState = {
             }
         ]
     },
-    "300": {
-        "id": 300,
+    "299": {
+        "id": 299,
         "name": "劉子麟",
         "party": "CHTY",
         "districtArea": "KHH",
@@ -14944,8 +14883,8 @@ const initialState = {
             }
         ]
     },
-    "301": {
-        "id": 301,
+    "300": {
+        "id": 300,
         "name": "莊婷欣",
         "party": "PPU",
         "districtArea": "KHH",
@@ -15005,13 +14944,74 @@ const initialState = {
             }
         ]
     },
-    "302": {
-        "id": 302,
+    "301": {
+        "id": 301,
         "name": "鍾易仲",
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "302": {
+        "id": 302,
+        "name": "黃韻涵",
+        "party": "KMT",
+        "districtArea": "KHH",
+        "districtNo": "2",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15068,67 +15068,6 @@ const initialState = {
     },
     "303": {
         "id": 303,
-        "name": "黃韻涵",
-        "party": "KMT",
-        "districtArea": "KHH",
-        "districtNo": "2",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "304": {
-        "id": 304,
         "name": "黃金玲",
         "party": "CHTY",
         "districtArea": "KHH",
@@ -15188,8 +15127,8 @@ const initialState = {
             }
         ]
     },
-    "305": {
-        "id": 305,
+    "304": {
+        "id": 304,
         "name": "曾盈豐",
         "party": "FTP",
         "districtArea": "KHH",
@@ -15249,8 +15188,8 @@ const initialState = {
             }
         ]
     },
-    "306": {
-        "id": 306,
+    "305": {
+        "id": 305,
         "name": "李柏融",
         "party": "TP",
         "districtArea": "KHH",
@@ -15310,13 +15249,74 @@ const initialState = {
             }
         ]
     },
-    "307": {
-        "id": 307,
+    "306": {
+        "id": 306,
         "name": "劉世芳",
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "307": {
+        "id": 307,
+        "name": "張顯耀",
+        "party": "KMT",
+        "districtArea": "KHH",
+        "districtNo": "3",
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15373,11 +15373,11 @@ const initialState = {
     },
     "308": {
         "id": 308,
-        "name": "張顯耀",
-        "party": "KMT",
+        "name": "梁蓓禎",
+        "party": "FHL",
         "districtArea": "KHH",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15434,67 +15434,6 @@ const initialState = {
     },
     "309": {
         "id": 309,
-        "name": "梁蓓禎",
-        "party": "FHL",
-        "districtArea": "KHH",
-        "districtNo": "3",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "310": {
-        "id": 310,
         "name": "柳淑芳",
         "party": "NONE",
         "districtArea": "KHH",
@@ -15554,14 +15493,14 @@ const initialState = {
             }
         ]
     },
-    "311": {
-        "id": 311,
+    "310": {
+        "id": 310,
         "name": "莊明憲",
         "party": "DASG",
         "districtArea": "KHH",
         "districtNo": "3",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -15571,52 +15510,52 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
-    "312": {
-        "id": 312,
+    "311": {
+        "id": 311,
         "name": "郭倫豪",
         "party": "KMT",
         "districtArea": "KHH",
@@ -15676,8 +15615,8 @@ const initialState = {
             }
         ]
     },
-    "313": {
-        "id": 313,
+    "312": {
+        "id": 312,
         "name": "林俊揚",
         "party": "CHTY",
         "districtArea": "KHH",
@@ -15737,8 +15676,8 @@ const initialState = {
             }
         ]
     },
-    "314": {
-        "id": 314,
+    "313": {
+        "id": 313,
         "name": "蔡金晏",
         "party": "KMT",
         "districtArea": "KHH",
@@ -15798,8 +15737,8 @@ const initialState = {
             }
         ]
     },
-    "315": {
-        "id": 315,
+    "314": {
+        "id": 314,
         "name": "王新昌",
         "party": "MCFAP",
         "districtArea": "KHH",
@@ -15859,8 +15798,8 @@ const initialState = {
             }
         ]
     },
-    "316": {
-        "id": 316,
+    "315": {
+        "id": 315,
         "name": "楊宗穎",
         "party": "PPU",
         "districtArea": "KHH",
@@ -15920,8 +15859,8 @@ const initialState = {
             }
         ]
     },
-    "317": {
-        "id": 317,
+    "316": {
+        "id": 316,
         "name": "楊翰奇",
         "party": "PPU",
         "districtArea": "KHH",
@@ -15981,8 +15920,8 @@ const initialState = {
             }
         ]
     },
-    "318": {
-        "id": 318,
+    "317": {
+        "id": 317,
         "name": "黃柏霖",
         "party": "KMT",
         "districtArea": "KHH",
@@ -16042,8 +15981,8 @@ const initialState = {
             }
         ]
     },
-    "319": {
-        "id": 319,
+    "318": {
+        "id": 318,
         "name": "莊啟旺",
         "party": "KMT",
         "districtArea": "KHH",
@@ -16103,69 +16042,69 @@ const initialState = {
             }
         ]
     },
-    "320": {
-        "id": 320,
+    "319": {
+        "id": 319,
         "name": "陳惠敏",
         "party": "NPP",
         "districtArea": "KHH",
         "districtNo": "7",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "全面修改選罷法"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "全面補正公投法，不止門檻，包括適用範圍，廢除公審會，電子連署等"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "勞動政策",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "司法改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "國會改革",
                 "content": ""
             }
         ]
     },
-    "321": {
-        "id": 321,
+    "320": {
+        "id": 320,
         "name": "陳素莉",
         "party": "PPU",
         "districtArea": "KHH",
@@ -16225,8 +16164,8 @@ const initialState = {
             }
         ]
     },
-    "322": {
-        "id": 322,
+    "321": {
+        "id": 321,
         "name": "林景元",
         "party": "NONE",
         "districtArea": "KHH",
@@ -16286,8 +16225,8 @@ const initialState = {
             }
         ]
     },
-    "323": {
-        "id": 323,
+    "322": {
+        "id": 322,
         "name": "黃璽文",
         "party": "KMT",
         "districtArea": "KHH",
@@ -16347,8 +16286,8 @@ const initialState = {
             }
         ]
     },
-    "324": {
-        "id": 324,
+    "323": {
+        "id": 323,
         "name": "汪婷萱",
         "party": "CHTY",
         "districtArea": "KHH",
@@ -16408,69 +16347,69 @@ const initialState = {
             }
         ]
     },
-    "325": {
-        "id": 325,
+    "324": {
+        "id": 324,
         "name": "陳函谷",
         "party": "NPP",
         "districtArea": "KHH",
         "districtNo": "8",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "年金改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "租稅改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "長照公托政策",
                 "content": ""
             }
         ]
     },
-    "326": {
-        "id": 326,
+    "325": {
+        "id": 325,
         "name": "張育華",
         "party": "PDF",
         "districtArea": "KHH",
@@ -16530,8 +16469,8 @@ const initialState = {
             }
         ]
     },
-    "327": {
-        "id": 327,
+    "326": {
+        "id": 326,
         "name": "馬凱妮",
         "party": "SWP",
         "districtArea": "KHH",
@@ -16591,8 +16530,8 @@ const initialState = {
             }
         ]
     },
-    "328": {
-        "id": 328,
+    "327": {
+        "id": 327,
         "name": "劉義雄",
         "party": "MCFAP",
         "districtArea": "KHH",
@@ -16652,8 +16591,8 @@ const initialState = {
             }
         ]
     },
-    "329": {
-        "id": 329,
+    "328": {
+        "id": 328,
         "name": "賴瑞隆",
         "party": "DPP",
         "districtArea": "KHH",
@@ -16713,8 +16652,8 @@ const initialState = {
             }
         ]
     },
-    "330": {
-        "id": 330,
+    "329": {
+        "id": 329,
         "name": "林宗彥",
         "party": "MKT",
         "districtArea": "KHH",
@@ -16774,8 +16713,8 @@ const initialState = {
             }
         ]
     },
-    "331": {
-        "id": 331,
+    "330": {
+        "id": 330,
         "name": "蔡媽福",
         "party": "CHTY",
         "districtArea": "KHH",
@@ -16835,8 +16774,8 @@ const initialState = {
             }
         ]
     },
-    "332": {
-        "id": 332,
+    "331": {
+        "id": 331,
         "name": "林為洲",
         "party": "KMT",
         "districtArea": "HSZ",
@@ -16896,8 +16835,8 @@ const initialState = {
             }
         ]
     },
-    "333": {
-        "id": 333,
+    "332": {
+        "id": 332,
         "name": "卓恩宗",
         "party": "FHL",
         "districtArea": "HSZ",
@@ -16957,8 +16896,8 @@ const initialState = {
             }
         ]
     },
-    "334": {
-        "id": 334,
+    "333": {
+        "id": 333,
         "name": "李宗華",
         "party": "MCFAP",
         "districtArea": "HSZ",
@@ -17018,8 +16957,8 @@ const initialState = {
             }
         ]
     },
-    "335": {
-        "id": 335,
+    "334": {
+        "id": 334,
         "name": "鄭永金",
         "party": "NONE",
         "districtArea": "HSZ",
@@ -17079,8 +17018,8 @@ const initialState = {
             }
         ]
     },
-    "336": {
-        "id": 336,
+    "335": {
+        "id": 335,
         "name": "邱靖雅",
         "party": "MKT",
         "districtArea": "HSZ",
@@ -17140,8 +17079,8 @@ const initialState = {
             }
         ]
     },
-    "337": {
-        "id": 337,
+    "336": {
+        "id": 336,
         "name": "黃秀龍",
         "party": "NONE",
         "districtArea": "HSZ",
@@ -17201,8 +17140,8 @@ const initialState = {
             }
         ]
     },
-    "338": {
-        "id": 338,
+    "337": {
+        "id": 337,
         "name": "范振揆",
         "party": "CHTY",
         "districtArea": "HSZ",
@@ -17262,8 +17201,8 @@ const initialState = {
             }
         ]
     },
-    "339": {
-        "id": 339,
+    "338": {
+        "id": 338,
         "name": "蘇雯英",
         "party": "NHSA",
         "districtArea": "HSZ",
@@ -17323,8 +17262,8 @@ const initialState = {
             }
         ]
     },
-    "340": {
-        "id": 340,
+    "339": {
+        "id": 339,
         "name": "杜文卿",
         "party": "DPP",
         "districtArea": "ZMI",
@@ -17384,8 +17323,8 @@ const initialState = {
             }
         ]
     },
-    "341": {
-        "id": 341,
+    "340": {
+        "id": 340,
         "name": "黃玉燕",
         "party": "NONE",
         "districtArea": "ZMI",
@@ -17445,8 +17384,8 @@ const initialState = {
             }
         ]
     },
-    "342": {
-        "id": 342,
+    "341": {
+        "id": 341,
         "name": "康世儒",
         "party": "MKT",
         "districtArea": "ZMI",
@@ -17506,8 +17445,8 @@ const initialState = {
             }
         ]
     },
-    "343": {
-        "id": 343,
+    "342": {
+        "id": 342,
         "name": "林一方",
         "party": "FTP",
         "districtArea": "ZMI",
@@ -17567,8 +17506,8 @@ const initialState = {
             }
         ]
     },
-    "344": {
-        "id": 344,
+    "343": {
+        "id": 343,
         "name": "周書涵",
         "party": "NONE",
         "districtArea": "ZMI",
@@ -17628,8 +17567,8 @@ const initialState = {
             }
         ]
     },
-    "345": {
-        "id": 345,
+    "344": {
+        "id": 344,
         "name": "劉文忠",
         "party": "FTP",
         "districtArea": "ZMI",
@@ -17689,8 +17628,8 @@ const initialState = {
             }
         ]
     },
-    "346": {
-        "id": 346,
+    "345": {
+        "id": 345,
         "name": "戴文祥",
         "party": "NONE",
         "districtArea": "ZMI",
@@ -17750,8 +17689,8 @@ const initialState = {
             }
         ]
     },
-    "347": {
-        "id": 347,
+    "346": {
+        "id": 346,
         "name": "陳文彬",
         "party": "DPP",
         "districtArea": "CHW",
@@ -17811,8 +17750,8 @@ const initialState = {
             }
         ]
     },
-    "348": {
-        "id": 348,
+    "347": {
+        "id": 347,
         "name": "劉泳君",
         "party": "NONE",
         "districtArea": "CHW",
@@ -17872,8 +17811,8 @@ const initialState = {
             }
         ]
     },
-    "349": {
-        "id": 349,
+    "348": {
+        "id": 348,
         "name": "黃秀芳",
         "party": "DPP",
         "districtArea": "CHW",
@@ -17933,8 +17872,8 @@ const initialState = {
             }
         ]
     },
-    "350": {
-        "id": 350,
+    "349": {
+        "id": 349,
         "name": "許永金",
         "party": "NONE",
         "districtArea": "CHW",
@@ -17994,8 +17933,8 @@ const initialState = {
             }
         ]
     },
-    "351": {
-        "id": 351,
+    "350": {
+        "id": 350,
         "name": "張耀元",
         "party": "MKT",
         "districtArea": "CHW",
@@ -18055,8 +17994,8 @@ const initialState = {
             }
         ]
     },
-    "352": {
-        "id": 352,
+    "351": {
+        "id": 351,
         "name": "温國銘",
         "party": "LP",
         "districtArea": "CHW",
@@ -18116,8 +18055,8 @@ const initialState = {
             }
         ]
     },
-    "353": {
-        "id": 353,
+    "352": {
+        "id": 352,
         "name": "黃玉芬",
         "party": "NONE",
         "districtArea": "CHW",
@@ -18177,8 +18116,8 @@ const initialState = {
             }
         ]
     },
-    "354": {
-        "id": 354,
+    "353": {
+        "id": 353,
         "name": "陳朝容",
         "party": "PFP",
         "districtArea": "CHW",
@@ -18238,8 +18177,8 @@ const initialState = {
             }
         ]
     },
-    "355": {
-        "id": 355,
+    "354": {
+        "id": 354,
         "name": "洪宗熠",
         "party": "DPP",
         "districtArea": "CHW",
@@ -18299,8 +18238,8 @@ const initialState = {
             }
         ]
     },
-    "356": {
-        "id": 356,
+    "355": {
+        "id": 355,
         "name": "洪遊江",
         "party": "FTP",
         "districtArea": "CHW",
@@ -18360,69 +18299,69 @@ const initialState = {
             }
         ]
     },
-    "357": {
-        "id": 357,
+    "356": {
+        "id": 356,
         "name": "張益勝",
         "party": "NPP",
         "districtArea": "CHW",
         "districtNo": "3",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "年金改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "勞工權益",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "民主憲政",
                 "content": ""
             }
         ]
     },
-    "358": {
-        "id": 358,
+    "357": {
+        "id": 357,
         "name": "張錦昆",
         "party": "KMT",
         "districtArea": "CHW",
@@ -18482,8 +18421,8 @@ const initialState = {
             }
         ]
     },
-    "359": {
-        "id": 359,
+    "358": {
+        "id": 358,
         "name": "張國鑫",
         "party": "DPP",
         "districtArea": "NAN",
@@ -18543,8 +18482,8 @@ const initialState = {
             }
         ]
     },
-    "360": {
-        "id": 360,
+    "359": {
+        "id": 359,
         "name": "張鎔麒",
         "party": "KMT",
         "districtArea": "YLN",
@@ -18604,8 +18543,8 @@ const initialState = {
             }
         ]
     },
-    "361": {
-        "id": 361,
+    "360": {
+        "id": 360,
         "name": "蘇治芬",
         "party": "DPP",
         "districtArea": "YLN",
@@ -18665,8 +18604,8 @@ const initialState = {
             }
         ]
     },
-    "362": {
-        "id": 362,
+    "361": {
+        "id": 361,
         "name": "林富源",
         "party": "TP",
         "districtArea": "YLN",
@@ -18726,8 +18665,8 @@ const initialState = {
             }
         ]
     },
-    "363": {
-        "id": 363,
+    "362": {
+        "id": 362,
         "name": "吳威志",
         "party": "KMT",
         "districtArea": "YLN",
@@ -18787,69 +18726,69 @@ const initialState = {
             }
         ]
     },
-    "364": {
-        "id": 364,
+    "363": {
+        "id": 363,
         "name": "王煒婷",
         "party": "NPP",
         "districtArea": "YLN",
         "districtNo": "2",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "國會改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "年金改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "空汙管理法制",
                 "content": ""
             }
         ]
     },
-    "365": {
-        "id": 365,
+    "364": {
+        "id": 364,
         "name": "張佳偉",
         "party": "TP",
         "districtArea": "YLN",
@@ -18909,8 +18848,8 @@ const initialState = {
             }
         ]
     },
-    "366": {
-        "id": 366,
+    "365": {
+        "id": 365,
         "name": "蔡易餘",
         "party": "DPP",
         "districtArea": "CYI",
@@ -18970,8 +18909,8 @@ const initialState = {
             }
         ]
     },
-    "367": {
-        "id": 367,
+    "366": {
+        "id": 366,
         "name": "林江釧",
         "party": "KMT",
         "districtArea": "CYI",
@@ -19031,8 +18970,8 @@ const initialState = {
             }
         ]
     },
-    "368": {
-        "id": 368,
+    "367": {
+        "id": 367,
         "name": "邱崑龍",
         "party": "NONE",
         "districtArea": "CYI",
@@ -19092,8 +19031,8 @@ const initialState = {
             }
         ]
     },
-    "369": {
-        "id": 369,
+    "368": {
+        "id": 368,
         "name": "林于玲",
         "party": "KMT",
         "districtArea": "CYI",
@@ -19153,14 +19092,14 @@ const initialState = {
             }
         ]
     },
-    "370": {
-        "id": 370,
+    "369": {
+        "id": 369,
         "name": "賴競民",
         "party": "DASG",
         "districtArea": "CYI",
         "districtNo": "2",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -19170,52 +19109,52 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
-    "371": {
-        "id": 371,
+    "370": {
+        "id": 370,
         "name": "廖婉汝",
         "party": "KMT",
         "districtArea": "PIF",
@@ -19275,8 +19214,8 @@ const initialState = {
             }
         ]
     },
-    "372": {
-        "id": 372,
+    "371": {
+        "id": 371,
         "name": "鍾佳濱",
         "party": "DPP",
         "districtArea": "PIF",
@@ -19336,8 +19275,8 @@ const initialState = {
             }
         ]
     },
-    "373": {
-        "id": 373,
+    "372": {
+        "id": 372,
         "name": "張兆陽",
         "party": "CHTY",
         "districtArea": "PIF",
@@ -19397,8 +19336,8 @@ const initialState = {
             }
         ]
     },
-    "374": {
-        "id": 374,
+    "373": {
+        "id": 373,
         "name": "許謹如",
         "party": "KMT",
         "districtArea": "PIF",
@@ -19458,8 +19397,8 @@ const initialState = {
             }
         ]
     },
-    "375": {
-        "id": 375,
+    "374": {
+        "id": 374,
         "name": "丁勇智",
         "party": "FTP",
         "districtArea": "PIF",
@@ -19519,8 +19458,8 @@ const initialState = {
             }
         ]
     },
-    "376": {
-        "id": 376,
+    "375": {
+        "id": 375,
         "name": "黃昭展",
         "party": "NONE",
         "districtArea": "PIF",
@@ -19580,8 +19519,8 @@ const initialState = {
             }
         ]
     },
-    "377": {
-        "id": 377,
+    "376": {
+        "id": 376,
         "name": "邱錫奎",
         "party": "NONE",
         "districtArea": "ILA",
@@ -19641,8 +19580,8 @@ const initialState = {
             }
         ]
     },
-    "378": {
-        "id": 378,
+    "377": {
+        "id": 377,
         "name": "李志鏞",
         "party": "KMT",
         "districtArea": "ILA",
@@ -19702,8 +19641,8 @@ const initialState = {
             }
         ]
     },
-    "379": {
-        "id": 379,
+    "378": {
+        "id": 378,
         "name": "吳紹文",
         "party": "GSD",
         "districtArea": "ILA",
@@ -19763,8 +19702,8 @@ const initialState = {
             }
         ]
     },
-    "380": {
-        "id": 380,
+    "379": {
+        "id": 379,
         "name": "孫博萮",
         "party": "NONE",
         "districtArea": "ILA",
@@ -19824,8 +19763,8 @@ const initialState = {
             }
         ]
     },
-    "381": {
-        "id": 381,
+    "380": {
+        "id": 380,
         "name": "郭儒釗",
         "party": "MCFAP",
         "districtArea": "ILA",
@@ -19885,8 +19824,8 @@ const initialState = {
             }
         ]
     },
-    "382": {
-        "id": 382,
+    "381": {
+        "id": 381,
         "name": "林獻山",
         "party": "PEUP",
         "districtArea": "ILA",
@@ -19946,14 +19885,14 @@ const initialState = {
             }
         ]
     },
-    "383": {
-        "id": 383,
+    "382": {
+        "id": 382,
         "name": "吳子維",
         "party": "DASG",
         "districtArea": "ILA",
         "districtNo": "N/A",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -19963,52 +19902,52 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法改革",
+                "content": "以自由、民主、人權之普世價值，推動人類安全永續發展，以行政、立法、司法、檢察四權相互制衡，並透過民選機制完善政府體制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地方制度改革",
+                "content": "民意代表任期二年，議長一會期，不得再任。民選首長一任五年，六年內不得再參選。主計長、教育長民選。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "毒品管理法案",
+                "content": "推行以疏導與防堵兩種方式控管：前者意指輔導吸毒之人勇於戒毒，以醫療戒毒代替懲罰；後者加強毒品的控管，比如說K他命提升為二級毒品加以管制，挽救吸食毒品現狀惡化"
             }
         ]
     },
-    "384": {
-        "id": 384,
+    "383": {
+        "id": 383,
         "name": "黄師鵬",
         "party": "NONE",
         "districtArea": "HUN",
@@ -20068,8 +20007,8 @@ const initialState = {
             }
         ]
     },
-    "385": {
-        "id": 385,
+    "384": {
+        "id": 384,
         "name": "楊悟空",
         "party": "PEUP",
         "districtArea": "HUN",
@@ -20129,8 +20068,8 @@ const initialState = {
             }
         ]
     },
-    "386": {
-        "id": 386,
+    "385": {
+        "id": 385,
         "name": "陳建閣",
         "party": "KMT",
         "districtArea": "TTT",
@@ -20190,8 +20129,8 @@ const initialState = {
             }
         ]
     },
-    "387": {
-        "id": 387,
+    "386": {
+        "id": 386,
         "name": "陳雙全",
         "party": "KMT",
         "districtArea": "MZG",
@@ -20251,8 +20190,8 @@ const initialState = {
             }
         ]
     },
-    "388": {
-        "id": 388,
+    "387": {
+        "id": 387,
         "name": "冼義哲",
         "party": "TP",
         "districtArea": "MZG",
@@ -20312,8 +20251,8 @@ const initialState = {
             }
         ]
     },
-    "389": {
-        "id": 389,
+    "388": {
+        "id": 388,
         "name": "黃漢東",
         "party": "TLP",
         "districtArea": "MZG",
@@ -20373,8 +20312,8 @@ const initialState = {
             }
         ]
     },
-    "390": {
-        "id": 390,
+    "389": {
+        "id": 389,
         "name": "楊鎮浯",
         "party": "KMT",
         "districtArea": "KNH",
@@ -20434,8 +20373,8 @@ const initialState = {
             }
         ]
     },
-    "391": {
-        "id": 391,
+    "390": {
+        "id": 390,
         "name": "陳滄江",
         "party": "DPP",
         "districtArea": "KNH",
@@ -20495,9 +20434,70 @@ const initialState = {
             }
         ]
     },
+    "391": {
+        "id": 391,
+        "name": "張中法",
+        "party": "NONE",
+        "districtArea": "KNH",
+        "districtNo": "N/A",
+        "contactAvaliable": false,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
     "392": {
         "id": 392,
-        "name": "張中法",
+        "name": "洪志恒",
         "party": "NONE",
         "districtArea": "KNH",
         "districtNo": "N/A",
@@ -20558,67 +20558,6 @@ const initialState = {
     },
     "393": {
         "id": 393,
-        "name": "洪志恒",
-        "party": "NONE",
-        "districtArea": "KNH",
-        "districtNo": "N/A",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "394": {
-        "id": 394,
         "name": "陳德輝",
         "party": "TLP",
         "districtArea": "KNH",
@@ -20678,8 +20617,8 @@ const initialState = {
             }
         ]
     },
-    "395": {
-        "id": 395,
+    "394": {
+        "id": 394,
         "name": "高丹樺",
         "party": "MCFAP",
         "districtArea": "KNH",
@@ -20739,8 +20678,8 @@ const initialState = {
             }
         ]
     },
-    "396": {
-        "id": 396,
+    "395": {
+        "id": 395,
         "name": "陳仲立",
         "party": "NONE",
         "districtArea": "KNH",
@@ -20800,8 +20739,8 @@ const initialState = {
             }
         ]
     },
-    "397": {
-        "id": 397,
+    "396": {
+        "id": 396,
         "name": "吳成典",
         "party": "NP",
         "districtArea": "KNH",
@@ -20861,8 +20800,8 @@ const initialState = {
             }
         ]
     },
-    "398": {
-        "id": 398,
+    "397": {
+        "id": 397,
         "name": "蘇柏豪",
         "party": "TP",
         "districtArea": "MFK",
@@ -20922,8 +20861,8 @@ const initialState = {
             }
         ]
     },
-    "399": {
-        "id": 399,
+    "398": {
+        "id": 398,
         "name": "張春寶",
         "party": "CHTY",
         "districtArea": "MFK",
@@ -20983,8 +20922,8 @@ const initialState = {
             }
         ]
     },
-    "400": {
-        "id": 400,
+    "399": {
+        "id": 399,
         "name": "林金官",
         "party": "NONE",
         "districtArea": "MFK",
@@ -21044,8 +20983,8 @@ const initialState = {
             }
         ]
     },
-    "401": {
-        "id": 401,
+    "400": {
+        "id": 400,
         "name": "蔡適應",
         "party": "DPP",
         "districtArea": "KEL",
@@ -21105,8 +21044,8 @@ const initialState = {
             }
         ]
     },
-    "402": {
-        "id": 402,
+    "401": {
+        "id": 401,
         "name": "郝龍斌",
         "party": "KMT",
         "districtArea": "KEL",
@@ -21166,8 +21105,8 @@ const initialState = {
             }
         ]
     },
-    "403": {
-        "id": 403,
+    "402": {
+        "id": 402,
         "name": "楊石城",
         "party": "MKT",
         "districtArea": "KEL",
@@ -21227,8 +21166,8 @@ const initialState = {
             }
         ]
     },
-    "404": {
-        "id": 404,
+    "403": {
+        "id": 403,
         "name": "劉文雄",
         "party": "PFP",
         "districtArea": "KEL",
@@ -21288,8 +21227,8 @@ const initialState = {
             }
         ]
     },
-    "405": {
-        "id": 405,
+    "404": {
+        "id": 404,
         "name": "歐崇敬",
         "party": "PFP",
         "districtArea": "HCC",
@@ -21349,8 +21288,8 @@ const initialState = {
             }
         ]
     },
-    "406": {
-        "id": 406,
+    "405": {
+        "id": 405,
         "name": "鄭正鈐",
         "party": "KMT",
         "districtArea": "HCC",
@@ -21410,8 +21349,8 @@ const initialState = {
             }
         ]
     },
-    "407": {
-        "id": 407,
+    "406": {
+        "id": 406,
         "name": "魏揚",
         "party": "MCFAP",
         "districtArea": "HCC",
@@ -21471,8 +21410,8 @@ const initialState = {
             }
         ]
     },
-    "408": {
-        "id": 408,
+    "407": {
+        "id": 407,
         "name": "邱顯智",
         "party": "NPP",
         "districtArea": "HCC",
@@ -21506,13 +21445,13 @@ const initialState = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -21532,8 +21471,8 @@ const initialState = {
             }
         ]
     },
-    "409": {
-        "id": 409,
+    "408": {
+        "id": 408,
         "name": "林家宇",
         "party": "FTP",
         "districtArea": "HCC",
@@ -21593,9 +21532,70 @@ const initialState = {
             }
         ]
     },
+    "409": {
+        "id": 409,
+        "name": "曾耀澂",
+        "party": "NONE",
+        "districtArea": "HCC",
+        "districtNo": "N/A",
+        "contactAvaliable": false,
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
     "410": {
         "id": 410,
-        "name": "曾耀澂",
+        "name": "黃源甫",
         "party": "NONE",
         "districtArea": "HCC",
         "districtNo": "N/A",
@@ -21656,7 +21656,7 @@ const initialState = {
     },
     "411": {
         "id": 411,
-        "name": "黃源甫",
+        "name": "王榮德",
         "party": "NONE",
         "districtArea": "HCC",
         "districtNo": "N/A",
@@ -21717,7 +21717,7 @@ const initialState = {
     },
     "412": {
         "id": 412,
-        "name": "王榮德",
+        "name": "吳淑敏",
         "party": "NONE",
         "districtArea": "HCC",
         "districtNo": "N/A",
@@ -21778,9 +21778,9 @@ const initialState = {
     },
     "413": {
         "id": 413,
-        "name": "吳淑敏",
+        "name": "翁壽良",
         "party": "NONE",
-        "districtArea": "HCC",
+        "districtArea": "CYC",
         "districtNo": "N/A",
         "contactAvaliable": false,
         "hasReply": false,
@@ -21839,7 +21839,7 @@ const initialState = {
     },
     "414": {
         "id": 414,
-        "name": "翁壽良",
+        "name": "黃宏成台灣阿成世界偉人財神總統",
         "party": "NONE",
         "districtArea": "CYC",
         "districtNo": "N/A",
@@ -21900,67 +21900,6 @@ const initialState = {
     },
     "415": {
         "id": 415,
-        "name": "黃宏成台灣阿成世界偉人財神總統",
-        "party": "NONE",
-        "districtArea": "CYC",
-        "districtNo": "N/A",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "416": {
-        "id": 416,
         "name": "陳瑩",
         "party": "DPP",
         "districtArea": "LAB",
@@ -22020,8 +21959,8 @@ const initialState = {
             }
         ]
     },
-    "417": {
-        "id": 417,
+    "416": {
+        "id": 416,
         "name": "吳國譽Rahic Amind",
         "party": "MKT",
         "districtArea": "LAB",
@@ -22081,8 +22020,8 @@ const initialState = {
             }
         ]
     },
-    "418": {
-        "id": 418,
+    "417": {
+        "id": 417,
         "name": "馬躍·比吼Mayaw·Biho",
         "party": "NONE",
         "districtArea": "LAB",
@@ -22142,8 +22081,8 @@ const initialState = {
             }
         ]
     },
-    "419": {
-        "id": 419,
+    "418": {
+        "id": 418,
         "name": "達佶祐·卡造Takiyo·Kacaw",
         "party": "MCFAP",
         "districtArea": "LAB",
@@ -22203,8 +22142,8 @@ const initialState = {
             }
         ]
     },
-    "420": {
-        "id": 420,
+    "419": {
+        "id": 419,
         "name": "林昊宜",
         "party": "PFP",
         "districtArea": "LAB",
@@ -22264,8 +22203,8 @@ const initialState = {
             }
         ]
     },
-    "421": {
-        "id": 421,
+    "420": {
+        "id": 420,
         "name": "達摩·阿雄",
         "party": "NONE",
         "districtArea": "LAB",
@@ -22325,8 +22264,8 @@ const initialState = {
             }
         ]
     },
-    "422": {
-        "id": 422,
+    "421": {
+        "id": 421,
         "name": "林金瑛",
         "party": "NHSA",
         "districtArea": "LAB",
@@ -22386,8 +22325,8 @@ const initialState = {
             }
         ]
     },
-    "423": {
-        "id": 423,
+    "422": {
+        "id": 422,
         "name": "嘎礌·武拜·哈雅萬Galahe·Wubai·Hayawan",
         "party": "NONE",
         "districtArea": "LAB",
@@ -22447,8 +22386,8 @@ const initialState = {
             }
         ]
     },
-    "424": {
-        "id": 424,
+    "423": {
+        "id": 423,
         "name": "林光義",
         "party": "TFNP",
         "districtArea": "LAB",
@@ -22508,8 +22447,8 @@ const initialState = {
             }
         ]
     },
-    "425": {
-        "id": 425,
+    "424": {
+        "id": 424,
         "name": "林琮翰",
         "party": "KMT",
         "districtArea": "LAB",
@@ -22569,8 +22508,8 @@ const initialState = {
             }
         ]
     },
-    "426": {
-        "id": 426,
+    "425": {
+        "id": 425,
         "name": "柯荏耀",
         "party": "NONE",
         "districtArea": "LAB",
@@ -22630,8 +22569,8 @@ const initialState = {
             }
         ]
     },
-    "427": {
-        "id": 427,
+    "426": {
+        "id": 426,
         "name": "尤命·蘇樣",
         "party": "CPP",
         "districtArea": "MAB",
@@ -22691,8 +22630,8 @@ const initialState = {
             }
         ]
     },
-    "428": {
-        "id": 428,
+    "427": {
+        "id": 427,
         "name": "林世偉",
         "party": "NONE",
         "districtArea": "MAB",
@@ -22752,8 +22691,8 @@ const initialState = {
             }
         ]
     },
-    "429": {
-        "id": 429,
+    "428": {
+        "id": 428,
         "name": "伊藍·明基努安",
         "party": "FHL",
         "districtArea": "MAB",
@@ -22813,8 +22752,8 @@ const initialState = {
             }
         ]
     },
-    "430": {
-        "id": 430,
+    "429": {
+        "id": 429,
         "name": "瓦歷斯·貝林Walis·Perin",
         "party": "DPP",
         "districtArea": "MAB",
@@ -22874,8 +22813,8 @@ const initialState = {
             }
         ]
     },
-    "431": {
-        "id": 431,
+    "430": {
+        "id": 430,
         "name": "林信義",
         "party": "FHL",
         "districtArea": "MAB",
@@ -22935,8 +22874,8 @@ const initialState = {
             }
         ]
     },
-    "432": {
-        "id": 432,
+    "431": {
+        "id": 431,
         "name": "全承威",
         "party": "TIP",
         "districtArea": "MAB",
@@ -22996,8 +22935,8 @@ const initialState = {
             }
         ]
     },
-    "433": {
-        "id": 433,
+    "432": {
+        "id": 432,
         "name": "曾華德",
         "party": "NONE",
         "districtArea": "MAB",
