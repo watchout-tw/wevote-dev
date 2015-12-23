@@ -29,8 +29,9 @@ export default class Parties extends Component {
           <div className={styles.wrap}>
               <div div className={styles.initialWrap}>
                   <div className={styles.story}>
-                    <p>黨團衝突戰，將由各地勇者所組成不同的黨團，以團體戰的方式爭奪立法聖殿中的勇者席位。</p>
-                    <p>在這場團體戰鬥中，誰能爭取最多席位，同樣考驗島嶼主人的智慧。</p>
+                    <p>黨團衝突戰，由各地勇者所組成不同的黨團，用團體戰角逐立法聖殿中的勇者席位。</p>
+                    <p>哪一個黨團能爭取最多席位？</p>
+                    <p>由島嶼主人的你來決定！</p>
                   </div>
                   <div className={styles.actions}>
                       <Link className={styles.goMatch}
