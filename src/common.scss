@@ -113,7 +113,7 @@ $noneColor: gray;
   width: 74px;
   height: 74px;
 }
-$parties: 'chty','dasg','dpp','fhl','ftp','gsd','kmt','mcfap','mkt','mpr','nhsa','none','np','npp','nsu','pfp','ppu','tip','tp','tsu';
+$parties: 'chty','cpp','dasg','dpp','fhl','ftp','gsd','jp','kmt','lp','mcfap','mkt','mpr','nhsa','none','np','npp','nsu','pdf','peup','pfp','ppu','swp','tfnp','tip','tlp','tp','tsu','twp';
 @each $party in $parties {
   .partyFlag.#{to-upper-case($party)} { background-image: url(images/flags_#{$party}.svg); };
 }
