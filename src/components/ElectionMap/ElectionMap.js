@@ -199,6 +199,7 @@ export default class ElectionMap extends Component {
     let detailInfo;
 
     if(active_city && sub_active){
+        let subInfo = (interactiveCities.indexOf(active_city)!==-1)? `第${numerals[sub_active]}`: "";
         detailInfo = (
           <div className={`${styles.info} ${this._showDetailStyle()}`}>
             <div className={styles.close}
@@ -206,7 +207,7 @@ export default class ElectionMap extends Component {
             <Link to={`/constituencies/${active_city}/${sub_active}/`} 
                   className={styles.go}>
               
-              <div className={styles.name}>{db[active_city].name}第{numerals[sub_active]}選舉區</div>
+              <div className={styles.name}>{db[active_city].name}{subInfo}選舉區</div>
               <div className={styles.prompt}>前往選區</div>
               <div className={styles.arrow}></div>
               

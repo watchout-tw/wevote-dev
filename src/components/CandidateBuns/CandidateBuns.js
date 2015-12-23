@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classnames from 'classnames';
 
-import PeopleAvatar from '../PeopleAvatar/PeopleAvatar';
+import PeoplePhoto from '../PeoplePhoto/PeoplePhoto';
 
 import eng2url from '../../utils/eng2url';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
@@ -55,7 +55,7 @@ export default class CandidateBuns extends Component {
                   className={styles.bunItem}
                   to={`/people/${candidate.id}/${category}/`}>
                    {currentInfo}
-                  <div className={styles.bunImg}><PeopleAvatar id={candidate.id} /></div>
+                  <div className={styles.bunImg}><PeoplePhoto id={candidate.id} /></div>
                   <div className={`${styles.bunParty} ${styles.partyFlag} ${styles.small} ${styles[candidate.party]}`}></div>
                   <div className={styles.bunName}>{candidate.name}</div>
             </Link>

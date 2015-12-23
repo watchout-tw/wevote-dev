@@ -15,6 +15,7 @@ import eng2url from '../../utils/eng2url';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleDistrict from '../../utils/getPeopleDistrict';
 import identity from '../../utils/identity';
+import district2cht from '../../utils/district2cht';
 /*
 :category => {"records", "promises", "story"}
 歷史紀錄
@@ -100,44 +101,63 @@ export default class People extends Component {
       
     }
 
+    let districtText, proportionalText;
+    let districtSection, proportionalSection;
+    
+    /* ----- 區域 ------ */
+    let disNoText = (districtData.areaNo === "N/A") ? "" : `第${districtData.areaNo}選區`;
 
-    /////// NEEDS REFINE
-    //頁面最下方看其他候選人
-    let morePeopleSection;
-    // 順序為優先順序
-    if(currentIdentity.is9thCandidate){//是第九屆區域參選人
-      morePeopleSection = (
+    //第九屆區域參選人
+    if(currentIdentity.is9thCandidate){
+        districtText = <div>{currentPeople.name}是{district2cht(districtData.area)}{disNoText}的候選人，看他的對手有誰？</div>
+    }
+    //區域轉戰不分區
+    if(currentIdentity.is8thDistrict && currentIdentity.is9thProportional){
+        districtText = <div>{currentPeople.name}是{district2cht(districtData.area)}{disNoText}的現任立委，看看這一區現在有誰參戰</div>;
+    }
+    //區域不再當立委
+    if(currentIdentity.is8thDistrict && !currentIdentity.is9thProportional && !currentIdentity.is9thCandidate){
+        districtText = <div>{currentPeople.name}沒有繼續參選立委，看看2016這區有誰參戰？</div>;
+    }
+
+    if(districtText){
+        districtSection = (
           <div className={styles.bottomWrap}>
-              <div>看{currentPeople.name}的競爭對手</div>
-              <CandidateBuns area={districtData.area} areaNo={districtData.areaNo} category={category}
+              {districtText}
+              <CandidateBuns area={districtData.area} 
+                             areaNo={districtData.areaNo} 
+                             category={category}
                              exclude={id}/>
           </div>
-      )
+        )
     }
-    if(!morePeopleSection && currentIdentity.is8thProportional){//在第八屆是不分區候選人
-      let parties = legislators[id].parties;
-      let partyCht = parties[parties.length-1].partyCht;
 
-      morePeopleSection =  (
-        <div className={styles.bottomWrap}>
-          <div>
-              <div>{currentPeople.name}是{partyCht}本屆不分區立委。</div>
-              <Link className={styles.partyLink}
-                    to={`/parties/${cht2eng(partyCht)}/list/`}>看{partyCht}這一屆的不分區名單。</Link>
+    /* ----- 不分區 ------ */
+    let parties, partyCht;
+    if(legislators[id]){
+        parties = legislators[id].parties;
+        partyCht = parties[parties.length-1].partyCht;
+        //第八屆不分區
+        if(currentIdentity.is8thProportional){
+            proportionalText = <div>{currentPeople.name}是{partyCht}本屆不分區立委。</div>;
+        }
+        //第九屆不分區
+        if(currentIdentity.is9thProportional){
+            proportionalText = <div>{currentPeople.name}是{partyCht}2016不分區立委。</div>;
+        }
+    }
+    if(proportionalText){
+        proportionalSection =  (
+          <div className={styles.bottomWrap}>
+            <div>
+                {proportionalText}
+                <Link className={styles.partyLink}
+                      to={`/parties/${cht2eng(partyCht)}/list/`}>看2016{partyCht}不分區名單。</Link>
+            </div>
           </div>
-        </div>
-      )
+        )
     }
-    if(!morePeopleSection && !currentIdentity.is9thCandidate && !currentIdentity.is8thProportional){
-      morePeopleSection =  (
-        <div className={styles.bottomWrap}>
-          <div>{currentPeople.name}沒有繼續參選下一屆的區域立委，看看這一區有誰選？</div>
-          <CandidateBuns area={districtData.area} areaNo={districtData.areaNo} category={category}/>
-        </div>
-  
-      )
-
-    }////// 如果是改列為不分區呢？
+    
    
     const metaData = {
       title: title,
@@ -168,7 +188,10 @@ export default class People extends Component {
           <div className={styles.innerWrap}>
             {content}
           </div>
-            {morePeopleSection}
+
+          {proportionalSection}
+          {districtSection}
+          
       </div>
     );
   }
