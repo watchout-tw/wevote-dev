@@ -1,0 +1,69 @@
+@import '../../common.scss';
+.wrap {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+.district {/* 臺北市 */
+	margin-bottom: 80px;
+}
+.subDistrict {/* 臺北市 xx 選區 */
+	margin-bottom: 40px;
+}
+.candidate, .candidate:visited {
+	display: inline-block;
+	background: white;
+	color: $black;
+	margin: 4px;
+	padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.08);
+    width: 120px;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+}
+.candidate:hover {
+	box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
+}
+.shadow {
+	background: rgba(0,0,0,0.5);
+	width: 120px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+}
+.shadow:after {
+	content: '尚未回覆';
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    color: rgb(39, 39, 39);
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+}
+.shadow.hasReply {
+	display: none;
+}
+.shadow.hasReply:after {
+	content: '';
+}
+.photo {
+	width: 110px;
+	height: 110px;
+	margin: 0 auto;
+}
+.partyItem {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 8px;
+}
+.nameItem {
+	display: inline-block;
+	margin: 10px 4px;
+	max-width: 80px;
+}

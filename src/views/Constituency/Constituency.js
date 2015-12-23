@@ -9,7 +9,7 @@ import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
 
 import district2cht from '../../utils/district2cht';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
-import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訓
+import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 import getDistrictLegislators from '../../utils/getDistrictLegislators'; //現任立委資訊
 import getPeopleTableData from '../../utils/getPeopleTableData';
 @connect(
