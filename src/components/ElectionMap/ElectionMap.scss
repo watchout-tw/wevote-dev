@@ -39,16 +39,24 @@ g {
 	  	height: 100vh;
 	  	padding-top: 10vh;
 	}
+
 }
 
 .city {
   fill: white;
   marign: 0 auto;
   background: #9ce5ff;
-  margin: 30px 0;
   padding: 30px 0;
   font-size: 22px;
   font-weight: 600;
+}
+.city.active:after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    margin: 30px auto;
+    background: white;
 }
 @media all and (min-width: $webVersionBreak){
 	.city {
@@ -61,10 +69,23 @@ g {
 	  	padding: 0;
 	  	font-size: 16px;
   		font-weight: 100;
-	}	
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+	}
+  .city.active#citymap-NTC{
+      transform: translate(-50%, -45%);
+  }
+  .city.active:after {
+    width: 0;
+  }
+
 }
 .map {
 	margin-top: 20px;
+  overflow: scroll;
 }
 @media all and (min-width: $webVersionBreak){
 	.map {
@@ -87,7 +108,7 @@ $selectColor: #00ffb0;
 }
 /* 處理手機部分某些縣市需要 transform */
 .citymapNTC {
-	transform: translate3d(-508px,0,0) translateX(50vw);
+	transform: translate3d(-360px,0,0) translateX(50vw);
 }
 .citymapKHH {
 	transform: translate3d(-140px,0,0) translateX(50vw);
@@ -172,12 +193,18 @@ $selectColor: #00ffb0;
   .info > .go {
     display: block;
     margin: 0;
-    padding: 15px;
+    padding: 15px 30px 15px 15px;
     font-size: 18px;
     line-height: 1;
     background: #00ffb0;
     color: black;
     text-decoration: none; }
+
+@media all and (min-width: $webVersionBreak){
+  .info > .go {
+    padding: 15px;
+  }
+}
     .info > .go > * {
       display: inline-block;
       vertical-align: middle;

@@ -41,15 +41,9 @@ export default class PeoplePhoto extends Component {
     let imgURL;
 
     try {
-      imgURL = require("./images/avatar/"+name+".png");
+      imgURL = require("./images/avatar/"+name+".jpg");
     }catch(e){
-      
-      try {
-          imgURL = require("./images/avatar/"+name+".jpg");
-      }catch(e){
-          imgURL = require("./images/default.png");
-      }
-      
+      imgURL = require("./images/default.jpg");
     }
 
     //如果不是現任立委，要加上「參選人」
