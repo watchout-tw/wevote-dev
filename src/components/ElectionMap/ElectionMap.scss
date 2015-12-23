@@ -39,6 +39,7 @@ g {
 	  	height: 100vh;
 	  	padding-top: 10vh;
 	}
+
 }
 
 .city {
@@ -49,6 +50,14 @@ g {
   padding: 30px 0;
   font-size: 22px;
   font-weight: 600;
+}
+.city.active:after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    margin: 30px auto;
+    background: white;
 }
 @media all and (min-width: $webVersionBreak){
 	.city {
@@ -61,7 +70,19 @@ g {
 	  	padding: 0;
 	  	font-size: 16px;
   		font-weight: 100;
-	}	
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+	}
+  .city.active#citymap-NTC{
+      transform: translate(-50%, -45%);
+  }
+  .city.active:after {
+    width: 0;
+  }
+
 }
 .map {
 	margin-top: 20px;
@@ -69,6 +90,7 @@ g {
 @media all and (min-width: $webVersionBreak){
 	.map {
 		margin: 0;
+    overflow: scroll;
 	}
 }
 
