@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export default function getDistrictLegislators(legislators, area, areaNo){
     const NA = 'N/A';
     let result = [];
@@ -16,7 +18,15 @@ export default function getDistrictLegislators(legislators, area, areaNo){
                 result.push(people);
         }
     })
-    //console.log(result)
+    //sort by 開始時間先後
+    result.sort((a, b)=>{
+        return format_date_to_unix_milliseconds(a.parties[0].startDate) - format_date_to_unix_milliseconds(b.parties[0].startDate);
+    })
     return result;
    
+}
+function format_date_to_unix_milliseconds(date_string){
+    let date = moment(date_string, "YYYY/MM/DD");
+    let timestamp = date.unix();
+    return timestamp;
 }
