@@ -11,6 +11,16 @@
 .subDistrict {/* 臺北市 xx 選區 */
 	margin-bottom: 40px;
 }
+.subDistrictText, .subDistrictText:visited {
+	color: rgb(100,100,100);
+	font-size: 18px;
+	margin: 5px 0;
+	text-decoration: none;
+}
+.subDistrictText:hover {
+	color: $black;
+	text-decoration: underline;
+}
 .candidate, .candidate:visited {
 	display: inline-block;
 	background: white;

@@ -88,7 +88,8 @@ export default class CandidateList extends Component {
             
             return (
               <div className={styles.subDistrict}>
-                  <div>{cityCht}第{count}選區</div>
+                  <Link to={`/constituencies/${cityEng}/${count}/`}
+                        className={styles.subDistrictText}>{cityCht}第{count}選區</Link>
                   <div>{currentDistrictCandidates}</div>
               </div>
             )
@@ -96,7 +97,7 @@ export default class CandidateList extends Component {
 
         return (
           <div className={styles.district}>
-              <h3>{cityCht}</h3>
+              <h2>{cityCht}</h2>
               {subDistrictItems}
           </div>
         )
