@@ -7,7 +7,7 @@ $webVersionBreak: 800px;
 }
 
 .backgroundRect {
-  fill: rgba(175, 219, 220,0.7);
+  fill: rgba(white,0.5);//rgba(175, 219, 220,0.7);
 }
 g {
   cursor: pointer;
@@ -30,8 +30,11 @@ g {
 	}
 /* 詳細選區 */
 @media all and (min-width: $webVersionBreak){
+  .cityMap {
+    z-index: 99;
+  }
 	.cityMap.active {
-	  	background: rgba(0,0,0,0.8);
+	  	background: rgba(0,0,0,0.75);
 	  	position: fixed;
 	  	left: 0;
 	  	right: 0;
@@ -44,7 +47,7 @@ g {
 
 .city {
   fill: white;
-  marign: 0 auto;
+  margin: 0 auto;
   background: #9ce5ff;
   padding: 30px 0;
   font-size: 22px;
@@ -61,6 +64,9 @@ g {
 @media all and (min-width: $webVersionBreak){
 	.city {
 	  	display: none;
+      > .title {
+        display: none;
+      }
 	}
 	.city.active {
 	  	display: block;
@@ -243,7 +249,7 @@ $selectColor: #00ffb0;
     vertical-align: top;
     margin-right: 1em; }
   .info .boroughs {
-    font-size: 11px; 
+    font-size: 11px;
 	margin-top: 5px; }
     .info .boroughs .borough {
       display: inline-block;
@@ -258,4 +264,3 @@ $selectColor: #00ffb0;
     background: none; }
     .info > .close:hover {
       background: #ff0055; }
-

@@ -22,7 +22,7 @@ import getPeopleTableData from '../../utils/getPeopleTableData';
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Constituency extends Component {
- 
+
   constructor(props){ super(props)
     const {records, issues, legislators, candidates} = props;
     const {area, areaNo} = props.params;
@@ -31,10 +31,10 @@ export default class Constituency extends Component {
     let candidateList = getDistrictCandidates(candidates, area, areaNo);
     let tableData = getPeopleTableData(legislatorPositions, candidateList);
     let legislatorList = getDistrictLegislators(legislators, area, areaNo);
-    
+
     let comparableCandidates = [];//有過去紀錄 or 有未來承諾的候選人
     let noDataCandidates = [];
-   
+
     candidateList.map((people, index)=>{
         var combined = {
           id: people.id,
@@ -50,9 +50,9 @@ export default class Constituency extends Component {
         }else{
             noDataCandidates.push(combined);
         }
-        
+
     })
-   
+
     this.state = {
         candidateList: candidateList,
         legislatorList: legislatorList,
@@ -117,10 +117,10 @@ export default class Constituency extends Component {
     //協尋中
     let wantedSection = (noDataCandidates.length > 0) ? <Wanted noDataCandidates={noDataCandidates} /> : "";
 
-    
+
     return (
       <div className={styles.wrap}>
-          
+
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               <div className={styles.districtInfo}>
@@ -150,7 +150,7 @@ class Wanted extends Component {
              separatorItem = "、";
           }
           return (
-            <span>
+            <span className={styles.noDataCandidate}>
                 <div className={styles.partyItem}>
                     <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
                 </div>
@@ -161,11 +161,11 @@ class Wanted extends Component {
             </span>
           );
       });
-    
+
       return (
           <div className={styles.partyRoll}>
               <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
-                  <img src={missingTitle} 
+                  <img src={missingTitle}
                        className={styles.missingTitle}/>
               </div>
               <div className={styles.partyRollMain}>
@@ -181,4 +181,3 @@ class Wanted extends Component {
       )
   }
 }
-
