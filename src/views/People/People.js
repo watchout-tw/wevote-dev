@@ -83,7 +83,7 @@ export default class People extends Component {
       case 'promises':
         const {candidates} = this.props;
         let promises = candidates[id];
-        content = <Promises id={id} promises={promises}/>
+        content = <Promises id={id} promises={promises}/>;
 
         title = `${currentPeople.name}對於議題與法案的未來承諾-沃草2016立委出任務`;
         description = `${currentPeople.name}的未來承諾大公開！趕快來看看${currentPeople.name}各項重大議題的戰鬥策略與優先法案的戰鬥目標！`;

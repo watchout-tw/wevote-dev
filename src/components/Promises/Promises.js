@@ -21,7 +21,7 @@ export default class Promises extends Component {
         return <div></div>
       }
 
-      const {positions, bills} = promises;
+      const {positions, bills, hasReply} = promises;
       
       let postionItems = Object.keys(positions).map((issueName,i)=>{
           let pos = positions[issueName].promise.position;
@@ -59,10 +59,10 @@ export default class Promises extends Component {
       return (
         <div>
           <div className={styles.sectionTitle}>議題表態</div>
-          <div>{postionItems}</div>
+          <div>{(hasReply === true ) ? postionItems : "尚未回覆"}</div>
 
           <div className={styles.sectionTitle}>優先法案</div>
-          <div>{billItems}</div>
+          <div>{(hasReply === true ) ? billItems  : "尚未回覆"}</div>
           
           <div className={`${styles.promiseMeta}`}>* 統計更新日期：{dataMeta.updateTime}。
                 <Link className={`${styles.ia} ${styles.bright}`} 
