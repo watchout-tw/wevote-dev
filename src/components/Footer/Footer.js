@@ -14,7 +14,7 @@ export default class Footer extends Component {
           <div className={styles.innerWrap}>
               <div className={styles.say}>
                 <img src={SaySomething}/>
-                  <div className={styles.welcome}>歡迎<b>政黨</b>及<b>候選人</b>針對我們列出的重大議題表態回覆！</div>
+                  <div className={styles.welcome}>歡迎<b>政黨</b>及<b>區域立委參選人</b>針對我們列出的重大議題表態回覆！</div>
                   <div className={styles.links}>
                     <div><a className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`}
                             href={`/files/form.pdf`}>下載表態承諾書</a></div>
