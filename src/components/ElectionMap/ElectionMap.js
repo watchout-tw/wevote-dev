@@ -207,7 +207,7 @@ export default class ElectionMap extends Component {
             <Link to={`/constituencies/${active_city}/${sub_active}/`} 
                   className={styles.go}>
               
-              <div className={styles.name}>{db[active_city].name}{subInfo}選舉區</div>
+              <div className={styles.name}>{db[active_city].name}{subInfo}選區</div>
               <div className={styles.prompt}>前往選區</div>
               <div className={styles.arrow}></div>
               
