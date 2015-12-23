@@ -860,57 +860,57 @@ const initialState = {
         "districtArea": "CYC",
         "districtNo": "N/A",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "國會透明",
+                "content": "立院議事規則第61條，刪除禁止旁聽規定"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "國會改革",
+                "content": "立法委員行為法，建立立委專職"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "國會改革",
+                "content": "公職人員選罷法，保障國會議長職務，確保議長中立。"
             }
         ]
     },
@@ -2385,57 +2385,57 @@ const initialState = {
         "districtArea": "CHW",
         "districtNo": "4",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
                     "position": "none",
-                    "statement": ""
+                    "statement": "尊重同性戀者"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "不當黨產歸零",
+                "content": "提出不當黨產處理條例，落實轉型正義"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "老人福利法",
+                "content": "保障老人口腔健康，減輕老人經濟負擔，中央主管機關應補助老人裝置假牙。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "兒少法",
+                "content": "促進人口均衡發展，使生育婦女及嬰兒獲得適當照顧，中央政府應補貼地方辦理家庭津貼。"
             }
         ]
     },
@@ -3605,7 +3605,7 @@ const initialState = {
         "districtArea": "TXG",
         "districtNo": "1",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -3615,47 +3615,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "健全觀光法令",
+                "content": "全面檢討發展觀光條例，讓觀光法令跟上時代潮流，不讓落伍法令成為台灣觀光發展的阻礙"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "清查不當黨產",
+                "content": "推動不當黨產處置條例，以落實轉型正義，並促進政黨公平競爭"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "推動年金改革",
+                "content": "檢討各年金制度，讓人人皆能享有公平安穩的退休生活，並健全國家財政。"
             }
         ]
     },
@@ -5435,56 +5435,56 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "3",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "年金改革",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "婚姻平權",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "伴侶制",
                 "content": ""
             }
         ]
@@ -5768,13 +5768,13 @@ const initialState = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -5862,57 +5862,57 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "4",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
                     "position": "none",
-                    "statement": ""
+                    "statement": "多元成家不僅同性婚姻，更應擴大家族成員至親近伴侶或同住友人為多元家庭成員"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "立法委員選制",
+                "content": "單一選區一席立委，造成北藍南綠的失衡現象，應回復合理選區多席次，以符合民意"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "法官法",
+                "content": "增加法官多元來源，汰除不適任法官，增進人民對司法信任。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "食安法",
+                "content": "修正黑心商品為行為犯，毋須產生損害人體健康之構成要件"
             }
         ]
     },
@@ -6045,57 +6045,57 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "4",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "提高薪資",
+                "content": "捍衛勞動權"
+            },
+            {
+                "goal": "大財團要加稅",
                 "content": ""
             },
             {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
+                "goal": "退休年金法",
+                "content": "制定《全民退休年金法》"
             }
         ]
     },
@@ -6655,57 +6655,57 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "促參法",
+                "content": "限制第八條民間機構參與公共建設，避免圖利財團"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "產創條例",
+                "content": "全面檢討不合理的財團租稅優惠，首先檢討產創條例。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "勞基法",
+                "content": "將最低生活標準納入基本工資定義，具體提升基本工資。"
             }
         ]
     },
@@ -7204,57 +7204,57 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "7",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "長期照顧",
+                "content": "本著在地老化、社區照顧的出發點，修正長照法，且暫緩長照保險法，以稅制改革提高稅收、建構服務為優先，喘息服務一周一次，建立諮詢窗口。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "稅制改革",
+                "content": "富人財團加稅，提高營所稅(17%提高到25%)與贈與稅，增加資本利得稅制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "婚姻平權",
+                "content": "修改民法第972條，納入不同性傾向與性別認同，將「男女」改為「雙方」之平等結婚權，落實公平正義，讓有愛之人皆能成家。"
             }
         ]
     },
@@ -7265,57 +7265,57 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "7",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
                     "position": "none",
-                    "statement": ""
+                    "statement": "同志人權尊重，但教會態度，楊實秋是基督徒也要考量。法案未深入了解無法表態。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
                     "position": "none",
-                    "statement": ""
+                    "statement": "台灣用電要專業評估，楊實秋不瞭解之事，不斷然表態。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法",
+                "content": "推動《政黨不當取得財產處理條例》草案"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "年金制度",
+                "content": "改變其不公義，劫富濟貧的制度。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "基本工資",
+                "content": "逐年調整，且比例要有適當規範"
             }
         ]
     },
@@ -7753,57 +7753,57 @@ const initialState = {
         "districtArea": "TPE",
         "districtNo": "8",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "課綱應只限於大綱、方向性內容，避免過度干預教學細節，應有法定程序規範課綱制定。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "應確保刑事審判之罪刑法定、無罪推定、直接審理等原則，不因不當制度設計而受動搖。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "勞動保障",
+                "content": "縮工時、提高工資。禁派遣、擴大公共服務、創造更多安全、有尊嚴的工作機會，強化公會，團結協商創造勞資共榮。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "年金改革",
+                "content": "全面改革年金制度，建立團結互助的全民年金，設定給付上限與下限，建全年金財務。讓勞工與軍公教不分職業，都享有優質退休生活。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "稅制改革",
+                "content": "翻轉獨厚財團的經濟體制，全面檢討產業補貼，取消不合理的財團優惠。"
             }
         ]
     },
@@ -8851,57 +8851,57 @@ const initialState = {
         "districtArea": "NTC",
         "districtNo": "4",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "亦贊成包含伴侶制度、多元家屬之多元成家法案"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "亦支持所有老舊核電廠立即停機"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "最低工資立法",
+                "content": "訂立《最低工資法》或相關修法，明訂最低工資定義為「勞工家庭最低生活費」，並採用《社會救助法》第四條「最低生活費」計算方式。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "開放都市計畫",
+                "content": "翻修《都市計畫法》，讓市民能直接參與擬定都市計畫，地方都委會委員之資格與聘用應法制化，並納入聽證程序。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "多元成家立法",
+                "content": "翻修《民法》「親屬編」、「繼承編」，並新訂伴侶專章。完全落實包含婚姻平權、伴侶制度、多元成家之法案。"
             }
         ]
     },
@@ -10986,35 +10986,35 @@ const initialState = {
         "districtArea": "TYN",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "個人在第六屆擔任立委時，即支持修正民法親屬"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
@@ -11027,16 +11027,16 @@ const initialState = {
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "不當黨產歸零",
+                "content": "為鞏固公平選舉的法治精神，國民黨應提出將黨產還財於民的時間表，停止對政黨法立法的持續杯葛，讓台灣邁入民主常軌。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "廢除鄉鎮選舉",
+                "content": "政府層級過度，造成施政困難，鄉鎮市長應改為官派，簡化淨化基層政治生態，每年節省30億預算"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "推動十年長照",
+                "content": "推動「長照、托育、就業」的三合一「十年長照2.0」，由政府投入資金，以增加在地就業的方式，落實平價長照與托育一次解決三大人口問題。"
             }
         ]
     },
@@ -13304,7 +13304,7 @@ const initialState = {
         "districtArea": "TXG",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
@@ -13314,47 +13314,47 @@ const initialState = {
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "如有足夠的替代能源，支持停建核四"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "更支持一綱一本"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "先從人民觀審制推廣到陪審"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "支持死刑",
+                "content": "任意殺人，惡意殺人，濫殺無辜者判處唯一死刑。販毒製毒者，判處無期徒刑或死刑。惡意製造黑心食品的廠商老闆，罰到破產賠償被害人並判處無期徒刑或死刑。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "政府公開透明",
+                "content": "修訂政府資訊公開法，除國安機密外，所有資訊必須公開上網。制定國會電視轉播法，議事全程錄影轉播，才能真正打破黑箱。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "年輕人的希望",
+                "content": "國家承擔幼教，扶植電競產業，解決機車格停車問題，支持合法改裝汽機車，恢復倫理道德教育，擴大青創基地，推動互聯網放眼世界"
             }
         ]
     },
@@ -18311,7 +18311,7 @@ const initialState = {
             "marriageEquality": {
                 "promise": {
                     "position": "aye",
-                    "statement": ""
+                    "statement": "但須有配套機制，並於教育宣導中，讓孩子知道人有自主選擇權及相對尊重，但基於國家未來發展及人口紅利、社會老年化之考量，並不特別鼓勵同性發展"
                 }
             },
             "recall": {
@@ -18323,39 +18323,39 @@ const initialState = {
             "referendum": {
                 "promise": {
                     "position": "aye",
-                    "statement": ""
+                    "statement": "可降低現行的高門檻，但仍應有其最低門檻限制，以杜絕公部門之司法浪費"
                 }
             },
             "nuclearPower": {
                 "promise": {
                     "position": "aye",
-                    "statement": ""
+                    "statement": "立法獎勵各項綠能、再生能源及太陽能等發展"
                 }
             },
             "courseGuide": {
                 "promise": {
                     "position": "aye",
-                    "statement": ""
+                    "statement": "不管過去歷史的好話，都應真實呈現，才不至於讓孩子的國家史觀錯亂且低弱"
                 }
             },
             "justiceReform": {
                 "promise": {
                     "position": "aye",
-                    "statement": ""
+                    "statement": "立法讓司法判決具有陪審制度，不讓法官專權，也可以讓貪腐在司法程序不易出現。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "年金改革",
+                "goal": "食安保障",
                 "content": ""
             },
             {
-                "goal": "勞工權益",
+                "goal": "校園犯罪預防",
                 "content": ""
             },
             {
-                "goal": "民主憲政",
+                "goal": "避免重複選舉",
                 "content": ""
             }
         ]
