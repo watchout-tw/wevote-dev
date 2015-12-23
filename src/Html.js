@@ -75,9 +75,8 @@ export default class Html extends Component {
           <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
 
         </head>
-        <body>
+        <body style={{fontFamily: `"Helvetica Neue", Helvetica, Arial, "xingothic-tc", "PingFang TC", "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif`}}>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
-          <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
           <script async src='//www.google-analytics.com/analytics.js'></script>
 
