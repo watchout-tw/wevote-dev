@@ -11,6 +11,7 @@ import About from 'views/About/About.js';
 import Issue from 'views/Issue/Issue.js';
 
 import LegislatorList from 'views/LegislatorList/LegislatorList.js';
+import CandidateList from 'views/CandidateList/CandidateList.js';
 
 import People from 'views/People/People.js';
 import PeopleIssue from 'views/PeopleIssue/PeopleIssue.js';
@@ -63,6 +64,7 @@ export default function(store) {
             <Route path="/issues/:issueName/:viewName" component={Issue}/>
             
             <Route path="/8th-legislators" component={LegislatorList}/>
+            <Route path="/9th-candidates" component={CandidateList}/>
             
             <Route path="/people/:peopleId/:category/" component={People}/>
             <Route path="/people/:peopleId/:category/index.html" component={People}/>

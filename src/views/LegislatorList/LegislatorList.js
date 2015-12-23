@@ -29,6 +29,16 @@ const IssueList = [
          "id": "nuclearPower",
          "cht": "核",
          "url": "nuclear-power"
+     },
+     {
+         "id": "courseGuide",
+         "cht": "課",
+         "url": "course-guide"
+     },
+     {
+         "id": "justiceReform",
+         "cht": "司",
+         "url": "justice-reform"
      }
 ]
 @connect(
@@ -52,7 +62,9 @@ export default class LegislatorList extends Component {
           "marriageEquality" : "none",
           "recall" : "none",
           "referendum" : "none",
-          "nuclearPower" : "none"
+          "nuclearPower" : "none",
+          "courseGuide" : "none",
+          "justiceReform" : "none"
         },
         legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
       }

@@ -9,7 +9,7 @@ import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
 
 import district2cht from '../../utils/district2cht';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
-import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訓
+import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 import getDistrictLegislators from '../../utils/getDistrictLegislators'; //現任立委資訊
 import getPeopleTableData from '../../utils/getPeopleTableData';
 @connect(
@@ -99,30 +99,25 @@ export default class Constituency extends Component {
           </span>
         )
     })
-
-    //沒有資料的立委們
-    let noDataCandidateItems = noDataCandidates.map((people, index)=>{
-        let separatorItem;
-        if(index !== noDataCandidates.length -1){
-           separatorItem = "、";
-        }
-        return (
-          <span>
-              <div className={styles.partyItem}>
-                  <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
-              </div>
-              <Link to={`/people/${people.id}/promises/`}
-                    className={`${styles.nameItem} ${styles.ia} ${styles.black} ${styles.line}`} >{people.name}
-              </Link>
-              {separatorItem}
-          </span>
-        );
-    });
-    let missingTitle = require("./images/missing.svg");
-
-
-    //上方的 toggle 按鈕 text
+    //flip button,  沒有可比較資料時隱藏
     let toggleText = (side==="front")? "立場PK" : "戰鬥目標";
+    let flipButton = (comparableCandidates.length > 0) ? (
+      <div className={styles.flipButton}
+           onClick={this._toggle.bind(this)}>
+           {toggleText}
+      </div>
+      ): <div>本區候選人全員失蹤中，需要你的關心</div>;
+    //card
+    let cardSection = (comparableCandidates.length > 0) ? (
+      <CandidateProfileCards area={area}
+                             areaNo={areaNo}
+                             side={side}
+                             candidateList={comparableCandidates}/>
+    ) : "";
+    //協尋中
+    let wantedSection = (noDataCandidates.length > 0) ? <Wanted noDataCandidates={noDataCandidates} /> : "";
+
+    
     return (
       <div className={styles.wrap}>
           
@@ -132,28 +127,9 @@ export default class Constituency extends Component {
                   <h3 className={styles.electCount}>本區將選出 {shouldElect} 位勇者</h3>
                   <div className={styles.currentLegislators}>現任代表：{currentLegislatorItems}</div>
               </div>
-              <div className={styles.flipButton}
-                   onClick={this._toggle.bind(this)}>{toggleText}</div>
-              
-              <CandidateProfileCards area={area}
-                                     areaNo={areaNo}
-                                     side={side}
-                                     candidateList={comparableCandidates}/>
-              <div className={styles.partyRoll}>
-                  <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
-                      <img src={missingTitle} 
-                           className={styles.missingTitle}/>
-                  </div>
-                  <div className={styles.partyRollMain}>
-                      <div className={styles.intro}>以下立委沒有過去表態資料（非第八屆立委），亦尚未回覆未來表態資料。</div>
-                      {noDataCandidateItems}
-                      <div className={styles.wantedLinkWrap}>
-                        <Link className={styles.wantedLink}
-                              to={`/wanted/`}>前往協尋</Link>
-                      </div>
-                  </div>
-                  <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
-              </div>
+              {flipButton}
+              {cardSection}
+              {wantedSection}
           </div>
           <div className={styles.bgHolder}></div>
 
@@ -161,5 +137,48 @@ export default class Constituency extends Component {
     );
   }
 }
+class Wanted extends Component {
+  render(){
+      const {noDataCandidates} = this.props;
+      const styles = require('./Constituency.scss');
 
+      let missingTitle = require("./images/missing.svg");
+      //沒有資料的立委們
+      let noDataCandidateItems = noDataCandidates.map((people, index)=>{
+          let separatorItem;
+          if(index !== noDataCandidates.length -1){
+             separatorItem = "、";
+          }
+          return (
+            <span>
+                <div className={styles.partyItem}>
+                    <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+                </div>
+                <Link to={`/people/${people.id}/promises/`}
+                      className={`${styles.nameItem} ${styles.ia} ${styles.black} ${styles.line}`} >{people.name}
+                </Link>
+                {separatorItem}
+            </span>
+          );
+      });
+    
+      return (
+          <div className={styles.partyRoll}>
+              <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
+                  <img src={missingTitle} 
+                       className={styles.missingTitle}/>
+              </div>
+              <div className={styles.partyRollMain}>
+                  <div className={styles.intro}>以下立委沒有過去表態資料（非第八屆立委），亦尚未回覆未來表態資料。</div>
+                  {noDataCandidateItems}
+                  <div className={styles.wantedLinkWrap}>
+                    <Link className={styles.wantedLink}
+                          to={`/wanted/`}>前往協尋</Link>
+                  </div>
+              </div>
+              <div className={`${styles.partyRollEndpoint} ${styles.bottom}`}></div>
+          </div>
+      )
+  }
+}
 
