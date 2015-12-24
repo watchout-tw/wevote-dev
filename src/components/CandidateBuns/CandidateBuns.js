@@ -10,27 +10,41 @@ import eng2url from '../../utils/eng2url';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
 import identity_district from '../../utils/identity_district';
 
+import {loadCandidates} from '../../ducks/candidates.js';
+
 @connect(
     state => ({ 
-      candidates: state.candidates,
+      candidates: state.candidates.data,
       legislators: state.legislators
     }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({loadCandidates}, dispatch))
 
 export default class CandidateBuns extends Component {
   constructor(props){ super(props)
-    const {candidates, area, areaNo} = props;
-    let candidateList = getDistrictCandidates(candidates, area, areaNo);
     this.state = {
-        candidateList: candidateList
+        candidatesLoaded: false
+    }
+  }
+  componentWillMount(){
+    this.props.loadCandidates();
+  }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.candidates){
+      const {area, areaNo} = this.props;
+      this.setState({
+          candidatesLoaded: true,
+          candidateList: getDistrictCandidates(nextProps.candidates.value, area, areaNo)
+      })   
     }
   }
   render() {
+    const {candidatesLoaded} = this.state;
+    if( !candidatesLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
     const styles = require('./CandidateBuns.scss');
     const {legislators, category, exclude, area, areaNo} = this.props;
     const {candidateList} = this.state;
-    //console.log(candidateList)
-
+    
     if(!candidateList) return <div></div>;
 
 

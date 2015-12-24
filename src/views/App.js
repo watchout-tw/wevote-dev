@@ -70,7 +70,6 @@ export default class App extends Component {
     const {issues, params} = this.props;
     const {location} = this.state;
     const styles = require('./App.scss');
-
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>

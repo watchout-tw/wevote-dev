@@ -14,38 +14,49 @@ import parseToPartyView from '../../utils/parseToPartyView';
 import parseToLegislatorView from '../../utils/parseToLegislatorView';
 import parseToPositionView from '../../utils/parseToPositionView';
 
+import {loadRecords} from '../../ducks/records.js';
+
 @connect(
     state => ({ 
-                issues: state.issues,
-                records: state.records,
-                parties: state.parties
-              }),
-    dispatch => bindActionCreators({}, dispatch))
+      records: state.records.data,
+      issues: state.issues,
+      parties: state.parties
+    }),
+    dispatch => bindActionCreators({loadRecords}, dispatch))
 
 export default class IssueFigure extends Component {
-    static propTypes = {
-        records: PropTypes.object.isRequired
-    }
-
     constructor(props){ super(props)
-      
-        this.state = {
-           partyView: parseToPartyView(props.records, props.issues),
-           legislatorView: parseToLegislatorView(props.records, props.issues),
-           positionView: parseToPositionView(props.records, props.issues),
-
-           userPosition: {
+      this.state = {
+        userPosition: {
              "marriage-equality" : "none",
              "recall" : "none",
              "referendum" : "none",
-             "nuclear-power" : "none"
-           }
-        }
+             "nuclear-power" : "none",
+             "course-guide" : "none",
+             "justice-reform" : "none"
+        },
+        recordsLoaded: false,
+        partyView: "",
+        legislatorView: "",
+        positionView: ""
+      }
     }
-
+    componentWillMount(){
+      this.props.loadRecords();
+    }
+    componentWillReceiveProps(nextProps){
+      if(nextProps.records){
+          const {issues} = this.props;
+          this.setState({
+              recordsLoaded: true,
+              partyView: parseToPartyView(nextProps.records.value, issues),
+              legislatorView: parseToLegislatorView(nextProps.records.value, issues),
+              positionView: parseToPositionView(nextProps.records.value, issues),
+          })
+      }
+    }
     componentDidMount(){
-       // Get user position from local Storage
-       
+        // Get user position from local Storage
         if(window){
             const {currentIssueName} = this.props;
             let value = currentIssueName + "-userPosition"
@@ -57,17 +68,18 @@ export default class IssueFigure extends Component {
                    userPosition: userPosition
                 })
             }
-      
         }
     }
 
    
     render(){
+      const {recordsLoaded} = this.state;
+      if(!recordsLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
       const styles = require('./IssueFigure.scss');  
       const {currentView, currentIssue, currentIssueName, setCurrentView} = this.props;
       const {parties} = this.props;
       const {partyView, legislatorView, positionView, userPosition} = this.state;
-
 
       if(!partyView[currentIssue.titleEng]) return <div></div>
       if(!legislatorView[currentIssue.titleEng]) return <div></div>

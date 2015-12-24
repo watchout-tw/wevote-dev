@@ -12,54 +12,82 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 import getDistrictLegislators from '../../utils/getDistrictLegislators'; //現任立委資訊
 import getPeopleTableData from '../../utils/getPeopleTableData';
+
+import {loadRecords} from '../../ducks/records.js';
+import {loadCandidates} from '../../ducks/candidates.js';
+
 @connect(
     state => ({
+      records: state.records.data,
+      candidates: state.candidates.data,
       legislators: state.legislators,
-      records: state.records,
-      issues: state.issues,
-      candidates: state.candidates
+      issues: state.issues
     }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({loadRecords, loadCandidates}, dispatch))
 
 export default class Constituency extends Component {
  
   constructor(props){ super(props)
-    const {records, issues, legislators, candidates} = props;
     const {area, areaNo} = props.params;
-
-    let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
-    let candidateList = getDistrictCandidates(candidates, area, areaNo);
-    let tableData = getPeopleTableData(legislatorPositions, candidateList);
+    const {legislators} = props;
     let legislatorList = getDistrictLegislators(legislators, area, areaNo);
-    
-    let comparableCandidates = [];//有過去紀錄 or 有未來承諾的候選人
-    let noDataCandidates = [];
-   
-    candidateList.map((people, index)=>{
-        var combined = {
-          id: people.id,
-          name: people.name,
-          party: people.party,
-          hasReply: people.hasReply,
-          positions: tableData[people.id].positions,
-          bills: people.bills
-        };
-
-        if(people.hasReply || legislators[people.id]){//已回覆，或者是第八屆立委
-            comparableCandidates.push(combined);
-        }else{
-            noDataCandidates.push(combined);
-        }
-        
-    })
-   
+ 
     this.state = {
-        candidateList: candidateList,
         legislatorList: legislatorList,
-        comparableCandidates: comparableCandidates,
-        noDataCandidates: noDataCandidates,
-        side: 'front'
+        candidateList: "",
+        comparableCandidates: "",
+        noDataCandidates: "",
+        side: 'front',
+        recordsLoaded: false,
+        candidatesLoaded: false
     }
+  }
+  componentWillMount(){
+    this.props.loadRecords();
+    this.props.loadCandidates();
+  }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.records && nextProps.candidates){
+        const {issues, legislators} = this.props;
+        const {area, areaNo} = this.props.params;
+
+        let legislatorPositions = parseToLegislatorPosition(nextProps.records.value, issues, legislators);
+        let candidateList = getDistrictCandidates(nextProps.candidates.value, area, areaNo);
+        let tableData = getPeopleTableData(legislatorPositions, candidateList);
+        
+        let comparableCandidates = [];//有過去紀錄 or 有未來承諾的候選人
+        let noDataCandidates = [];
+        
+        candidateList.map((people, index)=>{
+            var combined = {
+              id: people.id,
+              name: people.name,
+              party: people.party,
+              hasReply: people.hasReply,
+              positions: tableData[people.id].positions,
+              bills: people.bills
+            };
+
+            if(people.hasReply || legislators[people.id]){//已回覆，或者是第八屆立委
+                comparableCandidates.push(combined);
+            }else{
+                noDataCandidates.push(combined);
+            }
+            
+        });
+    
+      this.setState({
+          recordsLoaded: true,
+          candidatesLoaded: true,
+          candidateList: candidateList,
+          comparableCandidates: comparableCandidates,
+          noDataCandidates: noDataCandidates  
+      })
+    }
+
+   
+    
+
   }
   _toggle(){
     const {side} = this.state;
@@ -71,6 +99,10 @@ export default class Constituency extends Component {
 
   }
   render() {
+    const {recordsLoaded, candidatesLoaded} = this.state;
+    if(!recordsLoaded || !candidatesLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
+
     const styles = require('./Constituency.scss');
     const {area, areaNo} = this.props.params;
     const {candidateList, legislatorList, comparableCandidates, noDataCandidates, side} = this.state;

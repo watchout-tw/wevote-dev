@@ -22,6 +22,7 @@ export default function getDistrictLegislators(legislators, area, areaNo){
     result.sort((a, b)=>{
         return format_date_to_unix_milliseconds(a.parties[0].startDate) - format_date_to_unix_milliseconds(b.parties[0].startDate);
     })
+    
     return result;
    
 }

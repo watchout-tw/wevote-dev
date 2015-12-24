@@ -10,7 +10,7 @@ import PeoplePhoto from '../PeoplePhoto/PeoplePhoto';
 import RecordPost from '../RecordPost/RecordPost';
 
 @connect(
-    state => ({  MaXiRecords: state.MaXiRecords }),
+    state => ({}),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class RecordStream extends Component {

@@ -5,25 +5,44 @@ import { connect } from 'react-redux';
 import eng2party_short from '../../utils/eng2party_short';
 import cht2eng from '../../utils/cht2eng';
 
+import {loadCandidates} from '../../ducks/candidates.js';
+
 @connect(
     state => ({
+        candidates: state.candidates.data,
         legislators: state.legislators,
-        candidates: state.candidates,
         people: state.people
     }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({loadCandidates}, dispatch))
 
 export default class PeoplePhoto extends Component {
-  static propTypes = {
-    legislators: PropTypes.object.isRequired,
-    id: PropTypes.string.isRequired
-
+  constructor(props){ super(props)
+      this.state = {
+        candidatesLoaded: false,
+        candidates: ""
+      }
   }
-
+  componentWillMount(){
+    this.props.loadCandidates();
+  }
+  componentWillReceiveProps(nextProps){
+    if( nextProps.candidates){
+      this.setState({
+          candidatesLoaded: true,
+          candidates: nextProps.candidates.value
+      })  
+    }
+  }
   render () {
+    const {candidatesLoaded} = this.state;
+    if(!candidatesLoaded) return <div></div>;
+
+    
 
     const styles = require('./PeoplePhoto.scss');
-    const {legislators, candidates, people, id} = this.props;
+    const {legislators, people, id} = this.props;
+    const {candidates} = this.state;
+
     let currentPeople = people[id];
     let {name} = currentPeople;
 

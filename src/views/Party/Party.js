@@ -18,6 +18,8 @@ import people_name2id from '../../utils/people_name2id';
 import is8thLegislator from '../../utils/is8thLegislator';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
+import {loadRecords} from '../../ducks/records.js';
+
 /*
 :category => {"records", "promises", "list"}
 歷史紀錄
@@ -26,22 +28,37 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 */
 
 @connect(
-    state => ({
+    state => ({  
+                 records: state.records.data,
                  legislators: state.legislators,
-                 records: state.records,
                  issues: state.issues,
                  parties: state.parties,
                  partyPromises: state.partyPromises
                }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({loadRecords}, dispatch))
 
 export default class Party extends Component {
   constructor(props){ super(props)
       this.state = {
-        partyPositions: parseToPartyPosition(props.records, props.issues)
+        recordsLoaded: false
       }
   }
+  componentWillMount(){
+    this.props.loadRecords();
+  }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.records){
+      this.setState({
+          recordsLoaded: true,
+          partyPositions: parseToPartyPosition(nextProps.records.value, this.props.issues)    
+      })
+    }
+  }
   render() {
+    const {recordsLoaded} = this.state;
+    if(!recordsLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
+
     const styles = require('./Party.scss');
     const id = this.props.params.partyId;
     const category = this.props.params.category;

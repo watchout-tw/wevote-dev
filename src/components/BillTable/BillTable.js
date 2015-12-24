@@ -12,38 +12,50 @@ import getPeopleTableData from '../../utils/getPeopleTableData';
 
 import eng2url from '../../utils/eng2url';
 
+import {loadRecords} from '../../ducks/records.js';
 
 @connect(
     state => ({
-      records: state.records,
+      records: state.records.data,
       issues: state.issues,
       partyPromises: state.partyPromises,
       legislators: state.legislators,
       dataMeta: state.dataMeta
     }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({loadRecords}, dispatch))
 
 export default class BillTable extends Component {
-  static propTypes = {
-  }
   constructor(props){ super(props)
-      //calculate party positions
-      const {records, issues, partyPromises, districtCandidates, unit} = props;
-      let tableData;
-
-      if(unit === "parties"){
-        let partyPositions = parseToPartyPosition(records, issues);
-        tableData = getPartiesTableData(partyPositions, partyPromises);
-      
-      }else{//unit === "people"
-        let legislatorPositions = parseToLegislatorPosition(props.records, props.issues, props.legislators);
-        tableData = getPeopleTableData(legislatorPositions, districtCandidates);
-      }
-
       this.state = {
-        tableData: tableData,
-        focus: ""
+        tableData: "",
+        focus: "",
+        recordsLoaded: false
       }
+  }
+  componentWillMount(){
+    this.props.loadRecords();
+  }
+  componentWillReceiveProps(nextProps){
+
+    if(nextProps.records){
+      //calculate party positions
+      const {issues, legislators, partyPromises, districtCandidates, unit} = this.props;
+      let tableData;
+      
+      if(unit === "parties"){
+          let partyPositions = parseToPartyPosition(nextProps.records.value, issues);
+          tableData = getPartiesTableData(partyPositions, partyPromises);
+      
+      }else{//unit === "people", not used currently.
+          let legislatorPositions = parseToLegislatorPosition(nextProps.records.value, issues, legislators);
+          tableData = getPeopleTableData(legislatorPositions, districtCandidates);
+      }
+
+      this.setState({
+          recordsLoaded: true,
+          tableData: tableData    
+      })
+    }
   }
   _onScroll(){
       const {focus} = this.state;
@@ -92,12 +104,14 @@ export default class BillTable extends Component {
      window.removeEventListener("scroll", this._onScroll.bind(this));
   }
   render() {
+    const {recordsLoaded} = this.state;
+    if(!recordsLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
     const styles = require('./BillTable.scss');
     const {issues, dataMeta,
            showTitle, outerLink, unit} = this.props;
     
     const {tableData, focus} = this.state;
-   
     let noReplyImg = require('./images/answers_unknown.svg');
     let externalIconImg = require('../../images/icon_external_link_gray.svg');
     
@@ -106,16 +120,16 @@ export default class BillTable extends Component {
 
 
     let unitBills = Object.keys(tableData).map((unitId, i)=>{
-        let unit = tableData[unitId];
-        let party = unit.party;
+        let unitData = tableData[unitId];
+        let party = unitData.party;
         
         //政黨名稱 or 候選人名稱
         let unitName = (
             <div className={styles.unitName}>
                 <div className={styles.nameFlex}>
-                    <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unit.id]}`}></div>
+                    <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitData.id]}`}></div>
                     <div className={`${styles.unitTitle}`}>
-                        <div className={styles.unitTitleText}>{unit.name}</div>{outerLinkItem}
+                        <div className={styles.unitTitleText}>{unitData.name}</div>{outerLinkItem}
                     </div>
                 </div>
             </div>
@@ -123,7 +137,7 @@ export default class BillTable extends Component {
 
         //優先推動
 
-        let bills = unit.bills.map((item, k)=>{
+        let bills = unitData.bills.map((item, k)=>{
             let goalItem;
             if(item.goal){
               let text = item.goal.length > 6 ? `${item.goal.substring(0,6)}⋯` : item.goal;
@@ -144,7 +158,7 @@ export default class BillTable extends Component {
 
         if(outerLink){
             return (
-                <a href={`/${unit}/${unit.id}/promises/`}
+                <a href={`/${unit}/${unitData.id}/promises/`}
                    className={styles.unitEntry}
                    target="_blank">
                      {unitName}{bills}
@@ -153,7 +167,7 @@ export default class BillTable extends Component {
 
         }else{
             return (
-                <Link to={`/${unit}/${unit.id}/promises/`}
+                <Link to={`/${unit}/${unitData.id}/promises/`}
                       className={styles.unitEntry}>
                      {unitName}{bills}
                 </Link>

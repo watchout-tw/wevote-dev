@@ -16,6 +16,11 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleDistrict from '../../utils/getPeopleDistrict';
 import identity from '../../utils/identity';
 import district2cht from '../../utils/district2cht';
+
+import {loadRecords} from '../../ducks/records.js';
+import {loadCandidates} from '../../ducks/candidates.js';
+
+
 /*
 :category => {"records", "promises", "story"}
 歷史紀錄
@@ -25,37 +30,59 @@ import district2cht from '../../utils/district2cht';
 
 @connect(
     state => ({  
-                 legislators: state.legislators,
-                 candidates: state.candidates,
-                 records: state.records,
-                 issues: state.issues,
-                 people: state.people
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+      records: state.records.data,
+      candidates: state.candidates.data,       
+      legislators: state.legislators,
+      issues: state.issues,
+      people: state.people
+    }),
+    dispatch => bindActionCreators({loadRecords, loadCandidates}, dispatch))
 
 export default class People extends Component {
   constructor(props){ super(props)
       this.state = {
-        legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators),
-        districtData: getPeopleDistrict(props.legislators, props.candidates, props.params.peopleId)
+        recordsLoaded: false,
+        candidatesLoaded: false,
+        candidates: "",
+        legislatorPositions: "",
+        districtData: "" 
       }
-      //console.log(parseToLegislatorPosition(props.records, props.issues, props.legislators))
+  }
+  componentWillMount(){
+    this.props.loadRecords();
+    this.props.loadCandidates();
+  }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.records && nextProps.candidates){
+      const {issues, legislators} = this.props;
+      const {peopleId} = this.props.params;
+      this.setState({
+          recordsLoaded: true,
+          candidatesLoaded: true,
+          candidates: nextProps.candidates.value,
+          legislatorPositions: parseToLegislatorPosition(nextProps.records.value, issues, legislators),
+          districtData: getPeopleDistrict(legislators, nextProps.candidates.value, peopleId)
+      })
+        
+    }
   }
   render() {
+    const {recordsLoaded, candidatesLoaded} = this.state;
+    if(!recordsLoaded || !candidatesLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
     const styles = require('./People.scss');
-    
     const id = this.props.params.peopleId;
     const category = this.props.params.category;
 
     //立委基本資料
-    const {legislators, candidates, people} = this.props;
+    const {legislators, people} = this.props;
+    const {candidates} = this.state;
     const currentPeople = people[id];
     //是否為第八屆立委，是否為第九屆區域立委參選人
     let currentIdentity = identity(legislators, candidates, id);
 
     //頁面最下方要呈現的候選人選區資料
     const {districtData} = this.state;
-
     
     //content
     let content;
@@ -81,7 +108,6 @@ export default class People extends Component {
       break;
 
       case 'promises':
-        const {candidates} = this.props;
         let promises = candidates[id];
         content = <Promises id={id} promises={promises}/>;
 

@@ -5,24 +5,14 @@ import { connect } from 'react-redux';
 
 @connect(
     state => ({ 
-      legislators: state.legislators,
-      candidates: state.candidates
+      legislators: state.legislators
     }),
     dispatch => bindActionCreators({}, dispatch))
 
-
 export default class PeopleeAvatar extends Component {
-  static propTypes = {
-    legislators: PropTypes.object.isRequired,
-    id: PropTypes.string.isRequired
-  
-  }
-  
   render () {
-
     const styles = require('./PeopleAvatar.scss');
-
-    const {legislators, candidates, id} = this.props;
+    const {legislators, candidates, id} = this.props;//// 目前沒有 candidates 會用到 PeopleAvatar
     let people = legislators[id] || candidates[id];
    
     if(!people){

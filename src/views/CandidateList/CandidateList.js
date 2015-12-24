@@ -9,6 +9,8 @@ import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import district2eng from '../../utils/district2eng';
 import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 
+import {loadCandidates} from '../../ducks/candidates.js';
+
 const DISTRICTS = {
   "臺北市": 8,
   "新北市": 12,
@@ -38,14 +40,34 @@ const DISTRICTS = {
 
 @connect(
     state => ({
-                candidates: state.candidates
+                candidates: state.candidates.data
               }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({loadCandidates}, dispatch))
 
 export default class CandidateList extends Component {
-  render(){
+  constructor(props){ super(props)
+      this.state = {
+        candidatesLoaded: false,
+        candidates: ""
+      }
+  }
+  componentWillMount(){
+    this.props.loadCandidates();
+  }
+  componentWillReceiveProps(nextProps){
+    if( nextProps.candidates){
+      this.setState({
+          candidatesLoaded: true,
+          candidates: nextProps.candidates.value
+      })  
+    }
+  }
+  render () {
+    const {candidatesLoaded} = this.state;
+    if(!candidatesLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+ 
     const styles = require('./CandidateList.scss');
-    const {candidates} = this.props;
+    const {candidates} = this.state;
 
     let cityItems = Object.keys(DISTRICTS).map((cityCht, index)=>{
         let cityEng = district2eng(cityCht);

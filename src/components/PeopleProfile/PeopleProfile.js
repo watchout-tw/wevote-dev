@@ -7,25 +7,43 @@ import cht2eng from '../../utils/cht2eng';
 import district2url from '../../utils/district2url';
 import peopleInfo from '../../utils/peopleInfo';
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
+
+import {loadCandidates} from '../../ducks/candidates.js';
+
 @connect(
     state => ({
+      candidates: state.candidates.data,
       legislators: state.legislators,
-      candidates: state.candidates,
       people: state.people
     }),
-    dispatch => bindActionCreators({}, dispatch))
-
+    dispatch => bindActionCreators({loadCandidates}, dispatch))
 
 export default class PeopleProfile extends Component {
-  static propTypes = {
-    legislators: PropTypes.object.isRequired,
-    id: PropTypes.string.isRequired
+  constructor(props){ super(props)
+      this.state = {
+        candidatesLoaded: false,
+        candidates: ""
+      }
   }
-  
+  componentWillMount(){
+    this.props.loadCandidates();
+  }
+  componentWillReceiveProps(nextProps){
+    if( nextProps.candidates){
+      this.setState({
+          candidatesLoaded: true,
+          candidates: nextProps.candidates.value
+      })  
+    }
+  }
   render () {
+    const {candidatesLoaded} = this.state;
+    if(!candidatesLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+      
     const styles = require('./PeopleProfile.scss');
+    const {legislators, people, id} = this.props;
+    const {candidates} = this.state;
 
-    const {legislators, candidates, people, id} = this.props;
     const peopleData = people[id];
     const legislatorData = legislators[id];
     const candidateData = candidates[id];

@@ -12,36 +12,51 @@ import url2eng from '../../utils/url2eng';
 import eng2cht from '../../utils/eng2cht';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
+import {loadRecords} from '../../ducks/records.js';
+
 @connect(
     state => ({
-                 legislators: state.legislators,
-                 records: state.records,
-                 issues: state.issues
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+      records: state.records.data,
+      legislators: state.legislators,
+      issues: state.issues
+    }),
+    dispatch => bindActionCreators({loadRecords}, dispatch))
 
 export default class PartyIssue extends Component {
   static propTypes = {
       legislators: PropTypes.object.isRequired,
-      records: PropTypes.object.isRequired,
       issues: PropTypes.object.isRequired
   }
-  //設定 initial state
   constructor(props) { super(props)
       this.state = {
           showMenu: false,
-          partyPositions: parseToPartyPosition(props.records, props.issues)
+          recordsLoaded: false
       }
+  }
+  componentWillMount(){
+    this.props.loadRecords();
+  }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.records){
+      this.setState({
+        recordsLoaded: true,
+        partyPositions: parseToPartyPosition(nextProps.records.value, this.props.issues)       
+      })
+    }
   }
   _toggleMenu(){
     this.setState({ showMenu: !this.state.showMenu });
   }
 
   render() {
+    const {recordsLoaded} = this.state;
+    if(!recordsLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
     const styles = require('./PartyIssue.scss');
     const id = this.props.params.partyId;
     const issueURL = this.props.params.issueName;
     const {issues} = this.props;
+
     const {showMenu, partyPositions} = this.state;
     const currentPartyPositions = partyPositions[id];
     const positions = currentPartyPositions.positions || {};

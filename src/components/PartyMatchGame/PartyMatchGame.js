@@ -15,19 +15,18 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 import getPartiesMatchgameData from '../../utils/getPartiesMatchgameData';
 import scrollTo from '../../utils/scrollTo';
 
+import {loadRecords} from '../../ducks/records.js';
+
 @connect(
     state => ({
+      records: state.records.data,
       legislators: state.legislators,
-      records: state.records,
       issues: state.issues,
       partyPromises: state.partyPromises
     }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({loadRecords}, dispatch))
 
 export default class PartyMatchGame extends Component {
-  static propTypes = {
-      issues: PropTypes.object.isRequired
-  }
   constructor(props){ super(props)
       //prepare qa set
       let qaSet = Object.keys(props.issues).map((issueUrl, index)=>{
@@ -51,8 +50,20 @@ export default class PartyMatchGame extends Component {
           currentRank: [],
 
           matchData: {},
-          recordFirst: ""
+          recordFirst: "",
+          recordsLoaded: false
       }
+  }
+  componentWillMount(){
+    this.props.loadRecords();
+  }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.records){     
+      this.setState({
+          recordsLoaded: true,
+          records: nextProps.records.value
+      })
+    }
   }
   _onSetConfigAndMove(recordFirst, event){
       this._onSetConfig(recordFirst, event);
@@ -69,8 +80,9 @@ export default class PartyMatchGame extends Component {
 
       // 使用者選擇要用過去或是承諾
       // update match data, prepare party position
-      const {records, issues, partyPromises} = this.props;
-     
+      const {issues, partyPromises} = this.props;
+      const {records} = this.state;
+
       // 計算新的比對資料
       let partyPositions = parseToPartyPosition(records, issues);
       let matchData = getPartiesMatchgameData(partyPositions, partyPromises, recordFirst);
@@ -184,6 +196,10 @@ export default class PartyMatchGame extends Component {
     window.scrollTo(-100,0);
   }
   render() {
+    const {recordsLoaded} = this.state;
+    if(!recordsLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
+
     const styles = require("./PartyMatchGame.scss")
     const {issues, onSetStage} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection,
@@ -447,7 +463,6 @@ class ResultSection extends Component {
       )
     })
 
-//<div className={styles.spectrumPointLabel}>總分</div>
     return (
       <div id="rankResultSection">
           <div className={styles.rankResultSection}>

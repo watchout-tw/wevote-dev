@@ -14,8 +14,11 @@ import getPartiesTableData from '../../utils/getPartiesTableData';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleTableData from '../../utils/getPeopleTableData';
 
-
 import eng2url from '../../utils/eng2url';
+
+import {loadRecords} from '../../ducks/records.js';
+
+
 
 function countLevel(count){
   let num = Number(count);
@@ -35,36 +38,45 @@ function countLevel(count){
 
 @connect(
     state => ({
-      records: state.records,
+      records: state.records.data,
       issues: state.issues,
       partyPromises: state.partyPromises,
       legislators: state.legislators
     }),
-    dispatch => bindActionCreators({}, dispatch))
+    dispatch => bindActionCreators({loadRecords}, dispatch))
 
 export default class PositionTable extends Component {
-  static propTypes = {
-  }
   constructor(props){ super(props)
-      const {records, issues, partyPromises, legislators} = props;
-      const {unit, districtCandidates} = props;
-      
+      this.state = {
+          tableData: "",
+          focus: "",
+          recordsLoaded: false
+      }
+  }
+  componentWillMount(){
+    this.props.loadRecords();
+  }
+  componentWillReceiveProps(nextProps){
+
+    if(nextProps.records){
+      const {issues, partyPromises, legislators, unit, districtCandidates} = this.props;
+     
       //calculate positions
       let tableData;
       if(unit === "parties"){
-          let partyPositions = parseToPartyPosition(records, issues);
+          let partyPositions = parseToPartyPosition(nextProps.records.value, issues);
           tableData = getPartiesTableData(partyPositions, partyPromises);
 
       }else{//people, this might not be needed after...
-          let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
+          let legislatorPositions = parseToLegislatorPosition(nextProps.records.value, issues, legislators);
           tableData = getPeopleTableData(legislatorPositions, districtCandidates);
-
-      }
-      this.state = {
-          tableData: tableData,
-          focus: ""
       }
 
+      this.setState({
+          recordsLoaded: true,
+          tableData: tableData    
+      })
+    }
   }
   _onScroll(){
       let positionNode = document.getElementById("positionTitle");
@@ -125,6 +137,9 @@ export default class PositionTable extends Component {
       }
   }
   render() {
+    const {recordsLoaded} = this.state;
+    if(!recordsLoaded) return <div style={{textAlign: 'center'}}>Loading...</div>
+
     const styles = require('./PositionTable.scss');
     const {issues, unit} = this.props;
     const {tableData, focus} = this.state;

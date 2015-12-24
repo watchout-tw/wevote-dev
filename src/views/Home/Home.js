@@ -56,9 +56,10 @@ export default class Home extends Component {
           <div className={styles.innerWrap}>
 
               <div className={styles.invisible}>
-                <Link to={`/404`}>404</Link>
+                <Link to={`/404`}>404</Link> 
                 <Link to={`/8th-legislators`}>8th-legislators</Link>
-                <Link to={`/embed`}>embed</Link>
+                <Link to={`/9th-candidates`}>9th-candidates</Link>
+                <Link to={`/embed`}>embed</Link> 
               </div>
 
               <img src={countdown} className={styles.countdown}/>

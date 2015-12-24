@@ -16,7 +16,6 @@ import CandidateList from 'views/CandidateList/CandidateList.js';
 import People from 'views/People/People.js';
 import PeopleIssue from 'views/PeopleIssue/PeopleIssue.js';
 
-import PartyList from 'views/PartyList/PartyList.js';
 import Parties from 'views/Parties/Parties.js';
 import PartiesGame from 'views/PartiesGame/PartiesGame.js';
 import PartiesTable from 'views/PartiesTable/PartiesTable.js';

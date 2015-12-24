@@ -13,15 +13,10 @@ import ReactSwipe from 'react-swipe';
 import moment from 'moment';
 
 @connect(
-    state => ({ MaXiRecords: state.MaXiRecords }),
+    state => ({}),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class LegislatorCards extends Component {
-  static propTypes = {
-  }
-  constructor(props){ super(props)
-      
-  }
   render() {
     const styles = require('./LegislatorCards.scss');
     const {MaXiRecords, handleClickCard, activeLegislator,
