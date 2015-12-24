@@ -4,7 +4,6 @@ import legislators from './legislators';
 import issues from './issues';
 import parties from './parties';
 import records from './records';
-import FAQ from './FAQ';
 
 import candidates from './candidates';
 import people from './people';
@@ -20,10 +19,6 @@ export default combineReducers({
   legislators,
   issues,
   parties,
-  records,
-  FAQ,
-  
-  candidates,
 
   partyBlock,
   partyPromises,
@@ -31,6 +26,9 @@ export default combineReducers({
   processingState,
 
   people,
-  dataMeta
+  dataMeta,
+
+  records,
+  candidates
 
 });
