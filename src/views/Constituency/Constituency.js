@@ -26,12 +26,11 @@ import {loadCandidates} from '../../ducks/candidates.js';
     dispatch => bindActionCreators({loadRecords, loadCandidates}, dispatch))
 
 export default class Constituency extends Component {
- 
+
   constructor(props){ super(props)
     const {area, areaNo} = props.params;
     const {legislators} = props;
     let legislatorList = getDistrictLegislators(legislators, area, areaNo);
- 
     this.state = {
         legislatorList: legislatorList,
         candidateList: "",
@@ -149,10 +148,10 @@ export default class Constituency extends Component {
     //協尋中
     let wantedSection = (noDataCandidates.length > 0) ? <Wanted noDataCandidates={noDataCandidates} /> : "";
 
-    
+
     return (
       <div className={styles.wrap}>
-          
+
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               <div className={styles.districtInfo}>
@@ -182,7 +181,7 @@ class Wanted extends Component {
              separatorItem = "、";
           }
           return (
-            <span>
+            <span className={styles.noDataCandidate}>
                 <div className={styles.partyItem}>
                     <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
                 </div>
@@ -193,11 +192,11 @@ class Wanted extends Component {
             </span>
           );
       });
-    
+
       return (
           <div className={styles.partyRoll}>
               <div className={`${styles.partyRollEndpoint} ${styles.top}`}>
-                  <img src={missingTitle} 
+                  <img src={missingTitle}
                        className={styles.missingTitle}/>
               </div>
               <div className={styles.partyRollMain}>
@@ -213,4 +212,3 @@ class Wanted extends Component {
       )
   }
 }
-

@@ -19,7 +19,7 @@ export default class ElectionMap extends Component {
     }
   }
   _onMapEnter(name, e){
-    e.target.setAttribute("fill", HOVER_COLOR); 
+    e.target.setAttribute("fill", HOVER_COLOR);
     this.setState({
       hover_city: name
     })
@@ -27,7 +27,7 @@ export default class ElectionMap extends Component {
   _onMapLeave(name, e){
     const {active_city} = this.state;
     if(active_city !== name){
-        e.target.setAttribute("fill", INACTIVE_COLOR); 
+        e.target.setAttribute("fill", INACTIVE_COLOR);
         this.setState({
           hover_city: ""
         })
@@ -44,7 +44,7 @@ export default class ElectionMap extends Component {
     }
   }
   _onMapClick(name, e){
-    
+
     if(interactiveCities.indexOf(name)===-1){
         //如果該選區只有單一選區，直接選 sub_active = 1
         this.setState({
@@ -57,12 +57,12 @@ export default class ElectionMap extends Component {
           active_city: name
         })
     }
-    
+
   }
   _resetMapClick(){
     const {active_city} = this.state;
     let node = document.getElementById(active_city);
-    node.setAttribute("fill", INACTIVE_COLOR); 
+    node.setAttribute("fill", INACTIVE_COLOR);
 
     this.setState({
       hover_city: "",
@@ -85,7 +85,7 @@ export default class ElectionMap extends Component {
     //目前臺北市第一選區要不要塗綠色
     const {active_city, sub_active} = this.state;
     const styles = require('./ElectionMap.scss');
-    
+
     if( city_id === active_city && Number(sub_index) === Number(sub_active)){
        return styles.active;
 
@@ -109,7 +109,7 @@ export default class ElectionMap extends Component {
       sub_active : district_count
     })
   }
- 
+
   _handleSubdistrictsDisplay(districts){
     const {sub_active} = this.state;
     if(!sub_active) return;//還沒選子選區時
@@ -147,13 +147,13 @@ export default class ElectionMap extends Component {
       allCities.map((city, i)=>{
           let node = document.getElementById(city);
           //default color
-          node.setAttribute("fill", INACTIVE_COLOR); 
+          node.setAttribute("fill", INACTIVE_COLOR);
           //event listener
           node.addEventListener("mouseenter" , this._onMapEnter.bind(this, city));
-          node.addEventListener("mouseleave", this._onMapLeave.bind(this, city));  
+          node.addEventListener("mouseleave", this._onMapLeave.bind(this, city));
 
           //點選之後 show 詳細選區
-          node.addEventListener("click" , this._onMapClick.bind(this, city));  
+          node.addEventListener("click" , this._onMapClick.bind(this, city));
 
           //hover on 詳細選區
           let tryNext = true;
@@ -169,15 +169,15 @@ export default class ElectionMap extends Component {
           }
       });
 
-      
+
   }
   componentWillUnmount(){
 
       allCities.map((city, i)=>{
           let node = document.getElementById(city);
           node.removeEventListener("mouseenter" , this._onMapEnter.bind(this, city));
-          node.removeEventListener("mouseleave", this._onMapLeave.bind(this, city));  
-          node.removeEventListener("click" , this._onMapClick.bind(this, city)); 
+          node.removeEventListener("mouseleave", this._onMapLeave.bind(this, city));
+          node.removeEventListener("click" , this._onMapClick.bind(this, city));
 
           let tryNext = true;
           let subChildIndex = 1;
@@ -191,11 +191,12 @@ export default class ElectionMap extends Component {
               }
           }
       });
-    
+
   }
   render() {
     const styles = require('./ElectionMap.scss');
     const {active_city, sub_active} = this.state;
+    const shelfImg = require('./images/shelf.svg');
     let detailInfo;
 
     if(active_city && sub_active){
@@ -204,23 +205,24 @@ export default class ElectionMap extends Component {
           <div className={`${styles.info} ${this._showDetailStyle()}`}>
             <div className={styles.close}
                  onClick={this._resetMapClick.bind(this)}></div>
-            <Link to={`/constituencies/${active_city}/${sub_active}/`} 
+            <Link to={`/constituencies/${active_city}/${sub_active}/`}
                   className={styles.go}>
-              
+
               <div className={styles.name}>{db[active_city].name}{subInfo}選區</div>
               <div className={styles.prompt}>前往選區</div>
               <div className={styles.arrow}></div>
-              
+
             </Link>
             <div className={styles.detail}>{this._handleSubdistrictsDisplay(db[active_city].districts)}</div>
           </div>
         )
 
     }
-    
+
 
     return (
       <div className={styles.wrap}>
+        <img className={styles.shelf} src={shelfImg}/>
           <div className={styles.bigmap}>
               <svg x="0px" y="0px" width="800px" height="800px" viewBox="0 0 800 800">
                   <g id="background">
@@ -1234,7 +1236,7 @@ export default class ElectionMap extends Component {
                   </g>
               </svg>
           </div>
-      
+
           <div id="citymap" className={`${styles.cityMap} ${this._showDetailStyle()}`}>
               <div className={`${styles.city} ${this._activeClass('KEL')}`} id="citymap-KEL">
                 <div className={styles.title}>基隆市</div>
@@ -1574,7 +1576,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('TYN')}`} id="citymap-TYN">
                 <div className={styles.title}>桃園市</div>
                 <div className={styles.map}>
@@ -1659,7 +1661,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-              
+
               <div className={`${styles.city} ${this._activeClass('HCC')}`} id="citymap-HCC">
                 <div className={styles.title}>新竹市</div>
                 <div className={styles.map}>
@@ -1694,7 +1696,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('ZMI')}`} id="citymap-ZMI">
                 <div className={styles.title}>苗栗縣</div>
                 <div className={styles.map}>
@@ -1732,7 +1734,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('TXG')}`} id="citymap-TXG">
                 <div className={styles.title}>台中市</div>
                 <div className={styles.map}>
@@ -1843,7 +1845,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('CHW')}`} id="citymap-CHW">
                 <div className={styles.title}>彰化縣</div>
                 <div className={styles.map}>
@@ -1906,7 +1908,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('NAN')}`} id="citymap-NAN">
                 <div className={styles.title}>南投縣</div>
                 <div className={styles.map}>
@@ -1943,7 +1945,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('YLN')}`} id="citymap-YLN">
                 <div className={styles.title}>雲林縣</div>
                 <div className={styles.map}>
@@ -1975,7 +1977,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('CYI')}`} id="citymap-CYI">
                 <div className={styles.title}>嘉義縣</div>
                 <div className={styles.map}>
@@ -2011,7 +2013,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-              
+
               <div className={`${styles.city} ${this._activeClass('CYC')}`} id="citymap-CYC">
                 <div className={styles.title}>嘉義市</div>
                 <div className={styles.map}>
@@ -2092,7 +2094,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('KHH')}`} id="citymap-KHH">
                 <div className={styles.title}>高雄市</div>
                 <div className={styles.map}>
@@ -2358,7 +2360,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('MFK')}`} id="citymap-MFK">
                 <div className={styles.title}>連江縣</div>
                 <div className={styles.map}>
@@ -2376,7 +2378,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-  
+
               <div className={`${styles.city} ${this._activeClass('MAB')}`} id="citymap-MAB">
                 <div className={styles.title}>山地原住民</div>
                 <div className={styles.map}>
@@ -2407,7 +2409,7 @@ export default class ElectionMap extends Component {
                   </svg>
                 </div>
               </div>
-   
+
               {detailInfo}
           </div>
       </div>

@@ -9,17 +9,16 @@ import ElectionMap from '../../components/ElectionMap/ElectionMap.js';
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Constituencies extends Component {
-  
+
   render() {
     const styles = require('./Constituencies.scss');
-    
+
     return (
       <div className={styles.wrap}>
           <div className={styles.instruction}>
-              <p className={styles.paragraph}>每屆勇者大選，將開啟兩大戰場：勇者競技場和黨團衝突戰。</p>
-              <p className={styles.paragraph}>勇者競技場，全島分成 75 個不同區域。勇者將在每區競技場裡爭取各地島嶼主人的信任，取得代表民意的機會。誰能成為最終的競技場王者，就由觀戰的你來決定！</p>
-              <p className={styles.paragraph}>島嶼主人！請選出你想觀戰的競技場區域：</p>
-              
+              <p>勇者競技場，全島分成七十五個不同區域。勇者將在每區競技場裡競逐爭取島民們的信任，取得在立法聖殿中代表島民意志的機會。</p>
+              <p>誰能勝出？由島嶼主人的你來決定！</p>
+              <p>⬇︎⬇︎⬇︎請選擇你想觀戰的競技場⬇︎⬇︎⬇︎</p>
           </div>
           <ElectionMap />
           <div className={styles.bgHolder}></div>
@@ -27,5 +26,3 @@ export default class Constituencies extends Component {
     );
   }
 }
-
-

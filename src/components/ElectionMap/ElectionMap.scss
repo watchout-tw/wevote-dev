@@ -1,13 +1,18 @@
+@import '../../common.scss';
+
 $webVersionBreak: 800px;
 .wrap {
   display: block;
   margin: 0;
   padding: 0;
+  position: relative;
   font-family: sans-serif;
 }
-
+.shelf {
+  display: none;
+}
 .backgroundRect {
-  fill: rgba(175, 219, 220,0.7);
+  fill: none;//rgba(white,0.5);//rgba(175, 219, 220,0.7);
 }
 g {
   cursor: pointer;
@@ -16,8 +21,16 @@ g {
 	display: none;
 }
 @media all and (min-width: $webVersionBreak){
+  .shelf {
+    display: block;
+    margin: 0 auto;
+  }
 	.bigmap {
 		display: block;
+    position: absolute;
+    top: 50px; // shelf:900*900; map:800*800
+    left: 50%;
+    @include transform(translateX(-50%));
 	}
 }
 
@@ -30,8 +43,11 @@ g {
 	}
 /* 詳細選區 */
 @media all and (min-width: $webVersionBreak){
+  .cityMap {
+    z-index: 90;
+  }
 	.cityMap.active {
-	  	background: rgba(0,0,0,0.8);
+	  	background: rgba(0,0,0,0.75);
 	  	position: fixed;
 	  	left: 0;
 	  	right: 0;
@@ -44,7 +60,7 @@ g {
 
 .city {
   fill: white;
-  marign: 0 auto;
+  margin: 0 auto;
   background: #9ce5ff;
   padding: 30px 0;
   font-size: 22px;
@@ -61,6 +77,9 @@ g {
 @media all and (min-width: $webVersionBreak){
 	.city {
 	  	display: none;
+      > .title {
+        display: none;
+      }
 	}
 	.city.active {
 	  	display: block;
@@ -73,10 +92,10 @@ g {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -55%);
+      @include transform(translate(-50%, -40%));
 	}
   .city.active#citymap-NTC{
-      transform: translate(-50%, -45%);
+
   }
   .city.active:after {
     width: 0;
@@ -108,14 +127,14 @@ $selectColor: #00ffb0;
 }
 /* 處理手機部分某些縣市需要 transform */
 .citymapNTC {
-	transform: translate3d(-360px,0,0) translateX(50vw);
+	@include transform(translate3d(-360px,0,0) translateX(50vw));
 }
 .citymapKHH {
-	transform: translate3d(-140px,0,0) translateX(50vw);
+	@include transform(translate3d(-140px,0,0) translateX(50vw));
 }
 @media all and (min-width: 1015px){
 	.citymapNTC, .citymapKHH {
-		transform: none;
+		@include transform(none);
 	}
 }
 
@@ -142,10 +161,10 @@ $selectColor: #00ffb0;
       position: absolute;
       top: calc(50% - 1px);
       left: 0;
-      transform: rotate(45deg);
+      @include transform(rotate(45deg));
     }
     &:after {
-      transform: rotate(-45deg);
+      @include transform(rotate(-45deg));
     }
 }
 /* 詳細選區: xx市, xx區 */
@@ -186,9 +205,11 @@ $selectColor: #00ffb0;
       position: absolute;
       top: calc(50% - 1px);
       left: 0;
-      transform: rotate(45deg); }
+      @include transform(rotate(45deg));
+    }
     .info > .close:after {
-      transform: rotate(-45deg); }
+      @include transform(rotate(-45deg));
+    }
 
   .info > .go {
     display: block;
@@ -231,10 +252,12 @@ $selectColor: #00ffb0;
         left: calc(50% - 3px); }
       .info > .go > .arrow:before {
         top: -8px;
-        transform: rotate(45deg); }
+        @include transform(rotate(45deg));
+      }
       .info > .go > .arrow:after {
         top: 8px;
-        transform: rotate(-45deg); }
+        @include transform(rotate(-45deg));
+      }
   .info > .detail {
     margin: 7px 14px 14px 14px;
     font-size: 14px; }
@@ -243,7 +266,7 @@ $selectColor: #00ffb0;
     vertical-align: top;
     margin-right: 1em; }
   .info .boroughs {
-    font-size: 11px; 
+    font-size: 11px;
 	margin-top: 5px; }
     .info .boroughs .borough {
       display: inline-block;
@@ -258,4 +281,3 @@ $selectColor: #00ffb0;
     background: none; }
     .info > .close:hover {
       background: #ff0055; }
-
