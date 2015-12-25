@@ -12,10 +12,13 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 import getDistrictLegislators from '../../utils/getDistrictLegislators'; //現任立委資訊
 import getPeopleTableData from '../../utils/getPeopleTableData';
+
+import getRecords from '../../data/getRecords';
+const records = getRecords();
+
 @connect(
     state => ({
       legislators: state.legislators,
-      records: state.records,
       issues: state.issues,
       candidates: state.candidates
     }),
@@ -24,7 +27,7 @@ import getPeopleTableData from '../../utils/getPeopleTableData';
 export default class Constituency extends Component {
 
   constructor(props){ super(props)
-    const {records, issues, legislators, candidates} = props;
+    const {issues, legislators, candidates} = props;
     const {area, areaNo} = props.params;
 
     let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);

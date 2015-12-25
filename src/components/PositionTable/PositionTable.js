@@ -14,8 +14,10 @@ import getPartiesTableData from '../../utils/getPartiesTableData';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleTableData from '../../utils/getPeopleTableData';
 
-
 import eng2url from '../../utils/eng2url';
+
+import getRecords from '../../data/getRecords';
+const records = getRecords();
 
 function countLevel(count){
   let num = Number(count);
@@ -35,7 +37,6 @@ function countLevel(count){
 
 @connect(
     state => ({
-      records: state.records,
       issues: state.issues,
       partyPromises: state.partyPromises,
       legislators: state.legislators
@@ -46,7 +47,7 @@ export default class PositionTable extends Component {
   static propTypes = {
   }
   constructor(props){ super(props)
-      const {records, issues, partyPromises, legislators} = props;
+      const {issues, partyPromises, legislators} = props;
       const {unit, districtCandidates} = props;
       
       //calculate positions

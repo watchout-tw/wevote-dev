@@ -12,10 +12,11 @@ import getPeopleTableData from '../../utils/getPeopleTableData';
 
 import eng2url from '../../utils/eng2url';
 
+import getRecords from '../../data/getRecords';
+const records = getRecords();
 
 @connect(
     state => ({
-      records: state.records,
       issues: state.issues,
       partyPromises: state.partyPromises,
       legislators: state.legislators,
@@ -24,11 +25,9 @@ import eng2url from '../../utils/eng2url';
     dispatch => bindActionCreators({}, dispatch))
 
 export default class BillTable extends Component {
-  static propTypes = {
-  }
   constructor(props){ super(props)
       //calculate party positions
-      const {records, issues, partyPromises, districtCandidates, unit} = props;
+      const {issues, partyPromises, districtCandidates, unit} = props;
       let tableData;
 
       if(unit === "parties"){
@@ -36,7 +35,7 @@ export default class BillTable extends Component {
         tableData = getPartiesTableData(partyPositions, partyPromises);
       
       }else{//unit === "people"
-        let legislatorPositions = parseToLegislatorPosition(props.records, props.issues, props.legislators);
+        let legislatorPositions = parseToLegislatorPosition(records, props.issues, props.legislators);
         tableData = getPeopleTableData(legislatorPositions, districtCandidates);
       }
 

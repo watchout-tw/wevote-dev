@@ -12,10 +12,12 @@ import url2eng from '../../utils/url2eng';
 import eng2cht from '../../utils/eng2cht';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
+import getRecords from '../../data/getRecords';
+const records = getRecords();
+
 @connect(
     state => ({
                  legislators: state.legislators,
-                 records: state.records,
                  issues: state.issues
                }),
     dispatch => bindActionCreators({}, dispatch))
@@ -23,14 +25,13 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 export default class PartyIssue extends Component {
   static propTypes = {
       legislators: PropTypes.object.isRequired,
-      records: PropTypes.object.isRequired,
       issues: PropTypes.object.isRequired
   }
   //設定 initial state
   constructor(props) { super(props)
       this.state = {
           showMenu: false,
-          partyPositions: parseToPartyPosition(props.records, props.issues)
+          partyPositions: parseToPartyPosition(records, props.issues)
       }
   }
   _toggleMenu(){

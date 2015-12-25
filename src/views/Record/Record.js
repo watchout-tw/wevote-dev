@@ -14,22 +14,24 @@ import peopleInfo from '../../utils/peopleInfo';
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 
+import getRecords from '../../data/getRecords';
+const records = getRecords();
+
 @connect(
-    state => ({legislators: state.legislators,
-               issues: state.issues,
-               records: state.records
-               }),
+    state => ({
+      legislators: state.legislators,
+      issues: state.issues
+    }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Record extends Component {
   static propTypes = {
       issues: PropTypes.object.isRequired,
-      records: PropTypes.object.isRequired,
       legislators: PropTypes.object.isRequired
   }
   constructor(props){ super(props)
       this.state = {
-        legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
+        legislatorPositions: parseToLegislatorPosition(records, props.issues, props.legislators)
       }
   }
   componentDidMount(){
@@ -38,7 +40,7 @@ export default class Record extends Component {
 
   render() {
     const styles = require('./Record.scss');
-    const {records, issues, legislators} = this.props;
+    const {issues, legislators} = this.props;
     const recordId = this.props.params.recordId;
 
     const data = records[recordId];

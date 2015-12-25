@@ -14,10 +14,12 @@ import parseToPartyView from '../../utils/parseToPartyView';
 import parseToLegislatorView from '../../utils/parseToLegislatorView';
 import parseToPositionView from '../../utils/parseToPositionView';
 
+import getRecords from '../../data/getRecords';
+const records = getRecords();
+
 @connect(
     state => ({ 
                 issues: state.issues,
-                records: state.records,
                 parties: state.parties
               }),
     dispatch => bindActionCreators({}, dispatch))
@@ -26,13 +28,12 @@ export default class IssueFigure extends Component {
     static propTypes = {
         records: PropTypes.object.isRequired
     }
-
     constructor(props){ super(props)
       
         this.state = {
-           partyView: parseToPartyView(props.records, props.issues),
-           legislatorView: parseToLegislatorView(props.records, props.issues),
-           positionView: parseToPositionView(props.records, props.issues),
+           partyView: parseToPartyView(records, props.issues),
+           legislatorView: parseToLegislatorView(records, props.issues),
+           positionView: parseToPositionView(records, props.issues),
 
            userPosition: {
              "marriage-equality" : "none",

@@ -16,6 +16,10 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleDistrict from '../../utils/getPeopleDistrict';
 import identity from '../../utils/identity';
 import district2cht from '../../utils/district2cht';
+
+import getRecords from '../../data/getRecords';
+const records = getRecords();
+
 /*
 :category => {"records", "promises", "story"}
 歷史紀錄
@@ -25,18 +29,17 @@ import district2cht from '../../utils/district2cht';
 
 @connect(
     state => ({  
-                 legislators: state.legislators,
-                 candidates: state.candidates,
-                 records: state.records,
-                 issues: state.issues,
-                 people: state.people
-               }),
+        legislators: state.legislators,
+        candidates: state.candidates,
+        issues: state.issues,
+        people: state.people
+    }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class People extends Component {
   constructor(props){ super(props)
       this.state = {
-        legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators),
+        legislatorPositions: parseToLegislatorPosition(records, props.issues, props.legislators),
         districtData: getPeopleDistrict(props.legislators, props.candidates, props.params.peopleId)
       }
       //console.log(parseToLegislatorPosition(props.records, props.issues, props.legislators))

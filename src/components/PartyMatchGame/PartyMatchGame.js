@@ -15,19 +15,18 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 import getPartiesMatchgameData from '../../utils/getPartiesMatchgameData';
 import scrollTo from '../../utils/scrollTo';
 
+import getRecords from '../../data/getRecords';
+const records = getRecords();
+
 @connect(
     state => ({
       legislators: state.legislators,
-      records: state.records,
       issues: state.issues,
       partyPromises: state.partyPromises
     }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class PartyMatchGame extends Component {
-  static propTypes = {
-      issues: PropTypes.object.isRequired
-  }
   constructor(props){ super(props)
       //prepare qa set
       let qaSet = Object.keys(props.issues).map((issueUrl, index)=>{
@@ -69,7 +68,7 @@ export default class PartyMatchGame extends Component {
 
       // 使用者選擇要用過去或是承諾
       // update match data, prepare party position
-      const {records, issues, partyPromises} = this.props;
+      const {issues, partyPromises} = this.props;
      
       // 計算新的比對資料
       let partyPositions = parseToPartyPosition(records, issues);

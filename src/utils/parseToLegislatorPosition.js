@@ -60,7 +60,7 @@ function saveToJson(LegislatorPosition){
         
     });
 
-    fs.writeFile('./data/OutputLegislators.json', JSON.stringify(OutputLegislators, null, 4), function (err) {
+    fs.writeFile('./yahoo/OutputLegislators.json', JSON.stringify(OutputLegislators, null, 4), function (err) {
         if (err) return console.log(err);
         console.log('OutputLegislators.json is saved.');
     });

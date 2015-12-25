@@ -18,6 +18,9 @@ import people_name2id from '../../utils/people_name2id';
 import is8thLegislator from '../../utils/is8thLegislator';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
+import getRecords from '../../data/getRecords';
+const records = getRecords();
+
 /*
 :category => {"records", "promises", "list"}
 歷史紀錄
@@ -28,7 +31,6 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 @connect(
     state => ({
                  legislators: state.legislators,
-                 records: state.records,
                  issues: state.issues,
                  parties: state.parties,
                  partyPromises: state.partyPromises
@@ -38,7 +40,7 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 export default class Party extends Component {
   constructor(props){ super(props)
       this.state = {
-        partyPositions: parseToPartyPosition(props.records, props.issues)
+        partyPositions: parseToPartyPosition(records, props.issues)
       }
   }
   render() {
