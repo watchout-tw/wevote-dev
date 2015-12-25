@@ -1548,28 +1548,28 @@ export default class ElectionMap extends Component {
                             C421.491,331.427,422.518,331.786,423.328,332.507z"/>
                         </g>
                         <g>
-                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeMiterlimit="10" x1="431.799" y1="337.614" x2="448.799" y2="337.614"/>
-                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="444.541,341.872 448.799,337.614 444.541,333.355       "/>
+                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" x1="431.799" y1="337.614" x2="448.799" y2="337.614"/>
+                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="444.541,341.872 448.799,337.614 444.541,333.355       "/>
                         </g>
                         <g>
-                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeMiterlimit="10" x1="456.599" y1="337.614" x2="473.599" y2="337.614"/>
-                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="469.341,341.872 473.599,337.614 469.341,333.355       "/>
+                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" x1="456.599" y1="337.614" x2="473.599" y2="337.614"/>
+                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="469.341,341.872 473.599,337.614 469.341,333.355       "/>
                         </g>
                         <g>
-                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeMiterlimit="10" x1="481.399" y1="337.614" x2="498.399" y2="337.614"/>
-                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="494.141,341.872 498.399,337.614 494.141,333.355       "/>
+                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" x1="481.399" y1="337.614" x2="498.399" y2="337.614"/>
+                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="494.141,341.872 498.399,337.614 494.141,333.355       "/>
                         </g>
                         <g>
-                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeMiterlimit="10" x1="506.199" y1="337.614" x2="523.199" y2="337.614"/>
-                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="518.941,341.872 523.199,337.614 518.941,333.355       "/>
+                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" x1="506.199" y1="337.614" x2="523.199" y2="337.614"/>
+                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="518.941,341.872 523.199,337.614 518.941,333.355       "/>
                         </g>
                         <g>
-                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeMiterlimit="10" x1="530.999" y1="337.614" x2="547.999" y2="337.614"/>
-                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="543.741,341.872 547.999,337.614 543.741,333.355       "/>
+                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" x1="530.999" y1="337.614" x2="547.999" y2="337.614"/>
+                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="543.741,341.872 547.999,337.614 543.741,333.355       "/>
                         </g>
                         <g>
-                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeMiterlimit="10" x1="555.799" y1="337.614" x2="572.799" y2="337.614"/>
-                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" stroke-linecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="568.541,341.872 572.799,337.614 568.541,333.355       "/>
+                          <line fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" x1="555.799" y1="337.614" x2="572.799" y2="337.614"/>
+                          <polyline fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="568.541,341.872 572.799,337.614 568.541,333.355       "/>
                         </g>
                       </g>
                     </g>
