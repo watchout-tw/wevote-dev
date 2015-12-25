@@ -12,10 +12,6 @@ import RecordPost from '../RecordPost/RecordPost';
 import ReactSwipe from 'react-swipe';
 import moment from 'moment';
 
-@connect(
-    state => ({ MaXiRecords: state.MaXiRecords }),
-    dispatch => bindActionCreators({}, dispatch))
-
 export default class LegislatorCards extends Component {
   static propTypes = {
   }

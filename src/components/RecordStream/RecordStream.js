@@ -9,10 +9,6 @@ import people_name2id from '../../utils/people_name2id';
 import PeoplePhoto from '../PeoplePhoto/PeoplePhoto';
 import RecordPost from '../RecordPost/RecordPost';
 
-@connect(
-    state => ({  MaXiRecords: state.MaXiRecords }),
-    dispatch => bindActionCreators({}, dispatch))
-
 export default class RecordStream extends Component {
   static propTypes = {
   }
