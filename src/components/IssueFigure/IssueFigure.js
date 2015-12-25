@@ -21,16 +21,18 @@ export default class IssueFigure extends Component {
     constructor(props){ super(props)
       
         this.state = {
-           partyView: parseToPartyView(records, issues),
-           legislatorView: parseToLegislatorView(records, issues),
-           positionView: parseToPositionView(records, issues),
+          partyView: parseToPartyView(records, issues),
+          legislatorView: parseToLegislatorView(records, issues),
+          positionView: parseToPositionView(records, issues),
 
-           userPosition: {
+          userPosition: {
              "marriage-equality" : "none",
              "recall" : "none",
              "referendum" : "none",
-             "nuclear-power" : "none"
-           }
+             "nuclear-power" : "none",
+             "course-guide" : "none",
+             "justice-reform" : "none"
+          }
         }
     }
 
