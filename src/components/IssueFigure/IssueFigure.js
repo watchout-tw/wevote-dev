@@ -9,7 +9,6 @@ import PositionLegislatorGroup from '../../components/PositionLegislatorGroup/Po
 import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPartyGroup.js';
 import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 
-import {getAllRecords} from '../../ducks/records';
 import parseToPartyView from '../../utils/parseToPartyView';
 import parseToLegislatorView from '../../utils/parseToLegislatorView';
 import parseToPositionView from '../../utils/parseToPositionView';
