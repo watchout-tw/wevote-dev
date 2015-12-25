@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 
 import getData from '../../data/getData';
-const {FAQ_DATA} = getData().FAQ;
+const FAQ_DATA = getData().FAQ;
 
 export default class FAQ extends Component {
 
