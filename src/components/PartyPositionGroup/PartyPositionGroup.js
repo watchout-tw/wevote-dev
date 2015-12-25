@@ -8,69 +8,6 @@ import position2color from '../../utils/position2color';
 import rectInCircleLayoutWrap from '../../utils/rectInCircleLayoutWrap';
 import rectInCircleLayoutSVG from '../../utils/rectInCircleLayoutSVG';
 
-class Record extends Component {
-  static propTypes = {
-    data : PropTypes.object.isRequired
-  }
-  constructor(props){super(props)
-    this.state = {
-      active: false
-    }
-  }
-  _toggleActive(value, event){
-    this.setState({
-      active: value
-    })
-  }
-
-  render() {
-    const styles = require('./PartyPositionGroup.scss');
-    const {data} = this.props;
-    const {active} = this.state;
-
-    let date = moment.unix(data.date);
-
-    let cubeActiveStyle = (active) ? styles.positionCubeActive : "";
-
-    //是否為黨團
-    let isCaucus = (data.legislator.indexOf("黨團")!== -1);
-    let caucusStyle = isCaucus ? styles.caucus : "";
-
-    /* active record */
-    let detailText;
-    if(active){
-          let preview = (data.content.length > 60) ? data.content.slice(0,60)+" ..." : data.content;
-          detailText =  (
-          <div className={styles.activeBlock}>
-              <Link to={`/records/${data.id}`} className={styles.activeCube}>
-                  <div className={styles.activeContent}>
-                    <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
-                    <div>{preview}</div>
-                  </div>
-              </Link>
-          </div>);
-    }
-
-
-    return (
-      <div className={styles.positionWrap}>
-          {detailText}
-
-          <Link to={`/records/${data.id}`}
-                className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]} ${caucusStyle }`}
-                onMouseEnter={this._toggleActive.bind(this, true)}
-                onMouseLeave={this._toggleActive.bind(this, false)}>
-          </Link>
-
-      </div>
-    )
-  }
-
-  props = {
-    className: ''
-  }
-}
-
 export default class PartyPositionGroup extends Component {
   static propTypes = {
   }
@@ -241,6 +178,69 @@ export default class PartyPositionGroup extends Component {
         </div>
       </div>
     );
+  }
+
+  props = {
+    className: ''
+  }
+}
+
+class Record extends Component {
+  static propTypes = {
+    data : PropTypes.object.isRequired
+  }
+  constructor(props){super(props)
+    this.state = {
+      active: false
+    }
+  }
+  _toggleActive(value, event){
+    this.setState({
+      active: value
+    })
+  }
+
+  render() {
+    const styles = require('./PartyPositionGroup.scss');
+    const {data} = this.props;
+    const {active} = this.state;
+
+    let date = moment.unix(data.date);
+
+    let cubeActiveStyle = (active) ? styles.positionCubeActive : "";
+
+    //是否為黨團
+    let isCaucus = (data.legislator.indexOf("黨團")!== -1);
+    let caucusStyle = isCaucus ? styles.caucus : "";
+
+    /* active record */
+    let detailText;
+    if(active){
+          let preview = (data.content.length > 60) ? data.content.slice(0,60)+" ..." : data.content;
+          detailText =  (
+          <div className={styles.activeBlock}>
+              <Link to={`/records/${data.id}`} className={styles.activeCube}>
+                  <div className={styles.activeContent}>
+                    <div>{date.format('YYYY-MM-DD')} / {data.legislator} / {data.meetingCategory}</div>
+                    <div>{preview}</div>
+                  </div>
+              </Link>
+          </div>);
+    }
+
+
+    return (
+      <div className={styles.positionWrap}>
+          {detailText}
+
+          <Link to={`/records/${data.id}`}
+                className={` ${styles.positionCube} ${cubeActiveStyle} ${styles[data.position]} ${caucusStyle }`}
+                onMouseEnter={this._toggleActive.bind(this, true)}
+                onMouseLeave={this._toggleActive.bind(this, false)}>
+          </Link>
+
+      </div>
+    )
   }
 
   props = {

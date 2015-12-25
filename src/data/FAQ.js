@@ -1,4 +1,4 @@
-const initialState = {
+const FAQ = {
    "data" : [
     {
       "question" : "你們如何整理及判斷立委表態、政黨表態的資料？",
@@ -53,13 +53,7 @@ const initialState = {
    ]
    
 }
-
-
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    
-    default:
-      return state;
-  }
+export default function get(){
+    return FAQ;
 }
 

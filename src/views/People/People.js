@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
-import { connect } from 'react-redux';
 
 import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
@@ -17,11 +15,6 @@ import getPeopleDistrict from '../../utils/getPeopleDistrict';
 import identity from '../../utils/identity';
 import district2cht from '../../utils/district2cht';
 
-import getRecords from '../../data/getRecords';
-const records = getRecords();
-import getCandidates from '../../data/getCandidates';
-const candidates = getCandidates();
-
 /*
 :category => {"records", "promises", "story"}
 歷史紀錄
@@ -29,21 +22,16 @@ const candidates = getCandidates();
 人物誌
 */
 
-@connect(
-    state => ({  
-        legislators: state.legislators,
-        issues: state.issues,
-        people: state.people
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, issues, legislators, candidates, people} = getData();
+
 
 export default class People extends Component {
   constructor(props){ super(props)
       this.state = {
-        legislatorPositions: parseToLegislatorPosition(records, props.issues, props.legislators),
-        districtData: getPeopleDistrict(props.legislators, candidates, props.params.peopleId)
+        legislatorPositions: parseToLegislatorPosition(records, issues, legislators),
+        districtData: getPeopleDistrict(legislators, candidates, props.params.peopleId)
       }
-      //console.log(parseToLegislatorPosition(props.records, props.issues, props.legislators))
   }
   render() {
     const styles = require('./People.scss');
@@ -52,7 +40,6 @@ export default class People extends Component {
     const category = this.props.params.category;
 
     //立委基本資料
-    const {legislators, people} = this.props;
     const currentPeople = people[id];
     //是否為第八屆立委，是否為第九屆區域立委參選人
     

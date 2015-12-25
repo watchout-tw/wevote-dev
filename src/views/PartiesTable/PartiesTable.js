@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import classnames from 'classnames';
 import DocumentMeta from 'react-document-meta';
@@ -13,19 +11,11 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 import getPartiesTableData from '../../utils/getPartiesTableData';
 import eng2url from '../../utils/eng2url';
 
-@connect(
-    state => ({
-      issues: state.issues,
-      partyPromises: state.partyPromises
-    }),
-    dispatch => bindActionCreators({}, dispatch))
-
 export default class PartiesTable extends Component {
   
   render() {
     const styles = require('./PartiesTable.scss');
    
-
     //seo
     const title = `政黨票投票攻略-各政黨表態及法案大公開-沃草2016立委出任務`;
     const description = `2016立委選舉「政黨票」怎麼投？想知道各政黨對於議題表態與優先法案嗎？各政黨未來承諾大公開，政黨票投票最佳攻略！`;

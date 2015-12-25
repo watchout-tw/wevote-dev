@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
-import { connect } from 'react-redux';
 import moment from 'moment';
 
 import cht2url from '../../utils/cht2url';
@@ -15,23 +13,12 @@ import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 
 import getData from '../../data/getData';
-const {records} = getData();
-
-@connect(
-    state => ({
-      legislators: state.legislators,
-      issues: state.issues
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+const {records, issues, legislators} = getData();
 
 export default class Record extends Component {
-  static propTypes = {
-      issues: PropTypes.object.isRequired,
-      legislators: PropTypes.object.isRequired
-  }
   constructor(props){ super(props)
       this.state = {
-        legislatorPositions: parseToLegislatorPosition(records, props.issues, props.legislators)
+        legislatorPositions: parseToLegislatorPosition(records, issues, legislators)
       }
   }
   componentDidMount(){
@@ -40,7 +27,6 @@ export default class Record extends Component {
 
   render() {
     const styles = require('./Record.scss');
-    const {issues, legislators} = this.props;
     const recordId = this.props.params.recordId;
 
     const data = records[recordId];

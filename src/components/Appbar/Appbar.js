@@ -5,11 +5,8 @@ import {connect} from 'react-redux';
 import {setToProecessing} from '../../ducks/processingState.js';
 
 @connect(
-    state => ({
-                issues: state.issues
-              }),
+    state => ({}),
     dispatch => bindActionCreators({setToProecessing}, dispatch))
-
 export default class Appbar extends Component {
   constructor(props){ super(props)
     const {params} = props;
@@ -68,7 +65,7 @@ export default class Appbar extends Component {
     const styles = require('./Appbar.scss');
     const siteLogo = require('./images/logo-3.svg');
     const {showMenu, location, issueName} = this.state;
-    const {currentIssueName, issues} = this.props;
+    const {currentIssueName} = this.props;
     const {processing} = this.props;
 
     let showStyle = (showMenu) ? styles.showMenu : "";

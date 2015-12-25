@@ -8,8 +8,11 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {setToProecessing} from '../../ducks/processingState.js';
 
+import getData from '../../data/getData';
+const {issues} = getData();
+
 @connect(
-    state => ({ issues: state.issues }),
+    state => ({}),
     dispatch => bindActionCreators({setToProecessing}, dispatch))
 export default class Missions extends Component {
   static propTypes = {
@@ -39,7 +42,6 @@ export default class Missions extends Component {
   _checkLocalStorage(){
       const {checkedLocal} = this.state;
       if(window && checkedLocal === false){
-          const {issues} = this.props;
           const {completed} = this.state;
 
           Object.keys(issues).map((currentIssueName, index)=>{
@@ -62,7 +64,7 @@ export default class Missions extends Component {
 
   render() {
     const styles = require('./Missions.scss');
-    const {skipIssue, showComingMission, embed, shipmentsType, issues} = this.props;
+    const {skipIssue, showComingMission, embed, shipmentsType} = this.props;
     
     const {completed, shipments} = this.state;
     const castle_default = require('./images/castles_default.svg');

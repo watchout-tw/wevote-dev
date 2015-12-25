@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import classnames from 'classnames';
 import DocumentMeta from 'react-document-meta';
@@ -13,11 +11,7 @@ import getPartiesTableData from '../../utils/getPartiesTableData';
 
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleTableData from '../../utils/getPeopleTableData';
-
 import eng2url from '../../utils/eng2url';
-
-import getRecords from '../../data/getRecords';
-const records = getRecords();
 
 function countLevel(count){
   let num = Number(count);
@@ -35,19 +29,13 @@ function countLevel(count){
   }
 }
 
-@connect(
-    state => ({
-      issues: state.issues,
-      partyPromises: state.partyPromises,
-      legislators: state.legislators
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {issues, records, partyPromises, legislators} = getData();
 
 export default class PositionTable extends Component {
   static propTypes = {
   }
   constructor(props){ super(props)
-      const {issues, partyPromises, legislators} = props;
       const {unit, districtCandidates} = props;
       
       //calculate positions
@@ -107,7 +95,6 @@ export default class PositionTable extends Component {
      window.removeEventListener("scroll", this._onScroll.bind(this));
   }
   _recordsOrPromises(unitId){
-      const {legislators} = this.props;
       const {unit} = this.props;
 
       if(unit === "parties"){
@@ -127,7 +114,7 @@ export default class PositionTable extends Component {
   }
   render() {
     const styles = require('./PositionTable.scss');
-    const {issues, unit} = this.props;
+    const {unit} = this.props;
     const {tableData, focus} = this.state;
 
     let imgHub = {};

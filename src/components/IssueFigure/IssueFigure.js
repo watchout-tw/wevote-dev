@@ -1,7 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
-import {connect} from 'react-redux';
 import IssueController from '../../components/IssueController/IssueController.js';
 
 import PartyPositionGroup from '../../components/PartyPositionGroup/PartyPositionGroup.js';
@@ -13,15 +11,8 @@ import parseToPartyView from '../../utils/parseToPartyView';
 import parseToLegislatorView from '../../utils/parseToLegislatorView';
 import parseToPositionView from '../../utils/parseToPositionView';
 
-import getRecords from '../../data/getRecords';
-const records = getRecords();
-
-@connect(
-    state => ({ 
-                issues: state.issues,
-                parties: state.parties
-              }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, issues, parties} = getData();
 
 export default class IssueFigure extends Component {
     static propTypes = {
@@ -30,9 +21,9 @@ export default class IssueFigure extends Component {
     constructor(props){ super(props)
       
         this.state = {
-           partyView: parseToPartyView(records, props.issues),
-           legislatorView: parseToLegislatorView(records, props.issues),
-           positionView: parseToPositionView(records, props.issues),
+           partyView: parseToPartyView(records, issues),
+           legislatorView: parseToLegislatorView(records, issues),
+           positionView: parseToPositionView(records, issues),
 
            userPosition: {
              "marriage-equality" : "none",
@@ -65,7 +56,6 @@ export default class IssueFigure extends Component {
     render(){
       const styles = require('./IssueFigure.scss');  
       const {currentView, currentIssue, currentIssueName, setCurrentView} = this.props;
-      const {parties} = this.props;
       const {partyView, legislatorView, positionView, userPosition} = this.state;
 
 

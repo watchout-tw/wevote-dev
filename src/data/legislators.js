@@ -1,4 +1,4 @@
-const initialState = {
+const legislators = {
     "1": {
         "id": 1,
         "name": "丁守中",
@@ -1802,12 +1802,6 @@ const initialState = {
         "hasResigned": false
     }
 }
-
-
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    default:
-      return state;
-  }
+export default function get(){
+    return legislators;
 }
-

@@ -1,22 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from "react-router";
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
 import classnames from 'classnames';
 import moment from 'moment';
 
 import handlePos from '../../utils/handlePos';
 
-@connect(
-    state => ({}),
-    dispatch => bindActionCreators({}, dispatch))
-
 export default class RecordPost extends Component {
-  static propTypes = {
-  }
-  constructor(props){ super(props)
-
-  }
   render() {
     const styles = require('./RecordPost.scss');
     const {totalLength, r} = this.props;

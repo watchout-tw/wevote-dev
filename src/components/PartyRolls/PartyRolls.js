@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import classnames from 'classnames';
 import PKer from '../../components/PKer/PKer';
 import is8thLegislator from '../../utils/is8thLegislator';
-@connect(
-    state => ({ partyBlock: state.partyBlock }),
-    dispatch => bindActionCreators({}, dispatch))
+
+import getData from '../../data/getData';
+const {parties, partyBlock} = getData();
+
 export default class PartyRolls extends Component {
     constructor(props){ super(props)
         this.state = {
@@ -48,7 +47,7 @@ export default class PartyRolls extends Component {
     }
     render(){
       const styles = require("./PartyRolls.scss");
-      const {partyBlock, onSetStage} = this.props;
+      const {onSetStage} = this.props;
       const {focus, showMenu, outside} = this.state;
 
       /* current display party */
@@ -154,16 +153,9 @@ export default class PartyRolls extends Component {
    }
 }
 
-@connect(
-    state => ({
-                parties: state.parties,
-                partyBlock: state.partyBlock
-              }),
-    dispatch => bindActionCreators({}, dispatch))
-
 class PartyMenu extends Component {
   constructor(props){ super(props)
-    const {partyBlock, parties} = props;
+    
     //prepare 左右兩邊的政黨列表
     let side1parties = [], side2parties = [];
     Object.keys(partyBlock)

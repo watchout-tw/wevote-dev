@@ -1,14 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from "react-router";
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
 import classnames from 'classnames';
 import eng2cht from '../../utils/eng2cht';
 import scrollTo from '../../utils/scrollTo';
-
-@connect(
-    state => ({}),
-    dispatch => bindActionCreators({}, dispatch))
 
 export default class QAItem extends Component {
   static propTypes = {   

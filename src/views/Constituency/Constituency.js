@@ -1,8 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
-import {connect} from 'react-redux';
 
 import CandidateProfileCards from '../../components/CandidateProfileCards/CandidateProfileCards.js';
 import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
@@ -13,22 +11,12 @@ import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區�
 import getDistrictLegislators from '../../utils/getDistrictLegislators'; //現任立委資訊
 import getPeopleTableData from '../../utils/getPeopleTableData';
 
-import getRecords from '../../data/getRecords';
-const records = getRecords();
-import getCandidates from '../../data/getCandidates';
-const candidates = getCandidates();
-
-@connect(
-    state => ({
-      legislators: state.legislators,
-      issues: state.issues
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, legislators, candidates, issues} = getData();
 
 export default class Constituency extends Component {
 
   constructor(props){ super(props)
-    const {issues, legislators} = props;
     const {area, areaNo} = props.params;
 
     let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);

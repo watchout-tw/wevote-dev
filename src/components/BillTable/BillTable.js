@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import classnames from 'classnames';
 
@@ -12,22 +10,13 @@ import getPeopleTableData from '../../utils/getPeopleTableData';
 
 import eng2url from '../../utils/eng2url';
 
-import getRecords from '../../data/getRecords';
-const records = getRecords();
-
-@connect(
-    state => ({
-      issues: state.issues,
-      partyPromises: state.partyPromises,
-      legislators: state.legislators,
-      dataMeta: state.dataMeta
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, issues, legislators, partyPromises, dataMeta} = getData();
 
 export default class BillTable extends Component {
   constructor(props){ super(props)
       //calculate party positions
-      const {issues, partyPromises, districtCandidates, unit} = props;
+      const {districtCandidates, unit} = props;
       let tableData;
 
       if(unit === "parties"){
@@ -35,7 +24,7 @@ export default class BillTable extends Component {
         tableData = getPartiesTableData(partyPositions, partyPromises);
       
       }else{//unit === "people"
-        let legislatorPositions = parseToLegislatorPosition(records, props.issues, props.legislators);
+        let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
         tableData = getPeopleTableData(legislatorPositions, districtCandidates);
       }
 
@@ -92,8 +81,7 @@ export default class BillTable extends Component {
   }
   render() {
     const styles = require('./BillTable.scss');
-    const {issues, dataMeta,
-           showTitle, outerLink, unit} = this.props;
+    const {showTitle, outerLink, unit} = this.props;
     
     const {tableData, focus} = this.state;
    
@@ -102,7 +90,6 @@ export default class BillTable extends Component {
     
     let outerLinkItem = (outerLink) ? <img src={externalIconImg} 
                                            className={styles.exLink}/> : "";
-
 
     let unitBills = Object.keys(tableData).map((unitId, i)=>{
         let unitData = tableData[unitId];

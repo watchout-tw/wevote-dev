@@ -1,4 +1,4 @@
-const initialState = {
+const parties = {
     "KMT": {
         "id": "KMT",
         "name": "中國國民黨",
@@ -140,11 +140,6 @@ const initialState = {
         "side" : 2
     }    
 };
-
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    default:
-      return state;
-  }
+export default function get(){
+    return parties;
 }
-

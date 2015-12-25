@@ -1,15 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
-import { connect } from 'react-redux';
 
 import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar.js';
-
 import people_name2id from '../../utils/people_name2id';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
-
-import getRecords from '../../data/getRecords';
-const records = getRecords();
 
 //目前有資料的議題
 const IssueList = [
@@ -43,13 +37,10 @@ const IssueList = [
          "cht": "司",
          "url": "justice-reform"
      }
-]
-@connect(
-    state => ({
-                  legislators: state.legislators,
-                  issues: state.issues
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+];
+
+import getData from '../../data/getData';
+const {records, legislators, issues} = getData();
 
 export default class LegislatorList extends Component {
   static propTypes = {
@@ -66,7 +57,7 @@ export default class LegislatorList extends Component {
           "courseGuide" : "none",
           "justiceReform" : "none"
         },
-        legislatorPositions: parseToLegislatorPosition(records, props.issues, props.legislators)
+        legislatorPositions: parseToLegislatorPosition(records, issues, legislators)
       }
   }
 

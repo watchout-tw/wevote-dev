@@ -1,12 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
-import {connect} from 'react-redux';
 import ElectionMap from '../../components/ElectionMap/ElectionMap.js';
-@connect(
-    state => ({}),
-    dispatch => bindActionCreators({}, dispatch))
 
 export default class Constituencies extends Component {
 

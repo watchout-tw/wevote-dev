@@ -1,7 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
-import {connect} from 'react-redux';
 
 import AnimatedScript from '../../components/AnimatedScript/AnimatedScript.js';
 import Slideshow from '../../components/Slideshow/Slideshow.js';
@@ -20,17 +18,11 @@ const SPACE = 32,
           B = 66,
           b = 98;
 
-@connect(
-    state => ({
-                issues: state.issues
-              }),
-    dispatch => bindActionCreators({}, dispatch))
+
+import getData from '../../data/getData';
+const {issues} = getData();
 
 export default class InteractiveIssue extends Component {
-  static propTypes = {
-     issues: PropTypes.object.isRequired
-  }
-
   constructor(props) { super(props)
 
     this.state = {
@@ -255,7 +247,6 @@ export default class InteractiveIssue extends Component {
 
   componentWillReceiveProps(nextProps){
 
-    const {issues} = this.props;
     const currentIssueName = this.props.currentIssueName;
     const nextIssueName = nextProps.currentIssueName
 
@@ -290,7 +281,7 @@ export default class InteractiveIssue extends Component {
 
       const styles = require('./InteractiveIssue.scss');
 
-      const {issues, skipInteractive, setCurrentView} = this.props;
+      const {skipInteractive, setCurrentView} = this.props;
       const {stage, shouldAnimated, showNext, showSlides, userPosition,
              currentIssueName, currentView } = this.state;
 

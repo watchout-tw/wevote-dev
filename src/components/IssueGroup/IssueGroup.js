@@ -1,25 +1,13 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
-import { connect } from 'react-redux';
 
 import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 
 import eng2url from '../../utils/eng2url';
 
-@connect(
-    state => ({
-                  legislators: state.legislators
-               }),
-    dispatch => bindActionCreators({}, dispatch))
-
 export default class IssueGroup extends Component {
-  static propTypes = {
-
-  }
-
   render() {
     const styles = require('./IssueGroup.scss');
     const id = this.props.id;

@@ -1,7 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
-import {connect} from 'react-redux';
 
 const views = [
     {
@@ -25,14 +23,9 @@ const views = [
       'view' : 'analysis'
     }
 ];
-@connect(
-    state => ({}),
-    dispatch => bindActionCreators({}, dispatch))
 
 export default class IssueController extends Component {
-
   render() {
-
     const styles = require('./IssueController.scss');
     const { currentIssue, currentView, setCurrentView} = this.props;
 
@@ -43,7 +36,6 @@ export default class IssueController extends Component {
                            currentView={currentView}
                            setCurrentView={setCurrentView} />
     })
-
     return (
       <div className={styles.wrap}>
            {viewOptionItems}
@@ -57,9 +49,6 @@ export default class IssueController extends Component {
 }
 
 class OptionItem extends Component {
-  static propTypes = {
-    data: PropTypes.object.isRequired
-  }
   render() {
     const styles = require('./IssueController.scss');
     const {data, currentIssue, currentView, setCurrentView} = this.props;

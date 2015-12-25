@@ -1,12 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
-import {connect} from 'react-redux';
-
-@connect(
-    state => ({}),
-    dispatch => bindActionCreators({}, dispatch))
 
 export default class Home extends Component {
   render() {
@@ -82,8 +76,6 @@ export default class Home extends Component {
                   <div className={styles.label}><img src={symbols_constituencies} className={styles.icon}/><p className={styles.title}>勇者競技場</p></div>
                 </Link>
               </div>
-
-              <div className={styles.tempLink}>勇者競技場<br/>(12/10 啟動)</div>
 
           </div>
       </div>

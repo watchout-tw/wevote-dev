@@ -1,4 +1,4 @@
-const initialState = {
+const partyBlock = {
     "DPP": {
         "title": "民主進步黨",
         "id": "DPP",
@@ -824,10 +824,6 @@ const initialState = {
         ]
     }
 }
-
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    default:
-      return state;
-  }
+export default function get(){
+    return partyBlock;
 }

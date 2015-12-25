@@ -1,4 +1,4 @@
-const initialState = {
+const people = {
     "1": {
         "name": "丁守中",
         "id": 1,
@@ -2054,12 +2054,6 @@ const initialState = {
         "age": 58
     }
 }
-
-
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    default:
-      return state;
-  }
+export default function get(){
+    return people;
 }
-

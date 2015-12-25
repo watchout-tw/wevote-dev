@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
-import { connect } from 'react-redux';
 
 import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
@@ -12,15 +10,8 @@ import url2eng from '../../utils/url2eng';
 import eng2cht from '../../utils/eng2cht';
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
-import getRecords from '../../data/getRecords';
-const records = getRecords();
-
-@connect(
-    state => ({
-                 legislators: state.legislators,
-                 issues: state.issues
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, legislators, issues} = getData();
 
 export default class PartyIssue extends Component {
   static propTypes = {
@@ -31,7 +22,7 @@ export default class PartyIssue extends Component {
   constructor(props) { super(props)
       this.state = {
           showMenu: false,
-          partyPositions: parseToPartyPosition(records, props.issues)
+          partyPositions: parseToPartyPosition(records, issues)
       }
   }
   _toggleMenu(){
@@ -42,7 +33,7 @@ export default class PartyIssue extends Component {
     const styles = require('./PartyIssue.scss');
     const id = this.props.params.partyId;
     const issueURL = this.props.params.issueName;
-    const {issues} = this.props;
+    
     const {showMenu, partyPositions} = this.state;
     const currentPartyPositions = partyPositions[id];
     const positions = currentPartyPositions.positions || {};

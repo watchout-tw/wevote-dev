@@ -1,7 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
-import {connect} from 'react-redux';
 import district2eng from '../../utils/district2eng'
 
 export default class DistrictSelector extends Component {

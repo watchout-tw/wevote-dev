@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
-import { connect } from 'react-redux';
 import classnames from 'classnames';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
@@ -9,8 +7,8 @@ import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import district2eng from '../../utils/district2eng';
 import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 
-import getCandidates from '../../data/getCandidates';
-const candidates = getCandidates();
+import getData from '../../data/getData';
+const {candidates} = getData();
 
 const DISTRICTS = {
   "臺北市": 8,

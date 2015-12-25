@@ -1,22 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { Link } from "react-router";
 import classnames from 'classnames';
 import eng2url from '../../utils/eng2url';
 import eng2cht from '../../utils/eng2cht';
 
-@connect(
-    state => ({
-                 partyPromises: state.partyPromises,
-                 issues: state.issues,
-                 dataMeta: state.dataMeta
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {issues, partyPromises, dataMeta} = getData();
+
 export default class Promises extends Component {
     render(){
       const styles = require('./Promises.scss');
-      const {issues, dataMeta, promises, id} = this.props;
+      const {promises, id} = this.props;
       if(!promises){//不是本屆參選人，沒有這樣資料
         return <div></div>
       }

@@ -1,4 +1,5 @@
-const records = {
+const records = 
+{
     "1": {
         "id": 1,
         "issue": "婚姻平權",

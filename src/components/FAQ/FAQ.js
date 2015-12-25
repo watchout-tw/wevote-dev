@@ -1,12 +1,30 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
-import {connect} from 'react-redux';
 
+import getData from '../../data/getData';
+const {FAQ_DATA} = getData().FAQ;
+
+export default class FAQ extends Component {
+
+  render() {
+    const styles = require('./FAQ.scss');
+    const {data} = FAQ_DATA;
+
+    let QItems = data.map((item, index)=>{
+        return <Item data={item} key={index} index={index+1}/>
+    })
+    return (
+      <div>{QItems}</div>
+    )
+  }
+
+  props = {
+    className: 'FAQ'
+  }
+}
 class Item extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired
-
   }
   constructor(props){ super(props)
     this.state = {
@@ -48,36 +66,5 @@ class Item extends Component {
 
   props = {
     className: 'Item'
-  }
-}
-
-@connect(
-    state => ({ FAQ: state.FAQ}),
-    dispatch => bindActionCreators({}, dispatch))
-
-export default class FAQ extends Component {
-  static propTypes = {
-    data: PropTypes.object.isRequired
-
-  }
-  render() {
-
-    const styles = require('./FAQ.scss');
-    const {data} = this.props.FAQ;
-
-    let QItems = data.map((item, index)=>{
-        return <Item data={item} key={index} index={index+1}/>
-
-    })
-    return (
-      <div>
-           {QItems}
-      </div>
-
-    )
-  }
-
-  props = {
-    className: 'FAQ'
   }
 }

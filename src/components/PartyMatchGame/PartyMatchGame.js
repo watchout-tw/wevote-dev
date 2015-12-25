@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from "react-router";
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
 import classnames from 'classnames';
 
 import QAItem from '../../components/QAItem/QAItem';
@@ -15,28 +13,20 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 import getPartiesMatchgameData from '../../utils/getPartiesMatchgameData';
 import scrollTo from '../../utils/scrollTo';
 
-import getRecords from '../../data/getRecords';
-const records = getRecords();
-
-@connect(
-    state => ({
-      legislators: state.legislators,
-      issues: state.issues,
-      partyPromises: state.partyPromises
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, legislators, issues, parties, partyPromises} = getData();
 
 export default class PartyMatchGame extends Component {
   constructor(props){ super(props)
       //prepare qa set
-      let qaSet = Object.keys(props.issues).map((issueUrl, index)=>{
+      let qaSet = Object.keys(issues).map((issueUrl, index)=>{
         return {
             id: `Question${index}`,
             issueName: url2eng(issueUrl),
             order: index,
-            title: props.issues[issueUrl].title,
-            description: props.issues[issueUrl].question,
-            statement: props.issues[issueUrl].statement,
+            title: issues[issueUrl].title,
+            description: issues[issueUrl].question,
+            statement: issues[issueUrl].statement,
         }
       })
       this.state = {
@@ -68,8 +58,7 @@ export default class PartyMatchGame extends Component {
 
       // 使用者選擇要用過去或是承諾
       // update match data, prepare party position
-      const {issues, partyPromises} = this.props;
-     
+      
       // 計算新的比對資料
       let partyPositions = parseToPartyPosition(records, issues);
       let matchData = getPartiesMatchgameData(partyPositions, partyPromises, recordFirst);
@@ -184,7 +173,7 @@ export default class PartyMatchGame extends Component {
   }
   render() {
     const styles = require("./PartyMatchGame.scss")
-    const {issues, onSetStage} = this.props;
+    const {onSetStage} = this.props;
     let {qaSet, currentQAItemIndex, userChoices, showAnswerSection,
          currentRank, progress, completed,
          matchData, recordFirst} = this.state;
@@ -299,12 +288,7 @@ class ConfigSection extends Component {
     }
 }
 
-@connect(
-    state => ({
-      parties: state.parties,
-      partyPromises: state.partyPromises
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+
 
 class ResultSection extends Component {
   constructor(props){super(props)
@@ -319,7 +303,7 @@ class ResultSection extends Component {
   }
   render(){
     const styles = require("./PartyMatchGame.scss")
-    let {parties, partyPromises, currentRank, userChoices, replay, onSetStage, recordFirst} = this.props;
+    let {currentRank, userChoices, replay, onSetStage, recordFirst} = this.props;
     let {focus} = this.state;
 
     let resultPKers = {};

@@ -10,9 +10,11 @@ import Social from '../../components/Social/Social.js';
 
 import {done, none} from '../../ducks/processingState.js';
 
+import getData from '../../data/getData';
+const {issues} = getData();
+
 @connect(
     state => ({
-                issues: state.issues,
                 processingState: state.processingState
               }),
     dispatch => bindActionCreators({done, none}, dispatch))
@@ -83,7 +85,7 @@ export default class StaticIssue extends Component {
   render(){
       const styles = require('./StaticIssue.scss');
 
-      const {issues, setCurrentView} = this.props;
+      const {setCurrentView} = this.props;
       const {currentView, currentIssueName} = this.state;
       const currentIssue = issues[currentIssueName];
 
