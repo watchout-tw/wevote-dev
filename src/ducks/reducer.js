@@ -3,7 +3,6 @@ import { combineReducers } from 'redux';
 import legislators from './legislators';
 import issues from './issues';
 import parties from './parties';
-import MaXiRecords from './MaXiRecords';
 import FAQ from './FAQ';
 
 import candidates from './candidates';
@@ -20,7 +19,6 @@ export default combineReducers({
   legislators,
   issues,
   parties,
-  MaXiRecords,
   FAQ,
   
   candidates,
