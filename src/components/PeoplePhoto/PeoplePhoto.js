@@ -5,10 +5,12 @@ import { connect } from 'react-redux';
 import eng2party_short from '../../utils/eng2party_short';
 import cht2eng from '../../utils/cht2eng';
 
+import getCandidates from '../../data/getCandidates';
+const candidates = getCandidates();
+
 @connect(
     state => ({
         legislators: state.legislators,
-        candidates: state.candidates,
         people: state.people
     }),
     dispatch => bindActionCreators({}, dispatch))
@@ -23,7 +25,7 @@ export default class PeoplePhoto extends Component {
   render () {
 
     const styles = require('./PeoplePhoto.scss');
-    const {legislators, candidates, people, id} = this.props;
+    const {legislators, people, id} = this.props;
     let currentPeople = people[id];
     let {name} = currentPeople;
 

@@ -15,19 +15,20 @@ import getPeopleTableData from '../../utils/getPeopleTableData';
 
 import getRecords from '../../data/getRecords';
 const records = getRecords();
+import getCandidates from '../../data/getCandidates';
+const candidates = getCandidates();
 
 @connect(
     state => ({
       legislators: state.legislators,
-      issues: state.issues,
-      candidates: state.candidates
+      issues: state.issues
     }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class Constituency extends Component {
 
   constructor(props){ super(props)
-    const {issues, legislators, candidates} = props;
+    const {issues, legislators} = props;
     const {area, areaNo} = props.params;
 
     let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);

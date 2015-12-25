@@ -5,7 +5,6 @@ import issues from './issues';
 import parties from './parties';
 import FAQ from './FAQ';
 
-import candidates from './candidates';
 import people from './people';
 
 import partyBlock from './partyBlock';
@@ -20,9 +19,7 @@ export default combineReducers({
   issues,
   parties,
   FAQ,
-  
-  candidates,
-
+ 
   partyBlock,
   partyPromises,
 

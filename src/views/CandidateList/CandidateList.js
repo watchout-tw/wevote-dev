@@ -9,6 +9,9 @@ import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import district2eng from '../../utils/district2eng';
 import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 
+import getCandidates from '../../data/getCandidates';
+const candidates = getCandidates();
+
 const DISTRICTS = {
   "臺北市": 8,
   "新北市": 12,
@@ -36,17 +39,10 @@ const DISTRICTS = {
   "山地原住民": 1
 }
 
-@connect(
-    state => ({
-                candidates: state.candidates
-              }),
-    dispatch => bindActionCreators({}, dispatch))
-
 export default class CandidateList extends Component {
   render(){
     const styles = require('./CandidateList.scss');
-    const {candidates} = this.props;
-
+    
     let cityItems = Object.keys(DISTRICTS).map((cityCht, index)=>{
         let cityEng = district2eng(cityCht);
         let countMax = DISTRICTS[cityCht];

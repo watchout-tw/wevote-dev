@@ -7,15 +7,16 @@ import cht2eng from '../../utils/cht2eng';
 import district2url from '../../utils/district2url';
 import peopleInfo from '../../utils/peopleInfo';
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
+
+import getCandidates from '../../data/getCandidates';
+const candidates = getCandidates();
+
 @connect(
     state => ({
       legislators: state.legislators,
-      candidates: state.candidates,
       people: state.people
     }),
     dispatch => bindActionCreators({}, dispatch))
-
-
 export default class PeopleProfile extends Component {
   static propTypes = {
     legislators: PropTypes.object.isRequired,
@@ -25,7 +26,7 @@ export default class PeopleProfile extends Component {
   render () {
     const styles = require('./PeopleProfile.scss');
 
-    const {legislators, candidates, people, id} = this.props;
+    const {legislators, people, id} = this.props;
     const peopleData = people[id];
     const legislatorData = legislators[id];
     const candidateData = candidates[id];

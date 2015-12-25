@@ -19,6 +19,8 @@ import district2cht from '../../utils/district2cht';
 
 import getRecords from '../../data/getRecords';
 const records = getRecords();
+import getCandidates from '../../data/getCandidates';
+const candidates = getCandidates();
 
 /*
 :category => {"records", "promises", "story"}
@@ -30,7 +32,6 @@ const records = getRecords();
 @connect(
     state => ({  
         legislators: state.legislators,
-        candidates: state.candidates,
         issues: state.issues,
         people: state.people
     }),
@@ -40,7 +41,7 @@ export default class People extends Component {
   constructor(props){ super(props)
       this.state = {
         legislatorPositions: parseToLegislatorPosition(records, props.issues, props.legislators),
-        districtData: getPeopleDistrict(props.legislators, props.candidates, props.params.peopleId)
+        districtData: getPeopleDistrict(props.legislators, candidates, props.params.peopleId)
       }
       //console.log(parseToLegislatorPosition(props.records, props.issues, props.legislators))
   }
@@ -51,7 +52,7 @@ export default class People extends Component {
     const category = this.props.params.category;
 
     //立委基本資料
-    const {legislators, candidates, people} = this.props;
+    const {legislators, people} = this.props;
     const currentPeople = people[id];
     //是否為第八屆立委，是否為第九屆區域立委參選人
     let currentIdentity = identity(legislators, candidates, id);

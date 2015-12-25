@@ -10,16 +10,18 @@ import eng2url from '../../utils/eng2url';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
 import identity_district from '../../utils/identity_district';
 
+import getCandidates from '../../data/getCandidates';
+const candidates = getCandidates();
+
 @connect(
     state => ({ 
-      candidates: state.candidates,
       legislators: state.legislators
     }),
     dispatch => bindActionCreators({}, dispatch))
 
 export default class CandidateBuns extends Component {
   constructor(props){ super(props)
-    const {candidates, area, areaNo} = props;
+    const {area, areaNo} = props;
     let candidateList = getDistrictCandidates(candidates, area, areaNo);
     this.state = {
         candidateList: candidateList
