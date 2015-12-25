@@ -14,8 +14,8 @@ import peopleInfo from '../../utils/peopleInfo';
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 
-import getRecords from '../../data/getRecords';
-const records = getRecords();
+import getData from '../../data/getData';
+const {records} = getData();
 
 @connect(
     state => ({
