@@ -27,7 +27,7 @@ export default class Promises extends Component {
                   <div className={styles.promiseTitle}>{eng2cht(issueName)}</div>
                   <div className={styles.promiseQuestion}>{issueData.question}</div>
                   <div className={styles.promisePos}>
-                    <div className={`${styles[pos]} ${styles.promiseIcon}`}></div>
+                    <div className={`${styles[handlePartyPosEng(pos)]} ${styles.promiseIcon}`}></div>
                     <div className={styles.promisePosText}>{handlePartyPos(pos)}</div>
                   </div>
                   <div className={styles.promiseStatement}>{statement}</div>
@@ -49,15 +49,26 @@ export default class Promises extends Component {
                   <div>{content}</div>
               </div>
           )
-      })
-      return (
+      });
+
+      let replyStatus = (
         <div>
           <div className={styles.sectionTitle}>議題表態</div>
           <div>{(hasReply === true ) ? postionItems : "尚未回覆"}</div>
 
           <div className={styles.sectionTitle}>優先法案</div>
           <div>{(hasReply === true ) ? billItems  : "尚未回覆"}</div>
-          
+        </div>
+      );
+
+      //健保連線特殊回覆      
+      if(id === "NHSA"){
+         replyStatus = <div className={styles.notice}>健保免費連線回覆表示：「很抱歉，健保免費連線暫時只針對健保議題表示意見，因為我們是政黨連線，協調不易，也不想協調！」</div>
+      }
+
+      return (
+        <div>
+          {replyStatus}
           <div className={`${styles.promiseMeta}`}>* 統計更新日期：{dataMeta.updateTime}。
                 <Link className={`${styles.ia} ${styles.bright}`} 
                       to={`/about/FAQ/`}>我們如何統計的</Link></div>
@@ -65,9 +76,18 @@ export default class Promises extends Component {
       )
     }
 }
+function handlePartyPosEng(value){
+  if(value === "refuse"){
+    return "none";
+  }else{
+    return value;
+  }
+}
 function handlePartyPos(value){
   if(value === "none"){
-    return "尚未回覆"
+    return "尚未回覆";
+  }else if(value === "refuse"){
+    return "不表態";
   }else{
     return eng2cht(value);
   }

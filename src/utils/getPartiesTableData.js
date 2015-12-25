@@ -40,10 +40,11 @@ export default function getPartiesTableData(partyPositions, partyPromises){
             }
             //紀錄承諾的立場
             TableData[partyId].positions[issueName].promise = partyPromises[partyId].positions[issueName].promise.position;
-
+           
         })
       
     })
+
    
     return TableData;
     

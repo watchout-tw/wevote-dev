@@ -234,7 +234,7 @@ const partyPromises = {
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -861,7 +861,7 @@ const partyPromises = {
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },

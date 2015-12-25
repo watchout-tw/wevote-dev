@@ -121,6 +121,7 @@ export default class PositionTable extends Component {
     imgHub.aye = require("./images/answers_aye.svg")
     imgHub.nay = require("./images/answers_nay.svg")
     imgHub.none = require("./images/answers_unknown.svg")
+    imgHub.refuse = require("./images/answers_unknown.svg")
 
 
     let issueTitles = Object.keys(issues).map((issueId, i)=>{

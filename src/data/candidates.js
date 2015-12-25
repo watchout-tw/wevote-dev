@@ -2390,7 +2390,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": "尊重同性戀者"
                 }
             },
@@ -3610,7 +3610,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -5562,7 +5562,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -5867,7 +5867,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": "多元成家不僅同性婚姻，更應擴大家族成員至親近伴侶或同住友人為多元家庭成員"
                 }
             },
@@ -6416,7 +6416,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -7087,7 +7087,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -7270,7 +7270,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": "同志人權尊重，但教會態度，楊實秋是基督徒也要考量。法案未深入了解無法表態。"
                 }
             },
@@ -7288,7 +7288,7 @@ const candidates =
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": "台灣用電要專業評估，楊實秋不瞭解之事，不斷然表態。"
                 }
             },
@@ -7575,7 +7575,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -8673,7 +8673,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -9100,7 +9100,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -10198,7 +10198,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -11021,7 +11021,7 @@ const candidates =
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
@@ -12455,7 +12455,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -13309,7 +13309,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -14529,7 +14529,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -15505,7 +15505,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -19104,7 +19104,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
@@ -19897,7 +19897,7 @@ const candidates =
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
