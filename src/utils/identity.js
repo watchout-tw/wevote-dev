@@ -1,10 +1,16 @@
-export default function identity(legislators, candidates, id){
+import getCandidates from '../data/getCandidates';
+const candidates = getCandidates();
+export default function identity(legislators, id){
  	let identity = {
  		is8thDistrict: false,
  		is8thProportional: false,
  		is9thCandidate: false,
  		is9thProportional: false
  	};
+ 	if(!legislators || !candidates){
+ 		return identity;
+ 	}
+
  	if(candidates[id]){
  		identity.is9thCandidate = true;
  	}
