@@ -142,20 +142,20 @@ export default class PositionTable extends Component {
     })
     // 每一個政黨 or 候選人
     let unitPositions = Object.keys(tableData).map((unitId, i)=>{
-        let unitItem = tableData[unitId];
+        let unitData = tableData[unitId];
         //政黨名稱 or 候選人姓名
         let unitName = (
           <div className={styles.unitName}>
             <div className={styles.nameFlex}>
-                <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitItem.party]}`}></div>
-                <div className={`${styles.unitTitle}`}>{unitItem.name}</div>
+                <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitData.party]}`}></div>
+                <div className={`${styles.unitTitle}`}>{unitData.name}</div>
             </div>
           </div>
           );
 
         //表態
-        let positions = Object.keys(unitItem.positions).map((issueName, j)=>{
-            let pos = unitItem.positions[issueName];
+        let positions = Object.keys(unitData.positions).map((issueName, j)=>{
+            let pos = unitData.positions[issueName];
             let level = countLevel(pos.recordCount);
             let recordClasses = classnames({
               [styles.record] : true,
@@ -171,10 +171,10 @@ export default class PositionTable extends Component {
             )
         })
         
-        let linkChoice = this._recordsOrPromises.bind(this, unitItem.id).call();
+        let linkChoice = this._recordsOrPromises.bind(this, unitData.id).call();
 
         return <Link className={styles.unitEntry}
-                     to={`/${unit}/${unitItem.id}/${linkChoice}/`}>{unitName}{positions}</Link>
+                     to={`/${unit}/${unitData.id}/${linkChoice}/`}>{unitName}{positions}</Link>
     });
 
     let legendImg = require("./images/legend.png");

@@ -15,7 +15,6 @@ import eng2url from '../../utils/eng2url';
 
 @connect(
     state => ({
-      records: state.records,
       issues: state.issues,
       partyPromises: state.partyPromises
     }),

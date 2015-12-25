@@ -105,16 +105,16 @@ export default class BillTable extends Component {
 
 
     let unitBills = Object.keys(tableData).map((unitId, i)=>{
-        let unit = tableData[unitId];
-        let party = unit.party;
+        let unitData = tableData[unitId];
+        let party = unitData.party;
         
         //政黨名稱 or 候選人名稱
         let unitName = (
             <div className={styles.unitName}>
                 <div className={styles.nameFlex}>
-                    <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unit.id]}`}></div>
+                    <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitData.id]}`}></div>
                     <div className={`${styles.unitTitle}`}>
-                        <div className={styles.unitTitleText}>{unit.name}</div>{outerLinkItem}
+                        <div className={styles.unitTitleText}>{unitData.name}</div>{outerLinkItem}
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@ export default class BillTable extends Component {
 
         //優先推動
 
-        let bills = unit.bills.map((item, k)=>{
+        let bills = unitData.bills.map((item, k)=>{
             let goalItem;
             if(item.goal){
               let text = item.goal.length > 6 ? `${item.goal.substring(0,6)}⋯` : item.goal;
@@ -143,7 +143,7 @@ export default class BillTable extends Component {
 
         if(outerLink){
             return (
-                <a href={`/${unit}/${unit.id}/promises/`}
+                <a href={`/${unit}/${unitData.id}/promises/`}
                    className={styles.unitEntry}
                    target="_blank">
                      {unitName}{bills}
@@ -152,7 +152,7 @@ export default class BillTable extends Component {
 
         }else{
             return (
-                <Link to={`/${unit}/${unit.id}/promises/`}
+                <Link to={`/${unit}/${unitData.id}/promises/`}
                       className={styles.unitEntry}>
                      {unitName}{bills}
                 </Link>
