@@ -5,9 +5,10 @@ import cht2eng from '../../utils/cht2eng';
 import district2url from '../../utils/district2url';
 import peopleInfo from '../../utils/peopleInfo';
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
+import PartyFlag from '../../components/PartyFlag/PartyFlag.js';
 
 import getData from '../../data/getData';
-const {legislators, candidates, people} = getData();
+const {legislators, candidates, people, parties} = getData();
 
 export default class PeopleProfile extends Component {
   render () {
@@ -19,11 +20,11 @@ export default class PeopleProfile extends Component {
     const candidateData = candidates[id];
     let {name, age} = peopleData;
     let isCandidate = legislatorData || false;
-    let parties, constituency1, constituency2, hasResigned;
+    let legislatorParties, constituency1, constituency2, hasResigned;
     let candidateDistrict1, candidateDistrict2;
     
     if(legislatorData){
-        parties = legislatorData.parties;
+        legislatorParties = legislatorData.parties;
         constituency1 = legislatorData.constituency1;
         constituency2 = legislatorData.constituency2;
         hasResigned = legislatorData.hasResigned;
@@ -35,16 +36,16 @@ export default class PeopleProfile extends Component {
     /* maybe move to contructor later */
     let info = peopleInfo(name, age, constituency1, constituency2, candidateData, candidateDistrict1, candidateDistrict2);
     
-    //第八屆政黨資訊
+    //////// 第八屆政黨資訊
     let partiesItem;
-    if(parties){
-        partiesItem = (parties).map((p,index)=>{
+    if(legislatorParties){
+        partiesItem = (legislatorParties).map((p,index)=>{
             let partyEng = cht2eng(p.partyCht);
             return (
               <div key={index}>
                   <div className={styles.partyEng}>
                     <div className={`${styles.partyFlag} ${styles.small} ${styles[partyEng]}`}></div>
-                    <Link to={`/parties/${partyEng}/records/`} className={`${styles.partyTitle} ${styles.ia} ${styles.black}`}>{p.partyCht}</Link>
+                    <PartyFlag partyId={partyEng} />
                   </div>
                   <div className={styles.partyPeriod}>{`（${p.startDate}-${p.endDate}）`}</div>
               </div>
@@ -70,18 +71,21 @@ export default class PeopleProfile extends Component {
         legInfoItem = <p>{info.legislatorTitle}</p>;
     }
 
-    //第九屆參選資訊
-    let candidateInfoItem = (info.candidateTitle) ? (
-      <div className={styles.candidateParty}>
-          <p>2016第九屆
-              <Link to={`/constituencies/${district2url(candidateDistrict1,candidateDistrict2)}/`}
-                    className={`${styles.ia} ${styles.line} ${styles.black}`}>{info.candidateTitle}</Link>立委候選人</p>
-          <div className={styles.partyEng}>
-              <div className={`${styles.partyFlag} ${styles.small} ${styles[candidateData.party]}`}></div>
-              <Link to={`/parties/${candidateData.party}/records/`} 
-                    className={`${styles.partyTitle} ${styles.ia} ${styles.black}`}>{eng2cht(candidateData.party)}</Link>
-          </div>
-      </div>) : "";
+    ///////////// 第九屆參選資訊
+    let candidateInfoItem;
+
+    if(info.candidateTitle){    
+        candidateInfoItem = (
+        <div className={styles.candidateParty}>
+            <p>2016第九屆
+                <Link to={`/constituencies/${district2url(candidateDistrict1,candidateDistrict2)}/`}
+                      className={`${styles.ia} ${styles.line} ${styles.black}`}>{info.candidateTitle}</Link>立委候選人</p>
+                <div className={styles.partyEng}>
+                    <div className={`${styles.partyFlag} ${styles.small} ${styles[candidateData.party]}`}></div>
+                    <PartyFlag partyId={candidateData.party} />
+                </div>
+        </div>);
+    }
 
     return (
       <div className={styles.wrap}>

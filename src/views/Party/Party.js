@@ -32,9 +32,17 @@ export default class Party extends Component {
       }
   }
   render() {
+
     const styles = require('./Party.scss');
     const id = this.props.params.partyId;
     const category = this.props.params.category;
+
+    //如果沒有該政黨資料，回覆空
+    if(!parties[id]){
+      return <div></div>
+    }
+    
+
 
     //政黨基本資料
     const currentParty = parties[id];
