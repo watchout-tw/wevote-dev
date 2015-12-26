@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import people_name2id from '../../utils/people_name2id';
 import identity_district from '../../utils/identity_district';
 import eng2cht from '../../utils/eng2cht';
+import countLevel from '../../utils/countLevel';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 
@@ -148,20 +149,5 @@ class Card extends Component {
     );
   }
 
-}
-function countLevel(count){
-  let num = Number(count);
-  if(num >= 0 && num <= 5){
-     return 'level1';
-
-  }else if(num > 5 && num <= 25){
-     return 'level2';
-
-  }else if(num > 25){
-     return 'level3';
-
-  }else {
-     return 'empty';
-  }
 }
 

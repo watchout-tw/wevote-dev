@@ -12,22 +12,8 @@ import getPartiesTableData from '../../utils/getPartiesTableData';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleTableData from '../../utils/getPeopleTableData';
 import eng2url from '../../utils/eng2url';
+import countLevel from '../../utils/countLevel';
 
-function countLevel(count){
-  let num = Number(count);
-  if(num >= 0 && num <= 5){
-     return 'level1';
-
-  }else if(num > 5 && num <= 25){
-     return 'level2';
-
-  }else if(num > 25){
-     return 'level3';
-
-  }else {
-     return 'empty';
-  }
-}
 
 import getData from '../../data/getData';
 const {issues, records, partyPromises, legislators} = getData();
