@@ -1,4 +1,5 @@
-const legislators = {
+const legislators = 
+{
     "1": {
         "id": 1,
         "name": "丁守中",

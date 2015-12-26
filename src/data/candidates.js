@@ -3,6 +3,7 @@ const candidates =
     "1": {
         "id": 1,
         "name": "丁守中",
+        "number": 1,
         "party": "KMT",
         "districtArea": "TPE",
         "districtNo": "1",
@@ -64,10 +65,11 @@ const candidates =
     "2": {
         "id": 2,
         "name": "孔文吉",
+        "number": 6,
         "party": "KMT",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -125,10 +127,11 @@ const candidates =
     "4": {
         "id": 4,
         "name": "王廷升",
+        "number": 4,
         "party": "KMT",
         "districtArea": "HUN",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -186,10 +189,11 @@ const candidates =
     "7": {
         "id": 7,
         "name": "王惠美",
+        "number": 2,
         "party": "KMT",
         "districtArea": "CHW",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -247,10 +251,11 @@ const candidates =
     "8": {
         "id": 8,
         "name": "王進士",
+        "number": 2,
         "party": "KMT",
         "districtArea": "PIF",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -311,7 +316,7 @@ const candidates =
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -369,6 +374,7 @@ const candidates =
     "11": {
         "id": 11,
         "name": "江惠貞",
+        "number": 4,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "7",
@@ -430,10 +436,11 @@ const candidates =
     "12": {
         "id": 12,
         "name": "何欣純",
+        "number": 1,
         "party": "DPP",
         "districtArea": "TXG",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -491,10 +498,11 @@ const candidates =
     "13": {
         "id": 13,
         "name": "吳育仁",
+        "number": 1,
         "party": "KMT",
         "districtArea": "CYC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -552,6 +560,7 @@ const candidates =
     "14": {
         "id": 14,
         "name": "吳育昇",
+        "number": 1,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "1",
@@ -613,10 +622,11 @@ const candidates =
     "15": {
         "id": 15,
         "name": "吳宜臻",
+        "number": 4,
         "party": "DPP",
         "districtArea": "ZMI",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -674,6 +684,7 @@ const candidates =
     "16": {
         "id": 16,
         "name": "吳秉叡",
+        "number": 2,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "4",
@@ -735,10 +746,11 @@ const candidates =
     "17": {
         "id": 17,
         "name": "呂玉玲",
+        "number": 1,
         "party": "KMT",
         "districtArea": "TYN",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -796,71 +808,73 @@ const candidates =
     "19": {
         "id": 19,
         "name": "李昆澤",
+        "number": 2,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "6",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "勞工退休權益",
+                "content": "修改勞工保險條例第69條，明訂政府撥補勞保虧損，並負擔最終支付責任，讓勞工能安心工作，保障晚年退休生活"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "完善食安管理",
+                "content": "建立源頭管控機制，強化市場查驗，提高檢舉獎金，讓民眾食\r的安心。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "兩岸交流法制",
+                "content": "推動兩岸協議監督條例立法，確保兩岸交流符合法治與民主程序。"
             }
         ]
     },
     "20": {
         "id": 20,
         "name": "李俊俋",
+        "number": 3,
         "party": "DPP",
         "districtArea": "CYC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -918,6 +932,7 @@ const candidates =
     "23": {
         "id": 23,
         "name": "李慶華",
+        "number": 2,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "12",
@@ -979,10 +994,11 @@ const candidates =
     "30": {
         "id": 30,
         "name": "林岱樺",
+        "number": 3,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1040,10 +1056,11 @@ const candidates =
     "32": {
         "id": 32,
         "name": "林郁方",
+        "number": 1,
         "party": "KMT",
         "districtArea": "TPE",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1101,10 +1118,11 @@ const candidates =
     "33": {
         "id": 33,
         "name": "林國正",
+        "number": 3,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "9",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1162,71 +1180,73 @@ const candidates =
     "34": {
         "id": 34,
         "name": "林淑芬",
+        "number": 2,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "職業災害保護",
+                "content": "職災勞工的職業傷病認定與請領補償困難，推動《職業災害保險法》立法，以建立職業災害預防、補償及重建工作。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "廢棄物管理",
+                "content": "為落實廢棄物源頭減量並有效管理廢棄物，推動《廢棄物減量及循環利用法》立法，取代現行之《廢清法》及《資再法》"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "守護食品安全",
+                "content": "不畏財團壓力，勇敢揭發「頂新」黑心油弊案、日本輻射污染管制區食品安全的管制漏洞，未來持續推動各種食品安全相關法規之修正。"
             }
         ]
     },
     "35": {
         "id": 35,
         "name": "林滄敏",
+        "number": 2,
         "party": "KMT",
         "districtArea": "CHW",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1284,6 +1304,7 @@ const candidates =
     "36": {
         "id": 36,
         "name": "林德福",
+        "number": 4,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "9",
@@ -1345,71 +1366,73 @@ const candidates =
     "39": {
         "id": 39,
         "name": "邱志偉",
+        "number": 1,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "2",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "性別平等法",
+                "content": "加重校園性騷擾、性侵害刑責"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "眷改條例",
+                "content": "推動眷村文化保存"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "母乳哺育條例",
+                "content": "優化公共場所育嬰空間，給予友善母嬰空間。"
             }
         ]
     },
     "40": {
         "id": 40,
         "name": "邱議瑩",
+        "number": 1,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1467,6 +1490,7 @@ const candidates =
     "41": {
         "id": 41,
         "name": "姚文智",
+        "number": 6,
         "party": "DPP",
         "districtArea": "TPE",
         "districtNo": "2",
@@ -1528,6 +1552,7 @@ const candidates =
     "42": {
         "id": 42,
         "name": "柯建銘",
+        "number": 1,
         "party": "DPP",
         "districtArea": "HCC",
         "districtNo": "N/A",
@@ -1589,10 +1614,11 @@ const candidates =
     "45": {
         "id": 45,
         "name": "紀國棟",
+        "number": 4,
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1650,10 +1676,11 @@ const candidates =
     "46": {
         "id": 46,
         "name": "孫大千",
+        "number": 4,
         "party": "KMT",
         "districtArea": "TYN",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1711,6 +1738,7 @@ const candidates =
     "48": {
         "id": 48,
         "name": "徐志榮",
+        "number": 2,
         "party": "KMT",
         "districtArea": "ZMI",
         "districtNo": "2",
@@ -1772,10 +1800,11 @@ const candidates =
     "52": {
         "id": 52,
         "name": "馬文君",
+        "number": 1,
         "party": "KMT",
         "districtArea": "NAN",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1833,6 +1862,7 @@ const candidates =
     "53": {
         "id": 53,
         "name": "高志鵬",
+        "number": 4,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "3",
@@ -1894,10 +1924,11 @@ const candidates =
     "54": {
         "id": 54,
         "name": "高金素梅",
+        "number": 10,
         "party": "NSU",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1955,6 +1986,7 @@ const candidates =
     "56": {
         "id": 56,
         "name": "張慶忠",
+        "number": 2,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "8",
@@ -2016,10 +2048,11 @@ const candidates =
     "58": {
         "id": 58,
         "name": "莊瑞雄",
+        "number": 3,
         "party": "DPP",
         "districtArea": "PIF",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2077,10 +2110,11 @@ const candidates =
     "60": {
         "id": 60,
         "name": "許淑華",
+        "number": 2,
         "party": "KMT",
         "districtArea": "NAN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2138,10 +2172,11 @@ const candidates =
     "62": {
         "id": 62,
         "name": "許智傑",
+        "number": 7,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2199,10 +2234,11 @@ const candidates =
     "65": {
         "id": 65,
         "name": "陳明文",
+        "number": 1,
         "party": "DPP",
         "districtArea": "CYI",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2260,67 +2296,69 @@ const candidates =
     "66": {
         "id": 66,
         "name": "陳亭妃",
+        "number": 3,
         "party": "DPP",
         "districtArea": "TNN",
         "districtNo": "3",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "支持人權主張"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法",
+                "content": "不當黨產處理條例"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "十八歲公民權",
+                "content": "修憲"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "課綱修法",
+                "content": "授予民間教育單位製定、公開透明。"
             }
         ]
     },
     "68": {
         "id": 68,
         "name": "陳根德",
+        "number": 2,
         "party": "KMT",
         "districtArea": "TYN",
         "districtNo": "1",
@@ -2382,10 +2420,11 @@ const candidates =
     "69": {
         "id": 69,
         "name": "陳素月",
+        "number": 1,
         "party": "DPP",
         "districtArea": "CHW",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -2443,10 +2482,11 @@ const candidates =
     "70": {
         "id": 70,
         "name": "陳淑慧",
+        "number": 3,
         "party": "KMT",
         "districtArea": "TNN",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2504,10 +2544,11 @@ const candidates =
     "71": {
         "id": 71,
         "name": "陳雪生",
+        "number": 1,
         "party": "KMT",
         "districtArea": "MFK",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2565,10 +2606,11 @@ const candidates =
     "72": {
         "id": 72,
         "name": "陳超明",
+        "number": 4,
         "party": "KMT",
         "districtArea": "ZMI",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2626,10 +2668,11 @@ const candidates =
     "75": {
         "id": 75,
         "name": "陳歐珀",
+        "number": 1,
         "party": "DPP",
         "districtArea": "ILA",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2687,10 +2730,11 @@ const candidates =
     "76": {
         "id": 76,
         "name": "陳學聖",
+        "number": 5,
         "party": "KMT",
         "districtArea": "TYN",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2748,6 +2792,7 @@ const candidates =
     "79": {
         "id": 79,
         "name": "費鴻泰",
+        "number": 7,
         "party": "KMT",
         "districtArea": "TPE",
         "districtNo": "7",
@@ -2870,10 +2915,11 @@ const candidates =
     "83": {
         "id": 83,
         "name": "黃偉哲",
+        "number": 1,
         "party": "DPP",
         "districtArea": "TNN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -2931,71 +2977,73 @@ const candidates =
     "84": {
         "id": 84,
         "name": "黃國書",
+        "number": 1,
         "party": "DPP",
         "districtArea": "TXG",
         "districtNo": "6",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "積極促進社會討論，協調尋求共識。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "食安相關",
+                "content": "協助設立毒管機構，完整食品生產履歷，訂立無毒農業及安全食品生產管理規範，加重修法生產者法律賠償責任法條等。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "教育相關",
+                "content": "全面檢討12年國教實務問題，監督私校轉型機制，制訂偏鄉教育等相關條例。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "長照",
+                "content": "推動完整長照體系，保障失能老人與身心障礙者能獲得適切照護，整合民政資源，提升長照服務品質。"
             }
         ]
     },
     "87": {
         "id": 87,
         "name": "楊曜",
+        "number": 2,
         "party": "DPP",
         "districtArea": "MZG",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3053,10 +3101,11 @@ const candidates =
     "88": {
         "id": 88,
         "name": "楊瓊瓔",
+        "number": 1,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3114,10 +3163,11 @@ const candidates =
     "89": {
         "id": 89,
         "name": "楊麗環",
+        "number": 1,
         "party": "KMT",
         "districtArea": "TYN",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3175,10 +3225,11 @@ const candidates =
     "90": {
         "id": 90,
         "name": "葉宜津",
+        "number": 4,
         "party": "DPP",
         "districtArea": "TNN",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3236,10 +3287,11 @@ const candidates =
     "94": {
         "id": 94,
         "name": "廖正井",
+        "number": 3,
         "party": "KMT",
         "districtArea": "TYN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3297,10 +3349,11 @@ const candidates =
     "95": {
         "id": 95,
         "name": "廖國棟",
+        "number": 13,
         "party": "KMT",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3358,10 +3411,11 @@ const candidates =
     "96": {
         "id": 96,
         "name": "管碧玲",
+        "number": 2,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3419,10 +3473,11 @@ const candidates =
     "97": {
         "id": 97,
         "name": "趙天麟",
+        "number": 1,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3480,10 +3535,11 @@ const candidates =
     "98": {
         "id": 98,
         "name": "劉建國",
+        "number": 4,
         "party": "DPP",
         "districtArea": "YLN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3544,7 +3600,7 @@ const candidates =
         "party": "DPP",
         "districtArea": "TTT",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3602,10 +3658,11 @@ const candidates =
     "103": {
         "id": 103,
         "name": "蔡其昌",
+        "number": 4,
         "party": "DPP",
         "districtArea": "TXG",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -3663,10 +3720,11 @@ const candidates =
     "104": {
         "id": 104,
         "name": "蔡煌瑯",
+        "number": 1,
         "party": "DPP",
         "districtArea": "NAN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3724,10 +3782,11 @@ const candidates =
     "105": {
         "id": 105,
         "name": "蔡錦隆",
+        "number": 3,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3785,6 +3844,7 @@ const candidates =
     "106": {
         "id": 106,
         "name": "蔣乃辛",
+        "number": 10,
         "party": "KMT",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -3846,10 +3906,11 @@ const candidates =
     "107": {
         "id": 107,
         "name": "鄭天財Sra·Kacaw",
+        "number": 4,
         "party": "KMT",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3907,10 +3968,11 @@ const candidates =
     "108": {
         "id": 108,
         "name": "鄭汝芬",
+        "number": 2,
         "party": "KMT",
         "districtArea": "CHW",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -3968,10 +4030,11 @@ const candidates =
     "110": {
         "id": 110,
         "name": "盧秀燕",
+        "number": 3,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -4029,6 +4092,7 @@ const candidates =
     "111": {
         "id": 111,
         "name": "盧嘉辰",
+        "number": 1,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "10",
@@ -4090,6 +4154,7 @@ const candidates =
     "112": {
         "id": 112,
         "name": "蕭美琴",
+        "number": 2,
         "party": "DPP",
         "districtArea": "HUN",
         "districtNo": "N/A",
@@ -4151,6 +4216,7 @@ const candidates =
     "113": {
         "id": 113,
         "name": "賴士葆",
+        "number": 4,
         "party": "KMT",
         "districtArea": "TPE",
         "districtNo": "8",
@@ -4212,10 +4278,11 @@ const candidates =
     "117": {
         "id": 117,
         "name": "簡東明",
+        "number": 7,
         "party": "KMT",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -4273,10 +4340,11 @@ const candidates =
     "119": {
         "id": 119,
         "name": "顏寬恒",
+        "number": 2,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -4334,6 +4402,7 @@ const candidates =
     "121": {
         "id": 121,
         "name": "羅明才",
+        "number": 1,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "11",
@@ -4395,10 +4464,11 @@ const candidates =
     "124": {
         "id": 124,
         "name": "蘇震清",
+        "number": 2,
         "party": "DPP",
         "districtArea": "PIF",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -4456,6 +4526,7 @@ const candidates =
     "129": {
         "id": 129,
         "name": "吳思瑤",
+        "number": 2,
         "party": "DPP",
         "districtArea": "TPE",
         "districtNo": "1",
@@ -4517,6 +4588,7 @@ const candidates =
     "130": {
         "id": 130,
         "name": "王靜亞",
+        "number": 4,
         "party": "MKT",
         "districtArea": "TPE",
         "districtNo": "1",
@@ -4578,6 +4650,7 @@ const candidates =
     "131": {
         "id": 131,
         "name": "黃清原",
+        "number": 3,
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "1",
@@ -4639,6 +4712,7 @@ const candidates =
     "132": {
         "id": 132,
         "name": "吳忠錚",
+        "number": 5,
         "party": "NHSA",
         "districtArea": "TPE",
         "districtNo": "1",
@@ -4700,6 +4774,7 @@ const candidates =
     "133": {
         "id": 133,
         "name": "潘懷宗",
+        "number": 5,
         "party": "NP",
         "districtArea": "TPE",
         "districtNo": "2",
@@ -4761,6 +4836,7 @@ const candidates =
     "134": {
         "id": 134,
         "name": "吳俊德",
+        "number": 3,
         "party": "FHL",
         "districtArea": "TPE",
         "districtNo": "2",
@@ -4822,60 +4898,61 @@ const candidates =
     "135": {
         "id": 135,
         "name": "陳建斌",
+        "number": 7,
         "party": "FTP",
         "districtArea": "TPE",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -4883,6 +4960,7 @@ const candidates =
     "136": {
         "id": 136,
         "name": "陳民乾",
+        "number": 2,
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "2",
@@ -4944,10 +5022,11 @@ const candidates =
     "137": {
         "id": 137,
         "name": "王銘宗",
+        "number": 1,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5005,6 +5084,7 @@ const candidates =
     "138": {
         "id": 138,
         "name": "林幸蓉",
+        "number": 4,
         "party": "NHSA",
         "districtArea": "TPE",
         "districtNo": "2",
@@ -5066,6 +5146,7 @@ const candidates =
     "139": {
         "id": 139,
         "name": "蔣萬安",
+        "number": 10,
         "party": "KMT",
         "districtArea": "TPE",
         "districtNo": "3",
@@ -5127,6 +5208,7 @@ const candidates =
     "140": {
         "id": 140,
         "name": "趙燕傑",
+        "number": 4,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "3",
@@ -5188,10 +5270,11 @@ const candidates =
     "141": {
         "id": 141,
         "name": "林新凱",
+        "number": 3,
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5249,6 +5332,7 @@ const candidates =
     "142": {
         "id": 142,
         "name": "邱正浩",
+        "number": 5,
         "party": "PPU",
         "districtArea": "TPE",
         "districtNo": "3",
@@ -5310,6 +5394,7 @@ const candidates =
     "143": {
         "id": 143,
         "name": "李成嶽",
+        "number": 8,
         "party": "MCFAP",
         "districtArea": "TPE",
         "districtNo": "3",
@@ -5371,10 +5456,11 @@ const candidates =
     "144": {
         "id": 144,
         "name": "黃麗香",
+        "number": 9,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5432,6 +5518,7 @@ const candidates =
     "145": {
         "id": 145,
         "name": "李晏榕",
+        "number": 7,
         "party": "GSD",
         "districtArea": "TPE",
         "districtNo": "3",
@@ -5493,71 +5580,73 @@ const candidates =
     "146": {
         "id": 146,
         "name": "潘建志",
+        "number": 2,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "3",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "非常支持"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持還權於民"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "全力支持"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持廢核，長期參與反核運動"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "公開透明是主要訴求"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "推動陪審團制度"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "長照保險",
+                "content": "以老人醫學實務心得，修改「長期照顧服務法」，讓法令跟政府資源能夠跟上台灣人口老年化的制度，鼓勵社區大樓將一樓廣泛增設日間托老中心。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "社會住宅",
+                "content": "推動修正「住宅法」、「國有財產法」、「土地法」，明定中央應無償提供閒置國有地，提供地方政府興建只租不售之社會住宅。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "公辦幼托",
+                "content": "我主張不但應增設公立幼稚園，並且政府應補助公私立幼稚園學費差額，讓孩子們可以在優質的環境下長大，同時減輕家長負擔，提高生育率。"
             }
         ]
     },
     "147": {
         "id": 147,
         "name": "高士恩",
+        "number": 1,
         "party": "DASG",
         "districtArea": "TPE",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -5615,6 +5704,7 @@ const candidates =
     "148": {
         "id": 148,
         "name": "陳科引",
+        "number": 6,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "3",
@@ -5676,10 +5766,11 @@ const candidates =
     "149": {
         "id": 149,
         "name": "何偉",
+        "number": 1,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5737,6 +5828,7 @@ const candidates =
     "150": {
         "id": 150,
         "name": "蕭亞譚",
+        "number": 7,
         "party": "TSU",
         "districtArea": "TPE",
         "districtNo": "4",
@@ -5798,6 +5890,7 @@ const candidates =
     "151": {
         "id": 151,
         "name": "李彥秀",
+        "number": 6,
         "party": "KMT",
         "districtArea": "TPE",
         "districtNo": "4",
@@ -5859,6 +5952,7 @@ const candidates =
     "152": {
         "id": 152,
         "name": "黃珊珊",
+        "number": 3,
         "party": "PFP",
         "districtArea": "TPE",
         "districtNo": "4",
@@ -5920,6 +6014,7 @@ const candidates =
     "153": {
         "id": 153,
         "name": "林少馳",
+        "number": 8,
         "party": "NPP",
         "districtArea": "TPE",
         "districtNo": "4",
@@ -5981,6 +6076,7 @@ const candidates =
     "154": {
         "id": 154,
         "name": "李岳峰",
+        "number": 4,
         "party": "PPU",
         "districtArea": "TPE",
         "districtNo": "4",
@@ -6042,6 +6138,7 @@ const candidates =
     "155": {
         "id": 155,
         "name": "陳尚志",
+        "number": 2,
         "party": "GSD",
         "districtArea": "TPE",
         "districtNo": "4",
@@ -6103,10 +6200,11 @@ const candidates =
     "156": {
         "id": 156,
         "name": "陳兆銘",
+        "number": 5,
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -6164,6 +6262,7 @@ const candidates =
     "157": {
         "id": 157,
         "name": "林昶佐",
+        "number": 6,
         "party": "NPP",
         "districtArea": "TPE",
         "districtNo": "5",
@@ -6225,10 +6324,11 @@ const candidates =
     "158": {
         "id": 158,
         "name": "李家幸",
+        "number": 2,
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -6286,6 +6386,7 @@ const candidates =
     "159": {
         "id": 159,
         "name": "龔偉綸",
+        "number": 5,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "5",
@@ -6347,6 +6448,7 @@ const candidates =
     "160": {
         "id": 160,
         "name": "尤瑞敏",
+        "number": 7,
         "party": "TP",
         "districtArea": "TPE",
         "districtNo": "5",
@@ -6379,13 +6481,13 @@ const candidates =
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -6408,10 +6510,11 @@ const candidates =
     "161": {
         "id": 161,
         "name": "洪顯政",
+        "number": 4,
         "party": "DASG",
         "districtArea": "TPE",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -6469,6 +6572,7 @@ const candidates =
     "162": {
         "id": 162,
         "name": "黃福卿",
+        "number": 3,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "5",
@@ -6530,6 +6634,7 @@ const candidates =
     "163": {
         "id": 163,
         "name": "趙衍慶",
+        "number": 4,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -6591,6 +6696,7 @@ const candidates =
     "164": {
         "id": 164,
         "name": "吳旭智",
+        "number": 12,
         "party": "MKT",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -6652,6 +6758,7 @@ const candidates =
     "165": {
         "id": 165,
         "name": "范雲",
+        "number": 2,
         "party": "GSD",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -6713,6 +6820,7 @@ const candidates =
     "166": {
         "id": 166,
         "name": "陳家宏",
+        "number": 1,
         "party": "TP",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -6745,13 +6853,13 @@ const candidates =
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -6774,6 +6882,7 @@ const candidates =
     "167": {
         "id": 167,
         "name": "周芳如",
+        "number": 6,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -6835,6 +6944,7 @@ const candidates =
     "168": {
         "id": 168,
         "name": "龎維良",
+        "number": 3,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -6896,6 +7006,7 @@ const candidates =
     "169": {
         "id": 169,
         "name": "林珍妤",
+        "number": 5,
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -6957,6 +7068,7 @@ const candidates =
     "170": {
         "id": 170,
         "name": "曾獻瑩",
+        "number": 9,
         "party": "FHL",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -7018,6 +7130,7 @@ const candidates =
     "171": {
         "id": 171,
         "name": "蔣慰慈",
+        "number": 7,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -7079,6 +7192,7 @@ const candidates =
     "172": {
         "id": 172,
         "name": "古文發",
+        "number": 11,
         "party": "DASG",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -7140,6 +7254,7 @@ const candidates =
     "173": {
         "id": 173,
         "name": "鄭村棋",
+        "number": 8,
         "party": "PDF",
         "districtArea": "TPE",
         "districtNo": "6",
@@ -7201,6 +7316,7 @@ const candidates =
     "174": {
         "id": 174,
         "name": "呂欣潔",
+        "number": 2,
         "party": "GSD",
         "districtArea": "TPE",
         "districtNo": "7",
@@ -7262,6 +7378,7 @@ const candidates =
     "175": {
         "id": 175,
         "name": "楊實秋",
+        "number": 8,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "7",
@@ -7323,6 +7440,7 @@ const candidates =
     "176": {
         "id": 176,
         "name": "蘇承英",
+        "number": 4,
         "party": "PPU",
         "districtArea": "TPE",
         "districtNo": "7",
@@ -7384,6 +7502,7 @@ const candidates =
     "177": {
         "id": 177,
         "name": "詹益正",
+        "number": 3,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "7",
@@ -7445,10 +7564,11 @@ const candidates =
     "178": {
         "id": 178,
         "name": "林文傑",
+        "number": 1,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7506,6 +7626,7 @@ const candidates =
     "179": {
         "id": 179,
         "name": "林芷芬",
+        "number": 6,
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "7",
@@ -7567,10 +7688,11 @@ const candidates =
     "180": {
         "id": 180,
         "name": "范揚律",
+        "number": 5,
         "party": "DASG",
         "districtArea": "TPE",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -7628,6 +7750,7 @@ const candidates =
     "181": {
         "id": 181,
         "name": "方景鈞",
+        "number": 6,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "8",
@@ -7689,6 +7812,7 @@ const candidates =
     "182": {
         "id": 182,
         "name": "賴樹聲",
+        "number": 2,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "8",
@@ -7750,6 +7874,7 @@ const candidates =
     "183": {
         "id": 183,
         "name": "苗博雅",
+        "number": 3,
         "party": "GSD",
         "districtArea": "TPE",
         "districtNo": "8",
@@ -7811,67 +7936,69 @@ const candidates =
     "184": {
         "id": 184,
         "name": "李慶元",
+        "number": 1,
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "8",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "依不同議題、訴求、主張，決定門檻。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "依國內替代能源產業發展穩定而定"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "學習歐美陪審制"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "12年國教",
+                "content": "改革12年國教內容"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法",
+                "content": "不當黨產處理條例，及政黨法修改"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "食安法",
+                "content": "防止恐龍法官"
             }
         ]
     },
     "185": {
         "id": 185,
         "name": "陳如聖",
+        "number": 5,
         "party": "TLP",
         "districtArea": "TPE",
         "districtNo": "8",
@@ -7933,6 +8060,7 @@ const candidates =
     "186": {
         "id": 186,
         "name": "陳立基",
+        "number": 5,
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "1",
@@ -7994,6 +8122,7 @@ const candidates =
     "187": {
         "id": 187,
         "name": "呂孫綾",
+        "number": 4,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "1",
@@ -8055,6 +8184,7 @@ const candidates =
     "188": {
         "id": 188,
         "name": "陳筠棻",
+        "number": 6,
         "party": "PPU",
         "districtArea": "NTC",
         "districtNo": "1",
@@ -8116,45 +8246,46 @@ const candidates =
     "189": {
         "id": 189,
         "name": "蘇通達",
+        "number": 2,
         "party": "TP",
         "districtArea": "NTC",
         "districtNo": "1",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -8177,6 +8308,7 @@ const candidates =
     "190": {
         "id": 190,
         "name": "洪志成",
+        "number": 3,
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "1",
@@ -8238,10 +8370,11 @@ const candidates =
     "191": {
         "id": 191,
         "name": "陳明義",
+        "number": 1,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8299,10 +8432,11 @@ const candidates =
     "192": {
         "id": 192,
         "name": "張碩文",
+        "number": 5,
         "party": "PFP",
         "districtArea": "NTC",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8360,6 +8494,7 @@ const candidates =
     "193": {
         "id": 193,
         "name": "李乾龍",
+        "number": 3,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "3",
@@ -8421,7 +8556,70 @@ const candidates =
     "194": {
         "id": 194,
         "name": "姚胤宏",
+        "number": 7,
         "party": "TP",
+        "districtArea": "NTC",
+        "districtNo": "3",
+        "contactAvaliable": true,
+        "hasReply": true,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "refuse",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "195": {
+        "id": 195,
+        "name": "蘇卿彥",
+        "number": 9,
+        "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "3",
         "contactAvaliable": true,
@@ -8479,74 +8677,14 @@ const candidates =
             }
         ]
     },
-    "195": {
-        "id": 195,
-        "name": "蘇卿彥",
-        "party": "NONE",
-        "districtArea": "NTC",
-        "districtNo": "3",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
     "196": {
         "id": 196,
         "name": "林其瑩",
+        "number": 6,
         "party": "SWP",
         "districtArea": "NTC",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8604,6 +8742,7 @@ const candidates =
     "197": {
         "id": 197,
         "name": "黃茂",
+        "number": 8,
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "3",
@@ -8665,10 +8804,11 @@ const candidates =
     "198": {
         "id": 198,
         "name": "陳長發",
+        "number": 1,
         "party": "DASG",
         "districtArea": "NTC",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -8726,6 +8866,7 @@ const candidates =
     "199": {
         "id": 199,
         "name": "蕭忠漢",
+        "number": 2,
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "3",
@@ -8787,6 +8928,7 @@ const candidates =
     "200": {
         "id": 200,
         "name": "劉鳳章",
+        "number": 5,
         "party": "PPU",
         "districtArea": "NTC",
         "districtNo": "4",
@@ -8848,6 +8990,7 @@ const candidates =
     "201": {
         "id": 201,
         "name": "賈伯楷",
+        "number": 1,
         "party": "GSD",
         "districtArea": "NTC",
         "districtNo": "4",
@@ -8909,6 +9052,7 @@ const candidates =
     "202": {
         "id": 202,
         "name": "陳茂嘉",
+        "number": 4,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "4",
@@ -8970,6 +9114,7 @@ const candidates =
     "203": {
         "id": 203,
         "name": "林麗容",
+        "number": 6,
         "party": "JP",
         "districtArea": "NTC",
         "districtNo": "4",
@@ -9031,6 +9176,7 @@ const candidates =
     "204": {
         "id": 204,
         "name": "邱鴻玕",
+        "number": 7,
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "4",
@@ -9092,10 +9238,11 @@ const candidates =
     "205": {
         "id": 205,
         "name": "王斯儀",
+        "number": 3,
         "party": "DASG",
         "districtArea": "NTC",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -9153,67 +9300,69 @@ const candidates =
     "206": {
         "id": 206,
         "name": "蘇巧慧",
+        "number": 1,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "幼托公告化",
+                "content": "修改「幼兒教育及照顧法」部分條文，實施幼托公共化。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "落實長照",
+                "content": "修改「長期照顧法」，長期經費應有固定財源，並由稅收支應。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "強化食品安全",
+                "content": "修改「食品安全法」，提高檢舉獎金，對生產者課以更重的法律及賠償責任。"
             }
         ]
     },
     "207": {
         "id": 207,
         "name": "郭柏瑜",
+        "number": 2,
         "party": "NPP",
         "districtArea": "NTC",
         "districtNo": "5",
@@ -9275,6 +9424,7 @@ const candidates =
     "208": {
         "id": 208,
         "name": "林國春",
+        "number": 8,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "6",
@@ -9336,10 +9486,11 @@ const candidates =
     "209": {
         "id": 209,
         "name": "姚玉霜",
+        "number": 1,
         "party": "TLP",
         "districtArea": "NTC",
         "districtNo": "6",
-        "contactAvaliable": true,
+        "contactAvaliable": false,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -9397,6 +9548,7 @@ const candidates =
     "210": {
         "id": 210,
         "name": "張宏陸",
+        "number": 9,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "6",
@@ -9458,6 +9610,7 @@ const candidates =
     "211": {
         "id": 211,
         "name": "游信義",
+        "number": 3,
         "party": "FHL",
         "districtArea": "NTC",
         "districtNo": "6",
@@ -9519,6 +9672,7 @@ const candidates =
     "212": {
         "id": 212,
         "name": "莊豐銘",
+        "number": 5,
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "6",
@@ -9580,6 +9734,7 @@ const candidates =
     "213": {
         "id": 213,
         "name": "李貴寶",
+        "number": 6,
         "party": "MKT",
         "districtArea": "NTC",
         "districtNo": "6",
@@ -9641,6 +9796,7 @@ const candidates =
     "214": {
         "id": 214,
         "name": "李建明",
+        "number": 2,
         "party": "TP",
         "districtArea": "NTC",
         "districtNo": "6",
@@ -9673,13 +9829,13 @@ const candidates =
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -9702,6 +9858,7 @@ const candidates =
     "215": {
         "id": 215,
         "name": "康仁俊",
+        "number": 4,
         "party": "PFP",
         "districtArea": "NTC",
         "districtNo": "6",
@@ -9763,6 +9920,7 @@ const candidates =
     "216": {
         "id": 216,
         "name": "黃鈞民",
+        "number": 7,
         "party": "MCFAP",
         "districtArea": "NTC",
         "districtNo": "6",
@@ -9824,6 +9982,7 @@ const candidates =
     "217": {
         "id": 217,
         "name": "羅致政",
+        "number": 2,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "7",
@@ -9885,6 +10044,7 @@ const candidates =
     "218": {
         "id": 218,
         "name": "李婉鈺",
+        "number": 3,
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "7",
@@ -9946,10 +10106,11 @@ const candidates =
     "219": {
         "id": 219,
         "name": "汪成華",
+        "number": 1,
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "7",
-        "contactAvaliable": true,
+        "contactAvaliable": false,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -10007,6 +10168,7 @@ const candidates =
     "220": {
         "id": 220,
         "name": "江永昌",
+        "number": 1,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "8",
@@ -10068,10 +10230,11 @@ const candidates =
     "221": {
         "id": 221,
         "name": "吳金魁",
+        "number": 4,
         "party": "MCFAP",
         "districtArea": "NTC",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -10129,60 +10292,61 @@ const candidates =
     "222": {
         "id": 222,
         "name": "童正億",
+        "number": 3,
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "8",
         "contactAvaliable": false,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "性別取向是個人自由，不需約束"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "罷免宣傳是可行的"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "因目前核四建廠，問題一堆，不能保證安全性。如能確保安全性，是不需停建，避免浪費公帑。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "無",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "無",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "無",
                 "content": ""
             }
         ]
@@ -10190,10 +10354,11 @@ const candidates =
     "223": {
         "id": 223,
         "name": "邵伯祥",
+        "number": 6,
         "party": "DASG",
         "districtArea": "NTC",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -10251,6 +10416,7 @@ const candidates =
     "224": {
         "id": 224,
         "name": "林建志",
+        "number": 5,
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "8",
@@ -10312,6 +10478,7 @@ const candidates =
     "225": {
         "id": 225,
         "name": "張菁芳",
+        "number": 2,
         "party": "MKT",
         "districtArea": "NTC",
         "districtNo": "9",
@@ -10373,6 +10540,7 @@ const candidates =
     "226": {
         "id": 226,
         "name": "李幸長",
+        "number": 5,
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "9",
@@ -10434,10 +10602,11 @@ const candidates =
     "227": {
         "id": 227,
         "name": "董建一",
+        "number": 1,
         "party": "MPR",
         "districtArea": "NTC",
         "districtNo": "9",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -10495,6 +10664,7 @@ const candidates =
     "228": {
         "id": 228,
         "name": "曾文聖",
+        "number": 3,
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "9",
@@ -10556,6 +10726,7 @@ const candidates =
     "229": {
         "id": 229,
         "name": "吳琪銘",
+        "number": 2,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "10",
@@ -10617,60 +10788,61 @@ const candidates =
     "230": {
         "id": 230,
         "name": "黃魯光",
+        "number": 3,
         "party": "FTP",
         "districtArea": "NTC",
         "districtNo": "10",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -10678,6 +10850,7 @@ const candidates =
     "231": {
         "id": 231,
         "name": "陳永福",
+        "number": 3,
         "party": "DPP",
         "districtArea": "NTC",
         "districtNo": "11",
@@ -10739,6 +10912,7 @@ const candidates =
     "232": {
         "id": 232,
         "name": "曾柏瑜",
+        "number": 2,
         "party": "GSD",
         "districtArea": "NTC",
         "districtNo": "11",
@@ -10800,6 +10974,7 @@ const candidates =
     "233": {
         "id": 233,
         "name": "黃國昌",
+        "number": 3,
         "party": "NPP",
         "districtArea": "NTC",
         "districtNo": "12",
@@ -10861,6 +11036,7 @@ const candidates =
     "234": {
         "id": 234,
         "name": "陳永順",
+        "number": 4,
         "party": "FHL",
         "districtArea": "NTC",
         "districtNo": "12",
@@ -10922,6 +11098,7 @@ const candidates =
     "235": {
         "id": 235,
         "name": "鐘國誌",
+        "number": 1,
         "party": "PPU",
         "districtArea": "NTC",
         "districtNo": "12",
@@ -10983,6 +11160,7 @@ const candidates =
     "236": {
         "id": 236,
         "name": "鄭運鵬",
+        "number": 1,
         "party": "DPP",
         "districtArea": "TYN",
         "districtNo": "1",
@@ -11044,71 +11222,11 @@ const candidates =
     "237": {
         "id": 237,
         "name": "王寶萱",
+        "number": 3,
         "party": "GSD",
         "districtArea": "TYN",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "238": {
-        "id": 238,
-        "name": "陳佩俞",
-        "party": "TP",
-        "districtArea": "TYN",
-        "districtNo": "2",
-        "contactAvaliable": false,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -11137,13 +11255,75 @@ const candidates =
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "國會改革",
+                "content": "1.負責：公布黨團協商紀錄，並限制協商之範疇。2.乾淨：利益迴避，紀律委員會引進外部委員。3.專業：提高不分區立委之比例。"
+            },
+            {
+                "goal": "土地正義",
+                "content": "1.完善民眾參與機制。2.建立「重大公共建設」的評估準則。3.修改相關環評法，不得先徵收再環評。4.推動《市地重劃法》立法。"
+            },
+            {
+                "goal": "確保食安公安",
+                "content": "1.修改《食安法》，建立「食品身分標準」與「不宜供人食用」的管制依據。2.推動訂定《緊急計畫與社區知情權法案》"
+            }
+        ]
+    },
+    "238": {
+        "id": 238,
+        "name": "陳佩俞",
+        "number": 1,
+        "party": "TP",
+        "districtArea": "TYN",
+        "districtNo": "2",
+        "contactAvaliable": true,
+        "hasReply": true,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "refuse",
                     "statement": ""
                 }
             }
@@ -11166,10 +11346,11 @@ const candidates =
     "239": {
         "id": 239,
         "name": "陳賴素美",
+        "number": 5,
         "party": "DPP",
         "districtArea": "TYN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11227,10 +11408,11 @@ const candidates =
     "240": {
         "id": 240,
         "name": "張康儀",
+        "number": 4,
         "party": "NPP",
         "districtArea": "TYN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -11288,6 +11470,7 @@ const candidates =
     "241": {
         "id": 241,
         "name": "黃維春",
+        "number": 6,
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "2",
@@ -11349,10 +11532,11 @@ const candidates =
     "242": {
         "id": 242,
         "name": "吳振槖",
+        "number": 2,
         "party": "TIP",
         "districtArea": "TYN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11410,6 +11594,7 @@ const candidates =
     "243": {
         "id": 243,
         "name": "徐景文",
+        "number": 2,
         "party": "DPP",
         "districtArea": "TYN",
         "districtNo": "3",
@@ -11471,6 +11656,7 @@ const candidates =
     "244": {
         "id": 244,
         "name": "陳宏瑞",
+        "number": 1,
         "party": "MKT",
         "districtArea": "TYN",
         "districtNo": "3",
@@ -11532,60 +11718,61 @@ const candidates =
     "245": {
         "id": 245,
         "name": "余能生",
+        "number": 4,
         "party": "FTP",
         "districtArea": "TYN",
         "districtNo": "3",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -11596,7 +11783,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11654,6 +11841,7 @@ const candidates =
     "247": {
         "id": 247,
         "name": "鄭寶清",
+        "number": 2,
         "party": "DPP",
         "districtArea": "TYN",
         "districtNo": "4",
@@ -11715,60 +11903,61 @@ const candidates =
     "248": {
         "id": 248,
         "name": "張肇良",
+        "number": 4,
         "party": "DPP",
         "districtArea": "TYN",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "無",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "無",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "無",
                 "content": ""
             }
         ]
@@ -11776,6 +11965,7 @@ const candidates =
     "249": {
         "id": 249,
         "name": "黃國華",
+        "number": 6,
         "party": "NHSA",
         "districtArea": "TYN",
         "districtNo": "5",
@@ -11837,6 +12027,7 @@ const candidates =
     "250": {
         "id": 250,
         "name": "張誠",
+        "number": 3,
         "party": "MKT",
         "districtArea": "TYN",
         "districtNo": "5",
@@ -11898,6 +12089,7 @@ const candidates =
     "251": {
         "id": 251,
         "name": "黃志浩",
+        "number": 5,
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "5",
@@ -11959,6 +12151,7 @@ const candidates =
     "252": {
         "id": 252,
         "name": "蕭家亮",
+        "number": 2,
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "5",
@@ -12020,10 +12213,11 @@ const candidates =
     "253": {
         "id": 253,
         "name": "趙正宇",
+        "number": 2,
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12081,6 +12275,7 @@ const candidates =
     "254": {
         "id": 254,
         "name": "呂東杰",
+        "number": 6,
         "party": "GSD",
         "districtArea": "TYN",
         "districtNo": "6",
@@ -12142,10 +12337,11 @@ const candidates =
     "255": {
         "id": 255,
         "name": "鄭振源",
+        "number": 1,
         "party": "TWP",
         "districtArea": "TYN",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12203,10 +12399,11 @@ const candidates =
     "256": {
         "id": 256,
         "name": "藍大山",
+        "number": 3,
         "party": "TIP",
         "districtArea": "TYN",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12264,6 +12461,7 @@ const candidates =
     "257": {
         "id": 257,
         "name": "楊金軒",
+        "number": 5,
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "6",
@@ -12325,6 +12523,7 @@ const candidates =
     "258": {
         "id": 258,
         "name": "顏秋月",
+        "number": 5,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "1",
@@ -12386,6 +12585,7 @@ const candidates =
     "259": {
         "id": 259,
         "name": "陳軍元",
+        "number": 3,
         "party": "CHTY",
         "districtArea": "TXG",
         "districtNo": "1",
@@ -12447,10 +12647,11 @@ const candidates =
     "260": {
         "id": 260,
         "name": "王淑芬",
+        "number": 2,
         "party": "DASG",
         "districtArea": "TXG",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -12508,6 +12709,7 @@ const candidates =
     "261": {
         "id": 261,
         "name": "黃金推",
+        "number": 1,
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "1",
@@ -12569,6 +12771,7 @@ const candidates =
     "262": {
         "id": 262,
         "name": "陳世凱",
+        "number": 1,
         "party": "DPP",
         "districtArea": "TXG",
         "districtNo": "2",
@@ -12630,6 +12833,7 @@ const candidates =
     "263": {
         "id": 263,
         "name": "鍾文龍",
+        "number": 3,
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "2",
@@ -12691,6 +12895,7 @@ const candidates =
     "264": {
         "id": 264,
         "name": "洪慈庸",
+        "number": 3,
         "party": "NPP",
         "districtArea": "TXG",
         "districtNo": "3",
@@ -12752,10 +12957,11 @@ const candidates =
     "265": {
         "id": 265,
         "name": "黃信吉",
+        "number": 2,
         "party": "MCFAP",
         "districtArea": "TXG",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12813,6 +13019,7 @@ const candidates =
     "266": {
         "id": 266,
         "name": "葉春幸",
+        "number": 4,
         "party": "FHL",
         "districtArea": "TXG",
         "districtNo": "4",
@@ -12874,6 +13081,7 @@ const candidates =
     "267": {
         "id": 267,
         "name": "張廖萬堅",
+        "number": 2,
         "party": "DPP",
         "districtArea": "TXG",
         "districtNo": "4",
@@ -12935,6 +13143,7 @@ const candidates =
     "268": {
         "id": 268,
         "name": "吳淑慧",
+        "number": 1,
         "party": "MKT",
         "districtArea": "TXG",
         "districtNo": "4",
@@ -12996,60 +13205,61 @@ const candidates =
     "269": {
         "id": 269,
         "name": "游壽元",
+        "number": 6,
         "party": "FTP",
         "districtArea": "TXG",
         "districtNo": "4",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -13057,10 +13267,11 @@ const candidates =
     "270": {
         "id": 270,
         "name": "顏惠莉",
+        "number": 5,
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13118,6 +13329,7 @@ const candidates =
     "271": {
         "id": 271,
         "name": "簡孟軒",
+        "number": 1,
         "party": "FHL",
         "districtArea": "TXG",
         "districtNo": "5",
@@ -13179,6 +13391,7 @@ const candidates =
     "272": {
         "id": 272,
         "name": "苗豐隆",
+        "number": 2,
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "5",
@@ -13240,6 +13453,7 @@ const candidates =
     "273": {
         "id": 273,
         "name": "劉國隆",
+        "number": 4,
         "party": "TSU",
         "districtArea": "TXG",
         "districtNo": "5",
@@ -13301,6 +13515,7 @@ const candidates =
     "274": {
         "id": 274,
         "name": "沈智慧",
+        "number": 2,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "6",
@@ -13362,6 +13577,7 @@ const candidates =
     "275": {
         "id": 275,
         "name": "賀姿華",
+        "number": 3,
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "6",
@@ -13423,10 +13639,11 @@ const candidates =
     "276": {
         "id": 276,
         "name": "石大哉",
+        "number": 3,
         "party": "MCFAP",
         "districtArea": "TXG",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13484,6 +13701,7 @@ const candidates =
     "277": {
         "id": 277,
         "name": "賴義鍠",
+        "number": 2,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "7",
@@ -13545,6 +13763,7 @@ const candidates =
     "278": {
         "id": 278,
         "name": "王政棋",
+        "number": 1,
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "8",
@@ -13606,6 +13825,7 @@ const candidates =
     "279": {
         "id": 279,
         "name": "謝志忠",
+        "number": 3,
         "party": "DPP",
         "districtArea": "TXG",
         "districtNo": "8",
@@ -13667,6 +13887,7 @@ const candidates =
     "280": {
         "id": 280,
         "name": "黃瑞坤",
+        "number": 1,
         "party": "KMT",
         "districtArea": "TNN",
         "districtNo": "1",
@@ -13728,10 +13949,11 @@ const candidates =
     "281": {
         "id": 281,
         "name": "陳柏志",
+        "number": 2,
         "party": "CHTY",
         "districtArea": "TNN",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13789,10 +14011,11 @@ const candidates =
     "282": {
         "id": 282,
         "name": "林德旺",
+        "number": 3,
         "party": "NONE",
         "districtArea": "TNN",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13850,10 +14073,11 @@ const candidates =
     "283": {
         "id": 283,
         "name": "黃耀盛",
+        "number": 2,
         "party": "KMT",
         "districtArea": "TNN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13911,10 +14135,11 @@ const candidates =
     "284": {
         "id": 284,
         "name": "黃泯甄",
+        "number": 3,
         "party": "CHTY",
         "districtArea": "TNN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13972,60 +14197,61 @@ const candidates =
     "285": {
         "id": 285,
         "name": "黃憲清",
+        "number": 4,
         "party": "FTP",
         "districtArea": "TNN",
         "districtNo": "2",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -14033,6 +14259,7 @@ const candidates =
     "286": {
         "id": 286,
         "name": "王國棟",
+        "number": 5,
         "party": "NONE",
         "districtArea": "TNN",
         "districtNo": "2",
@@ -14094,6 +14321,7 @@ const candidates =
     "287": {
         "id": 287,
         "name": "謝龍介",
+        "number": 1,
         "party": "KMT",
         "districtArea": "TNN",
         "districtNo": "3",
@@ -14155,10 +14383,11 @@ const candidates =
     "288": {
         "id": 288,
         "name": "翁琬甯",
+        "number": 4,
         "party": "CHTY",
         "districtArea": "TNN",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14216,6 +14445,7 @@ const candidates =
     "289": {
         "id": 289,
         "name": "鄧秀寶",
+        "number": 2,
         "party": "MKT",
         "districtArea": "TNN",
         "districtNo": "3",
@@ -14277,6 +14507,7 @@ const candidates =
     "290": {
         "id": 290,
         "name": "林俊憲",
+        "number": 1,
         "party": "DPP",
         "districtArea": "TNN",
         "districtNo": "4",
@@ -14338,7 +14569,70 @@ const candidates =
     "291": {
         "id": 291,
         "name": "楊智達",
+        "number": 5,
         "party": "GSD",
+        "districtArea": "TNN",
+        "districtNo": "4",
+        "contactAvaliable": true,
+        "hasReply": true,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "18歲公民權",
+                "content": "投票年齡下修至18歲，接軌國際民主國家之主流，落實世代正義"
+            },
+            {
+                "goal": "婚姻平權",
+                "content": "修訂民法，將婚姻適用自男女當事人修正為雙方當事人"
+            },
+            {
+                "goal": "下修公投門檻",
+                "content": "提案門檻降至萬分之一，連署門檻降至1.5%，廢除投票率門檻改採簡單多數決。"
+            }
+        ]
+    },
+    "292": {
+        "id": 292,
+        "name": "傅建峰",
+        "number": 2,
+        "party": "CHTY",
         "districtArea": "TNN",
         "districtNo": "4",
         "contactAvaliable": true,
@@ -14396,74 +14690,14 @@ const candidates =
             }
         ]
     },
-    "292": {
-        "id": 292,
-        "name": "傅建峰",
-        "party": "CHTY",
-        "districtArea": "TNN",
-        "districtNo": "4",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
     "293": {
         "id": 293,
         "name": "蔡郁芝",
+        "number": 6,
         "party": "NPP",
         "districtArea": "TNN",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -14521,10 +14755,11 @@ const candidates =
     "294": {
         "id": 294,
         "name": "陳皇州",
+        "number": 4,
         "party": "DASG",
         "districtArea": "TNN",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -14582,10 +14817,11 @@ const candidates =
     "295": {
         "id": 295,
         "name": "李盈蒔",
+        "number": 4,
         "party": "CHTY",
         "districtArea": "TNN",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14643,6 +14879,7 @@ const candidates =
     "296": {
         "id": 296,
         "name": "林易煌",
+        "number": 3,
         "party": "KMT",
         "districtArea": "TNN",
         "districtNo": "5",
@@ -14704,6 +14941,7 @@ const candidates =
     "297": {
         "id": 297,
         "name": "王定宇",
+        "number": 1,
         "party": "DPP",
         "districtArea": "TNN",
         "districtNo": "5",
@@ -14765,6 +15003,7 @@ const candidates =
     "298": {
         "id": 298,
         "name": "晏揚清",
+        "number": 2,
         "party": "TLP",
         "districtArea": "TNN",
         "districtNo": "5",
@@ -14826,10 +15065,11 @@ const candidates =
     "299": {
         "id": 299,
         "name": "劉子麟",
+        "number": 3,
         "party": "CHTY",
         "districtArea": "KHH",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14887,10 +15127,11 @@ const candidates =
     "300": {
         "id": 300,
         "name": "莊婷欣",
+        "number": 4,
         "party": "PPU",
         "districtArea": "KHH",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14948,6 +15189,7 @@ const candidates =
     "301": {
         "id": 301,
         "name": "鍾易仲",
+        "number": 2,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "1",
@@ -15009,6 +15251,7 @@ const candidates =
     "302": {
         "id": 302,
         "name": "黃韻涵",
+        "number": 2,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "2",
@@ -15070,10 +15313,11 @@ const candidates =
     "303": {
         "id": 303,
         "name": "黃金玲",
+        "number": 3,
         "party": "CHTY",
         "districtArea": "KHH",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15131,71 +15375,11 @@ const candidates =
     "304": {
         "id": 304,
         "name": "曾盈豐",
+        "number": 5,
         "party": "FTP",
         "districtArea": "KHH",
         "districtNo": "2",
-        "contactAvaliable": false,
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "305": {
-        "id": 305,
-        "name": "李柏融",
-        "party": "TP",
-        "districtArea": "KHH",
-        "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -15224,13 +15408,75 @@ const candidates =
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "打破司法獨裁",
+                "content": ""
+            },
+            {
+                "goal": "終結媒體壟斷",
+                "content": ""
+            },
+            {
+                "goal": "強化本土教育",
+                "content": ""
+            }
+        ]
+    },
+    "305": {
+        "id": 305,
+        "name": "李柏融",
+        "number": 4,
+        "party": "TP",
+        "districtArea": "KHH",
+        "districtNo": "2",
+        "contactAvaliable": true,
+        "hasReply": true,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -15253,6 +15499,7 @@ const candidates =
     "306": {
         "id": 306,
         "name": "劉世芳",
+        "number": 4,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "3",
@@ -15314,6 +15561,7 @@ const candidates =
     "307": {
         "id": 307,
         "name": "張顯耀",
+        "number": 3,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "3",
@@ -15375,6 +15623,7 @@ const candidates =
     "308": {
         "id": 308,
         "name": "梁蓓禎",
+        "number": 1,
         "party": "FHL",
         "districtArea": "KHH",
         "districtNo": "3",
@@ -15436,10 +15685,11 @@ const candidates =
     "309": {
         "id": 309,
         "name": "柳淑芳",
+        "number": 2,
         "party": "NONE",
         "districtArea": "KHH",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15497,10 +15747,11 @@ const candidates =
     "310": {
         "id": 310,
         "name": "莊明憲",
+        "number": 5,
         "party": "DASG",
         "districtArea": "KHH",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -15558,10 +15809,11 @@ const candidates =
     "311": {
         "id": 311,
         "name": "郭倫豪",
+        "number": 1,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15619,10 +15871,11 @@ const candidates =
     "312": {
         "id": 312,
         "name": "林俊揚",
+        "number": 2,
         "party": "CHTY",
         "districtArea": "KHH",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15680,10 +15933,11 @@ const candidates =
     "313": {
         "id": 313,
         "name": "蔡金晏",
+        "number": 1,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15741,10 +15995,11 @@ const candidates =
     "314": {
         "id": 314,
         "name": "王新昌",
+        "number": 4,
         "party": "MCFAP",
         "districtArea": "KHH",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15802,10 +16057,11 @@ const candidates =
     "315": {
         "id": 315,
         "name": "楊宗穎",
+        "number": 3,
         "party": "PPU",
         "districtArea": "KHH",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15863,10 +16119,11 @@ const candidates =
     "316": {
         "id": 316,
         "name": "楊翰奇",
+        "number": 3,
         "party": "PPU",
         "districtArea": "KHH",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15927,7 +16184,7 @@ const candidates =
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15985,10 +16242,11 @@ const candidates =
     "318": {
         "id": 318,
         "name": "莊啟旺",
+        "number": 3,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16046,10 +16304,11 @@ const candidates =
     "319": {
         "id": 319,
         "name": "陳惠敏",
+        "number": 4,
         "party": "NPP",
         "districtArea": "KHH",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -16107,10 +16366,11 @@ const candidates =
     "320": {
         "id": 320,
         "name": "陳素莉",
+        "number": 2,
         "party": "PPU",
         "districtArea": "KHH",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16168,6 +16428,7 @@ const candidates =
     "321": {
         "id": 321,
         "name": "林景元",
+        "number": 5,
         "party": "NONE",
         "districtArea": "KHH",
         "districtNo": "7",
@@ -16229,10 +16490,11 @@ const candidates =
     "322": {
         "id": 322,
         "name": "黃璽文",
+        "number": 4,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16290,10 +16552,11 @@ const candidates =
     "323": {
         "id": 323,
         "name": "汪婷萱",
+        "number": 6,
         "party": "CHTY",
         "districtArea": "KHH",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16351,10 +16614,11 @@ const candidates =
     "324": {
         "id": 324,
         "name": "陳函谷",
+        "number": 3,
         "party": "NPP",
         "districtArea": "KHH",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -16412,6 +16676,7 @@ const candidates =
     "325": {
         "id": 325,
         "name": "張育華",
+        "number": 2,
         "party": "PDF",
         "districtArea": "KHH",
         "districtNo": "8",
@@ -16473,10 +16738,11 @@ const candidates =
     "326": {
         "id": 326,
         "name": "馬凱妮",
+        "number": 5,
         "party": "SWP",
         "districtArea": "KHH",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16534,10 +16800,11 @@ const candidates =
     "327": {
         "id": 327,
         "name": "劉義雄",
+        "number": 1,
         "party": "MCFAP",
         "districtArea": "KHH",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16595,10 +16862,11 @@ const candidates =
     "328": {
         "id": 328,
         "name": "賴瑞隆",
+        "number": 2,
         "party": "DPP",
         "districtArea": "KHH",
         "districtNo": "9",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16656,10 +16924,11 @@ const candidates =
     "329": {
         "id": 329,
         "name": "林宗彥",
+        "number": 1,
         "party": "MKT",
         "districtArea": "KHH",
         "districtNo": "9",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16717,10 +16986,11 @@ const candidates =
     "330": {
         "id": 330,
         "name": "蔡媽福",
+        "number": 4,
         "party": "CHTY",
         "districtArea": "KHH",
         "districtNo": "9",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16778,10 +17048,11 @@ const candidates =
     "331": {
         "id": 331,
         "name": "林為洲",
+        "number": 1,
         "party": "KMT",
         "districtArea": "HSZ",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16839,10 +17110,11 @@ const candidates =
     "332": {
         "id": 332,
         "name": "卓恩宗",
+        "number": 7,
         "party": "FHL",
         "districtArea": "HSZ",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16900,10 +17172,11 @@ const candidates =
     "333": {
         "id": 333,
         "name": "李宗華",
+        "number": 6,
         "party": "MCFAP",
         "districtArea": "HSZ",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16961,10 +17234,11 @@ const candidates =
     "334": {
         "id": 334,
         "name": "鄭永金",
+        "number": 3,
         "party": "NONE",
         "districtArea": "HSZ",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17022,10 +17296,11 @@ const candidates =
     "335": {
         "id": 335,
         "name": "邱靖雅",
+        "number": 8,
         "party": "MKT",
         "districtArea": "HSZ",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17083,6 +17358,7 @@ const candidates =
     "336": {
         "id": 336,
         "name": "黃秀龍",
+        "number": 2,
         "party": "NONE",
         "districtArea": "HSZ",
         "districtNo": "N/A",
@@ -17144,10 +17420,11 @@ const candidates =
     "337": {
         "id": 337,
         "name": "范振揆",
+        "number": 4,
         "party": "CHTY",
         "districtArea": "HSZ",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17205,6 +17482,7 @@ const candidates =
     "338": {
         "id": 338,
         "name": "蘇雯英",
+        "number": 5,
         "party": "NHSA",
         "districtArea": "HSZ",
         "districtNo": "N/A",
@@ -17266,10 +17544,11 @@ const candidates =
     "339": {
         "id": 339,
         "name": "杜文卿",
+        "number": 1,
         "party": "DPP",
         "districtArea": "ZMI",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17327,6 +17606,7 @@ const candidates =
     "340": {
         "id": 340,
         "name": "黃玉燕",
+        "number": 3,
         "party": "NONE",
         "districtArea": "ZMI",
         "districtNo": "1",
@@ -17388,10 +17668,11 @@ const candidates =
     "341": {
         "id": 341,
         "name": "康世儒",
+        "number": 2,
         "party": "MKT",
         "districtArea": "ZMI",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17449,60 +17730,61 @@ const candidates =
     "342": {
         "id": 342,
         "name": "林一方",
+        "number": 5,
         "party": "FTP",
         "districtArea": "ZMI",
         "districtNo": "1",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -17510,6 +17792,7 @@ const candidates =
     "343": {
         "id": 343,
         "name": "周書涵",
+        "number": 3,
         "party": "NONE",
         "districtArea": "ZMI",
         "districtNo": "2",
@@ -17571,60 +17854,61 @@ const candidates =
     "344": {
         "id": 344,
         "name": "劉文忠",
+        "number": 5,
         "party": "FTP",
         "districtArea": "ZMI",
         "districtNo": "2",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -17632,10 +17916,11 @@ const candidates =
     "345": {
         "id": 345,
         "name": "戴文祥",
+        "number": 1,
         "party": "NONE",
         "districtArea": "ZMI",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17693,10 +17978,11 @@ const candidates =
     "346": {
         "id": 346,
         "name": "陳文彬",
+        "number": 1,
         "party": "DPP",
         "districtArea": "CHW",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17754,6 +18040,7 @@ const candidates =
     "347": {
         "id": 347,
         "name": "劉泳君",
+        "number": 6,
         "party": "NONE",
         "districtArea": "CHW",
         "districtNo": "2",
@@ -17815,60 +18102,61 @@ const candidates =
     "348": {
         "id": 348,
         "name": "黃秀芳",
+        "number": 3,
         "party": "DPP",
         "districtArea": "CHW",
         "districtNo": "2",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "法案推動上，加強溝通與法條精神說明"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "須先建立完善的陪審團制度"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "陪審團法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "年金改革法案",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "社會救助法",
                 "content": ""
             }
         ]
@@ -17876,10 +18164,11 @@ const candidates =
     "349": {
         "id": 349,
         "name": "許永金",
+        "number": 4,
         "party": "NONE",
         "districtArea": "CHW",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17937,10 +18226,11 @@ const candidates =
     "350": {
         "id": 350,
         "name": "張耀元",
+        "number": 1,
         "party": "MKT",
         "districtArea": "CHW",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17998,10 +18288,11 @@ const candidates =
     "351": {
         "id": 351,
         "name": "温國銘",
+        "number": 7,
         "party": "LP",
         "districtArea": "CHW",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18059,10 +18350,11 @@ const candidates =
     "352": {
         "id": 352,
         "name": "黃玉芬",
+        "number": 5,
         "party": "NONE",
         "districtArea": "CHW",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18120,10 +18412,11 @@ const candidates =
     "353": {
         "id": 353,
         "name": "陳朝容",
+        "number": 3,
         "party": "PFP",
         "districtArea": "CHW",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18181,10 +18474,11 @@ const candidates =
     "354": {
         "id": 354,
         "name": "洪宗熠",
+        "number": 5,
         "party": "DPP",
         "districtArea": "CHW",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18245,57 +18539,57 @@ const candidates =
         "party": "FTP",
         "districtArea": "CHW",
         "districtNo": "3",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -18303,10 +18597,11 @@ const candidates =
     "356": {
         "id": 356,
         "name": "張益勝",
+        "number": 4,
         "party": "NPP",
         "districtArea": "CHW",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -18364,10 +18659,11 @@ const candidates =
     "357": {
         "id": 357,
         "name": "張錦昆",
+        "number": 2,
         "party": "KMT",
         "districtArea": "CHW",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18425,10 +18721,11 @@ const candidates =
     "358": {
         "id": 358,
         "name": "張國鑫",
+        "number": 2,
         "party": "DPP",
         "districtArea": "NAN",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18486,10 +18783,11 @@ const candidates =
     "359": {
         "id": 359,
         "name": "張鎔麒",
+        "number": 2,
         "party": "KMT",
         "districtArea": "YLN",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18547,10 +18845,11 @@ const candidates =
     "360": {
         "id": 360,
         "name": "蘇治芬",
+        "number": 1,
         "party": "DPP",
         "districtArea": "YLN",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18608,60 +18907,61 @@ const candidates =
     "361": {
         "id": 361,
         "name": "林富源",
+        "number": 3,
         "party": "TP",
         "districtArea": "YLN",
         "districtNo": "1",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "環境三法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "禁燒生煤",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "無",
                 "content": ""
             }
         ]
@@ -18669,10 +18969,11 @@ const candidates =
     "362": {
         "id": 362,
         "name": "吳威志",
+        "number": 3,
         "party": "KMT",
         "districtArea": "YLN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18730,10 +19031,11 @@ const candidates =
     "363": {
         "id": 363,
         "name": "王煒婷",
+        "number": 1,
         "party": "NPP",
         "districtArea": "YLN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -18791,33 +19093,34 @@ const candidates =
     "364": {
         "id": 364,
         "name": "張佳偉",
+        "number": 2,
         "party": "TP",
         "districtArea": "YLN",
         "districtNo": "2",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
@@ -18852,10 +19155,11 @@ const candidates =
     "365": {
         "id": 365,
         "name": "蔡易餘",
+        "number": 2,
         "party": "DPP",
         "districtArea": "CYI",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18913,10 +19217,11 @@ const candidates =
     "366": {
         "id": 366,
         "name": "林江釧",
+        "number": 3,
         "party": "KMT",
         "districtArea": "CYI",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18974,6 +19279,7 @@ const candidates =
     "367": {
         "id": 367,
         "name": "邱崑龍",
+        "number": 1,
         "party": "NONE",
         "districtArea": "CYI",
         "districtNo": "1",
@@ -19035,10 +19341,11 @@ const candidates =
     "368": {
         "id": 368,
         "name": "林于玲",
+        "number": 3,
         "party": "KMT",
         "districtArea": "CYI",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19096,10 +19403,11 @@ const candidates =
     "369": {
         "id": 369,
         "name": "賴競民",
+        "number": 2,
         "party": "DASG",
         "districtArea": "CYI",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -19157,6 +19465,7 @@ const candidates =
     "370": {
         "id": 370,
         "name": "廖婉汝",
+        "number": 1,
         "party": "KMT",
         "districtArea": "PIF",
         "districtNo": "1",
@@ -19218,10 +19527,11 @@ const candidates =
     "371": {
         "id": 371,
         "name": "鍾佳濱",
+        "number": 1,
         "party": "DPP",
         "districtArea": "PIF",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19279,10 +19589,11 @@ const candidates =
     "372": {
         "id": 372,
         "name": "張兆陽",
+        "number": 2,
         "party": "CHTY",
         "districtArea": "PIF",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19340,10 +19651,11 @@ const candidates =
     "373": {
         "id": 373,
         "name": "許謹如",
+        "number": 4,
         "party": "KMT",
         "districtArea": "PIF",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19401,60 +19713,61 @@ const candidates =
     "374": {
         "id": 374,
         "name": "丁勇智",
+        "number": 5,
         "party": "FTP",
         "districtArea": "PIF",
         "districtNo": "3",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -19462,10 +19775,11 @@ const candidates =
     "375": {
         "id": 375,
         "name": "黃昭展",
+        "number": 1,
         "party": "NONE",
         "districtArea": "PIF",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19523,10 +19837,11 @@ const candidates =
     "376": {
         "id": 376,
         "name": "邱錫奎",
+        "number": 8,
         "party": "NONE",
         "districtArea": "ILA",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19584,10 +19899,11 @@ const candidates =
     "377": {
         "id": 377,
         "name": "李志鏞",
+        "number": 4,
         "party": "KMT",
         "districtArea": "ILA",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19645,10 +19961,11 @@ const candidates =
     "378": {
         "id": 378,
         "name": "吳紹文",
+        "number": 7,
         "party": "GSD",
         "districtArea": "ILA",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19706,10 +20023,11 @@ const candidates =
     "379": {
         "id": 379,
         "name": "孫博萮",
+        "number": 2,
         "party": "NONE",
         "districtArea": "ILA",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19767,10 +20085,11 @@ const candidates =
     "380": {
         "id": 380,
         "name": "郭儒釗",
+        "number": 3,
         "party": "MCFAP",
         "districtArea": "ILA",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19828,10 +20147,11 @@ const candidates =
     "381": {
         "id": 381,
         "name": "林獻山",
+        "number": 5,
         "party": "PEUP",
         "districtArea": "ILA",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19889,10 +20209,11 @@ const candidates =
     "382": {
         "id": 382,
         "name": "吳子維",
+        "number": 6,
         "party": "DASG",
         "districtArea": "ILA",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -19950,6 +20271,7 @@ const candidates =
     "383": {
         "id": 383,
         "name": "黄師鵬",
+        "number": 1,
         "party": "NONE",
         "districtArea": "HUN",
         "districtNo": "N/A",
@@ -20011,10 +20333,11 @@ const candidates =
     "384": {
         "id": 384,
         "name": "楊悟空",
+        "number": 3,
         "party": "PEUP",
         "districtArea": "HUN",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20072,10 +20395,11 @@ const candidates =
     "385": {
         "id": 385,
         "name": "陳建閣",
+        "number": 1,
         "party": "KMT",
         "districtArea": "TTT",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20133,10 +20457,11 @@ const candidates =
     "386": {
         "id": 386,
         "name": "陳雙全",
+        "number": 4,
         "party": "KMT",
         "districtArea": "MZG",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20194,10 +20519,11 @@ const candidates =
     "387": {
         "id": 387,
         "name": "冼義哲",
+        "number": 1,
         "party": "TP",
         "districtArea": "MZG",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -20226,13 +20552,13 @@ const candidates =
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
@@ -20255,6 +20581,7 @@ const candidates =
     "388": {
         "id": 388,
         "name": "黃漢東",
+        "number": 3,
         "party": "TLP",
         "districtArea": "MZG",
         "districtNo": "N/A",
@@ -20316,10 +20643,11 @@ const candidates =
     "389": {
         "id": 389,
         "name": "楊鎮浯",
+        "number": 5,
         "party": "KMT",
         "districtArea": "KNH",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20377,10 +20705,11 @@ const candidates =
     "390": {
         "id": 390,
         "name": "陳滄江",
+        "number": 2,
         "party": "DPP",
         "districtArea": "KNH",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20438,10 +20767,11 @@ const candidates =
     "391": {
         "id": 391,
         "name": "張中法",
+        "number": 4,
         "party": "NONE",
         "districtArea": "KNH",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20499,10 +20829,11 @@ const candidates =
     "392": {
         "id": 392,
         "name": "洪志恒",
+        "number": 1,
         "party": "NONE",
         "districtArea": "KNH",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20560,6 +20891,7 @@ const candidates =
     "393": {
         "id": 393,
         "name": "陳德輝",
+        "number": 7,
         "party": "TLP",
         "districtArea": "KNH",
         "districtNo": "N/A",
@@ -20621,10 +20953,11 @@ const candidates =
     "394": {
         "id": 394,
         "name": "高丹樺",
+        "number": 3,
         "party": "MCFAP",
         "districtArea": "KNH",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20682,6 +21015,7 @@ const candidates =
     "395": {
         "id": 395,
         "name": "陳仲立",
+        "number": 6,
         "party": "NONE",
         "districtArea": "KNH",
         "districtNo": "N/A",
@@ -20743,10 +21077,11 @@ const candidates =
     "396": {
         "id": 396,
         "name": "吳成典",
+        "number": 8,
         "party": "NP",
         "districtArea": "KNH",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20804,10 +21139,11 @@ const candidates =
     "397": {
         "id": 397,
         "name": "蘇柏豪",
+        "number": 3,
         "party": "TP",
         "districtArea": "MFK",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20865,10 +21201,11 @@ const candidates =
     "398": {
         "id": 398,
         "name": "張春寶",
+        "number": 4,
         "party": "CHTY",
         "districtArea": "MFK",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20926,6 +21263,7 @@ const candidates =
     "399": {
         "id": 399,
         "name": "林金官",
+        "number": 2,
         "party": "NONE",
         "districtArea": "MFK",
         "districtNo": "N/A",
@@ -20987,10 +21325,11 @@ const candidates =
     "400": {
         "id": 400,
         "name": "蔡適應",
+        "number": 4,
         "party": "DPP",
         "districtArea": "KEL",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21048,6 +21387,7 @@ const candidates =
     "401": {
         "id": 401,
         "name": "郝龍斌",
+        "number": 3,
         "party": "KMT",
         "districtArea": "KEL",
         "districtNo": "N/A",
@@ -21109,10 +21449,11 @@ const candidates =
     "402": {
         "id": 402,
         "name": "楊石城",
+        "number": 1,
         "party": "MKT",
         "districtArea": "KEL",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21170,10 +21511,11 @@ const candidates =
     "403": {
         "id": 403,
         "name": "劉文雄",
+        "number": 2,
         "party": "PFP",
         "districtArea": "KEL",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21231,10 +21573,11 @@ const candidates =
     "404": {
         "id": 404,
         "name": "歐崇敬",
+        "number": 4,
         "party": "PFP",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21292,10 +21635,11 @@ const candidates =
     "405": {
         "id": 405,
         "name": "鄭正鈐",
+        "number": 9,
         "party": "KMT",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21353,10 +21697,11 @@ const candidates =
     "406": {
         "id": 406,
         "name": "魏揚",
+        "number": 5,
         "party": "MCFAP",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21414,10 +21759,11 @@ const candidates =
     "407": {
         "id": 407,
         "name": "邱顯智",
+        "number": 10,
         "party": "NPP",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -21475,60 +21821,61 @@ const candidates =
     "408": {
         "id": 408,
         "name": "林家宇",
+        "number": 3,
         "party": "FTP",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "打破司法獨裁",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "終結媒體壟斷",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "強化本土教育",
                 "content": ""
             }
         ]
@@ -21536,10 +21883,11 @@ const candidates =
     "409": {
         "id": 409,
         "name": "曾耀澂",
+        "number": 2,
         "party": "NONE",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21597,10 +21945,11 @@ const candidates =
     "410": {
         "id": 410,
         "name": "黃源甫",
+        "number": 7,
         "party": "NONE",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21658,6 +22007,7 @@ const candidates =
     "411": {
         "id": 411,
         "name": "王榮德",
+        "number": 8,
         "party": "NONE",
         "districtArea": "HCC",
         "districtNo": "N/A",
@@ -21719,10 +22069,11 @@ const candidates =
     "412": {
         "id": 412,
         "name": "吳淑敏",
+        "number": 6,
         "party": "NONE",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21780,10 +22131,11 @@ const candidates =
     "413": {
         "id": 413,
         "name": "翁壽良",
+        "number": 2,
         "party": "NONE",
         "districtArea": "CYC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21844,7 +22196,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "CYC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21902,10 +22254,11 @@ const candidates =
     "415": {
         "id": 415,
         "name": "陳瑩",
+        "number": 11,
         "party": "DPP",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21963,6 +22316,7 @@ const candidates =
     "416": {
         "id": 416,
         "name": "吳國譽Rahic Amind",
+        "number": 8,
         "party": "MKT",
         "districtArea": "LAB",
         "districtNo": "N/A",
@@ -22024,71 +22378,73 @@ const candidates =
     "417": {
         "id": 417,
         "name": "馬躍·比吼Mayaw·Biho",
+        "number": 5,
         "party": "NONE",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
-        "hasReply": false,
+        "contactAvaliable": true,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "憲法原住民族",
+                "content": "明定台灣是多元族群共同建立的國家，承認原住民族及其自然主權\r是先於國家存在的，保障原住民族自然主權，讓原住民族得到自主發展的機會。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "原住民族自治",
+                "content": "有行政區域、有修改/制定法令的權力、有足夠財源的自治法，可以\r讓部落開始管理傳統領域與部落事務，然後各民族也開始自治 。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "原住民族健康",
+                "content": "建立以原住民族為主體的健康政策與社會福利政策，減少原住民族\r健康不均等的情況。公費培養原住民健康與社福人才。"
             }
         ]
     },
     "418": {
         "id": 418,
         "name": "達佶祐·卡造Takiyo·Kacaw",
+        "number": 2,
         "party": "MCFAP",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22146,10 +22502,11 @@ const candidates =
     "419": {
         "id": 419,
         "name": "林昊宜",
+        "number": 3,
         "party": "PFP",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22207,10 +22564,11 @@ const candidates =
     "420": {
         "id": 420,
         "name": "達摩·阿雄",
+        "number": 1,
         "party": "NONE",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22268,6 +22626,7 @@ const candidates =
     "421": {
         "id": 421,
         "name": "林金瑛",
+        "number": 9,
         "party": "NHSA",
         "districtArea": "LAB",
         "districtNo": "N/A",
@@ -22329,6 +22688,7 @@ const candidates =
     "422": {
         "id": 422,
         "name": "嘎礌·武拜·哈雅萬Galahe·Wubai·Hayawan",
+        "number": 12,
         "party": "NONE",
         "districtArea": "LAB",
         "districtNo": "N/A",
@@ -22390,10 +22750,11 @@ const candidates =
     "423": {
         "id": 423,
         "name": "林光義",
+        "number": 7,
         "party": "TFNP",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22451,10 +22812,11 @@ const candidates =
     "424": {
         "id": 424,
         "name": "林琮翰",
+        "number": 10,
         "party": "KMT",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22512,10 +22874,11 @@ const candidates =
     "425": {
         "id": 425,
         "name": "柯荏耀",
+        "number": 6,
         "party": "NONE",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22573,10 +22936,11 @@ const candidates =
     "426": {
         "id": 426,
         "name": "尤命·蘇樣",
+        "number": 2,
         "party": "CPP",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22634,10 +22998,11 @@ const candidates =
     "427": {
         "id": 427,
         "name": "林世偉",
+        "number": 1,
         "party": "NONE",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22695,10 +23060,11 @@ const candidates =
     "428": {
         "id": 428,
         "name": "伊藍·明基努安",
+        "number": 5,
         "party": "FHL",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22756,10 +23122,11 @@ const candidates =
     "429": {
         "id": 429,
         "name": "瓦歷斯·貝林Walis·Perin",
+        "number": 4,
         "party": "DPP",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22817,10 +23184,11 @@ const candidates =
     "430": {
         "id": 430,
         "name": "林信義",
+        "number": 9,
         "party": "FHL",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22878,6 +23246,7 @@ const candidates =
     "431": {
         "id": 431,
         "name": "全承威",
+        "number": 8,
         "party": "TIP",
         "districtArea": "MAB",
         "districtNo": "N/A",
@@ -22939,10 +23308,11 @@ const candidates =
     "432": {
         "id": 432,
         "name": "曾華德",
+        "number": 3,
         "party": "NONE",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
