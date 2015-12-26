@@ -9,6 +9,7 @@ export default function getPartiesTableData(partyPositions, partyPromises){
         TableData[partyId] = {
             name: partyPromises[partyId].name,
             id: partyId,
+            number: partyPromises[partyId].number,
             party: partyId,
             positions: {}
         };

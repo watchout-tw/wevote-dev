@@ -2,6 +2,7 @@ const partyPromises = {
     "DPP": {
         "name": "民主進步黨",
         "id": "DPP",
+        "number": "1",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -59,6 +60,7 @@ const partyPromises = {
     "KMT": {
         "name": "中國國民黨",
         "id": "KMT",
+        "number": "9",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -116,6 +118,7 @@ const partyPromises = {
     "PFP": {
         "name": "親民黨",
         "id": "PFP",
+        "number": "2",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -173,6 +176,7 @@ const partyPromises = {
     "NPP": {
         "name": "時代力量",
         "id": "NPP",
+        "number": "11",
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -201,14 +205,14 @@ const partyPromises = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "時代力量贊成並推動人民參與審判"
                 }
             }
         },
@@ -230,6 +234,7 @@ const partyPromises = {
     "TSU": {
         "name": "台灣團結聯盟",
         "id": "TSU",
+        "number": "10",
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -258,13 +263,13 @@ const partyPromises = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -287,6 +292,7 @@ const partyPromises = {
     "MKT": {
         "name": "民國黨",
         "id": "MKT",
+        "number": "6",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -344,6 +350,7 @@ const partyPromises = {
     "NP": {
         "name": "新黨",
         "id": "NP",
+        "number": "16",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -401,6 +408,7 @@ const partyPromises = {
     "NSU": {
         "name": "無黨團結聯盟",
         "id": "NSU",
+        "number": "15",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -458,6 +466,7 @@ const partyPromises = {
     "GSD": {
         "name": "綠黨社會民主黨聯盟",
         "id": "GSD",
+        "number": "13",
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -486,13 +495,13 @@ const partyPromises = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -515,6 +524,7 @@ const partyPromises = {
     "FHL": {
         "name": "信心希望聯盟",
         "id": "FHL",
+        "number": "7",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -572,6 +582,7 @@ const partyPromises = {
     "MCFAP": {
         "name": "軍公教聯盟黨",
         "id": "MCFAP",
+        "number": "5",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -629,6 +640,7 @@ const partyPromises = {
     "TP": {
         "name": "樹黨",
         "id": "TP",
+        "number": "18",
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -657,13 +669,13 @@ const partyPromises = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
@@ -686,6 +698,7 @@ const partyPromises = {
     "FTP": {
         "name": "自由台灣黨",
         "id": "FTP",
+        "number": "3",
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -714,14 +727,14 @@ const partyPromises = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持陪審團制度，民選法官及檢察官制度"
                 }
             }
         },
@@ -743,6 +756,7 @@ const partyPromises = {
     "PPU": {
         "name": "和平鴿聯盟黨",
         "id": "PPU",
+        "number": "4",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -800,6 +814,7 @@ const partyPromises = {
     "NHSA": {
         "name": "健保免費連線",
         "id": "NHSA",
+        "number": "17",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -857,6 +872,7 @@ const partyPromises = {
     "DASG": {
         "name": "大愛憲改聯盟",
         "id": "DASG",
+        "number": "12",
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -885,13 +901,13 @@ const partyPromises = {
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -914,6 +930,7 @@ const partyPromises = {
     "CHTY": {
         "name": "中華統一促進黨",
         "id": "CHTY",
+        "number": "8",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -971,6 +988,7 @@ const partyPromises = {
     "TIP": {
         "name": "台灣獨立黨",
         "id": "TIP",
+        "number": "14",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
