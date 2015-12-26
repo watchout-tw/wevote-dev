@@ -4,6 +4,7 @@ $rollLargeBreak: 800px;
 .wrap {
 	min-height: 60vw;
 	background-image: url('../images/parties-mobile.jpg');
+	padding-top: 50px;
 }
 @media all and (min-width: $rollLargeBreak){
 	.wrap {

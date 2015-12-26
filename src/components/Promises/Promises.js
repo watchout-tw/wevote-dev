@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import classnames from 'classnames';
 import eng2url from '../../utils/eng2url';
 import eng2cht from '../../utils/eng2cht';
+import promise_eng2cht from '../../utils/promise_eng2cht';
 
 import getData from '../../data/getData';
 const {issues, partyPromises, dataMeta} = getData();
@@ -28,7 +29,7 @@ export default class Promises extends Component {
                   <div className={styles.promiseQuestion}>{issueData.question}</div>
                   <div className={styles.promisePos}>
                     <div className={`${styles[handlePartyPosEng(pos)]} ${styles.promiseIcon}`}></div>
-                    <div className={styles.promisePosText}>{handlePartyPos(pos)}</div>
+                    <div className={styles.promisePosText}>{promise_eng2cht(pos)}</div>
                   </div>
                   <div className={styles.promiseStatement}>{statement}</div>
               </div>
@@ -81,14 +82,5 @@ function handlePartyPosEng(value){
     return "none";
   }else{
     return value;
-  }
-}
-function handlePartyPos(value){
-  if(value === "none"){
-    return "尚未回覆";
-  }else if(value === "refuse"){
-    return "不表態";
-  }else{
-    return eng2cht(value);
   }
 }

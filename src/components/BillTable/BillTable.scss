@@ -18,12 +18,37 @@ $maxWidth: 720px;
 header {
   text-align: center;
 }
+/* 說明有誰回覆 */
+.metaInfo {
+  font-size: 12px;
+  margin: 15px;
+}
+.toggleSet {
+  margin: 10px 0;
+}
+.toggle {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 10px 0 0;
+  padding: 5px 15px;
+  border: 1px solid rgba($awesomeColor, 0.15);
+  will-change: background;
+}
+.toggle.active {
+  transition: all .3s ease-in;
+  background: rgba($awesomeColor, 0.15);
+}
+
+
+
+
 .billTable {
   position: relative;
 }
 /* 法案 title */
 .billTitleWrap {
   position: relative;
+  border-bottom: 1px solid #ccc;
 }
 .billTitleWrap.fixed {
   z-index: 1;
@@ -51,6 +76,7 @@ header {
   flex: 1;
   font-size: 14px;
   font-weight: 600;
+  padding-top: 8px;
 }
 @media all and (min-width: $billTableWebBreak){
   .billTitle {
@@ -84,9 +110,15 @@ header {
 .nameFlex {
   display: flex;
 }
-.party {
-  margin-right: 4px;
+.prefix {
   flex: 14px 0 0;
+  margin-right: 4px;
+}
+.number {
+  text-align: center;
+}
+.party {
+  
 }
 .unitTitle {
   flex: 1;
@@ -95,11 +127,27 @@ header {
   display: inline;
   border-bottom: 1px solid rgba(15, 15, 15, 0.86);
 }
-@media all and (min-width: 1000px){
+@media all and (min-width: $billTableWebBreak){
   .unitTitleText {
       border-bottom: none;
   }
 }
+@media all and (min-width: $billTableWebBreak){
+  .prefix {
+    flex: 40px 0 0 ;
+  }
+  .number {
+      display: inline-block;
+      margin-right: 4px;
+      text-align: right;
+      width: 18px;
+      margin-right: 4px;
+  }
+  .party {
+    margin: 3px 4px 3px 0;
+  }
+}
+
 .exLink {
     width: 16px;
     height: 16px;
@@ -111,6 +159,7 @@ header {
   flex: 1;
   padding: 0 10px;
   font-size: 14px;
+  position: relative;
 }
 @media all and (min-width: $billTableWebBreak){
   .bill {
@@ -124,7 +173,32 @@ header {
 .noReplyImg {
   width: 20px;
 }
-.billMeta {
-  font-size: 12px;
-  margin: 15px;
+.billDetail {
+  display: none;
 }
+@media all and (min-width: $billTableWebBreak){
+  .bill:hover .billDetail {
+      display: block;
+      position: absolute;
+      font-size: 14px;
+      width: 70px;
+      text-align: center;
+      line-height: 1.4;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 7px 10px;
+      top: -45px;
+      left: -16px;
+      box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .bill:hover .billDetail:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 30px;
+      border-top: 10px solid #25282A;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+  }
+}
+

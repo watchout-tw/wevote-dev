@@ -75,7 +75,7 @@ export default class PartiesGame extends Component {
           })
           content = (
               <div className={styles.billWrap}>
-                  <BillTable showTitle={true} unit="parties"/>
+                  <BillTable unit="parties"/>
                   <div id="completeBadge"></div>
                   <div className={styles.billComplete}>
                       <img src={missionAccomplishedImg}/>

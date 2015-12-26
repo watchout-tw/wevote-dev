@@ -2,7 +2,7 @@
 @import '../../styles/actionButton.scss';
 $positionTableWebBreak: 500px;
 $maxWidth: 720px;
-$rollLargeBreak: 800px;
+
 
 .wrap {
 	background: #eee;
@@ -14,17 +14,50 @@ $rollLargeBreak: 800px;
 header {
 	text-align: center;
 	h2 {
-	  margin: 20px 10px 0;
-	  border-bottom: 1px solid #aaa;
-	  padding-bottom: 10px;
-	  font-size: 1.75em;
-	  font-weight: normal;
+	  // margin: 20px 10px 0;
+	  // border-bottom: 1px solid #aaa;
+	  // padding-bottom: 10px;
+	  // font-size: 1.75em;
+	  // font-weight: normal;
+
+    	margin: 20px 10px 0;
+    	border-bottom: 2px solid #0F0F0F;
+    	padding-bottom: 2px;
+    	font-size: 1.75em;
+    	font-weight: normal;
+    	display: inline-block;
 	}
 }
+/* 說明有誰回覆 */
+.metaInfo {
+  font-size: 12px;
+  margin: 15px;
+  line-height: 1.5;
+}
+.toggleSet {
+  margin: 10px 0;
+}
+.toggle {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 10px 0 0;
+  padding: 4px 10px;
+  border: 1px solid rgba($awesomeColor, 0.15);
+  will-change: background;
+}
+.toggle.active {
+  transition: all .3s ease-in;
+  background: rgba($awesomeColor, 0.15);
+}
+
 .positionTable {
 	width: 100%;
 }
 /* 議題 title */
+.titleWrap {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
 .titleWrap.fixed {
 	position: fixed;
 	background: white;
@@ -32,6 +65,17 @@ header {
     width: 100%;
     max-width: $maxWidth;
     box-shadow: 0 2px 1px 0 rgba(0,0,0,0.08);
+    z-index: 1;
+}
+.titleWrap.after {
+	position: absolute;
+	bottom: 100px;
+	background: white;
+    
+    width: 100%;
+    max-width: $maxWidth;
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.08);
+    z-index: 1;
 }
 .issueTitles {
 	display: flex;
@@ -42,6 +86,7 @@ header {
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;
+	padding-top: 8px;
 }
 @media all and (min-width: $positionTableWebBreak){
 	.issueTitle {
@@ -66,14 +111,27 @@ header {
 .nameFlex {
 	display: flex;
 }
-.party {
-	margin-right: 4px;
+.prefix {
 	flex: 14px 0 0;
+	margin-right: 4px;
 }
-.unitTitle {
-	flex: 1;
+.number {
+	text-align: center;
+}
+.party {
+	
 }
 @media all and (min-width: $positionTableWebBreak){
+	.prefix {
+		flex: 40px 0 0 ;
+	}
+	.number {
+    	display: inline-block;
+    	margin-right: 4px;
+    	text-align: right;
+    	width: 18px;
+    	margin-right: 4px;
+	}
 	.party {
 		margin: 3px 4px 3px 0;
 	}
@@ -84,6 +142,24 @@ header {
 		margin-left: 10px;
 	}
 }
+.unitTitle {
+	flex: 1;
+}
+@media all and (min-width: $maxWidth){
+	.unitTitle {
+		flex: 120px 0 0;
+	}
+}
+.unitTitleText{
+	display: inline;
+    border-bottom: 1px solid rgba(15, 15, 15, 0.86);
+}
+@media all and (min-width: $positionTableWebBreak){
+	.unitTitleText {
+		border: none;
+	}
+}
+
 .position {
 	text-align: center;
 	flex: 1;
@@ -91,6 +167,7 @@ header {
 .record {
 	vertical-align: middle;
 	font-size: 0;
+	position: relative;
 }
 @media all and (min-width: $positionTableWebBreak){
 	.record {
@@ -101,6 +178,39 @@ header {
 		display: inline-block;
 	}
 }
+.recordDetail {
+	display: none;
+}
+@media all and (min-width: $positionTableWebBreak){
+	.record:hover .recordDetail {
+		display: block;
+	    position: absolute;
+	    font-size: 14px;
+	    width: 140px;
+	    line-height: 1.4;
+	    background: rgba(0,0,0,0.8);
+	    color: white;
+	    text-align: left;
+	    padding: 10px;
+	    top: -90px;
+	    left: -19px;
+	    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.12);
+	}
+	.record.empty .recordDetail {
+		display: block;
+		top: -67px;
+	}
+	.record:hover .recordDetail:after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+	    left: 53px;
+	    border-top: 10px solid #25282A;
+	    border-left: 6px solid transparent;
+	    border-right: 6px solid transparent;
+	}
+}
+
 .recordSquare {
 	margin-bottom: 5px;
 	display: inline-block;
@@ -123,22 +233,54 @@ header {
 		border: 1px solid $lightGrey;
 	}
 }
+@media all and (min-width: $positionTableWebBreak){
+	.recordSquare {
+		margin: 0;
+	}
+}
 .promise {
+	position: relative;
+}
+.promiseImg {
 	width: 20px;
 	display: inline-block;
 	vertical-align: middle;
 }
 @media all and (min-width: $positionTableWebBreak){
-	.recordSquare {
-		margin: 0;
-	}
-	.promise {
+	.promiseImg {
 		margin: 10px 0;
 	}
-	.bill {
-		padding: 0 20px;
+}
+.promiseDetail {
+	display: none;
+}
+@media all and (min-width: $positionTableWebBreak){
+	.promise:hover .promiseDetail {
+		display: block;
+	    position: absolute;
+	    font-size: 14px;
+	    width: 70px;
+	    text-align: center;
+	    line-height: 1.4;
+	    background: rgba(0, 0, 0, 0.8);
+	    color: white;
+	    padding: 7px 10px;
+	    top: -35px;
+	    left: 14px;
+		box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.12);
+	}
+	.promise:hover .promiseDetail:after {
+	    content: '';
+	    position: absolute;
+	    bottom: -10px;
+	    left: 30px;
+	    border-top: 10px solid #25282A;
+	    border-left: 6px solid transparent;
+	    border-right: 6px solid transparent;
 	}
 }
+
+
 .legend {
 	text-align: center;
 	margin: 20px 0;

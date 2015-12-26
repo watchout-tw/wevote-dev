@@ -36,7 +36,7 @@ export default class PartiesTable extends Component {
           <DocumentMeta {...metaData}/>
           <div className={styles.wrap}>
               <PositionTable unit="parties" />
-              <BillTable showTitle={true} unit="parties"/>
+              <BillTable unit="parties"/>
               <Social />
           </div>
           <div className={styles.bgHolder}></div>

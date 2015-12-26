@@ -11,7 +11,8 @@ export default function getPartiesTableData(partyPositions, partyPromises){
             id: partyId,
             number: partyPromises[partyId].number,
             party: partyId,
-            positions: {}
+            positions: {},
+            hasReply: partyPromises[partyId].hasReply
         };
        
         issueList.map((issueName, i)=>{
@@ -46,8 +47,16 @@ export default function getPartiesTableData(partyPositions, partyPromises){
       
     })
 
+    var arrayVersion = [];
+    Object.keys(TableData).map((partyId, index)=>{
+        arrayVersion.push(TableData[partyId]);
+    })
+    arrayVersion.sort((a,b)=>{
+        return a.number - b.number;
+    })
+
    
-    return TableData;
+    return arrayVersion;
     
 }
 /*

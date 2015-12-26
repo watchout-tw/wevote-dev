@@ -10,7 +10,8 @@ export default function getPeopleTableData(legislatorPositions, disctrictCandida
             id: people.id,
             party: people.party,
             positions: {},
-            bills: people.bills
+            bills: people.bills, 
+            hasReply: people.hasReply
         };
 
         issueList.map((issueName, i)=>{
@@ -42,8 +43,16 @@ export default function getPeopleTableData(legislatorPositions, disctrictCandida
         })
 
     });
+
+    var arrayVersion = [];
+    Object.keys(TableData).map((peopleId, index)=>{
+        arrayVersion.push(TableData[peopleId]);
+    })
+    arrayVersion.sort((a,b)=>{
+        return a.number - b.number;
+    })
    
-    return TableData;
+    return arrayVersion;
     
 }
 /*

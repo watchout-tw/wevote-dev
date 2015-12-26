@@ -12,11 +12,14 @@ import getPartiesTableData from '../../utils/getPartiesTableData';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleTableData from '../../utils/getPeopleTableData';
 import eng2url from '../../utils/eng2url';
+import eng2cht from '../../utils/eng2cht';
+import promise_eng2cht from '../../utils/promise_eng2cht';
+
 import countLevel from '../../utils/countLevel';
 
 
 import getData from '../../data/getData';
-const {issues, records, partyPromises, legislators} = getData();
+const {issues, records, partyPromises, legislators, dataMeta} = getData();
 
 export default class PositionTable extends Component {
   static propTypes = {
@@ -25,19 +28,13 @@ export default class PositionTable extends Component {
       const {unit, districtCandidates} = props;
       
       //calculate positions
-      let tableData;
-      if(unit === "parties"){
-          let partyPositions = parseToPartyPosition(records, issues);
-          tableData = getPartiesTableData(partyPositions, partyPromises);
+      let partyPositions = parseToPartyPosition(records, issues);
+      let tableData = getPartiesTableData(partyPositions, partyPromises);
 
-      }else{//people, this might not be needed after...
-          let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
-          tableData = getPeopleTableData(legislatorPositions, districtCandidates);
-
-      }
       this.state = {
           tableData: tableData,
-          focus: ""
+          focus: "",
+          filter: true
       }
 
   }
@@ -73,6 +70,14 @@ export default class PositionTable extends Component {
             })
         }
       }
+      current = "after";
+      if(positionEndRect.top < 100  && focus === "position"){
+        if(focus !== current){
+            this.setState({
+              focus: current
+            })
+        }
+      }
   }
   componentDidMount(){
       window.addEventListener("scroll", this._onScroll.bind(this));
@@ -98,10 +103,15 @@ export default class PositionTable extends Component {
           }
       }
   }
+  _toggleFilter(){
+    this.setState({
+      filter: !this.state.filter
+    })
+  }
   render() {
     const styles = require('./PositionTable.scss');
     const {unit} = this.props;
-    const {tableData, focus} = this.state;
+    const {tableData, focus, filter} = this.state;
 
     let imgHub = {};
     imgHub.aye = require("./images/answers_aye.svg")
@@ -114,15 +124,34 @@ export default class PositionTable extends Component {
         return <div key={`${issueId}-${i}`}
                     className={styles.issueTitle}>{issues[issueId].title}</div>
     })
-    // 每一個政黨 or 候選人
-    let unitPositions = Object.keys(tableData).map((unitId, i)=>{
-        let unitData = tableData[unitId];
+    // 每一個政黨 (候選人部分已被移除)
+    let unitPositions = tableData
+    .filter((unitData, i)=>{
+        if(filter===true){
+            if(unitData.hasReply === true || 
+              ["KMT","DPP","PFP","TSU","NSU"].indexOf(unitData.id) !== -1){
+              return true;
+
+            }else{
+              return false;
+            }
+        
+        }else{
+            return true;
+        }
+    })
+    .map((unitData, i)=>{
         //政黨名稱 or 候選人姓名
         let unitName = (
           <div className={styles.unitName}>
             <div className={styles.nameFlex}>
-                <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitData.party]}`}></div>
-                <div className={`${styles.unitTitle}`}>{unitData.name}</div>
+                <div className={styles.prefix}>
+                  <div className={styles.number}>{unitData.number}</div>
+                  <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitData.party]}`}></div>
+                </div>
+                <div className={`${styles.unitTitle}`}>
+                    <div className={styles.unitTitleText}>{unitData.name}</div>
+                </div>
             </div>
           </div>
           );
@@ -138,9 +167,14 @@ export default class PositionTable extends Component {
 
             return (
               <div className={styles.position}>
-                  <div className={recordClasses}><div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div></div>
-                  <img className={styles.promise}
-                       src={`${imgHub[pos.promise]}`} />
+                  <div className={recordClasses}>
+                    <div className={styles.recordDetail}>{handlePosCht(pos.record, unitData.id)}</div>
+                    <div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div>
+                  </div>
+                  <div className={styles.promise}>
+                    <div className={styles.promiseDetail}>{handlePromiseCht(pos.promise)}</div>
+                    <img className={styles.promiseImg} src={`${imgHub[pos.promise]}`} />
+                  </div>
               </div>
             )
         })
@@ -158,7 +192,8 @@ export default class PositionTable extends Component {
     //title class, 處理 scroll fixed on top
     let fixedClasses = classnames({
       [styles.titleWrap]: true,
-      [styles.fixed]: focus === "position"
+      [styles.fixed]: focus === "position",
+      [styles.after]: focus === "after"
     })
 
    
@@ -166,10 +201,19 @@ export default class PositionTable extends Component {
     
       <div className={styles.wrap}>
         <header><h2>議題表態</h2></header>
+        <div className={styles.metaInfo}>
+            <div>{dataMeta[`${unit}-position`]}</div>
+            <div className={styles.toggleSet}>
+              <div className={`${styles.toggle} ${(filter === true)? styles.active : ""}`}
+                   onClick={this._toggleFilter.bind(this)}>只顯示有立場表態的政黨</div>
+              <div className={`${styles.toggle} ${(filter === false)? styles.active : ""}`}
+                   onClick={this._toggleFilter.bind(this)}>顯示所有政黨</div>
+            </div>
+          </div>
         <div className={styles.positionTable} id="positionTitle">
             <div className={fixedClasses}>
                 <div className={styles.issueTitles}>
-                    <div className={styles.unitName}></div>
+                    <div className={styles.unitName}>編號／政黨名稱</div>
                     {issueTitles}
                 </div>
             </div>
@@ -183,5 +227,33 @@ export default class PositionTable extends Component {
       </div>
       
     );
+  }
+}
+function handlePosCht (value, id) {
+  if(!value){
+    if(id==="MKT"){
+      return "根據第八屆立院資料統計，沒有針對此議題表態。";
+    }else{
+      return "該黨在第八屆沒有席次。"
+    }
+  }else{
+    if(value==="none"){
+      return "根據第八屆立院資料統計，沒有針對此議題表態。"
+    }else{
+      return `根據第八屆立院資料統計，立場為${eng2cht(value)}`;
+    }
+  }
+}
+function handlePromiseCht (value){
+  switch(value){
+    case 'refuse':
+      return '不表態';
+    case 'none':
+      return '未回覆';
+    case 'aye':
+      return '支持';
+
+    default: 
+      return eng2cht(value);
   }
 }

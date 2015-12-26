@@ -9,6 +9,7 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleTableData from '../../utils/getPeopleTableData';
 
 import eng2url from '../../utils/eng2url';
+import eng2cht from '../../utils/eng2cht';
 
 import getData from '../../data/getData';
 const {records, issues, legislators, partyPromises, dataMeta} = getData();
@@ -30,7 +31,8 @@ export default class BillTable extends Component {
 
       this.state = {
         tableData: tableData,
-        focus: ""
+        focus: "",
+        filter: true
       }
   }
   _onScroll(){
@@ -79,11 +81,16 @@ export default class BillTable extends Component {
   componentWillUnmount(){
      window.removeEventListener("scroll", this._onScroll.bind(this));
   }
+  _toggleFilter(){
+    this.setState({
+      filter: !this.state.filter
+    })
+  }
   render() {
     const styles = require('./BillTable.scss');
-    const {showTitle, outerLink, unit} = this.props;
+    const {outerLink, unit} = this.props;
     
-    const {tableData, focus} = this.state;
+    const {tableData, focus, filter} = this.state;
    
     let noReplyImg = require('./images/answers_unknown.svg');
     let externalIconImg = require('../../images/icon_external_link_gray.svg');
@@ -91,15 +98,31 @@ export default class BillTable extends Component {
     let outerLinkItem = (outerLink) ? <img src={externalIconImg} 
                                            className={styles.exLink}/> : "";
 
-    let unitBills = Object.keys(tableData).map((unitId, i)=>{
-        let unitData = tableData[unitId];
-        let party = unitData.party;
+    let unitBills = tableData
+    .filter((unitData, i)=>{
+        if(filter===true){
+            
+            if(unitData.hasReply === true){
+              return true;
+            }else{
+              return false;
+            }
         
+        }else{
+            return true;
+        }
+    })
+    .map((unitData, i)=>{
+
+        let party = unitData.party;
         //政黨名稱 or 候選人名稱
         let unitName = (
             <div className={styles.unitName}>
                 <div className={styles.nameFlex}>
-                    <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitData.id]}`}></div>
+                    <div className={styles.prefix}>
+                        <div className={styles.number}>{unitData.number}</div>
+                        <div className={`${styles.party} ${styles.partyFlag} ${styles.tiny} ${styles[unitData.id]}`}></div>
+                    </div>
                     <div className={`${styles.unitTitle}`}>
                         <div className={styles.unitTitleText}>{unitData.name}</div>{outerLinkItem}
                     </div>
@@ -118,6 +141,7 @@ export default class BillTable extends Component {
             }else{
               goalItem = (
                 <div className={`${styles.bill} ${styles.noReply}`}>
+                    <div className={styles.billDetail}>未回覆</div>
                     <img className={styles.noReplyImg}
                          src={noReplyImg} />
                 </div>)
@@ -148,29 +172,37 @@ export default class BillTable extends Component {
 
     });
 
-    let title = (showTitle === true) ? (
-      <header><h2>優先推動法案</h2></header>
-    ) : "";
+    
     //title class, 處理 scroll fixed on top
     let fixedClasses = classnames({
       [styles.billTitleWrap]: true,
       [styles.fixed]: focus === "bill",
       [styles.after]: focus === "after"
     })
+
     return (
       <div className={styles.wrap}>
-          {title}
+          <header><h2>優先推動法案</h2></header>
+          <div className={styles.metaInfo}>
+            <div>{dataMeta[`${unit}-bill`]}</div>
+            <div className={styles.toggleSet}>
+              <div className={`${styles.toggle} ${(filter === true)? styles.active : ""}`}
+                   onClick={this._toggleFilter.bind(this)}>只顯示有回覆的政黨</div>
+              <div className={`${styles.toggle} ${(filter === false)? styles.active : ""}`}
+                   onClick={this._toggleFilter.bind(this)}>顯示所有政黨</div>
+            </div>
+          </div>
+              
           <div className={styles.billTable} id="billTitle">
               <div className={fixedClasses}>
                   <div className={styles.billTitles}>
-                      <div className={styles.unitName}></div>
+                      <div className={styles.unitName}>編號／政黨名稱</div>
                       <div className={styles.billTitle}>法案一</div>
                       <div className={styles.billTitle}>法案二</div>
                       <div className={styles.billTitle}>法案三</div>
                   </div>
               </div>
               {unitBills}
-              <div className={styles.billMeta}>{dataMeta[unit]}</div>
               <div id="billEnd"></div>
           </div>
       </div>
