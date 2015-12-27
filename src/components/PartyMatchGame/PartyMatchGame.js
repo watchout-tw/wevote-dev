@@ -4,6 +4,7 @@ import classnames from 'classnames';
 
 import QAItem from '../../components/QAItem/QAItem';
 import PKer from '../../components/PKer/PKer';
+import PartyFlag from '../../components/PartyFlag/PartyFlag';
 
 import people_name2id from '../../utils/people_name2id';
 import eng2party_short from '../../utils/eng2party_short';
@@ -14,7 +15,7 @@ import getPartiesMatchgameData from '../../utils/getPartiesMatchgameData';
 import scrollTo from '../../utils/scrollTo';
 
 import getData from '../../data/getData';
-const {records, legislators, issues, parties, partyPromises} = getData();
+const {records, legislators, issues, parties, partyPromises, dataMeta} = getData();
 
 export default class PartyMatchGame extends Component {
   constructor(props){ super(props)
@@ -327,6 +328,27 @@ class ResultSection extends Component {
         }
 
       }
+    });
+
+    //最高分的名稱
+    let maxPoint = currentRank[0].points;
+    let highestPointer = [];
+    currentRank.map((party,index)=>{
+        if(party.points === maxPoint){
+           highestPointer.push(party);
+        }
+    })
+
+    let highestPointerName = highestPointer.map((party,index)=>{
+        if(party.points === maxPoint){
+           let separation = (index !== highestPointer.length-1) ? "、" : "";
+           return  (
+            <span key={`result-text-${party.id}`}>
+                <PartyFlag partyId={party.id} />
+                { separation }
+            </span>)
+           ;
+        }
     })
 
     //依照分數分組
@@ -353,8 +375,6 @@ class ResultSection extends Component {
     let resultSpectrum = array.map((i,index)=>{
 
         let hue = (resultPKers[i] || []).map((v,j)=>{
-
-
           let detail;
           if(focus === v.id){
             let partyCht = eng2party_short(v.id);
@@ -421,7 +441,6 @@ class ResultSection extends Component {
 
     //Layout: 沒資料的結果
     let noDataItems = noData.map((partyId, i)=>{
-
       return (
         <div className={styles.noDataItem}
              key={`no-data-${i}`}>
@@ -430,10 +449,32 @@ class ResultSection extends Component {
       )
     })
 
-//<div className={styles.spectrumPointLabel}>總分</div>
     return (
       <div id="rankResultSection">
+          
+          <div className={styles.resultInfo}>
+
+              <h2>跟你立場最接近的是</h2>
+              { highestPointerName }
+            
+              <div className={styles.goBlock}>
+                  <div className={styles.goWrap}>
+                      <div className={styles.goText}>還無法決定嗎？</div>
+                      <div className={styles.goButton}
+                           onClick={onSetStage.bind(null, "bill")}>看黨團未來戰鬥目標</div>
+                  </div>
+                  <div className={styles.goWrap}>
+                      <div className={styles.goTable}
+                          onClick={replay.bind(null)}>再玩一次</div>
+                  </div>
+              </div>
+          </div>
+
           <div className={styles.rankResultSection}>
+              <div className={styles.figHeader}>
+                  <p>立場配對分數表</p>
+                  <div className={styles.figDes}>{dataMeta['matchgame-position']}</div>
+              </div>
               <div className={styles.spectrum}>
                   {resultSpectrum}
               </div>
@@ -442,22 +483,10 @@ class ResultSection extends Component {
                   <div className={`${styles.positionTitle} ${styles.left}`}>無資料</div>
                   <div className={styles.noDataItems}>{noDataItems}</div>
               </div>
-              <div className={styles.noDataMeta}>
-                  <div className={styles.noDataMetaTitle}>遊戲說明書</div>
-                  <div className={styles.noDataMetaDes}>截至網站更新前（12月15日），已有自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯回覆，我們歡迎每個政黨進行表態承諾的回覆。而目前立法院內有席次並有歷史表態紀錄的政黨，如果尚未回覆，我們將以他們過去的立院紀錄作為表態資料；如果回覆的承諾書與過去歷史紀錄結果不同，將交由使用者自行選擇要以哪一份資料為準。</div>
-              </div>
+         
           </div>
 
-          <div className={styles.actionBlock}>
-              <div className={styles.actionText}>看看黨團未來的戰鬥目標，是否也跟你一致</div>
-
-              <div className={styles.goMatch}
-                   onClick={onSetStage.bind(null, "bill")}>來去看看</div>
-
-              <div><div className={styles.goTable}
-                        onClick={replay.bind(null)}>再玩一次</div></div>
-          </div>
-
+          
 
       </div>
     )
