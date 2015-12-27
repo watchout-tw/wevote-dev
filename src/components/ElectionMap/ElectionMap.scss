@@ -149,6 +149,7 @@ $selectColor: #00ffb0;
     z-index: 1;
     position: fixed;
     top: calc(-10vh - 2px);
+
     left: 0;
     right: 0;
     
@@ -176,7 +177,7 @@ $selectColor: #00ffb0;
 @media all and (min-width:$webVersionBreak){
     .close.active {
       position: absolute;
-      
+      top: -10px;
     } 
 }
 
