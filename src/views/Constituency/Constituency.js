@@ -4,6 +4,7 @@ import DocumentMeta from 'react-document-meta';
 
 import CandidateProfileCards from '../../components/CandidateProfileCards/CandidateProfileCards.js';
 import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
+import CandidateCompare from '../../components/CandidateCompare/CandidateCompare.js';
 
 import district2cht from '../../utils/district2cht';
 import district_sub2cht from '../../utils/district_sub2cht';
@@ -22,7 +23,7 @@ export default class Constituency extends Component {
     const {area, areaNo} = props.params;
 
     let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
-    let candidateList = getDistrictCandidates(candidates, area, areaNo);
+    let candidateList = getDistrictCandidates(candidates, area, areaNo);/* Object */
     let tableData = getPeopleTableData(legislatorPositions, candidateList);
     let legislatorList = getDistrictLegislators(legislators, area, areaNo);
 
@@ -101,12 +102,18 @@ export default class Constituency extends Component {
            {toggleText}
       </div>
       ): <div>本區候選人全員失蹤中，需要你的關心</div>;
+    
     //card
+    // let cardSection = (comparableCandidates.length > 0) ? (
+    //   <CandidateProfileCards area={area}
+    //                          areaNo={areaNo}
+    //                          side={side}
+    //                          candidateList={comparableCandidates}/>
+    // ) : "";
     let cardSection = (comparableCandidates.length > 0) ? (
-      <CandidateProfileCards area={area}
-                             areaNo={areaNo}
-                             side={side}
-                             candidateList={comparableCandidates}/>
+      <CandidateCompare area={area}
+                        areaNo={areaNo}
+                        candidateList={candidateList}/>
     ) : "";
     //協尋中
     let wantedSection = (noDataCandidates.length > 0) ? <Wanted noDataCandidates={noDataCandidates} /> : "";

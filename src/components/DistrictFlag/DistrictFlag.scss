@@ -3,7 +3,7 @@
     max-width: 1200px;
     position: relative;
     margin: 0 auto;
-    height: 100px;
+
 }
 .areaFlag {
     background-image: url('./images/flag.png');
@@ -14,9 +14,7 @@
     padding: 70px 0;
     font-size: 22px;
     margin: 0 auto 10px auto;
-    position: absolute;
-    top: 10px;
-    right: 0;
+
 }
 .flagMeta, .flagMeta:visited {
     font-size: 14px;

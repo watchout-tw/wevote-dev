@@ -16,7 +16,9 @@ export default function getDistrictCandidates(candidates, area, areaNo){
                 result.push(people);
         }
     })
-    //console.log(result)
+    result.sort((a,b)=>{
+        return a.number - b.number;
+    })
     return result;
    
 }
