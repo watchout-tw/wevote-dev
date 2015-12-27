@@ -57,64 +57,6 @@ const partyPromises = {
             }
         ]
     },
-    "KMT": {
-        "name": "中國國民黨",
-        "id": "KMT",
-        "number": "9",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
     "PFP": {
         "name": "親民黨",
         "id": "PFP",
@@ -170,528 +112,6 @@ const partyPromises = {
             {
                 "goal": "",
                 "content": ""
-            }
-        ]
-    },
-    "NPP": {
-        "name": "時代力量",
-        "id": "NPP",
-        "number": "11",
-        "hasReply": true,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "aye",
-                    "statement": "時代力量贊成並推動人民參與審判"
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "年金改革",
-                "content": ""
-            },
-            {
-                "goal": "勞工權益",
-                "content": ""
-            },
-            {
-                "goal": "民主憲政",
-                "content": ""
-            }
-        ]
-    },
-    "TSU": {
-        "name": "台灣團結聯盟",
-        "id": "TSU",
-        "number": "10",
-        "hasReply": true,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "refuse",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "政黨法",
-                "content": "不當黨產處理"
-            },
-            {
-                "goal": "公投國會改革",
-                "content": "降低公投連署門檻並廢除審議委員會。降低罷免門檻。國會調查權、議長中立、議長警察權、降低黨團門檻、不信任案審查方式改革，強化監督能力。"
-            },
-            {
-                "goal": "廣電三法",
-                "content": "降低基本收視費、無線頻道免費且必載、反對垂直及水平壟斷。"
-            }
-        ]
-    },
-    "MKT": {
-        "name": "民國黨",
-        "id": "MKT",
-        "number": "6",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "NP": {
-        "name": "新黨",
-        "id": "NP",
-        "number": "16",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "NSU": {
-        "name": "無黨團結聯盟",
-        "id": "NSU",
-        "number": "15",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "GSD": {
-        "name": "綠黨社會民主黨聯盟",
-        "id": "GSD",
-        "number": "13",
-        "hasReply": true,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "勞動與經濟",
-                "content": "縮短工時、提高工資。禁止派遣制度、透過擴大公共服務創造更多安全、有尊嚴的工作。強化工會組織，團結協商並與雇主公平地分享勞動果實。同時，打破向財團傾斜的經濟體制，檢討並重新分配產業獎勵及補貼，減少對財團不合理的租稅減免，打造在地、合作、永續、公平的經濟模式。"
-            },
-            {
-                "goal": "生態與土地",
-                "content": "扭轉犧牲後代子孫的發展模式，修復生態環境、改善環境品質，建立百年視野的國土計劃。廢除區段徵收惡法，執行農地農用政策，落實土地正\r義。"
-            },
-            {
-                "goal": "托育年金與透明",
-                "content": "托育、長照與醫療必須公共化與普及化，任何人都能公平享用。年老之後，退休金必須要公平，要能夠支持生活所需之費用，全面改革年金制度。推動18歲公民權，公民的參與和監督不受限、讓政治不受金錢控制。推動多元性別（LGBTIQ）主流化，反對歧視，尊重差異，強化性別教育，確保跨性別之性別認同及醫療權益，推動婚姻平權制度。"
-            }
-        ]
-    },
-    "FHL": {
-        "name": "信心希望聯盟",
-        "id": "FHL",
-        "number": "7",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "MCFAP": {
-        "name": "軍公教聯盟黨",
-        "id": "MCFAP",
-        "number": "5",
-        "hasReply": false,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "none",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
-                "content": ""
-            }
-        ]
-    },
-    "TP": {
-        "name": "樹黨",
-        "id": "TP",
-        "number": "18",
-        "hasReply": true,
-        "positions": {
-            "marriageEquality": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "recall": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "referendum": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "nuclearPower": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "courseGuide": {
-                "promise": {
-                    "position": "aye",
-                    "statement": ""
-                }
-            },
-            "justiceReform": {
-                "promise": {
-                    "position": "refuse",
-                    "statement": ""
-                }
-            }
-        },
-        "bills": [
-            {
-                "goal": "TPP要公投",
-                "content": "捍衛糧食主權和食品安全。我們不捲入中美經濟戰，「跨太平洋夥伴協定\n」應釐清受害者權益，和重建生機配套。"
-            },
-            {
-                "goal": "能源稅碳減稅",
-                "content": "能源稅條例不是加稅。汙染財團幫我們繳所得稅，社會有公義。產業結構\r\n調整有經濟效率。空汙減量，復育環境。"
-            },
-            {
-                "goal": "推動公費選舉",
-                "content": "取消選後個人選票補助款，移作選前補助。競選經費超過上限當選無效。\r鼓勵青年參政。十八歲就能投票和參選。"
             }
         ]
     },
@@ -811,10 +231,10 @@ const partyPromises = {
             }
         ]
     },
-    "NHSA": {
-        "name": "健保免費連線",
-        "id": "NHSA",
-        "number": "17",
+    "MCFAP": {
+        "name": "軍公教聯盟黨",
+        "id": "MCFAP",
+        "number": "5",
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -865,6 +285,354 @@ const partyPromises = {
             },
             {
                 "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "MKT": {
+        "name": "民國黨",
+        "id": "MKT",
+        "number": "6",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "FHL": {
+        "name": "信心希望聯盟",
+        "id": "FHL",
+        "number": "7",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "CHTY": {
+        "name": "中華統一促進黨",
+        "id": "CHTY",
+        "number": "8",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "KMT": {
+        "name": "中國國民黨",
+        "id": "KMT",
+        "number": "9",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "TSU": {
+        "name": "台灣團結聯盟",
+        "id": "TSU",
+        "number": "10",
+        "hasReply": true,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "refuse",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "政黨法",
+                "content": "不當黨產處理"
+            },
+            {
+                "goal": "公投國會改革",
+                "content": "降低公投連署門檻並廢除審議委員會。降低罷免門檻。國會調查權、議長中立、議長警察權、降低黨團門檻、不信任案審查方式改革，強化監督能力。"
+            },
+            {
+                "goal": "廣電三法",
+                "content": "降低基本收視費、無線頻道免費且必載、反對垂直及水平壟斷。"
+            }
+        ]
+    },
+    "NPP": {
+        "name": "時代力量",
+        "id": "NPP",
+        "number": "11",
+        "hasReply": true,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "aye",
+                    "statement": "時代力量贊成並推動人民參與審判"
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "年金改革",
+                "content": ""
+            },
+            {
+                "goal": "勞工權益",
+                "content": ""
+            },
+            {
+                "goal": "民主憲政",
                 "content": ""
             }
         ]
@@ -927,61 +695,61 @@ const partyPromises = {
             }
         ]
     },
-    "CHTY": {
-        "name": "中華統一促進黨",
-        "id": "CHTY",
-        "number": "8",
-        "hasReply": false,
+    "GSD": {
+        "name": "綠黨社會民主黨聯盟",
+        "id": "GSD",
+        "number": "13",
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "勞動與經濟",
+                "content": "縮短工時、提高工資。禁止派遣制度、透過擴大公共服務創造更多安全、有尊嚴的工作。強化工會組織，團結協商並與雇主公平地分享勞動果實。同時，打破向財團傾斜的經濟體制，檢討並重新分配產業獎勵及補貼，減少對財團不合理的租稅減免，打造在地、合作、永續、公平的經濟模式。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "生態與土地",
+                "content": "扭轉犧牲後代子孫的發展模式，修復生態環境、改善環境品質，建立百年視野的國土計劃。廢除區段徵收惡法，執行農地農用政策，落實土地正\r義。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "托育年金與透明",
+                "content": "托育、長照與醫療必須公共化與普及化，任何人都能公平享用。年老之後，退休金必須要公平，要能夠支持生活所需之費用，全面改革年金制度。推動18歲公民權，公民的參與和監督不受限、讓政治不受金錢控制。推動多元性別（LGBTIQ）主流化，反對歧視，尊重差異，強化性別教育，確保跨性別之性別認同及醫療權益，推動婚姻平權制度。"
             }
         ]
     },
@@ -1040,6 +808,238 @@ const partyPromises = {
             {
                 "goal": "",
                 "content": ""
+            }
+        ]
+    },
+    "NSU": {
+        "name": "無黨團結聯盟",
+        "id": "NSU",
+        "number": "15",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "NP": {
+        "name": "新黨",
+        "id": "NP",
+        "number": "16",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "NHSA": {
+        "name": "健保免費連線",
+        "id": "NHSA",
+        "number": "17",
+        "hasReply": false,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "none",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            },
+            {
+                "goal": "",
+                "content": ""
+            }
+        ]
+    },
+    "TP": {
+        "name": "樹黨",
+        "id": "TP",
+        "number": "18",
+        "hasReply": true,
+        "positions": {
+            "marriageEquality": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "recall": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "referendum": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "nuclearPower": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "courseGuide": {
+                "promise": {
+                    "position": "aye",
+                    "statement": ""
+                }
+            },
+            "justiceReform": {
+                "promise": {
+                    "position": "refuse",
+                    "statement": ""
+                }
+            }
+        },
+        "bills": [
+            {
+                "goal": "TPP要公投",
+                "content": "捍衛糧食主權和食品安全。我們不捲入中美經濟戰，「跨太平洋夥伴協定\n」應釐清受害者權益，和重建生機配套。"
+            },
+            {
+                "goal": "能源稅碳減稅",
+                "content": "能源稅條例不是加稅。汙染財團幫我們繳所得稅，社會有公義。產業結構\r\n調整有經濟效率。空汙減量，復育環境。"
+            },
+            {
+                "goal": "推動公費選舉",
+                "content": "取消選後個人選票補助款，移作選前補助。競選經費超過上限當選無效。\r鼓勵青年參政。十八歲就能投票和參選。"
             }
         ]
     }
