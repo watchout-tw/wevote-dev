@@ -3,7 +3,18 @@ import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
 import ElectionMap from '../../components/ElectionMap/ElectionMap.js';
 export default class Constituencies extends Component {
+  constructor(props){ super(props)
+    this.state = {
+      viewWidth: ''
+    }
+  }
 
+  componentDidMount(){
+    let w = window.innerWidth;
+    this.setState({
+        viewWidth: w
+    })
+  }
   render() {
     const styles = require('./Constituencies.scss');
     const title = "區域立委投票攻略-各地區域候選人表態承諾大公開-沃草2016立委出任務";
@@ -19,6 +30,8 @@ export default class Constituencies extends Component {
           }
       }
     };
+
+    const {viewWidth} = this.state;
     
     return (
       <div className={styles.wrap}>
@@ -28,7 +41,7 @@ export default class Constituencies extends Component {
               <p>誰能勝出？由島嶼主人的你來決定！</p>
               <p>⬇︎⬇︎⬇︎選地圖，看選區⬇︎⬇︎⬇︎</p>
           </div>
-          <ElectionMap />
+          <ElectionMap viewWidth={viewWidth}/>
           <div className={styles.bgHolder}></div>
       </div>
     );

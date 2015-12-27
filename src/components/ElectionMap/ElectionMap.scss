@@ -191,6 +191,11 @@ $selectColor: #00ffb0;
 .prompt {
   background: yellow;
 }
+@media all and (min-width:$webVersionBreak){
+  .info > .go > .prompt, .info > .go > .arrow {
+      display: none;
+  }
+}
 .info {
   display: none;
   box-sizing: border-box;
