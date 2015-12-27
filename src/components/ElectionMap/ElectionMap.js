@@ -45,18 +45,11 @@ export default class ElectionMap extends Component {
   }
   _onMapClick(name, e){
 
-    if(interactiveCities.indexOf(name)===-1){
-        //如果該選區只有單一選區，直接選 sub_active = 1
-        this.setState({
-          active_city: name,
-          sub_active: 1
-        })
-
-    }else{
-        this.setState({
-          active_city: name
-        })
-    }
+    //直接選 sub_active = 1
+    this.setState({
+      active_city: name,
+      sub_active: 1
+    })
 
   }
   _resetMapClick(){
@@ -195,16 +188,16 @@ export default class ElectionMap extends Component {
   }
   render() {
     const styles = require('./ElectionMap.scss');
-    const {active_city, sub_active} = this.state;
+    let {active_city, sub_active} = this.state;
     const shelfImg = require('./images/shelf.svg');
     let detailInfo;
 
     if(active_city && sub_active){
+       
+
         let subInfo = (interactiveCities.indexOf(active_city)!==-1)? `第${numerals[sub_active]}`: "";
         detailInfo = (
           <div className={`${styles.info} ${this._showDetailStyle()}`}>
-            <div className={styles.close}
-                 onClick={this._resetMapClick.bind(this)}></div>
             <Link to={`/constituencies/${active_city}/${sub_active}/`}
                   className={styles.go}>
 
@@ -1238,6 +1231,8 @@ export default class ElectionMap extends Component {
           </div>
 
           <div id="citymap" className={`${styles.cityMap} ${this._showDetailStyle()}`}>
+              <div className={`${styles.close} ${this._showDetailStyle()}`}
+                   onClick={this._resetMapClick.bind(this)}></div>
               <div className={`${styles.city} ${this._activeClass('KEL')}`} id="citymap-KEL">
                 <div className={styles.title}>基隆市</div>
                 <div className={styles.map}>

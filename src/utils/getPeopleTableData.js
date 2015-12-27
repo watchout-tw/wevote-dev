@@ -44,15 +44,15 @@ export default function getPeopleTableData(legislatorPositions, disctrictCandida
 
     });
 
-    var arrayVersion = [];
-    Object.keys(TableData).map((peopleId, index)=>{
-        arrayVersion.push(TableData[peopleId]);
-    })
-    arrayVersion.sort((a,b)=>{
-        return a.number - b.number;
-    })
+    // var arrayVersion = [];
+    // Object.keys(TableData).map((peopleId, index)=>{
+    //     arrayVersion.push(TableData[peopleId]);
+    // })
+    // arrayVersion.sort((a,b)=>{
+    //     return a.number - b.number;
+    // })
    
-    return arrayVersion;
+    return TableData;
     
 }
 /*
