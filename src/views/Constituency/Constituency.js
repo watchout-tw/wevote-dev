@@ -6,6 +6,8 @@ import CandidateProfileCards from '../../components/CandidateProfileCards/Candid
 import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
 
 import district2cht from '../../utils/district2cht';
+import district_sub2cht from '../../utils/district_sub2cht';
+
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 import getDistrictLegislators from '../../utils/getDistrictLegislators'; //現任立委資訊
@@ -110,9 +112,24 @@ export default class Constituency extends Component {
     let wantedSection = (noDataCandidates.length > 0) ? <Wanted noDataCandidates={noDataCandidates} /> : "";
 
 
+    //SEO
+    const title = `${district2cht(area)}${district_sub2cht(area,areaNo)}立委候選人表態承諾大公開-沃草2016立委出任務`;
+    const description = `${district2cht(area)}${district_sub2cht(area,areaNo)}立委候選人參戰名單有誰？想知道候選人對議題有什麼表態立場？又推出了什麼優先推動法案？快來了解{某一區域}候選人的未來承諾，投票前不能錯過的最佳攻略！`;
+    const metaData = {
+      title: title,
+      description: description,
+      meta: {
+          charSet: 'utf-8',
+          property: {
+            'og:title': title,
+            'og:description': description
+          }
+      }
+    };
+
     return (
       <div className={styles.wrap}>
-
+          <DocumentMeta {...metaData}/>
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               <div className={styles.districtInfo}>

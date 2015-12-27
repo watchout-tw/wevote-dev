@@ -100,9 +100,8 @@ export default class People extends Component {
 
       case 'story':
         content = <Story id={id}/>
-        title = `${currentPeople.name}-沃草人物誌-沃草2016立委出任務`;
-        description = `${currentPeople.name}-沃草人物誌-沃草2016立委出任務`;//TBD
-    
+        title = `國會無雙${currentPeople.name}人物誌-沃草2016立委出任務`;
+        description = `沃草國會無雙直擊${currentPeople.name}的報導！透過圖文還原對話，深入解析${currentPeople.name}，在投票前不能錯過的精彩採訪。`;
       break;
 
 
