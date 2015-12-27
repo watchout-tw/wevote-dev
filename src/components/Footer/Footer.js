@@ -27,7 +27,8 @@ export default class Footer extends Component {
                 <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/about/`}>關於立委出任務</Link>
                 <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/about/FAQ`}>資料來源說明</Link>
                 <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/about/statement`}>著作權聲明</Link>
-                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/clarify`}>立委澄清</Link>
+                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/clarify/`}>立委澄清</Link>
+                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/wanted/`}>協尋立委</Link>
                 <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/`}>回首頁</Link>
               </div>
           </div>
