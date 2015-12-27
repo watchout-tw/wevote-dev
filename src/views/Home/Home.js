@@ -73,7 +73,6 @@ export default class Home extends Component {
                 <Link className={styles.stargate} to={`/constituencies/`}>
                   <img src={coliseum} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
-                  <img src={lock} className={styles.lock}/>
                   <div className={styles.label}><img src={symbols_constituencies} className={styles.icon}/><p className={styles.title}>勇者競技場</p></div>
                 </Link>
               </div>
