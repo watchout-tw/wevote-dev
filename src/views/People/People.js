@@ -73,7 +73,25 @@ export default class People extends Component {
 
       case 'promises':
         let promises = candidates[id];
-        content = <Promises id={id} promises={promises}/>;
+        let wantedText;
+        
+        if(candidates[id]){
+            if(candidates[id].hasReply === false){
+                wantedText=(
+                  <div>
+                    <p>這位候選人目前尚未回覆表態承諾書。</p>
+                    <p>失蹤的候選人，需要你的關心，讓更多選民認識他。</p>
+                  </div>
+                )
+            }
+        }
+        
+        content =(
+          <div>
+              {wantedText}
+              <Promises id={id} promises={promises}/>
+          </div>
+        );
 
         title = `${currentPeople.name}對於議題與法案的未來承諾-沃草2016立委出任務`;
         description = `${currentPeople.name}的未來承諾大公開！趕快來看看${currentPeople.name}各項重大議題的戰鬥策略與優先法案的戰鬥目標！`;

@@ -161,7 +161,10 @@ class Wanted extends Component {
                        className={styles.missingTitle}/>
               </div>
               <div className={styles.partyRollMain}>
-                  <div className={styles.intro}>以下立委沒有過去表態資料（非第八屆立委），亦尚未回覆未來表態資料。</div>
+                  <div className={styles.intro}>
+                      <p>以下候選人並非第八屆立委，沒有過去表態紀錄，目前也尚未回覆表態承諾書。</p>
+                      <p>失蹤的候選人，需要你的關心，讓更多選民認識他們。</p>
+                  </div>
                   {noDataCandidateItems}
                   <div className={styles.wantedLinkWrap}>
                     <Link className={styles.wantedLink}
