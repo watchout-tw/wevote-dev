@@ -37,16 +37,16 @@ export default class CandidateCompare extends Component {
       filter: !this.state.filter
     })
   }
- 
+
   render() {
     const styles = require("./CandidateCompare.scss");
     const {candidateList, area, areaNo} = this.props;
     const {pkCategory, filter} = this.state;
 
-    
+
     let candidateCardItems = candidateList
     .filter((people, index)=>{
-        
+
         if(filter===true){//so many if that i wanna kill myself...
             if(pkCategory==="position"){
                 if(people.hasReply || legislators[people.id]){
@@ -65,13 +65,13 @@ export default class CandidateCompare extends Component {
         }else{
           return true;
         }
-         
+
     })
-    .map((people, index)=>{    
+    .map((people, index)=>{
         return (
-              <Card people={people} 
+              <Card people={people}
                     area={area}
-                    areaNo={areaNo} 
+                    areaNo={areaNo}
                     pkCategory={pkCategory}
                     key={`candiate-compare-card-${people.id}-${pkCategory}`}/>
         );
@@ -103,10 +103,10 @@ class Card extends Component {
   render() {
     const styles = require("./CandidateCompare.scss")
     const {people, area, areaNo, pkCategory} = this.props;
-   
+
     /* ------  現任資訊 ------ */
     let currentInfo;//本區現任立委 or 現任立委，但不是本區
-        
+
     let isCurrent = identity_district(legislators[people.id], area, areaNo);
     if(isCurrent === 'D'){
        currentInfo = <div className={styles.currentInfo} >現任代表</div>;
@@ -119,7 +119,7 @@ class Card extends Component {
     let noContactInfo = (people.contactAvaliable === false) ? (
       <div className={styles.noContactInfo} >無公開聯絡資訊</div>)
     : "";
-    
+
     /* -------  表態 ------ */
     //表態
     //REFINE: image duplicated with position table
@@ -138,7 +138,7 @@ class Card extends Component {
           [styles.record] : true,
           [styles.empty] : level==="empty"
         })
-       
+
         return (
           <div className={styles.position}>
               <div className={styles.issueName}>{eng2cht(issueName)}</div>
@@ -146,7 +146,7 @@ class Card extends Component {
                   <div className={styles.recordDetail}>{handlePosCht(pos.record, people.id)}</div>
                   <div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div>
               </div>
-              
+
               <div className={styles.promise}>
                   <div className={`${styles.promiseDetail} ${(pos.promise === "none" || pos.promise === "refuse") ? styles.none : ""}`}>
                       {handlePromiseCht(pos.promise)}
@@ -166,12 +166,12 @@ class Card extends Component {
     })
     let billSection = (people.bills[0].goal) ? (
         <div className={styles.billSection}>
-            <ul className={styles.billList}>{billItems}</ul>        
+            <ul className={styles.billList}>{billItems}</ul>
         </div>
     ):<div className={` ${styles.billSection} ${styles.noReply} `}>尚未回覆</div>;
-    
+
     let content = (pkCategory==="position") ?  <div>{positionEntries}</div> : <div>{billSection}</div>
-    return ( 
+    return (
         <div className={styles.card}>
             <Link to={`/people/${people.id}/records/`} className={styles.cardLink}>
                 <div className={styles.metaInfo}>
@@ -193,8 +193,8 @@ class Card extends Component {
              {content}
              </Link>
         </div>
-        
-        
+
+
     );
   }
 
@@ -223,9 +223,7 @@ function handlePromiseCht (value){
     case 'nay':
       return '承諾書回覆：反對';
 
-    default: 
+    default:
       return eng2cht(value);
   }
 }
-
-

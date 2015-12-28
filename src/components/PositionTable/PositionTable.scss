@@ -71,7 +71,7 @@ header {
 	position: absolute;
 	bottom: 100px;
 	background: white;
-    
+
     width: 100%;
     max-width: $maxWidth;
     box-shadow: 0 2px 1px 0 rgba(0,0,0,0.08);
@@ -108,6 +108,10 @@ header {
   	font-size: 14px;
   	padding: 0 10px;
 }
+.issueTitles .unitName {
+	font-size: 12px;
+	padding: 12px 8px;
+}
 .nameFlex {
 	display: flex;
 }
@@ -117,9 +121,10 @@ header {
 }
 .number {
 	text-align: center;
+	font-weight: bold;
 }
 .party {
-	
+
 }
 @media all and (min-width: $positionTableWebBreak){
 	.prefix {
@@ -186,7 +191,7 @@ header {
 		display: block;
 	    position: absolute;
 	    font-size: 14px;
-	    width: 140px;
+	    width: 146px;
 	    line-height: 1.4;
 	    background: rgba(0,0,0,0.8);
 	    color: white;

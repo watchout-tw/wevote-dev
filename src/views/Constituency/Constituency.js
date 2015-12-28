@@ -62,7 +62,7 @@ export default class Constituency extends Component {
         side: 'front'
     }
   }
-  
+
   render() {
     const styles = require('./Constituency.scss');
     const {area, areaNo} = this.props.params;
@@ -93,7 +93,7 @@ export default class Constituency extends Component {
         )
     })
     let allMissing = (comparableCandidates.length > 0) ? "": <div>本區候選人全員失蹤中，需要你的關心</div>;
-    
+
     let cardSection = (comparableCandidates.length > 0) ? (
       <CandidateCompare area={area}
                         areaNo={areaNo}
@@ -124,7 +124,7 @@ export default class Constituency extends Component {
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               <div className={styles.districtInfo}>
-                  <h3 className={styles.electCount}>本區將選出 {shouldElect} 位勇者</h3>
+                  <h3 className={styles.electCount}>本區將選出{shouldElect}位勇者</h3>
                   <div className={styles.currentLegislators}>現任代表：{currentLegislatorItems}</div>
               </div>
               {allMissing}
