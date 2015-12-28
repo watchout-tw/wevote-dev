@@ -9,6 +9,9 @@ $webVersionBreak: 800px;
       display: none;
     }
 }
+.embedWrap {/* EMBED 專用 */
+    position: relative;
+}
 select.selector {
 	display: block;
     width: 100%;

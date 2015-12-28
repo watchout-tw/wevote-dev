@@ -52,19 +52,38 @@ export default class DistrictSelector extends Component {
           )
       });
     }
+    
+    /* EMBED 處理 */
+
+    const {embed} = this.props;
 
     let goButton;
     if(topMenuValue && topMenuValue!=='請選擇'){
-        goButton = (
-          <div className={styles.buttonWrap}>
-              <Link to={`/constituencies/${district2eng(topMenuValue)}/${bottomMenuValue}/`} 
-                    className={styles.button}>GO</Link>
-          </div>
-        )
+        if(embed){
+            goButton = (
+              <div className={styles.buttonWrap}>
+                  <a href={`//wevote.tw/constituencies/${district2eng(topMenuValue)}/${bottomMenuValue}/`} 
+                     className={styles.button}
+                     target="_blank">GO</a>
+              </div>
+            )
+        }else{
+            goButton = (
+              <div className={styles.buttonWrap}>
+                  <Link to={`/constituencies/${district2eng(topMenuValue)}/${bottomMenuValue}/`} 
+                        className={styles.button}>GO</Link>
+              </div>
+            )
+
+        }
+        
     }
+
+
+    let wrapClass = (embed) ? styles.embedWrap : styles.wrap;
   
     return (
-        <div className={styles.wrap}>
+        <div className={wrapClass}>
             <select onChange={this._onSelectTopMenu.bind(this)} ref="topMenu"
                     className={styles.selector}>
                 <option className={styles.option}>請選擇</option>
