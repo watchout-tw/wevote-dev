@@ -39,6 +39,8 @@ $break: 960px;
     position: relative;
     display: inline-block;
     transition: transform 0.5s ease;
+    padding-top: 100px;
+    @include transform(scale(1.1));
 
     &, &:active, &:visited {
       text-decoration: none;
@@ -52,23 +54,30 @@ $break: 960px;
       display: block;
       width: 320px;
     }
-    .glow, .lock {
+    .glow {
       position: absolute;
-      top: 0;
+      top: 100px;
       left: 0;
       width: 320px;
     }
-    .label {
-      margin-top: -20px;
-      .icon {
-        display: block;
-        width: 32px;
-        margin: 0 auto;
-      }
-      .title {
-        text-align: center;
-        margin: 0;
-      }
+    .label_issues, .label_parties, .label_constituencies {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      @include transform(translateX(-50%));
+      width: 125px;
+      height: 200px;
+      background-image: url('./images/labels.svg');
+      background-size: cover;
+      background-position: 0 0;
+    }
+    .label_parties {
+      background-position: -130px 0;
+      width: 175px;
+    }
+    .label_constituencies {
+      background-position: -300px 0;
+      width: 175px;
     }
   }
 }

@@ -37,11 +37,7 @@ export default class Home extends Component {
     let field = require('./images/field.png');
     let coliseum = require('./images/coliseum.png');
 
-    let symbols_issues = require('./images/symbols_issues.svg');
-    let symbols_parties = require('./images/symbols_parties.svg');
-    let symbols_constituencies = require('./images/symbols_constituencies.svg');
-
-    let lock = require('./images/lock.png');
+    let labels = require('./images/labels.svg');
 
     return (
       <div className={styles.home}>
@@ -63,17 +59,17 @@ export default class Home extends Component {
                 <Link className={styles.stargate} to={`/issues/`}>
                   <img src={mountain} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
-                  <div className={styles.label}><img src={symbols_issues} className={styles.icon}/><p className={styles.title}>議題攻城戰</p></div>
+                  <div className={styles.label_issues}></div>
                 </Link>
                 <Link className={styles.stargate} to={`/parties/`}>
                   <img src={field} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
-                  <div className={styles.label}><img src={symbols_parties} className={styles.icon}/><p className={styles.title}>黨團衝突戰</p></div>
+                  <div className={styles.label_parties}></div>
                 </Link>
                 <Link className={styles.stargate} to={`/constituencies/`}>
                   <img src={coliseum} className={styles.destination}/>
                   <img src={stargate} className={styles.glow}/>
-                  <div className={styles.label}><img src={symbols_constituencies} className={styles.icon}/><p className={styles.title}>勇者競技場</p></div>
+                  <div className={styles.label_constituencies}></div>
                 </Link>
               </div>
 
