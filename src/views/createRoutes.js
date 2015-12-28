@@ -38,6 +38,7 @@ import Issues from 'views/Issues/Issues.js';
 import Constituencies from 'views/Constituencies/Constituencies.js';
 import Constituency from 'views/Constituency/Constituency.js';
 
+import Search from 'views/Search/Search.js';
 import NotFound from 'views/NotFound/NotFound.js';
 
 export default function(store) {
@@ -96,6 +97,7 @@ export default function(store) {
             <Route path="/wanted" component={Wanted}/>
             <Route path="/subscribe/:state" component={SubscribeState}/>
             
+            <Route path='/search' component={Search} />
             <Route path="/404" component={NotFound}/>
             <Route path="*" component={NotFound}/>
         </Route>

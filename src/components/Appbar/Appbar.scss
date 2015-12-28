@@ -92,10 +92,10 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	text-align: center;
 	font-size: 14px;
 	color: red;
-  width: 4em;
-  border: 2px solid red;
-  padding: 2px;
-  background: rgba(255, 255, 255, 0.75);
+  	width: 4em;
+  	border: 2px solid red;
+  	padding: 2px;
+  	background: rgba(255, 255, 255, 0.75);
 }
 .rightToggle {
 	position: absolute;
@@ -111,7 +111,8 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 }
 @media all and (min-width: 400px) {
 	.lists li {
-		width: 25%;
+		width: 20%;
+		vertical-align: top;
 	}
 	.navItem {
 		height: auto;
@@ -125,34 +126,30 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 		margin-top: 2px;
 	}
 }
-@media screen and (min-width: 645px) {
+
+@media screen and (min-width: 700px) {
 	.appbar, .appbar.showMenu {
-    height: $appBarHeightExtended;
+    	height: $appBarHeightExtended;
 	}
-	.siteName {}
-  .lists {
-  	max-height: 1000px;
+ 	.lists {
+ 		max-height: 1000px;
  		display: block;
  		list-style-type: none;
  		margin: 0 auto;
 		text-align: right;
-  }
-  .lists li {
+ 	}
+ 	.lists li {
  		margin: 0;
 		width: auto;
  		display: inline-block;
-  }
-  .navItem {
-  	display: inline-block;
+ 	}
+ 	.navItem {
+ 		display: inline-block;
 		padding: 11px;
-  }
-	.navItem > * {
-		//display: inline-block;
-		//margin: 0;
-	}
-  .rightToggle {
-  	display: none;
-  }
+ 	}
+ 	.rightToggle {
+ 		display: none;
+ 	}
 }
 @media screen and (min-width: 840px) {
 	.appbar, .appbar.showMenu {
@@ -162,4 +159,9 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 		display: inline-block;
 		margin: 0;
 	}
+}
+
+.searchImg {
+	width: 28px;
+    margin: 2px 0;
 }

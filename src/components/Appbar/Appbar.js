@@ -39,16 +39,27 @@ export default class Appbar extends Component {
   }
   componentWillReceiveProps(nextProps){
     const {params} = nextProps;
+    const {location} = this.state;
     let issueName = (params.issueName) ? params.issueName : '';
     this.setState({
         issueName: issueName
     })
+
+    //for search 後離開
+    let l = window.location.pathname;
+    if(l.indexOf("search")=== -1 && location === "search"){
+       this.setState({
+         location: ""
+       })
+    }
+
   }
   componentDidMount(){
     this._mountCheck("issues");
     this._mountCheck("parties");
     this._mountCheck("constituencies");
     this._mountCheck("about");
+    this._mountCheck("search");
 
   }
   _mountCheck(v){
@@ -75,12 +86,14 @@ export default class Appbar extends Component {
     let constituenciesActive = (location === "constituencies") ? styles.active : "";
     
     let aboutActive = (location === "about") ? styles.active : "";
+    let searchActive = (location === "search") ? styles.active : "";
 
     let symbol_issues = require('./images/symbols_issues.svg');
     let symbol_parties = require('./images/symbols_parties.svg');
     let symbol_constituencies = require('./images/symbols_constituencies.svg');
     let symbol_about = require('./images/symbols_about.svg');
-    let symbol_maxi = require('./images/symbols_maXi.svg');
+    let search = require('./images/search.svg');
+    
     let menu = require('./images/menu.svg');
 
 
@@ -130,11 +143,23 @@ export default class Appbar extends Component {
                             <span>FAQ</span>
                     </Link>
                 </li>
+
+                <li onClick={this._updateLocation.bind(this,'search')}
+                    className={styles.navLi}>
+                    <Link className={`${styles.navItem} ${searchActive}`}
+                          to={`/search`}
+                          onClick={this._hideMenu.bind(this)}>
+                            <img src={search} className={styles.searchImg}/> 
+                            <span>搜尋</span>      
+                    </Link>
+                </li>
               </ul>
 
-              <div className={styles.rightToggle} onClick={this._toggleShowMenu.bind(this)}>
-                <img src={menu}/>
+              <div className={styles.rightToggle}
+                    onClick={this._toggleShowMenu.bind(this)}>
+                    <img src={menu}/>
               </div>
+              
           </div>
       </nav>
     );
