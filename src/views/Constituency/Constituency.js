@@ -27,18 +27,24 @@ export default class Constituency extends Component {
     let tableData = getPeopleTableData(legislatorPositions, candidateList);
     let legislatorList = getDistrictLegislators(legislators, area, areaNo);
 
-    let comparableCandidates = [];//有過去紀錄 or 有未來承諾的候選人
+    let allCandidates = [];
+    let comparableCandidates = [];//有過去紀錄 or 有未來承諾的候選人, 目前沒用到
     let noDataCandidates = [];
+
+    console.log(tableData)
 
     candidateList.map((people, index)=>{
         var combined = {
           id: people.id,
           name: people.name,
+          number: people.number,
           party: people.party,
           hasReply: people.hasReply,
           positions: tableData[people.id].positions,
-          bills: people.bills
+          bills: people.bills,
+          contactAvaliable: people.contactAvaliable
         };
+        allCandidates.push(combined);
 
         if(people.hasReply || legislators[people.id]){//已回覆，或者是第八屆立委
             comparableCandidates.push(combined);
@@ -51,24 +57,16 @@ export default class Constituency extends Component {
     this.state = {
         candidateList: candidateList,
         legislatorList: legislatorList,
-        comparableCandidates: comparableCandidates,
+        comparableCandidates: allCandidates,
         noDataCandidates: noDataCandidates,
         side: 'front'
     }
   }
-  _toggle(){
-    const {side} = this.state;
-    if(side === 'front'){
-        this.setState({ side: 'back' });
-    }else{
-        this.setState({ side: 'front' });
-    }
-
-  }
+  
   render() {
     const styles = require('./Constituency.scss');
     const {area, areaNo} = this.props.params;
-    const {candidateList, legislatorList, comparableCandidates, noDataCandidates, side} = this.state;
+    const {candidateList, legislatorList, comparableCandidates, noDataCandidates} = this.state;
     let noItem = (areaNo) ? <div>第{areaNo}選區</div> : "";
 
     //應選 x 名
@@ -94,26 +92,12 @@ export default class Constituency extends Component {
           </span>
         )
     })
-    //flip button,  沒有可比較資料時隱藏
-    let toggleText = (side==="front")? "立場PK" : "戰鬥目標";
-    let flipButton = (comparableCandidates.length > 0) ? (
-      <div className={styles.flipButton}
-           onClick={this._toggle.bind(this)}>
-           {toggleText}
-      </div>
-      ): <div>本區候選人全員失蹤中，需要你的關心</div>;
+    let allMissing = (comparableCandidates.length > 0) ? "": <div>本區候選人全員失蹤中，需要你的關心</div>;
     
-    //card
-    // let cardSection = (comparableCandidates.length > 0) ? (
-    //   <CandidateProfileCards area={area}
-    //                          areaNo={areaNo}
-    //                          side={side}
-    //                          candidateList={comparableCandidates}/>
-    // ) : "";
     let cardSection = (comparableCandidates.length > 0) ? (
       <CandidateCompare area={area}
                         areaNo={areaNo}
-                        candidateList={candidateList}/>
+                        candidateList={comparableCandidates}/>
     ) : "";
     //協尋中
     let wantedSection = (noDataCandidates.length > 0) ? <Wanted noDataCandidates={noDataCandidates} /> : "";
@@ -143,7 +127,7 @@ export default class Constituency extends Component {
                   <h3 className={styles.electCount}>本區將選出 {shouldElect} 位勇者</h3>
                   <div className={styles.currentLegislators}>現任代表：{currentLegislatorItems}</div>
               </div>
-              {flipButton}
+              {allMissing}
               {cardSection}
               {wantedSection}
           </div>
@@ -171,7 +155,7 @@ class Wanted extends Component {
                     <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
                 </div>
                 <Link to={`/people/${people.id}/promises/`}
-                      className={`${styles.nameItem} ${styles.ia} ${styles.black} ${styles.line}`} >{people.name}
+                      className={`${styles.nameItem} ${styles.ia} ${styles.black}`} >{people.name}
                 </Link>
                 {separatorItem}
             </span>
@@ -185,6 +169,10 @@ class Wanted extends Component {
                        className={styles.missingTitle}/>
               </div>
               <div className={styles.partyRollMain}>
+                  <div className={styles.missingText}>
+                      <div className={styles.largeText}>{noDataCandidates.length}</div>
+                      <div className={styles.smallText}>人失蹤中</div>
+                  </div>
                   <div className={styles.intro}>
                       <p>以下候選人並非第八屆立委，沒有過去表態紀錄，目前也尚未回覆表態承諾書。</p>
                       <p>失蹤的候選人，需要你的關心，讓更多選民認識他們。</p>

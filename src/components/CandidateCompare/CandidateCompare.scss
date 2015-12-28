@@ -1,28 +1,79 @@
 @import '../../common.scss';
+$hoverShow: 800px;
 .wrap {
 	position: relative;
     min-height: 300px;
 }
+/* ---------------- */
+.actionPanel {
+    margin: 10px 0;
+}
+.actionSet {
+    margin-top: 4px;
+    font-size: 14px;
+}
+$buttonColorA : #AD171F;
+.toggleButton {
+    cursor: pointer; 
+    display: inline-block;
+    margin: 4px;
+    padding: 3px 10px;
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.08);
+    border: 1px solid $buttonColorA;
+    color: $buttonColorA;
+}
+.toggleButton.active {
+    background: $buttonColorA;
+    color: white;
+}
+.toggleButton:hover {
+    background: $buttonColorA;
+    color: white;
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.28);
+}
+/* --- */
+$buttonColorB: rgb(50,50,50);
+.toggleButtonB {
+    cursor: pointer; 
+    display: inline-block;
+    margin: 4px;
+    padding: 3px 10px 2px 10px;;
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.08);
+    border: 1px solid $buttonColorB;
+    color: $buttonColorB;
+}
+.toggleButtonB.active {
+    background: $buttonColorB;
+    color: white;
+}
+.toggleButtonB:hover {
+    background: $buttonColorB;
+    color: white;
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.28);
+}
+/* ---------------- */
 .card, .card:visited {
 	display: inline-block;
     vertical-align: top;
     margin: 10px;
     padding: 10px 10px 20px 10px;
     background: white;
-    box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.12);
     position: relative;
     vertical-align: top;
     cursor: pointer;
 }
+@media all and (min-width: 380px){
+    .card {
+        min-width: 380px;
+    }
+}
 .card:hover {
-    box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.8);
+    box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.22);
 }
 .cardLink, .cardLink:visited {
     color: $black;
     text-decoration: none;
-}
-.flexLayout {
-    display: flex;
 }
 .peoplePhoto {
     width: 70px;
@@ -35,22 +86,40 @@
 .basicInfo {
     display: inline-block;
     margin: 0 10px;
+    padding-top: 8px;
     vertical-align: top;
 }
-.currentInfo {
-    margin: 4px;
+.metaInfo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+}
+.currentInfo {   
+    font-size: 12px;
+    background: #AD171F;
+    color: white;
+    padding: 4px;
+}
+.noContactInfo {
+   color: gray;
+   padding: 1px;
+   font-size: 12px;
+   width: 54px;
+   padding: 2px 1px 0 1px;
+   border: 1px solid;
 }
 .peopleNumber {
     display: inline-block;
     font-size: 20px;
     margin: 0 4px;
     vertical-align: top;
-    padding-top: 8px;
+    
 }
 .peopleName {
     font-size: 16px;
     font-weight: 600;
-    padding: 10px 0 1px 0;
+    padding: 0 0 1px 0;
     border-bottom: 2px solid;
     display: inline-block;
     margin-bottom: 5px;
@@ -64,16 +133,26 @@
 .position {
     text-align: center;
     display: inline-block;
-    padding: 10px;
     height: 45px;
 }
+@media all and (min-width: 450px){
+    .position {
+        padding: 10px;
+    }
+}
 .issueName {
-    flex: 1
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: 600;
 }
 .record {
     vertical-align: middle;
     font-size: 0;
-    flex: 1;
+    height: 40px;
+    position: relative;
 }
 .recordSquare {
     margin-bottom: 5px;
@@ -98,30 +177,99 @@
         margin-top: 5px;
     }
 }
+
+.recordDetail {
+    display: none;
+}
+@media all and (min-width: $hoverShow){
+    .record:hover .recordDetail {
+        z-index: 1;
+        display: block;
+        position: absolute;
+        font-size: 14px;
+        width: 120px;
+        line-height: 1.4;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        text-align: left;
+        padding: 10px;
+        top: -90px;
+        left: -39px;
+        box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.12);
+    }
+    .record.empty:hover .recordDetail {
+        display: block;
+        top: -44px;
+        text-align: center;
+    }
+     .record:hover .recordDetail:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 53px;
+        border-top: 10px solid #25282A;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+    }
+}
+
+
 .promise {
+    position: relative;
+}
+.promiseImg {
     width: 20px;
     display: inline-block;
     vertical-align: middle;
-    margin: 0 auto;
+}
+@media all and (min-width: $hoverShow){
+    .promiseImg {
+        margin: 10px 0;
+    }
+}
+.promiseDetail {
+    display: none;
+}
+@media all and (min-width: $hoverShow){
+    .promise:hover .promiseDetail {
+        z-index: 1;
+        display: block;
+        position: absolute;
+        font-size: 14px;
+        width: 100px;
+        text-align: center;
+        line-height: 1.4;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 7px;
+        top: -54px;
+        left: -16px;
+        box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.12);
+    }
+    .promise:hover .promiseDetail.none {
+        top: -34px;
+        width: 70px;
+    }
+    .promise:hover .promiseDetail:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 30px;
+        border-top: 10px solid #25282A;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+    }
 }
 /* ---------------- */
 .billSection {
 	display: block;
-    text-align: left;
-    margin: 45px 30px;
+    text-align: center;
     line-height: 1.3;
 }
 .billSection.noReply {
-    padding-top: 40px;
+    padding-top: 30px;
     text-align: center;
-}
-.billTitle {
-	width: 20px;
-    float: left;
-    padding: 6px 0;
-    margin-left: 10px;
-    font-size: 14px;
-    background: #B28765;
+    min-height: 80px;
 }
 .billList {
 	display: inline-block;
@@ -129,7 +277,7 @@
     width: 100%;
     font-size: 16px;
     vertical-align: top;
-    padding: 0 10px;
+    margin: 10px;
 }
 
 

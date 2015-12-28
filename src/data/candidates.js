@@ -2177,57 +2177,57 @@ const candidates =
         "districtArea": "KHH",
         "districtNo": "8",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "不當黨產處置條例",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "停建核四",
                 "content": ""
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "公投法修正",
+                "content": "下修公投門檻"
             }
         ]
     },
@@ -10855,57 +10855,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "11",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "nay",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "黨產歸零",
+                "content": "國民黨黨產歸零，支助弱團體，全民共享。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "司法陪審制度",
+                "content": "建立司法陪審制度，不能任法官假藉獨立自由審判，將政黨的黑手伸入司法。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "重新檢討教育",
+                "content": "目前大學教育未能配合社會需求，致浪費教育資源，學非所用，多元教育仍脫離不了社會技職的需求，取之於學校，用之社會。"
             }
         ]
     },
@@ -10917,35 +10917,35 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "11",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "不只婚姻平權，更要多元成家"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "除了核四以外，核一二三也應盡速除役。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
@@ -10958,16 +10958,16 @@ const candidates =
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "兩岸監督條例",
+                "content": "兩岸協議監督條例民間版立法，資訊透明應是重點"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "禁止派遣法",
+                "content": "禁止派遣，並訂立兩年落日條款。政府應率先禁止使用派遣。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "空汙水汙法規",
+                "content": "空汙部分實施總量管制，水汙部分應提高灌溉水標準，並建立各產業放流水標準。"
             }
         ]
     },
@@ -11846,57 +11846,57 @@ const candidates =
         "districtArea": "TYN",
         "districtNo": "4",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "推動桃園地鐵",
+                "content": "推動桃園鐵路地下化"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "推動社會住宅",
+                "content": "以容積率換取社會住宅"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "推動桃園捷運",
+                "content": "推動桃林鐵路改建為捷運，加速綠色捷運開通，棕色捷運新莊延伸至桃園。"
             }
         ]
     },
@@ -13830,57 +13830,57 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "8",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "先凝聚社會共識"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法",
+                "content": "明文確立政黨「非營利」的社團法人性質，其經費來源應僅限於黨員所繳交的黨費、依法收受的政治獻金，政府每年的政黨補助金，以及前述經費的孳息。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "食安法",
+                "content": "對生產者課以更重的法律及賠償責任，督促生產者的自主管理；拉高消費者檢舉獎金，及內部員工檢舉獎金，並嚴密保護檢舉者的資訊與安全。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "農業天災補助",
+                "content": "推動農作物保險，公平保障農民"
             }
         ]
     },
