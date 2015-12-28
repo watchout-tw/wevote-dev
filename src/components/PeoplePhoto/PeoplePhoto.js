@@ -24,13 +24,13 @@ export default class PeoplePhoto extends Component {
         let partyIndex = legislatorData.parties.length - 1;//選取最新的政黨
         party = cht2eng(legislatorData.parties[partyIndex].partyCht);
     }
-  
+
     let imgURL;
 
     try {
       imgURL = require("./images/avatar/"+name+".jpg");
     }catch(e){
-      imgURL = require("./images/default.jpg");
+      imgURL = require("./images/default.png");
     }
 
     //如果不是現任立委，要加上「參選人」
