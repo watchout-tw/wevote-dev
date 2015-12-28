@@ -112,7 +112,7 @@ class Card extends Component {
        currentInfo = <div className={styles.currentInfo} >現任代表</div>;
     }
     if(isCurrent === 'C'){
-       currentInfo = <div className={styles.currentInfo} >現任立委(非本區)</div>;
+       currentInfo = <div className={`${styles.currentInfo} ${styles.wide}`} >現任立委(非本區)</div>;
     }
 
     /* ------  無聯絡資訊 ------ */
@@ -129,7 +129,7 @@ class Card extends Component {
     imgHub.none = require("./images/answers_unknown.svg")
     imgHub.refuse = require("./images/answers_unknown.svg")
 
-    console.log(people)
+    //console.log(people)
 
     let positionEntries = Object.keys(people.positions).map((issueName, j)=>{
         let pos = people.positions[issueName];
