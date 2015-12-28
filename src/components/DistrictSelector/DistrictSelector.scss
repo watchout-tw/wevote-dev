@@ -4,6 +4,11 @@ $webVersionBreak: 800px;
 	max-width: 400px;
 	margin: 0 auto;
 }
+@media all and (min-width: $webVersionBreak){
+    .wrap {
+      display: none;
+    }
+}
 select.selector {
 	display: block;
     width: 100%;

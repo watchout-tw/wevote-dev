@@ -2,11 +2,16 @@
 
 $webVersionBreak: 800px;
 .wrap {
-  display: block;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  font-family: sans-serif;
+  display: none;
+}
+@media all and (min-width: $webVersionBreak){
+    .wrap {
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      font-family: sans-serif;
+    }
 }
 .shelf {
   display: none;

@@ -30,3 +30,17 @@ $webVersionBreak: 800px;
     margin: 40px auto 0 auto;
   }
 }
+.web {
+  display: none;
+}
+.mobile {
+  display: block;
+}
+@media all and (min-width: $webVersionBreak){
+  .web {
+    display:block;
+  }
+  .mobile {
+    display: none;
+  }
+}
