@@ -20,7 +20,7 @@
     text-decoration: none;
     color: $black;
     box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.5);
-    
+
     /* animation */
     perspective: 1000;
     transition: 0.6s;
@@ -34,7 +34,7 @@
 .cardItem:hover {
     box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.8);
 }
-.cardItem.front {  
+.cardItem.front {
     background-image: url(./images/card.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -113,7 +113,7 @@
 .peopleName {
     font-size: 16px;
     font-weight: 600;
-    padding: 10px 0 4px 0;
+    padding: 10px 0 0 0;
     border-bottom: 2px solid;
     display: inline-block;
 }
@@ -168,4 +168,3 @@
     vertical-align: middle;
     margin-right: 10px;
 }
-
