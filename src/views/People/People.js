@@ -80,7 +80,7 @@ export default class People extends Component {
                 wantedText=(
                   <div>
                     <p>這位候選人目前尚未回覆表態承諾書。</p>
-                    <p>失蹤的候選人，需要你的關心，讓更多選民認識他。</p>
+                    <p>失蹤的候選人，<Link className={`${styles.ia} ${styles.bright}`} to={`/wanted/`}>需要你的關心</Link>，讓更多選民認識他。</p>
                   </div>
                 )
             }
