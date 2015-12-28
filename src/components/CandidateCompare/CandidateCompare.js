@@ -14,26 +14,85 @@ import getData from '../../data/getData';
 const {legislators, people} = getData();
 
 export default class CandidateCompare extends Component {
-  
+  constructor(props){super(props)
+    this.state = {
+        pkCategory: "position",
+        filter : true
+    }
+  }
+  _toggleCategory(){
+    const {pkCategory} = this.state;
+    if(pkCategory==="position"){
+      this.setState({
+        pkCategory: "bill"
+      })
+    }else{
+      this.setState({
+        pkCategory: "position"
+      })
+    }
+  }
+  _toggleFilter(){
+    this.setState({
+      filter: !this.state.filter
+    })
+  }
  
   render() {
     const styles = require("./CandidateCompare.scss");
     const {candidateList, area, areaNo} = this.props;
-    console.log(candidateList)
-    let candidateCardItems = candidateList.map((people, index)=>{
+    const {pkCategory, filter} = this.state;
+
+    
+    let candidateCardItems = candidateList
+    .filter((people, index)=>{
         
-        return (
+        if(filter===true){//so many if that i wanna kill myself...
+            if(pkCategory==="position"){
+                if(people.hasReply || legislators[people.id]){
+                   return true;
+                }else{
+                   return false;
+                }
+            }else{
+                if(people.hasReply){
+                   return true;
+                }else{
+                   return false;
+                }
+
+            }
+        }else{
+          return true;
+        }
          
+    })
+    .map((people, index)=>{    
+        return (
               <Card people={people} 
                     area={area}
                     areaNo={areaNo} 
-                    key={`candiate-compare-card-${index}`}/>
-          
+                    pkCategory={pkCategory}
+                    key={`candiate-compare-card-${people.id}-${pkCategory}`}/>
         );
     })
 
     return (
         <div className={styles.wrap}>
+            <div className={styles.actionPanel}>
+                <div className={`${styles.actionSet}`}>
+                    <div className={`${styles.toggleButton} ${ (pkCategory==="position") ? styles.active:"" }`}
+                         onClick={this._toggleCategory.bind(this)}>立場PK</div>
+                    <div className={`${styles.toggleButton} ${ (pkCategory==="bill") ? styles.active:"" }`}
+                         onClick={this._toggleCategory.bind(this)}>法案PK</div>
+                  </div>
+                <div className={`${styles.actionSet}`}>
+                    <div className={`${styles.toggleButtonB} ${ (filter===true) ? styles.active:"" }`}
+                         onClick={this._toggleFilter.bind(this)}>只顯示有資料的</div>
+                    <div className={`${styles.toggleButtonB} ${ (filter===false) ? styles.active:"" }`}
+                         onClick={this._toggleFilter.bind(this)}>顯示所有參選人</div>
+                </div>
+            </div>
             {candidateCardItems}
         </div>
     );
@@ -43,18 +102,23 @@ export default class CandidateCompare extends Component {
 class Card extends Component {
   render() {
     const styles = require("./CandidateCompare.scss")
-    const {people, area, areaNo} = this.props;
+    const {people, area, areaNo, pkCategory} = this.props;
    
     /* ------  現任資訊 ------ */
     let currentInfo;//本區現任立委 or 現任立委，但不是本區
         
     let isCurrent = identity_district(legislators[people.id], area, areaNo);
     if(isCurrent === 'D'){
-       currentInfo = <h3 className={styles.currentInfo} >本區現任勇者代表</h3>;
+       currentInfo = <div className={styles.currentInfo} >現任代表</div>;
     }
     if(isCurrent === 'C'){
-       currentInfo = <h3 className={styles.currentInfo} >現任勇者，但並非本區代表</h3>;
+       currentInfo = <div className={styles.currentInfo} >現任立委(非本區)</div>;
     }
+
+    /* ------  無聯絡資訊 ------ */
+    let noContactInfo = (people.contactAvaliable === false) ? (
+      <div className={styles.noContactInfo} >無公開聯絡資訊</div>)
+    : "";
     
     /* -------  表態 ------ */
     //表態
@@ -63,6 +127,9 @@ class Card extends Component {
     imgHub.aye = require("./images/answers_aye.svg")
     imgHub.nay = require("./images/answers_nay.svg")
     imgHub.none = require("./images/answers_unknown.svg")
+    imgHub.refuse = require("./images/answers_unknown.svg")
+
+    console.log(people)
 
     let positionEntries = Object.keys(people.positions).map((issueName, j)=>{
         let pos = people.positions[issueName];
@@ -76,10 +143,16 @@ class Card extends Component {
           <div className={styles.position}>
               <div className={styles.issueName}>{eng2cht(issueName)}</div>
               <div className={recordClasses}>
+                  <div className={styles.recordDetail}>{handlePosCht(pos.record, people.id)}</div>
                   <div className={`${styles.recordSquare} ${styles[pos.record]} ${styles[level]}`}></div>
               </div>
-              <img className={styles.promise}
-                   src={`${imgHub[pos.promise.position]}`} />
+              
+              <div className={styles.promise}>
+                  <div className={`${styles.promiseDetail} ${(pos.promise === "none" || pos.promise === "refuse") ? styles.none : ""}`}>
+                      {handlePromiseCht(pos.promise)}
+                  </div>
+                  <img className={styles.promiseImg} src={`${imgHub[pos.promise]}`} />
+              </div>
           </div>
         )
     })
@@ -95,29 +168,30 @@ class Card extends Component {
         <div className={styles.billSection}>
             <ul className={styles.billList}>{billItems}</ul>        
         </div>
-    ):"";
-   
-    /* ------  無聯絡資訊 ------ */
-    let noContactInfo = (people.contactAvaliable === false) ? <div>無公開聯絡資訊</div> : "";
-     
-
+    ):<div className={` ${styles.billSection} ${styles.noReply} `}>尚未回覆</div>;
+    
+    let content = (pkCategory==="position") ?  <div>{positionEntries}</div> : <div>{billSection}</div>
     return ( 
         <div className={styles.card}>
-             <Link to={`/people/${people.id}/records/`} className={styles.cardLink}>
-              <div className={styles.peoplePhoto}>
-                  <PeoplePhoto id={people.id}/>
-              </div>
-              <div className={styles.basicInfo}>
+            <Link to={`/people/${people.id}/records/`} className={styles.cardLink}>
+                <div className={styles.metaInfo}>
                   {currentInfo}
-                  <div className={styles.peopleNumber}>{people.number}</div>
-                  <div className={styles.peopleName}>{people.name}</div>
-                  <div className={styles.partyItem}>
-                      <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
-                      <PartyFlag partyId={people.party}/>
-                  </div>
-              </div>
-              <div>{positionEntries}</div>
-              </Link>
+                  {noContactInfo}
+                </div>
+
+             <div className={styles.peoplePhoto}>
+                <PeoplePhoto id={people.id}/>
+             </div>
+             <div className={styles.basicInfo}>
+                <div className={styles.peopleNumber}>{people.number}</div>
+                <div className={styles.peopleName}>{people.name}</div>
+                <div className={styles.partyItem}>
+                    <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+                    <PartyFlag partyId={people.party}/>
+                </div>
+             </div>
+             {content}
+             </Link>
         </div>
         
         
@@ -125,10 +199,33 @@ class Card extends Component {
   }
 
 }
+function handlePosCht (value, id) {
+  if(!value){
+    return "非第八屆立委"
+  }else{
+    if(value==="none"){
+      return "根據第八屆立院資料統計，未表態。"
+    }else if(value==="evading"){
+      return "根據第八屆立院資料統計，應表態未表態。"
+    }else{
+      return `根據第八屆立院資料統計，立場為${eng2cht(value)}`;
+    }
+  }
+}
+function handlePromiseCht (value){
+  switch(value){
+    case 'refuse':
+      return '不表態';
+    case 'none':
+      return '未回覆';
+    case 'aye':
+      return '承諾書回覆：支持';
+    case 'nay':
+      return '承諾書回覆：反對';
 
+    default: 
+      return eng2cht(value);
+  }
+}
 
-              
-//               
-//               {noContactInfo}
-//               {billSection}
 

@@ -22,7 +22,7 @@
     text-align: center;
 }
 .districtInfo {
-    margin: 30px 0;
+    margin: 10px 0 30px 0;
 }
 .electCount {
     text-align: center;
@@ -31,19 +31,6 @@
 .currentLegislators {
     text-align: center;
     font-size: 14px;
-}
-.flipButton {
-    cursor: pointer;
-    background: #AD171F;
-    color: white;
-    display: inline-block;
-    margin: 0 auto 40px auto;
-    padding: 10px 20px;
-    width: 120px;
-    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.08);
-}
-.flipButton:hover {
-    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.28);
 }
 .action {
     display: block;
@@ -74,6 +61,7 @@
     margin: 100px auto;
     text-align: center;
 }
+/* 上方字體圖片 */
 .missingTitle {
     width: 100%;
     max-width: 70%;
@@ -95,7 +83,7 @@
 }
 @media all and (min-width: 500px){
     .partyRollEndpoint {
-        height: 30%;
+        height: 120px;
     }
 }
 .partyRollEndpoint.top {
@@ -107,7 +95,6 @@
     }
 }
 .partyRollMain {
-    height: 400px;
     width: 100%;
     padding: 20px 50px;
     line-height: 1.8;
@@ -117,8 +104,31 @@
 }
 @media all and (min-width: 500px){
     .partyRollMain {
-        padding: 50px 80px;
+        padding: 20px 120px;
     }
+}
+.missingText {
+    text-align: center;
+    height: 70px;
+    padding-left: 40px;
+    margin-top: 70px;
+}
+@media all and (min-width: 500px){
+    .missingText {
+        margin-top: 0;
+    }
+}
+.largeText {
+    font-size: 46px;
+    font-weight: 600;
+    display: inline-block;
+}
+.smallText {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 37px;
+    margin: 0 4px;
 }
 .partyRollEndpoint.bottom {
     bottom: -20px;
@@ -132,7 +142,12 @@
   display: inline-block;
 }
 .intro {
-    margin: 20px 0;
+    margin: 0 0 30px 0;
+}
+.intro p {
+    margin: 10px 0;
+    line-height: 1.4;
+    font-size: 14px;
 }
 .partyItem {
     margin-right: 4px;
@@ -144,7 +159,7 @@
 }
 .wantedLinkWrap {
     text-align: center;
-    margin-top: 40px;
+    margin: 20px;
 }
 .wantedLink, .wantedLink:visited {
     display: inline;
