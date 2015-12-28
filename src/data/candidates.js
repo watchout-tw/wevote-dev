@@ -1556,7 +1556,7 @@ const candidates =
         "party": "DPP",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -1742,7 +1742,7 @@ const candidates =
         "party": "KMT",
         "districtArea": "ZMI",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -4158,7 +4158,7 @@ const candidates =
         "party": "DPP",
         "districtArea": "HUN",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -4716,7 +4716,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "TPE",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5088,7 +5088,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "TPE",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5212,7 +5212,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5336,7 +5336,7 @@ const candidates =
         "party": "PPU",
         "districtArea": "TPE",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -5398,7 +5398,7 @@ const candidates =
         "party": "MCFAP",
         "districtArea": "TPE",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -6080,7 +6080,7 @@ const candidates =
         "party": "PPU",
         "districtArea": "TPE",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -6390,7 +6390,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -6576,7 +6576,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7010,7 +7010,7 @@ const candidates =
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7134,7 +7134,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7258,7 +7258,7 @@ const candidates =
         "party": "PDF",
         "districtArea": "TPE",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7444,7 +7444,7 @@ const candidates =
         "party": "PPU",
         "districtArea": "TPE",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7506,7 +7506,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7630,7 +7630,7 @@ const candidates =
         "party": "TIP",
         "districtArea": "TPE",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7754,7 +7754,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -7816,7 +7816,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TPE",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8064,7 +8064,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8188,7 +8188,7 @@ const candidates =
         "party": "PPU",
         "districtArea": "NTC",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8312,7 +8312,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8746,7 +8746,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8870,7 +8870,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "3",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -8932,7 +8932,7 @@ const candidates =
         "party": "PPU",
         "districtArea": "NTC",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -9118,7 +9118,7 @@ const candidates =
         "party": "JP",
         "districtArea": "NTC",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -9180,7 +9180,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "4",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -9490,7 +9490,7 @@ const candidates =
         "party": "TLP",
         "districtArea": "NTC",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -9676,7 +9676,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -10110,7 +10110,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -10296,7 +10296,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "NTC",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": true,
         "positions": {
             "marriageEquality": {
@@ -10420,7 +10420,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -10668,7 +10668,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "NTC",
         "districtNo": "9",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11102,7 +11102,7 @@ const candidates =
         "party": "PPU",
         "districtArea": "NTC",
         "districtNo": "12",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11474,7 +11474,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -11969,7 +11969,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "TYN",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12093,7 +12093,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12155,7 +12155,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12465,7 +12465,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12589,7 +12589,7 @@ const candidates =
         "party": "CHTY",
         "districtArea": "TXG",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12713,7 +12713,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -12837,7 +12837,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13395,7 +13395,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13581,7 +13581,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "6",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -13767,7 +13767,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TXG",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -14263,7 +14263,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "TNN",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -15007,7 +15007,7 @@ const candidates =
         "party": "TLP",
         "districtArea": "TNN",
         "districtNo": "5",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16432,7 +16432,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "KHH",
         "districtNo": "7",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -16680,7 +16680,7 @@ const candidates =
         "party": "PDF",
         "districtArea": "KHH",
         "districtNo": "8",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17362,7 +17362,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "HSZ",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17486,7 +17486,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "HSZ",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17610,7 +17610,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "ZMI",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -17796,7 +17796,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "ZMI",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -18044,7 +18044,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "CHW",
         "districtNo": "2",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19283,7 +19283,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "CYI",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -19469,7 +19469,7 @@ const candidates =
         "party": "KMT",
         "districtArea": "PIF",
         "districtNo": "1",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20275,7 +20275,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "HUN",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20585,7 +20585,7 @@ const candidates =
         "party": "TLP",
         "districtArea": "MZG",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -20895,7 +20895,7 @@ const candidates =
         "party": "TLP",
         "districtArea": "KNH",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21019,7 +21019,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "KNH",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21267,7 +21267,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "MFK",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -21391,7 +21391,7 @@ const candidates =
         "party": "KMT",
         "districtArea": "KEL",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22011,7 +22011,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "HCC",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22630,7 +22630,7 @@ const candidates =
         "party": "NHSA",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -22692,7 +22692,7 @@ const candidates =
         "party": "NONE",
         "districtArea": "LAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
@@ -23250,7 +23250,7 @@ const candidates =
         "party": "TIP",
         "districtArea": "MAB",
         "districtNo": "N/A",
-        "contactAvaliable": false,
+        "contactAvaliable": true,
         "hasReply": false,
         "positions": {
             "marriageEquality": {
