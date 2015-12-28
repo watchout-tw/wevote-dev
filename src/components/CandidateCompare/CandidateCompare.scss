@@ -1,0 +1,135 @@
+@import '../../common.scss';
+.wrap {
+	position: relative;
+    min-height: 300px;
+}
+.card, .card:visited {
+	display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px 10px 20px 10px;
+    background: white;
+    box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.5);
+    position: relative;
+    vertical-align: top;
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: 2px 2px 12px 0 rgba(0,0,0,0.8);
+}
+.cardLink, .cardLink:visited {
+    color: $black;
+    text-decoration: none;
+}
+.flexLayout {
+    display: flex;
+}
+.peoplePhoto {
+    width: 70px;
+    height: 70px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: inline-block;
+}
+.basicInfo {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+}
+.currentInfo {
+    margin: 4px;
+}
+.peopleNumber {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 4px;
+    vertical-align: top;
+    padding-top: 8px;
+}
+.peopleName {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0 1px 0;
+    border-bottom: 2px solid;
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: top;
+}
+.partyItem {
+	left: 8px;
+	top: 16px;
+}
+/* ---------------- */
+.position {
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    height: 45px;
+}
+.issueName {
+    flex: 1
+}
+.record {
+    vertical-align: middle;
+    font-size: 0;
+    flex: 1;
+}
+.recordSquare {
+    margin-bottom: 5px;
+    display: inline-block;
+
+    &.level1 {
+        width: 10px;
+        height: 10px;
+    }
+    &.level2 {
+        width: 20px;
+        height: 20px;
+    }
+    &.level3 {
+        width: 40px;
+        height: 40px;
+    }
+    &.empty {
+        width: 10px;
+        height: 10px;
+        border: 1px solid $lightGrey;
+        margin-top: 5px;
+    }
+}
+.promise {
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+/* ---------------- */
+.billSection {
+	display: block;
+    text-align: left;
+    margin: 45px 30px;
+    line-height: 1.3;
+}
+.billSection.noReply {
+    padding-top: 40px;
+    text-align: center;
+}
+.billTitle {
+	width: 20px;
+    float: left;
+    padding: 6px 0;
+    margin-left: 10px;
+    font-size: 14px;
+    background: #B28765;
+}
+.billList {
+	display: inline-block;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+

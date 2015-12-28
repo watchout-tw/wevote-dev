@@ -1,22 +1,17 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { Link } from "react-router";
 import classnames from 'classnames';
 import eng2url from '../../utils/eng2url';
 import eng2cht from '../../utils/eng2cht';
+import promise_eng2cht from '../../utils/promise_eng2cht';
 
-@connect(
-    state => ({
-                 partyPromises: state.partyPromises,
-                 issues: state.issues,
-                 dataMeta: state.dataMeta
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {issues, partyPromises, dataMeta} = getData();
+
 export default class Promises extends Component {
     render(){
       const styles = require('./Promises.scss');
-      const {issues, dataMeta, promises, id} = this.props;
+      const {promises, id} = this.props;
       if(!promises){//不是本屆參選人，沒有這樣資料
         return <div></div>
       }
@@ -33,8 +28,8 @@ export default class Promises extends Component {
                   <div className={styles.promiseTitle}>{eng2cht(issueName)}</div>
                   <div className={styles.promiseQuestion}>{issueData.question}</div>
                   <div className={styles.promisePos}>
-                    <div className={`${styles[pos]} ${styles.promiseIcon}`}></div>
-                    <div className={styles.promisePosText}>{handlePartyPos(pos)}</div>
+                    <div className={`${styles[handlePartyPosEng(pos)]} ${styles.promiseIcon}`}></div>
+                    <div className={styles.promisePosText}>{promise_eng2cht(pos)}</div>
                   </div>
                   <div className={styles.promiseStatement}>{statement}</div>
               </div>
@@ -55,15 +50,26 @@ export default class Promises extends Component {
                   <div>{content}</div>
               </div>
           )
-      })
-      return (
+      });
+
+      let replyStatus = (
         <div>
           <div className={styles.sectionTitle}>議題表態</div>
           <div>{(hasReply === true ) ? postionItems : "尚未回覆"}</div>
 
           <div className={styles.sectionTitle}>優先法案</div>
           <div>{(hasReply === true ) ? billItems  : "尚未回覆"}</div>
-          
+        </div>
+      );
+
+      //健保連線特殊回覆      
+      if(id === "NHSA"){
+         replyStatus = <div className={styles.notice}>健保免費連線回覆表示：「很抱歉，健保免費連線暫時只針對健保議題表示意見，因為我們是政黨連線，協調不易，也不想協調！」</div>
+      }
+
+      return (
+        <div>
+          {replyStatus}
           <div className={`${styles.promiseMeta}`}>* 統計更新日期：{dataMeta.updateTime}。
                 <Link className={`${styles.ia} ${styles.bright}`} 
                       to={`/about/FAQ/`}>我們如何統計的</Link></div>
@@ -71,10 +77,10 @@ export default class Promises extends Component {
       )
     }
 }
-function handlePartyPos(value){
-  if(value === "none"){
-    return "尚未回覆"
+function handlePartyPosEng(value){
+  if(value === "refuse"){
+    return "none";
   }else{
-    return eng2cht(value);
+    return value;
   }
 }

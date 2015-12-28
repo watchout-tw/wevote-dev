@@ -158,6 +158,10 @@ class StatementBlock extends Component {
                    target="_blank"
                    className={`${styles.ia} ${styles.bright}`}>Typeland《隸辨隸書體》</a>
                    作者厉向晨讓我們在這個網站的圖像創作中自由使用《隸辨隸書體》。</p>
+              <p>特別感謝
+                <a href="https://tapcpr.wordpress.com/"
+                   target="_blank"
+                   className={`${styles.ia} ${styles.bright}`}>伴侶盟</a>協助提供立委參選人聯絡資訊。</p>
           </div>
       </div>
     )

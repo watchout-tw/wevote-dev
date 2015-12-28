@@ -1,4 +1,4 @@
-const initialState = {
+const issues = {
     /* 從 url 對應的議題資料 */ 
     "marriage-equality" : {
       "title" : "婚姻平權",
@@ -827,11 +827,7 @@ const initialState = {
         }
       ]
     }
-    
 }
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    default:
-      return state;
-  }
+export default function get(){
+    return issues;
 }

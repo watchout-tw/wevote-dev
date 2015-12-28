@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
-import { connect } from 'react-redux';
 
 import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
@@ -12,25 +10,14 @@ import url2eng from '../../utils/url2eng';
 import eng2cht from '../../utils/eng2cht';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 
-@connect(
-    state => ({
-                  legislators: state.legislators,
-                  records: state.records,
-                  issues: state.issues
-              }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, issues, legislators} = getData();
 
 export default class PeopleIssue extends Component {
-  static propTypes = {
-      legislators: PropTypes.object.isRequired,
-      records: PropTypes.object.isRequired,
-      issues: PropTypes.object.isRequired
-  }
-  //設定 initial state
   constructor(props) { super(props)
       this.state = {
           showMenu: false,
-          legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
+          legislatorPositions: parseToLegislatorPosition(records, issues, legislators)
       }
   }
   _toggleMenu(){
@@ -42,7 +29,6 @@ export default class PeopleIssue extends Component {
     const id = this.props.params.peopleId;
     const issueURL = this.props.params.issueName;
 
-    const {issues, legislators} = this.props;
     const issue = issues[issueURL];
     const {showMenu} = this.state;
 

@@ -27,6 +27,6 @@ $webVersionBreak: 800px;
 }
 @media all and (min-width: $webVersionBreak){
   .instruction {
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
   }
 }

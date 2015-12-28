@@ -1,17 +1,12 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
-import {connect} from 'react-redux';
 
 import InteractiveIssue from '../../components/InteractiveIssue/InteractiveIssue.js';
 import StaticIssue from '../../components/StaticIssue/StaticIssue.js';
 
-@connect(
-    state => ({
-                issues: state.issues
-              }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {issues} = getData();
 
 export default class Issue extends Component {
   static propTypes = {
@@ -277,7 +272,6 @@ export default class Issue extends Component {
 
   render(){
       const styles = require('./Issue.scss');
-      const {issues} = this.props;
       const currentIssueName = this.props.params.issueName;
       const {currentView, interactive, chooseSkip,
              showNotification, showCompleteNotification,

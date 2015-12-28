@@ -1,18 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from "react-router";
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
 import classnames from 'classnames';
 
 import people_name2id from '../../utils/people_name2id';
 import identity_district from '../../utils/identity_district';
 import eng2cht from '../../utils/eng2cht';
+import countLevel from '../../utils/countLevel';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 
-@connect(
-    state => ({ legislators: state.legislators }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {legislators, people} = getData();
 
 export default class CandidateProfileCards extends Component {
   constructor(props){ super(props)
@@ -28,7 +26,7 @@ export default class CandidateProfileCards extends Component {
  
   render() {
     const styles = require("./CandidateProfileCards.scss");
-    const {legislators, candidateList, area, areaNo, side} = this.props;
+    const {candidateList, area, areaNo, side} = this.props;
     const {activeIssue} = this.state;
 
     let candidateCardItems = (candidateList || []).map((value, index)=>{
@@ -65,8 +63,7 @@ export default class CandidateProfileCards extends Component {
 class Card extends Component {
   render() {
     const styles = require("./CandidateProfileCards.scss")
-    const {people, side, 
-           onSetActiveIssue, activeIssue} = this.props;
+    const {people, side, onSetActiveIssue, activeIssue} = this.props;
     if(!people) return <div></div>
 
 
@@ -152,20 +149,5 @@ class Card extends Component {
     );
   }
 
-}
-function countLevel(count){
-  let num = Number(count);
-  if(num >= 0 && num <= 5){
-     return 'level1';
-
-  }else if(num > 5 && num <= 25){
-     return 'level2';
-
-  }else if(num > 25){
-     return 'level3';
-
-  }else {
-     return 'empty';
-  }
 }
 

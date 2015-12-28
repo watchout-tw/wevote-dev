@@ -1,29 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
-import { connect } from 'react-redux';
 import eng2party_short from '../../utils/eng2party_short';
 import cht2eng from '../../utils/cht2eng';
 
-@connect(
-    state => ({
-        legislators: state.legislators,
-        candidates: state.candidates,
-        people: state.people
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {legislators, candidates, people} = getData();
 
 export default class PeoplePhoto extends Component {
-  static propTypes = {
-    legislators: PropTypes.object.isRequired,
-    id: PropTypes.string.isRequired
-
-  }
-
   render () {
 
     const styles = require('./PeoplePhoto.scss');
-    const {legislators, candidates, people, id} = this.props;
+    const {id} = this.props;
     let currentPeople = people[id];
     let {name} = currentPeople;
 

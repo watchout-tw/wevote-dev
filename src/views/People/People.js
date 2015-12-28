@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
-import { connect } from 'react-redux';
 
 import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
@@ -16,6 +14,7 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleDistrict from '../../utils/getPeopleDistrict';
 import identity from '../../utils/identity';
 import district2cht from '../../utils/district2cht';
+
 /*
 :category => {"records", "promises", "story"}
 歷史紀錄
@@ -23,23 +22,16 @@ import district2cht from '../../utils/district2cht';
 人物誌
 */
 
-@connect(
-    state => ({  
-                 legislators: state.legislators,
-                 candidates: state.candidates,
-                 records: state.records,
-                 issues: state.issues,
-                 people: state.people
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, issues, legislators, candidates, people} = getData();
+
 
 export default class People extends Component {
   constructor(props){ super(props)
       this.state = {
-        legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators),
-        districtData: getPeopleDistrict(props.legislators, props.candidates, props.params.peopleId)
+        legislatorPositions: parseToLegislatorPosition(records, issues, legislators),
+        districtData: getPeopleDistrict(legislators, candidates, props.params.peopleId)
       }
-      //console.log(parseToLegislatorPosition(props.records, props.issues, props.legislators))
   }
   render() {
     const styles = require('./People.scss');
@@ -48,15 +40,14 @@ export default class People extends Component {
     const category = this.props.params.category;
 
     //立委基本資料
-    const {legislators, candidates, people} = this.props;
     const currentPeople = people[id];
     //是否為第八屆立委，是否為第九屆區域立委參選人
-    let currentIdentity = identity(legislators, candidates, id);
+    
+    let currentIdentity = identity(legislators, id);
 
     //頁面最下方要呈現的候選人選區資料
     const {districtData} = this.state;
 
-    
     //content
     let content;
 
@@ -81,9 +72,26 @@ export default class People extends Component {
       break;
 
       case 'promises':
-        const {candidates} = this.props;
         let promises = candidates[id];
-        content = <Promises id={id} promises={promises}/>;
+        let wantedText;
+        
+        if(candidates[id]){
+            if(candidates[id].hasReply === false){
+                wantedText=(
+                  <div>
+                    <p>這位候選人目前尚未回覆表態承諾書。</p>
+                    <p>失蹤的候選人，需要你的關心，讓更多選民認識他。</p>
+                  </div>
+                )
+            }
+        }
+        
+        content =(
+          <div>
+              {wantedText}
+              <Promises id={id} promises={promises}/>
+          </div>
+        );
 
         title = `${currentPeople.name}對於議題與法案的未來承諾-沃草2016立委出任務`;
         description = `${currentPeople.name}的未來承諾大公開！趕快來看看${currentPeople.name}各項重大議題的戰鬥策略與優先法案的戰鬥目標！`;
@@ -92,9 +100,8 @@ export default class People extends Component {
 
       case 'story':
         content = <Story id={id}/>
-        title = `${currentPeople.name}-沃草人物誌-沃草2016立委出任務`;
-        description = `${currentPeople.name}-沃草人物誌-沃草2016立委出任務`;//TBD
-    
+        title = `國會無雙${currentPeople.name}人物誌-沃草2016立委出任務`;
+        description = `沃草國會無雙直擊${currentPeople.name}的報導！透過圖文還原對話，深入解析${currentPeople.name}，在投票前不能錯過的精彩採訪。`;
       break;
 
 

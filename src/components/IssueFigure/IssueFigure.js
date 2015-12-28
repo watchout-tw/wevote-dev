@@ -1,7 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
-import {connect} from 'react-redux';
 import IssueController from '../../components/IssueController/IssueController.js';
 
 import PartyPositionGroup from '../../components/PartyPositionGroup/PartyPositionGroup.js';
@@ -9,37 +7,32 @@ import PositionLegislatorGroup from '../../components/PositionLegislatorGroup/Po
 import PositionPartyGroup from '../../components/PositionPartyGroup/PositionPartyGroup.js';
 import IssueArticle from '../../components/IssueArticle/IssueArticle.js';
 
-import {getAllRecords} from '../../ducks/records';
 import parseToPartyView from '../../utils/parseToPartyView';
 import parseToLegislatorView from '../../utils/parseToLegislatorView';
 import parseToPositionView from '../../utils/parseToPositionView';
 
-@connect(
-    state => ({ 
-                issues: state.issues,
-                records: state.records,
-                parties: state.parties
-              }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, issues, parties} = getData();
 
 export default class IssueFigure extends Component {
     static propTypes = {
         records: PropTypes.object.isRequired
     }
-
     constructor(props){ super(props)
       
         this.state = {
-           partyView: parseToPartyView(props.records, props.issues),
-           legislatorView: parseToLegislatorView(props.records, props.issues),
-           positionView: parseToPositionView(props.records, props.issues),
+          partyView: parseToPartyView(records, issues),
+          legislatorView: parseToLegislatorView(records, issues),
+          positionView: parseToPositionView(records, issues),
 
-           userPosition: {
+          userPosition: {
              "marriage-equality" : "none",
              "recall" : "none",
              "referendum" : "none",
-             "nuclear-power" : "none"
-           }
+             "nuclear-power" : "none",
+             "course-guide" : "none",
+             "justice-reform" : "none"
+          }
         }
     }
 
@@ -65,7 +58,6 @@ export default class IssueFigure extends Component {
     render(){
       const styles = require('./IssueFigure.scss');  
       const {currentView, currentIssue, currentIssueName, setCurrentView} = this.props;
-      const {parties} = this.props;
       const {partyView, legislatorView, positionView, userPosition} = this.state;
 
 

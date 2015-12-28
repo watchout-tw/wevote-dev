@@ -1,4 +1,4 @@
-const initialState = 
+const records = 
 {
     "1": {
         "id": 1,
@@ -39835,15 +39835,6 @@ const initialState =
         "meetingCategory": ""
     }
 }
-
-
-
-export default function reducer(state = initialState, action = {}) {
-  
-  switch (action.type) {
-    default:
-      return state;
-  }
+export default function get(){
+    return records;
 }
-
-

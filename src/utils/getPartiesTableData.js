@@ -9,8 +9,10 @@ export default function getPartiesTableData(partyPositions, partyPromises){
         TableData[partyId] = {
             name: partyPromises[partyId].name,
             id: partyId,
+            number: partyPromises[partyId].number,
             party: partyId,
-            positions: {}
+            positions: {},
+            hasReply: partyPromises[partyId].hasReply
         };
        
         issueList.map((issueName, i)=>{
@@ -40,12 +42,21 @@ export default function getPartiesTableData(partyPositions, partyPromises){
             }
             //紀錄承諾的立場
             TableData[partyId].positions[issueName].promise = partyPromises[partyId].positions[issueName].promise.position;
-
+           
         })
       
     })
+
+    var arrayVersion = [];
+    Object.keys(TableData).map((partyId, index)=>{
+        arrayVersion.push(TableData[partyId]);
+    })
+    arrayVersion.sort((a,b)=>{
+        return a.number - b.number;
+    })
+
    
-    return TableData;
+    return arrayVersion;
     
 }
 /*

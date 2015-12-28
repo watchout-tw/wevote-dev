@@ -8,6 +8,8 @@ import classnames from 'classnames';
 import MaXiCastle from '../../components/MaXiCastle/MaXiCastle.js';
 import Missions from '../../components/Missions/Missions.js';
 
+import getData from '../../data/getData';
+const {issues} = getData();
 
 export default class Embed extends Component {
   constructor(props){ super(props)
@@ -81,14 +83,9 @@ export default class Embed extends Component {
     );
   }
 }
-@connect(
-    state => ({ issues: state.issues }),
-    dispatch => bindActionCreators({}, dispatch))
 class EmbedIssues extends Component {
     render(){
         const styles = require('./Embed.scss');
-        const {issues} = this.props;
-
         const missionImg = require("./images/VideoTitles_mission.svg");
         const flyingImg = require("./images/flying-inverse.png");
         const goImg = require("./images/go-mission.svg");

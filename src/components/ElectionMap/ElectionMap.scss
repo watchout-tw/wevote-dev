@@ -143,14 +143,21 @@ $selectColor: #00ffb0;
     height: $x;
     margin: $x auto;
     position: relative;
-    background: $hoverColor;
     cursor: pointer;
 
+    background: yellow;
+    z-index: 1;
+    position: fixed;
+    top: calc(-10vh - 2px);
+
+    left: 0;
+    right: 0;
+    
     &.inactive {
       background: $inactiveColor;
     }
     &:hover {
-      background: $selectColor;
+      background: #ff0055;
     }
     &:before, &:after {
       content: '';
@@ -167,12 +174,27 @@ $selectColor: #00ffb0;
       @include transform(rotate(-45deg));
     }
 }
+@media all and (min-width:$webVersionBreak){
+    .close.active {
+      position: absolute;
+      top: -10px;
+    } 
+}
+
 /* 詳細選區: xx市, xx區 */
 .info.active {
 	display: block;
 }
 .name, .prompt, .arrow {
 	display: inline-block;
+}
+.prompt {
+  background: yellow;
+}
+@media all and (min-width:$webVersionBreak){
+  .info > .go > .prompt, .info > .go > .arrow {
+      display: none;
+  }
 }
 .info {
   display: none;

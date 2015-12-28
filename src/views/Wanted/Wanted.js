@@ -5,8 +5,8 @@ import DocumentMeta from 'react-document-meta';
 export default class Wanted extends Component {
   render() {
     const styles = require('./Wanted.scss');
-    const title = `協尋立委-沃草2016立委出任務`;
-    const description = `協助我們聯繫立委參選人`;
+    const title = `協尋失蹤候選人-沃草2016立委出任務`;
+    const description = `協尋三密技，下載傳送提醒候選人回覆表態承諾書，候選人不失蹤，投票攻略群眾協力！`;
     const metaData = {
       title: title,
       description: description,
@@ -26,8 +26,19 @@ export default class Wanted extends Component {
               <h1 className={styles.title}>協尋立委</h1> 
           </div>
           <div className={styles.content}>
-             <p>協助我們尋找失落的候選人！</p>
-             <p>請來信 wevote@watchout.tw 並附上您的說明與聯絡資料，我們將會與您聯繫。</p>
+              <p>你選區的立委候選人失蹤了嗎？</p>
+              <p>關於你關心議題的立場，候選人還沒回覆嗎？</p>
+              <p>你出一分力，協尋失蹤候選人，讓資訊更完整，改變選舉文化。</p>
+  
+              <h2>協尋三密技：</h2>
+              <ol>
+                <li>下載：下載<a className={`${styles.ia} ${styles.bright}`} 
+                                href="/files/form.pdf" target="_blank">表態承諾書</a></li>
+                <li>傳送：傳送表態承諾書到候選人FB或傳真，<a>候選人聯絡表</a></li>
+                <li>提醒：打電話貼心提醒候選人回覆表態承諾書</li>
+              </ol>
+              <p><Link className={`${styles.ia} ${styles.bright}`} 
+                       to={`/FAQ/`}>我們是如何蒐集資料的？</Link></p>
           </div>
           
       </div>

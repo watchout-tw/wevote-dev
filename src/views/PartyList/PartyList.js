@@ -1,17 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
-import { connect } from 'react-redux';
 
 import parseToPartyPosition from '../../utils/parseToPartyPosition';
 
-@connect(
-    state => ({
-                legislators: state.legislators,
-                records: state.records,
-                issues: state.issues
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {legislators, records, issues} = getData();
 
 export default class PartyList extends Component {
   static propTypes = {
@@ -28,7 +21,7 @@ export default class PartyList extends Component {
             "referendum" : "none",
             "nuclearPower" : "none"
         },
-        partyPositions: parseToPartyPosition(props.records, props.issues)
+        partyPositions: parseToPartyPosition(records, issues)
       }
   }
 

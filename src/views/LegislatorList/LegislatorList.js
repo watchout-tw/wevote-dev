@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 import { Link } from "react-router";
-import { connect } from 'react-redux';
 
 import PeopleAvatar from '../../components/PeopleAvatar/PeopleAvatar.js';
-
 import people_name2id from '../../utils/people_name2id';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 
@@ -40,22 +37,16 @@ const IssueList = [
          "cht": "司",
          "url": "justice-reform"
      }
-]
-@connect(
-    state => ({
-                  legislators: state.legislators,
-                  records: state.records,
-                  issues: state.issues
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+];
+
+import getData from '../../data/getData';
+const {records, legislators, issues} = getData();
 
 export default class LegislatorList extends Component {
   static propTypes = {
       legislators: PropTypes.object.isRequired,
-      records: PropTypes.object.isRequired,
       issues: PropTypes.object.isRequired
   }
-
   constructor(props) { super(props)
       this.state = { 
         userPreference: {
@@ -66,7 +57,7 @@ export default class LegislatorList extends Component {
           "courseGuide" : "none",
           "justiceReform" : "none"
         },
-        legislatorPositions: parseToLegislatorPosition(props.records, props.issues, props.legislators)
+        legislatorPositions: parseToLegislatorPosition(records, issues, legislators)
       }
   }
 
@@ -219,8 +210,6 @@ class Record extends Component {
     
     if(!data.positions) return <div></div>
 
-    
-  
     let issueItems = IssueList.map((currentIssue, index)=>{
         let currentData = data.positions[currentIssue.id];
         //if(!currentData) return "";

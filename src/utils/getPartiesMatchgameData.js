@@ -24,7 +24,7 @@ export default function getPartiesMatchgameData(partyPositions, partyPromises, r
                         MatchData[partyId].positions[issueName] = recordPosition;
                     }
                     //或者還沒有承諾，就沒有衝突的問題
-                    if(promisePosition === "none"){
+                    if(promisePosition === "none" || promisePosition === "refuse"){
                         MatchData[partyId].positions[issueName] = recordPosition;
                     }
                 }

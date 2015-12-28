@@ -1,34 +1,29 @@
 import React, {Component, PropTypes} from 'react';
-import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
-import {connect} from 'react-redux';
 
 import CandidateProfileCards from '../../components/CandidateProfileCards/CandidateProfileCards.js';
 import DistrictFlag from '../../components/DistrictFlag/DistrictFlag.js';
+import CandidateCompare from '../../components/CandidateCompare/CandidateCompare.js';
 
 import district2cht from '../../utils/district2cht';
+import district_sub2cht from '../../utils/district_sub2cht';
+
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getDistrictCandidates from '../../utils/getDistrictCandidates'; //該區參選人資訊
 import getDistrictLegislators from '../../utils/getDistrictLegislators'; //現任立委資訊
 import getPeopleTableData from '../../utils/getPeopleTableData';
-@connect(
-    state => ({
-      legislators: state.legislators,
-      records: state.records,
-      issues: state.issues,
-      candidates: state.candidates
-    }),
-    dispatch => bindActionCreators({}, dispatch))
+
+import getData from '../../data/getData';
+const {records, legislators, candidates, issues} = getData();
 
 export default class Constituency extends Component {
 
   constructor(props){ super(props)
-    const {records, issues, legislators, candidates} = props;
     const {area, areaNo} = props.params;
 
     let legislatorPositions = parseToLegislatorPosition(records, issues, legislators);
-    let candidateList = getDistrictCandidates(candidates, area, areaNo);
+    let candidateList = getDistrictCandidates(candidates, area, areaNo);/* Object */
     let tableData = getPeopleTableData(legislatorPositions, candidateList);
     let legislatorList = getDistrictLegislators(legislators, area, areaNo);
 
@@ -107,20 +102,41 @@ export default class Constituency extends Component {
            {toggleText}
       </div>
       ): <div>本區候選人全員失蹤中，需要你的關心</div>;
+    
     //card
+    // let cardSection = (comparableCandidates.length > 0) ? (
+    //   <CandidateProfileCards area={area}
+    //                          areaNo={areaNo}
+    //                          side={side}
+    //                          candidateList={comparableCandidates}/>
+    // ) : "";
     let cardSection = (comparableCandidates.length > 0) ? (
-      <CandidateProfileCards area={area}
-                             areaNo={areaNo}
-                             side={side}
-                             candidateList={comparableCandidates}/>
+      <CandidateCompare area={area}
+                        areaNo={areaNo}
+                        candidateList={candidateList}/>
     ) : "";
     //協尋中
     let wantedSection = (noDataCandidates.length > 0) ? <Wanted noDataCandidates={noDataCandidates} /> : "";
 
 
+    //SEO
+    const title = `${district2cht(area)}${district_sub2cht(area,areaNo)}立委候選人表態承諾大公開-沃草2016立委出任務`;
+    const description = `${district2cht(area)}${district_sub2cht(area,areaNo)}立委候選人參戰名單有誰？想知道候選人對議題有什麼表態立場？又推出了什麼優先推動法案？快來了解{某一區域}候選人的未來承諾，投票前不能錯過的最佳攻略！`;
+    const metaData = {
+      title: title,
+      description: description,
+      meta: {
+          charSet: 'utf-8',
+          property: {
+            'og:title': title,
+            'og:description': description
+          }
+      }
+    };
+
     return (
       <div className={styles.wrap}>
-
+          <DocumentMeta {...metaData}/>
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               <div className={styles.districtInfo}>
@@ -169,7 +185,10 @@ class Wanted extends Component {
                        className={styles.missingTitle}/>
               </div>
               <div className={styles.partyRollMain}>
-                  <div className={styles.intro}>以下立委沒有過去表態資料（非第八屆立委），亦尚未回覆未來表態資料。</div>
+                  <div className={styles.intro}>
+                      <p>以下候選人並非第八屆立委，沒有過去表態紀錄，目前也尚未回覆表態承諾書。</p>
+                      <p>失蹤的候選人，需要你的關心，讓更多選民認識他們。</p>
+                  </div>
                   {noDataCandidateItems}
                   <div className={styles.wantedLinkWrap}>
                     <Link className={styles.wantedLink}

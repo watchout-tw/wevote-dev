@@ -139,12 +139,64 @@ $primaryColor: #16a085;
 /* -----------------
 /* RESULT */
 
+/* 跟你最接近的是⋯⋯ */
+.resultInfo {
+  background: $white;
+  max-width: 800px;
+  text-align: center;
+  padding: 10px;
+  margin: 30px auto 0 auto;
+}
+
+.goBlock {
+  margin: 20px 0 0 0;
+  text-align: center;
+  border-top: 2px dashed #ccc;
+  padding: 20px 20px 0 20px; 
+}
+.goWrap {
+  
+}
+.goText {
+  margin: 0 auto 8px auto;
+  color: $awesomeColor;
+  padding-left: 18px;
+  font-size: 14px;
+
+}
+.goButton, .goButton:visited {
+  cursor: pointer;
+  display:inline-block;
+  margin: 0 auto;
+  background: $awesomeColor;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 0 12px 0 rgba(240, 240, 240, 0.3), 0 0 12px 0 rgba(240, 240, 240, 0.3)
+}
+.goButton:hover {
+  box-shadow: 2px 2px 32px 0 rgba(240, 240, 240, 0.5), -2px -2px 32px 0 rgba(240, 240, 240, 0.5)
+}
+/* 詳細圖表 */
 .rankResultSection {
 	text-align: center;
   position: relative;
   max-width: 800px;
-  margin: 120px auto;
+  margin: 50px auto;
 }
+.figHeader {
+  background: $white;
+  padding: 10px 0 20px 0;
+}
+
+.figDes {
+  padding: 0 24px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgb(50,50,50);
+}
+
 .positionTitle {
   font-size: 18px;
   font-weight: normal;
@@ -158,10 +210,7 @@ $primaryColor: #16a085;
     top: 50%;
     transform: translateY(-50%);
     width: 100px;
-    //height: 32px;
     background: none;
-    //padding: 14px 10px 0 10px;
-    //width: 120px;
   }
 }
 .rankResultWrap {
@@ -297,33 +346,19 @@ table.hoverDetailTable {
 }
 
 
-/* 沒有資料區塊 */
-.noDataBlock, .noDataMeta {
+/* 沒有資料區塊 spectrum */
+.noDataBlock, {
   position: relative;
   padding: 10px;
   background: rgba(0,0,0,0.7);
   color: $white;
 }
-.noDataMeta {
-  padding: 24px;
-  text-align: left;
-  font-size: 13px;
-  color: #ddd;
-  background: rgba(0,0,0,0.85);
-
-  .noDataMetaTitle {
-    font-size: $defaultFontSize;
-    margin-bottom: 0.5em;
-  }
-  .noDataMetaDes {
-    line-height: 1.5;
-  }
-}
-
 .noDataItem {
   display: inline-block;
   margin: 18px 2px;
 }
+
+
 /* 法案區塊 */
 .introToPartyBills {
   text-align: center;
@@ -341,7 +376,4 @@ table.hoverDetailTable {
   border-radius: 50%;
   color: #0F0F0F;
 }
-.actionBlock {
-  margin: 0 20px;
-  text-align: center;
-}
+

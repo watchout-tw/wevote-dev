@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { Link } from "react-router";
 import DocumentMeta from 'react-document-meta';
 import classnames from 'classnames';
@@ -9,7 +7,6 @@ import PartyProfile from '../../components/PartyProfile/PartyProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 import PositionSquare from '../../components/PositionSquare/PositionSquare.js';
 import Promises from '../../components/Promises/Promises.js';
-
 import PartyBuns from '../../components/PartyBuns/PartyBuns.js';
 
 import eng2url from '../../utils/eng2url';
@@ -25,29 +22,29 @@ import parseToPartyPosition from '../../utils/parseToPartyPosition';
 不分區名單
 */
 
-@connect(
-    state => ({
-                 legislators: state.legislators,
-                 records: state.records,
-                 issues: state.issues,
-                 parties: state.parties,
-                 partyPromises: state.partyPromises
-               }),
-    dispatch => bindActionCreators({}, dispatch))
+import getData from '../../data/getData';
+const {records, legislators, issues, parties, partyBlock, partyPromises} = getData();
 
 export default class Party extends Component {
   constructor(props){ super(props)
       this.state = {
-        partyPositions: parseToPartyPosition(props.records, props.issues)
+        partyPositions: parseToPartyPosition(records, issues)
       }
   }
   render() {
+
     const styles = require('./Party.scss');
     const id = this.props.params.partyId;
     const category = this.props.params.category;
 
+    //如果沒有該政黨資料，回覆空
+    if(!parties[id]){
+      return <div></div>
+    }
+    
+
+
     //政黨基本資料
-    const {parties} = this.props;
     const currentParty = parties[id];
     
     //content
@@ -75,7 +72,6 @@ export default class Party extends Component {
       break;
 
       case 'promises':
-        const {partyPromises} = this.props;
         let promises = partyPromises[id];
         content = <Promises id={id} promises={promises}/>
 
@@ -126,6 +122,9 @@ export default class Party extends Component {
           <div className={styles.bottomWrap}>
             <h2>看其他政黨</h2>
             <PartyBuns category={category} />
+            <div className={styles.bottomLinkWrap}>
+                <Link to={`/parties-table/`} className={styles.bottomLink}>看各黨比較表格</Link>
+            </div>
           </div>
       </div>
     );
@@ -152,15 +151,10 @@ class PartyRecords extends Component {
     }
 }
 
-@connect(
-    state => ({
-                 partyBlock: state.partyBlock
-               }),
-    dispatch => bindActionCreators({}, dispatch))
 class PartyBlock extends Component {
     render(){
       const styles = require('./Party.scss');
-      const {partyBlock, id} = this.props;
+      const {id} = this.props;
       const party = partyBlock[id];
       if(!party) return <div></div>
 
