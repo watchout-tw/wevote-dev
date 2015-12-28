@@ -34,7 +34,10 @@ export default class Wanted extends Component {
               <ol>
                 <li>下載：下載<a className={`${styles.ia} ${styles.bright}`} 
                                 href="/files/form.pdf" target="_blank">表態承諾書</a></li>
-                <li>傳送：傳送表態承諾書到候選人FB或傳真，<a>候選人聯絡表</a></li>
+                <li>傳送：傳送表態承諾書到候選人FB或傳真，
+                    <a href="https://docs.google.com/spreadsheets/d/1FAuauUYh1EFtpTnUpn3SMburgolD93QST5je05cYxY4/edit#gid=0"
+                       target="_blank"
+                       className={`${styles.ia} ${styles.bright}`} >候選人聯絡表</a></li>
                 <li>提醒：打電話貼心提醒候選人回覆表態承諾書</li>
               </ol>
               <p><Link className={`${styles.ia} ${styles.bright}`} 
