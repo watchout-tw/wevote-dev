@@ -31,7 +31,7 @@ export default class Constituency extends Component {
     let comparableCandidates = [];//有過去紀錄 or 有未來承諾的候選人, 目前沒用到
     let noDataCandidates = [];
 
-    console.log(tableData)
+    //console.log(tableData)
 
     candidateList.map((people, index)=>{
         var combined = {

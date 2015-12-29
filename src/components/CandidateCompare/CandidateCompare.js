@@ -72,8 +72,7 @@ export default class CandidateCompare extends Component {
               <Card people={people}
                     area={area}
                     areaNo={areaNo}
-                    pkCategory={pkCategory}
-                    key={`candiate-compare-card-${people.id}-${pkCategory}`}/>
+                    pkCategory={pkCategory}/>
         );
     })
 
