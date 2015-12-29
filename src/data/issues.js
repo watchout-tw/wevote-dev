@@ -439,7 +439,7 @@ const issues = {
       ]
     },
     "nuclear-power" : {
-      "title" : "核能",
+      "title" : "核四停建",
       "icon" : "fa-industry",
       "titleEng" : "nuclearPower",
       "question" : "你支持核四停建嗎？",
@@ -569,7 +569,7 @@ const issues = {
       ]
     },
     "course-guide" : {
-      "title" : "課綱",
+      "title" : "課綱程序透明",
       "titleEng" : "courseGuide",
       "question" : "你支持課綱制定程序完全公開透明嗎？",
       "statement" : "課綱制定程序完全公開透明",
