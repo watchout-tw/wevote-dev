@@ -3,6 +3,7 @@
 	position: relative;
 	max-width: 1200px;
 	margin: 0 auto;
+	padding-top: 50px;
 	text-align: center;
 }
 .district {/* 臺北市 */
@@ -77,3 +78,30 @@
 	margin: 10px 4px;
 	max-width: 80px;
 }
+/* ----------------- */
+.actionPanel {
+	margin-top: 40px;
+}
+.buttonSet {
+	text-align: center;
+}
+.button {
+	cursor: pointer;
+	display: inline-block;
+	border: 1px solid gray;
+	padding: 4px;
+    margin: 4px;
+}
+
+.button.active {
+	cursor: pointer;
+	display: inline-block;
+	border: 1px solid gray;
+	background: lightgray;
+}
+.button:hover {
+	background: lightgray;
+}
+
+
+
