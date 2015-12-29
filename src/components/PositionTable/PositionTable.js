@@ -233,13 +233,13 @@ export default class PositionTable extends Component {
 function handlePosCht (value, id) {
   if(!value){
     if(id==="MKT"){
-      return "根據第八屆立院資料統計，沒有針對此議題表態。";
+      return "根據第八屆立院資料統計，沒有針對此議題表態";
     }else{
-      return "該黨在第八屆沒有席次。"
+      return "該黨在第八屆沒有席次"
     }
   }else{
     if(value==="none"){
-      return "根據第八屆立院資料統計，沒有針對此議題表態。"
+      return "根據第八屆立院資料統計，沒有針對此議題表態"
     }else{
       return `根據第八屆立院資料統計，立場為${eng2cht(value)}`;
     }

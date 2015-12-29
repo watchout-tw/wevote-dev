@@ -98,6 +98,10 @@ header {
   font-size: 14px;
   padding: 0 10px;
 }
+.billTitles .unitName {
+  font-size: 12px;
+  padding: 12px 8px;
+}
 @media all and (min-width: $billTableWebBreak){
   .party {
     margin: 3px 4px 3px 0;

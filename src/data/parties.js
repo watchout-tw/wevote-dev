@@ -142,9 +142,17 @@ const parties = {
         "seats": 0,
         "hasBeenCount": 0,
         "side" : 1
-    }
+    },
+    "NONE": {
+        "id": "NONE",
+        "name": "無黨籍",
+        "number": "",
+        "seats" : 0,
+        "hasBeenCount" : 1,
+        "side" : 2
+    }    
 }
-
+/* 無黨籍不能拿掉，核四資料需要用 */
 export default function get(){
     return parties;
 }

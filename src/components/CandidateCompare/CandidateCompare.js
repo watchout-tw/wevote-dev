@@ -212,9 +212,9 @@ function handlePosCht (value, id) {
     return "非第八屆立委"
   }else{
     if(value==="none"){
-      return "根據第八屆立院資料統計，未表態。"
+      return "根據第八屆立院資料統計，未表態"
     }else if(value==="evading"){
-      return "根據第八屆立院資料統計，應表態未表態。"
+      return "根據第八屆立院資料統計，應表態未表態"
     }else{
       return `根據第八屆立院資料統計，立場為${eng2cht(value)}`;
     }
