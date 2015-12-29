@@ -11,9 +11,24 @@ const {issues, partyPromises, dataMeta} = getData();
 export default class Promises extends Component {
     render(){
       const styles = require('./Promises.scss');
-      const {promises, id} = this.props;
+      const {promises, id, isParty} = this.props;
       if(!promises){//不是本屆參選人，沒有這樣資料
-        return <div></div>
+        if(isParty){
+            return (
+              <div className={styles.notCandidates}>
+                  我們僅調查有推出<b>全國不分區</b>後選人之政黨的未來承諾。
+              </div>
+            )
+
+        }else{
+            return (
+              <div className={styles.notCandidates}>
+                  我們僅調查<b>區域</b>立委參選人之未來承諾，此立委並非2016<b>區域</b>立委參選人。
+              </div>
+            )
+
+        }
+        
       }
 
       const {positions, bills, hasReply} = promises;

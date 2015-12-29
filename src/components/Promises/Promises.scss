@@ -1,6 +1,13 @@
 @import '../../common.scss';
 @import '../../styles/innerTag.scss';
 $breakWeb: 500px;
+.notCandidates {
+	max-width: 320px;
+    margin: 10px auto;
+    padding: 10px;
+    line-height: 1.4;
+    color: #5A5757;
+}
 /* 承諾 */
 .sectionTitle {
 	border-bottom: 2px solid;
