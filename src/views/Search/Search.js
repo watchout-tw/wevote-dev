@@ -63,7 +63,7 @@ export default class Search extends Component {
         return (
             <Link to={`/people/${people.id}/promises/`}
                   className={styles.candidate}
-                  key={`${people.id}-${i}`}>
+                  key={`${people.id}-${index}`}>
                 
                 <div className={styles.photo}>
                     <PeoplePhoto id={people.id}/>
@@ -73,8 +73,7 @@ export default class Search extends Component {
                     <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
                 </div>
                 <div className={styles.partyText}>{eng2party_short(people.party)}</div>
-                
-                
+                     
                 <div className={`${styles.nameItem} ${styles.ia} ${styles.black} ${styles.line}`} >
                      {people.name}
                 </div>
