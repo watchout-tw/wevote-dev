@@ -186,7 +186,7 @@ class Card extends Component {
                   {currentInfo}
                   {noContactInfo}
                 </div>
-
+            
                 <div className={styles.peoplePhoto}>
                    <PeoplePhoto id={people.id}/>
                 </div>
@@ -198,7 +198,7 @@ class Card extends Component {
                        <PartyFlag partyId={people.party}/>
                    </div>
                 </div>
-                {content}
+                <div>{content}</div>
             </Link>
         </div>
 
