@@ -72,7 +72,8 @@ export default class CandidateCompare extends Component {
               <Card people={people}
                     area={area}
                     areaNo={areaNo}
-                    pkCategory={pkCategory}/>
+                    pkCategory={pkCategory}
+                    key={`candiate-compare-card-${people.id}-${pkCategory}`}/>
         );
     })
 
@@ -186,19 +187,19 @@ class Card extends Component {
                   {noContactInfo}
                 </div>
 
-             <div className={styles.peoplePhoto}>
-                <PeoplePhoto id={people.id}/>
-             </div>
-             <div className={styles.basicInfo}>
-                <div className={styles.peopleNumber}>{people.number}</div>
-                <div className={styles.peopleName}>{people.name}</div>
-                <div className={styles.partyItem}>
-                    <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
-                    <PartyFlag partyId={people.party}/>
+                <div className={styles.peoplePhoto}>
+                   <PeoplePhoto id={people.id}/>
                 </div>
-             </div>
-             {content}
-             </Link>
+                <div className={styles.basicInfo}>
+                   <div className={styles.peopleNumber}>{people.number}</div>
+                   <div className={styles.peopleName}>{people.name}</div>
+                   <div className={styles.partyItem}>
+                       <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+                       <PartyFlag partyId={people.party}/>
+                   </div>
+                </div>
+                {content}
+            </Link>
         </div>
 
 
