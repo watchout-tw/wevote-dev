@@ -77,6 +77,10 @@ export default class CandidateCompare extends Component {
         );
     })
 
+    let legendRecord = require('./images/legend_record.svg');
+    let legendPromise = require('./images/legend_promise.svg');
+
+
     return (
         <div className={styles.wrap}>
             <div className={styles.actionPanel}>
@@ -92,6 +96,10 @@ export default class CandidateCompare extends Component {
                     <div className={`${styles.toggleButtonB} ${ (filter===false) ? styles.active:"" }`}
                          onClick={this._toggleFilter.bind(this)}>顯示所有參選人</div>
                 </div>
+            </div>
+            <div className={`${styles.legend} ${(pkCategory==="position") ? styles.active: ""}`}>
+              <img src={legendRecord}/>
+              <img src={legendPromise}/>
             </div>
             {candidateCardItems}
         </div>
