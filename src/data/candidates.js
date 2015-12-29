@@ -313,6 +313,7 @@ const candidates =
     "10": {
         "id": 10,
         "name": "江啟臣",
+        "number": 2,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "8",
@@ -2854,6 +2855,7 @@ const candidates =
     "81": {
         "id": 81,
         "name": "黃志雄",
+        "number": 3,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "5",
@@ -3597,6 +3599,7 @@ const candidates =
     "99": {
         "id": 99,
         "name": "劉櫂豪",
+        "number": 2,
         "party": "DPP",
         "districtArea": "TTT",
         "districtNo": "N/A",
@@ -11780,6 +11783,7 @@ const candidates =
     "246": {
         "id": 246,
         "name": "賴立竹",
+        "number": 3,
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "3",
@@ -16181,6 +16185,7 @@ const candidates =
     "317": {
         "id": 317,
         "name": "黃柏霖",
+        "number": 1,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "6",
@@ -18536,6 +18541,7 @@ const candidates =
     "355": {
         "id": 355,
         "name": "洪遊江",
+        "number": 1,
         "party": "FTP",
         "districtArea": "CHW",
         "districtNo": "3",
