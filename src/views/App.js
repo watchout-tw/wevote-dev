@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import DocumentMeta from 'react-document-meta';
 import {createTransitionHook} from '../universalRouter';
-
+import Buy from '../components/Buy/Buy.js';
 import './normalize.scss';
 
 const title = "沃草！立委出任務 - 2016立委投票攻略";
@@ -74,6 +74,7 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
+        <Buy/>
         <div className={styles.appContent}>
           {this.props.children}
         </div>
