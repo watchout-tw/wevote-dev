@@ -120,7 +120,7 @@ class Card extends Component {
        currentInfo = <div className={styles.currentInfo} >現任代表</div>;
     }
     if(isCurrent === 'C'){
-       currentInfo = <div className={`${styles.currentInfo} ${styles.wide}`} >現任立委(非本區)</div>;
+       currentInfo = <div className={`${styles.currentInfo} ${styles.wide}`} >現任立委（非本區）</div>;
     }
 
     /* ------  無聯絡資訊 ------ */
