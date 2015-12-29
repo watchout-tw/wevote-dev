@@ -44,7 +44,7 @@ export default class CandidateList extends Component {
        filter: false,
        showPositive: true
     }
-    /* hasReply or hasData */
+    /* hasReply or hasData or hasDataNoReply */
   }
   _setFilterType(value, e){
     this.setState({
@@ -94,7 +94,12 @@ export default class CandidateList extends Component {
                       currentCount++;
                       shouldReturn = true;
                   }
-                }else{
+                }else if(filterType==="hasDataNoReply"){
+                  if(people.hasReply===false && legislators[people.id]){
+                      currentCount++;
+                      shouldReturn = true;
+                  }
+                }else{//"hasData"
                   if(people.hasReply===true || legislators[people.id]){
                       currentCount++;
                       shouldReturn = true;
@@ -172,7 +177,7 @@ export default class CandidateList extends Component {
 
     return (
       <div className={styles.wrap}>
-          <div>{currentCount} / {totalCount} </div>
+          <div>{currentCount} / {totalCount} ({ Math.round((currentCount/totalCount * 100),0)} %)</div>
           <div>區域立委共354人，山地及平地原住民23人</div>
 
           <div className={styles.actionPanel}>
@@ -184,6 +189,10 @@ export default class CandidateList extends Component {
                   <div className={`${styles.button} ${ (filterType==="hasData") ? styles.active:"" }`}
                        onClick={this._setFilterType.bind(this, "hasData")}>
                       有資料（現任立委 or 有回覆）
+                  </div>
+                  <div className={`${styles.button} ${ (filterType==="hasDataNoReply") ? styles.active:"" }`}
+                       onClick={this._setFilterType.bind(this, "hasDataNoReply")}>
+                      沒回覆，有資料
                   </div>
               </div>
     
