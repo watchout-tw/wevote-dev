@@ -78,9 +78,10 @@ export default class People extends Component {
         if(candidates[id]){
             if(candidates[id].hasReply === false){
                 wantedText=(
-                  <div>
+                  <div className={styles.wantedSection}>
                     <p>這位候選人目前尚未回覆表態承諾書。</p>
-                    <p>失蹤的候選人，<Link className={`${styles.ia} ${styles.bright}`} to={`/wanted/`}>需要你的關心</Link>，讓更多選民認識他。</p>
+                    <p>失蹤的候選人，<Link className={`${styles.ia} ${styles.bright}`} to={`/wanted/`}>需要你的關心</Link>，
+                       <br className={styles.mobileOnly} />讓更多選民認識他。</p>
                   </div>
                 )
             }
@@ -171,7 +172,13 @@ export default class People extends Component {
         )
     }
     
-   
+    //如果是「黨團」，proportionalSection, districtSection 都不要 show
+    if(currentPeople.name.indexOf("黨團")!==-1){
+       proportionalSection = "";
+       districtSection = "";
+    }
+
+
     const metaData = {
       title: title,
       description: description,

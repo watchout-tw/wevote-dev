@@ -6,7 +6,7 @@ import eng2cht from '../../utils/eng2cht';
 import promise_eng2cht from '../../utils/promise_eng2cht';
 
 import getData from '../../data/getData';
-const {issues, partyPromises, dataMeta} = getData();
+const {issues, legislators, partyPromises, dataMeta} = getData();
 
 export default class Promises extends Component {
     render(){
@@ -21,12 +21,24 @@ export default class Promises extends Component {
             )
 
         }else{
-            return (
-              <div className={styles.notCandidates}>
-                  我們僅調查<b>區域</b>立委參選人之未來承諾，此立委並非2016<b>區域</b>立委參選人。
-              </div>
-            )
 
+            if(legislators[id].name.indexOf("黨團")!==-1){
+
+              return (
+                <div className={styles.notCandidates}>
+                    我們僅調查<b>區域立委參選人</b>之未來承諾。
+                </div>
+              )
+      
+            }else{
+              
+              return (
+                <div className={styles.notCandidates}>
+                    我們僅調查<b>區域</b>立委參選人之未來承諾，此立委並非2016<b>區域</b>立委參選人。
+                </div>
+              )
+
+            }
         }
         
       }
