@@ -56,7 +56,7 @@ export default class Story extends Component {
     }
 }
 const StoryData = {
-  "408": {
+  "407": {
     title: "從殯儀館到廟口－邱顯智參選初體驗",
     author: "沃草／蕭長展、謝繐吟",
     date: "2015-8-17",
