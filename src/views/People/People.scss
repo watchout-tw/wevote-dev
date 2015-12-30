@@ -7,28 +7,30 @@
 .innerWrap {
   padding: 20px 0 100px 0;
 }
-.bottomWrap {
-  background: #DDD;
-    padding: 20px 0;
-}
-.issueBlock, .issueBlock:visited {
-  display: block;
-  vertical-align: top;
-  padding: 20px;
-    color: $textColor;
-}
-.issueBlock:hover {
-  background: $lightGrey;
-}
 @media all and (min-width: 400px){
   .innerWrap {
     max-width: 800px;
     margin: 0 auto;
   }
-  .issueBlock, .issueBlock:visited {
-    display: inline-block;
-  }
 }
 .partyLink, .partyLink:visited {
   color: $black;
 }
+.bottomWrap {
+  background: #DDD;
+  padding: 20px 0;
+}
+.seeMore {
+  text-align: center;
+  line-height: 1.6;
+}
+/* <br/> */
+.mobileOnly {
+  display: block;
+}
+@media all and (min-width: 460px){
+  .mobileOnly {
+    display: none;
+  }
+}
+

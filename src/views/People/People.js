@@ -14,6 +14,7 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleDistrict from '../../utils/getPeopleDistrict';
 import identity from '../../utils/identity';
 import district2cht from '../../utils/district2cht';
+import district2url from '../../utils/district2url';
 
 /*
 :category => {"records", "promises", "story"}
@@ -116,15 +117,21 @@ export default class People extends Component {
 
     //第九屆區域參選人
     if(currentIdentity.is9thCandidate){
-        districtText = <div>{currentPeople.name}是{district2cht(districtData.area)}{disNoText}的候選人，看他的對手有誰？</div>
+        districtText = <div className={styles.seeMore}>{currentPeople.name}是
+        <Link to={`/constituencies/${district2url(districtData.area,districtData.areaNo)}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>{district2cht(districtData.area)}{disNoText}</Link>
+        的候選人，<br className={styles.mobileOnly}/>看他的對手有誰？</div>
     }
     //區域轉戰不分區
     if(currentIdentity.is8thDistrict && currentIdentity.is9thProportional){
-        districtText = <div>{currentPeople.name}是{district2cht(districtData.area)}{disNoText}的現任立委，看看這一區現在有誰參戰</div>;
+        districtText = <div className={styles.seeMore}>{currentPeople.name}是
+        <Link to={`/constituencies/${district2url(districtData.area,districtData.areaNo)}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>{district2cht(districtData.area)}{disNoText}</Link>
+        的現任立委，看看這一區現在有誰參戰</div>;
     }
     //區域不再當立委
     if(currentIdentity.is8thDistrict && !currentIdentity.is9thProportional && !currentIdentity.is9thCandidate){
-        districtText = <div>{currentPeople.name}沒有繼續參選立委，看看2016這區有誰參戰？</div>;
+        districtText = <div className={styles.seeMore}>{currentPeople.name}沒有繼續參選立委，看看2016這區有誰參戰？</div>;
     }
 
     if(districtText){
@@ -146,11 +153,11 @@ export default class People extends Component {
         partyCht = parties[parties.length-1].partyCht;
         //第八屆不分區
         if(currentIdentity.is8thProportional){
-            proportionalText = <div>{currentPeople.name}是{partyCht}本屆不分區立委。</div>;
+            proportionalText = <div className={styles.seeMore}>{currentPeople.name}是{partyCht}本屆不分區立委。</div>;
         }
         //第九屆不分區
         if(currentIdentity.is9thProportional){
-            proportionalText = <div>{currentPeople.name}是{partyCht}2016不分區立委。</div>;
+            proportionalText = <div className={styles.seeMore}>{currentPeople.name}是{partyCht}2016不分區立委。</div>;
         }
     }
     if(proportionalText){

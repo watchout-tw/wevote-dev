@@ -7,7 +7,7 @@ import PeoplePhoto from '../PeoplePhoto/PeoplePhoto';
 import eng2url from '../../utils/eng2url';
 import getDistrictCandidates from '../../utils/getDistrictCandidates';
 import identity_district from '../../utils/identity_district';
-
+import circleNumber from '../../utils/circleNumber';
 import getData from '../../data/getData';
 const {legislators, candidates} = getData();
 
@@ -42,14 +42,18 @@ export default class CandidateBuns extends Component {
             );
         }
 
+        //原住名選區名字加長
+        let extendClass = (area === "LAB" || area === "MAB") ? styles.extended : "";
         return (
             <Link key={`partybun-${category}-${candidate.id}-${i}`}
-                  className={styles.bunItem}
+                  className={`${styles.bunItem} ${extendClass}`}
                   to={`/people/${candidate.id}/${category}/`}>
                    {currentInfo}
                   <div className={styles.bunImg}><PeoplePhoto id={candidate.id} /></div>
                   <div className={`${styles.bunParty} ${styles.partyFlag} ${styles.small} ${styles[candidate.party]}`}></div>
-                  <div className={styles.bunName}>{candidate.name}</div>
+                  <div className={`${styles.bunName} ${extendClass}`}>
+                    {circleNumber(candidate.number)}{candidate.name}
+                  </div>
             </Link>
             
         )
@@ -63,3 +67,4 @@ export default class CandidateBuns extends Component {
     );
   }
 }
+
