@@ -181,7 +181,7 @@ class Card extends Component {
     let content = (pkCategory==="position") ?  <div>{positionEntries}</div> : <div>{billSection}</div>
     return (
         <div className={styles.card}>
-            <Link to={`/people/${people.id}/records/`} className={styles.cardLink}>
+            <Link to={`/people/${people.id}/promises/`} className={styles.cardLink}>
                 <div className={styles.metaInfo}>
                   {currentInfo}
                   {noContactInfo}
