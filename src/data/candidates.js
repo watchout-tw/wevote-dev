@@ -22199,6 +22199,7 @@ const candidates =
     "414": {
         "id": 414,
         "name": "黃宏成台灣阿成世界偉人財神總統",
+        "number": 4,
         "party": "NONE",
         "districtArea": "CYC",
         "districtNo": "N/A",
