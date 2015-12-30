@@ -43,7 +43,6 @@ export default class People extends Component {
     //立委基本資料
     const currentPeople = people[id];
     //是否為第八屆立委，是否為第九屆區域立委參選人
-    
     let currentIdentity = identity(legislators, id);
 
     //頁面最下方要呈現的候選人選區資料
@@ -189,7 +188,7 @@ export default class People extends Component {
     return (
       <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
-          <PeopleProfile id={id} />
+          <PeopleProfile id={id}/>
           <ul className={styles.innerTag}>
               <li><Link to={`/people/${id}/records/`} 
                         className={ category==="records" ? styles.active : ""}>歷史紀錄</Link></li>

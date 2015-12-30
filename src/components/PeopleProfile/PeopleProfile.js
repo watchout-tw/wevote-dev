@@ -4,6 +4,9 @@ import eng2cht from '../../utils/eng2cht';
 import cht2eng from '../../utils/cht2eng';
 import district2url from '../../utils/district2url';
 import peopleInfo from '../../utils/peopleInfo';
+import circleNumber from '../../utils/circleNumber';
+import identity from '../../utils/identity';
+
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import PartyFlag from '../../components/PartyFlag/PartyFlag.js';
 
@@ -41,6 +44,7 @@ export default class PeopleProfile extends Component {
     if(legislatorParties){
         partiesItem = (legislatorParties).map((p,index)=>{
             let partyEng = cht2eng(p.partyCht);
+            
             return (
               <div key={index}>
                   <div className={styles.partyEng}>
@@ -61,14 +65,17 @@ export default class PeopleProfile extends Component {
     //第八屆立委資訊
     let legInfoItem;
     if(info.legislatorTitle && info.legislatorDistrict){//區域立委
-        legInfoItem = <p>第八屆
-        <Link to={`/constituencies/${district2url(constituency1,constituency2)}/`}
-              className={`${styles.ia} ${styles.line} ${styles.black}`}>
-              {info.legislatorDistrict}
-        </Link>立委</p>;
+        legInfoItem = (
+          <p className={styles.legislatorInfo}>第八屆
+              <Link to={`/constituencies/${district2url(constituency1,constituency2)}/`}
+                    className={`${styles.ia} ${styles.line} ${styles.black}`}>
+                    {info.legislatorDistrict}
+              </Link>
+              立委
+          </p>);
     }
     if(info.legislatorTitle && !info.legislatorDistrict){//不分區或黨團
-        legInfoItem = <p>{info.legislatorTitle}</p>;
+        legInfoItem = <p className={styles.legislatorInfo}>{info.legislatorTitle}</p>;
     }
 
     ///////////// 第九屆參選資訊
@@ -76,15 +83,30 @@ export default class PeopleProfile extends Component {
 
     if(info.candidateTitle){    
         candidateInfoItem = (
-        <div className={styles.candidateParty}>
+        <div>
             <p>2016第九屆
                 <Link to={`/constituencies/${district2url(candidateDistrict1,candidateDistrict2)}/`}
-                      className={`${styles.ia} ${styles.line} ${styles.black}`}>{info.candidateTitle}</Link>立委候選人</p>
+                      className={`${styles.ia} ${styles.line} ${styles.black}`}>{info.candidateTitle}</Link>
+                      {circleNumber(candidateData.number)}候選人</p>
                 <div className={styles.partyEng}>
                     <div className={`${styles.partyFlag} ${styles.small} ${styles[candidateData.party]}`}></div>
                     <PartyFlag partyId={candidateData.party} />
                 </div>
         </div>);
+    }
+
+    let currentIdentity = identity(legislators, id);
+    if(currentIdentity.is9thProportional===true){//第八屆立委 && 第九屆不分區
+      let parties = legislatorData.parties;
+      let partyCht = parties[parties.length-1].partyCht;
+
+      candidateInfoItem = (
+        <div className={styles.seeMore}>
+            2016<Link className={`${styles.ia} ${styles.line} ${styles.black}`}
+                      to={`/parties/${cht2eng(partyCht)}/list/`}>{partyCht}不分區</Link>
+            立委</div>
+        );
+      
     }
 
     return (
@@ -98,10 +120,12 @@ export default class PeopleProfile extends Component {
               </div>
               <div className={styles.peopleDetail}>
                   {ageItem}
+                  {candidateInfoItem}
+
                   {legInfoItem}
                   <div>{partiesItem}</div>
                   <p>{hasResignedText}</p>
-                  {candidateInfoItem}
+                  
               </div>
             </div>
           </div>
