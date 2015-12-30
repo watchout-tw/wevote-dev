@@ -2,9 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from "react-router";
 import classnames from 'classnames';
 import eng2url from '../../utils/eng2url';
+import circleNumber from '../../utils/circleNumber';
 
 import getData from '../../data/getData';
-const {partyBlock} = getData();
+const {partyBlock, parties} = getData();
 
 export default class PartyBuns extends Component {
   _goLink(url, link){
@@ -24,7 +25,7 @@ export default class PartyBuns extends Component {
                 <div className={`${styles.partyFlag} ${styles.small} ${styles[partyId]}`}></div>
                 <div className={styles.partyNameWrap}>
                     <div className={styles.partyName}>
-                        {party.title}
+                        {circleNumber(parties[partyId].number)}{party.title}
                     </div>
                 </div>
             </Link>

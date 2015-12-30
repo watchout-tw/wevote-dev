@@ -102,8 +102,9 @@ export default class PeopleProfile extends Component {
 
       candidateInfoItem = (
         <div className={styles.seeMore}>
-            2016<Link className={`${styles.ia} ${styles.line} ${styles.black}`}
-                      to={`/parties/${cht2eng(partyCht)}/list/`}>{partyCht}不分區</Link>
+            2016第九屆
+            <Link className={`${styles.ia} ${styles.line} ${styles.black}`}
+                  to={`/parties/${cht2eng(partyCht)}/list/`}>{partyCht}不分區</Link>
             立委</div>
         );
       
