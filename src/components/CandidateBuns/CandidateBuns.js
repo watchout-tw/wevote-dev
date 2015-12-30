@@ -44,6 +44,9 @@ export default class CandidateBuns extends Component {
 
         //原住名選區名字加長
         let extendClass = (area === "LAB" || area === "MAB") ? styles.extended : "";
+        //嘉義市名字超長
+        let extremeClass = (area === "CYC") ? styles.extremeExtended : "";
+
         return (
             <Link key={`partybun-${category}-${candidate.id}-${i}`}
                   className={`${styles.bunItem} ${extendClass}`}
@@ -51,7 +54,7 @@ export default class CandidateBuns extends Component {
                    {currentInfo}
                   <div className={styles.bunImg}><PeoplePhoto id={candidate.id} /></div>
                   <div className={`${styles.bunParty} ${styles.partyFlag} ${styles.small} ${styles[candidate.party]}`}></div>
-                  <div className={`${styles.bunName} ${extendClass}`}>
+                  <div className={`${styles.bunName} ${extendClass} ${extremeClass}`}>
                     {circleNumber(candidate.number)}{candidate.name}
                   </div>
             </Link>
