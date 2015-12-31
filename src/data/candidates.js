@@ -4534,56 +4534,56 @@ const candidates =
         "districtArea": "TPE",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "兩岸監督條例",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "公投法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "非核家園法",
                 "content": ""
             }
         ]
@@ -9349,7 +9349,7 @@ const candidates =
         },
         "bills": [
             {
-                "goal": "幼托公告化",
+                "goal": "幼托公共化",
                 "content": "修改「幼兒教育及照顧法」部分條文，實施幼托公共化。"
             },
             {
