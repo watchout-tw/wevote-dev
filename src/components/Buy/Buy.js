@@ -36,7 +36,7 @@ export default class Buy extends Component {
           <span className={styles.mobileOnly}>
               <a href="http://solda.io/products/47542"
                  target="_blank"
-                 className={styles.title}>限量攻略</a>
+                 className={styles.title}>限量<br/>攻略</a>
               </span>
           <span className={styles.webOnly}>
               <a href="http://solda.io/products/47542"

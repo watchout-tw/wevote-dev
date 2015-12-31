@@ -82,14 +82,14 @@ $break: 700px;
 	}
 }
 .title, .title:visited {
-	font-size: 10px;
+	font-size: 11px;
     color: white;
     text-decoration: none;
     position: absolute;
-    bottom: 1px;
-    left: 12px;
-    width: 30px;
-    text-align: left;
+    bottom: 3px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
 }
 @media all and (min-width: $break){
 	.title, .title:visited {
