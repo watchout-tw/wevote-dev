@@ -3,6 +3,7 @@ $webVersionBreak: 800px;
 	position: relative;
 	max-width: 400px;
 	margin: 0 auto;
+    padding: 0 20px;
 }
 @media all and (min-width: $webVersionBreak){
     .wrap {
@@ -29,11 +30,11 @@ select.selector {
     text-align: center;
 }
 .button, .button:visited {
-	margin: 0 auto;
+	margin: 30px auto;
     display: inline-block;
-    padding: 4px 20px;
+    padding: 8px 30px;
+    border: 2px solid white;
     font-size: 20px;
-    border: none;
     color: white;
     background: #026466;
     text-decoration: none;

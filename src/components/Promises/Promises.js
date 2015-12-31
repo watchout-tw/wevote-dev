@@ -58,7 +58,9 @@ export default class Promises extends Component {
                     <div className={`${styles[handlePartyPosEng(pos)]} ${styles.promiseIcon}`}></div>
                     <div className={styles.promisePosText}>{promise_eng2cht(pos)}</div>
                   </div>
-                  <div className={styles.promiseStatement}>{statement}</div>
+                  {
+                    (statement) ? <div className={styles.promiseStatement}>{statement}</div> : ""
+                  }
               </div>
           )
       })

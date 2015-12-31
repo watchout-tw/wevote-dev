@@ -28,17 +28,31 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	position: absolute;
 	display: inline-block;
 	margin: 0;
-	margin-top: $logoMarginTop;
-	margin-left: $logoMarginLeft;
+	// margin-top: $logoMarginTop;
+	// margin-left: $logoMarginLeft;
+	margin-top: 6px;
+	margin-left: 0px;
 	text-decoration: none;
 	img {
 		@include prefix(filter, drop-shadow(0 0 20px rgba($trueWhite, 0.5)));
 	}
 }
+@media all and (min-width: 700px){
+	.siteName, .siteName:visited {
+		margin-top: $logoMarginTop;
+		margin-left: $logoMarginLeft;
+	}
+}
 .siteLogo {
 	display: block;
-	height: $logoHeight;
+	//height: $logoHeight;
+	height: 68px;
 	padding: 0;
+}
+@media all and (min-width: 700px){
+	.siteLogo {
+		height: $logoHeight;
+	}
 }
 .lists {
 	display: block;
@@ -124,6 +138,11 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	}
 	.navItem > span {
 		margin-top: 2px;
+	}
+}
+@media all and (min-width: 400px) and (max-width: 452px) {
+	.navItem {
+		font-size: 15px;
 	}
 }
 

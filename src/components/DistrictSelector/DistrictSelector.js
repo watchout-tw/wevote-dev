@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
-import district2eng from '../../utils/district2eng'
+import district2eng from '../../utils/district2eng';
+import district2cht from '../../utils/district2cht';
 
 import getData from '../../data/getData';
 const {mobileDistrictData} = getData();
@@ -8,13 +9,16 @@ const districtData = mobileDistrictData;
 
 export default class DistrictSelector extends Component {
   constructor(props){ super(props)
+    let active_city = (props.area) ? props.area : '';
     this.state = {
-        topMenuValue: "",
+        topMenuValue: active_city,
         bottomMenuValue: 1
     }
   }
+  
   _onSelectTopMenu(event){
     let node = this.refs.topMenu.getDOMNode();
+    history.pushState({}, "", `/constituencies/${node.value}/`);
     this.setState({
         topMenuValue: node.value
     })
@@ -27,9 +31,7 @@ export default class DistrictSelector extends Component {
   }
   _onGo(){
     let {topMenuValue, bottomMenuValue} = this.state;
-    
-
-    console.log(`${topMenuValue}第${bottomMenuValue}`);
+    //console.log(`${topMenuValue}第${bottomMenuValue}`);
 
   }
   render() {
@@ -37,14 +39,16 @@ export default class DistrictSelector extends Component {
     const {topMenuValue, bottomMenuValue} = this.state;
 
     let topMenuOptions = districtData.district.map((value, index)=>{
+      
       return (
-        <option value={value} key={`topMenu${index}`}
+        <option value={district2eng(value)} key={`topMenu${index}`}
                 className={styles.option}>{value}</option>
       )
     });
 
     let bottomMenuOptions;
     if(topMenuValue && districtData.eleDistrict[topMenuValue]){
+
       bottomMenuOptions = districtData.eleDistrict[topMenuValue].map((value, index)=>{
           return (
             <option value={index+1} key={`bottomMenu${index}`}
@@ -62,7 +66,7 @@ export default class DistrictSelector extends Component {
         if(embed){
             goButton = (
               <div className={styles.buttonWrap}>
-                  <a href={`//wevote.tw/constituencies/${district2eng(topMenuValue)}/${bottomMenuValue}/`} 
+                  <a href={`//wevote.tw/constituencies/${topMenuValue}/${bottomMenuValue}/`} 
                      className={styles.button}
                      target="_blank">GO</a>
               </div>
@@ -70,7 +74,7 @@ export default class DistrictSelector extends Component {
         }else{
             goButton = (
               <div className={styles.buttonWrap}>
-                  <Link to={`/constituencies/${district2eng(topMenuValue)}/${bottomMenuValue}/`} 
+                  <Link to={`/constituencies/${topMenuValue}/${bottomMenuValue}/`} 
                         className={styles.button}>GO</Link>
               </div>
             )
@@ -85,7 +89,8 @@ export default class DistrictSelector extends Component {
     return (
         <div className={wrapClass}>
             <select onChange={this._onSelectTopMenu.bind(this)} ref="topMenu"
-                    className={styles.selector}>
+                    className={styles.selector}
+                    value={topMenuValue}>
                 <option className={styles.option}>請選擇</option>
                 {topMenuOptions}
             </select>

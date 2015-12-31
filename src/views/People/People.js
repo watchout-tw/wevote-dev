@@ -118,15 +118,27 @@ export default class People extends Component {
     //第九屆區域參選人
     if(currentIdentity.is9thCandidate){
         districtText = <div className={styles.seeMore}>{currentPeople.name}是
+        <Link to={`/constituencies/${district2url(districtData.area)}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {district2cht(districtData.area)}
+        </Link>
         <Link to={`/constituencies/${district2url(districtData.area,districtData.areaNo)}/`}
-              className={`${styles.ia} ${styles.line} ${styles.black}`}>{district2cht(districtData.area)}{disNoText}</Link>
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {disNoText}
+        </Link>
         的候選人，<br className={styles.mobileOnly}/>看他的對手有誰？</div>
     }
     //區域轉戰不分區
     if(currentIdentity.is8thDistrict && currentIdentity.is9thProportional){
         districtText = <div className={styles.seeMore}>{currentPeople.name}是
+        <Link to={`/constituencies/${district2url(districtData.area)}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {district2cht(districtData.area)}
+        </Link>
         <Link to={`/constituencies/${district2url(districtData.area,districtData.areaNo)}/`}
-              className={`${styles.ia} ${styles.line} ${styles.black}`}>{district2cht(districtData.area)}{disNoText}</Link>
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {disNoText}
+        </Link>
         的現任立委，看看這一區現在有誰參戰</div>;
     }
     //區域不再當立委

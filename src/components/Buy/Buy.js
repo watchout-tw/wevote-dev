@@ -30,11 +30,19 @@ export default class Buy extends Component {
     let mainImg = require("./images/flying.png");
     return (
       <div className={wrapClasses}>
-          <img src={closeIcon} className={styles.closeIcon} onClick={this._close.bind(this)}/>
+          <img src={closeIcon} 
+               className={`${styles.closeIcon} ${styles.webOnly}`} onClick={this._close.bind(this)}/>
           <img src={mainImg} className={styles.mainImg}/>
-          <a href="http://solda.io/products/47542"
-             target="_blank"
-             className={styles.title}>攻略手冊<br/>限量特賣中</a>
+          <span className={styles.mobileOnly}>
+              <a href="http://solda.io/products/47542"
+                 target="_blank"
+                 className={styles.title}>限量攻略</a>
+              </span>
+          <span className={styles.webOnly}>
+              <a href="http://solda.io/products/47542"
+                 target="_blank"
+                 className={styles.title}>攻略手冊<br/>限量特賣中</a>
+          </span>
       </div>
     );
   }

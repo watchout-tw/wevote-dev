@@ -84,6 +84,10 @@ export default function(store) {
 
             <Route path="/constituencies/" component={Constituencies}/>
             <Route path="/constituencies/index.html" component={Constituencies}/>
+
+            <Route path="/constituencies/:area/" component={Constituencies}/>
+            <Route path="/constituencies/:area/index.html" component={Constituencies}/>
+            
             <Route path="/constituencies/:area/:areaNo/" component={Constituency}/>
             <Route path="/constituencies/:area/:areaNo/index.html" component={Constituency}/>
             

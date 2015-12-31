@@ -18,8 +18,9 @@ const db = webDistrictData;
 
 export default class ElectionMap extends Component {
   constructor(props){ super(props)
+    let active_city = (props.area) ? props.area : '';
     this.state = {
-      active_city : '', 
+      active_city : active_city, 
       hover_city  : '',
       sub_active  : ''
     }
@@ -50,6 +51,7 @@ export default class ElectionMap extends Component {
     }
   }
   _onMapClick(name, e){
+    history.pushState({}, "", `/constituencies/${name}/`);
     this.setState({
       active_city: name
     })
@@ -59,6 +61,7 @@ export default class ElectionMap extends Component {
     let node = document.getElementById(active_city);
     node.setAttribute("fill", INACTIVE_COLOR);
 
+    history.pushState({}, "", `/constituencies/`);
     this.setState({
       hover_city: "",
       active_city: "",
@@ -77,7 +80,7 @@ export default class ElectionMap extends Component {
     }
   }
   _activeSubCityMap(city_id, sub_index){
-    //目前臺北市第一選區要不要塗綠色
+    //目前臺北市第一選區要不要塗綠色，目前設定為 web hover 反應
     const {active_city, sub_active} = this.state;
     const styles = require('./ElectionMap.scss');
 

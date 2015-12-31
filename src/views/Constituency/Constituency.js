@@ -32,7 +32,8 @@ export default class Constituency extends Component {
     let noDataCandidates = [];
 
     //console.log(tableData)
-
+    let replyCount = 0;
+    let hasPositionDataCount = 0;
     candidateList.map((people, index)=>{
         var combined = {
           id: people.id,
@@ -45,9 +46,12 @@ export default class Constituency extends Component {
           contactAvaliable: people.contactAvaliable
         };
         allCandidates.push(combined);
-
+        if(people.hasReply){
+           replyCount++;
+        }
         if(people.hasReply || legislators[people.id]){//已回覆，或者是第八屆立委
             comparableCandidates.push(combined);
+            hasPositionDataCount++;
         }else{
             noDataCandidates.push(combined);
         }
@@ -57,16 +61,19 @@ export default class Constituency extends Component {
     this.state = {
         candidateList: candidateList,
         legislatorList: legislatorList,
-        comparableCandidates: allCandidates,
+        allCandidates: allCandidates,
+        comparableCandidates: comparableCandidates,
         noDataCandidates: noDataCandidates,
-        side: 'front'
+        replyCount: replyCount,
+        hasPositionDataCount: hasPositionDataCount
     }
   }
 
   render() {
     const styles = require('./Constituency.scss');
     const {area, areaNo} = this.props.params;
-    const {candidateList, legislatorList, comparableCandidates, noDataCandidates} = this.state;
+    const {candidateList, legislatorList, allCandidates, comparableCandidates, noDataCandidates,
+           replyCount, hasPositionDataCount} = this.state;
     let noItem = (areaNo) ? <div>第{areaNo}選區</div> : "";
 
     //應選 x 名
@@ -92,13 +99,18 @@ export default class Constituency extends Component {
           </span>
         )
     })
-    let allMissing = (comparableCandidates.length > 0) ? "": <div>本區候選人全員失蹤中，需要你的關心</div>;
 
-    let cardSection = (comparableCandidates.length > 0) ? (
+    //顯示參選人數跟回覆率
+    let replyStatus = (comparableCandidates.length > 0) ? (
+      ""
+      ): (
+      <div className={styles.replyRate}>*本區候選人全員失蹤中，需要你的關心</div>);
+
+    let cardSection = (
       <CandidateCompare area={area}
                         areaNo={areaNo}
-                        candidateList={comparableCandidates}/>
-    ) : "";
+                        candidateList={allCandidates}/>
+    );
     //協尋中
     let wantedSection = (noDataCandidates.length > 0) ? <Wanted noDataCandidates={noDataCandidates} /> : "";
 
@@ -124,10 +136,12 @@ export default class Constituency extends Component {
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               <div className={styles.districtInfo}>
-                  <h3 className={styles.electCount}>本區將選出{shouldElect}位勇者</h3>
-                  <div className={styles.currentLegislators}>現任代表：{currentLegislatorItems}</div>
+                  <h3 className={styles.electCount}>{allCandidates.length}人參選，將選出{shouldElect}位勇者</h3>
+                  <div className={styles.currentLegislators}>
+                      現任代表：{currentLegislatorItems}
+                  </div>
               </div>
-              {allMissing}
+              {replyStatus}
               {cardSection}
               {wantedSection}
           </div>

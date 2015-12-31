@@ -301,10 +301,14 @@ $selectColor: #00ffb0;
       margin-right: 1em; }
 
 .info > .go {
-    background: none; }
-    .info > .go:hover {
-      background: #00ffb0; }
-  .info > .close {
-    background: none; }
-    .info > .close:hover {
-      background: #ff0055; }
+   background: rgba(211, 211, 211, 0.43); 
+}
+.info > .go:hover {
+      //background: #00ffb0; 
+}
+.info > .close {
+  background: none; 
+}
+.info > .close:hover {
+  background: #ff0055; 
+}

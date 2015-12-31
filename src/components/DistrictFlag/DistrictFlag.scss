@@ -14,10 +14,32 @@
     margin: 0 auto 10px auto;
 
 }
+.areaFlag.twoLink {
+    padding: 64px 0;
+}
+.areaCity {
+    color: $white;
+    text-decoration: none;
+    display: inline-block;
+}
+.areaCityLink, .areaCityLink:visited {
+    color: $white;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 6px;
+
+}
+.areaCityLink:hover {
+    color: white;
+}
+
+
 .flagMeta, .flagMeta:visited {
-    font-size: 14px;
+    font-size: 12px;
     color: $black;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     border-bottom: 1px solid;
     text-decoration: none;
     display: inline-block;
@@ -25,12 +47,15 @@
     position: absolute;
     bottom: 30px;
     color: rgb(230,230,230);
-    left: calc(50% - 35px);
+    left: calc(50% - 32px);
     cursor: pointer;
     text-align: center;
 
     z-index: 1;
     
+}
+.flagMeta.twoLink, .flagMeta.twoLink:visited {
+    bottom: 25px;
 }
 .flagMeta:hover {
     color: white;

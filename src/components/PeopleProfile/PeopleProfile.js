@@ -67,10 +67,20 @@ export default class PeopleProfile extends Component {
     if(info.legislatorTitle && info.legislatorDistrict){//區域立委
         legInfoItem = (
           <p className={styles.legislatorInfo}>第八屆
-              <Link to={`/constituencies/${district2url(constituency1,constituency2)}/`}
-                    className={`${styles.ia} ${styles.line} ${styles.black}`}>
-                    {info.legislatorDistrict}
-              </Link>
+              <span className={styles.districtLinkSet}>
+                  <Link to={`/constituencies/${district2url(constituency1)}/`}
+                        className={`${styles.districtLink} ${styles.ia} ${styles.line} ${styles.black}`}>
+                        {info.legislatorDistrictArea}
+                  </Link>
+                  {
+                    (info.legislatorDistrictAreaNo) ? 
+                    <Link to={`/constituencies/${district2url(constituency1,constituency2)}/`}
+                          className={`${styles.districtLink} ${styles.districtLink} ${styles.ia} ${styles.line} ${styles.black}`}>
+                          {info.legislatorDistrictAreaNo}
+                    </Link> : ""
+
+                  }
+              </span>
               立委
           </p>);
     }
@@ -85,8 +95,19 @@ export default class PeopleProfile extends Component {
         candidateInfoItem = (
         <div>
             <p>2016第九屆
-                <Link to={`/constituencies/${district2url(candidateDistrict1,candidateDistrict2)}/`}
-                      className={`${styles.ia} ${styles.line} ${styles.black}`}>{info.candidateTitle}</Link>
+                <span className={styles.districtLinkSet}>
+                    <Link to={`/constituencies/${district2url(candidateDistrict1)}/`}
+                          className={`${styles.districtLink} ${styles.ia} ${styles.line} ${styles.black}`}>
+                          {info.candidateDistrictArea}
+                    </Link>
+                    { 
+                      (info.candidateDistrictAreaNo) ? 
+                      <Link to={`/constituencies/${district2url(candidateDistrict1,candidateDistrict2)}/`}
+                            className={`${styles.districtLink} ${styles.ia} ${styles.line} ${styles.black}`}>
+                            {info.candidateDistrictAreaNo}
+                      </Link>: ""
+                    }
+                </span>
                       {circleNumber(candidateData.number)}候選人</p>
                 <div className={styles.partyEng}>
                     <div className={`${styles.partyFlag} ${styles.small} ${styles[candidateData.party]}`}></div>

@@ -33,7 +33,8 @@ export default class Constituencies extends Component {
       }
     };
 
-    const {viewWidth} = this.state;
+    const {viewWidth} = this.state;/* 決定地圖要不要有 <Link/> */
+    const {area} = this.props.params;
     
     return (
       <div className={styles.wrap}>
@@ -44,8 +45,8 @@ export default class Constituencies extends Component {
               <p className={styles.web}>⬇︎⬇︎⬇︎選地圖，看選區⬇︎⬇︎⬇︎</p>
               <p className={styles.mobile}>⬇︎⬇︎⬇︎請選擇你想觀戰的競技場⬇︎⬇︎⬇︎</p>
           </div>
-          <ElectionMap viewWidth={viewWidth}/>
-          <DistrictSelector />
+          <ElectionMap viewWidth={viewWidth} area={area}/>
+          <DistrictSelector area={area}/>
           <div className={styles.bgHolder}></div>
       </div>
     );

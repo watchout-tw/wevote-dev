@@ -38,28 +38,37 @@ $breakWeb: 500px;
 }
 .promiseQuestion {
 	padding: 10px;
-    text-align: left;
-    min-height: 65px;
+    text-align: center;
+    min-height: 40px;
     border-bottom: 1px solid;
+}
+@media all and (min-width:$breakWeb){
+	.promiseQuestion {
+		min-height: 65px;
+	}
 }
 .promisePos {
 	width: 100%;
 	position: relative;
+	text-align: center;
+    padding-bottom: 7px;
 }
 .promiseIcon {
 	height: 30px;
     width: 30px;
-    margin: 0 10px;
-    position: absolute;
-    top: 10px;
+    margin: 10px 10px 0 -20px;
+    display: inline-block;
 }
 .promisePosText {
 	vertical-align: top;
-	padding-top: 15px;
-	width: 100%;
+	
 	text-align: center;
 	font-size: 18px;
     font-weight: 600;
+    
+    padding-top: 14px;
+    display: inline-block;
+
 }
 .promiseStatement {
 	text-align: left;

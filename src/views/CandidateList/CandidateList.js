@@ -147,8 +147,10 @@ export default class CandidateList extends Component {
             if(showPositive === true){
                 return (
                   <div className={styles.subDistrict}>
+                      <Link to={`/constituencies/${cityEng}/`}
+                            className={styles.subDistrictText}>{cityCht}</Link>
                       <Link to={`/constituencies/${cityEng}/${count}/`}
-                            className={styles.subDistrictText}>{cityCht}第{count}選區</Link>
+                            className={styles.subDistrictText}>第{count}選區</Link>
                       <div>{currentDistrictCandidates}</div>
                   </div>
                 )
@@ -158,8 +160,10 @@ export default class CandidateList extends Component {
                 if(districtCount===0){
                     return (
                       <div className={styles.subDistrict}>
+                          <Link to={`/constituencies/${cityEng}/`}
+                                className={styles.subDistrictText}>{cityCht}</Link>
                           <Link to={`/constituencies/${cityEng}/${count}/`}
-                                className={styles.subDistrictText}>{cityCht}第{count}選區</Link>
+                                className={styles.subDistrictText}>第{count}選區</Link>
                       </div>
                     )
                 }
