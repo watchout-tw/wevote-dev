@@ -50,7 +50,8 @@ class Item extends Component {
     })
     let answerShowHideStyle = (showAnswer) ? styles.show : styles.hide;
     let linkToWanted = (data.question === "勇者競技場的資料是如何收集的？") ? (
-        <Link to={`/wanted/`}>前往協尋</Link>
+        <Link to={`/wanted/`} 
+              className={`${styles.ia} ${styles.bright}`}>前往協尋</Link>
     ) : "";
     return (
         <div className={styles.qaBox}>

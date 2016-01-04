@@ -90,16 +90,16 @@ export default function eng2cht(input){
         return '公投';
 
       case 'nuclearPower':
-        return '核能';
+        return '核四停建';
         
       case 'nuclear-power':
-        return '核能';
+        return '核四停建';
 
       case 'courseGuide':
-          return '課綱';
+          return '課綱程序透明';
 
       case 'course-guide':
-          return '課綱';
+          return '課綱程序透明';
 
       case 'justiceReform':
           return '司法改革';

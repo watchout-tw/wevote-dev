@@ -46,7 +46,8 @@ function parseMobileDistrict(db){
 
 
         //一階選單
-        Result.district.push(city.name);
+        let name = city.name.replace('台','臺');
+        Result.district.push(name);
         let subs = [];
 
         city.districts.map((item, i)=>{
@@ -65,7 +66,7 @@ function parseMobileDistrict(db){
             //二階選單
             subs.push(areaText);
         })
-        Result.eleDistrict[city.name] = subs;
+        Result.eleDistrict[cityId] = subs;//改成用 id 做 sub-district 的 key，中文會有臺台問題
 
     })
     //console.log(Result)

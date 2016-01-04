@@ -6,9 +6,9 @@ export default function cht2url(input){
         	return 'recall';
       case '公投':
         	return 'referendum';
-      case '核能':
+      case '核四停建':
           return 'nuclear-power';
-      case '課綱':
+      case '課綱程序透明':
           return 'course-guide';
       case '司法改革':
           return 'justice-reform';

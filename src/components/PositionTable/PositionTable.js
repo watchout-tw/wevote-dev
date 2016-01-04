@@ -185,7 +185,7 @@ export default class PositionTable extends Component {
                      to={`/${unit}/${unitData.id}/${linkChoice}/`}>{unitName}{positions}</Link>
     });
 
-    let legendImg = require("./images/legend.png");
+    
     let legendRecord = require('./images/legend_record.svg');
     let legendPromise = require('./images/legend_promise.svg');
 
@@ -203,6 +203,11 @@ export default class PositionTable extends Component {
         <header><h2>議題表態</h2></header>
         <div className={styles.metaInfo}>
             <div>{dataMeta[`${unit}-position`]}</div>
+            <div className={styles.legend}>
+              <img src={legendRecord}/>
+              <img src={legendPromise}/>
+            </div>
+
             <div className={styles.toggleSet}>
               <div className={`${styles.toggle} ${(filter === true)? styles.active : ""}`}
                    onClick={this._toggleFilter.bind(this)}>只顯示有立場表態的政黨</div>
@@ -220,10 +225,6 @@ export default class PositionTable extends Component {
             {unitPositions}
         </div>
         <div id="positionEnd"></div>
-        <div className={styles.legend}>
-          <img src={legendRecord}/>
-          <img src={legendPromise}/>
-        </div>
       </div>
       
     );
@@ -232,13 +233,13 @@ export default class PositionTable extends Component {
 function handlePosCht (value, id) {
   if(!value){
     if(id==="MKT"){
-      return "根據第八屆立院資料統計，沒有針對此議題表態。";
+      return "根據第八屆立院資料統計，沒有針對此議題表態";
     }else{
-      return "該黨在第八屆沒有席次。"
+      return "該黨在第八屆沒有席次"
     }
   }else{
     if(value==="none"){
-      return "根據第八屆立院資料統計，沒有針對此議題表態。"
+      return "根據第八屆立院資料統計，沒有針對此議題表態"
     }else{
       return `根據第八屆立院資料統計，立場為${eng2cht(value)}`;
     }

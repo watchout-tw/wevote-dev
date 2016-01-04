@@ -32,28 +32,11 @@
     text-align: center;
     font-size: 14px;
 }
-.action {
-    display: block;
-    text-align: center;
+.replyRate {
+    padding: 10px;
+    font-size: 14px;
 }
-.actionButton, .actionButton:visited {
-    display: inline-block;
-    border: 2px solid #0B5462;
-    cursor: pointer;
-    padding: 10px 30px;
-    margin: 20px;
-    background: #005060;
-    box-shadow: 2px 3px 10px 0 rgba(0,0,0,0.12);
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-}
-.resultButton {
-    cursor: pointer;
-    border-bottom: 1px solid;
-    display: inline-block;
-    padding: 4px;
-}
+
 /* 協尋失蹤候選人 */
 .partyRoll {
     position: relative;

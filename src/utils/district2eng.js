@@ -26,6 +26,8 @@ const districts = {
 }
 
 export default function district2eng(districtCht){
+    districtCht = districtCht.replace('台','臺');
+    
  	if(districts[districtCht])
  		return districts[districtCht]
  	else

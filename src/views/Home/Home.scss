@@ -87,6 +87,9 @@ $break: 960px;
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
+  
+  max-width: 100%;
+  padding: 0 10px;
 }
 
 @media all and (min-width: $break) {

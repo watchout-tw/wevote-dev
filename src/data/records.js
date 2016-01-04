@@ -4862,7 +4862,7 @@ const records =
     },
     "271": {
         "id": 271,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1355673600,
@@ -4880,7 +4880,7 @@ const records =
     },
     "272": {
         "id": 272,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1381852800,
@@ -4898,7 +4898,7 @@ const records =
     },
     "273": {
         "id": 273,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1381852800,
@@ -4916,7 +4916,7 @@ const records =
     },
     "274": {
         "id": 274,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1381852800,
@@ -4934,7 +4934,7 @@ const records =
     },
     "275": {
         "id": 275,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1381852800,
@@ -4952,7 +4952,7 @@ const records =
     },
     "276": {
         "id": 276,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1381852800,
@@ -4970,7 +4970,7 @@ const records =
     },
     "277": {
         "id": 277,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1381852800,
@@ -4988,7 +4988,7 @@ const records =
     },
     "278": {
         "id": 278,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1381852800,
@@ -5006,7 +5006,7 @@ const records =
     },
     "279": {
         "id": 279,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1381852800,
@@ -5024,7 +5024,7 @@ const records =
     },
     "280": {
         "id": 280,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1381852800,
@@ -5042,7 +5042,7 @@ const records =
     },
     "281": {
         "id": 281,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1381852800,
@@ -5060,7 +5060,7 @@ const records =
     },
     "282": {
         "id": 282,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1381852800,
@@ -5078,7 +5078,7 @@ const records =
     },
     "283": {
         "id": 283,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1381852800,
@@ -5096,7 +5096,7 @@ const records =
     },
     "284": {
         "id": 284,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1381852800,
@@ -5114,7 +5114,7 @@ const records =
     },
     "285": {
         "id": 285,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1381852800,
@@ -5132,7 +5132,7 @@ const records =
     },
     "286": {
         "id": 286,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1363017600,
@@ -5150,7 +5150,7 @@ const records =
     },
     "287": {
         "id": 287,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1363017600,
@@ -5168,7 +5168,7 @@ const records =
     },
     "288": {
         "id": 288,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1363017600,
@@ -5186,7 +5186,7 @@ const records =
     },
     "289": {
         "id": 289,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1363017600,
@@ -5204,7 +5204,7 @@ const records =
     },
     "290": {
         "id": 290,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1363017600,
@@ -5222,7 +5222,7 @@ const records =
     },
     "291": {
         "id": 291,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1363017600,
@@ -5240,7 +5240,7 @@ const records =
     },
     "292": {
         "id": 292,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1363017600,
@@ -5258,7 +5258,7 @@ const records =
     },
     "293": {
         "id": 293,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1363017600,
@@ -5276,7 +5276,7 @@ const records =
     },
     "294": {
         "id": 294,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1363017600,
@@ -5294,7 +5294,7 @@ const records =
     },
     "295": {
         "id": 295,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1363017600,
@@ -5312,7 +5312,7 @@ const records =
     },
     "296": {
         "id": 296,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1363017600,
@@ -5330,7 +5330,7 @@ const records =
     },
     "297": {
         "id": 297,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1363017600,
@@ -5348,7 +5348,7 @@ const records =
     },
     "298": {
         "id": 298,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1364745600,
@@ -5366,7 +5366,7 @@ const records =
     },
     "299": {
         "id": 299,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1364745600,
@@ -5384,7 +5384,7 @@ const records =
     },
     "300": {
         "id": 300,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1364745600,
@@ -5402,7 +5402,7 @@ const records =
     },
     "301": {
         "id": 301,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1364745600,
@@ -5420,7 +5420,7 @@ const records =
     },
     "302": {
         "id": 302,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1364745600,
@@ -5438,7 +5438,7 @@ const records =
     },
     "303": {
         "id": 303,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1364745600,
@@ -5456,7 +5456,7 @@ const records =
     },
     "304": {
         "id": 304,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1364745600,
@@ -5474,7 +5474,7 @@ const records =
     },
     "305": {
         "id": 305,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1364745600,
@@ -5492,7 +5492,7 @@ const records =
     },
     "306": {
         "id": 306,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1364745600,
@@ -5510,7 +5510,7 @@ const records =
     },
     "307": {
         "id": 307,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1364745600,
@@ -5528,7 +5528,7 @@ const records =
     },
     "308": {
         "id": 308,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1364745600,
@@ -5546,7 +5546,7 @@ const records =
     },
     "309": {
         "id": 309,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1364745600,
@@ -5564,7 +5564,7 @@ const records =
     },
     "310": {
         "id": 310,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1364745600,
@@ -5582,7 +5582,7 @@ const records =
     },
     "311": {
         "id": 311,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1364745600,
@@ -5600,7 +5600,7 @@ const records =
     },
     "312": {
         "id": 312,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1364745600,
@@ -5618,7 +5618,7 @@ const records =
     },
     "313": {
         "id": 313,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1364745600,
@@ -5636,7 +5636,7 @@ const records =
     },
     "314": {
         "id": 314,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1364745600,
@@ -5654,7 +5654,7 @@ const records =
     },
     "315": {
         "id": 315,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1364745600,
@@ -5672,7 +5672,7 @@ const records =
     },
     "316": {
         "id": 316,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1364745600,
@@ -5690,7 +5690,7 @@ const records =
     },
     "317": {
         "id": 317,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1364745600,
@@ -5708,7 +5708,7 @@ const records =
     },
     "318": {
         "id": 318,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1366905600,
@@ -5726,7 +5726,7 @@ const records =
     },
     "319": {
         "id": 319,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林世嘉",
         "party": "TSU",
         "date": 1366905600,
@@ -5744,7 +5744,7 @@ const records =
     },
     "320": {
         "id": 320,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林正二",
         "party": "PFP",
         "date": 1366905600,
@@ -5762,7 +5762,7 @@ const records =
     },
     "321": {
         "id": 321,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1366905600,
@@ -5780,7 +5780,7 @@ const records =
     },
     "322": {
         "id": 322,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1366905600,
@@ -5798,7 +5798,7 @@ const records =
     },
     "323": {
         "id": 323,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1366905600,
@@ -5816,7 +5816,7 @@ const records =
     },
     "324": {
         "id": 324,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1366905600,
@@ -5834,7 +5834,7 @@ const records =
     },
     "325": {
         "id": 325,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1366905600,
@@ -5852,7 +5852,7 @@ const records =
     },
     "326": {
         "id": 326,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1366905600,
@@ -5870,7 +5870,7 @@ const records =
     },
     "327": {
         "id": 327,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1366905600,
@@ -5888,7 +5888,7 @@ const records =
     },
     "328": {
         "id": 328,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1366905600,
@@ -5906,7 +5906,7 @@ const records =
     },
     "329": {
         "id": 329,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1366905600,
@@ -5924,7 +5924,7 @@ const records =
     },
     "330": {
         "id": 330,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1366905600,
@@ -5942,7 +5942,7 @@ const records =
     },
     "331": {
         "id": 331,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1366905600,
@@ -5960,7 +5960,7 @@ const records =
     },
     "332": {
         "id": 332,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1366905600,
@@ -5978,7 +5978,7 @@ const records =
     },
     "333": {
         "id": 333,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1366905600,
@@ -5996,7 +5996,7 @@ const records =
     },
     "334": {
         "id": 334,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1366905600,
@@ -6014,7 +6014,7 @@ const records =
     },
     "335": {
         "id": 335,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1366905600,
@@ -6032,7 +6032,7 @@ const records =
     },
     "336": {
         "id": 336,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1366905600,
@@ -6050,7 +6050,7 @@ const records =
     },
     "337": {
         "id": 337,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1366905600,
@@ -6068,7 +6068,7 @@ const records =
     },
     "338": {
         "id": 338,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1366905600,
@@ -6086,7 +6086,7 @@ const records =
     },
     "339": {
         "id": 339,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1366905600,
@@ -6104,7 +6104,7 @@ const records =
     },
     "340": {
         "id": 340,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1366905600,
@@ -6122,7 +6122,7 @@ const records =
     },
     "341": {
         "id": 341,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1366905600,
@@ -6140,7 +6140,7 @@ const records =
     },
     "342": {
         "id": 342,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1366905600,
@@ -6158,7 +6158,7 @@ const records =
     },
     "343": {
         "id": 343,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1366905600,
@@ -6176,7 +6176,7 @@ const records =
     },
     "344": {
         "id": 344,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1366905600,
@@ -6194,7 +6194,7 @@ const records =
     },
     "345": {
         "id": 345,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1366905600,
@@ -6212,7 +6212,7 @@ const records =
     },
     "346": {
         "id": 346,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1366905600,
@@ -6230,7 +6230,7 @@ const records =
     },
     "347": {
         "id": 347,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1366905600,
@@ -6248,7 +6248,7 @@ const records =
     },
     "348": {
         "id": 348,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1366905600,
@@ -6266,7 +6266,7 @@ const records =
     },
     "349": {
         "id": 349,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1366905600,
@@ -6284,7 +6284,7 @@ const records =
     },
     "350": {
         "id": 350,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1366905600,
@@ -6302,7 +6302,7 @@ const records =
     },
     "351": {
         "id": 351,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1366905600,
@@ -6320,7 +6320,7 @@ const records =
     },
     "352": {
         "id": 352,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1366905600,
@@ -6338,7 +6338,7 @@ const records =
     },
     "353": {
         "id": 353,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1366905600,
@@ -6356,7 +6356,7 @@ const records =
     },
     "354": {
         "id": 354,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1366905600,
@@ -6374,7 +6374,7 @@ const records =
     },
     "355": {
         "id": 355,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1366905600,
@@ -6392,7 +6392,7 @@ const records =
     },
     "356": {
         "id": 356,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1366905600,
@@ -6410,7 +6410,7 @@ const records =
     },
     "357": {
         "id": 357,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1366905600,
@@ -6428,7 +6428,7 @@ const records =
     },
     "358": {
         "id": 358,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1366905600,
@@ -6446,7 +6446,7 @@ const records =
     },
     "359": {
         "id": 359,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1366905600,
@@ -6464,7 +6464,7 @@ const records =
     },
     "360": {
         "id": 360,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1366905600,
@@ -6482,7 +6482,7 @@ const records =
     },
     "361": {
         "id": 361,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1366905600,
@@ -6500,7 +6500,7 @@ const records =
     },
     "362": {
         "id": 362,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1367424000,
@@ -6518,7 +6518,7 @@ const records =
     },
     "363": {
         "id": 363,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1367424000,
@@ -6536,7 +6536,7 @@ const records =
     },
     "364": {
         "id": 364,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1367424000,
@@ -6554,7 +6554,7 @@ const records =
     },
     "365": {
         "id": 365,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1367424000,
@@ -6572,7 +6572,7 @@ const records =
     },
     "366": {
         "id": 366,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1369584000,
@@ -6590,7 +6590,7 @@ const records =
     },
     "367": {
         "id": 367,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1369584000,
@@ -6608,7 +6608,7 @@ const records =
     },
     "368": {
         "id": 368,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1369584000,
@@ -6626,7 +6626,7 @@ const records =
     },
     "369": {
         "id": 369,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1369584000,
@@ -6644,7 +6644,7 @@ const records =
     },
     "370": {
         "id": 370,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1369584000,
@@ -6662,7 +6662,7 @@ const records =
     },
     "371": {
         "id": 371,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1369584000,
@@ -6680,7 +6680,7 @@ const records =
     },
     "372": {
         "id": 372,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1369584000,
@@ -6698,7 +6698,7 @@ const records =
     },
     "373": {
         "id": 373,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1369584000,
@@ -6716,7 +6716,7 @@ const records =
     },
     "374": {
         "id": 374,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1369584000,
@@ -6734,7 +6734,7 @@ const records =
     },
     "375": {
         "id": 375,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1394380800,
@@ -6752,7 +6752,7 @@ const records =
     },
     "376": {
         "id": 376,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1394380800,
@@ -6770,7 +6770,7 @@ const records =
     },
     "377": {
         "id": 377,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1394380800,
@@ -6788,7 +6788,7 @@ const records =
     },
     "378": {
         "id": 378,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1394380800,
@@ -6806,7 +6806,7 @@ const records =
     },
     "379": {
         "id": 379,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1394380800,
@@ -6824,7 +6824,7 @@ const records =
     },
     "380": {
         "id": 380,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1394380800,
@@ -6842,7 +6842,7 @@ const records =
     },
     "381": {
         "id": 381,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1394380800,
@@ -6860,7 +6860,7 @@ const records =
     },
     "382": {
         "id": 382,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1394380800,
@@ -6878,7 +6878,7 @@ const records =
     },
     "383": {
         "id": 383,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1394380800,
@@ -6896,7 +6896,7 @@ const records =
     },
     "384": {
         "id": 384,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1394380800,
@@ -6914,7 +6914,7 @@ const records =
     },
     "385": {
         "id": 385,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1394380800,
@@ -6932,7 +6932,7 @@ const records =
     },
     "386": {
         "id": 386,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1394380800,
@@ -6950,7 +6950,7 @@ const records =
     },
     "387": {
         "id": 387,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1394380800,
@@ -6968,7 +6968,7 @@ const records =
     },
     "388": {
         "id": 388,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1394380800,
@@ -6986,7 +6986,7 @@ const records =
     },
     "389": {
         "id": 389,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1394380800,
@@ -7004,7 +7004,7 @@ const records =
     },
     "390": {
         "id": 390,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1394380800,
@@ -7022,7 +7022,7 @@ const records =
     },
     "391": {
         "id": 391,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1399392000,
@@ -7040,7 +7040,7 @@ const records =
     },
     "392": {
         "id": 392,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1399392000,
@@ -7058,7 +7058,7 @@ const records =
     },
     "393": {
         "id": 393,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1399392000,
@@ -7076,7 +7076,7 @@ const records =
     },
     "394": {
         "id": 394,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1399392000,
@@ -7094,7 +7094,7 @@ const records =
     },
     "395": {
         "id": 395,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1399392000,
@@ -7112,7 +7112,7 @@ const records =
     },
     "396": {
         "id": 396,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1399392000,
@@ -7130,7 +7130,7 @@ const records =
     },
     "397": {
         "id": 397,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1399392000,
@@ -7148,7 +7148,7 @@ const records =
     },
     "398": {
         "id": 398,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1399392000,
@@ -7166,7 +7166,7 @@ const records =
     },
     "399": {
         "id": 399,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1399392000,
@@ -7184,7 +7184,7 @@ const records =
     },
     "400": {
         "id": 400,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1399392000,
@@ -7202,7 +7202,7 @@ const records =
     },
     "401": {
         "id": 401,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1399392000,
@@ -7220,7 +7220,7 @@ const records =
     },
     "402": {
         "id": 402,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1399392000,
@@ -7238,7 +7238,7 @@ const records =
     },
     "403": {
         "id": 403,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1399392000,
@@ -7256,7 +7256,7 @@ const records =
     },
     "404": {
         "id": 404,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1399392000,
@@ -7274,7 +7274,7 @@ const records =
     },
     "405": {
         "id": 405,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1336924800,
@@ -7292,7 +7292,7 @@ const records =
     },
     "406": {
         "id": 406,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1336924800,
@@ -7310,7 +7310,7 @@ const records =
     },
     "407": {
         "id": 407,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1336924800,
@@ -7328,7 +7328,7 @@ const records =
     },
     "408": {
         "id": 408,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1336924800,
@@ -7346,7 +7346,7 @@ const records =
     },
     "409": {
         "id": 409,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1336924800,
@@ -7364,7 +7364,7 @@ const records =
     },
     "410": {
         "id": 410,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1336924800,
@@ -7382,7 +7382,7 @@ const records =
     },
     "411": {
         "id": 411,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1336924800,
@@ -7400,7 +7400,7 @@ const records =
     },
     "412": {
         "id": 412,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1336924800,
@@ -7418,7 +7418,7 @@ const records =
     },
     "413": {
         "id": 413,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1336924800,
@@ -7436,7 +7436,7 @@ const records =
     },
     "414": {
         "id": 414,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1336924800,
@@ -7454,7 +7454,7 @@ const records =
     },
     "415": {
         "id": 415,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1336924800,
@@ -7472,7 +7472,7 @@ const records =
     },
     "416": {
         "id": 416,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1336924800,
@@ -7490,7 +7490,7 @@ const records =
     },
     "417": {
         "id": 417,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1336924800,
@@ -7508,7 +7508,7 @@ const records =
     },
     "418": {
         "id": 418,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1336924800,
@@ -7526,7 +7526,7 @@ const records =
     },
     "419": {
         "id": 419,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1336924800,
@@ -7544,7 +7544,7 @@ const records =
     },
     "420": {
         "id": 420,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1336924800,
@@ -7562,7 +7562,7 @@ const records =
     },
     "421": {
         "id": 421,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1336924800,
@@ -7580,7 +7580,7 @@ const records =
     },
     "422": {
         "id": 422,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1357747200,
@@ -7598,7 +7598,7 @@ const records =
     },
     "423": {
         "id": 423,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1357747200,
@@ -7616,7 +7616,7 @@ const records =
     },
     "424": {
         "id": 424,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1357747200,
@@ -7634,7 +7634,7 @@ const records =
     },
     "425": {
         "id": 425,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1357747200,
@@ -7652,7 +7652,7 @@ const records =
     },
     "426": {
         "id": 426,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1357747200,
@@ -7670,7 +7670,7 @@ const records =
     },
     "427": {
         "id": 427,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1357747200,
@@ -7688,7 +7688,7 @@ const records =
     },
     "428": {
         "id": 428,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1357747200,
@@ -7706,7 +7706,7 @@ const records =
     },
     "429": {
         "id": 429,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1357747200,
@@ -7724,7 +7724,7 @@ const records =
     },
     "430": {
         "id": 430,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1357747200,
@@ -7742,7 +7742,7 @@ const records =
     },
     "431": {
         "id": 431,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1357747200,
@@ -7760,7 +7760,7 @@ const records =
     },
     "432": {
         "id": 432,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1357747200,
@@ -7778,7 +7778,7 @@ const records =
     },
     "433": {
         "id": 433,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1357747200,
@@ -7796,7 +7796,7 @@ const records =
     },
     "434": {
         "id": 434,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1357747200,
@@ -7814,7 +7814,7 @@ const records =
     },
     "435": {
         "id": 435,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1357747200,
@@ -7832,7 +7832,7 @@ const records =
     },
     "436": {
         "id": 436,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1357747200,
@@ -7850,7 +7850,7 @@ const records =
     },
     "437": {
         "id": 437,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1357747200,
@@ -7868,7 +7868,7 @@ const records =
     },
     "438": {
         "id": 438,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1357747200,
@@ -7886,7 +7886,7 @@ const records =
     },
     "439": {
         "id": 439,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1357747200,
@@ -7904,7 +7904,7 @@ const records =
     },
     "440": {
         "id": 440,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1357747200,
@@ -7922,7 +7922,7 @@ const records =
     },
     "441": {
         "id": 441,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1362672000,
@@ -7940,7 +7940,7 @@ const records =
     },
     "442": {
         "id": 442,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1362672000,
@@ -7958,7 +7958,7 @@ const records =
     },
     "443": {
         "id": 443,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1362672000,
@@ -7976,7 +7976,7 @@ const records =
     },
     "444": {
         "id": 444,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1362672000,
@@ -7994,7 +7994,7 @@ const records =
     },
     "445": {
         "id": 445,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林正二",
         "party": "PFP",
         "date": 1362672000,
@@ -8012,7 +8012,7 @@ const records =
     },
     "446": {
         "id": 446,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張曉風",
         "party": "PFP",
         "date": 1362672000,
@@ -8030,7 +8030,7 @@ const records =
     },
     "447": {
         "id": 447,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1362672000,
@@ -8048,7 +8048,7 @@ const records =
     },
     "448": {
         "id": 448,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1362672000,
@@ -8066,7 +8066,7 @@ const records =
     },
     "449": {
         "id": 449,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1362672000,
@@ -8084,7 +8084,7 @@ const records =
     },
     "450": {
         "id": 450,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1362672000,
@@ -8102,7 +8102,7 @@ const records =
     },
     "451": {
         "id": 451,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林世嘉",
         "party": "TSU",
         "date": 1362672000,
@@ -8120,7 +8120,7 @@ const records =
     },
     "452": {
         "id": 452,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1362672000,
@@ -8138,7 +8138,7 @@ const records =
     },
     "453": {
         "id": 453,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1362672000,
@@ -8156,7 +8156,7 @@ const records =
     },
     "454": {
         "id": 454,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1362672000,
@@ -8174,7 +8174,7 @@ const records =
     },
     "455": {
         "id": 455,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1362672000,
@@ -8192,7 +8192,7 @@ const records =
     },
     "456": {
         "id": 456,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1362672000,
@@ -8210,7 +8210,7 @@ const records =
     },
     "457": {
         "id": 457,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1362672000,
@@ -8228,7 +8228,7 @@ const records =
     },
     "458": {
         "id": 458,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1362672000,
@@ -8246,7 +8246,7 @@ const records =
     },
     "459": {
         "id": 459,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1362672000,
@@ -8264,7 +8264,7 @@ const records =
     },
     "460": {
         "id": 460,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1362672000,
@@ -8282,7 +8282,7 @@ const records =
     },
     "461": {
         "id": 461,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1362672000,
@@ -8300,7 +8300,7 @@ const records =
     },
     "462": {
         "id": 462,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1362672000,
@@ -8318,7 +8318,7 @@ const records =
     },
     "463": {
         "id": 463,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1362672000,
@@ -8336,7 +8336,7 @@ const records =
     },
     "464": {
         "id": 464,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1362672000,
@@ -8354,7 +8354,7 @@ const records =
     },
     "465": {
         "id": 465,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1362672000,
@@ -8372,7 +8372,7 @@ const records =
     },
     "466": {
         "id": 466,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1362672000,
@@ -8390,7 +8390,7 @@ const records =
     },
     "467": {
         "id": 467,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1365609600,
@@ -8408,7 +8408,7 @@ const records =
     },
     "468": {
         "id": 468,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1365609600,
@@ -8426,7 +8426,7 @@ const records =
     },
     "469": {
         "id": 469,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1365609600,
@@ -8444,7 +8444,7 @@ const records =
     },
     "470": {
         "id": 470,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1365609600,
@@ -8462,7 +8462,7 @@ const records =
     },
     "471": {
         "id": 471,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1365609600,
@@ -8480,7 +8480,7 @@ const records =
     },
     "472": {
         "id": 472,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1365609600,
@@ -8498,7 +8498,7 @@ const records =
     },
     "473": {
         "id": 473,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1365609600,
@@ -8516,7 +8516,7 @@ const records =
     },
     "474": {
         "id": 474,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1365609600,
@@ -8534,7 +8534,7 @@ const records =
     },
     "475": {
         "id": 475,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1365609600,
@@ -8552,7 +8552,7 @@ const records =
     },
     "476": {
         "id": 476,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1365609600,
@@ -8570,7 +8570,7 @@ const records =
     },
     "477": {
         "id": 477,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1365609600,
@@ -8588,7 +8588,7 @@ const records =
     },
     "478": {
         "id": 478,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1365609600,
@@ -8606,7 +8606,7 @@ const records =
     },
     "479": {
         "id": 479,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1365609600,
@@ -8624,7 +8624,7 @@ const records =
     },
     "480": {
         "id": 480,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1365609600,
@@ -8642,7 +8642,7 @@ const records =
     },
     "481": {
         "id": 481,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1365609600,
@@ -8660,7 +8660,7 @@ const records =
     },
     "482": {
         "id": 482,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1365609600,
@@ -8678,7 +8678,7 @@ const records =
     },
     "483": {
         "id": 483,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1366128000,
@@ -8696,7 +8696,7 @@ const records =
     },
     "484": {
         "id": 484,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1366128000,
@@ -8714,7 +8714,7 @@ const records =
     },
     "485": {
         "id": 485,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1366128000,
@@ -8732,7 +8732,7 @@ const records =
     },
     "486": {
         "id": 486,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1366128000,
@@ -8750,7 +8750,7 @@ const records =
     },
     "487": {
         "id": 487,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1366128000,
@@ -8768,7 +8768,7 @@ const records =
     },
     "488": {
         "id": 488,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1366128000,
@@ -8786,7 +8786,7 @@ const records =
     },
     "489": {
         "id": 489,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1366128000,
@@ -8804,7 +8804,7 @@ const records =
     },
     "490": {
         "id": 490,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1366128000,
@@ -8822,7 +8822,7 @@ const records =
     },
     "491": {
         "id": 491,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1366128000,
@@ -8840,7 +8840,7 @@ const records =
     },
     "492": {
         "id": 492,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1366128000,
@@ -8858,7 +8858,7 @@ const records =
     },
     "493": {
         "id": 493,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1366128000,
@@ -8876,7 +8876,7 @@ const records =
     },
     "494": {
         "id": 494,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1366128000,
@@ -8894,7 +8894,7 @@ const records =
     },
     "495": {
         "id": 495,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1366128000,
@@ -8912,7 +8912,7 @@ const records =
     },
     "496": {
         "id": 496,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1366128000,
@@ -8930,7 +8930,7 @@ const records =
     },
     "497": {
         "id": 497,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1366128000,
@@ -8948,7 +8948,7 @@ const records =
     },
     "498": {
         "id": 498,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1366128000,
@@ -8966,7 +8966,7 @@ const records =
     },
     "499": {
         "id": 499,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1366128000,
@@ -8984,7 +8984,7 @@ const records =
     },
     "500": {
         "id": 500,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1366819200,
@@ -9002,7 +9002,7 @@ const records =
     },
     "501": {
         "id": 501,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1366819200,
@@ -9020,7 +9020,7 @@ const records =
     },
     "502": {
         "id": 502,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1366819200,
@@ -9038,7 +9038,7 @@ const records =
     },
     "503": {
         "id": 503,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1366819200,
@@ -9056,7 +9056,7 @@ const records =
     },
     "504": {
         "id": 504,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1366819200,
@@ -9074,7 +9074,7 @@ const records =
     },
     "505": {
         "id": 505,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1366819200,
@@ -9092,7 +9092,7 @@ const records =
     },
     "506": {
         "id": 506,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1366819200,
@@ -9110,7 +9110,7 @@ const records =
     },
     "507": {
         "id": 507,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1366819200,
@@ -9128,7 +9128,7 @@ const records =
     },
     "508": {
         "id": 508,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1366819200,
@@ -9146,7 +9146,7 @@ const records =
     },
     "509": {
         "id": 509,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1366819200,
@@ -9164,7 +9164,7 @@ const records =
     },
     "510": {
         "id": 510,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1366819200,
@@ -9182,7 +9182,7 @@ const records =
     },
     "511": {
         "id": 511,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1366819200,
@@ -9200,7 +9200,7 @@ const records =
     },
     "512": {
         "id": 512,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1366819200,
@@ -9218,7 +9218,7 @@ const records =
     },
     "513": {
         "id": 513,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1366819200,
@@ -9236,7 +9236,7 @@ const records =
     },
     "514": {
         "id": 514,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1366819200,
@@ -9254,7 +9254,7 @@ const records =
     },
     "515": {
         "id": 515,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1366819200,
@@ -9272,7 +9272,7 @@ const records =
     },
     "516": {
         "id": 516,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1366819200,
@@ -9290,7 +9290,7 @@ const records =
     },
     "517": {
         "id": 517,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1366819200,
@@ -9308,7 +9308,7 @@ const records =
     },
     "518": {
         "id": 518,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1398182400,
@@ -9326,7 +9326,7 @@ const records =
     },
     "519": {
         "id": 519,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1398182400,
@@ -9344,7 +9344,7 @@ const records =
     },
     "520": {
         "id": 520,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1398182400,
@@ -9362,7 +9362,7 @@ const records =
     },
     "521": {
         "id": 521,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1398182400,
@@ -9380,7 +9380,7 @@ const records =
     },
     "522": {
         "id": 522,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1398182400,
@@ -9398,7 +9398,7 @@ const records =
     },
     "523": {
         "id": 523,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1398182400,
@@ -9416,7 +9416,7 @@ const records =
     },
     "524": {
         "id": 524,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1398182400,
@@ -9434,7 +9434,7 @@ const records =
     },
     "525": {
         "id": 525,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1398182400,
@@ -9452,7 +9452,7 @@ const records =
     },
     "526": {
         "id": 526,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1398182400,
@@ -9470,7 +9470,7 @@ const records =
     },
     "527": {
         "id": 527,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1398182400,
@@ -9488,7 +9488,7 @@ const records =
     },
     "528": {
         "id": 528,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1398182400,
@@ -9506,7 +9506,7 @@ const records =
     },
     "529": {
         "id": 529,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1398182400,
@@ -9524,7 +9524,7 @@ const records =
     },
     "530": {
         "id": 530,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1398182400,
@@ -9542,7 +9542,7 @@ const records =
     },
     "531": {
         "id": 531,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1398268800,
@@ -9560,7 +9560,7 @@ const records =
     },
     "532": {
         "id": 532,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1398268800,
@@ -9578,7 +9578,7 @@ const records =
     },
     "533": {
         "id": 533,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1398268800,
@@ -9596,7 +9596,7 @@ const records =
     },
     "534": {
         "id": 534,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1398268800,
@@ -9614,7 +9614,7 @@ const records =
     },
     "535": {
         "id": 535,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1398268800,
@@ -9632,7 +9632,7 @@ const records =
     },
     "536": {
         "id": 536,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1398268800,
@@ -9650,7 +9650,7 @@ const records =
     },
     "537": {
         "id": 537,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1398268800,
@@ -9668,7 +9668,7 @@ const records =
     },
     "538": {
         "id": 538,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1398268800,
@@ -9686,7 +9686,7 @@ const records =
     },
     "539": {
         "id": 539,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1399219200,
@@ -9704,7 +9704,7 @@ const records =
     },
     "540": {
         "id": 540,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1399219200,
@@ -9722,7 +9722,7 @@ const records =
     },
     "541": {
         "id": 541,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1399219200,
@@ -9740,7 +9740,7 @@ const records =
     },
     "542": {
         "id": 542,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1399219200,
@@ -9758,7 +9758,7 @@ const records =
     },
     "543": {
         "id": 543,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1399219200,
@@ -9776,7 +9776,7 @@ const records =
     },
     "544": {
         "id": 544,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1399219200,
@@ -9794,7 +9794,7 @@ const records =
     },
     "545": {
         "id": 545,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1399219200,
@@ -9812,7 +9812,7 @@ const records =
     },
     "546": {
         "id": 546,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1399219200,
@@ -9830,7 +9830,7 @@ const records =
     },
     "547": {
         "id": 547,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1399219200,
@@ -9848,7 +9848,7 @@ const records =
     },
     "548": {
         "id": 548,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1399219200,
@@ -9866,7 +9866,7 @@ const records =
     },
     "549": {
         "id": 549,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1399219200,
@@ -9884,7 +9884,7 @@ const records =
     },
     "550": {
         "id": 550,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1399219200,
@@ -9902,7 +9902,7 @@ const records =
     },
     "551": {
         "id": 551,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1399219200,
@@ -9920,7 +9920,7 @@ const records =
     },
     "552": {
         "id": 552,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1399219200,
@@ -9938,7 +9938,7 @@ const records =
     },
     "553": {
         "id": 553,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1399219200,
@@ -9956,7 +9956,7 @@ const records =
     },
     "554": {
         "id": 554,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1399219200,
@@ -9974,7 +9974,7 @@ const records =
     },
     "555": {
         "id": 555,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1399219200,
@@ -9992,7 +9992,7 @@ const records =
     },
     "556": {
         "id": 556,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1399219200,
@@ -10010,7 +10010,7 @@ const records =
     },
     "557": {
         "id": 557,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1399219200,
@@ -10028,7 +10028,7 @@ const records =
     },
     "558": {
         "id": 558,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1399219200,
@@ -10046,7 +10046,7 @@ const records =
     },
     "559": {
         "id": 559,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1399219200,
@@ -10064,7 +10064,7 @@ const records =
     },
     "560": {
         "id": 560,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1400774400,
@@ -10082,7 +10082,7 @@ const records =
     },
     "561": {
         "id": 561,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1400774400,
@@ -10100,7 +10100,7 @@ const records =
     },
     "562": {
         "id": 562,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1400774400,
@@ -10118,7 +10118,7 @@ const records =
     },
     "563": {
         "id": 563,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1400774400,
@@ -10136,7 +10136,7 @@ const records =
     },
     "564": {
         "id": 564,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1400774400,
@@ -10154,7 +10154,7 @@ const records =
     },
     "565": {
         "id": 565,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1400774400,
@@ -10172,7 +10172,7 @@ const records =
     },
     "566": {
         "id": 566,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1400774400,
@@ -10190,7 +10190,7 @@ const records =
     },
     "567": {
         "id": 567,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1400774400,
@@ -10208,7 +10208,7 @@ const records =
     },
     "568": {
         "id": 568,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1400774400,
@@ -10226,7 +10226,7 @@ const records =
     },
     "569": {
         "id": 569,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1400774400,
@@ -10244,7 +10244,7 @@ const records =
     },
     "570": {
         "id": 570,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1400774400,
@@ -10262,7 +10262,7 @@ const records =
     },
     "571": {
         "id": 571,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1400774400,
@@ -10280,7 +10280,7 @@ const records =
     },
     "572": {
         "id": 572,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1400774400,
@@ -10298,7 +10298,7 @@ const records =
     },
     "573": {
         "id": 573,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1400774400,
@@ -10316,7 +10316,7 @@ const records =
     },
     "574": {
         "id": 574,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1400774400,
@@ -10334,7 +10334,7 @@ const records =
     },
     "575": {
         "id": 575,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1400774400,
@@ -10352,7 +10352,7 @@ const records =
     },
     "576": {
         "id": 576,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1400774400,
@@ -10370,7 +10370,7 @@ const records =
     },
     "577": {
         "id": 577,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1400774400,
@@ -10388,7 +10388,7 @@ const records =
     },
     "578": {
         "id": 578,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1400774400,
@@ -10406,7 +10406,7 @@ const records =
     },
     "579": {
         "id": 579,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1400774400,
@@ -10424,7 +10424,7 @@ const records =
     },
     "580": {
         "id": 580,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1400774400,
@@ -10442,7 +10442,7 @@ const records =
     },
     "581": {
         "id": 581,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1400774400,
@@ -10460,7 +10460,7 @@ const records =
     },
     "582": {
         "id": 582,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1400774400,
@@ -10478,7 +10478,7 @@ const records =
     },
     "583": {
         "id": 583,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1400774400,
@@ -10496,7 +10496,7 @@ const records =
     },
     "584": {
         "id": 584,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1400774400,
@@ -10514,7 +10514,7 @@ const records =
     },
     "585": {
         "id": 585,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1400774400,
@@ -10532,7 +10532,7 @@ const records =
     },
     "586": {
         "id": 586,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1400774400,
@@ -10550,7 +10550,7 @@ const records =
     },
     "587": {
         "id": 587,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1400774400,
@@ -10568,7 +10568,7 @@ const records =
     },
     "588": {
         "id": 588,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1400774400,
@@ -10586,7 +10586,7 @@ const records =
     },
     "589": {
         "id": 589,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1400774400,
@@ -10604,7 +10604,7 @@ const records =
     },
     "590": {
         "id": 590,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1400774400,
@@ -10622,7 +10622,7 @@ const records =
     },
     "591": {
         "id": 591,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1400774400,
@@ -10640,7 +10640,7 @@ const records =
     },
     "592": {
         "id": 592,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1400774400,
@@ -10658,7 +10658,7 @@ const records =
     },
     "593": {
         "id": 593,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1400774400,
@@ -10676,7 +10676,7 @@ const records =
     },
     "594": {
         "id": 594,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1400774400,
@@ -10694,7 +10694,7 @@ const records =
     },
     "595": {
         "id": 595,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1400774400,
@@ -10712,7 +10712,7 @@ const records =
     },
     "596": {
         "id": 596,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1400774400,
@@ -10730,7 +10730,7 @@ const records =
     },
     "597": {
         "id": 597,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1400774400,
@@ -10748,7 +10748,7 @@ const records =
     },
     "598": {
         "id": 598,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1400774400,
@@ -10766,7 +10766,7 @@ const records =
     },
     "599": {
         "id": 599,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1400774400,
@@ -10784,7 +10784,7 @@ const records =
     },
     "600": {
         "id": 600,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1400774400,
@@ -10802,7 +10802,7 @@ const records =
     },
     "601": {
         "id": 601,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1400774400,
@@ -10820,7 +10820,7 @@ const records =
     },
     "602": {
         "id": 602,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1400774400,
@@ -10838,7 +10838,7 @@ const records =
     },
     "603": {
         "id": 603,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1400774400,
@@ -10856,7 +10856,7 @@ const records =
     },
     "604": {
         "id": 604,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1400774400,
@@ -10874,7 +10874,7 @@ const records =
     },
     "605": {
         "id": 605,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1400774400,
@@ -10892,7 +10892,7 @@ const records =
     },
     "606": {
         "id": 606,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1400774400,
@@ -10910,7 +10910,7 @@ const records =
     },
     "607": {
         "id": 607,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1400774400,
@@ -10928,7 +10928,7 @@ const records =
     },
     "608": {
         "id": 608,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1400774400,
@@ -10946,7 +10946,7 @@ const records =
     },
     "609": {
         "id": 609,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1400774400,
@@ -10964,7 +10964,7 @@ const records =
     },
     "610": {
         "id": 610,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1400774400,
@@ -10982,7 +10982,7 @@ const records =
     },
     "611": {
         "id": 611,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1400774400,
@@ -11000,7 +11000,7 @@ const records =
     },
     "612": {
         "id": 612,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1400774400,
@@ -11018,7 +11018,7 @@ const records =
     },
     "613": {
         "id": 613,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1400774400,
@@ -11036,7 +11036,7 @@ const records =
     },
     "614": {
         "id": 614,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1400774400,
@@ -11054,7 +11054,7 @@ const records =
     },
     "615": {
         "id": 615,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1400774400,
@@ -11072,7 +11072,7 @@ const records =
     },
     "616": {
         "id": 616,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1400774400,
@@ -11090,7 +11090,7 @@ const records =
     },
     "617": {
         "id": 617,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1400774400,
@@ -11108,7 +11108,7 @@ const records =
     },
     "618": {
         "id": 618,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1400774400,
@@ -11126,7 +11126,7 @@ const records =
     },
     "619": {
         "id": 619,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1400774400,
@@ -11144,7 +11144,7 @@ const records =
     },
     "620": {
         "id": 620,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1400774400,
@@ -11162,7 +11162,7 @@ const records =
     },
     "621": {
         "id": 621,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1400774400,
@@ -11180,7 +11180,7 @@ const records =
     },
     "622": {
         "id": 622,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1400774400,
@@ -11198,7 +11198,7 @@ const records =
     },
     "623": {
         "id": 623,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1400774400,
@@ -11216,7 +11216,7 @@ const records =
     },
     "624": {
         "id": 624,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1400774400,
@@ -11234,7 +11234,7 @@ const records =
     },
     "625": {
         "id": 625,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1400774400,
@@ -11252,7 +11252,7 @@ const records =
     },
     "626": {
         "id": 626,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1400774400,
@@ -11270,7 +11270,7 @@ const records =
     },
     "627": {
         "id": 627,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1400774400,
@@ -11288,7 +11288,7 @@ const records =
     },
     "628": {
         "id": 628,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1400774400,
@@ -11306,7 +11306,7 @@ const records =
     },
     "629": {
         "id": 629,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1400774400,
@@ -11324,7 +11324,7 @@ const records =
     },
     "630": {
         "id": 630,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1400774400,
@@ -11342,7 +11342,7 @@ const records =
     },
     "631": {
         "id": 631,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1400774400,
@@ -11360,7 +11360,7 @@ const records =
     },
     "632": {
         "id": 632,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1400774400,
@@ -11378,7 +11378,7 @@ const records =
     },
     "633": {
         "id": 633,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1400774400,
@@ -11396,7 +11396,7 @@ const records =
     },
     "634": {
         "id": 634,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1400774400,
@@ -11414,7 +11414,7 @@ const records =
     },
     "635": {
         "id": 635,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1400774400,
@@ -11432,7 +11432,7 @@ const records =
     },
     "636": {
         "id": 636,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1400774400,
@@ -11450,7 +11450,7 @@ const records =
     },
     "637": {
         "id": 637,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1400774400,
@@ -11468,7 +11468,7 @@ const records =
     },
     "638": {
         "id": 638,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1400774400,
@@ -11486,7 +11486,7 @@ const records =
     },
     "639": {
         "id": 639,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1400774400,
@@ -11504,7 +11504,7 @@ const records =
     },
     "640": {
         "id": 640,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1400774400,
@@ -11522,7 +11522,7 @@ const records =
     },
     "641": {
         "id": 641,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1400774400,
@@ -11540,7 +11540,7 @@ const records =
     },
     "642": {
         "id": 642,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1400774400,
@@ -11558,7 +11558,7 @@ const records =
     },
     "643": {
         "id": 643,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1400774400,
@@ -11576,7 +11576,7 @@ const records =
     },
     "644": {
         "id": 644,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1400774400,
@@ -11594,7 +11594,7 @@ const records =
     },
     "645": {
         "id": 645,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1400774400,
@@ -11612,7 +11612,7 @@ const records =
     },
     "646": {
         "id": 646,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1400774400,
@@ -11630,7 +11630,7 @@ const records =
     },
     "647": {
         "id": 647,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1400774400,
@@ -11648,7 +11648,7 @@ const records =
     },
     "648": {
         "id": 648,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1400774400,
@@ -11666,7 +11666,7 @@ const records =
     },
     "649": {
         "id": 649,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1400774400,
@@ -11684,7 +11684,7 @@ const records =
     },
     "650": {
         "id": 650,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1400774400,
@@ -11702,7 +11702,7 @@ const records =
     },
     "651": {
         "id": 651,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1400774400,
@@ -11720,7 +11720,7 @@ const records =
     },
     "652": {
         "id": 652,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1400774400,
@@ -11738,7 +11738,7 @@ const records =
     },
     "653": {
         "id": 653,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1400774400,
@@ -11756,7 +11756,7 @@ const records =
     },
     "654": {
         "id": 654,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1400774400,
@@ -11774,7 +11774,7 @@ const records =
     },
     "655": {
         "id": 655,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1400774400,
@@ -11792,7 +11792,7 @@ const records =
     },
     "656": {
         "id": 656,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1400774400,
@@ -11810,7 +11810,7 @@ const records =
     },
     "657": {
         "id": 657,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1400774400,
@@ -11828,7 +11828,7 @@ const records =
     },
     "658": {
         "id": 658,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1400774400,
@@ -11846,7 +11846,7 @@ const records =
     },
     "659": {
         "id": 659,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1400774400,
@@ -11864,7 +11864,7 @@ const records =
     },
     "660": {
         "id": 660,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1400774400,
@@ -11882,7 +11882,7 @@ const records =
     },
     "661": {
         "id": 661,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1400774400,
@@ -11900,7 +11900,7 @@ const records =
     },
     "662": {
         "id": 662,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1400774400,
@@ -11918,7 +11918,7 @@ const records =
     },
     "663": {
         "id": 663,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1400774400,
@@ -11936,7 +11936,7 @@ const records =
     },
     "664": {
         "id": 664,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1400774400,
@@ -11954,7 +11954,7 @@ const records =
     },
     "665": {
         "id": 665,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1400774400,
@@ -11972,7 +11972,7 @@ const records =
     },
     "666": {
         "id": 666,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1400774400,
@@ -11990,7 +11990,7 @@ const records =
     },
     "667": {
         "id": 667,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1400774400,
@@ -12008,7 +12008,7 @@ const records =
     },
     "668": {
         "id": 668,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1400774400,
@@ -12026,7 +12026,7 @@ const records =
     },
     "669": {
         "id": 669,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1400774400,
@@ -12044,7 +12044,7 @@ const records =
     },
     "670": {
         "id": 670,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1400774400,
@@ -12062,7 +12062,7 @@ const records =
     },
     "671": {
         "id": 671,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1400774400,
@@ -12080,7 +12080,7 @@ const records =
     },
     "672": {
         "id": 672,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1400774400,
@@ -12098,7 +12098,7 @@ const records =
     },
     "673": {
         "id": 673,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1400774400,
@@ -12116,7 +12116,7 @@ const records =
     },
     "674": {
         "id": 674,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1400774400,
@@ -12134,7 +12134,7 @@ const records =
     },
     "675": {
         "id": 675,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1400774400,
@@ -12152,7 +12152,7 @@ const records =
     },
     "676": {
         "id": 676,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1400774400,
@@ -12170,7 +12170,7 @@ const records =
     },
     "677": {
         "id": 677,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1400774400,
@@ -12188,7 +12188,7 @@ const records =
     },
     "678": {
         "id": 678,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1400774400,
@@ -12206,7 +12206,7 @@ const records =
     },
     "679": {
         "id": 679,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1400774400,
@@ -12224,7 +12224,7 @@ const records =
     },
     "680": {
         "id": 680,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1400774400,
@@ -12242,7 +12242,7 @@ const records =
     },
     "681": {
         "id": 681,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1400774400,
@@ -12260,7 +12260,7 @@ const records =
     },
     "682": {
         "id": 682,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1400774400,
@@ -12278,7 +12278,7 @@ const records =
     },
     "683": {
         "id": 683,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1400774400,
@@ -12296,7 +12296,7 @@ const records =
     },
     "684": {
         "id": 684,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1400774400,
@@ -12314,7 +12314,7 @@ const records =
     },
     "685": {
         "id": 685,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1400774400,
@@ -12332,7 +12332,7 @@ const records =
     },
     "686": {
         "id": 686,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1400774400,
@@ -12350,7 +12350,7 @@ const records =
     },
     "687": {
         "id": 687,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1400774400,
@@ -12368,7 +12368,7 @@ const records =
     },
     "688": {
         "id": 688,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1400774400,
@@ -12386,7 +12386,7 @@ const records =
     },
     "689": {
         "id": 689,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1400774400,
@@ -12404,7 +12404,7 @@ const records =
     },
     "690": {
         "id": 690,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1400774400,
@@ -12422,7 +12422,7 @@ const records =
     },
     "691": {
         "id": 691,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1400774400,
@@ -12440,7 +12440,7 @@ const records =
     },
     "692": {
         "id": 692,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1400774400,
@@ -12458,7 +12458,7 @@ const records =
     },
     "693": {
         "id": 693,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1400774400,
@@ -12476,7 +12476,7 @@ const records =
     },
     "694": {
         "id": 694,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1400774400,
@@ -12494,7 +12494,7 @@ const records =
     },
     "695": {
         "id": 695,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1400774400,
@@ -12512,7 +12512,7 @@ const records =
     },
     "696": {
         "id": 696,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1400774400,
@@ -12530,7 +12530,7 @@ const records =
     },
     "697": {
         "id": 697,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1400774400,
@@ -12548,7 +12548,7 @@ const records =
     },
     "698": {
         "id": 698,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1400774400,
@@ -12566,7 +12566,7 @@ const records =
     },
     "699": {
         "id": 699,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1400774400,
@@ -12584,7 +12584,7 @@ const records =
     },
     "700": {
         "id": 700,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1400774400,
@@ -12602,7 +12602,7 @@ const records =
     },
     "701": {
         "id": 701,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1400774400,
@@ -12620,7 +12620,7 @@ const records =
     },
     "702": {
         "id": 702,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1400774400,
@@ -12638,7 +12638,7 @@ const records =
     },
     "703": {
         "id": 703,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1400774400,
@@ -12656,7 +12656,7 @@ const records =
     },
     "704": {
         "id": 704,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1400774400,
@@ -12674,7 +12674,7 @@ const records =
     },
     "705": {
         "id": 705,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1400774400,
@@ -12692,7 +12692,7 @@ const records =
     },
     "706": {
         "id": 706,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1400774400,
@@ -12710,7 +12710,7 @@ const records =
     },
     "707": {
         "id": 707,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1400774400,
@@ -12728,7 +12728,7 @@ const records =
     },
     "708": {
         "id": 708,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1400774400,
@@ -12746,7 +12746,7 @@ const records =
     },
     "709": {
         "id": 709,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1400774400,
@@ -12764,7 +12764,7 @@ const records =
     },
     "710": {
         "id": 710,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1400774400,
@@ -12782,7 +12782,7 @@ const records =
     },
     "711": {
         "id": 711,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1400774400,
@@ -12800,7 +12800,7 @@ const records =
     },
     "712": {
         "id": 712,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1400774400,
@@ -12818,7 +12818,7 @@ const records =
     },
     "713": {
         "id": 713,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1400774400,
@@ -12836,7 +12836,7 @@ const records =
     },
     "714": {
         "id": 714,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1400774400,
@@ -12854,7 +12854,7 @@ const records =
     },
     "715": {
         "id": 715,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1400774400,
@@ -12872,7 +12872,7 @@ const records =
     },
     "716": {
         "id": 716,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1400774400,
@@ -12890,7 +12890,7 @@ const records =
     },
     "717": {
         "id": 717,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1400774400,
@@ -12908,7 +12908,7 @@ const records =
     },
     "718": {
         "id": 718,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1400774400,
@@ -12926,7 +12926,7 @@ const records =
     },
     "719": {
         "id": 719,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1400774400,
@@ -12944,7 +12944,7 @@ const records =
     },
     "720": {
         "id": 720,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1400774400,
@@ -12962,7 +12962,7 @@ const records =
     },
     "721": {
         "id": 721,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1400774400,
@@ -12980,7 +12980,7 @@ const records =
     },
     "722": {
         "id": 722,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1400774400,
@@ -12998,7 +12998,7 @@ const records =
     },
     "723": {
         "id": 723,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1400774400,
@@ -13016,7 +13016,7 @@ const records =
     },
     "724": {
         "id": 724,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1400774400,
@@ -13034,7 +13034,7 @@ const records =
     },
     "725": {
         "id": 725,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1400774400,
@@ -13052,7 +13052,7 @@ const records =
     },
     "726": {
         "id": 726,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1400774400,
@@ -13070,7 +13070,7 @@ const records =
     },
     "727": {
         "id": 727,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1400774400,
@@ -13088,7 +13088,7 @@ const records =
     },
     "728": {
         "id": 728,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1400774400,
@@ -13106,7 +13106,7 @@ const records =
     },
     "729": {
         "id": 729,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1400774400,
@@ -13124,7 +13124,7 @@ const records =
     },
     "730": {
         "id": 730,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1400774400,
@@ -13142,7 +13142,7 @@ const records =
     },
     "731": {
         "id": 731,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1400774400,
@@ -13160,7 +13160,7 @@ const records =
     },
     "732": {
         "id": 732,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1400774400,
@@ -13178,7 +13178,7 @@ const records =
     },
     "733": {
         "id": 733,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1400774400,
@@ -13196,7 +13196,7 @@ const records =
     },
     "734": {
         "id": 734,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1400774400,
@@ -13214,7 +13214,7 @@ const records =
     },
     "735": {
         "id": 735,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1400774400,
@@ -13232,7 +13232,7 @@ const records =
     },
     "736": {
         "id": 736,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1400774400,
@@ -13250,7 +13250,7 @@ const records =
     },
     "737": {
         "id": 737,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1400774400,
@@ -13268,7 +13268,7 @@ const records =
     },
     "738": {
         "id": 738,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1400774400,
@@ -13286,7 +13286,7 @@ const records =
     },
     "739": {
         "id": 739,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1400774400,
@@ -13304,7 +13304,7 @@ const records =
     },
     "740": {
         "id": 740,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1400774400,
@@ -13322,7 +13322,7 @@ const records =
     },
     "741": {
         "id": 741,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1400774400,
@@ -13340,7 +13340,7 @@ const records =
     },
     "742": {
         "id": 742,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1400774400,
@@ -13358,7 +13358,7 @@ const records =
     },
     "743": {
         "id": 743,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1400774400,
@@ -13376,7 +13376,7 @@ const records =
     },
     "744": {
         "id": 744,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1400774400,
@@ -13394,7 +13394,7 @@ const records =
     },
     "745": {
         "id": 745,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1400774400,
@@ -13412,7 +13412,7 @@ const records =
     },
     "746": {
         "id": 746,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1400774400,
@@ -13430,7 +13430,7 @@ const records =
     },
     "747": {
         "id": 747,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1400774400,
@@ -13448,7 +13448,7 @@ const records =
     },
     "748": {
         "id": 748,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1400774400,
@@ -13466,7 +13466,7 @@ const records =
     },
     "749": {
         "id": 749,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1400774400,
@@ -13484,7 +13484,7 @@ const records =
     },
     "750": {
         "id": 750,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1400774400,
@@ -13502,7 +13502,7 @@ const records =
     },
     "751": {
         "id": 751,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1400774400,
@@ -13520,7 +13520,7 @@ const records =
     },
     "752": {
         "id": 752,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1400774400,
@@ -13538,7 +13538,7 @@ const records =
     },
     "753": {
         "id": 753,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1400774400,
@@ -13556,7 +13556,7 @@ const records =
     },
     "754": {
         "id": 754,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1400774400,
@@ -13574,7 +13574,7 @@ const records =
     },
     "755": {
         "id": 755,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1400774400,
@@ -13592,7 +13592,7 @@ const records =
     },
     "756": {
         "id": 756,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1400774400,
@@ -13610,7 +13610,7 @@ const records =
     },
     "757": {
         "id": 757,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1400774400,
@@ -13628,7 +13628,7 @@ const records =
     },
     "758": {
         "id": 758,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1400774400,
@@ -13646,7 +13646,7 @@ const records =
     },
     "759": {
         "id": 759,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1400774400,
@@ -13664,7 +13664,7 @@ const records =
     },
     "760": {
         "id": 760,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1400774400,
@@ -13682,7 +13682,7 @@ const records =
     },
     "761": {
         "id": 761,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1400774400,
@@ -13700,7 +13700,7 @@ const records =
     },
     "762": {
         "id": 762,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1400774400,
@@ -13718,7 +13718,7 @@ const records =
     },
     "763": {
         "id": 763,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1400774400,
@@ -13736,7 +13736,7 @@ const records =
     },
     "764": {
         "id": 764,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1400774400,
@@ -13754,7 +13754,7 @@ const records =
     },
     "765": {
         "id": 765,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1400774400,
@@ -13772,7 +13772,7 @@ const records =
     },
     "766": {
         "id": 766,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1400774400,
@@ -13790,7 +13790,7 @@ const records =
     },
     "767": {
         "id": 767,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1400774400,
@@ -13808,7 +13808,7 @@ const records =
     },
     "768": {
         "id": 768,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1400774400,
@@ -13826,7 +13826,7 @@ const records =
     },
     "769": {
         "id": 769,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1400774400,
@@ -13844,7 +13844,7 @@ const records =
     },
     "770": {
         "id": 770,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1400774400,
@@ -13862,7 +13862,7 @@ const records =
     },
     "771": {
         "id": 771,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1400774400,
@@ -13880,7 +13880,7 @@ const records =
     },
     "772": {
         "id": 772,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1400774400,
@@ -13898,7 +13898,7 @@ const records =
     },
     "773": {
         "id": 773,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1400774400,
@@ -13916,7 +13916,7 @@ const records =
     },
     "774": {
         "id": 774,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1400774400,
@@ -13934,7 +13934,7 @@ const records =
     },
     "775": {
         "id": 775,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1400774400,
@@ -13952,7 +13952,7 @@ const records =
     },
     "776": {
         "id": 776,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1400774400,
@@ -13970,7 +13970,7 @@ const records =
     },
     "777": {
         "id": 777,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1400774400,
@@ -13988,7 +13988,7 @@ const records =
     },
     "778": {
         "id": 778,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1400774400,
@@ -14006,7 +14006,7 @@ const records =
     },
     "779": {
         "id": 779,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1400774400,
@@ -14024,7 +14024,7 @@ const records =
     },
     "780": {
         "id": 780,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1400774400,
@@ -14042,7 +14042,7 @@ const records =
     },
     "781": {
         "id": 781,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1400774400,
@@ -14060,7 +14060,7 @@ const records =
     },
     "782": {
         "id": 782,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1400774400,
@@ -14078,7 +14078,7 @@ const records =
     },
     "783": {
         "id": 783,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1400774400,
@@ -14096,7 +14096,7 @@ const records =
     },
     "784": {
         "id": 784,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1399564800,
@@ -14114,7 +14114,7 @@ const records =
     },
     "785": {
         "id": 785,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1399564800,
@@ -14132,7 +14132,7 @@ const records =
     },
     "786": {
         "id": 786,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1399564800,
@@ -14150,7 +14150,7 @@ const records =
     },
     "787": {
         "id": 787,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1399564800,
@@ -14168,7 +14168,7 @@ const records =
     },
     "788": {
         "id": 788,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1399564800,
@@ -14186,7 +14186,7 @@ const records =
     },
     "789": {
         "id": 789,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1399564800,
@@ -14204,7 +14204,7 @@ const records =
     },
     "790": {
         "id": 790,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1399564800,
@@ -14222,7 +14222,7 @@ const records =
     },
     "791": {
         "id": 791,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1399564800,
@@ -14240,7 +14240,7 @@ const records =
     },
     "792": {
         "id": 792,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1399564800,
@@ -14258,7 +14258,7 @@ const records =
     },
     "793": {
         "id": 793,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1399564800,
@@ -14276,7 +14276,7 @@ const records =
     },
     "794": {
         "id": 794,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1399564800,
@@ -14294,7 +14294,7 @@ const records =
     },
     "795": {
         "id": 795,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1399564800,
@@ -14312,7 +14312,7 @@ const records =
     },
     "796": {
         "id": 796,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1399564800,
@@ -14330,7 +14330,7 @@ const records =
     },
     "797": {
         "id": 797,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1399564800,
@@ -14348,7 +14348,7 @@ const records =
     },
     "798": {
         "id": 798,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1399564800,
@@ -14366,7 +14366,7 @@ const records =
     },
     "799": {
         "id": 799,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1399564800,
@@ -14384,7 +14384,7 @@ const records =
     },
     "800": {
         "id": 800,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1399564800,
@@ -14402,7 +14402,7 @@ const records =
     },
     "801": {
         "id": 801,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1399564800,
@@ -14420,7 +14420,7 @@ const records =
     },
     "802": {
         "id": 802,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1399564800,
@@ -14438,7 +14438,7 @@ const records =
     },
     "803": {
         "id": 803,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1399564800,
@@ -14456,7 +14456,7 @@ const records =
     },
     "804": {
         "id": 804,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1399564800,
@@ -14474,7 +14474,7 @@ const records =
     },
     "805": {
         "id": 805,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1399564800,
@@ -14492,7 +14492,7 @@ const records =
     },
     "806": {
         "id": 806,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1399564800,
@@ -14510,7 +14510,7 @@ const records =
     },
     "807": {
         "id": 807,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1399564800,
@@ -14528,7 +14528,7 @@ const records =
     },
     "808": {
         "id": 808,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1399564800,
@@ -14546,7 +14546,7 @@ const records =
     },
     "809": {
         "id": 809,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1399564800,
@@ -14564,7 +14564,7 @@ const records =
     },
     "810": {
         "id": 810,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1399564800,
@@ -14582,7 +14582,7 @@ const records =
     },
     "811": {
         "id": 811,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1399564800,
@@ -14600,7 +14600,7 @@ const records =
     },
     "812": {
         "id": 812,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1399564800,
@@ -14618,7 +14618,7 @@ const records =
     },
     "813": {
         "id": 813,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1399564800,
@@ -14636,7 +14636,7 @@ const records =
     },
     "814": {
         "id": 814,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1399564800,
@@ -14654,7 +14654,7 @@ const records =
     },
     "815": {
         "id": 815,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1399564800,
@@ -14672,7 +14672,7 @@ const records =
     },
     "816": {
         "id": 816,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1399564800,
@@ -14690,7 +14690,7 @@ const records =
     },
     "817": {
         "id": 817,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1399564800,
@@ -14708,7 +14708,7 @@ const records =
     },
     "818": {
         "id": 818,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1399564800,
@@ -14726,7 +14726,7 @@ const records =
     },
     "819": {
         "id": 819,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1399564800,
@@ -14744,7 +14744,7 @@ const records =
     },
     "820": {
         "id": 820,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1399564800,
@@ -14762,7 +14762,7 @@ const records =
     },
     "821": {
         "id": 821,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1399564800,
@@ -14780,7 +14780,7 @@ const records =
     },
     "822": {
         "id": 822,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1399564800,
@@ -14798,7 +14798,7 @@ const records =
     },
     "823": {
         "id": 823,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1399564800,
@@ -14816,7 +14816,7 @@ const records =
     },
     "824": {
         "id": 824,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1399564800,
@@ -14834,7 +14834,7 @@ const records =
     },
     "825": {
         "id": 825,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1399564800,
@@ -14852,7 +14852,7 @@ const records =
     },
     "826": {
         "id": 826,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1399564800,
@@ -14870,7 +14870,7 @@ const records =
     },
     "827": {
         "id": 827,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1399564800,
@@ -14888,7 +14888,7 @@ const records =
     },
     "828": {
         "id": 828,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1399564800,
@@ -14906,7 +14906,7 @@ const records =
     },
     "829": {
         "id": 829,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1399564800,
@@ -14924,7 +14924,7 @@ const records =
     },
     "830": {
         "id": 830,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1399564800,
@@ -14942,7 +14942,7 @@ const records =
     },
     "831": {
         "id": 831,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1399564800,
@@ -14960,7 +14960,7 @@ const records =
     },
     "832": {
         "id": 832,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1399564800,
@@ -14978,7 +14978,7 @@ const records =
     },
     "833": {
         "id": 833,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1399564800,
@@ -14996,7 +14996,7 @@ const records =
     },
     "834": {
         "id": 834,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1399564800,
@@ -15014,7 +15014,7 @@ const records =
     },
     "835": {
         "id": 835,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1399564800,
@@ -15032,7 +15032,7 @@ const records =
     },
     "836": {
         "id": 836,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1399564800,
@@ -15050,7 +15050,7 @@ const records =
     },
     "837": {
         "id": 837,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1399564800,
@@ -15068,7 +15068,7 @@ const records =
     },
     "838": {
         "id": 838,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1399564800,
@@ -15086,7 +15086,7 @@ const records =
     },
     "839": {
         "id": 839,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1399564800,
@@ -15104,7 +15104,7 @@ const records =
     },
     "840": {
         "id": 840,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1399564800,
@@ -15122,7 +15122,7 @@ const records =
     },
     "841": {
         "id": 841,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1399564800,
@@ -15140,7 +15140,7 @@ const records =
     },
     "842": {
         "id": 842,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1399564800,
@@ -15158,7 +15158,7 @@ const records =
     },
     "843": {
         "id": 843,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1399564800,
@@ -15176,7 +15176,7 @@ const records =
     },
     "844": {
         "id": 844,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1399564800,
@@ -15194,7 +15194,7 @@ const records =
     },
     "845": {
         "id": 845,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1399564800,
@@ -15212,7 +15212,7 @@ const records =
     },
     "846": {
         "id": 846,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1399564800,
@@ -15230,7 +15230,7 @@ const records =
     },
     "847": {
         "id": 847,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1399564800,
@@ -15248,7 +15248,7 @@ const records =
     },
     "848": {
         "id": 848,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1399564800,
@@ -15266,7 +15266,7 @@ const records =
     },
     "849": {
         "id": 849,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1399564800,
@@ -15284,7 +15284,7 @@ const records =
     },
     "850": {
         "id": 850,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1399564800,
@@ -15302,7 +15302,7 @@ const records =
     },
     "851": {
         "id": 851,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1399564800,
@@ -15320,7 +15320,7 @@ const records =
     },
     "852": {
         "id": 852,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1399564800,
@@ -15338,7 +15338,7 @@ const records =
     },
     "853": {
         "id": 853,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1399564800,
@@ -15356,7 +15356,7 @@ const records =
     },
     "854": {
         "id": 854,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1399564800,
@@ -15374,7 +15374,7 @@ const records =
     },
     "855": {
         "id": 855,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1399564800,
@@ -15392,7 +15392,7 @@ const records =
     },
     "856": {
         "id": 856,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1399564800,
@@ -15410,7 +15410,7 @@ const records =
     },
     "857": {
         "id": 857,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1399564800,
@@ -15428,7 +15428,7 @@ const records =
     },
     "858": {
         "id": 858,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1399564800,
@@ -15446,7 +15446,7 @@ const records =
     },
     "859": {
         "id": 859,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1399564800,
@@ -15464,7 +15464,7 @@ const records =
     },
     "860": {
         "id": 860,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1399564800,
@@ -15482,7 +15482,7 @@ const records =
     },
     "861": {
         "id": 861,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1399564800,
@@ -15500,7 +15500,7 @@ const records =
     },
     "862": {
         "id": 862,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1399564800,
@@ -15518,7 +15518,7 @@ const records =
     },
     "863": {
         "id": 863,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1399564800,
@@ -15536,7 +15536,7 @@ const records =
     },
     "864": {
         "id": 864,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1399564800,
@@ -15554,7 +15554,7 @@ const records =
     },
     "865": {
         "id": 865,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1399564800,
@@ -15572,7 +15572,7 @@ const records =
     },
     "866": {
         "id": 866,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1399564800,
@@ -15590,7 +15590,7 @@ const records =
     },
     "867": {
         "id": 867,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1399564800,
@@ -15608,7 +15608,7 @@ const records =
     },
     "868": {
         "id": 868,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1399564800,
@@ -15626,7 +15626,7 @@ const records =
     },
     "869": {
         "id": 869,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1399564800,
@@ -15644,7 +15644,7 @@ const records =
     },
     "870": {
         "id": 870,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1399564800,
@@ -15662,7 +15662,7 @@ const records =
     },
     "871": {
         "id": 871,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1399564800,
@@ -15680,7 +15680,7 @@ const records =
     },
     "872": {
         "id": 872,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1399564800,
@@ -15698,7 +15698,7 @@ const records =
     },
     "873": {
         "id": 873,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1399564800,
@@ -15716,7 +15716,7 @@ const records =
     },
     "874": {
         "id": 874,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1399564800,
@@ -15734,7 +15734,7 @@ const records =
     },
     "875": {
         "id": 875,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1399564800,
@@ -15752,7 +15752,7 @@ const records =
     },
     "876": {
         "id": 876,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1399564800,
@@ -15770,7 +15770,7 @@ const records =
     },
     "877": {
         "id": 877,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1399564800,
@@ -15788,7 +15788,7 @@ const records =
     },
     "878": {
         "id": 878,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1399564800,
@@ -15806,7 +15806,7 @@ const records =
     },
     "879": {
         "id": 879,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1399564800,
@@ -15824,7 +15824,7 @@ const records =
     },
     "880": {
         "id": 880,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1399564800,
@@ -15842,7 +15842,7 @@ const records =
     },
     "881": {
         "id": 881,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1399564800,
@@ -15860,7 +15860,7 @@ const records =
     },
     "882": {
         "id": 882,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1399564800,
@@ -15878,7 +15878,7 @@ const records =
     },
     "883": {
         "id": 883,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1399564800,
@@ -15896,7 +15896,7 @@ const records =
     },
     "884": {
         "id": 884,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1399564800,
@@ -15914,7 +15914,7 @@ const records =
     },
     "885": {
         "id": 885,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1399564800,
@@ -15932,7 +15932,7 @@ const records =
     },
     "886": {
         "id": 886,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1399564800,
@@ -15950,7 +15950,7 @@ const records =
     },
     "887": {
         "id": 887,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1399564800,
@@ -15968,7 +15968,7 @@ const records =
     },
     "888": {
         "id": 888,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1399564800,
@@ -15986,7 +15986,7 @@ const records =
     },
     "889": {
         "id": 889,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1399564800,
@@ -16004,7 +16004,7 @@ const records =
     },
     "890": {
         "id": 890,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1399564800,
@@ -16022,7 +16022,7 @@ const records =
     },
     "891": {
         "id": 891,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1399564800,
@@ -16040,7 +16040,7 @@ const records =
     },
     "892": {
         "id": 892,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1399564800,
@@ -16058,7 +16058,7 @@ const records =
     },
     "893": {
         "id": 893,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1399564800,
@@ -16076,7 +16076,7 @@ const records =
     },
     "894": {
         "id": 894,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1399564800,
@@ -16094,7 +16094,7 @@ const records =
     },
     "895": {
         "id": 895,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1399564800,
@@ -16112,7 +16112,7 @@ const records =
     },
     "896": {
         "id": 896,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1399564800,
@@ -16130,7 +16130,7 @@ const records =
     },
     "897": {
         "id": 897,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1399564800,
@@ -16148,7 +16148,7 @@ const records =
     },
     "898": {
         "id": 898,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1399564800,
@@ -16166,7 +16166,7 @@ const records =
     },
     "899": {
         "id": 899,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1399564800,
@@ -16184,7 +16184,7 @@ const records =
     },
     "900": {
         "id": 900,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1399564800,
@@ -16202,7 +16202,7 @@ const records =
     },
     "901": {
         "id": 901,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1399564800,
@@ -16220,7 +16220,7 @@ const records =
     },
     "902": {
         "id": 902,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1399564800,
@@ -16238,7 +16238,7 @@ const records =
     },
     "903": {
         "id": 903,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1399564800,
@@ -16256,7 +16256,7 @@ const records =
     },
     "904": {
         "id": 904,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1399564800,
@@ -16274,7 +16274,7 @@ const records =
     },
     "905": {
         "id": 905,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1399564800,
@@ -16292,7 +16292,7 @@ const records =
     },
     "906": {
         "id": 906,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1399564800,
@@ -16310,7 +16310,7 @@ const records =
     },
     "907": {
         "id": 907,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1399564800,
@@ -16328,7 +16328,7 @@ const records =
     },
     "908": {
         "id": 908,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1399564800,
@@ -16346,7 +16346,7 @@ const records =
     },
     "909": {
         "id": 909,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1399564800,
@@ -16364,7 +16364,7 @@ const records =
     },
     "910": {
         "id": 910,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1399564800,
@@ -16382,7 +16382,7 @@ const records =
     },
     "911": {
         "id": 911,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1399564800,
@@ -16400,7 +16400,7 @@ const records =
     },
     "912": {
         "id": 912,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1399564800,
@@ -16418,7 +16418,7 @@ const records =
     },
     "913": {
         "id": 913,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1399564800,
@@ -16436,7 +16436,7 @@ const records =
     },
     "914": {
         "id": 914,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1399564800,
@@ -16454,7 +16454,7 @@ const records =
     },
     "915": {
         "id": 915,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1399564800,
@@ -16472,7 +16472,7 @@ const records =
     },
     "916": {
         "id": 916,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1399564800,
@@ -16490,7 +16490,7 @@ const records =
     },
     "917": {
         "id": 917,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1399564800,
@@ -16508,7 +16508,7 @@ const records =
     },
     "918": {
         "id": 918,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1399564800,
@@ -16526,7 +16526,7 @@ const records =
     },
     "919": {
         "id": 919,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1399564800,
@@ -16544,7 +16544,7 @@ const records =
     },
     "920": {
         "id": 920,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1399564800,
@@ -16562,7 +16562,7 @@ const records =
     },
     "921": {
         "id": 921,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1399564800,
@@ -16580,7 +16580,7 @@ const records =
     },
     "922": {
         "id": 922,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1399564800,
@@ -16598,7 +16598,7 @@ const records =
     },
     "923": {
         "id": 923,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1399564800,
@@ -16616,7 +16616,7 @@ const records =
     },
     "924": {
         "id": 924,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1399564800,
@@ -16634,7 +16634,7 @@ const records =
     },
     "925": {
         "id": 925,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1399564800,
@@ -16652,7 +16652,7 @@ const records =
     },
     "926": {
         "id": 926,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1399564800,
@@ -16670,7 +16670,7 @@ const records =
     },
     "927": {
         "id": 927,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1399564800,
@@ -16688,7 +16688,7 @@ const records =
     },
     "928": {
         "id": 928,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1399564800,
@@ -16706,7 +16706,7 @@ const records =
     },
     "929": {
         "id": 929,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1399564800,
@@ -16724,7 +16724,7 @@ const records =
     },
     "930": {
         "id": 930,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1399564800,
@@ -16742,7 +16742,7 @@ const records =
     },
     "931": {
         "id": 931,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1399564800,
@@ -16760,7 +16760,7 @@ const records =
     },
     "932": {
         "id": 932,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1399564800,
@@ -16778,7 +16778,7 @@ const records =
     },
     "933": {
         "id": 933,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1399564800,
@@ -16796,7 +16796,7 @@ const records =
     },
     "934": {
         "id": 934,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1399564800,
@@ -16814,7 +16814,7 @@ const records =
     },
     "935": {
         "id": 935,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1399564800,
@@ -16832,7 +16832,7 @@ const records =
     },
     "936": {
         "id": 936,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1399564800,
@@ -16850,7 +16850,7 @@ const records =
     },
     "937": {
         "id": 937,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1399564800,
@@ -16868,7 +16868,7 @@ const records =
     },
     "938": {
         "id": 938,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1399564800,
@@ -16886,7 +16886,7 @@ const records =
     },
     "939": {
         "id": 939,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1399564800,
@@ -16904,7 +16904,7 @@ const records =
     },
     "940": {
         "id": 940,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1399564800,
@@ -16922,7 +16922,7 @@ const records =
     },
     "941": {
         "id": 941,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1399564800,
@@ -16940,7 +16940,7 @@ const records =
     },
     "942": {
         "id": 942,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1399564800,
@@ -16958,7 +16958,7 @@ const records =
     },
     "943": {
         "id": 943,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1399564800,
@@ -16976,7 +16976,7 @@ const records =
     },
     "944": {
         "id": 944,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1399564800,
@@ -16994,7 +16994,7 @@ const records =
     },
     "945": {
         "id": 945,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1399564800,
@@ -17012,7 +17012,7 @@ const records =
     },
     "946": {
         "id": 946,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1399564800,
@@ -17030,7 +17030,7 @@ const records =
     },
     "947": {
         "id": 947,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1399564800,
@@ -17048,7 +17048,7 @@ const records =
     },
     "948": {
         "id": 948,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1399564800,
@@ -17066,7 +17066,7 @@ const records =
     },
     "949": {
         "id": 949,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1399564800,
@@ -17084,7 +17084,7 @@ const records =
     },
     "950": {
         "id": 950,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1399564800,
@@ -17102,7 +17102,7 @@ const records =
     },
     "951": {
         "id": 951,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1399564800,
@@ -17120,7 +17120,7 @@ const records =
     },
     "952": {
         "id": 952,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1399564800,
@@ -17138,7 +17138,7 @@ const records =
     },
     "953": {
         "id": 953,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1399564800,
@@ -17156,7 +17156,7 @@ const records =
     },
     "954": {
         "id": 954,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1399564800,
@@ -17174,7 +17174,7 @@ const records =
     },
     "955": {
         "id": 955,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1399564800,
@@ -17192,7 +17192,7 @@ const records =
     },
     "956": {
         "id": 956,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1399564800,
@@ -17210,7 +17210,7 @@ const records =
     },
     "957": {
         "id": 957,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1399564800,
@@ -17228,7 +17228,7 @@ const records =
     },
     "958": {
         "id": 958,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1399564800,
@@ -17246,7 +17246,7 @@ const records =
     },
     "959": {
         "id": 959,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1399564800,
@@ -17264,7 +17264,7 @@ const records =
     },
     "960": {
         "id": 960,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1399564800,
@@ -17282,7 +17282,7 @@ const records =
     },
     "961": {
         "id": 961,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1399564800,
@@ -17300,7 +17300,7 @@ const records =
     },
     "962": {
         "id": 962,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1399564800,
@@ -17318,7 +17318,7 @@ const records =
     },
     "963": {
         "id": 963,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1399564800,
@@ -17336,7 +17336,7 @@ const records =
     },
     "964": {
         "id": 964,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1399564800,
@@ -17354,7 +17354,7 @@ const records =
     },
     "965": {
         "id": 965,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1399564800,
@@ -17372,7 +17372,7 @@ const records =
     },
     "966": {
         "id": 966,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1399564800,
@@ -17390,7 +17390,7 @@ const records =
     },
     "967": {
         "id": 967,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1399564800,
@@ -17408,7 +17408,7 @@ const records =
     },
     "968": {
         "id": 968,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1399564800,
@@ -17426,7 +17426,7 @@ const records =
     },
     "969": {
         "id": 969,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1399564800,
@@ -17444,7 +17444,7 @@ const records =
     },
     "970": {
         "id": 970,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1399564800,
@@ -17462,7 +17462,7 @@ const records =
     },
     "971": {
         "id": 971,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1399564800,
@@ -17480,7 +17480,7 @@ const records =
     },
     "972": {
         "id": 972,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1399564800,
@@ -17498,7 +17498,7 @@ const records =
     },
     "973": {
         "id": 973,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1399564800,
@@ -17516,7 +17516,7 @@ const records =
     },
     "974": {
         "id": 974,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1399564800,
@@ -17534,7 +17534,7 @@ const records =
     },
     "975": {
         "id": 975,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1399564800,
@@ -17552,7 +17552,7 @@ const records =
     },
     "976": {
         "id": 976,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1399564800,
@@ -17570,7 +17570,7 @@ const records =
     },
     "977": {
         "id": 977,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1399564800,
@@ -17588,7 +17588,7 @@ const records =
     },
     "978": {
         "id": 978,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1399564800,
@@ -17606,7 +17606,7 @@ const records =
     },
     "979": {
         "id": 979,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1399564800,
@@ -17624,7 +17624,7 @@ const records =
     },
     "980": {
         "id": 980,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1399564800,
@@ -17642,7 +17642,7 @@ const records =
     },
     "981": {
         "id": 981,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1399564800,
@@ -17660,7 +17660,7 @@ const records =
     },
     "982": {
         "id": 982,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1399564800,
@@ -17678,7 +17678,7 @@ const records =
     },
     "983": {
         "id": 983,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1399564800,
@@ -17696,7 +17696,7 @@ const records =
     },
     "984": {
         "id": 984,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1399564800,
@@ -17714,7 +17714,7 @@ const records =
     },
     "985": {
         "id": 985,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1399564800,
@@ -17732,7 +17732,7 @@ const records =
     },
     "986": {
         "id": 986,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1399564800,
@@ -17750,7 +17750,7 @@ const records =
     },
     "987": {
         "id": 987,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1399564800,
@@ -17768,7 +17768,7 @@ const records =
     },
     "988": {
         "id": 988,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1399564800,
@@ -17786,7 +17786,7 @@ const records =
     },
     "989": {
         "id": 989,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1399564800,
@@ -17804,7 +17804,7 @@ const records =
     },
     "990": {
         "id": 990,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1399564800,
@@ -17822,7 +17822,7 @@ const records =
     },
     "991": {
         "id": 991,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1399564800,
@@ -17840,7 +17840,7 @@ const records =
     },
     "992": {
         "id": 992,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1399564800,
@@ -17858,7 +17858,7 @@ const records =
     },
     "993": {
         "id": 993,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1399564800,
@@ -17876,7 +17876,7 @@ const records =
     },
     "994": {
         "id": 994,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1399564800,
@@ -17894,7 +17894,7 @@ const records =
     },
     "995": {
         "id": 995,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1399564800,
@@ -17912,7 +17912,7 @@ const records =
     },
     "996": {
         "id": 996,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1399564800,
@@ -17930,7 +17930,7 @@ const records =
     },
     "997": {
         "id": 997,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1399564800,
@@ -17948,7 +17948,7 @@ const records =
     },
     "998": {
         "id": 998,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1399564800,
@@ -17966,7 +17966,7 @@ const records =
     },
     "999": {
         "id": 999,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1399564800,
@@ -17984,7 +17984,7 @@ const records =
     },
     "1000": {
         "id": 1000,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1399564800,
@@ -18002,7 +18002,7 @@ const records =
     },
     "1001": {
         "id": 1001,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1399564800,
@@ -18020,7 +18020,7 @@ const records =
     },
     "1002": {
         "id": 1002,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1399564800,
@@ -18038,7 +18038,7 @@ const records =
     },
     "1003": {
         "id": 1003,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1399564800,
@@ -18056,7 +18056,7 @@ const records =
     },
     "1004": {
         "id": 1004,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1399564800,
@@ -18074,7 +18074,7 @@ const records =
     },
     "1005": {
         "id": 1005,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1399564800,
@@ -18092,7 +18092,7 @@ const records =
     },
     "1006": {
         "id": 1006,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1399564800,
@@ -18110,7 +18110,7 @@ const records =
     },
     "1007": {
         "id": 1007,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1399564800,
@@ -18128,7 +18128,7 @@ const records =
     },
     "1008": {
         "id": 1008,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1388678400,
@@ -18146,7 +18146,7 @@ const records =
     },
     "1009": {
         "id": 1009,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1388678400,
@@ -18164,7 +18164,7 @@ const records =
     },
     "1010": {
         "id": 1010,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1388678400,
@@ -18182,7 +18182,7 @@ const records =
     },
     "1011": {
         "id": 1011,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1388678400,
@@ -18200,7 +18200,7 @@ const records =
     },
     "1012": {
         "id": 1012,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1388678400,
@@ -18218,7 +18218,7 @@ const records =
     },
     "1013": {
         "id": 1013,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1388678400,
@@ -18236,7 +18236,7 @@ const records =
     },
     "1014": {
         "id": 1014,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1388678400,
@@ -18254,7 +18254,7 @@ const records =
     },
     "1015": {
         "id": 1015,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1388678400,
@@ -18272,7 +18272,7 @@ const records =
     },
     "1016": {
         "id": 1016,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1388678400,
@@ -18290,7 +18290,7 @@ const records =
     },
     "1017": {
         "id": 1017,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1388678400,
@@ -18308,7 +18308,7 @@ const records =
     },
     "1018": {
         "id": 1018,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1388678400,
@@ -18326,7 +18326,7 @@ const records =
     },
     "1019": {
         "id": 1019,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1388678400,
@@ -18344,7 +18344,7 @@ const records =
     },
     "1020": {
         "id": 1020,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1388678400,
@@ -18362,7 +18362,7 @@ const records =
     },
     "1021": {
         "id": 1021,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1388678400,
@@ -18380,7 +18380,7 @@ const records =
     },
     "1022": {
         "id": 1022,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1388678400,
@@ -18398,7 +18398,7 @@ const records =
     },
     "1023": {
         "id": 1023,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1388678400,
@@ -18416,7 +18416,7 @@ const records =
     },
     "1024": {
         "id": 1024,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1388678400,
@@ -18434,7 +18434,7 @@ const records =
     },
     "1025": {
         "id": 1025,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1388678400,
@@ -18452,7 +18452,7 @@ const records =
     },
     "1026": {
         "id": 1026,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1388678400,
@@ -18470,7 +18470,7 @@ const records =
     },
     "1027": {
         "id": 1027,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1388678400,
@@ -18488,7 +18488,7 @@ const records =
     },
     "1028": {
         "id": 1028,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1388678400,
@@ -18506,7 +18506,7 @@ const records =
     },
     "1029": {
         "id": 1029,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1388678400,
@@ -18524,7 +18524,7 @@ const records =
     },
     "1030": {
         "id": 1030,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1388678400,
@@ -18542,7 +18542,7 @@ const records =
     },
     "1031": {
         "id": 1031,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1388678400,
@@ -18560,7 +18560,7 @@ const records =
     },
     "1032": {
         "id": 1032,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1388678400,
@@ -18578,7 +18578,7 @@ const records =
     },
     "1033": {
         "id": 1033,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1388678400,
@@ -18596,7 +18596,7 @@ const records =
     },
     "1034": {
         "id": 1034,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1388678400,
@@ -18614,7 +18614,7 @@ const records =
     },
     "1035": {
         "id": 1035,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1388678400,
@@ -18632,7 +18632,7 @@ const records =
     },
     "1036": {
         "id": 1036,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1388678400,
@@ -18650,7 +18650,7 @@ const records =
     },
     "1037": {
         "id": 1037,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1388678400,
@@ -18668,7 +18668,7 @@ const records =
     },
     "1038": {
         "id": 1038,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1388678400,
@@ -18686,7 +18686,7 @@ const records =
     },
     "1039": {
         "id": 1039,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1388678400,
@@ -18704,7 +18704,7 @@ const records =
     },
     "1040": {
         "id": 1040,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1388678400,
@@ -18722,7 +18722,7 @@ const records =
     },
     "1041": {
         "id": 1041,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1388678400,
@@ -18740,7 +18740,7 @@ const records =
     },
     "1042": {
         "id": 1042,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1388678400,
@@ -18758,7 +18758,7 @@ const records =
     },
     "1043": {
         "id": 1043,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1388678400,
@@ -18776,7 +18776,7 @@ const records =
     },
     "1044": {
         "id": 1044,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1388678400,
@@ -18794,7 +18794,7 @@ const records =
     },
     "1045": {
         "id": 1045,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1388678400,
@@ -18812,7 +18812,7 @@ const records =
     },
     "1046": {
         "id": 1046,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1388678400,
@@ -18830,7 +18830,7 @@ const records =
     },
     "1047": {
         "id": 1047,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1388678400,
@@ -18848,7 +18848,7 @@ const records =
     },
     "1048": {
         "id": 1048,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1388678400,
@@ -18866,7 +18866,7 @@ const records =
     },
     "1049": {
         "id": 1049,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1388678400,
@@ -18884,7 +18884,7 @@ const records =
     },
     "1050": {
         "id": 1050,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1388678400,
@@ -18902,7 +18902,7 @@ const records =
     },
     "1051": {
         "id": 1051,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1388678400,
@@ -18920,7 +18920,7 @@ const records =
     },
     "1052": {
         "id": 1052,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1388678400,
@@ -18938,7 +18938,7 @@ const records =
     },
     "1053": {
         "id": 1053,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1388678400,
@@ -18956,7 +18956,7 @@ const records =
     },
     "1054": {
         "id": 1054,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1388678400,
@@ -18974,7 +18974,7 @@ const records =
     },
     "1055": {
         "id": 1055,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1388678400,
@@ -18992,7 +18992,7 @@ const records =
     },
     "1056": {
         "id": 1056,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1388678400,
@@ -19010,7 +19010,7 @@ const records =
     },
     "1057": {
         "id": 1057,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1388678400,
@@ -19028,7 +19028,7 @@ const records =
     },
     "1058": {
         "id": 1058,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1388678400,
@@ -19046,7 +19046,7 @@ const records =
     },
     "1059": {
         "id": 1059,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1388678400,
@@ -19064,7 +19064,7 @@ const records =
     },
     "1060": {
         "id": 1060,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1388678400,
@@ -19082,7 +19082,7 @@ const records =
     },
     "1061": {
         "id": 1061,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1388678400,
@@ -19100,7 +19100,7 @@ const records =
     },
     "1062": {
         "id": 1062,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1388678400,
@@ -19118,7 +19118,7 @@ const records =
     },
     "1063": {
         "id": 1063,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1388678400,
@@ -19136,7 +19136,7 @@ const records =
     },
     "1064": {
         "id": 1064,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1388678400,
@@ -19154,7 +19154,7 @@ const records =
     },
     "1065": {
         "id": 1065,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1388678400,
@@ -19172,7 +19172,7 @@ const records =
     },
     "1066": {
         "id": 1066,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1388678400,
@@ -19190,7 +19190,7 @@ const records =
     },
     "1067": {
         "id": 1067,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1388678400,
@@ -19208,7 +19208,7 @@ const records =
     },
     "1068": {
         "id": 1068,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1388678400,
@@ -19226,7 +19226,7 @@ const records =
     },
     "1069": {
         "id": 1069,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1388678400,
@@ -19244,7 +19244,7 @@ const records =
     },
     "1070": {
         "id": 1070,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1388678400,
@@ -19262,7 +19262,7 @@ const records =
     },
     "1071": {
         "id": 1071,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1388678400,
@@ -19280,7 +19280,7 @@ const records =
     },
     "1072": {
         "id": 1072,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1388678400,
@@ -19298,7 +19298,7 @@ const records =
     },
     "1073": {
         "id": 1073,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1388678400,
@@ -19316,7 +19316,7 @@ const records =
     },
     "1074": {
         "id": 1074,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1388678400,
@@ -19334,7 +19334,7 @@ const records =
     },
     "1075": {
         "id": 1075,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1388678400,
@@ -19352,7 +19352,7 @@ const records =
     },
     "1076": {
         "id": 1076,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1388678400,
@@ -19370,7 +19370,7 @@ const records =
     },
     "1077": {
         "id": 1077,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1388678400,
@@ -19388,7 +19388,7 @@ const records =
     },
     "1078": {
         "id": 1078,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1388678400,
@@ -19406,7 +19406,7 @@ const records =
     },
     "1079": {
         "id": 1079,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1388678400,
@@ -19424,7 +19424,7 @@ const records =
     },
     "1080": {
         "id": 1080,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1388678400,
@@ -19442,7 +19442,7 @@ const records =
     },
     "1081": {
         "id": 1081,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1388678400,
@@ -19460,7 +19460,7 @@ const records =
     },
     "1082": {
         "id": 1082,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1388678400,
@@ -19478,7 +19478,7 @@ const records =
     },
     "1083": {
         "id": 1083,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1388678400,
@@ -19496,7 +19496,7 @@ const records =
     },
     "1084": {
         "id": 1084,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1388678400,
@@ -19514,7 +19514,7 @@ const records =
     },
     "1085": {
         "id": 1085,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1388678400,
@@ -19532,7 +19532,7 @@ const records =
     },
     "1086": {
         "id": 1086,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1388678400,
@@ -19550,7 +19550,7 @@ const records =
     },
     "1087": {
         "id": 1087,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1388678400,
@@ -19568,7 +19568,7 @@ const records =
     },
     "1088": {
         "id": 1088,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1388678400,
@@ -19586,7 +19586,7 @@ const records =
     },
     "1089": {
         "id": 1089,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1388678400,
@@ -19604,7 +19604,7 @@ const records =
     },
     "1090": {
         "id": 1090,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1388678400,
@@ -19622,7 +19622,7 @@ const records =
     },
     "1091": {
         "id": 1091,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1388678400,
@@ -19640,7 +19640,7 @@ const records =
     },
     "1092": {
         "id": 1092,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1388678400,
@@ -19658,7 +19658,7 @@ const records =
     },
     "1093": {
         "id": 1093,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1388678400,
@@ -19676,7 +19676,7 @@ const records =
     },
     "1094": {
         "id": 1094,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1388678400,
@@ -19694,7 +19694,7 @@ const records =
     },
     "1095": {
         "id": 1095,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1388678400,
@@ -19712,7 +19712,7 @@ const records =
     },
     "1096": {
         "id": 1096,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1388678400,
@@ -19730,7 +19730,7 @@ const records =
     },
     "1097": {
         "id": 1097,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1388678400,
@@ -19748,7 +19748,7 @@ const records =
     },
     "1098": {
         "id": 1098,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1388678400,
@@ -19766,7 +19766,7 @@ const records =
     },
     "1099": {
         "id": 1099,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1388678400,
@@ -19784,7 +19784,7 @@ const records =
     },
     "1100": {
         "id": 1100,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1388678400,
@@ -19802,7 +19802,7 @@ const records =
     },
     "1101": {
         "id": 1101,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1388678400,
@@ -19820,7 +19820,7 @@ const records =
     },
     "1102": {
         "id": 1102,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1388678400,
@@ -19838,7 +19838,7 @@ const records =
     },
     "1103": {
         "id": 1103,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1388678400,
@@ -19856,7 +19856,7 @@ const records =
     },
     "1104": {
         "id": 1104,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1388678400,
@@ -19874,7 +19874,7 @@ const records =
     },
     "1105": {
         "id": 1105,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1388678400,
@@ -19892,7 +19892,7 @@ const records =
     },
     "1106": {
         "id": 1106,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1388678400,
@@ -19910,7 +19910,7 @@ const records =
     },
     "1107": {
         "id": 1107,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1388678400,
@@ -19928,7 +19928,7 @@ const records =
     },
     "1108": {
         "id": 1108,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1388678400,
@@ -19946,7 +19946,7 @@ const records =
     },
     "1109": {
         "id": 1109,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1388678400,
@@ -19964,7 +19964,7 @@ const records =
     },
     "1110": {
         "id": 1110,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1388678400,
@@ -19982,7 +19982,7 @@ const records =
     },
     "1111": {
         "id": 1111,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1388678400,
@@ -20000,7 +20000,7 @@ const records =
     },
     "1112": {
         "id": 1112,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1388678400,
@@ -20018,7 +20018,7 @@ const records =
     },
     "1113": {
         "id": 1113,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1388678400,
@@ -20036,7 +20036,7 @@ const records =
     },
     "1114": {
         "id": 1114,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1388678400,
@@ -20054,7 +20054,7 @@ const records =
     },
     "1115": {
         "id": 1115,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1388678400,
@@ -20072,7 +20072,7 @@ const records =
     },
     "1116": {
         "id": 1116,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1388678400,
@@ -20090,7 +20090,7 @@ const records =
     },
     "1117": {
         "id": 1117,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1388678400,
@@ -20108,7 +20108,7 @@ const records =
     },
     "1118": {
         "id": 1118,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1388678400,
@@ -20126,7 +20126,7 @@ const records =
     },
     "1119": {
         "id": 1119,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1388678400,
@@ -20144,7 +20144,7 @@ const records =
     },
     "1120": {
         "id": 1120,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1386259200,
@@ -20162,7 +20162,7 @@ const records =
     },
     "1121": {
         "id": 1121,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1386259200,
@@ -20180,7 +20180,7 @@ const records =
     },
     "1122": {
         "id": 1122,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1386259200,
@@ -20198,7 +20198,7 @@ const records =
     },
     "1123": {
         "id": 1123,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1386259200,
@@ -20216,7 +20216,7 @@ const records =
     },
     "1124": {
         "id": 1124,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1386259200,
@@ -20234,7 +20234,7 @@ const records =
     },
     "1125": {
         "id": 1125,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1386259200,
@@ -20252,7 +20252,7 @@ const records =
     },
     "1126": {
         "id": 1126,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1386259200,
@@ -20270,7 +20270,7 @@ const records =
     },
     "1127": {
         "id": 1127,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1386259200,
@@ -20288,7 +20288,7 @@ const records =
     },
     "1128": {
         "id": 1128,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1386259200,
@@ -20306,7 +20306,7 @@ const records =
     },
     "1129": {
         "id": 1129,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1386259200,
@@ -20324,7 +20324,7 @@ const records =
     },
     "1130": {
         "id": 1130,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1386259200,
@@ -20342,7 +20342,7 @@ const records =
     },
     "1131": {
         "id": 1131,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1386259200,
@@ -20360,7 +20360,7 @@ const records =
     },
     "1132": {
         "id": 1132,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1386259200,
@@ -20378,7 +20378,7 @@ const records =
     },
     "1133": {
         "id": 1133,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1386259200,
@@ -20396,7 +20396,7 @@ const records =
     },
     "1134": {
         "id": 1134,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1386259200,
@@ -20414,7 +20414,7 @@ const records =
     },
     "1135": {
         "id": 1135,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1386259200,
@@ -20432,7 +20432,7 @@ const records =
     },
     "1136": {
         "id": 1136,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1386259200,
@@ -20450,7 +20450,7 @@ const records =
     },
     "1137": {
         "id": 1137,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1386259200,
@@ -20468,7 +20468,7 @@ const records =
     },
     "1138": {
         "id": 1138,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1386259200,
@@ -20486,7 +20486,7 @@ const records =
     },
     "1139": {
         "id": 1139,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1386259200,
@@ -20504,7 +20504,7 @@ const records =
     },
     "1140": {
         "id": 1140,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1386259200,
@@ -20522,7 +20522,7 @@ const records =
     },
     "1141": {
         "id": 1141,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1386259200,
@@ -20540,7 +20540,7 @@ const records =
     },
     "1142": {
         "id": 1142,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1386259200,
@@ -20558,7 +20558,7 @@ const records =
     },
     "1143": {
         "id": 1143,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1386259200,
@@ -20576,7 +20576,7 @@ const records =
     },
     "1144": {
         "id": 1144,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1386259200,
@@ -20594,7 +20594,7 @@ const records =
     },
     "1145": {
         "id": 1145,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1386259200,
@@ -20612,7 +20612,7 @@ const records =
     },
     "1146": {
         "id": 1146,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1386259200,
@@ -20630,7 +20630,7 @@ const records =
     },
     "1147": {
         "id": 1147,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1386259200,
@@ -20648,7 +20648,7 @@ const records =
     },
     "1148": {
         "id": 1148,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1386259200,
@@ -20666,7 +20666,7 @@ const records =
     },
     "1149": {
         "id": 1149,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1386259200,
@@ -20684,7 +20684,7 @@ const records =
     },
     "1150": {
         "id": 1150,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1386259200,
@@ -20702,7 +20702,7 @@ const records =
     },
     "1151": {
         "id": 1151,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1386259200,
@@ -20720,7 +20720,7 @@ const records =
     },
     "1152": {
         "id": 1152,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1386259200,
@@ -20738,7 +20738,7 @@ const records =
     },
     "1153": {
         "id": 1153,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1386259200,
@@ -20756,7 +20756,7 @@ const records =
     },
     "1154": {
         "id": 1154,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1386259200,
@@ -20774,7 +20774,7 @@ const records =
     },
     "1155": {
         "id": 1155,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1386259200,
@@ -20792,7 +20792,7 @@ const records =
     },
     "1156": {
         "id": 1156,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1386259200,
@@ -20810,7 +20810,7 @@ const records =
     },
     "1157": {
         "id": 1157,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1386259200,
@@ -20828,7 +20828,7 @@ const records =
     },
     "1158": {
         "id": 1158,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1386259200,
@@ -20846,7 +20846,7 @@ const records =
     },
     "1159": {
         "id": 1159,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1386259200,
@@ -20864,7 +20864,7 @@ const records =
     },
     "1160": {
         "id": 1160,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1386259200,
@@ -20882,7 +20882,7 @@ const records =
     },
     "1161": {
         "id": 1161,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1386259200,
@@ -20900,7 +20900,7 @@ const records =
     },
     "1162": {
         "id": 1162,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1386259200,
@@ -20918,7 +20918,7 @@ const records =
     },
     "1163": {
         "id": 1163,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1386259200,
@@ -20936,7 +20936,7 @@ const records =
     },
     "1164": {
         "id": 1164,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1386259200,
@@ -20954,7 +20954,7 @@ const records =
     },
     "1165": {
         "id": 1165,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1386259200,
@@ -20972,7 +20972,7 @@ const records =
     },
     "1166": {
         "id": 1166,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1386259200,
@@ -20990,7 +20990,7 @@ const records =
     },
     "1167": {
         "id": 1167,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1386259200,
@@ -21008,7 +21008,7 @@ const records =
     },
     "1168": {
         "id": 1168,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1386259200,
@@ -21026,7 +21026,7 @@ const records =
     },
     "1169": {
         "id": 1169,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1386259200,
@@ -21044,7 +21044,7 @@ const records =
     },
     "1170": {
         "id": 1170,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1386259200,
@@ -21062,7 +21062,7 @@ const records =
     },
     "1171": {
         "id": 1171,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1386259200,
@@ -21080,7 +21080,7 @@ const records =
     },
     "1172": {
         "id": 1172,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1386259200,
@@ -21098,7 +21098,7 @@ const records =
     },
     "1173": {
         "id": 1173,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1386259200,
@@ -21116,7 +21116,7 @@ const records =
     },
     "1174": {
         "id": 1174,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1386259200,
@@ -21134,7 +21134,7 @@ const records =
     },
     "1175": {
         "id": 1175,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1386259200,
@@ -21152,7 +21152,7 @@ const records =
     },
     "1176": {
         "id": 1176,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1386259200,
@@ -21170,7 +21170,7 @@ const records =
     },
     "1177": {
         "id": 1177,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1386259200,
@@ -21188,7 +21188,7 @@ const records =
     },
     "1178": {
         "id": 1178,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1386259200,
@@ -21206,7 +21206,7 @@ const records =
     },
     "1179": {
         "id": 1179,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1386259200,
@@ -21224,7 +21224,7 @@ const records =
     },
     "1180": {
         "id": 1180,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1386259200,
@@ -21242,7 +21242,7 @@ const records =
     },
     "1181": {
         "id": 1181,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1386259200,
@@ -21260,7 +21260,7 @@ const records =
     },
     "1182": {
         "id": 1182,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1386259200,
@@ -21278,7 +21278,7 @@ const records =
     },
     "1183": {
         "id": 1183,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1386259200,
@@ -21296,7 +21296,7 @@ const records =
     },
     "1184": {
         "id": 1184,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1386259200,
@@ -21314,7 +21314,7 @@ const records =
     },
     "1185": {
         "id": 1185,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1386259200,
@@ -21332,7 +21332,7 @@ const records =
     },
     "1186": {
         "id": 1186,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1386259200,
@@ -21350,7 +21350,7 @@ const records =
     },
     "1187": {
         "id": 1187,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1386259200,
@@ -21368,7 +21368,7 @@ const records =
     },
     "1188": {
         "id": 1188,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1386259200,
@@ -21386,7 +21386,7 @@ const records =
     },
     "1189": {
         "id": 1189,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1386259200,
@@ -21404,7 +21404,7 @@ const records =
     },
     "1190": {
         "id": 1190,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1386259200,
@@ -21422,7 +21422,7 @@ const records =
     },
     "1191": {
         "id": 1191,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1386259200,
@@ -21440,7 +21440,7 @@ const records =
     },
     "1192": {
         "id": 1192,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1386259200,
@@ -21458,7 +21458,7 @@ const records =
     },
     "1193": {
         "id": 1193,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1386259200,
@@ -21476,7 +21476,7 @@ const records =
     },
     "1194": {
         "id": 1194,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1386259200,
@@ -21494,7 +21494,7 @@ const records =
     },
     "1195": {
         "id": 1195,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1386259200,
@@ -21512,7 +21512,7 @@ const records =
     },
     "1196": {
         "id": 1196,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1386259200,
@@ -21530,7 +21530,7 @@ const records =
     },
     "1197": {
         "id": 1197,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1386259200,
@@ -21548,7 +21548,7 @@ const records =
     },
     "1198": {
         "id": 1198,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1386259200,
@@ -21566,7 +21566,7 @@ const records =
     },
     "1199": {
         "id": 1199,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1386259200,
@@ -21584,7 +21584,7 @@ const records =
     },
     "1200": {
         "id": 1200,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1386259200,
@@ -21602,7 +21602,7 @@ const records =
     },
     "1201": {
         "id": 1201,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1386259200,
@@ -21620,7 +21620,7 @@ const records =
     },
     "1202": {
         "id": 1202,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1386259200,
@@ -21638,7 +21638,7 @@ const records =
     },
     "1203": {
         "id": 1203,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1386259200,
@@ -21656,7 +21656,7 @@ const records =
     },
     "1204": {
         "id": 1204,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1386259200,
@@ -21674,7 +21674,7 @@ const records =
     },
     "1205": {
         "id": 1205,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1386259200,
@@ -21692,7 +21692,7 @@ const records =
     },
     "1206": {
         "id": 1206,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1386259200,
@@ -21710,7 +21710,7 @@ const records =
     },
     "1207": {
         "id": 1207,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1386259200,
@@ -21728,7 +21728,7 @@ const records =
     },
     "1208": {
         "id": 1208,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1386259200,
@@ -21746,7 +21746,7 @@ const records =
     },
     "1209": {
         "id": 1209,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1386259200,
@@ -21764,7 +21764,7 @@ const records =
     },
     "1210": {
         "id": 1210,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1386259200,
@@ -21782,7 +21782,7 @@ const records =
     },
     "1211": {
         "id": 1211,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1386259200,
@@ -21800,7 +21800,7 @@ const records =
     },
     "1212": {
         "id": 1212,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1386259200,
@@ -21818,7 +21818,7 @@ const records =
     },
     "1213": {
         "id": 1213,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1386259200,
@@ -21836,7 +21836,7 @@ const records =
     },
     "1214": {
         "id": 1214,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1386259200,
@@ -21854,7 +21854,7 @@ const records =
     },
     "1215": {
         "id": 1215,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1386259200,
@@ -21872,7 +21872,7 @@ const records =
     },
     "1216": {
         "id": 1216,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1386259200,
@@ -21890,7 +21890,7 @@ const records =
     },
     "1217": {
         "id": 1217,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1386259200,
@@ -21908,7 +21908,7 @@ const records =
     },
     "1218": {
         "id": 1218,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1386259200,
@@ -21926,7 +21926,7 @@ const records =
     },
     "1219": {
         "id": 1219,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1386259200,
@@ -21944,7 +21944,7 @@ const records =
     },
     "1220": {
         "id": 1220,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1386259200,
@@ -21962,7 +21962,7 @@ const records =
     },
     "1221": {
         "id": 1221,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1386259200,
@@ -21980,7 +21980,7 @@ const records =
     },
     "1222": {
         "id": 1222,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1386259200,
@@ -21998,7 +21998,7 @@ const records =
     },
     "1223": {
         "id": 1223,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1386259200,
@@ -22016,7 +22016,7 @@ const records =
     },
     "1224": {
         "id": 1224,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1386259200,
@@ -22034,7 +22034,7 @@ const records =
     },
     "1225": {
         "id": 1225,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1386259200,
@@ -22052,7 +22052,7 @@ const records =
     },
     "1226": {
         "id": 1226,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1386259200,
@@ -22070,7 +22070,7 @@ const records =
     },
     "1227": {
         "id": 1227,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1386259200,
@@ -22088,7 +22088,7 @@ const records =
     },
     "1228": {
         "id": 1228,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1386259200,
@@ -22106,7 +22106,7 @@ const records =
     },
     "1229": {
         "id": 1229,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1386259200,
@@ -22124,7 +22124,7 @@ const records =
     },
     "1230": {
         "id": 1230,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1386259200,
@@ -22142,7 +22142,7 @@ const records =
     },
     "1231": {
         "id": 1231,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1386259200,
@@ -22160,7 +22160,7 @@ const records =
     },
     "1232": {
         "id": 1232,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1385049600,
@@ -22178,7 +22178,7 @@ const records =
     },
     "1233": {
         "id": 1233,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1385049600,
@@ -22196,7 +22196,7 @@ const records =
     },
     "1234": {
         "id": 1234,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1385049600,
@@ -22214,7 +22214,7 @@ const records =
     },
     "1235": {
         "id": 1235,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1385049600,
@@ -22232,7 +22232,7 @@ const records =
     },
     "1236": {
         "id": 1236,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1385049600,
@@ -22250,7 +22250,7 @@ const records =
     },
     "1237": {
         "id": 1237,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1385049600,
@@ -22268,7 +22268,7 @@ const records =
     },
     "1238": {
         "id": 1238,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1385049600,
@@ -22286,7 +22286,7 @@ const records =
     },
     "1239": {
         "id": 1239,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1385049600,
@@ -22304,7 +22304,7 @@ const records =
     },
     "1240": {
         "id": 1240,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1385049600,
@@ -22322,7 +22322,7 @@ const records =
     },
     "1241": {
         "id": 1241,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1385049600,
@@ -22340,7 +22340,7 @@ const records =
     },
     "1242": {
         "id": 1242,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1385049600,
@@ -22358,7 +22358,7 @@ const records =
     },
     "1243": {
         "id": 1243,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1385049600,
@@ -22376,7 +22376,7 @@ const records =
     },
     "1244": {
         "id": 1244,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1385049600,
@@ -22394,7 +22394,7 @@ const records =
     },
     "1245": {
         "id": 1245,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1385049600,
@@ -22412,7 +22412,7 @@ const records =
     },
     "1246": {
         "id": 1246,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1385049600,
@@ -22430,7 +22430,7 @@ const records =
     },
     "1247": {
         "id": 1247,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1385049600,
@@ -22448,7 +22448,7 @@ const records =
     },
     "1248": {
         "id": 1248,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1385049600,
@@ -22466,7 +22466,7 @@ const records =
     },
     "1249": {
         "id": 1249,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1385049600,
@@ -22484,7 +22484,7 @@ const records =
     },
     "1250": {
         "id": 1250,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1385049600,
@@ -22502,7 +22502,7 @@ const records =
     },
     "1251": {
         "id": 1251,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1385049600,
@@ -22520,7 +22520,7 @@ const records =
     },
     "1252": {
         "id": 1252,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1385049600,
@@ -22538,7 +22538,7 @@ const records =
     },
     "1253": {
         "id": 1253,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1385049600,
@@ -22556,7 +22556,7 @@ const records =
     },
     "1254": {
         "id": 1254,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1385049600,
@@ -22574,7 +22574,7 @@ const records =
     },
     "1255": {
         "id": 1255,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1385049600,
@@ -22592,7 +22592,7 @@ const records =
     },
     "1256": {
         "id": 1256,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1385049600,
@@ -22610,7 +22610,7 @@ const records =
     },
     "1257": {
         "id": 1257,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1385049600,
@@ -22628,7 +22628,7 @@ const records =
     },
     "1258": {
         "id": 1258,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1385049600,
@@ -22646,7 +22646,7 @@ const records =
     },
     "1259": {
         "id": 1259,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1385049600,
@@ -22664,7 +22664,7 @@ const records =
     },
     "1260": {
         "id": 1260,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1385049600,
@@ -22682,7 +22682,7 @@ const records =
     },
     "1261": {
         "id": 1261,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1385049600,
@@ -22700,7 +22700,7 @@ const records =
     },
     "1262": {
         "id": 1262,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1385049600,
@@ -22718,7 +22718,7 @@ const records =
     },
     "1263": {
         "id": 1263,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1385049600,
@@ -22736,7 +22736,7 @@ const records =
     },
     "1264": {
         "id": 1264,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1385049600,
@@ -22754,7 +22754,7 @@ const records =
     },
     "1265": {
         "id": 1265,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1385049600,
@@ -22772,7 +22772,7 @@ const records =
     },
     "1266": {
         "id": 1266,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1385049600,
@@ -22790,7 +22790,7 @@ const records =
     },
     "1267": {
         "id": 1267,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1385049600,
@@ -22808,7 +22808,7 @@ const records =
     },
     "1268": {
         "id": 1268,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1385049600,
@@ -22826,7 +22826,7 @@ const records =
     },
     "1269": {
         "id": 1269,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1385049600,
@@ -22844,7 +22844,7 @@ const records =
     },
     "1270": {
         "id": 1270,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1385049600,
@@ -22862,7 +22862,7 @@ const records =
     },
     "1271": {
         "id": 1271,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1385049600,
@@ -22880,7 +22880,7 @@ const records =
     },
     "1272": {
         "id": 1272,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1385049600,
@@ -22898,7 +22898,7 @@ const records =
     },
     "1273": {
         "id": 1273,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1385049600,
@@ -22916,7 +22916,7 @@ const records =
     },
     "1274": {
         "id": 1274,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1385049600,
@@ -22934,7 +22934,7 @@ const records =
     },
     "1275": {
         "id": 1275,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1385049600,
@@ -22952,7 +22952,7 @@ const records =
     },
     "1276": {
         "id": 1276,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1385049600,
@@ -22970,7 +22970,7 @@ const records =
     },
     "1277": {
         "id": 1277,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1385049600,
@@ -22988,7 +22988,7 @@ const records =
     },
     "1278": {
         "id": 1278,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1385049600,
@@ -23006,7 +23006,7 @@ const records =
     },
     "1279": {
         "id": 1279,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1385049600,
@@ -23024,7 +23024,7 @@ const records =
     },
     "1280": {
         "id": 1280,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1385049600,
@@ -23042,7 +23042,7 @@ const records =
     },
     "1281": {
         "id": 1281,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1385049600,
@@ -23060,7 +23060,7 @@ const records =
     },
     "1282": {
         "id": 1282,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1385049600,
@@ -23078,7 +23078,7 @@ const records =
     },
     "1283": {
         "id": 1283,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1385049600,
@@ -23096,7 +23096,7 @@ const records =
     },
     "1284": {
         "id": 1284,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1385049600,
@@ -23114,7 +23114,7 @@ const records =
     },
     "1285": {
         "id": 1285,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1385049600,
@@ -23132,7 +23132,7 @@ const records =
     },
     "1286": {
         "id": 1286,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1385049600,
@@ -23150,7 +23150,7 @@ const records =
     },
     "1287": {
         "id": 1287,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1385049600,
@@ -23168,7 +23168,7 @@ const records =
     },
     "1288": {
         "id": 1288,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1385049600,
@@ -23186,7 +23186,7 @@ const records =
     },
     "1289": {
         "id": 1289,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1385049600,
@@ -23204,7 +23204,7 @@ const records =
     },
     "1290": {
         "id": 1290,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1385049600,
@@ -23222,7 +23222,7 @@ const records =
     },
     "1291": {
         "id": 1291,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1385049600,
@@ -23240,7 +23240,7 @@ const records =
     },
     "1292": {
         "id": 1292,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1385049600,
@@ -23258,7 +23258,7 @@ const records =
     },
     "1293": {
         "id": 1293,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1385049600,
@@ -23276,7 +23276,7 @@ const records =
     },
     "1294": {
         "id": 1294,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1385049600,
@@ -23294,7 +23294,7 @@ const records =
     },
     "1295": {
         "id": 1295,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1385049600,
@@ -23312,7 +23312,7 @@ const records =
     },
     "1296": {
         "id": 1296,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1385049600,
@@ -23330,7 +23330,7 @@ const records =
     },
     "1297": {
         "id": 1297,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1385049600,
@@ -23348,7 +23348,7 @@ const records =
     },
     "1298": {
         "id": 1298,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1385049600,
@@ -23366,7 +23366,7 @@ const records =
     },
     "1299": {
         "id": 1299,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1385049600,
@@ -23384,7 +23384,7 @@ const records =
     },
     "1300": {
         "id": 1300,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1385049600,
@@ -23402,7 +23402,7 @@ const records =
     },
     "1301": {
         "id": 1301,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1385049600,
@@ -23420,7 +23420,7 @@ const records =
     },
     "1302": {
         "id": 1302,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1385049600,
@@ -23438,7 +23438,7 @@ const records =
     },
     "1303": {
         "id": 1303,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1385049600,
@@ -23456,7 +23456,7 @@ const records =
     },
     "1304": {
         "id": 1304,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1385049600,
@@ -23474,7 +23474,7 @@ const records =
     },
     "1305": {
         "id": 1305,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1385049600,
@@ -23492,7 +23492,7 @@ const records =
     },
     "1306": {
         "id": 1306,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1385049600,
@@ -23510,7 +23510,7 @@ const records =
     },
     "1307": {
         "id": 1307,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1385049600,
@@ -23528,7 +23528,7 @@ const records =
     },
     "1308": {
         "id": 1308,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1385049600,
@@ -23546,7 +23546,7 @@ const records =
     },
     "1309": {
         "id": 1309,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1385049600,
@@ -23564,7 +23564,7 @@ const records =
     },
     "1310": {
         "id": 1310,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1385049600,
@@ -23582,7 +23582,7 @@ const records =
     },
     "1311": {
         "id": 1311,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1385049600,
@@ -23600,7 +23600,7 @@ const records =
     },
     "1312": {
         "id": 1312,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1385049600,
@@ -23618,7 +23618,7 @@ const records =
     },
     "1313": {
         "id": 1313,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1385049600,
@@ -23636,7 +23636,7 @@ const records =
     },
     "1314": {
         "id": 1314,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1385049600,
@@ -23654,7 +23654,7 @@ const records =
     },
     "1315": {
         "id": 1315,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1385049600,
@@ -23672,7 +23672,7 @@ const records =
     },
     "1316": {
         "id": 1316,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1385049600,
@@ -23690,7 +23690,7 @@ const records =
     },
     "1317": {
         "id": 1317,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1385049600,
@@ -23708,7 +23708,7 @@ const records =
     },
     "1318": {
         "id": 1318,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1385049600,
@@ -23726,7 +23726,7 @@ const records =
     },
     "1319": {
         "id": 1319,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1385049600,
@@ -23744,7 +23744,7 @@ const records =
     },
     "1320": {
         "id": 1320,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1385049600,
@@ -23762,7 +23762,7 @@ const records =
     },
     "1321": {
         "id": 1321,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1385049600,
@@ -23780,7 +23780,7 @@ const records =
     },
     "1322": {
         "id": 1322,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1385049600,
@@ -23798,7 +23798,7 @@ const records =
     },
     "1323": {
         "id": 1323,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1385049600,
@@ -23816,7 +23816,7 @@ const records =
     },
     "1324": {
         "id": 1324,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1385049600,
@@ -23834,7 +23834,7 @@ const records =
     },
     "1325": {
         "id": 1325,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1385049600,
@@ -23852,7 +23852,7 @@ const records =
     },
     "1326": {
         "id": 1326,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1385049600,
@@ -23870,7 +23870,7 @@ const records =
     },
     "1327": {
         "id": 1327,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1385049600,
@@ -23888,7 +23888,7 @@ const records =
     },
     "1328": {
         "id": 1328,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1385049600,
@@ -23906,7 +23906,7 @@ const records =
     },
     "1329": {
         "id": 1329,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1385049600,
@@ -23924,7 +23924,7 @@ const records =
     },
     "1330": {
         "id": 1330,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1385049600,
@@ -23942,7 +23942,7 @@ const records =
     },
     "1331": {
         "id": 1331,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1385049600,
@@ -23960,7 +23960,7 @@ const records =
     },
     "1332": {
         "id": 1332,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1385049600,
@@ -23978,7 +23978,7 @@ const records =
     },
     "1333": {
         "id": 1333,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1385049600,
@@ -23996,7 +23996,7 @@ const records =
     },
     "1334": {
         "id": 1334,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1385049600,
@@ -24014,7 +24014,7 @@ const records =
     },
     "1335": {
         "id": 1335,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1385049600,
@@ -24032,7 +24032,7 @@ const records =
     },
     "1336": {
         "id": 1336,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1385049600,
@@ -24050,7 +24050,7 @@ const records =
     },
     "1337": {
         "id": 1337,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1385049600,
@@ -24068,7 +24068,7 @@ const records =
     },
     "1338": {
         "id": 1338,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1385049600,
@@ -24086,7 +24086,7 @@ const records =
     },
     "1339": {
         "id": 1339,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1385049600,
@@ -24104,7 +24104,7 @@ const records =
     },
     "1340": {
         "id": 1340,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1385049600,
@@ -24122,7 +24122,7 @@ const records =
     },
     "1341": {
         "id": 1341,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1385049600,
@@ -24140,7 +24140,7 @@ const records =
     },
     "1342": {
         "id": 1342,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1385049600,
@@ -24158,7 +24158,7 @@ const records =
     },
     "1343": {
         "id": 1343,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1385049600,
@@ -24176,7 +24176,7 @@ const records =
     },
     "1344": {
         "id": 1344,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1382630400,
@@ -24194,7 +24194,7 @@ const records =
     },
     "1345": {
         "id": 1345,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1382630400,
@@ -24212,7 +24212,7 @@ const records =
     },
     "1346": {
         "id": 1346,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1382630400,
@@ -24230,7 +24230,7 @@ const records =
     },
     "1347": {
         "id": 1347,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1382630400,
@@ -24248,7 +24248,7 @@ const records =
     },
     "1348": {
         "id": 1348,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1382630400,
@@ -24266,7 +24266,7 @@ const records =
     },
     "1349": {
         "id": 1349,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1382630400,
@@ -24284,7 +24284,7 @@ const records =
     },
     "1350": {
         "id": 1350,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1382630400,
@@ -24302,7 +24302,7 @@ const records =
     },
     "1351": {
         "id": 1351,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1382630400,
@@ -24320,7 +24320,7 @@ const records =
     },
     "1352": {
         "id": 1352,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1382630400,
@@ -24338,7 +24338,7 @@ const records =
     },
     "1353": {
         "id": 1353,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1382630400,
@@ -24356,7 +24356,7 @@ const records =
     },
     "1354": {
         "id": 1354,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1382630400,
@@ -24374,7 +24374,7 @@ const records =
     },
     "1355": {
         "id": 1355,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1382630400,
@@ -24392,7 +24392,7 @@ const records =
     },
     "1356": {
         "id": 1356,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1382630400,
@@ -24410,7 +24410,7 @@ const records =
     },
     "1357": {
         "id": 1357,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1382630400,
@@ -24428,7 +24428,7 @@ const records =
     },
     "1358": {
         "id": 1358,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1382630400,
@@ -24446,7 +24446,7 @@ const records =
     },
     "1359": {
         "id": 1359,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1382630400,
@@ -24464,7 +24464,7 @@ const records =
     },
     "1360": {
         "id": 1360,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1382630400,
@@ -24482,7 +24482,7 @@ const records =
     },
     "1361": {
         "id": 1361,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1382630400,
@@ -24500,7 +24500,7 @@ const records =
     },
     "1362": {
         "id": 1362,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1382630400,
@@ -24518,7 +24518,7 @@ const records =
     },
     "1363": {
         "id": 1363,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1382630400,
@@ -24536,7 +24536,7 @@ const records =
     },
     "1364": {
         "id": 1364,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1382630400,
@@ -24554,7 +24554,7 @@ const records =
     },
     "1365": {
         "id": 1365,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1382630400,
@@ -24572,7 +24572,7 @@ const records =
     },
     "1366": {
         "id": 1366,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1382630400,
@@ -24590,7 +24590,7 @@ const records =
     },
     "1367": {
         "id": 1367,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1382630400,
@@ -24608,7 +24608,7 @@ const records =
     },
     "1368": {
         "id": 1368,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1382630400,
@@ -24626,7 +24626,7 @@ const records =
     },
     "1369": {
         "id": 1369,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1382630400,
@@ -24644,7 +24644,7 @@ const records =
     },
     "1370": {
         "id": 1370,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1382630400,
@@ -24662,7 +24662,7 @@ const records =
     },
     "1371": {
         "id": 1371,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1382630400,
@@ -24680,7 +24680,7 @@ const records =
     },
     "1372": {
         "id": 1372,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1382630400,
@@ -24698,7 +24698,7 @@ const records =
     },
     "1373": {
         "id": 1373,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1382630400,
@@ -24716,7 +24716,7 @@ const records =
     },
     "1374": {
         "id": 1374,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1382630400,
@@ -24734,7 +24734,7 @@ const records =
     },
     "1375": {
         "id": 1375,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1382630400,
@@ -24752,7 +24752,7 @@ const records =
     },
     "1376": {
         "id": 1376,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1382630400,
@@ -24770,7 +24770,7 @@ const records =
     },
     "1377": {
         "id": 1377,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1382630400,
@@ -24788,7 +24788,7 @@ const records =
     },
     "1378": {
         "id": 1378,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1382630400,
@@ -24806,7 +24806,7 @@ const records =
     },
     "1379": {
         "id": 1379,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1382630400,
@@ -24824,7 +24824,7 @@ const records =
     },
     "1380": {
         "id": 1380,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1382630400,
@@ -24842,7 +24842,7 @@ const records =
     },
     "1381": {
         "id": 1381,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1382630400,
@@ -24860,7 +24860,7 @@ const records =
     },
     "1382": {
         "id": 1382,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1382630400,
@@ -24878,7 +24878,7 @@ const records =
     },
     "1383": {
         "id": 1383,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1382630400,
@@ -24896,7 +24896,7 @@ const records =
     },
     "1384": {
         "id": 1384,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1382630400,
@@ -24914,7 +24914,7 @@ const records =
     },
     "1385": {
         "id": 1385,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1382630400,
@@ -24932,7 +24932,7 @@ const records =
     },
     "1386": {
         "id": 1386,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1382630400,
@@ -24950,7 +24950,7 @@ const records =
     },
     "1387": {
         "id": 1387,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1382630400,
@@ -24968,7 +24968,7 @@ const records =
     },
     "1388": {
         "id": 1388,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1382630400,
@@ -24986,7 +24986,7 @@ const records =
     },
     "1389": {
         "id": 1389,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1382630400,
@@ -25004,7 +25004,7 @@ const records =
     },
     "1390": {
         "id": 1390,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1382630400,
@@ -25022,7 +25022,7 @@ const records =
     },
     "1391": {
         "id": 1391,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1382630400,
@@ -25040,7 +25040,7 @@ const records =
     },
     "1392": {
         "id": 1392,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1382630400,
@@ -25058,7 +25058,7 @@ const records =
     },
     "1393": {
         "id": 1393,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1382630400,
@@ -25076,7 +25076,7 @@ const records =
     },
     "1394": {
         "id": 1394,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1382630400,
@@ -25094,7 +25094,7 @@ const records =
     },
     "1395": {
         "id": 1395,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1382630400,
@@ -25112,7 +25112,7 @@ const records =
     },
     "1396": {
         "id": 1396,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1382630400,
@@ -25130,7 +25130,7 @@ const records =
     },
     "1397": {
         "id": 1397,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1382630400,
@@ -25148,7 +25148,7 @@ const records =
     },
     "1398": {
         "id": 1398,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1382630400,
@@ -25166,7 +25166,7 @@ const records =
     },
     "1399": {
         "id": 1399,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1382630400,
@@ -25184,7 +25184,7 @@ const records =
     },
     "1400": {
         "id": 1400,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1382630400,
@@ -25202,7 +25202,7 @@ const records =
     },
     "1401": {
         "id": 1401,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1382630400,
@@ -25220,7 +25220,7 @@ const records =
     },
     "1402": {
         "id": 1402,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1382630400,
@@ -25238,7 +25238,7 @@ const records =
     },
     "1403": {
         "id": 1403,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1382630400,
@@ -25256,7 +25256,7 @@ const records =
     },
     "1404": {
         "id": 1404,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1382630400,
@@ -25274,7 +25274,7 @@ const records =
     },
     "1405": {
         "id": 1405,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1382630400,
@@ -25292,7 +25292,7 @@ const records =
     },
     "1406": {
         "id": 1406,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1382630400,
@@ -25310,7 +25310,7 @@ const records =
     },
     "1407": {
         "id": 1407,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1382630400,
@@ -25328,7 +25328,7 @@ const records =
     },
     "1408": {
         "id": 1408,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1382630400,
@@ -25346,7 +25346,7 @@ const records =
     },
     "1409": {
         "id": 1409,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1382630400,
@@ -25364,7 +25364,7 @@ const records =
     },
     "1410": {
         "id": 1410,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1382630400,
@@ -25382,7 +25382,7 @@ const records =
     },
     "1411": {
         "id": 1411,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1382630400,
@@ -25400,7 +25400,7 @@ const records =
     },
     "1412": {
         "id": 1412,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1382630400,
@@ -25418,7 +25418,7 @@ const records =
     },
     "1413": {
         "id": 1413,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1382630400,
@@ -25436,7 +25436,7 @@ const records =
     },
     "1414": {
         "id": 1414,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1382630400,
@@ -25454,7 +25454,7 @@ const records =
     },
     "1415": {
         "id": 1415,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1382630400,
@@ -25472,7 +25472,7 @@ const records =
     },
     "1416": {
         "id": 1416,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1382630400,
@@ -25490,7 +25490,7 @@ const records =
     },
     "1417": {
         "id": 1417,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1382630400,
@@ -25508,7 +25508,7 @@ const records =
     },
     "1418": {
         "id": 1418,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1382630400,
@@ -25526,7 +25526,7 @@ const records =
     },
     "1419": {
         "id": 1419,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1382630400,
@@ -25544,7 +25544,7 @@ const records =
     },
     "1420": {
         "id": 1420,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1382630400,
@@ -25562,7 +25562,7 @@ const records =
     },
     "1421": {
         "id": 1421,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1382630400,
@@ -25580,7 +25580,7 @@ const records =
     },
     "1422": {
         "id": 1422,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1382630400,
@@ -25598,7 +25598,7 @@ const records =
     },
     "1423": {
         "id": 1423,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1382630400,
@@ -25616,7 +25616,7 @@ const records =
     },
     "1424": {
         "id": 1424,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1382630400,
@@ -25634,7 +25634,7 @@ const records =
     },
     "1425": {
         "id": 1425,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1382630400,
@@ -25652,7 +25652,7 @@ const records =
     },
     "1426": {
         "id": 1426,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1382630400,
@@ -25670,7 +25670,7 @@ const records =
     },
     "1427": {
         "id": 1427,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1382630400,
@@ -25688,7 +25688,7 @@ const records =
     },
     "1428": {
         "id": 1428,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1382630400,
@@ -25706,7 +25706,7 @@ const records =
     },
     "1429": {
         "id": 1429,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1382630400,
@@ -25724,7 +25724,7 @@ const records =
     },
     "1430": {
         "id": 1430,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1382630400,
@@ -25742,7 +25742,7 @@ const records =
     },
     "1431": {
         "id": 1431,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1382630400,
@@ -25760,7 +25760,7 @@ const records =
     },
     "1432": {
         "id": 1432,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1382630400,
@@ -25778,7 +25778,7 @@ const records =
     },
     "1433": {
         "id": 1433,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1382630400,
@@ -25796,7 +25796,7 @@ const records =
     },
     "1434": {
         "id": 1434,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1382630400,
@@ -25814,7 +25814,7 @@ const records =
     },
     "1435": {
         "id": 1435,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1382630400,
@@ -25832,7 +25832,7 @@ const records =
     },
     "1436": {
         "id": 1436,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1382630400,
@@ -25850,7 +25850,7 @@ const records =
     },
     "1437": {
         "id": 1437,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1382630400,
@@ -25868,7 +25868,7 @@ const records =
     },
     "1438": {
         "id": 1438,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1382630400,
@@ -25886,7 +25886,7 @@ const records =
     },
     "1439": {
         "id": 1439,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1382630400,
@@ -25904,7 +25904,7 @@ const records =
     },
     "1440": {
         "id": 1440,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1382630400,
@@ -25922,7 +25922,7 @@ const records =
     },
     "1441": {
         "id": 1441,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1382630400,
@@ -25940,7 +25940,7 @@ const records =
     },
     "1442": {
         "id": 1442,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1382630400,
@@ -25958,7 +25958,7 @@ const records =
     },
     "1443": {
         "id": 1443,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1382630400,
@@ -25976,7 +25976,7 @@ const records =
     },
     "1444": {
         "id": 1444,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1382630400,
@@ -25994,7 +25994,7 @@ const records =
     },
     "1445": {
         "id": 1445,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1382630400,
@@ -26012,7 +26012,7 @@ const records =
     },
     "1446": {
         "id": 1446,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1382630400,
@@ -26030,7 +26030,7 @@ const records =
     },
     "1447": {
         "id": 1447,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1382630400,
@@ -26048,7 +26048,7 @@ const records =
     },
     "1448": {
         "id": 1448,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1382630400,
@@ -26066,7 +26066,7 @@ const records =
     },
     "1449": {
         "id": 1449,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1382630400,
@@ -26084,7 +26084,7 @@ const records =
     },
     "1450": {
         "id": 1450,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1382630400,
@@ -26102,7 +26102,7 @@ const records =
     },
     "1451": {
         "id": 1451,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1382630400,
@@ -26120,7 +26120,7 @@ const records =
     },
     "1452": {
         "id": 1452,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1382630400,
@@ -26138,7 +26138,7 @@ const records =
     },
     "1453": {
         "id": 1453,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1382630400,
@@ -26156,7 +26156,7 @@ const records =
     },
     "1454": {
         "id": 1454,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1382630400,
@@ -26174,7 +26174,7 @@ const records =
     },
     "1455": {
         "id": 1455,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1382630400,
@@ -26192,7 +26192,7 @@ const records =
     },
     "1456": {
         "id": 1456,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1380211200,
@@ -26210,7 +26210,7 @@ const records =
     },
     "1457": {
         "id": 1457,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1380211200,
@@ -26228,7 +26228,7 @@ const records =
     },
     "1458": {
         "id": 1458,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1380211200,
@@ -26246,7 +26246,7 @@ const records =
     },
     "1459": {
         "id": 1459,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1380211200,
@@ -26264,7 +26264,7 @@ const records =
     },
     "1460": {
         "id": 1460,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1380211200,
@@ -26282,7 +26282,7 @@ const records =
     },
     "1461": {
         "id": 1461,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1380211200,
@@ -26300,7 +26300,7 @@ const records =
     },
     "1462": {
         "id": 1462,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1380211200,
@@ -26318,7 +26318,7 @@ const records =
     },
     "1463": {
         "id": 1463,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳怡潔",
         "party": "PFP",
         "date": 1380211200,
@@ -26336,7 +26336,7 @@ const records =
     },
     "1464": {
         "id": 1464,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1380211200,
@@ -26354,7 +26354,7 @@ const records =
     },
     "1465": {
         "id": 1465,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1380211200,
@@ -26372,7 +26372,7 @@ const records =
     },
     "1466": {
         "id": 1466,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1380211200,
@@ -26390,7 +26390,7 @@ const records =
     },
     "1467": {
         "id": 1467,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1380211200,
@@ -26408,7 +26408,7 @@ const records =
     },
     "1468": {
         "id": 1468,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1380211200,
@@ -26426,7 +26426,7 @@ const records =
     },
     "1469": {
         "id": 1469,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1380211200,
@@ -26444,7 +26444,7 @@ const records =
     },
     "1470": {
         "id": 1470,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1380211200,
@@ -26462,7 +26462,7 @@ const records =
     },
     "1471": {
         "id": 1471,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1380211200,
@@ -26480,7 +26480,7 @@ const records =
     },
     "1472": {
         "id": 1472,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1380211200,
@@ -26498,7 +26498,7 @@ const records =
     },
     "1473": {
         "id": 1473,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1380211200,
@@ -26516,7 +26516,7 @@ const records =
     },
     "1474": {
         "id": 1474,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1380211200,
@@ -26534,7 +26534,7 @@ const records =
     },
     "1475": {
         "id": 1475,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1380211200,
@@ -26552,7 +26552,7 @@ const records =
     },
     "1476": {
         "id": 1476,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1380211200,
@@ -26570,7 +26570,7 @@ const records =
     },
     "1477": {
         "id": 1477,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1380211200,
@@ -26588,7 +26588,7 @@ const records =
     },
     "1478": {
         "id": 1478,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1380211200,
@@ -26606,7 +26606,7 @@ const records =
     },
     "1479": {
         "id": 1479,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1380211200,
@@ -26624,7 +26624,7 @@ const records =
     },
     "1480": {
         "id": 1480,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1380211200,
@@ -26642,7 +26642,7 @@ const records =
     },
     "1481": {
         "id": 1481,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1380211200,
@@ -26660,7 +26660,7 @@ const records =
     },
     "1482": {
         "id": 1482,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1380211200,
@@ -26678,7 +26678,7 @@ const records =
     },
     "1483": {
         "id": 1483,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1380211200,
@@ -26696,7 +26696,7 @@ const records =
     },
     "1484": {
         "id": 1484,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1380211200,
@@ -26714,7 +26714,7 @@ const records =
     },
     "1485": {
         "id": 1485,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1380211200,
@@ -26732,7 +26732,7 @@ const records =
     },
     "1486": {
         "id": 1486,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1380211200,
@@ -26750,7 +26750,7 @@ const records =
     },
     "1487": {
         "id": 1487,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1380211200,
@@ -26768,7 +26768,7 @@ const records =
     },
     "1488": {
         "id": 1488,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1380211200,
@@ -26786,7 +26786,7 @@ const records =
     },
     "1489": {
         "id": 1489,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1380211200,
@@ -26804,7 +26804,7 @@ const records =
     },
     "1490": {
         "id": 1490,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1380211200,
@@ -26822,7 +26822,7 @@ const records =
     },
     "1491": {
         "id": 1491,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1380211200,
@@ -26840,7 +26840,7 @@ const records =
     },
     "1492": {
         "id": 1492,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1380211200,
@@ -26858,7 +26858,7 @@ const records =
     },
     "1493": {
         "id": 1493,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1380211200,
@@ -26876,7 +26876,7 @@ const records =
     },
     "1494": {
         "id": 1494,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1380211200,
@@ -26894,7 +26894,7 @@ const records =
     },
     "1495": {
         "id": 1495,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1380211200,
@@ -26912,7 +26912,7 @@ const records =
     },
     "1496": {
         "id": 1496,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1380211200,
@@ -26930,7 +26930,7 @@ const records =
     },
     "1497": {
         "id": 1497,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1380211200,
@@ -26948,7 +26948,7 @@ const records =
     },
     "1498": {
         "id": 1498,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1380211200,
@@ -26966,7 +26966,7 @@ const records =
     },
     "1499": {
         "id": 1499,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1380211200,
@@ -26984,7 +26984,7 @@ const records =
     },
     "1500": {
         "id": 1500,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1380211200,
@@ -27002,7 +27002,7 @@ const records =
     },
     "1501": {
         "id": 1501,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1380211200,
@@ -27020,7 +27020,7 @@ const records =
     },
     "1502": {
         "id": 1502,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1380211200,
@@ -27038,7 +27038,7 @@ const records =
     },
     "1503": {
         "id": 1503,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1380211200,
@@ -27056,7 +27056,7 @@ const records =
     },
     "1504": {
         "id": 1504,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1380211200,
@@ -27074,7 +27074,7 @@ const records =
     },
     "1505": {
         "id": 1505,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1380211200,
@@ -27092,7 +27092,7 @@ const records =
     },
     "1506": {
         "id": 1506,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1380211200,
@@ -27110,7 +27110,7 @@ const records =
     },
     "1507": {
         "id": 1507,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1380211200,
@@ -27128,7 +27128,7 @@ const records =
     },
     "1508": {
         "id": 1508,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1380211200,
@@ -27146,7 +27146,7 @@ const records =
     },
     "1509": {
         "id": 1509,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1380211200,
@@ -27164,7 +27164,7 @@ const records =
     },
     "1510": {
         "id": 1510,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1380211200,
@@ -27182,7 +27182,7 @@ const records =
     },
     "1511": {
         "id": 1511,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1380211200,
@@ -27200,7 +27200,7 @@ const records =
     },
     "1512": {
         "id": 1512,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1380211200,
@@ -27218,7 +27218,7 @@ const records =
     },
     "1513": {
         "id": 1513,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1380211200,
@@ -27236,7 +27236,7 @@ const records =
     },
     "1514": {
         "id": 1514,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1380211200,
@@ -27254,7 +27254,7 @@ const records =
     },
     "1515": {
         "id": 1515,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1380211200,
@@ -27272,7 +27272,7 @@ const records =
     },
     "1516": {
         "id": 1516,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭天財Sra·Kacaw",
         "party": "KMT",
         "date": 1380211200,
@@ -27290,7 +27290,7 @@ const records =
     },
     "1517": {
         "id": 1517,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1380211200,
@@ -27308,7 +27308,7 @@ const records =
     },
     "1518": {
         "id": 1518,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1380211200,
@@ -27326,7 +27326,7 @@ const records =
     },
     "1519": {
         "id": 1519,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1380211200,
@@ -27344,7 +27344,7 @@ const records =
     },
     "1520": {
         "id": 1520,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1380211200,
@@ -27362,7 +27362,7 @@ const records =
     },
     "1521": {
         "id": 1521,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1380211200,
@@ -27380,7 +27380,7 @@ const records =
     },
     "1522": {
         "id": 1522,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1380211200,
@@ -27398,7 +27398,7 @@ const records =
     },
     "1523": {
         "id": 1523,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "顏寬恒",
         "party": "KMT",
         "date": 1380211200,
@@ -27416,7 +27416,7 @@ const records =
     },
     "1524": {
         "id": 1524,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1380211200,
@@ -27434,7 +27434,7 @@ const records =
     },
     "1525": {
         "id": 1525,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1380211200,
@@ -27452,7 +27452,7 @@ const records =
     },
     "1526": {
         "id": 1526,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1380211200,
@@ -27470,7 +27470,7 @@ const records =
     },
     "1527": {
         "id": 1527,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1380211200,
@@ -27488,7 +27488,7 @@ const records =
     },
     "1528": {
         "id": 1528,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1380211200,
@@ -27506,7 +27506,7 @@ const records =
     },
     "1529": {
         "id": 1529,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1380211200,
@@ -27524,7 +27524,7 @@ const records =
     },
     "1530": {
         "id": 1530,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1380211200,
@@ -27542,7 +27542,7 @@ const records =
     },
     "1531": {
         "id": 1531,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1380211200,
@@ -27560,7 +27560,7 @@ const records =
     },
     "1532": {
         "id": 1532,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1380211200,
@@ -27578,7 +27578,7 @@ const records =
     },
     "1533": {
         "id": 1533,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1380211200,
@@ -27596,7 +27596,7 @@ const records =
     },
     "1534": {
         "id": 1534,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1380211200,
@@ -27614,7 +27614,7 @@ const records =
     },
     "1535": {
         "id": 1535,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1380211200,
@@ -27632,7 +27632,7 @@ const records =
     },
     "1536": {
         "id": 1536,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1380211200,
@@ -27650,7 +27650,7 @@ const records =
     },
     "1537": {
         "id": 1537,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1380211200,
@@ -27668,7 +27668,7 @@ const records =
     },
     "1538": {
         "id": 1538,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1380211200,
@@ -27686,7 +27686,7 @@ const records =
     },
     "1539": {
         "id": 1539,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1380211200,
@@ -27704,7 +27704,7 @@ const records =
     },
     "1540": {
         "id": 1540,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1380211200,
@@ -27722,7 +27722,7 @@ const records =
     },
     "1541": {
         "id": 1541,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1380211200,
@@ -27740,7 +27740,7 @@ const records =
     },
     "1542": {
         "id": 1542,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1380211200,
@@ -27758,7 +27758,7 @@ const records =
     },
     "1543": {
         "id": 1543,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1380211200,
@@ -27776,7 +27776,7 @@ const records =
     },
     "1544": {
         "id": 1544,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1380211200,
@@ -27794,7 +27794,7 @@ const records =
     },
     "1545": {
         "id": 1545,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1380211200,
@@ -27812,7 +27812,7 @@ const records =
     },
     "1546": {
         "id": 1546,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1380211200,
@@ -27830,7 +27830,7 @@ const records =
     },
     "1547": {
         "id": 1547,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1380211200,
@@ -27848,7 +27848,7 @@ const records =
     },
     "1548": {
         "id": 1548,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1380211200,
@@ -27866,7 +27866,7 @@ const records =
     },
     "1549": {
         "id": 1549,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1380211200,
@@ -27884,7 +27884,7 @@ const records =
     },
     "1550": {
         "id": 1550,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1380211200,
@@ -27902,7 +27902,7 @@ const records =
     },
     "1551": {
         "id": 1551,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1380211200,
@@ -27920,7 +27920,7 @@ const records =
     },
     "1552": {
         "id": 1552,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1380211200,
@@ -27938,7 +27938,7 @@ const records =
     },
     "1553": {
         "id": 1553,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1380211200,
@@ -27956,7 +27956,7 @@ const records =
     },
     "1554": {
         "id": 1554,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1380211200,
@@ -27974,7 +27974,7 @@ const records =
     },
     "1555": {
         "id": 1555,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1380211200,
@@ -27992,7 +27992,7 @@ const records =
     },
     "1556": {
         "id": 1556,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1380211200,
@@ -28010,7 +28010,7 @@ const records =
     },
     "1557": {
         "id": 1557,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1380211200,
@@ -28028,7 +28028,7 @@ const records =
     },
     "1558": {
         "id": 1558,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1380211200,
@@ -28046,7 +28046,7 @@ const records =
     },
     "1559": {
         "id": 1559,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1380211200,
@@ -28064,7 +28064,7 @@ const records =
     },
     "1560": {
         "id": 1560,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1380211200,
@@ -28082,7 +28082,7 @@ const records =
     },
     "1561": {
         "id": 1561,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1380211200,
@@ -28100,7 +28100,7 @@ const records =
     },
     "1562": {
         "id": 1562,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1380211200,
@@ -28118,7 +28118,7 @@ const records =
     },
     "1563": {
         "id": 1563,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1380211200,
@@ -28136,7 +28136,7 @@ const records =
     },
     "1564": {
         "id": 1564,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1380211200,
@@ -28154,7 +28154,7 @@ const records =
     },
     "1565": {
         "id": 1565,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1380211200,
@@ -28172,7 +28172,7 @@ const records =
     },
     "1566": {
         "id": 1566,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1380211200,
@@ -28190,7 +28190,7 @@ const records =
     },
     "1567": {
         "id": 1567,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1380211200,
@@ -28208,7 +28208,7 @@ const records =
     },
     "1568": {
         "id": 1568,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1355414400,
@@ -28226,7 +28226,7 @@ const records =
     },
     "1569": {
         "id": 1569,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1355414400,
@@ -28244,7 +28244,7 @@ const records =
     },
     "1570": {
         "id": 1570,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1355414400,
@@ -28262,7 +28262,7 @@ const records =
     },
     "1571": {
         "id": 1571,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1355414400,
@@ -28280,7 +28280,7 @@ const records =
     },
     "1572": {
         "id": 1572,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1355414400,
@@ -28298,7 +28298,7 @@ const records =
     },
     "1573": {
         "id": 1573,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1355414400,
@@ -28316,7 +28316,7 @@ const records =
     },
     "1574": {
         "id": 1574,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1355414400,
@@ -28334,7 +28334,7 @@ const records =
     },
     "1575": {
         "id": 1575,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1355414400,
@@ -28352,7 +28352,7 @@ const records =
     },
     "1576": {
         "id": 1576,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1355414400,
@@ -28370,7 +28370,7 @@ const records =
     },
     "1577": {
         "id": 1577,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1355414400,
@@ -28388,7 +28388,7 @@ const records =
     },
     "1578": {
         "id": 1578,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1355414400,
@@ -28406,7 +28406,7 @@ const records =
     },
     "1579": {
         "id": 1579,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1355414400,
@@ -28424,7 +28424,7 @@ const records =
     },
     "1580": {
         "id": 1580,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1355414400,
@@ -28442,7 +28442,7 @@ const records =
     },
     "1581": {
         "id": 1581,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1355414400,
@@ -28460,7 +28460,7 @@ const records =
     },
     "1582": {
         "id": 1582,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1355414400,
@@ -28478,7 +28478,7 @@ const records =
     },
     "1583": {
         "id": 1583,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1355414400,
@@ -28496,7 +28496,7 @@ const records =
     },
     "1584": {
         "id": 1584,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1355414400,
@@ -28514,7 +28514,7 @@ const records =
     },
     "1585": {
         "id": 1585,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林正二",
         "party": "PFP",
         "date": 1355414400,
@@ -28532,7 +28532,7 @@ const records =
     },
     "1586": {
         "id": 1586,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1355414400,
@@ -28550,7 +28550,7 @@ const records =
     },
     "1587": {
         "id": 1587,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1355414400,
@@ -28568,7 +28568,7 @@ const records =
     },
     "1588": {
         "id": 1588,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1355414400,
@@ -28586,7 +28586,7 @@ const records =
     },
     "1589": {
         "id": 1589,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1355414400,
@@ -28604,7 +28604,7 @@ const records =
     },
     "1590": {
         "id": 1590,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1355414400,
@@ -28622,7 +28622,7 @@ const records =
     },
     "1591": {
         "id": 1591,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1355414400,
@@ -28640,7 +28640,7 @@ const records =
     },
     "1592": {
         "id": 1592,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1355414400,
@@ -28658,7 +28658,7 @@ const records =
     },
     "1593": {
         "id": 1593,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1355414400,
@@ -28676,7 +28676,7 @@ const records =
     },
     "1594": {
         "id": 1594,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1355414400,
@@ -28694,7 +28694,7 @@ const records =
     },
     "1595": {
         "id": 1595,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1355414400,
@@ -28712,7 +28712,7 @@ const records =
     },
     "1596": {
         "id": 1596,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1355414400,
@@ -28730,7 +28730,7 @@ const records =
     },
     "1597": {
         "id": 1597,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1355414400,
@@ -28748,7 +28748,7 @@ const records =
     },
     "1598": {
         "id": 1598,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1355414400,
@@ -28766,7 +28766,7 @@ const records =
     },
     "1599": {
         "id": 1599,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1355414400,
@@ -28784,7 +28784,7 @@ const records =
     },
     "1600": {
         "id": 1600,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1355414400,
@@ -28802,7 +28802,7 @@ const records =
     },
     "1601": {
         "id": 1601,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1355414400,
@@ -28820,7 +28820,7 @@ const records =
     },
     "1602": {
         "id": 1602,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1355414400,
@@ -28838,7 +28838,7 @@ const records =
     },
     "1603": {
         "id": 1603,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1355414400,
@@ -28856,7 +28856,7 @@ const records =
     },
     "1604": {
         "id": 1604,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1355414400,
@@ -28874,7 +28874,7 @@ const records =
     },
     "1605": {
         "id": 1605,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1355414400,
@@ -28892,7 +28892,7 @@ const records =
     },
     "1606": {
         "id": 1606,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1355414400,
@@ -28910,7 +28910,7 @@ const records =
     },
     "1607": {
         "id": 1607,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1355414400,
@@ -28928,7 +28928,7 @@ const records =
     },
     "1608": {
         "id": 1608,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1355414400,
@@ -28946,7 +28946,7 @@ const records =
     },
     "1609": {
         "id": 1609,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1355414400,
@@ -28964,7 +28964,7 @@ const records =
     },
     "1610": {
         "id": 1610,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1355414400,
@@ -28982,7 +28982,7 @@ const records =
     },
     "1611": {
         "id": 1611,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1355414400,
@@ -29000,7 +29000,7 @@ const records =
     },
     "1612": {
         "id": 1612,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1355414400,
@@ -29018,7 +29018,7 @@ const records =
     },
     "1613": {
         "id": 1613,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1355414400,
@@ -29036,7 +29036,7 @@ const records =
     },
     "1614": {
         "id": 1614,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1355414400,
@@ -29054,7 +29054,7 @@ const records =
     },
     "1615": {
         "id": 1615,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1355414400,
@@ -29072,7 +29072,7 @@ const records =
     },
     "1616": {
         "id": 1616,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1355414400,
@@ -29090,7 +29090,7 @@ const records =
     },
     "1617": {
         "id": 1617,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1355414400,
@@ -29108,7 +29108,7 @@ const records =
     },
     "1618": {
         "id": 1618,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1355414400,
@@ -29126,7 +29126,7 @@ const records =
     },
     "1619": {
         "id": 1619,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1355414400,
@@ -29144,7 +29144,7 @@ const records =
     },
     "1620": {
         "id": 1620,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1355414400,
@@ -29162,7 +29162,7 @@ const records =
     },
     "1621": {
         "id": 1621,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1355414400,
@@ -29180,7 +29180,7 @@ const records =
     },
     "1622": {
         "id": 1622,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1355414400,
@@ -29198,7 +29198,7 @@ const records =
     },
     "1623": {
         "id": 1623,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1355414400,
@@ -29216,7 +29216,7 @@ const records =
     },
     "1624": {
         "id": 1624,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1355414400,
@@ -29234,7 +29234,7 @@ const records =
     },
     "1625": {
         "id": 1625,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1355414400,
@@ -29252,7 +29252,7 @@ const records =
     },
     "1626": {
         "id": 1626,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1355414400,
@@ -29270,7 +29270,7 @@ const records =
     },
     "1627": {
         "id": 1627,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1355414400,
@@ -29288,7 +29288,7 @@ const records =
     },
     "1628": {
         "id": 1628,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1355414400,
@@ -29306,7 +29306,7 @@ const records =
     },
     "1629": {
         "id": 1629,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1355414400,
@@ -29324,7 +29324,7 @@ const records =
     },
     "1630": {
         "id": 1630,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林世嘉",
         "party": "TSU",
         "date": 1355414400,
@@ -29342,7 +29342,7 @@ const records =
     },
     "1631": {
         "id": 1631,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張曉風",
         "party": "PFP",
         "date": 1355414400,
@@ -29360,7 +29360,7 @@ const records =
     },
     "1632": {
         "id": 1632,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1355414400,
@@ -29378,7 +29378,7 @@ const records =
     },
     "1633": {
         "id": 1633,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1355414400,
@@ -29396,7 +29396,7 @@ const records =
     },
     "1634": {
         "id": 1634,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1355414400,
@@ -29414,7 +29414,7 @@ const records =
     },
     "1635": {
         "id": 1635,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1355414400,
@@ -29432,7 +29432,7 @@ const records =
     },
     "1636": {
         "id": 1636,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1355414400,
@@ -29450,7 +29450,7 @@ const records =
     },
     "1637": {
         "id": 1637,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1355414400,
@@ -29468,7 +29468,7 @@ const records =
     },
     "1638": {
         "id": 1638,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1355414400,
@@ -29486,7 +29486,7 @@ const records =
     },
     "1639": {
         "id": 1639,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1355414400,
@@ -29504,7 +29504,7 @@ const records =
     },
     "1640": {
         "id": 1640,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1355414400,
@@ -29522,7 +29522,7 @@ const records =
     },
     "1641": {
         "id": 1641,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1355414400,
@@ -29540,7 +29540,7 @@ const records =
     },
     "1642": {
         "id": 1642,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1355414400,
@@ -29558,7 +29558,7 @@ const records =
     },
     "1643": {
         "id": 1643,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1355414400,
@@ -29576,7 +29576,7 @@ const records =
     },
     "1644": {
         "id": 1644,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1355414400,
@@ -29594,7 +29594,7 @@ const records =
     },
     "1645": {
         "id": 1645,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1355414400,
@@ -29612,7 +29612,7 @@ const records =
     },
     "1646": {
         "id": 1646,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1355414400,
@@ -29630,7 +29630,7 @@ const records =
     },
     "1647": {
         "id": 1647,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1355414400,
@@ -29648,7 +29648,7 @@ const records =
     },
     "1648": {
         "id": 1648,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1355414400,
@@ -29666,7 +29666,7 @@ const records =
     },
     "1649": {
         "id": 1649,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1355414400,
@@ -29684,7 +29684,7 @@ const records =
     },
     "1650": {
         "id": 1650,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1355414400,
@@ -29702,7 +29702,7 @@ const records =
     },
     "1651": {
         "id": 1651,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1355414400,
@@ -29720,7 +29720,7 @@ const records =
     },
     "1652": {
         "id": 1652,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1355414400,
@@ -29738,7 +29738,7 @@ const records =
     },
     "1653": {
         "id": 1653,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1355414400,
@@ -29756,7 +29756,7 @@ const records =
     },
     "1654": {
         "id": 1654,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1355414400,
@@ -29774,7 +29774,7 @@ const records =
     },
     "1655": {
         "id": 1655,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1355414400,
@@ -29792,7 +29792,7 @@ const records =
     },
     "1656": {
         "id": 1656,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1355414400,
@@ -29810,7 +29810,7 @@ const records =
     },
     "1657": {
         "id": 1657,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1355414400,
@@ -29828,7 +29828,7 @@ const records =
     },
     "1658": {
         "id": 1658,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1355414400,
@@ -29846,7 +29846,7 @@ const records =
     },
     "1659": {
         "id": 1659,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1355414400,
@@ -29864,7 +29864,7 @@ const records =
     },
     "1660": {
         "id": 1660,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1355414400,
@@ -29882,7 +29882,7 @@ const records =
     },
     "1661": {
         "id": 1661,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1355414400,
@@ -29900,7 +29900,7 @@ const records =
     },
     "1662": {
         "id": 1662,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1355414400,
@@ -29918,7 +29918,7 @@ const records =
     },
     "1663": {
         "id": 1663,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1355414400,
@@ -29936,7 +29936,7 @@ const records =
     },
     "1664": {
         "id": 1664,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1355414400,
@@ -29954,7 +29954,7 @@ const records =
     },
     "1665": {
         "id": 1665,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1355414400,
@@ -29972,7 +29972,7 @@ const records =
     },
     "1666": {
         "id": 1666,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1355414400,
@@ -29990,7 +29990,7 @@ const records =
     },
     "1667": {
         "id": 1667,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1355414400,
@@ -30008,7 +30008,7 @@ const records =
     },
     "1668": {
         "id": 1668,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1355414400,
@@ -30026,7 +30026,7 @@ const records =
     },
     "1669": {
         "id": 1669,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1355414400,
@@ -30044,7 +30044,7 @@ const records =
     },
     "1670": {
         "id": 1670,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1355414400,
@@ -30062,7 +30062,7 @@ const records =
     },
     "1671": {
         "id": 1671,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1355414400,
@@ -30080,7 +30080,7 @@ const records =
     },
     "1672": {
         "id": 1672,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1355414400,
@@ -30098,7 +30098,7 @@ const records =
     },
     "1673": {
         "id": 1673,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1355414400,
@@ -30116,7 +30116,7 @@ const records =
     },
     "1674": {
         "id": 1674,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1355414400,
@@ -30134,7 +30134,7 @@ const records =
     },
     "1675": {
         "id": 1675,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1355414400,
@@ -30152,7 +30152,7 @@ const records =
     },
     "1676": {
         "id": 1676,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1355414400,
@@ -30170,7 +30170,7 @@ const records =
     },
     "1677": {
         "id": 1677,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1355414400,
@@ -30188,7 +30188,7 @@ const records =
     },
     "1678": {
         "id": 1678,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1355414400,
@@ -30206,7 +30206,7 @@ const records =
     },
     "1679": {
         "id": 1679,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1355414400,
@@ -30224,7 +30224,7 @@ const records =
     },
     "1680": {
         "id": 1680,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1355414400,
@@ -30242,7 +30242,7 @@ const records =
     },
     "1681": {
         "id": 1681,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1355414400,
@@ -30260,7 +30260,7 @@ const records =
     },
     "1682": {
         "id": 1682,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1355414400,
@@ -30278,7 +30278,7 @@ const records =
     },
     "1683": {
         "id": 1683,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1355414400,
@@ -30296,7 +30296,7 @@ const records =
     },
     "1684": {
         "id": 1684,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1355414400,
@@ -30314,7 +30314,7 @@ const records =
     },
     "1685": {
         "id": 1685,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1355414400,
@@ -30332,7 +30332,7 @@ const records =
     },
     "1686": {
         "id": 1686,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1355414400,
@@ -30350,7 +30350,7 @@ const records =
     },
     "1687": {
         "id": 1687,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1355414400,
@@ -30368,7 +30368,7 @@ const records =
     },
     "1688": {
         "id": 1688,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1355414400,
@@ -30386,7 +30386,7 @@ const records =
     },
     "1689": {
         "id": 1689,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1355414400,
@@ -30404,7 +30404,7 @@ const records =
     },
     "1690": {
         "id": 1690,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1355414400,
@@ -30422,7 +30422,7 @@ const records =
     },
     "1691": {
         "id": 1691,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1355414400,
@@ -30440,7 +30440,7 @@ const records =
     },
     "1692": {
         "id": 1692,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1355414400,
@@ -30458,7 +30458,7 @@ const records =
     },
     "1693": {
         "id": 1693,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1355414400,
@@ -30476,7 +30476,7 @@ const records =
     },
     "1694": {
         "id": 1694,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林正二",
         "party": "PFP",
         "date": 1355414400,
@@ -30494,7 +30494,7 @@ const records =
     },
     "1695": {
         "id": 1695,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1355414400,
@@ -30512,7 +30512,7 @@ const records =
     },
     "1696": {
         "id": 1696,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1355414400,
@@ -30530,7 +30530,7 @@ const records =
     },
     "1697": {
         "id": 1697,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1355414400,
@@ -30548,7 +30548,7 @@ const records =
     },
     "1698": {
         "id": 1698,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1355414400,
@@ -30566,7 +30566,7 @@ const records =
     },
     "1699": {
         "id": 1699,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1355414400,
@@ -30584,7 +30584,7 @@ const records =
     },
     "1700": {
         "id": 1700,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1355414400,
@@ -30602,7 +30602,7 @@ const records =
     },
     "1701": {
         "id": 1701,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1355414400,
@@ -30620,7 +30620,7 @@ const records =
     },
     "1702": {
         "id": 1702,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1355414400,
@@ -30638,7 +30638,7 @@ const records =
     },
     "1703": {
         "id": 1703,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1355414400,
@@ -30656,7 +30656,7 @@ const records =
     },
     "1704": {
         "id": 1704,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1355414400,
@@ -30674,7 +30674,7 @@ const records =
     },
     "1705": {
         "id": 1705,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1355414400,
@@ -30692,7 +30692,7 @@ const records =
     },
     "1706": {
         "id": 1706,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1355414400,
@@ -30710,7 +30710,7 @@ const records =
     },
     "1707": {
         "id": 1707,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1355414400,
@@ -30728,7 +30728,7 @@ const records =
     },
     "1708": {
         "id": 1708,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1355414400,
@@ -30746,7 +30746,7 @@ const records =
     },
     "1709": {
         "id": 1709,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1355414400,
@@ -30764,7 +30764,7 @@ const records =
     },
     "1710": {
         "id": 1710,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1355414400,
@@ -30782,7 +30782,7 @@ const records =
     },
     "1711": {
         "id": 1711,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1355414400,
@@ -30800,7 +30800,7 @@ const records =
     },
     "1712": {
         "id": 1712,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1355414400,
@@ -30818,7 +30818,7 @@ const records =
     },
     "1713": {
         "id": 1713,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1355414400,
@@ -30836,7 +30836,7 @@ const records =
     },
     "1714": {
         "id": 1714,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1355414400,
@@ -30854,7 +30854,7 @@ const records =
     },
     "1715": {
         "id": 1715,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1355414400,
@@ -30872,7 +30872,7 @@ const records =
     },
     "1716": {
         "id": 1716,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1355414400,
@@ -30890,7 +30890,7 @@ const records =
     },
     "1717": {
         "id": 1717,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1355414400,
@@ -30908,7 +30908,7 @@ const records =
     },
     "1718": {
         "id": 1718,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1355414400,
@@ -30926,7 +30926,7 @@ const records =
     },
     "1719": {
         "id": 1719,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1355414400,
@@ -30944,7 +30944,7 @@ const records =
     },
     "1720": {
         "id": 1720,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1355414400,
@@ -30962,7 +30962,7 @@ const records =
     },
     "1721": {
         "id": 1721,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1355414400,
@@ -30980,7 +30980,7 @@ const records =
     },
     "1722": {
         "id": 1722,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1355414400,
@@ -30998,7 +30998,7 @@ const records =
     },
     "1723": {
         "id": 1723,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1355414400,
@@ -31016,7 +31016,7 @@ const records =
     },
     "1724": {
         "id": 1724,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1355414400,
@@ -31034,7 +31034,7 @@ const records =
     },
     "1725": {
         "id": 1725,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1355414400,
@@ -31052,7 +31052,7 @@ const records =
     },
     "1726": {
         "id": 1726,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1355414400,
@@ -31070,7 +31070,7 @@ const records =
     },
     "1727": {
         "id": 1727,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1355414400,
@@ -31088,7 +31088,7 @@ const records =
     },
     "1728": {
         "id": 1728,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1355414400,
@@ -31106,7 +31106,7 @@ const records =
     },
     "1729": {
         "id": 1729,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1355414400,
@@ -31124,7 +31124,7 @@ const records =
     },
     "1730": {
         "id": 1730,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1355414400,
@@ -31142,7 +31142,7 @@ const records =
     },
     "1731": {
         "id": 1731,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1355414400,
@@ -31160,7 +31160,7 @@ const records =
     },
     "1732": {
         "id": 1732,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1355414400,
@@ -31178,7 +31178,7 @@ const records =
     },
     "1733": {
         "id": 1733,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1355414400,
@@ -31196,7 +31196,7 @@ const records =
     },
     "1734": {
         "id": 1734,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1355414400,
@@ -31214,7 +31214,7 @@ const records =
     },
     "1735": {
         "id": 1735,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1355414400,
@@ -31232,7 +31232,7 @@ const records =
     },
     "1736": {
         "id": 1736,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1355414400,
@@ -31250,7 +31250,7 @@ const records =
     },
     "1737": {
         "id": 1737,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林世嘉",
         "party": "TSU",
         "date": 1355414400,
@@ -31268,7 +31268,7 @@ const records =
     },
     "1738": {
         "id": 1738,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1355414400,
@@ -31286,7 +31286,7 @@ const records =
     },
     "1739": {
         "id": 1739,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1355414400,
@@ -31304,7 +31304,7 @@ const records =
     },
     "1740": {
         "id": 1740,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張曉風",
         "party": "PFP",
         "date": 1355414400,
@@ -31322,7 +31322,7 @@ const records =
     },
     "1741": {
         "id": 1741,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1355414400,
@@ -31340,7 +31340,7 @@ const records =
     },
     "1742": {
         "id": 1742,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1355414400,
@@ -31358,7 +31358,7 @@ const records =
     },
     "1743": {
         "id": 1743,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1355414400,
@@ -31376,7 +31376,7 @@ const records =
     },
     "1744": {
         "id": 1744,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1355414400,
@@ -31394,7 +31394,7 @@ const records =
     },
     "1745": {
         "id": 1745,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1355414400,
@@ -31412,7 +31412,7 @@ const records =
     },
     "1746": {
         "id": 1746,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1355414400,
@@ -31430,7 +31430,7 @@ const records =
     },
     "1747": {
         "id": 1747,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1355414400,
@@ -31448,7 +31448,7 @@ const records =
     },
     "1748": {
         "id": 1748,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1355414400,
@@ -31466,7 +31466,7 @@ const records =
     },
     "1749": {
         "id": 1749,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1355414400,
@@ -31484,7 +31484,7 @@ const records =
     },
     "1750": {
         "id": 1750,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1355414400,
@@ -31502,7 +31502,7 @@ const records =
     },
     "1751": {
         "id": 1751,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1355414400,
@@ -31520,7 +31520,7 @@ const records =
     },
     "1752": {
         "id": 1752,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1355414400,
@@ -31538,7 +31538,7 @@ const records =
     },
     "1753": {
         "id": 1753,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1355414400,
@@ -31556,7 +31556,7 @@ const records =
     },
     "1754": {
         "id": 1754,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1355414400,
@@ -31574,7 +31574,7 @@ const records =
     },
     "1755": {
         "id": 1755,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1355414400,
@@ -31592,7 +31592,7 @@ const records =
     },
     "1756": {
         "id": 1756,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1355414400,
@@ -31610,7 +31610,7 @@ const records =
     },
     "1757": {
         "id": 1757,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1355414400,
@@ -31628,7 +31628,7 @@ const records =
     },
     "1758": {
         "id": 1758,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1355414400,
@@ -31646,7 +31646,7 @@ const records =
     },
     "1759": {
         "id": 1759,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1355414400,
@@ -31664,7 +31664,7 @@ const records =
     },
     "1760": {
         "id": 1760,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1355414400,
@@ -31682,7 +31682,7 @@ const records =
     },
     "1761": {
         "id": 1761,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1355414400,
@@ -31700,7 +31700,7 @@ const records =
     },
     "1762": {
         "id": 1762,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1355414400,
@@ -31718,7 +31718,7 @@ const records =
     },
     "1763": {
         "id": 1763,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1355414400,
@@ -31736,7 +31736,7 @@ const records =
     },
     "1764": {
         "id": 1764,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1355414400,
@@ -31754,7 +31754,7 @@ const records =
     },
     "1765": {
         "id": 1765,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1355414400,
@@ -31772,7 +31772,7 @@ const records =
     },
     "1766": {
         "id": 1766,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1355414400,
@@ -31790,7 +31790,7 @@ const records =
     },
     "1767": {
         "id": 1767,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1355414400,
@@ -31808,7 +31808,7 @@ const records =
     },
     "1768": {
         "id": 1768,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1355414400,
@@ -31826,7 +31826,7 @@ const records =
     },
     "1769": {
         "id": 1769,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1355414400,
@@ -31844,7 +31844,7 @@ const records =
     },
     "1770": {
         "id": 1770,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1355414400,
@@ -31862,7 +31862,7 @@ const records =
     },
     "1771": {
         "id": 1771,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1355414400,
@@ -31880,7 +31880,7 @@ const records =
     },
     "1772": {
         "id": 1772,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1355414400,
@@ -31898,7 +31898,7 @@ const records =
     },
     "1773": {
         "id": 1773,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1355414400,
@@ -31916,7 +31916,7 @@ const records =
     },
     "1774": {
         "id": 1774,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1355414400,
@@ -31934,7 +31934,7 @@ const records =
     },
     "1775": {
         "id": 1775,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1355414400,
@@ -31952,7 +31952,7 @@ const records =
     },
     "1776": {
         "id": 1776,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1355414400,
@@ -31970,7 +31970,7 @@ const records =
     },
     "1777": {
         "id": 1777,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1355414400,
@@ -31988,7 +31988,7 @@ const records =
     },
     "1778": {
         "id": 1778,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1355414400,
@@ -32006,7 +32006,7 @@ const records =
     },
     "1779": {
         "id": 1779,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1355414400,
@@ -32024,7 +32024,7 @@ const records =
     },
     "1780": {
         "id": 1780,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1355414400,
@@ -32042,7 +32042,7 @@ const records =
     },
     "1781": {
         "id": 1781,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1355414400,
@@ -32060,7 +32060,7 @@ const records =
     },
     "1782": {
         "id": 1782,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1355414400,
@@ -32078,7 +32078,7 @@ const records =
     },
     "1783": {
         "id": 1783,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1355414400,
@@ -32096,7 +32096,7 @@ const records =
     },
     "1784": {
         "id": 1784,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1355414400,
@@ -32114,7 +32114,7 @@ const records =
     },
     "1785": {
         "id": 1785,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1355414400,
@@ -32132,7 +32132,7 @@ const records =
     },
     "1786": {
         "id": 1786,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1355414400,
@@ -32150,7 +32150,7 @@ const records =
     },
     "1787": {
         "id": 1787,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1355414400,
@@ -32168,7 +32168,7 @@ const records =
     },
     "1788": {
         "id": 1788,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1355414400,
@@ -32186,7 +32186,7 @@ const records =
     },
     "1789": {
         "id": 1789,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1355414400,
@@ -32204,7 +32204,7 @@ const records =
     },
     "1790": {
         "id": 1790,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李慶華",
         "party": "KMT",
         "date": 1355414400,
@@ -32222,7 +32222,7 @@ const records =
     },
     "1791": {
         "id": 1791,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王惠美",
         "party": "KMT",
         "date": 1355414400,
@@ -32240,7 +32240,7 @@ const records =
     },
     "1792": {
         "id": 1792,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖正井",
         "party": "KMT",
         "date": 1355414400,
@@ -32258,7 +32258,7 @@ const records =
     },
     "1793": {
         "id": 1793,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅明才",
         "party": "KMT",
         "date": 1355414400,
@@ -32276,7 +32276,7 @@ const records =
     },
     "1794": {
         "id": 1794,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王金平",
         "party": "KMT",
         "date": 1355414400,
@@ -32294,7 +32294,7 @@ const records =
     },
     "1795": {
         "id": 1795,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂學樟",
         "party": "KMT",
         "date": 1355414400,
@@ -32312,7 +32312,7 @@ const records =
     },
     "1796": {
         "id": 1796,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張嘉郡",
         "party": "KMT",
         "date": 1355414400,
@@ -32330,7 +32330,7 @@ const records =
     },
     "1797": {
         "id": 1797,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1355414400,
@@ -32348,7 +32348,7 @@ const records =
     },
     "1798": {
         "id": 1798,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1355414400,
@@ -32366,7 +32366,7 @@ const records =
     },
     "1799": {
         "id": 1799,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1355414400,
@@ -32384,7 +32384,7 @@ const records =
     },
     "1800": {
         "id": 1800,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃偉哲",
         "party": "DPP",
         "date": 1355414400,
@@ -32402,7 +32402,7 @@ const records =
     },
     "1801": {
         "id": 1801,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1355414400,
@@ -32420,7 +32420,7 @@ const records =
     },
     "1802": {
         "id": 1802,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林正二",
         "party": "PFP",
         "date": 1355414400,
@@ -32438,7 +32438,7 @@ const records =
     },
     "1803": {
         "id": 1803,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱文彥",
         "party": "KMT",
         "date": 1355414400,
@@ -32456,7 +32456,7 @@ const records =
     },
     "1804": {
         "id": 1804,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "丁守中",
         "party": "KMT",
         "date": 1355414400,
@@ -32474,7 +32474,7 @@ const records =
     },
     "1805": {
         "id": 1805,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "趙天麟",
         "party": "DPP",
         "date": 1355414400,
@@ -32492,7 +32492,7 @@ const records =
     },
     "1806": {
         "id": 1806,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1355414400,
@@ -32510,7 +32510,7 @@ const records =
     },
     "1807": {
         "id": 1807,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1355414400,
@@ -32528,7 +32528,7 @@ const records =
     },
     "1808": {
         "id": 1808,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1355414400,
@@ -32546,7 +32546,7 @@ const records =
     },
     "1809": {
         "id": 1809,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林岱樺",
         "party": "DPP",
         "date": 1355414400,
@@ -32564,7 +32564,7 @@ const records =
     },
     "1810": {
         "id": 1810,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳唐山",
         "party": "DPP",
         "date": 1355414400,
@@ -32582,7 +32582,7 @@ const records =
     },
     "1811": {
         "id": 1811,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1355414400,
@@ -32600,7 +32600,7 @@ const records =
     },
     "1812": {
         "id": 1812,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1355414400,
@@ -32618,7 +32618,7 @@ const records =
     },
     "1813": {
         "id": 1813,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇震清",
         "party": "DPP",
         "date": 1355414400,
@@ -32636,7 +32636,7 @@ const records =
     },
     "1814": {
         "id": 1814,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1355414400,
@@ -32654,7 +32654,7 @@ const records =
     },
     "1815": {
         "id": 1815,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "姚文智",
         "party": "DPP",
         "date": 1355414400,
@@ -32672,7 +32672,7 @@ const records =
     },
     "1816": {
         "id": 1816,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳歐珀",
         "party": "DPP",
         "date": 1355414400,
@@ -32690,7 +32690,7 @@ const records =
     },
     "1817": {
         "id": 1817,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蕭美琴",
         "party": "DPP",
         "date": 1355414400,
@@ -32708,7 +32708,7 @@ const records =
     },
     "1818": {
         "id": 1818,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱議瑩",
         "party": "DPP",
         "date": 1355414400,
@@ -32726,7 +32726,7 @@ const records =
     },
     "1819": {
         "id": 1819,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李應元",
         "party": "DPP",
         "date": 1355414400,
@@ -32744,7 +32744,7 @@ const records =
     },
     "1820": {
         "id": 1820,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1355414400,
@@ -32762,7 +32762,7 @@ const records =
     },
     "1821": {
         "id": 1821,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1355414400,
@@ -32780,7 +32780,7 @@ const records =
     },
     "1822": {
         "id": 1822,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1355414400,
@@ -32798,7 +32798,7 @@ const records =
     },
     "1823": {
         "id": 1823,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1355414400,
@@ -32816,7 +32816,7 @@ const records =
     },
     "1824": {
         "id": 1824,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳明文",
         "party": "DPP",
         "date": 1355414400,
@@ -32834,7 +32834,7 @@ const records =
     },
     "1825": {
         "id": 1825,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1355414400,
@@ -32852,7 +32852,7 @@ const records =
     },
     "1826": {
         "id": 1826,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李昆澤",
         "party": "DPP",
         "date": 1355414400,
@@ -32870,7 +32870,7 @@ const records =
     },
     "1827": {
         "id": 1827,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳節如",
         "party": "DPP",
         "date": 1355414400,
@@ -32888,7 +32888,7 @@ const records =
     },
     "1828": {
         "id": 1828,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1355414400,
@@ -32906,7 +32906,7 @@ const records =
     },
     "1829": {
         "id": 1829,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1355414400,
@@ -32924,7 +32924,7 @@ const records =
     },
     "1830": {
         "id": 1830,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1355414400,
@@ -32942,7 +32942,7 @@ const records =
     },
     "1831": {
         "id": 1831,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡煌瑯",
         "party": "DPP",
         "date": 1355414400,
@@ -32960,7 +32960,7 @@ const records =
     },
     "1832": {
         "id": 1832,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1355414400,
@@ -32978,7 +32978,7 @@ const records =
     },
     "1833": {
         "id": 1833,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1355414400,
@@ -32996,7 +32996,7 @@ const records =
     },
     "1834": {
         "id": 1834,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李俊俋",
         "party": "DPP",
         "date": 1355414400,
@@ -33014,7 +33014,7 @@ const records =
     },
     "1835": {
         "id": 1835,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1355414400,
@@ -33032,7 +33032,7 @@ const records =
     },
     "1836": {
         "id": 1836,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1355414400,
@@ -33050,7 +33050,7 @@ const records =
     },
     "1837": {
         "id": 1837,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1355414400,
@@ -33068,7 +33068,7 @@ const records =
     },
     "1838": {
         "id": 1838,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1355414400,
@@ -33086,7 +33086,7 @@ const records =
     },
     "1839": {
         "id": 1839,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1355414400,
@@ -33104,7 +33104,7 @@ const records =
     },
     "1840": {
         "id": 1840,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "魏明谷",
         "party": "DPP",
         "date": 1355414400,
@@ -33122,7 +33122,7 @@ const records =
     },
     "1841": {
         "id": 1841,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1355414400,
@@ -33140,7 +33140,7 @@ const records =
     },
     "1842": {
         "id": 1842,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1355414400,
@@ -33158,7 +33158,7 @@ const records =
     },
     "1843": {
         "id": 1843,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1355414400,
@@ -33176,7 +33176,7 @@ const records =
     },
     "1844": {
         "id": 1844,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "許忠信",
         "party": "TSU",
         "date": 1355414400,
@@ -33194,7 +33194,7 @@ const records =
     },
     "1845": {
         "id": 1845,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林世嘉",
         "party": "TSU",
         "date": 1355414400,
@@ -33212,7 +33212,7 @@ const records =
     },
     "1846": {
         "id": 1846,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃文玲",
         "party": "TSU",
         "date": 1355414400,
@@ -33230,7 +33230,7 @@ const records =
     },
     "1847": {
         "id": 1847,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張曉風",
         "party": "PFP",
         "date": 1355414400,
@@ -33248,7 +33248,7 @@ const records =
     },
     "1848": {
         "id": 1848,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1355414400,
@@ -33266,7 +33266,7 @@ const records =
     },
     "1849": {
         "id": 1849,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭汝芬",
         "party": "KMT",
         "date": 1355414400,
@@ -33284,7 +33284,7 @@ const records =
     },
     "1850": {
         "id": 1850,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江啟臣",
         "party": "KMT",
         "date": 1355414400,
@@ -33302,7 +33302,7 @@ const records =
     },
     "1851": {
         "id": 1851,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林滄敏",
         "party": "KMT",
         "date": 1355414400,
@@ -33320,7 +33320,7 @@ const records =
     },
     "1852": {
         "id": 1852,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "江惠貞",
         "party": "KMT",
         "date": 1355414400,
@@ -33338,7 +33338,7 @@ const records =
     },
     "1853": {
         "id": 1853,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐欣瑩",
         "party": "KMT",
         "date": 1355414400,
@@ -33356,7 +33356,7 @@ const records =
     },
     "1854": {
         "id": 1854,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李鴻鈞",
         "party": "KMT",
         "date": 1355414400,
@@ -33374,7 +33374,7 @@ const records =
     },
     "1855": {
         "id": 1855,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林國正",
         "party": "KMT",
         "date": 1355414400,
@@ -33392,7 +33392,7 @@ const records =
     },
     "1856": {
         "id": 1856,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蘇清泉",
         "party": "KMT",
         "date": 1355414400,
@@ -33410,7 +33410,7 @@ const records =
     },
     "1857": {
         "id": 1857,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1355414400,
@@ -33428,7 +33428,7 @@ const records =
     },
     "1858": {
         "id": 1858,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐少萍",
         "party": "KMT",
         "date": 1355414400,
@@ -33446,7 +33446,7 @@ const records =
     },
     "1859": {
         "id": 1859,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1355414400,
@@ -33464,7 +33464,7 @@ const records =
     },
     "1860": {
         "id": 1860,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1355414400,
@@ -33482,7 +33482,7 @@ const records =
     },
     "1861": {
         "id": 1861,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1355414400,
@@ -33500,7 +33500,7 @@ const records =
     },
     "1862": {
         "id": 1862,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1355414400,
@@ -33518,7 +33518,7 @@ const records =
     },
     "1863": {
         "id": 1863,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "費鴻泰",
         "party": "KMT",
         "date": 1355414400,
@@ -33536,7 +33536,7 @@ const records =
     },
     "1864": {
         "id": 1864,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊應雄",
         "party": "KMT",
         "date": 1355414400,
@@ -33554,7 +33554,7 @@ const records =
     },
     "1865": {
         "id": 1865,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "張慶忠",
         "party": "KMT",
         "date": 1355414400,
@@ -33572,7 +33572,7 @@ const records =
     },
     "1866": {
         "id": 1866,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1355414400,
@@ -33590,7 +33590,7 @@ const records =
     },
     "1867": {
         "id": 1867,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "徐耀昌",
         "party": "KMT",
         "date": 1355414400,
@@ -33608,7 +33608,7 @@ const records =
     },
     "1868": {
         "id": 1868,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林明溱",
         "party": "KMT",
         "date": 1355414400,
@@ -33626,7 +33626,7 @@ const records =
     },
     "1869": {
         "id": 1869,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1355414400,
@@ -33644,7 +33644,7 @@ const records =
     },
     "1870": {
         "id": 1870,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1355414400,
@@ -33662,7 +33662,7 @@ const records =
     },
     "1871": {
         "id": 1871,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1355414400,
@@ -33680,7 +33680,7 @@ const records =
     },
     "1872": {
         "id": 1872,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1355414400,
@@ -33698,7 +33698,7 @@ const records =
     },
     "1873": {
         "id": 1873,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "馬文君",
         "party": "KMT",
         "date": 1355414400,
@@ -33716,7 +33716,7 @@ const records =
     },
     "1874": {
         "id": 1874,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1355414400,
@@ -33734,7 +33734,7 @@ const records =
     },
     "1875": {
         "id": 1875,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳超明",
         "party": "KMT",
         "date": 1355414400,
@@ -33752,7 +33752,7 @@ const records =
     },
     "1876": {
         "id": 1876,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳根德",
         "party": "KMT",
         "date": 1355414400,
@@ -33770,7 +33770,7 @@ const records =
     },
     "1877": {
         "id": 1877,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王廷升",
         "party": "KMT",
         "date": 1355414400,
@@ -33788,7 +33788,7 @@ const records =
     },
     "1878": {
         "id": 1878,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "簡東明",
         "party": "KMT",
         "date": 1355414400,
@@ -33806,7 +33806,7 @@ const records =
     },
     "1879": {
         "id": 1879,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1355414400,
@@ -33824,7 +33824,7 @@ const records =
     },
     "1880": {
         "id": 1880,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1355414400,
@@ -33842,7 +33842,7 @@ const records =
     },
     "1881": {
         "id": 1881,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1355414400,
@@ -33860,7 +33860,7 @@ const records =
     },
     "1882": {
         "id": 1882,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "紀國棟",
         "party": "KMT",
         "date": 1355414400,
@@ -33878,7 +33878,7 @@ const records =
     },
     "1883": {
         "id": 1883,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "詹凱臣",
         "party": "KMT",
         "date": 1355414400,
@@ -33896,7 +33896,7 @@ const records =
     },
     "1884": {
         "id": 1884,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "洪秀柱",
         "party": "KMT",
         "date": 1355414400,
@@ -33914,7 +33914,7 @@ const records =
     },
     "1885": {
         "id": 1885,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1355414400,
@@ -33932,7 +33932,7 @@ const records =
     },
     "1886": {
         "id": 1886,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "黃昭順",
         "party": "KMT",
         "date": 1355414400,
@@ -33950,7 +33950,7 @@ const records =
     },
     "1887": {
         "id": 1887,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡正元",
         "party": "KMT",
         "date": 1355414400,
@@ -33968,7 +33968,7 @@ const records =
     },
     "1888": {
         "id": 1888,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "曾巨威",
         "party": "KMT",
         "date": 1355414400,
@@ -33986,7 +33986,7 @@ const records =
     },
     "1889": {
         "id": 1889,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林鴻池",
         "party": "KMT",
         "date": 1355414400,
@@ -34004,7 +34004,7 @@ const records =
     },
     "1890": {
         "id": 1890,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳育昇",
         "party": "KMT",
         "date": 1355414400,
@@ -34022,7 +34022,7 @@ const records =
     },
     "1891": {
         "id": 1891,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "賴士葆",
         "party": "KMT",
         "date": 1355414400,
@@ -34040,7 +34040,7 @@ const records =
     },
     "1892": {
         "id": 1892,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "翁重鈞",
         "party": "KMT",
         "date": 1355414400,
@@ -34058,7 +34058,7 @@ const records =
     },
     "1893": {
         "id": 1893,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡錦隆",
         "party": "KMT",
         "date": 1355414400,
@@ -34076,7 +34076,7 @@ const records =
     },
     "1894": {
         "id": 1894,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "孫大千",
         "party": "KMT",
         "date": 1355414400,
@@ -34094,7 +34094,7 @@ const records =
     },
     "1895": {
         "id": 1895,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "羅淑蕾",
         "party": "KMT",
         "date": 1355414400,
@@ -34112,7 +34112,7 @@ const records =
     },
     "1896": {
         "id": 1896,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林德福",
         "party": "KMT",
         "date": 1355414400,
@@ -34130,7 +34130,7 @@ const records =
     },
     "1897": {
         "id": 1897,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "盧嘉辰",
         "party": "KMT",
         "date": 1355414400,
@@ -34148,7 +34148,7 @@ const records =
     },
     "1898": {
         "id": 1898,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "廖國棟",
         "party": "KMT",
         "date": 1355414400,
@@ -34166,7 +34166,7 @@ const records =
     },
     "1899": {
         "id": 1899,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "王進士",
         "party": "KMT",
         "date": 1355414400,
@@ -34184,7 +34184,7 @@ const records =
     },
     "1900": {
         "id": 1900,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳雪生",
         "party": "NONE",
         "date": 1355414400,
@@ -34202,7 +34202,7 @@ const records =
     },
     "1901": {
         "id": 1901,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1398960000,
@@ -34220,7 +34220,7 @@ const records =
     },
     "1902": {
         "id": 1902,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "民進黨黨團",
         "party": "DPP",
         "date": 1398355200,
@@ -34238,7 +34238,7 @@ const records =
     },
     "1903": {
         "id": 1903,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1398355200,
@@ -34256,7 +34256,7 @@ const records =
     },
     "1904": {
         "id": 1904,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1398355200,
@@ -34274,7 +34274,7 @@ const records =
     },
     "1905": {
         "id": 1905,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1398355200,
@@ -34292,7 +34292,7 @@ const records =
     },
     "1906": {
         "id": 1906,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1398355200,
@@ -34310,7 +34310,7 @@ const records =
     },
     "1907": {
         "id": 1907,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1398355200,
@@ -34328,7 +34328,7 @@ const records =
     },
     "1908": {
         "id": 1908,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "段宜康",
         "party": "DPP",
         "date": 1398355200,
@@ -34346,7 +34346,7 @@ const records =
     },
     "1909": {
         "id": 1909,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1382630400,
@@ -34364,7 +34364,7 @@ const records =
     },
     "1910": {
         "id": 1910,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1382630400,
@@ -34382,7 +34382,7 @@ const records =
     },
     "1911": {
         "id": 1911,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "田秋堇",
         "party": "DPP",
         "date": 1382630400,
@@ -34400,7 +34400,7 @@ const records =
     },
     "1912": {
         "id": 1912,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1382630400,
@@ -34418,7 +34418,7 @@ const records =
     },
     "1913": {
         "id": 1913,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1382630400,
@@ -34436,7 +34436,7 @@ const records =
     },
     "1914": {
         "id": 1914,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1382630400,
@@ -34454,7 +34454,7 @@ const records =
     },
     "1915": {
         "id": 1915,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "楊曜",
         "party": "DPP",
         "date": 1382630400,
@@ -34472,7 +34472,7 @@ const records =
     },
     "1916": {
         "id": 1916,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "台灣團結聯盟黨團",
         "party": "TSU",
         "date": 1368720000,
@@ -34490,7 +34490,7 @@ const records =
     },
     "1917": {
         "id": 1917,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林世嘉",
         "party": "TSU",
         "date": 1368720000,
@@ -34508,7 +34508,7 @@ const records =
     },
     "1918": {
         "id": 1918,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳其邁",
         "party": "DPP",
         "date": 1368115200,
@@ -34526,7 +34526,7 @@ const records =
     },
     "1919": {
         "id": 1919,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1368115200,
@@ -34544,7 +34544,7 @@ const records =
     },
     "1920": {
         "id": 1920,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "吳宜臻",
         "party": "DPP",
         "date": 1368115200,
@@ -34562,7 +34562,7 @@ const records =
     },
     "1921": {
         "id": 1921,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "葉宜津",
         "party": "DPP",
         "date": 1368115200,
@@ -34580,7 +34580,7 @@ const records =
     },
     "1922": {
         "id": 1922,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "林淑芬",
         "party": "DPP",
         "date": 1368115200,
@@ -34598,7 +34598,7 @@ const records =
     },
     "1923": {
         "id": 1923,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "親民黨黨團",
         "party": "PFP",
         "date": 1367510400,
@@ -34616,7 +34616,7 @@ const records =
     },
     "1924": {
         "id": 1924,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "李桐豪",
         "party": "PFP",
         "date": 1367510400,
@@ -34634,7 +34634,7 @@ const records =
     },
     "1925": {
         "id": 1925,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "民進黨黨團",
         "party": "DPP",
         "date": 1347897600,
@@ -34652,7 +34652,7 @@ const records =
     },
     "1926": {
         "id": 1926,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1347897600,
@@ -34670,7 +34670,7 @@ const records =
     },
     "1927": {
         "id": 1927,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1347897600,
@@ -34688,7 +34688,7 @@ const records =
     },
     "1928": {
         "id": 1928,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1347897600,
@@ -34706,7 +34706,7 @@ const records =
     },
     "1929": {
         "id": 1929,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "民進黨黨團",
         "party": "DPP",
         "date": 1331222400,
@@ -34724,7 +34724,7 @@ const records =
     },
     "1930": {
         "id": 1930,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1331222400,
@@ -34742,7 +34742,7 @@ const records =
     },
     "1931": {
         "id": 1931,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "潘孟安",
         "party": "DPP",
         "date": 1331222400,
@@ -34760,7 +34760,7 @@ const records =
     },
     "1932": {
         "id": 1932,
-        "issue": "核能",
+        "issue": "核四停建",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1331222400,
@@ -34778,7 +34778,7 @@ const records =
     },
     "1933": {
         "id": 1933,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "吳秉叡",
         "party": "DPP",
         "date": 1390752000,
@@ -34796,7 +34796,7 @@ const records =
     },
     "1934": {
         "id": 1934,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "柯建銘",
         "party": "DPP",
         "date": 1392912000,
@@ -34814,7 +34814,7 @@ const records =
     },
     "1935": {
         "id": 1935,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "楊瓊瓔",
         "party": "KMT",
         "date": 1392912000,
@@ -34832,7 +34832,7 @@ const records =
     },
     "1936": {
         "id": 1936,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1392912000,
@@ -34850,7 +34850,7 @@ const records =
     },
     "1937": {
         "id": 1937,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "高志鵬",
         "party": "DPP",
         "date": 1392912000,
@@ -34868,7 +34868,7 @@ const records =
     },
     "1938": {
         "id": 1938,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳鎮湘",
         "party": "KMT",
         "date": 1392912000,
@@ -34886,7 +34886,7 @@ const records =
     },
     "1939": {
         "id": 1939,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1392912000,
@@ -34904,7 +34904,7 @@ const records =
     },
     "1940": {
         "id": 1940,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1393257600,
@@ -34922,7 +34922,7 @@ const records =
     },
     "1941": {
         "id": 1941,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1393257600,
@@ -34940,7 +34940,7 @@ const records =
     },
     "1942": {
         "id": 1942,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "劉櫂豪",
         "party": "DPP",
         "date": 1393862400,
@@ -34958,7 +34958,7 @@ const records =
     },
     "1943": {
         "id": 1943,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "蔡其昌",
         "party": "DPP",
         "date": 1393862400,
@@ -34976,7 +34976,7 @@ const records =
     },
     "1944": {
         "id": 1944,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1393862400,
@@ -34994,7 +34994,7 @@ const records =
     },
     "1945": {
         "id": 1945,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "葉津鈴",
         "party": "TSU",
         "date": 1394121600,
@@ -35012,7 +35012,7 @@ const records =
     },
     "1946": {
         "id": 1946,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1394380800,
@@ -35030,7 +35030,7 @@ const records =
     },
     "1947": {
         "id": 1947,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1394380800,
@@ -35048,7 +35048,7 @@ const records =
     },
     "1948": {
         "id": 1948,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1394380800,
@@ -35066,7 +35066,7 @@ const records =
     },
     "1949": {
         "id": 1949,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1394380800,
@@ -35084,7 +35084,7 @@ const records =
     },
     "1950": {
         "id": 1950,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1394380800,
@@ -35102,7 +35102,7 @@ const records =
     },
     "1951": {
         "id": 1951,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1394380800,
@@ -35120,7 +35120,7 @@ const records =
     },
     "1952": {
         "id": 1952,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1394380800,
@@ -35138,7 +35138,7 @@ const records =
     },
     "1953": {
         "id": 1953,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1394380800,
@@ -35156,7 +35156,7 @@ const records =
     },
     "1954": {
         "id": 1954,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1394380800,
@@ -35174,7 +35174,7 @@ const records =
     },
     "1955": {
         "id": 1955,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1394380800,
@@ -35192,7 +35192,7 @@ const records =
     },
     "1956": {
         "id": 1956,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1394380800,
@@ -35210,7 +35210,7 @@ const records =
     },
     "1957": {
         "id": 1957,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1394380800,
@@ -35228,7 +35228,7 @@ const records =
     },
     "1958": {
         "id": 1958,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1394380800,
@@ -35246,7 +35246,7 @@ const records =
     },
     "1959": {
         "id": 1959,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1394380800,
@@ -35264,7 +35264,7 @@ const records =
     },
     "1960": {
         "id": 1960,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1394467200,
@@ -35282,7 +35282,7 @@ const records =
     },
     "1961": {
         "id": 1961,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1394035200,
@@ -35300,7 +35300,7 @@ const records =
     },
     "1962": {
         "id": 1962,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1394035200,
@@ -35318,7 +35318,7 @@ const records =
     },
     "1963": {
         "id": 1963,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1394035200,
@@ -35336,7 +35336,7 @@ const records =
     },
     "1964": {
         "id": 1964,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1394035200,
@@ -35354,7 +35354,7 @@ const records =
     },
     "1965": {
         "id": 1965,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1394035200,
@@ -35372,7 +35372,7 @@ const records =
     },
     "1966": {
         "id": 1966,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "林佳龍",
         "party": "DPP",
         "date": 1394035200,
@@ -35390,7 +35390,7 @@ const records =
     },
     "1967": {
         "id": 1967,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1394035200,
@@ -35408,7 +35408,7 @@ const records =
     },
     "1968": {
         "id": 1968,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1394726400,
@@ -35426,7 +35426,7 @@ const records =
     },
     "1969": {
         "id": 1969,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1394553600,
@@ -35444,7 +35444,7 @@ const records =
     },
     "1970": {
         "id": 1970,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1394553600,
@@ -35462,7 +35462,7 @@ const records =
     },
     "1971": {
         "id": 1971,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1394553600,
@@ -35480,7 +35480,7 @@ const records =
     },
     "1972": {
         "id": 1972,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1394553600,
@@ -35498,7 +35498,7 @@ const records =
     },
     "1973": {
         "id": 1973,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1394553600,
@@ -35516,7 +35516,7 @@ const records =
     },
     "1974": {
         "id": 1974,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "蔣乃辛",
         "party": "KMT",
         "date": 1394553600,
@@ -35534,7 +35534,7 @@ const records =
     },
     "1975": {
         "id": 1975,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1394553600,
@@ -35552,7 +35552,7 @@ const records =
     },
     "1976": {
         "id": 1976,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1394553600,
@@ -35570,7 +35570,7 @@ const records =
     },
     "1977": {
         "id": 1977,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "楊麗環",
         "party": "KMT",
         "date": 1394553600,
@@ -35588,7 +35588,7 @@ const records =
     },
     "1978": {
         "id": 1978,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1394553600,
@@ -35606,7 +35606,7 @@ const records =
     },
     "1979": {
         "id": 1979,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1397664000,
@@ -35624,7 +35624,7 @@ const records =
     },
     "1980": {
         "id": 1980,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1397664000,
@@ -35642,7 +35642,7 @@ const records =
     },
     "1981": {
         "id": 1981,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "林郁方",
         "party": "KMT",
         "date": 1397664000,
@@ -35660,7 +35660,7 @@ const records =
     },
     "1982": {
         "id": 1982,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1397664000,
@@ -35678,7 +35678,7 @@ const records =
     },
     "1983": {
         "id": 1983,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1397664000,
@@ -35696,7 +35696,7 @@ const records =
     },
     "1984": {
         "id": 1984,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1397664000,
@@ -35714,7 +35714,7 @@ const records =
     },
     "1985": {
         "id": 1985,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1397664000,
@@ -35732,7 +35732,7 @@ const records =
     },
     "1986": {
         "id": 1986,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1398182400,
@@ -35750,7 +35750,7 @@ const records =
     },
     "1987": {
         "id": 1987,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1398787200,
@@ -35768,7 +35768,7 @@ const records =
     },
     "1988": {
         "id": 1988,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1399305600,
@@ -35786,7 +35786,7 @@ const records =
     },
     "1989": {
         "id": 1989,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1399392000,
@@ -35804,7 +35804,7 @@ const records =
     },
     "1990": {
         "id": 1990,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1399392000,
@@ -35822,7 +35822,7 @@ const records =
     },
     "1991": {
         "id": 1991,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1400428800,
@@ -35840,7 +35840,7 @@ const records =
     },
     "1992": {
         "id": 1992,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1425312000,
@@ -35858,7 +35858,7 @@ const records =
     },
     "1993": {
         "id": 1993,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1426521600,
@@ -35876,7 +35876,7 @@ const records =
     },
     "1994": {
         "id": 1994,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃國書",
         "party": "DPP",
         "date": 1425830400,
@@ -35894,7 +35894,7 @@ const records =
     },
     "1995": {
         "id": 1995,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1425830400,
@@ -35912,7 +35912,7 @@ const records =
     },
     "1996": {
         "id": 1996,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1425830400,
@@ -35930,7 +35930,7 @@ const records =
     },
     "1997": {
         "id": 1997,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1425830400,
@@ -35948,7 +35948,7 @@ const records =
     },
     "1998": {
         "id": 1998,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1425830400,
@@ -35966,7 +35966,7 @@ const records =
     },
     "1999": {
         "id": 1999,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1425830400,
@@ -35984,7 +35984,7 @@ const records =
     },
     "2000": {
         "id": 2000,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1425830400,
@@ -36002,7 +36002,7 @@ const records =
     },
     "2001": {
         "id": 2001,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1425830400,
@@ -36020,7 +36020,7 @@ const records =
     },
     "2002": {
         "id": 2002,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1425830400,
@@ -36038,7 +36038,7 @@ const records =
     },
     "2003": {
         "id": 2003,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1425830400,
@@ -36056,7 +36056,7 @@ const records =
     },
     "2004": {
         "id": 2004,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "尤美女",
         "party": "DPP",
         "date": 1425830400,
@@ -36074,7 +36074,7 @@ const records =
     },
     "2005": {
         "id": 2005,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1425830400,
@@ -36092,7 +36092,7 @@ const records =
     },
     "2006": {
         "id": 2006,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "潘維剛",
         "party": "KMT",
         "date": 1425830400,
@@ -36110,7 +36110,7 @@ const records =
     },
     "2007": {
         "id": 2007,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1425830400,
@@ -36128,7 +36128,7 @@ const records =
     },
     "2008": {
         "id": 2008,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1425830400,
@@ -36146,7 +36146,7 @@ const records =
     },
     "2009": {
         "id": 2009,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1425830400,
@@ -36164,7 +36164,7 @@ const records =
     },
     "2010": {
         "id": 2010,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1427212800,
@@ -36182,7 +36182,7 @@ const records =
     },
     "2011": {
         "id": 2011,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1429804800,
@@ -36200,7 +36200,7 @@ const records =
     },
     "2012": {
         "id": 2012,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1430064000,
@@ -36218,7 +36218,7 @@ const records =
     },
     "2013": {
         "id": 2013,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1430064000,
@@ -36236,7 +36236,7 @@ const records =
     },
     "2014": {
         "id": 2014,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1430064000,
@@ -36254,7 +36254,7 @@ const records =
     },
     "2015": {
         "id": 2015,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1430064000,
@@ -36272,7 +36272,7 @@ const records =
     },
     "2016": {
         "id": 2016,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1430064000,
@@ -36290,7 +36290,7 @@ const records =
     },
     "2017": {
         "id": 2017,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1430064000,
@@ -36308,7 +36308,7 @@ const records =
     },
     "2018": {
         "id": 2018,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1430064000,
@@ -36326,7 +36326,7 @@ const records =
     },
     "2019": {
         "id": 2019,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1430841600,
@@ -36344,7 +36344,7 @@ const records =
     },
     "2020": {
         "id": 2020,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1430841600,
@@ -36362,7 +36362,7 @@ const records =
     },
     "2021": {
         "id": 2021,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃國書",
         "party": "DPP",
         "date": 1430841600,
@@ -36380,7 +36380,7 @@ const records =
     },
     "2022": {
         "id": 2022,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃志雄",
         "party": "KMT",
         "date": 1430841600,
@@ -36398,7 +36398,7 @@ const records =
     },
     "2023": {
         "id": 2023,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1430841600,
@@ -36416,7 +36416,7 @@ const records =
     },
     "2024": {
         "id": 2024,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1430841600,
@@ -36434,7 +36434,7 @@ const records =
     },
     "2025": {
         "id": 2025,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳淑慧",
         "party": "KMT",
         "date": 1430841600,
@@ -36452,7 +36452,7 @@ const records =
     },
     "2026": {
         "id": 2026,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1430841600,
@@ -36470,7 +36470,7 @@ const records =
     },
     "2027": {
         "id": 2027,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1430841600,
@@ -36488,7 +36488,7 @@ const records =
     },
     "2028": {
         "id": 2028,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1430841600,
@@ -36506,7 +36506,7 @@ const records =
     },
     "2029": {
         "id": 2029,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1430841600,
@@ -36524,7 +36524,7 @@ const records =
     },
     "2030": {
         "id": 2030,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許添財",
         "party": "DPP",
         "date": 1430841600,
@@ -36542,7 +36542,7 @@ const records =
     },
     "2031": {
         "id": 2031,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1430841600,
@@ -36560,7 +36560,7 @@ const records =
     },
     "2032": {
         "id": 2032,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "薛凌",
         "party": "DPP",
         "date": 1430841600,
@@ -36578,7 +36578,7 @@ const records =
     },
     "2033": {
         "id": 2033,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1432224000,
@@ -36596,7 +36596,7 @@ const records =
     },
     "2034": {
         "id": 2034,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1432051200,
@@ -36614,7 +36614,7 @@ const records =
     },
     "2035": {
         "id": 2035,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1432051200,
@@ -36632,7 +36632,7 @@ const records =
     },
     "2036": {
         "id": 2036,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1433347200,
@@ -36650,7 +36650,7 @@ const records =
     },
     "2037": {
         "id": 2037,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "吳育仁",
         "party": "KMT",
         "date": 1433952000,
@@ -36668,7 +36668,7 @@ const records =
     },
     "2038": {
         "id": 2038,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃國書",
         "party": "DPP",
         "date": 1433260800,
@@ -36686,7 +36686,7 @@ const records =
     },
     "2039": {
         "id": 2039,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1433260800,
@@ -36704,7 +36704,7 @@ const records =
     },
     "2040": {
         "id": 2040,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1433260800,
@@ -36722,7 +36722,7 @@ const records =
     },
     "2041": {
         "id": 2041,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1433260800,
@@ -36740,7 +36740,7 @@ const records =
     },
     "2042": {
         "id": 2042,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1433260800,
@@ -36758,7 +36758,7 @@ const records =
     },
     "2043": {
         "id": 2043,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1433260800,
@@ -36776,7 +36776,7 @@ const records =
     },
     "2044": {
         "id": 2044,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1433260800,
@@ -36794,7 +36794,7 @@ const records =
     },
     "2045": {
         "id": 2045,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1433260800,
@@ -36812,7 +36812,7 @@ const records =
     },
     "2046": {
         "id": 2046,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳素月",
         "party": "DPP",
         "date": 1433260800,
@@ -36830,7 +36830,7 @@ const records =
     },
     "2047": {
         "id": 2047,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1433347200,
@@ -36848,7 +36848,7 @@ const records =
     },
     "2048": {
         "id": 2048,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1433347200,
@@ -36866,7 +36866,7 @@ const records =
     },
     "2049": {
         "id": 2049,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1433347200,
@@ -36884,7 +36884,7 @@ const records =
     },
     "2050": {
         "id": 2050,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1433347200,
@@ -36902,7 +36902,7 @@ const records =
     },
     "2051": {
         "id": 2051,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1433692800,
@@ -36920,7 +36920,7 @@ const records =
     },
     "2052": {
         "id": 2052,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃國書",
         "party": "DPP",
         "date": 1433692800,
@@ -36938,7 +36938,7 @@ const records =
     },
     "2053": {
         "id": 2053,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1433692800,
@@ -36956,7 +36956,7 @@ const records =
     },
     "2054": {
         "id": 2054,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "許智傑",
         "party": "DPP",
         "date": 1433692800,
@@ -36974,7 +36974,7 @@ const records =
     },
     "2055": {
         "id": 2055,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "管碧玲",
         "party": "DPP",
         "date": 1433692800,
@@ -36992,7 +36992,7 @@ const records =
     },
     "2056": {
         "id": 2056,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1433692800,
@@ -37010,7 +37010,7 @@ const records =
     },
     "2057": {
         "id": 2057,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "王育敏",
         "party": "KMT",
         "date": 1442505600,
@@ -37028,7 +37028,7 @@ const records =
     },
     "2058": {
         "id": 2058,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "邱志偉",
         "party": "DPP",
         "date": 1442246400,
@@ -37046,7 +37046,7 @@ const records =
     },
     "2059": {
         "id": 2059,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "孔文吉",
         "party": "KMT",
         "date": 1443024000,
@@ -37064,7 +37064,7 @@ const records =
     },
     "2060": {
         "id": 2060,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1443024000,
@@ -37082,7 +37082,7 @@ const records =
     },
     "2061": {
         "id": 2061,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "鄭麗君",
         "party": "DPP",
         "date": 1443024000,
@@ -37100,7 +37100,7 @@ const records =
     },
     "2062": {
         "id": 2062,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1443024000,
@@ -37118,7 +37118,7 @@ const records =
     },
     "2063": {
         "id": 2063,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "何欣純",
         "party": "DPP",
         "date": 1443024000,
@@ -37136,7 +37136,7 @@ const records =
     },
     "2064": {
         "id": 2064,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "高金素梅",
         "party": "NSU",
         "date": 1443024000,
@@ -37154,7 +37154,7 @@ const records =
     },
     "2065": {
         "id": 2065,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "黃國書",
         "party": "DPP",
         "date": 1443024000,
@@ -37172,7 +37172,7 @@ const records =
     },
     "2066": {
         "id": 2066,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "呂玉玲",
         "party": "KMT",
         "date": 1443024000,
@@ -37190,7 +37190,7 @@ const records =
     },
     "2067": {
         "id": 2067,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "周倪安",
         "party": "TSU",
         "date": 1443024000,
@@ -37208,7 +37208,7 @@ const records =
     },
     "2068": {
         "id": 2068,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "楊玉欣",
         "party": "KMT",
         "date": 1397750400,
@@ -37226,7 +37226,7 @@ const records =
     },
     "2069": {
         "id": 2069,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "劉建國",
         "party": "DPP",
         "date": 1397750400,
@@ -37244,7 +37244,7 @@ const records =
     },
     "2070": {
         "id": 2070,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "李貴敏",
         "party": "KMT",
         "date": 1397750400,
@@ -37262,7 +37262,7 @@ const records =
     },
     "2071": {
         "id": 2071,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳碧涵",
         "party": "KMT",
         "date": 1397750400,
@@ -37280,7 +37280,7 @@ const records =
     },
     "2072": {
         "id": 2072,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "盧秀燕",
         "party": "KMT",
         "date": 1397750400,
@@ -37298,7 +37298,7 @@ const records =
     },
     "2073": {
         "id": 2073,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳學聖",
         "party": "KMT",
         "date": 1397750400,
@@ -37316,7 +37316,7 @@ const records =
     },
     "2074": {
         "id": 2074,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "謝國樑",
         "party": "KMT",
         "date": 1397750400,
@@ -37334,7 +37334,7 @@ const records =
     },
     "2075": {
         "id": 2075,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "陳亭妃",
         "party": "DPP",
         "date": 1426176000,
@@ -37352,7 +37352,7 @@ const records =
     },
     "2076": {
         "id": 2076,
-        "issue": "課綱",
+        "issue": "課綱程序透明",
         "legislator": "賴振昌",
         "party": "TSU",
         "date": 1433433600,

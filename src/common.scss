@@ -47,10 +47,14 @@ a.ia {
   }
 }
 a.ia.line {
-  border-bottom: 1px solid $black;
-  padding-bottom: 1px;
+  border-bottom: 1px solid #6F6666;
+  padding-bottom: 0;
   margin: 1px;
   display: inline-block;
+}
+a.ia.line:hover {
+  color: black;
+
 }
 
 // css common mixins
@@ -72,7 +76,7 @@ a.ia.line {
 // dimensions
 $contentMaxWidth: 1200px;
 
-$appBarBreakLarge: 750px;
+$appBarBreakLarge: 850px;
 $appBarHeight: 54px;
 $appBarHeightExtended: 76px;
 

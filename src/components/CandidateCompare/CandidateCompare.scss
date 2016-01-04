@@ -2,7 +2,14 @@
 $hoverShow: 800px;
 .wrap {
 	position: relative;
-  //min-height: 300px;
+    background: rgb(245, 245, 245);
+    padding: 20px 0;
+}
+@media all and (min-width: 500px){
+    .wrap {
+        background: none;
+        padding: 0;
+    }
 }
 /* ---------------- */
 .actionPanel {
@@ -51,8 +58,28 @@ $buttonColorB: rgb(50,50,50);
     color: white;
     box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.28);
 }
+/* ---------------- 圖例 */
+.legend {
+    opacity: 0;
+    will-change: opacity, max-height;
+    max-height: 0;
+    
+}
+.legend.active {
+    opacity: 1;
+    text-align: center;  
+    margin: 30px 0 0 0;
+
+    max-height: 180px;
+    // transition: all 100ms ease-in;
+
+    > img {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
 /* ---------------- */
-.card, .card:visited {
+.card {
     vertical-align: top;
     margin: 10px;
     padding: 10px 10px 20px 10px;
@@ -61,6 +88,7 @@ $buttonColorB: rgb(50,50,50);
     position: relative;
     vertical-align: top;
     cursor: pointer;
+    min-height: 230px;
 }
 @media all and (min-width: 380px){
     .card {
@@ -78,6 +106,7 @@ $buttonColorB: rgb(50,50,50);
 .cardLink, .cardLink:visited {
     color: $black;
     text-decoration: none;
+    display: inline-block;
 }
 .peoplePhoto {
     width: 70px;
@@ -161,7 +190,7 @@ $buttonColorB: rgb(50,50,50);
 }
 .issueName {
     width: 40px;
-    height: 40px;
+    height: 60px;
     font-size: 14px;
     vertical-align: top;
     display: inline-block;

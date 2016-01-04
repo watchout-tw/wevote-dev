@@ -16,26 +16,37 @@ export default function peopleInfo(name, age, a1, a2, isC, c1, c2) {
       ageText = (isCaucus ? '' : `${age}歲`);
   }
   let legislatorTitle, legislatorDistrict;
+  
+  let legislatorDistrictArea, legislatorDistrictAreaNo;
+
   if(a1){
       legislatorTitle = (isCaucus ? '第八屆黨團' : `第八屆${district2cht(a1)}${a2}立委`);
       legislatorDistrict = (isCaucus || a1 === 'Proportional') ? '' : `${district2cht(a1)}${a2}`;
+      legislatorDistrictArea = (isCaucus || a1 === 'Proportional') ? '' : `${district2cht(a1)}`;
+      legislatorDistrictAreaNo = (isCaucus || a1 === 'Proportional') ? '' : `${a2}`;
 
       //處理縣市升格的問題，第八屆是「桃園縣」，第九屆是「桃園市」
       if(legislatorTitle.indexOf("桃園市")!==-1){
          legislatorTitle = legislatorTitle.replace("桃園市", "桃園縣");
-      }
-      if(legislatorDistrict.indexOf("桃園市")!==-1){
          legislatorDistrict = legislatorDistrict.replace("桃園市", "桃園縣");
+         legislatorDistrictArea = legislatorDistrictArea.replace("桃園市", "桃園縣");
       }
 
   }
   let candidateTitle = (isC ? (isCaucus ? '' : `${district2cht(c1)}${c2}`) : '');
+  let candidateDistrictArea = (isC ? (isCaucus ? '' : `${district2cht(c1)}`) : '');
+  let candidateDistrictAreaNo = (isC ? (isCaucus ? '' : `${c2}`) : '');
 
   return {
     isCaucus: isCaucus,
     ageText: ageText,
     legislatorTitle: legislatorTitle,
     legislatorDistrict: legislatorDistrict,
+    legislatorDistrictArea: legislatorDistrictArea,
+    legislatorDistrictAreaNo: legislatorDistrictAreaNo,
     candidateTitle: candidateTitle,
+    candidateDistrictArea: candidateDistrictArea,
+    candidateDistrictAreaNo: candidateDistrictAreaNo
   }
 }
+/* chihao do not kill me for this mess ;) */

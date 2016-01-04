@@ -77,6 +77,10 @@ export default class CandidateCompare extends Component {
         );
     })
 
+    let legendRecord = require('./images/legend_record.svg');
+    let legendPromise = require('./images/legend_promise.svg');
+
+
     return (
         <div className={styles.wrap}>
             <div className={styles.actionPanel}>
@@ -92,6 +96,10 @@ export default class CandidateCompare extends Component {
                     <div className={`${styles.toggleButtonB} ${ (filter===false) ? styles.active:"" }`}
                          onClick={this._toggleFilter.bind(this)}>顯示所有參選人</div>
                 </div>
+            </div>
+            <div className={`${styles.legend} ${(pkCategory==="position") ? styles.active: ""}`}>
+              <img src={legendRecord}/>
+              <img src={legendPromise}/>
             </div>
             {candidateCardItems}
         </div>
@@ -173,25 +181,25 @@ class Card extends Component {
     let content = (pkCategory==="position") ?  <div>{positionEntries}</div> : <div>{billSection}</div>
     return (
         <div className={styles.card}>
-            <Link to={`/people/${people.id}/records/`} className={styles.cardLink}>
+            <Link to={`/people/${people.id}/promises/`} className={styles.cardLink}>
                 <div className={styles.metaInfo}>
                   {currentInfo}
                   {noContactInfo}
                 </div>
-
-             <div className={styles.peoplePhoto}>
-                <PeoplePhoto id={people.id}/>
-             </div>
-             <div className={styles.basicInfo}>
-                <div className={styles.peopleNumber}>{people.number}</div>
-                <div className={styles.peopleName}>{people.name}</div>
-                <div className={styles.partyItem}>
-                    <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
-                    <PartyFlag partyId={people.party}/>
+            
+                <div className={styles.peoplePhoto}>
+                   <PeoplePhoto id={people.id}/>
                 </div>
-             </div>
-             {content}
-             </Link>
+                <div className={styles.basicInfo}>
+                   <div className={styles.peopleNumber}>{people.number}</div>
+                   <div className={styles.peopleName}>{people.name}</div>
+                   <div className={styles.partyItem}>
+                       <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
+                       <PartyFlag partyId={people.party}/>
+                   </div>
+                </div>
+                <div>{content}</div>
+            </Link>
         </div>
 
 
@@ -204,9 +212,9 @@ function handlePosCht (value, id) {
     return "非第八屆立委"
   }else{
     if(value==="none"){
-      return "根據第八屆立院資料統計，未表態。"
+      return "根據第八屆立院資料統計，未表態"
     }else if(value==="evading"){
-      return "根據第八屆立院資料統計，應表態未表態。"
+      return "根據第八屆立院資料統計，應表態未表態"
     }else{
       return `根據第八屆立院資料統計，立場為${eng2cht(value)}`;
     }

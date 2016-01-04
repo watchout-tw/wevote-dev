@@ -4,6 +4,10 @@ import classnames from 'classnames';
 import eng2url from '../../utils/eng2url';
 import eng2cht from '../../utils/eng2cht';
 
+
+import getData from '../../data/getData';
+const {candidates} = getData();
+
 export default class Story extends Component {
     render(){
       const styles = require('./Story.scss');
@@ -33,7 +37,13 @@ export default class Story extends Component {
             }
         });
       }else{
-        content = "目前沒有這位候選人的人物誌。";
+
+        if(candidates[id]){
+            content = <p className={styles.noStory}>目前沒有這位候選人的人物誌。</p>;
+        }else{
+            content = <p className={styles.noStory}>我們僅製作<b>區域立委參選人</b>之人物誌。</p>;
+        }
+        
       }
       return (
         <article className={styles.Story}>
@@ -46,7 +56,7 @@ export default class Story extends Component {
     }
 }
 const StoryData = {
-  "408": {
+  "407": {
     title: "從殯儀館到廟口－邱顯智參選初體驗",
     author: "沃草／蕭長展、謝繐吟",
     date: "2015-8-17",

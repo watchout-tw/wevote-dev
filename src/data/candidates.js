@@ -313,6 +313,7 @@ const candidates =
     "10": {
         "id": 10,
         "name": "江啟臣",
+        "number": 2,
         "party": "KMT",
         "districtArea": "TXG",
         "districtNo": "8",
@@ -2053,57 +2054,57 @@ const candidates =
         "districtArea": "PIF",
         "districtNo": "3",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "緊急醫療救護",
+                "content": "增列大型活動緊急醫療(八仙塵爆)"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "選罷法",
+                "content": "公職人員選罷法第69條，開票全程錄影並上網"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "公職財產申報",
+                "content": "公職人員財產申報法第14條，增列受理機關為各級選委會"
             }
         ]
     },
@@ -2854,6 +2855,7 @@ const candidates =
     "81": {
         "id": 81,
         "name": "黃志雄",
+        "number": 3,
         "party": "KMT",
         "districtArea": "NTC",
         "districtNo": "5",
@@ -3168,41 +3170,41 @@ const candidates =
         "districtArea": "TYN",
         "districtNo": "4",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "要有配套措施"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
@@ -3597,6 +3599,7 @@ const candidates =
     "99": {
         "id": 99,
         "name": "劉櫂豪",
+        "number": 2,
         "party": "DPP",
         "districtArea": "TTT",
         "districtNo": "N/A",
@@ -4531,56 +4534,56 @@ const candidates =
         "districtArea": "TPE",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "兩岸監督條例",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "公投法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "非核家園法",
                 "content": ""
             }
         ]
@@ -9346,7 +9349,7 @@ const candidates =
         },
         "bills": [
             {
-                "goal": "幼托公告化",
+                "goal": "幼托公共化",
                 "content": "修改「幼兒教育及照顧法」部分條文，實施幼托公共化。"
             },
             {
@@ -10731,57 +10734,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "10",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法",
+                "content": "政黨不得經營或投資管營利事業，限制不法黨產不得成黨經費來源。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "下修公投門檻",
+                "content": "降低連署門檻、投票人數門檻，並降低公投審議委員會功能"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "修正立院法規",
+                "content": "修正立院職權行使法，讓朝野協商公開透明，並讓程序委員會等會議及表決紀錄上網公告，並比照美國建立國會專屬頻道。"
             }
         ]
     },
@@ -11780,6 +11783,7 @@ const candidates =
     "246": {
         "id": 246,
         "name": "賴立竹",
+        "number": 3,
         "party": "NONE",
         "districtArea": "TYN",
         "districtNo": "3",
@@ -12280,57 +12284,57 @@ const candidates =
         "districtArea": "TYN",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "租屋政策",
+                "content": "訂立空屋管理辦法及加重稅法，防止屯屋，讓屋有所住。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "河川汙染管制",
+                "content": "設立集水區及河川保護，設立集水區開發專法，落實工業廢水總量管制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "長照老幼照顧",
+                "content": "公立幼兒與老人長照合併，並以國中為中心，作為長照多功能中心。"
             }
         ]
     },
@@ -16181,6 +16185,7 @@ const candidates =
     "317": {
         "id": 317,
         "name": "黃柏霖",
+        "number": 1,
         "party": "KMT",
         "districtArea": "KHH",
         "districtNo": "6",
@@ -18536,6 +18541,7 @@ const candidates =
     "355": {
         "id": 355,
         "name": "洪遊江",
+        "number": 1,
         "party": "FTP",
         "districtArea": "CHW",
         "districtNo": "3",
@@ -19966,53 +19972,53 @@ const candidates =
         "districtArea": "ILA",
         "districtNo": "N/A",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "農業基本法",
+                "content": "規定農業需達總預算15‰以上，規定糧食自給率40%以上，建立農民退休制度，反國際農產品傾銷。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "農發條例",
+                "content": "農舍起造人限縮在農用，轉讓承受人也須具備農民資格"
             },
             {
                 "goal": "",
@@ -22193,6 +22199,7 @@ const candidates =
     "414": {
         "id": 414,
         "name": "黃宏成台灣阿成世界偉人財神總統",
+        "number": 4,
         "party": "NONE",
         "districtArea": "CYC",
         "districtNo": "N/A",

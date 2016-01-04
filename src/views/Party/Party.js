@@ -73,7 +73,7 @@ export default class Party extends Component {
 
       case 'promises':
         let promises = partyPromises[id];
-        content = <Promises id={id} promises={promises}/>
+        content = <Promises id={id} promises={promises} isParty={true}/>
 
         title = `${eng2cht(id)}對於議題與法案的未來承諾-沃草2016立委出任務`;
         description = `${eng2cht(id)}的未來承諾大公開！趕快來看看${eng2cht(id)}各項重大議題的戰鬥策略與優先法案的戰鬥目標！`;

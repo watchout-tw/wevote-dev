@@ -14,6 +14,7 @@ import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import getPeopleDistrict from '../../utils/getPeopleDistrict';
 import identity from '../../utils/identity';
 import district2cht from '../../utils/district2cht';
+import district2url from '../../utils/district2url';
 
 /*
 :category => {"records", "promises", "story"}
@@ -42,7 +43,6 @@ export default class People extends Component {
     //立委基本資料
     const currentPeople = people[id];
     //是否為第八屆立委，是否為第九屆區域立委參選人
-    
     let currentIdentity = identity(legislators, id);
 
     //頁面最下方要呈現的候選人選區資料
@@ -78,9 +78,10 @@ export default class People extends Component {
         if(candidates[id]){
             if(candidates[id].hasReply === false){
                 wantedText=(
-                  <div>
+                  <div className={styles.wantedSection}>
                     <p>這位候選人目前尚未回覆表態承諾書。</p>
-                    <p>失蹤的候選人，<Link className={`${styles.ia} ${styles.bright}`} to={`/wanted/`}>需要你的關心</Link>，讓更多選民認識他。</p>
+                    <p>失蹤的候選人，<Link className={`${styles.ia} ${styles.bright}`} to={`/wanted/`}>需要你的關心</Link>，
+                       <br className={styles.mobileOnly} />讓更多選民認識他。</p>
                   </div>
                 )
             }
@@ -116,15 +117,33 @@ export default class People extends Component {
 
     //第九屆區域參選人
     if(currentIdentity.is9thCandidate){
-        districtText = <div>{currentPeople.name}是{district2cht(districtData.area)}{disNoText}的候選人，看他的對手有誰？</div>
+        districtText = <div className={styles.seeMore}>{currentPeople.name}是
+        <Link to={`/constituencies/${district2url(districtData.area)}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {district2cht(districtData.area)}
+        </Link>
+        <Link to={`/constituencies/${district2url(districtData.area,districtData.areaNo)}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {disNoText}
+        </Link>
+        的候選人，<br className={styles.mobileOnly}/>看他的對手有誰？</div>
     }
     //區域轉戰不分區
     if(currentIdentity.is8thDistrict && currentIdentity.is9thProportional){
-        districtText = <div>{currentPeople.name}是{district2cht(districtData.area)}{disNoText}的現任立委，看看這一區現在有誰參戰</div>;
+        districtText = <div className={styles.seeMore}>{currentPeople.name}是
+        <Link to={`/constituencies/${district2url(districtData.area)}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {district2cht(districtData.area)}
+        </Link>
+        <Link to={`/constituencies/${district2url(districtData.area,districtData.areaNo)}/`}
+              className={`${styles.ia} ${styles.line} ${styles.black}`}>
+              {disNoText}
+        </Link>
+        的現任立委，看看這一區現在有誰參戰</div>;
     }
     //區域不再當立委
     if(currentIdentity.is8thDistrict && !currentIdentity.is9thProportional && !currentIdentity.is9thCandidate){
-        districtText = <div>{currentPeople.name}沒有繼續參選立委，看看2016這區有誰參戰？</div>;
+        districtText = <div className={styles.seeMore}>{currentPeople.name}沒有繼續參選立委，看看2016這區有誰參戰？</div>;
     }
 
     if(districtText){
@@ -146,11 +165,11 @@ export default class People extends Component {
         partyCht = parties[parties.length-1].partyCht;
         //第八屆不分區
         if(currentIdentity.is8thProportional){
-            proportionalText = <div>{currentPeople.name}是{partyCht}本屆不分區立委。</div>;
+            proportionalText = <div className={styles.seeMore}>{currentPeople.name}是{partyCht}本屆不分區立委。</div>;
         }
         //第九屆不分區
         if(currentIdentity.is9thProportional){
-            proportionalText = <div>{currentPeople.name}是{partyCht}2016不分區立委。</div>;
+            proportionalText = <div className={styles.seeMore}>{currentPeople.name}是{partyCht}2016不分區立委。</div>;
         }
     }
     if(proportionalText){
@@ -165,7 +184,13 @@ export default class People extends Component {
         )
     }
     
-   
+    //如果是「黨團」，proportionalSection, districtSection 都不要 show
+    if(currentPeople.name.indexOf("黨團")!==-1){
+       proportionalSection = "";
+       districtSection = "";
+    }
+
+
     const metaData = {
       title: title,
       description: description,
@@ -182,7 +207,7 @@ export default class People extends Component {
     return (
       <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
-          <PeopleProfile id={id} />
+          <PeopleProfile id={id}/>
           <ul className={styles.innerTag}>
               <li><Link to={`/people/${id}/records/`} 
                         className={ category==="records" ? styles.active : ""}>歷史紀錄</Link></li>

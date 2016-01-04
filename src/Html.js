@@ -78,9 +78,7 @@ export default class Html extends Component {
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
 
-        {/* justfont production code */}
           <script dangerouslySetInnerHTML={{__html: ``}} />
-          <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-38336.js"></script>
 
           <script async src='//www.google-analytics.com/analytics.js'></script>
 
