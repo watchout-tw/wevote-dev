@@ -52,7 +52,7 @@ g {
     z-index: 90;
   }
 	.cityMap.active {
-	  	background: rgba(0,0,0,0.75);
+	  	background: rgba($awesomeColor, 0.95);
 	  	position: fixed;
 	  	left: 0;
 	  	right: 0;
@@ -157,7 +157,7 @@ $selectColor: #00ffb0;
 
     left: 0;
     right: 0;
-    
+
     &.inactive {
       background: $inactiveColor;
     }
@@ -182,8 +182,21 @@ $selectColor: #00ffb0;
 @media all and (min-width:$webVersionBreak){
     .close.active {
       position: absolute;
-      top: -10px;
-    } 
+      margin: 0;
+      top: 64px;
+      left: auto;
+      right: 12px;
+      background: none;
+
+      &:before, &:after {
+        background: white;
+      }
+    }
+}
+@media all and (min-width: 800px) and (max-width: 840px) {
+  .close.active {
+    top: 86px;
+  }
 }
 
 /* 詳細選區: xx市, xx區 */
@@ -244,7 +257,7 @@ $selectColor: #00ffb0;
     padding: 15px 30px 15px 15px;
     font-size: 18px;
     line-height: 1;
-    background: #00ffb0;
+    background: none;
     color: black;
     text-decoration: none; }
 
@@ -301,14 +314,14 @@ $selectColor: #00ffb0;
       margin-right: 1em; }
 
 .info > .go {
-   background: rgba(211, 211, 211, 0.43); 
+  //background: rgba(211, 211, 211, 0.43);
 }
 .info > .go:hover {
-      //background: #00ffb0; 
+  //background: #00ffb0;
 }
 .info > .close {
-  background: none; 
+  background: none;
 }
 .info > .close:hover {
-  background: #ff0055; 
+  background: #ff0055;
 }
