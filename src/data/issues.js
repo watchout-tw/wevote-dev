@@ -1,5 +1,5 @@
 const issues = {
-    /* 從 url 對應的議題資料 */ 
+    /* 從 url 對應的議題資料 */
     "marriage-equality" : {
       "title" : "婚姻平權",
       "icon" : "fa-heart",
@@ -708,16 +708,16 @@ const issues = {
             "filename": "slides-mobile-p2-23.png",
             "alt": "課綱制定程序修法進度-課綱"
         }
-      ], 
+      ],
       "description" : "你支持課綱制定程序完全公開透明嗎？一起來了解課綱微調的問題在哪裡？",
       "collaborators" : [
         {
           "name" : "課綱盟",
-          "link" : "https://www.facebook.com/%E5%8F%8D%E9%BB%91%E7%AE%B1%E8%AA%B2%E7%B6%B1%E8%A1%8C%E5%8B%95%E8%81%AF%E7%9B%9F-429607783867331/?fref=nf"
+          "link" : "https://www.facebook.com/%E5%8F%8D%E9%BB%91%E7%AE%B1%E8%AA%B2%E7%B6%B1%E8%A1%8C%E5%8B%95%E8%81%AF%E7%9B%9F-429607783867331/"
         },
         {
           "name" : "國會調查兵團",
-          "link" : "https://cic.tw"
+          "link" : "https://cic.tw/"
 
         }
       ]

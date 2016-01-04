@@ -84,7 +84,14 @@ $paddingHeight: ($appBarHeight - $symbolSize)/2; //11px; // (54 - 32 (symbol高)
 	height: $appBarHeight;
 }
 .navItem:hover, .navItem.active {
-	background: rgba($glow, 0.5);
+	background: $awesomeColor;//rgba($glow, 0.5);
+	color: $white;
+
+	> .icon {
+		path, rect {
+			fill: white;
+		}
+	}
 }
 .navItem > * {
 	display: inline-block;

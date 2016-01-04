@@ -20,7 +20,7 @@ export default class ElectionMap extends Component {
   constructor(props){ super(props)
     let active_city = (props.area) ? props.area : '';
     this.state = {
-      active_city : active_city, 
+      active_city : active_city,
       hover_city  : '',
       sub_active  : ''
     }
@@ -142,7 +142,7 @@ export default class ElectionMap extends Component {
   }
   componentDidMount(){
 
-    
+
       //hover effect
       allCities.map((city, i)=>{
           let node = document.getElementById(city);
@@ -155,11 +155,11 @@ export default class ElectionMap extends Component {
           //點選之後 show 詳細選區
           node.addEventListener("click" , this._onMapClick.bind(this, city));
       });
-      
+
 
   }
   componentWillUnmount(){
-      
+
       allCities.map((city, i)=>{
           let node = document.getElementById(city);
           node.removeEventListener("mouseenter" , this._onMapEnter.bind(this, city));
@@ -193,8 +193,8 @@ export default class ElectionMap extends Component {
         )
 
     }
-    
-    
+
+
     let SVGMap = (
         <div>
             <div className={`${styles.city} ${this._activeClass('KEL')}`} id="citymap-KEL">
@@ -1445,14 +1445,14 @@ export default class ElectionMap extends Component {
               </div>
         </div>
     )
-   
+
     let mapSection = (this.props.viewWidth > viewBreakPoint) ? (
         <Link to={`/constituencies/${active_city}/${sub_active}/`}>
-            {SVGMap}      
+            {SVGMap}
         </Link>
-        
+
     ): <div>{SVGMap}</div>;
-   
+
 
     return (
       <div className={styles.wrap}>

@@ -6,19 +6,12 @@ const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 const IMP = '!important';
 const iconDimensions = `width: 28px ${IMP}; height: 28px ${IMP}`;
 const cheatCSS = `
-.shareaholic-share-buttons-container ul.shareaholic-share-buttons
-{ margin: 0 ${IMP}; padding: 4px ${IMP}; }
-i.shareaholic-service-icon
-{ border: none ${IMP}; background: none ${IMP}; color: white ${IMP}; box-shadow: none ${IMP}; }
-.shareaholic-share-buttons-container li.shareaholic-share-button
-{ padding: 0 10px ${IMP}; }
-i.shareaholic-service-icon { color: black ${IMP}; }
-.shareaholic-share-buttons-container.mini li.shareaholic-share-button
-{ ${iconDimensions} }
-.shareaholic-share-buttons-container.mini .shareaholic-share-button-container .shareaholic-service-icon
-{ font-size: 22px ${IMP}; ${iconDimensions} }
-.shareaholic-service-icon.service-line_me
-{ transform: scale(1.1); }`;
+i.shareaholic-service-icon { border: none ${IMP}; background: none ${IMP}; color: black ${IMP}; box-shadow: none ${IMP}; }
+.shareaholic-share-buttons-container ul.shareaholic-share-buttons { margin: 0 ${IMP}; padding: 4px ${IMP}; }
+.shareaholic-share-buttons-container li.shareaholic-share-button { padding: 0 10px ${IMP}; }
+.shareaholic-share-buttons-container.mini li.shareaholic-share-button { ${iconDimensions} }
+.shareaholic-share-buttons-container.mini .shareaholic-share-button-container .shareaholic-service-icon { font-size: 22px ${IMP}; ${iconDimensions} }
+.shareaholic-service-icon.service-line_me { transform: scale(1.1); }`;
 
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
@@ -71,17 +64,13 @@ export default class Html extends Component {
 
           {/* shareaholic */}
           <script async type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='9446a9ec8f9ec821f25baf685f09943c' data-cfasync='false'></script>
-
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
-
           <script dangerouslySetInnerHTML={{__html: ``}} />
-
           <script async src='//www.google-analytics.com/analytics.js'></script>
-
         </body>
         <style>{cheatCSS}</style>
       </html>
