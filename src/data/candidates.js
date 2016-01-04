@@ -3294,52 +3294,52 @@ const candidates =
         "districtArea": "TYN",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "待社會有共識，尊重民意"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "待社會有共識，尊重民意"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "待社會有共識，尊重民意"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "但要替代能源足夠以後"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "長照保險法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "兩岸監督條例",
                 "content": ""
             },
             {
@@ -8068,57 +8068,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "但是不能於教科書中宣揚「共價值大於正常兩性婚姻」。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "但不應該被導向藍綠對決"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "因目前被特定政黨變成「鳥籠公投」"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "建議所有人都去核四廠走一圈，了解後，再決定，現在此議題於目前社會氛圍中，已被操弄動無法理性討論，與不尊重核能科學專業。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "公開、專業 兩者不能偏廢"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "司法導入公開參與的機制，可避免少數人操控。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "受薪階級減稅",
+                "content": "中產階級以下，薪資所得之稅率調降。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "富人合理增稅",
+                "content": "依社會財富增加現況，於40﹪以上級距，增列高所得者增稅級距，以41﹪~45﹪，每50萬高所得收入者，增加0.5﹪稅率。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "小家庭減稅",
+                "content": "一妻一夫兩小孩之家庭組合，每年可擁有5~10萬之減稅額。"
             }
         ]
     },
