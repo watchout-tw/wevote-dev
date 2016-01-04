@@ -41,7 +41,7 @@ export default class Wanted extends Component {
                 <li>提醒：打電話貼心提醒候選人回覆表態承諾書</li>
               </ol>
               <p><Link className={`${styles.ia} ${styles.bright}`} 
-                       to={`/FAQ/`}>我們是如何蒐集資料的？</Link></p>
+                       to={`/about/FAQ/`}>我們是如何蒐集資料的？</Link></p>
           </div>
           
       </div>
