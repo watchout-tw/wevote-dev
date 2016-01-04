@@ -1,0 +1,52 @@
+@import '../../common.scss';
+$break: 600px;
+.wrap {
+	position: relative;
+	max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 1.6;
+    font-size: 16px;
+
+    word-wrap: break-word;
+    
+}
+@media all and (min-width: $break){
+	.wrap {
+		font-size: 18px;
+	}
+}
+.section {
+	margin-bottom: 30px;
+}
+.titleWrap {
+	text-align: center;
+	margin: 10px;
+}
+h2.title {
+	border-bottom: 2px solid;
+	padding-bottom: 1px; 
+    display: inline;
+    font-size: 22px;
+    margin: 30px 0 10px 0;
+}
+.centerWrap {
+	text-align: center;
+	color: rgb(53,55,54);
+}
+.sectionWrap {
+	text-align: left;
+	color: rgb(53,55,54);
+}
+@media all and (min-width: $break){
+	.centerWrap {
+		color: rgba(15, 15, 15, 0.84);
+	}
+	.sectionWrap {
+		color: rgba(15, 15, 15, 0.84);
+	}
+}
+.meta {
+	margin-top: 30px;
+	font-size: 14px;
+}

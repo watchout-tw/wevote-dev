@@ -6,6 +6,8 @@ import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 import Promises from '../../components/Promises/Promises.js';
 import Story from '../../components/Story/Story.js';
+import CECInfo from '../../components/CECInfo/CECInfo.js';
+
 import CandidateBuns from '../../components/CandidateBuns/CandidateBuns.js';
 
 import cht2eng from '../../utils/cht2eng';
@@ -55,6 +57,12 @@ export default class People extends Component {
     let title, description;
 
     switch(category){
+      case 'info':
+        content = <CECInfo id={id}/>
+        title = `${currentPeople.name}基本資料-沃草2016立委出任務`;
+        description = `來自中選會官方紀錄的${currentPeople.name}學經歷、政見，一次線上看完`;
+      break;
+
       case 'records':
         const {legislatorPositions} = this.state;
         const currentLegislatorPosition = legislatorPositions[currentPeople.name];
@@ -209,6 +217,12 @@ export default class People extends Component {
           <DocumentMeta {...metaData}/>
           <PeopleProfile id={id}/>
           <ul className={styles.innerTag}>
+              {
+                (currentIdentity.is9thCandidate) ? (
+                  <li><Link to={`/people/${id}/info/`} 
+                            className={ category==="info" ? styles.active : ""}>基本資料</Link></li>
+                ) : ""
+              }
               <li><Link to={`/people/${id}/records/`} 
                         className={ category==="records" ? styles.active : ""}>歷史紀錄</Link></li>
               <li><Link to={`/people/${id}/promises/`} 
