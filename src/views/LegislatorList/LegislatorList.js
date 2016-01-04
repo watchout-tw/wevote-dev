@@ -43,10 +43,7 @@ import getData from '../../data/getData';
 const {records, legislators, issues} = getData();
 
 export default class LegislatorList extends Component {
-  static propTypes = {
-      legislators: PropTypes.object.isRequired,
-      issues: PropTypes.object.isRequired
-  }
+  
   constructor(props) { super(props)
       this.state = { 
         userPreference: {

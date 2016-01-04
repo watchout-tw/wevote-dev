@@ -15,11 +15,9 @@ import getData from '../../data/getData';
 const {records, issues, parties} = getData();
 
 export default class IssueFigure extends Component {
-    static propTypes = {
-        records: PropTypes.object.isRequired
-    }
+    
     constructor(props){ super(props)
-      
+        
         this.state = {
           partyView: parseToPartyView(records, issues),
           legislatorView: parseToLegislatorView(records, issues),

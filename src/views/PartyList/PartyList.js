@@ -7,12 +7,7 @@ import getData from '../../data/getData';
 const {legislators, records, issues} = getData();
 
 export default class PartyList extends Component {
-  static propTypes = {
-      legislators: PropTypes.object.isRequired,
-      records: PropTypes.object.isRequired,
-      issues: PropTypes.object.isRequired
-  }
-
+  
   constructor(props) { super(props)
       this.state = { 
         userPreference: {

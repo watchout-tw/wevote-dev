@@ -15,9 +15,7 @@ const {issues} = getData();
     state => ({}),
     dispatch => bindActionCreators({setToProecessing}, dispatch))
 export default class Missions extends Component {
-  static propTypes = {
-      issues: PropTypes.object.isRequired
-  }
+ 
   constructor(props){ super(props)
       this.state = {
         checkedLocal: false,

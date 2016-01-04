@@ -9,10 +9,7 @@ import getData from '../../data/getData';
 const {issues} = getData();
 
 export default class Issue extends Component {
-  static propTypes = {
-     issues: PropTypes.object.isRequired
-  }
-
+ 
   constructor(props) { super(props)
       let value = props.params.viewName || 'parties';
       if(["parties","legislators","positions", "analysis"].indexOf(value)===-1){

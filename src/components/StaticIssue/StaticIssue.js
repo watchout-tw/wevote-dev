@@ -20,10 +20,7 @@ const {issues} = getData();
     dispatch => bindActionCreators({done, none}, dispatch))
 
 export default class StaticIssue extends Component {
-  static propTypes = {
-     issues: PropTypes.object.isRequired
-  }
-
+ 
   constructor(props) { super(props)
      this.state = {
         currentIssueName: props.currentIssueName, //URL

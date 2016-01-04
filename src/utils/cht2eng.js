@@ -80,8 +80,12 @@ export default function cht_to_eng(cht){
     	    	return 'recall';
     	    case '公投':
     	    	return 'referendum';
+            case '核能':
+                return 'nuclearPower';
     	    case '核四停建':
     	    	return 'nuclearPower';
+            case '課綱':
+                return 'courseGuide';
             case '課綱程序透明':
                 return 'courseGuide';
             case '司法改革':
