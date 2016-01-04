@@ -25,7 +25,7 @@ export default class CECInfo extends Component {
             </div>
             <div className={styles.section}>
               <div className={styles.titleWrap}><h2 className={styles.title}>政見</h2></div>
-              <div className={rptpolitics.length < 30 ? styles.centerWrap : styles.sectionWrap} dangerouslySetInnerHTML={{__html: rptpolitics}}/>
+              <div className={styles.sectionWrap} dangerouslySetInnerHTML={{__html: rptpolitics}}/>
             </div>
             <div className={styles.meta}>* 候選人學經歷、政見資料來自
                 <a className={`${styles.ia} ${styles.black}`} 

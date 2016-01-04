@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 
-const issueOrder = ['婚姻平權','罷免','公投','核能'];
-const chapterOrder = ['一','二','三','四'];
+const issueOrder = ['婚姻平權','罷免','公投','核四停建','課綱程序透明','司法改革'];
+const chapterOrder = ['一','二','三','四','五','六'];
 
 
 export default class AnimatedScript extends Component {
