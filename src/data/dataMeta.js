@@ -10,7 +10,9 @@ const dataMeta = {
     "截至網站更新前（1月5日），經過陸續幾波調查，得到自由台灣黨、時代力量、綠社盟、樹黨、大愛憲改聯盟、台聯等政黨的積極回覆，我們歡迎每個政黨進行表態承諾的回覆。",
 
     "people" : "",
-    "updateTime" : "2016/1/5"
+    "updateTime" : "2016/1/5",
+
+    "updateTimeFAQ" : "1月5日"
 
 }
 export default function get(){
