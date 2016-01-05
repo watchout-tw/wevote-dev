@@ -28,6 +28,10 @@
 	.name {
 		font-size: 40px;
 		font-weight: bold;
+		max-width: 100%;
+	}
+	.name.small {
+		font-size: 27px;
 	}
 	.party {
 		margin: 0 4px;
