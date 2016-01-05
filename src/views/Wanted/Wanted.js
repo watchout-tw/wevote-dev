@@ -18,10 +18,11 @@ export default class Wanted extends Component {
           }
       }
     };
-
+    let wantedImg = require('./images/wanted.png');
     return (
       <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
+          <div className={styles.imgWrap}><img src={wantedImg} className={styles.img} /></div>
           <div className={styles.about}>
               <h1 className={styles.title}>協尋立委</h1> 
           </div>
