@@ -2922,57 +2922,57 @@ const candidates =
         "districtArea": "TNN",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "兩岸監督條例",
+                "content": "使兩岸交流透明化，打破黑箱"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "公投法",
+                "content": "打破鳥籠公投，門檻下修"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "有薪照顧假",
+                "content": "勞基法第43條，加列家庭照顧假。"
             }
         ]
     },
@@ -13586,56 +13586,56 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "因溫哥華的喬治街是同性者的代表。選前本人有在當地住1個月。感覺很平等，很和平。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "希望台灣像溫哥華一樣以觀光取勝，成為觀光島。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "照護生老病終",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "修法跟上時代",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "台灣成觀光島",
                 "content": ""
             }
         ]
