@@ -121,7 +121,7 @@ export default class Party extends Component {
           </div>
           <div className={styles.bottomWrap}>
             <h2>看其他政黨</h2>
-            <PartyBuns category={category} />
+            <PartyBuns category={category} currentParty={id}/>
             <div className={styles.bottomLinkWrap}>
                 <Link to={`/parties-table/`} className={styles.bottomLink}>看各黨比較表格</Link>
             </div>

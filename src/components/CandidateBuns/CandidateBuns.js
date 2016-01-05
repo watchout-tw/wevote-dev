@@ -28,7 +28,8 @@ export default class CandidateBuns extends Component {
 
     let bunItems = candidateList.map((candidate, i)=>{
         
-        if(Number(candidate.id) === Number(exclude)) return;
+        //if(Number(candidate.id) === Number(exclude)) return;//不處理目前頁面的
+
 
         //現任資料
         let currentInfo;
@@ -49,7 +50,9 @@ export default class CandidateBuns extends Component {
 
         return (
             <Link key={`partybun-${category}-${candidate.id}-${i}`}
-                  className={`${styles.bunItem} ${extendClass}`}
+                  className={`${styles.bunItem} 
+                              ${extendClass} 
+                              ${Number(candidate.id) === Number(exclude) ? styles.active : ""}`}
                   to={`/people/${candidate.id}/${category}/`}>
                    {currentInfo}
                   <div className={styles.bunImg}><PeoplePhoto id={candidate.id} /></div>
