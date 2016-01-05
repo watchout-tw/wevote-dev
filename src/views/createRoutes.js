@@ -54,6 +54,7 @@ export default function(store) {
             <Route path="/index.html" component={Home}/>
             
             <Route path="/SP/ma-xi-meet" component={Report}/>
+            <Route path="/SP/ma-xi-meet/index.html" component={Report}/>
   
             <Route path="/issues/" component={Issues}/>
             <Route path="/issues/index.html" component={Issues}/>
@@ -95,13 +96,18 @@ export default function(store) {
             
             <Route path="/about" component={About}/>
             <Route path="/about/:tabName" component={About}/>
+            <Route path="/about/:tabName" component={About}/>
+            <Route path="/about/:tabName/index.html" component={About}/>
             <Route path="/about/:tabName/:focus" component={About}/>
             
             <Route path="/clarify" component={Clarify}/>
+            <Route path="/clarify/index.html" component={Clarify}/>
             <Route path="/wanted" component={Wanted}/>
+            <Route path="/wanted/index.html" component={Wanted}/>
             <Route path="/subscribe/:state" component={SubscribeState}/>
             
             <Route path='/search' component={Search} />
+            <Route path='/search/index.html' component={Search} />
             <Route path="/404" component={NotFound}/>
             <Route path="*" component={NotFound}/>
         </Route>
