@@ -3356,57 +3356,57 @@ const candidates =
         "districtArea": "LAB",
         "districtNo": "N/A",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "俟有社會共識後，再決定修法方向"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "理性討論，凝聚社會共識後再決定"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "應先充分討論，俟有社會共識後再決定"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "核四已封存，未來能否啟封，需有政府預算之編列，蘭嶼核廢料應先移除。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "題意不清，無法回答，請先定義「公開透明」"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "題意不清，無法理解所要詢問之內容，任何改革應先充分討論，凝聚社會共識。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "原民自治條例",
+                "content": "制定「原住民族自治法」，憲法保障民族自決，依「原住民族基本法」規定，推動原民自治權利。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "原民土地權益",
+                "content": "制定「原住民族土地及海域法」，正視原住民土地權益，恢復原住民使用傳統土地及海域權利"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "原民部落經濟",
+                "content": "制定「原住民族部落經濟發展條例」，部落特色經濟的發展，宜有專法保障；成立200億基金，發展部落經濟。"
             }
         ]
     },
@@ -15942,57 +15942,57 @@ const candidates =
         "districtArea": "KHH",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "長照落實",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "舉用合一",
                 "content": ""
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "國土復育",
+                "content": "監督國土管理暨復育相關法案之落實，尤其是海岸法相關之施行細則之訂定"
             }
         ]
     },
