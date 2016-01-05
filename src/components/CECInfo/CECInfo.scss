@@ -4,7 +4,6 @@ $break: 600px;
 	position: relative;
 	max-width: 600px;
     margin: 0 auto;
-    padding: 10px;
     line-height: 1.6;
     font-size: 16px;
 
@@ -16,17 +15,23 @@ $break: 600px;
 		font-size: 18px;
 	}
 }
+.paper {
+	padding: 0 30px;
+}
+@media all and (min-width: $break){
+	.paper {
+		padding: 5px 30px 30px 30px;
+		background: white;
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.008);
+	}
+}
 .section {
 	margin-bottom: 30px;
 }
 .titleWrap {
 	text-align: center;
-	margin: 10px;
 }
 h2.title {
-	border-bottom: 2px solid;
-	padding-bottom: 1px; 
-    display: inline;
     font-size: 22px;
     margin: 30px 0 10px 0;
 }
@@ -37,6 +42,8 @@ h2.title {
 .sectionWrap {
 	text-align: left;
 	color: rgb(53,55,54);
+	margin-top: 20px;
+    
 }
 @media all and (min-width: $break){
 	.centerWrap {
@@ -49,4 +56,7 @@ h2.title {
 .meta {
 	margin-top: 30px;
 	font-size: 14px;
+}
+.wrap br {
+	margin: 10px 0;
 }
