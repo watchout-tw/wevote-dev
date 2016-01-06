@@ -18732,57 +18732,57 @@ const candidates =
         "districtArea": "NAN",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "此議題必須經過台灣社會廣泛討論之後再形成共識"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "發展綠能，振興台灣經濟"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法",
+                "content": "黨產歸零，政黨不應擁有財產，政黨才能在相同基礎下公平競爭，政黨政治獻金透明化。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "年金改革",
+                "content": "理性檢討年金制度，推動符合社會公平正義的年金改革。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "可行的公投法",
+                "content": "修改公投法，讓公投法可落實直接民權，並使公投法成為解決社會重大爭議的最後機制。"
             }
         ]
     },
