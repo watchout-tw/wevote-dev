@@ -9,8 +9,8 @@ $webVersionBreak: 800px;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    top: 0px;
-    position: fixed;
+    top: -70px;
+    position: absolute;
     background-image: url('../images/constituencies-web.jpg');
     transform: translateZ(0);
     pointer-events: none;
@@ -19,6 +19,8 @@ $webVersionBreak: 800px;
 @media all and (min-width: $webVersionBreak){
     .bgHolder {
         background-size: cover;
+        position: fixed;
+        top: 0px;
     }
 }
 .instruction {
