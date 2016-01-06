@@ -166,10 +166,10 @@ $border: 2px solid $trueBlack;
 	top: 0;
 	left: 0;
 	background: black;
-  color: white;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 0px;
+  	color: white;
+  	display: inline-block;
+  	padding: 10px 20px;
+  	border-radius: 0px;
 	font-size: $defaultFontSize;
 }
 .clarificationContent {
@@ -185,4 +185,18 @@ $border: 2px solid $trueBlack;
 	padding: 10px;
   margin-top: 40px;
 	font-size: 20px;
+}
+/* ---- */
+
+p.legislatorInfo {
+	font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    margin: 2px 5px;
+}
+.districtLinkSet {
+	margin-left: 1px;
+}
+.districtLinkSet a.districtLink {
+	margin-right: 2px;
 }

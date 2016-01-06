@@ -54,7 +54,13 @@ a.ia.line {
 }
 a.ia.line:hover {
   color: black;
-
+}
+a.ia.line.gray {
+  border-bottom: 1px solid #555;
+  color: #555;
+}
+a.ia.line.gray:hover {
+  color: black;
 }
 
 // css common mixins
