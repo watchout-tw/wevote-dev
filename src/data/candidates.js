@@ -18360,57 +18360,57 @@ const candidates =
         "districtArea": "CHW",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "在多元成家入憲法共識之前，不支持直接修改民法972條。但會優先推動伴侶保障基本法。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "制定高排碳產業轉型基本法，將高排碳產業轉為綠能電力產業，作為非核家園進程。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "不支持去國外法系脈絡的推動陪審法，但會推動人民参與法官評鑑，檢察官民選制度。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "食安保障法案",
+                "content": "落實黑心食品廠商退場機制，嚴格檢討黑心財團金融股份，拒絕食安恐怖主義的染指。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "水資環境法案",
+                "content": "配合國土計畫法，對禁止工業搶奪民生用水，禁止工廠黑水廢氣排放，拒絕空氣污染。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "年金福利法案",
+                "content": "調整國家資源與社會分配，進行年金改革，免保費，免學費。"
             }
         ]
     },
