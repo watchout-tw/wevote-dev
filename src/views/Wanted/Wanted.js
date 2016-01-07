@@ -24,7 +24,7 @@ export default class Wanted extends Component {
           <DocumentMeta {...metaData}/>
           <div className={styles.imgWrap}><img src={wantedImg} className={styles.img} /></div>
           <div className={styles.about}>
-              <h1 className={styles.title}>協尋立委</h1> 
+              <h1 className={styles.title}>協尋失蹤候選人</h1> 
           </div>
           <div className={styles.content}>
               <p>你選區的立委候選人失蹤了嗎？</p>
