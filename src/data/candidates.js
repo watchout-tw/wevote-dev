@@ -12780,57 +12780,57 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "食品安全",
+                "content": "1.修法加重違反食安法業者更高的刑責與罰則。2.提高十倍的稽查預算。3.要求政府創設毒物管理機構。4.提高檢舉獎金。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "空氣品質",
+                "content": "1.修法限制高汙染生煤使用量，並提高對工業污染的管制標準。2.要求臺中火力發電廠逐步將燃煤機組汰換成天燃氣機組。3.將臺中市列為中部空品總量管制區。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "老人照顧",
+                "content": "1.廣設老人日間照顧中心。2.建立專業的照顧管理制度，將照顧管理專員納入專門職業及技術人員考試。"
             }
         ]
     },
