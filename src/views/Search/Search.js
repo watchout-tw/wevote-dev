@@ -104,7 +104,7 @@ export default class Search extends Component {
     return (
       <div className={styles.wrap}>
           <div>
-              <h2>區域立委候選人・姓名搜尋</h2>
+              <h2 className={styles.title}>區域立委候選人・姓名搜尋</h2>
               <input className={styles.input}
                      onChange={this._onChange.bind(this)}
                      onKeyUp={this._onKeyUp.bind(this)}/>

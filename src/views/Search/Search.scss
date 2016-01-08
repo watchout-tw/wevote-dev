@@ -1,17 +1,28 @@
 @import '../../common.scss';
+$break: 500px;
 .wrap {
 	position: relative;
 	padding: 10vh 0;
-    text-align: center;
-    min-height: 50vh;
+  text-align: center;
+  min-height: 50vh;
+}
+.title {
+  font-size: 18px;
+  padding: 0 10px;
+}
+@media all and (min-width: $break){
+  .title {
+      font-size: 22px;
+      margin: 30px 0 8px 0;
+  }
 }
 .input {
 	padding: 10px;
 	width: 300px;
-    box-shadow: none;
-    border: 1px solid #ccc;
-    padding: 10px;
-    outline: none;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
 }
 .input:focus {
 	border: 1px solid #444;
