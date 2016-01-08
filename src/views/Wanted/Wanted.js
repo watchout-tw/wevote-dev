@@ -31,7 +31,7 @@ export default class Wanted extends Component {
               <p>關於你關心議題的立場，候選人還沒回覆嗎？</p>
               <p>你出一分力，協尋失蹤候選人，讓資訊更完整，改變選舉文化。</p>
   
-              <h2>協尋三密技：</h2>
+              <h2 className={styles.subtitle}>協尋三密技：</h2>
               <ol>
                 <li>下載：下載<a className={`${styles.ia} ${styles.bright}`} 
                                 href="/files/form.pdf" target="_blank">表態承諾書</a></li>
