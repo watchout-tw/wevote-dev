@@ -5154,57 +5154,57 @@ const candidates =
         "districtArea": "TPE",
         "districtNo": "3",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "落實高齡長照",
+                "content": "推動制定「長期照顧保險法」，使身心失能而有長期照顧需要時，可依法獲得保險給付。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "弱勢兒少查訪",
+                "content": "修正「兒童及少年福利與權益保障法」第54條，明訂相關人員應對特定兒童之生活狀況進行查訪，並由中央主管機關比對相關資料。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "營造友善新創",
+                "content": "檢討、鬆綁現行不合時宜法令規範，讓新創產業能健全發展。建構新創產業生產鏈，協助新創產業進入國際市場發展。"
             }
         ]
     },
@@ -8130,57 +8130,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "我認為在愛之前，大家都是平等的，也應該被平等地對待。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "人民有權改正違反民意的決策，並且掃除背棄民意的政客。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "台灣公投法門檻過於嚴苛，應該歸還人民行使直接民權的權利，讓人民有表達意見和參與公共決策的機會。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "核電僅占台灣總發電量5分之1，政府與台電卻認為只能依賴核能，能源政策應該通盤重新考慮。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "教育從來都不只是學生的、老師的事，它是一個全民參與的議題。教育影響到的不只是一屆學子，其影響的是一個國家未來發展價值。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "司法改革是社會非常迫切的議題，需要務實穩健、循序漸進的改革，讓民眾先習慣再普遍參與。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法討正義",
+                "content": "現行「人民團體法」亟需「政黨法」補充，限制政黨不得從事營利，設置黨產處分條款，建立政黨公平競爭法源。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "電業法要核安",
+                "content": "增訂「電業法」條文，開放電業自由競爭，落實智慧電網建設，降低核能用電依賴，提升能源產業多元發展。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "房屋稅護居安",
+                "content": "修正「房屋稅條例」調整現行稅法，增加囤房成本減少空屋閒置，獎勵空屋釋出轉做社會住宅。"
             }
         ]
     },
