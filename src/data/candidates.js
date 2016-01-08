@@ -20034,57 +20034,57 @@ const candidates =
         "districtArea": "ILA",
         "districtNo": "N/A",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時支持多元成家、推動民法修正、醫療簽署、財產處分、收養認可"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時主張廢除罷免不得宣傳相關條文、電子連署、簡單多數決"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時主張廢除公審會、下修投票年齡、電子連署、公部門提案權、延長第二階段連署期限、下修連署份數、簡單多數決。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時支持全面廢核，推動能源自主"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時主張廢除一綱一本/多本，各校自行訂定教材與教學目標"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "贊成陪審團制，同時應透過教育提升人民法學常識與法治素養"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "農業保險法",
+                "content": "設立「農業保險專責管理機構」，培養專業核保、農產勘損理賠鑑價人員、計算合理保險費率與開發保險產品。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地熱能源專法",
+                "content": "推動地熱能源多層次利用、建立跨部會專責推動小組、培養專業人才、克服開發法源障礙、促進產業發展兼顧永續。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "兩岸人民條例",
+                "content": "廢止兩岸人民條例，防堵中國因素與勢力透過兩岸人民條例各種漏洞滲入臺灣，建立「終止代管、自決建國」路徑。"
             }
         ]
     },
