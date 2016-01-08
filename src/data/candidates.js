@@ -13462,57 +13462,57 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "不當黨產處理 ",
+                "content": "政黨法草案。針對現行政黨之組織、活動、財務、合併與解散及不當黨產之處理等相關規範鬆散闕如，未能成為一有系統性的法定制度。故未來進入國會將提出修法，以健全政黨政治之發展，建立政黨公平競爭、財務透明化等機制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "推動共同管道建設",
+                "content": "共同管道法第二十一條。目前道路經常遭各事業機構挖掘施工，道路上人、手孔蓋遍佈，路面坑坑疤疤，車禍意外事故頻傳，且因舉證困難，國家賠償大都求償無門，致引發民怨，實有積極推動共同管道建設之必要。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "明確總統職務交接及政權移交規範",
+                "content": "總統職務交接條例草案。台灣至今尚無一完整、明確的總統職務交接及政權移交規範，導致前兩次總統職務交接均發生若干爭議，有違現代民主國家之法治基本要求。為確保政黨輪替時，國務得以順利銜接及國家安定得以維繫，實應儘速健全。"
             }
         ]
     },
