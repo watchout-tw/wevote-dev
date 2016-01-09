@@ -6,6 +6,8 @@ import PeopleProfile from '../../components/PeopleProfile/PeopleProfile.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 import Promises from '../../components/Promises/Promises.js';
 import Story from '../../components/Story/Story.js';
+import CECInfo from '../../components/CECInfo/CECInfo.js';
+
 import CandidateBuns from '../../components/CandidateBuns/CandidateBuns.js';
 
 import cht2eng from '../../utils/cht2eng';
@@ -55,6 +57,12 @@ export default class People extends Component {
     let title, description;
 
     switch(category){
+      case 'info':
+        content = <CECInfo id={id}/>
+        title = `${currentPeople.name}基本資料-沃草2016立委出任務`;
+        description = `來自中選會官方紀錄的${currentPeople.name}學經歷、政見，一次線上看完`;
+      break;
+
       case 'records':
         const {legislatorPositions} = this.state;
         const currentLegislatorPosition = legislatorPositions[currentPeople.name];
@@ -117,7 +125,7 @@ export default class People extends Component {
 
     //第九屆區域參選人
     if(currentIdentity.is9thCandidate){
-        districtText = <div className={styles.seeMore}>{currentPeople.name}是
+        districtText = <div className={styles.seeMore}><b>{currentPeople.name}</b>是
         <Link to={`/constituencies/${district2url(districtData.area)}/`}
               className={`${styles.ia} ${styles.line} ${styles.black}`}>
               {district2cht(districtData.area)}
@@ -130,7 +138,7 @@ export default class People extends Component {
     }
     //區域轉戰不分區
     if(currentIdentity.is8thDistrict && currentIdentity.is9thProportional){
-        districtText = <div className={styles.seeMore}>{currentPeople.name}是
+        districtText = <div className={styles.seeMore}><b>{currentPeople.name}</b>是
         <Link to={`/constituencies/${district2url(districtData.area)}/`}
               className={`${styles.ia} ${styles.line} ${styles.black}`}>
               {district2cht(districtData.area)}
@@ -143,7 +151,7 @@ export default class People extends Component {
     }
     //區域不再當立委
     if(currentIdentity.is8thDistrict && !currentIdentity.is9thProportional && !currentIdentity.is9thCandidate){
-        districtText = <div className={styles.seeMore}>{currentPeople.name}沒有繼續參選立委，看看2016這區有誰參戰？</div>;
+        districtText = <div className={styles.seeMore}><b>{currentPeople.name}</b>沒有繼續參選立委，看看2016這區有誰參戰？</div>;
     }
 
     if(districtText){
@@ -165,11 +173,11 @@ export default class People extends Component {
         partyCht = parties[parties.length-1].partyCht;
         //第八屆不分區
         if(currentIdentity.is8thProportional){
-            proportionalText = <div className={styles.seeMore}>{currentPeople.name}是{partyCht}本屆不分區立委。</div>;
+            proportionalText = <div className={styles.seeMore}><b>{currentPeople.name}</b>是{partyCht}本屆不分區立委。</div>;
         }
         //第九屆不分區
         if(currentIdentity.is9thProportional){
-            proportionalText = <div className={styles.seeMore}>{currentPeople.name}是{partyCht}2016不分區立委。</div>;
+            proportionalText = <div className={styles.seeMore}><b>{currentPeople.name}</b>是{partyCht}2016不分區立委。</div>;
         }
     }
     if(proportionalText){
@@ -209,6 +217,12 @@ export default class People extends Component {
           <DocumentMeta {...metaData}/>
           <PeopleProfile id={id}/>
           <ul className={styles.innerTag}>
+              {
+                (currentIdentity.is9thCandidate) ? (
+                  <li><Link to={`/people/${id}/info/`} 
+                            className={ category==="info" ? styles.active : ""}>基本資料</Link></li>
+                ) : ""
+              }
               <li><Link to={`/people/${id}/records/`} 
                         className={ category==="records" ? styles.active : ""}>歷史紀錄</Link></li>
               <li><Link to={`/people/${id}/promises/`} 

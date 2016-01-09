@@ -13,13 +13,13 @@ export default class PartyBuns extends Component {
   }
   render() {
     const styles = require('./PartyBuns.scss');
-    let {category} = this.props;
+    let {category, currentParty} = this.props;
     /* category: records, promises, list */
     
     let bunItems = Object.keys(partyBlock).map((partyId, i)=>{
         let party = partyBlock[partyId];
         return (
-            <Link className={styles.bunItem}
+            <Link className={`${styles.bunItem} ${(currentParty===partyId) ? styles.active : ""}`}
                   key={`partybun-${category}-${partyId}-${i}`}
                   to={`/parties/${partyId}/${category}/`}>
                 <div className={`${styles.partyFlag} ${styles.small} ${styles[partyId]}`}></div>

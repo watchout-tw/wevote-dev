@@ -179,6 +179,17 @@ class Card extends Component {
     ):<div className={` ${styles.billSection} ${styles.noReply} `}>尚未回覆</div>;
 
     let content = (pkCategory==="position") ?  <div>{positionEntries}</div> : <div>{billSection}</div>
+
+    //太長的原住民名字顯示前半部（中文部分）
+    let name = people.name;
+    if(name.length > 20){
+        const pattern=/([A-Z]+)([a-z]+)/;
+        let engIndex = name.search(pattern);
+      
+        if(engIndex !== -1){
+          name = name.substring(0,engIndex);
+        }
+    }
     return (
         <div className={styles.card}>
             <Link to={`/people/${people.id}/promises/`} className={styles.cardLink}>
@@ -192,7 +203,7 @@ class Card extends Component {
                 </div>
                 <div className={styles.basicInfo}>
                    <div className={styles.peopleNumber}>{people.number}</div>
-                   <div className={styles.peopleName}>{people.name}</div>
+                   <div className={styles.peopleName}>{name}</div>
                    <div className={styles.partyItem}>
                        <div className={`${styles.partyFlag} ${styles.small} ${styles[people.party]}`}></div>
                        <PartyFlag partyId={people.party}/>

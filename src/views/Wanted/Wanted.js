@@ -18,22 +18,23 @@ export default class Wanted extends Component {
           }
       }
     };
-
+    let wantedImg = require('./images/wanted.png');
     return (
       <div className={styles.wrap}>
           <DocumentMeta {...metaData}/>
+          <div className={styles.imgWrap}><img src={wantedImg} className={styles.img} /></div>
           <div className={styles.about}>
-              <h1 className={styles.title}>協尋立委</h1> 
+              <h1 className={styles.title}>協尋失蹤候選人</h1> 
           </div>
           <div className={styles.content}>
               <p>你選區的立委候選人失蹤了嗎？</p>
               <p>關於你關心議題的立場，候選人還沒回覆嗎？</p>
               <p>你出一分力，協尋失蹤候選人，讓資訊更完整，改變選舉文化。</p>
   
-              <h2>協尋三密技：</h2>
+              <h2 className={styles.subtitle}>協尋三密技：</h2>
               <ol>
                 <li>下載：下載<a className={`${styles.ia} ${styles.bright}`} 
-                                href="/files/form.pdf" target="_blank">表態承諾書</a></li>
+                                href="http://wevote.tw/files/form.pdf" target="_blank">表態承諾書</a></li>
                 <li>傳送：傳送表態承諾書到候選人FB或傳真，
                     <a href="https://docs.google.com/spreadsheets/d/1FAuauUYh1EFtpTnUpn3SMburgolD93QST5je05cYxY4/edit#gid=0"
                        target="_blank"
@@ -41,7 +42,7 @@ export default class Wanted extends Component {
                 <li>提醒：打電話貼心提醒候選人回覆表態承諾書</li>
               </ol>
               <p><Link className={`${styles.ia} ${styles.bright}`} 
-                       to={`/FAQ/`}>我們是如何蒐集資料的？</Link></p>
+                       to={`/about/FAQ/`}>我們是如何蒐集資料的？</Link></p>
           </div>
           
       </div>

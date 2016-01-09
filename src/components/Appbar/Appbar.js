@@ -167,7 +167,7 @@ export default class Appbar extends Component {
 
                 <li onClick={this._updateLocation.bind(this,'about')}>
                     <Link className={`${styles.navItem} ${aboutActive}`}
-                          to={`/about/FAQ`}
+                          to={`/about/FAQ/`}
                           onClick={this._hideMenu.bind(this)}>
                           <svg className={styles.icon} x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
                           	<path d="M9.933,6.733c0,0-1.159-0.146-2.318-0.062S5.028,7.043,5.028,7.043S5.735,8.554,6.791,8.74c1.055,0.186,1.863,0,1.863,0
@@ -191,7 +191,7 @@ export default class Appbar extends Component {
                 <li onClick={this._updateLocation.bind(this,'search')}
                     className={styles.navLi}>
                     <Link className={`${styles.navItem} ${searchActive}`}
-                          to={`/search`}
+                          to={`/search/`}
                           onClick={this._hideMenu.bind(this)}>
                           <svg className={styles.icon} x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
                             <path d="M15,7.758c3.86,0,7,3.14,7,7s-3.14,7-7,7s-7-3.14-7-7S11.14,7.758,15,7.758 M15,4.758c-5.523,0-10,4.477-10,10

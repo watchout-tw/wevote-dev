@@ -14,10 +14,7 @@ import getData from '../../data/getData';
 const {records, legislators, issues} = getData();
 
 export default class PartyIssue extends Component {
-  static propTypes = {
-      legislators: PropTypes.object.isRequired,
-      issues: PropTypes.object.isRequired
-  }
+  
   //設定 initial state
   constructor(props) { super(props)
       this.state = {

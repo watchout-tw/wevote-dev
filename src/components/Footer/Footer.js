@@ -17,18 +17,19 @@ export default class Footer extends Component {
                   <div className={styles.welcome}>歡迎<b>政黨</b>及<b>區域立委參選人</b>針對我們列出的重大議題表態回覆！</div>
                   <div className={styles.links}>
                     <div><a className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`}
-                            href={`/files/form.pdf`}>下載表態承諾書</a></div>
+                            href="http://wevote.tw/files/form.pdf"
+                            target="_blank">下載表態承諾書</a></div>
                     <div><Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`}
-                      to={`/about/FAQ`}>我們是如何蒐集資料的？</Link></div>
+                      to={`/about/FAQ/`}>我們是如何蒐集資料的？</Link></div>
                   </div>
               </div>
               <SubscribeComponent showExternal={true}/>
               <div className={styles.rightFooterLinks}>
                 <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/about/`}>關於立委出任務</Link>
-                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/about/FAQ`}>資料來源說明</Link>
-                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/about/statement`}>著作權聲明</Link>
+                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/about/FAQ/`}>資料來源說明</Link>
+                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/about/statement/`}>著作權聲明</Link>
                 <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/clarify/`}>立委澄清</Link>
-                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/wanted/`}>協尋立委</Link>
+                <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/wanted/`}>協尋失蹤候選人</Link>
                 <Link className={`${styles.linkItem} ${styles.ia} ${styles.inverted}`} to={`/`}>回首頁</Link>
               </div>
           </div>

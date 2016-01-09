@@ -14,6 +14,8 @@ import FAQ from "./FAQ.js";
 
 import districtData from "./districtData";
 
+import CEC from "./CEC.js";//中選會政見
+
 export default function get(){
     const webDistrictData = districtData();
 	const mobileDistrictData = parseMobileDistrict(webDistrictData);
@@ -33,7 +35,9 @@ export default function get(){
         FAQ: FAQ(),
 
         webDistrictData: webDistrictData,
-        mobileDistrictData: mobileDistrictData
+        mobileDistrictData: mobileDistrictData,
+
+        CEC: CEC()
     };
 }
 function parseMobileDistrict(db){

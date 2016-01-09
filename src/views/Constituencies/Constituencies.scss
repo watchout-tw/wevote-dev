@@ -9,13 +9,21 @@ $webVersionBreak: 800px;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    top: 0px;
-    position: fixed;
+    top: -70px;
+    position: absolute;
     background-image: url('../images/constituencies-web.jpg');
-    background-size: cover;
     transform: translateZ(0);
     pointer-events: none;
     z-index: -1;
+
+    min-height: 130vh;
+}
+@media all and (min-width: $webVersionBreak){
+    .bgHolder {
+        background-size: cover;
+        position: fixed;
+        top: 0px;
+    }
 }
 .instruction {
   	background: rgba(255,255,255,0.9);

@@ -55,6 +55,7 @@ export default class ElectionMap extends Component {
     this.setState({
       active_city: name
     })
+    this._addStrokeLinejoin(name);
   }
   _resetMapClick(){
     const {active_city} = this.state;
@@ -106,6 +107,7 @@ export default class ElectionMap extends Component {
       active_city: city,
       sub_active : district_count
     })
+
   }
 
   _handleSubdistrictsDisplay(districts){
@@ -140,9 +142,23 @@ export default class ElectionMap extends Component {
     });
     return resultTemplate;
   }
+  _addStrokeLinejoin(cityName){
+      //citymap-TPE
+      let node = document.getElementById("citymap-"+cityName);
+      let x = node.getElementsByTagName("polygon");
+      let i;
+      for(i = 0; i < x.length; i++){
+          let v = x[i].getAttribute("stroke-linejoin");
+          //console.log(v);
+          if(v){//已經設定過，不是 null，就不再重新設定
+              return;
+          }
+          x[i].setAttribute("stroke-linejoin", "bevel");  
+      }
+
+  }
   componentDidMount(){
-
-
+     
       //hover effect
       allCities.map((city, i)=>{
           let node = document.getElementById(city);
@@ -155,8 +171,7 @@ export default class ElectionMap extends Component {
           //點選之後 show 詳細選區
           node.addEventListener("click" , this._onMapClick.bind(this, city));
       });
-
-
+      
   }
   componentWillUnmount(){
 

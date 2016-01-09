@@ -131,6 +131,7 @@ export default class PeopleProfile extends Component {
       
     }
 
+
     return (
       <div className={styles.wrap}>
         <header>
@@ -138,7 +139,9 @@ export default class PeopleProfile extends Component {
             <div className={styles.avatar}><PeoplePhoto id={id}/></div>
             <div className={styles.peopleInfo}>
               <div className={styles.peopleName}>
-                <Link to={`/people/${id}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{name}</Link>
+                <Link to={`/people/${id}/records/`} 
+                      className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}
+                                  ${name.length > 20 ? styles.small : ""}`}>{name}</Link>
               </div>
               <div className={styles.peopleDetail}>
                   {ageItem}

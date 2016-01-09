@@ -15,15 +15,21 @@ $breakWeb: 500px;
 }
 .bottomLinkWrap {
 	display: inline-block;
-	margin-top: 40px;
+	margin-top: 80px;
 }
 .bottomLink, .bottomLink:visited {
-	text-decoration: none;
-	color: $black;
-	font-size: 20px;
+    text-decoration: none;
+    color: $awesomeColor;
+    font-size: 20px;
     font-weight: 500;
-    padding-bottom: 1px;
-    border-bottom: 2px solid;
+    color: white;
+    padding: 8px 20px 10px 20px;
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.17);
+    background: #005060;
+    cursor: pointer;
+}
+.bottomLink:hover {
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.28);
 }
 
 .issueBlock, .issueBlock:visited {

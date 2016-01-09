@@ -6,14 +6,18 @@ import moment from 'moment';
 import cht2url from '../../utils/cht2url';
 import people_name2id from '../../utils/people_name2id';
 import eng2cht from '../../utils/eng2cht';
+import cht2eng from '../../utils/cht2eng';
 import parseToLegislatorPosition from '../../utils/parseToLegislatorPosition';
 import peopleInfo from '../../utils/peopleInfo';
+import district2url from '../../utils/district2url';
+import circleNumber from '../../utils/circleNumber';
+import identity from '../../utils/identity';
 
 import PeoplePhoto from '../../components/PeoplePhoto/PeoplePhoto.js';
 import IssueGroup from '../../components/IssueGroup/IssueGroup.js';
 
 import getData from '../../data/getData';
-const {records, issues, legislators} = getData();
+const {records, issues, legislators, candidates} = getData();
 
 export default class Record extends Component {
   constructor(props){ super(props)
@@ -31,11 +35,21 @@ export default class Record extends Component {
 
     const data = records[recordId];
 
-    const legislatorId = people_name2id(data.legislator);
-    const legislator = legislators[legislatorId];
+    const peopleId = people_name2id(data.legislator);
+    const legislator = legislators[peopleId];
 
     const {legislatorPositions} = this.state;
     const currentLegislatorPosition = legislatorPositions[legislator.name];
+
+    //參選資料
+    const candidateData = candidates[peopleId];
+    let isCandidate = candidateData;
+    let candidateDistrict1, candidateDistrict2;
+    if(candidateData){
+        candidateDistrict1 = candidateData.districtArea;
+        candidateDistrict2 = candidateData.districtNo;
+    }
+    //
 
 
     let date = moment.unix(data.date);
@@ -62,9 +76,75 @@ export default class Record extends Component {
     }
 
     /* 立委個人資料 */
-    const {name, party, partyCht, gender, age, isCurrent, constituency1, constituency2,
-         isCandidate, candidateConstituency1, candidateConstituency2} = legislator;
-    const info = peopleInfo(name, age, constituency1, constituency2, isCandidate, candidateConstituency1, candidateConstituency2);
+    const {name, party, partyCht, isCurrent, constituency1, constituency2} = legislator;
+
+    /* 候選人資料 */
+    const info = peopleInfo(name, "", constituency1, constituency2, isCandidate, candidateDistrict1, candidateDistrict2);
+
+    //第八屆立委資訊
+    let legInfoItem;
+    if(info.legislatorTitle && info.legislatorDistrict){//區域立委
+        legInfoItem = (
+          <p className={styles.legislatorInfo}>第八屆
+              <span className={styles.districtLinkSet}>
+                  <Link to={`/constituencies/${district2url(constituency1)}/`}
+                        className={`${styles.districtLink} ${styles.ia} ${styles.line} ${styles.gray}`}>
+                        {info.legislatorDistrictArea}
+                  </Link>
+                  {
+                    (info.legislatorDistrictAreaNo) ? 
+                    <Link to={`/constituencies/${district2url(constituency1,constituency2)}/`}
+                          className={`${styles.districtLink} ${styles.districtLink} ${styles.ia} ${styles.line} ${styles.gray}`}>
+                          {info.legislatorDistrictAreaNo}
+                    </Link> : ""
+
+                  }
+              </span>
+              立委
+          </p>);
+    }
+    if(info.legislatorTitle && !info.legislatorDistrict){//不分區或黨團
+        legInfoItem = <p className={styles.legislatorInfo}>{info.legislatorTitle}</p>;
+    }
+
+    ///////////// 第九屆參選資訊
+    let candidateInfoItem;
+
+    if(info.candidateTitle){    
+        candidateInfoItem = (
+        <div>
+            <p className={styles.legislatorInfo}>2016第九屆
+                <span className={styles.districtLinkSet}>
+                    <Link to={`/constituencies/${district2url(candidateDistrict1)}/`}
+                          className={`${styles.districtLink} ${styles.ia} ${styles.line} ${styles.gray}`}>
+                          {info.candidateDistrictArea}
+                    </Link>
+                    { 
+                      (info.candidateDistrictAreaNo) ? 
+                      <Link to={`/constituencies/${district2url(candidateDistrict1,candidateDistrict2)}/`}
+                            className={`${styles.districtLink} ${styles.ia} ${styles.line} ${styles.gray}`}>
+                            {info.candidateDistrictAreaNo}
+                      </Link>: ""
+                    }
+                </span>
+                      {circleNumber(candidateData.number)}候選人</p>
+        </div>);
+    }
+
+    let currentIdentity = identity(legislators, peopleId);
+    if(currentIdentity.is9thProportional===true){//第八屆立委 && 第九屆不分區
+      let parties = legislator.parties;
+      let partyCht = parties[parties.length-1].partyCht;
+
+      candidateInfoItem = (
+        <p className={styles.legislatorInfo}>
+            2016第九屆
+            <Link className={`${styles.ia} ${styles.line} ${styles.gray}`}
+                  to={`/parties/${cht2eng(partyCht)}/list/`}>{partyCht}不分區</Link>
+            立委</p>
+        );
+      
+    }
 
     /* 來源資料 */
     let lySourceItem = (data.lyURL) ? (
@@ -108,10 +188,12 @@ export default class Record extends Component {
         <div className={styles.peopleRow}>
           <div className={styles.avatar}><PeoplePhoto id={people_name2id(data.legislator)}/></div>
           <div className={styles.profileBlock}>
-            <div className={styles.isCurrent}>{info.legislatorTitle}</div>
-            <div className={styles.isCandidate}>{info.candidateTitle}</div>
+            
+            {candidateInfoItem}
+            {legInfoItem}
+            
             <div className={styles.avatarName}>
-              <Link to={`/people/${legislatorId}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{data.legislator}</Link>
+              <Link to={`/people/${peopleId}/records/`} className={`${styles.name} ${styles.ia} ${styles.black} ${styles.big}`}>{data.legislator}</Link>
               <div className={styles.party}>
                 <div className={`${styles.partyFlag} ${styles.small} ${styles[data.party]}`}></div>
                 <Link to={`/parties/${data.party}/records/`} className={`${styles.partyName} ${styles.ia} ${styles.black}`}>{eng2cht(data.party)}</Link>
@@ -146,7 +228,7 @@ export default class Record extends Component {
         </div>
       </div>
       <div className={styles.seeOtherIssue}>看看{data.legislator}<br/>在各個議題的表態紀錄⋯</div>
-      <IssueGroup id={legislatorId} currentLegislatorPosition={currentLegislatorPosition}/>
+      <IssueGroup id={peopleId} currentLegislatorPosition={currentLegislatorPosition}/>
     </div>
 
     ); // end of return

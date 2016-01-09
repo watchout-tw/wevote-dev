@@ -2922,57 +2922,57 @@ const candidates =
         "districtArea": "TNN",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "兩岸監督條例",
+                "content": "使兩岸交流透明化，打破黑箱"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "公投法",
+                "content": "打破鳥籠公投，門檻下修"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "有薪照顧假",
+                "content": "勞基法第43條，加列家庭照顧假。"
             }
         ]
     },
@@ -3294,52 +3294,52 @@ const candidates =
         "districtArea": "TYN",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "待社會有共識，尊重民意"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "待社會有共識，尊重民意"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "待社會有共識，尊重民意"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "但要替代能源足夠以後"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "長照保險法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "兩岸監督條例",
                 "content": ""
             },
             {
@@ -3356,57 +3356,57 @@ const candidates =
         "districtArea": "LAB",
         "districtNo": "N/A",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "俟有社會共識後，再決定修法方向"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "理性討論，凝聚社會共識後再決定"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "應先充分討論，俟有社會共識後再決定"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "核四已封存，未來能否啟封，需有政府預算之編列，蘭嶼核廢料應先移除。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "題意不清，無法回答，請先定義「公開透明」"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "題意不清，無法理解所要詢問之內容，任何改革應先充分討論，凝聚社會共識。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "原民自治條例",
+                "content": "制定「原住民族自治法」，憲法保障民族自決，依「原住民族基本法」規定，推動原民自治權利。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "原民土地權益",
+                "content": "制定「原住民族土地及海域法」，正視原住民土地權益，恢復原住民使用傳統土地及海域權利"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "原民部落經濟",
+                "content": "制定「原住民族部落經濟發展條例」，部落特色經濟的發展，宜有專法保障；成立200億基金，發展部落經濟。"
             }
         ]
     },
@@ -5154,57 +5154,57 @@ const candidates =
         "districtArea": "TPE",
         "districtNo": "3",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "落實高齡長照",
+                "content": "推動制定「長期照顧保險法」，使身心失能而有長期照顧需要時，可依法獲得保險給付。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "弱勢兒少查訪",
+                "content": "修正「兒童及少年福利與權益保障法」第54條，明訂相關人員應對特定兒童之生活狀況進行查訪，並由中央主管機關比對相關資料。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "營造友善新創",
+                "content": "檢討、鬆綁現行不合時宜法令規範，讓新創產業能健全發展。建構新創產業生產鏈，協助新創產業進入國際市場發展。"
             }
         ]
     },
@@ -8068,57 +8068,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "但是不能於教科書中宣揚「其價值大於正常兩性婚姻」。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "但不應該被導向藍綠對決"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "因目前被特定政黨變成「鳥籠公投」"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "建議所有人都去核四廠走一圈，了解後，再決定，現在此議題於目前社會氛圍中，已被操弄動無法理性討論，與不尊重核能科學專業。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "公開、專業 兩者不能偏廢"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "司法導入公開參與的機制，可避免少數人操控。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "受薪階級減稅",
+                "content": "中產階級以下，薪資所得之稅率調降。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "富人合理增稅",
+                "content": "依社會財富增加現況，於40﹪以上級距，增列高所得者增稅級距，以41﹪~45﹪，每50萬高所得收入者，增加0.5﹪稅率。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "小家庭減稅",
+                "content": "一妻一夫兩小孩之家庭組合，每年可擁有5~10萬之減稅額。"
             }
         ]
     },
@@ -8130,57 +8130,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "我認為在愛之前，大家都是平等的，也應該被平等地對待。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "人民有權改正違反民意的決策，並且掃除背棄民意的政客。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "台灣公投法門檻過於嚴苛，應該歸還人民行使直接民權的權利，讓人民有表達意見和參與公共決策的機會。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "核電僅占台灣總發電量5分之1，政府與台電卻認為只能依賴核能，能源政策應該通盤重新考慮。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "教育從來都不只是學生的、老師的事，它是一個全民參與的議題。教育影響到的不只是一屆學子，其影響的是一個國家未來發展價值。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "司法改革是社會非常迫切的議題，需要務實穩健、循序漸進的改革，讓民眾先習慣再普遍參與。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法討正義",
+                "content": "現行「人民團體法」亟需「政黨法」補充，限制政黨不得從事營利，設置黨產處分條款，建立政黨公平競爭法源。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "電業法要核安",
+                "content": "增訂「電業法」條文，開放電業自由競爭，落實智慧電網建設，降低核能用電依賴，提升能源產業多元發展。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "房屋稅護居安",
+                "content": "修正「房屋稅條例」調整現行稅法，增加囤房成本減少空屋閒置，獎勵空屋釋出轉做社會住宅。"
             }
         ]
     },
@@ -9556,56 +9556,56 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "追討不當黨產",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "加強食安法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "推動財稅改革",
                 "content": ""
             }
         ]
@@ -12780,57 +12780,57 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "食品安全",
+                "content": "1.修法加重違反食安法業者更高的刑責與罰則。2.提高十倍的稽查預算。3.要求政府創設毒物管理機構。4.提高檢舉獎金。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "空氣品質",
+                "content": "1.修法限制高汙染生煤使用量，並提高對工業污染的管制標準。2.要求臺中火力發電廠逐步將燃煤機組汰換成天燃氣機組。3.將臺中市列為中部空品總量管制區。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "老人照顧",
+                "content": "1.廣設老人日間照顧中心。2.建立專業的照顧管理制度，將照顧管理專員納入專門職業及技術人員考試。"
             }
         ]
     },
@@ -13462,57 +13462,57 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "不當黨產處理 ",
+                "content": "政黨法草案。針對現行政黨之組織、活動、財務、合併與解散及不當黨產之處理等相關規範鬆散闕如，未能成為一有系統性的法定制度。故未來進入國會將提出修法，以健全政黨政治之發展，建立政黨公平競爭、財務透明化等機制。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "推動共同管道建設",
+                "content": "共同管道法第二十一條。目前道路經常遭各事業機構挖掘施工，道路上人、手孔蓋遍佈，路面坑坑疤疤，車禍意外事故頻傳，且因舉證困難，國家賠償大都求償無門，致引發民怨，實有積極推動共同管道建設之必要。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "明確總統職務交接及政權移交規範",
+                "content": "總統職務交接條例草案。台灣至今尚無一完整、明確的總統職務交接及政權移交規範，導致前兩次總統職務交接均發生若干爭議，有違現代民主國家之法治基本要求。為確保政黨輪替時，國務得以順利銜接及國家安定得以維繫，實應儘速健全。"
             }
         ]
     },
@@ -13586,57 +13586,57 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "因溫哥華的喬治街是同性者的代表。選前本人有在當地住1個月。感覺很平等，很和平。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "希望台灣像溫哥華一樣以觀光取勝，成為觀光島。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "照護生老病終",
+                "content": "保障婦女生育法，協助未婚嗎媽，單親媽媽，哺育新生命。防止台灣健保遭濫用，推動長照法並提供塔位使經濟弱勢者有所終。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "修法跟上時代",
+                "content": "修惡法，爛法，不實用的法，中看不中用的法，要修跟得上時代的法，例如食安法，族群團結法，愛台法等。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "台灣成觀光島",
+                "content": "台灣雖無充沛的天然資源，但有四季如春的氣候，各個族群皆融合相處，濃厚的人情味，多元化的美食及獨步全球的健保，出去周遊列國，方知台灣是寶島，唯有朝向觀光發展，才能活絡台灣的經濟，這就是年輕人的希望。"
             }
         ]
     },
@@ -15942,57 +15942,57 @@ const candidates =
         "districtArea": "KHH",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "長照落實",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "舉用合一",
                 "content": ""
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "國土復育",
+                "content": "監督國土管理暨復育相關法案之落實，尤其是海岸法相關之施行細則之訂定"
             }
         ]
     },
@@ -17988,42 +17988,42 @@ const candidates =
         "districtArea": "CHW",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "為避免民粹，支持司法改革，旁聽制度。"
                 }
             }
         },
@@ -18360,57 +18360,57 @@ const candidates =
         "districtArea": "CHW",
         "districtNo": "2",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "在多元成家入憲法共識之前，不支持直接修改民法972條。但會優先推動伴侶保障基本法。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "制定高排碳產業轉型基本法，將高排碳產業轉為綠能電力產業，作為非核家園進程。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "不支持去國外法系脈絡的推動陪審法，但會推動人民参與法官評鑑，檢察官民選制度。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "食安保障法案",
+                "content": "落實黑心食品廠商退場機制，嚴格檢討黑心財團金融股份，拒絕食安恐怖主義的染指。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "水資環境法案",
+                "content": "配合國土計畫法，對禁止工業搶奪民生用水，禁止工廠黑水廢氣排放，拒絕空氣污染。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "年金福利法案",
+                "content": "調整國家資源與社會分配，進行年金改革，免保費，免學費。"
             }
         ]
     },
@@ -18732,57 +18732,57 @@ const candidates =
         "districtArea": "NAN",
         "districtNo": "1",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "此議題必須經過台灣社會廣泛討論之後再形成共識"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "發展綠能，振興台灣經濟"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "政黨法",
+                "content": "黨產歸零，政黨不應擁有財產，政黨才能在相同基礎下公平競爭，政黨政治獻金透明化。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "年金改革",
+                "content": "理性檢討年金制度，推動符合社會公平正義的年金改革。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "可行的公投法",
+                "content": "修改公投法，讓公投法可落實直接民權，並使公投法成為解決社會重大爭議的最後機制。"
             }
         ]
     },
@@ -20034,57 +20034,57 @@ const candidates =
         "districtArea": "ILA",
         "districtNo": "N/A",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時支持多元成家、推動民法修正、醫療簽署、財產處分、收養認可"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時主張廢除罷免不得宣傳相關條文、電子連署、簡單多數決"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時主張廢除公審會、下修投票年齡、電子連署、公部門提案權、延長第二階段連署期限、下修連署份數、簡單多數決。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時支持全面廢核，推動能源自主"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "同時主張廢除一綱一本/多本，各校自行訂定教材與教學目標"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "贊成陪審團制，同時應透過教育提升人民法學常識與法治素養"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "農業保險法",
+                "content": "設立「農業保險專責管理機構」，培養專業核保、農產勘損理賠鑑價人員、計算合理保險費率與開發保險產品。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "地熱能源專法",
+                "content": "推動地熱能源多層次利用、建立跨部會專責推動小組、培養專業人才、克服開發法源障礙、促進產業發展兼顧永續。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "兩岸人民條例",
+                "content": "廢止兩岸人民條例，防堵中國因素與勢力透過兩岸人民條例各種漏洞滲入臺灣，建立「終止代管、自決建國」路徑。"
             }
         ]
     },
