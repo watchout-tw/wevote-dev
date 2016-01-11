@@ -1,6 +1,6 @@
 const CEC = 
 {
-    "updateTime": "2016/01/05 11:19",
+    "updateTime": "2016/01/11 10:14",
     "data": {
         "1": {
             "electiondefineno": "10404001",
@@ -1931,10 +1931,10 @@ const CEC =
             "recpartyname_1": "民主進步黨",
             "gender": "F",
             "birthdate": "Aug 7, 1971 12:00:00 AM",
-            "birthplace": "1",
-            "placename": "臺北市",
-            "birthplacecity": "63000",
-            "placecityname": "臺北市",
+            "birthplace": "7",
+            "placename": "其他省市",
+            "birthplacecity": "99013",
+            "placecityname": "日本",
             "drawno": "2",
             "rptedu": "美國哥倫比亞大學政治學碩士",
             "rptexp": "第5、6、8屆立法委員<br/>民進黨國際事務部主任<br/>總統府顧問<br/>亞洲民主自由聯盟(CALD)秘書長<br/>行政院大陸委員會諮詢委員<br/>新境界文教基金會副執行長<br/>臺灣民主基金會董事<br/>國際自由政黨聯盟(LI)副主席<br/>海基會董事<br/>美琴之友會名譽理事長",
@@ -9400,7 +9400,7 @@ const CEC =
             "sessionname": "選舉區",
             "candidatename": "楊悟空",
             "educationid": "08",
-            "educationname": "高中",
+            "educationname": "高中(職)",
             "recommenderpartyno": "278",
             "recpartyname_1": "泛盟黨",
             "gender": "M",
