@@ -9742,56 +9742,56 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "速審法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "加薪法案",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "公共工程監督",
                 "content": ""
             }
         ]
