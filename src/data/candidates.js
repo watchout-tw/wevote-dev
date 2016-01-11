@@ -13338,57 +13338,57 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "nay",
+                    "statement": "現行民法中的婚姻，仍以穩定親族關係與繁衍為基礎(如民983條)，同性關係應另立合適之伴侶法為宜。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "現行罷免門檻過高，造成不適任民選首長與民意代表有恃無恐。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "現在公投門檻太高了，幾乎不可能達到有效的公民創制複決。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "核四已成為政治問題，有太多的決策反覆與資源浪費，須用政治方式處裡，對此難表意見。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "課綱制定程序與過程應完全公開，課綱制訂應採納家長團體意見，且應有不同課綱可供不同族群做選擇。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持陪審團制，人民參與判決，有效監督，避免恐龍法官造成荒謬之判決。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "社會住宅比例",
+                "content": "以容積獎勵換取商用住宅區建構時依區域提撥總戶數一定比例，作為青年住宅或社會住宅，並且接受地方政府監督，避免變相租賃或買賣。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "轉向托育補助",
+                "content": "家長都希望更多時間陪孩子長大，且因少子化幼教托育產業衰退，政府補助應該要轉一個方向，補助家長可以有更多時間陪伴孩子。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "海外商務中心",
+                "content": "新創產業、中小企業，最需要的是通路跟市場上的幫助。擴充我國駐外辦事處功能，並與結合民間與第三部門的力量，建立海外商務中心。"
             }
         ]
     },
