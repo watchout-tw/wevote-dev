@@ -5712,57 +5712,57 @@ const candidates =
         "districtArea": "TPE",
         "districtNo": "3",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "nay",
+                    "statement": "目前的社會尚未成熟可接受同性婚姻的極度變化，待兒童教育跟上後再進行較合適，現在的變化會出現極大的反感。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "下修可能沒有追加中立的「調查委員會」還來的更好。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "盡量使用綠色能源，真的要使用核能，請用符合國際標準的核五，也不要使用風吹雨打10幾年的核四（危險炸彈）。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "陳科引的「陪審團」制度就是為了這個而定的。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "保護海洋資源",
+                "content": "目前大海資源因嚴重的不重視，導致了不可逆性的破壞，海產污染、非法捕魚、挖空海底，甚至大量二氧化碳排放、海平面上升、海洋酸化，更進一步影響人民的生命安全。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "提高國際競爭",
+                "content": "1.推動政策使僑民回歸，強化台灣投資，提高國際競爭力。2.加入TPP及RCEP，增加台灣貿易舞台。3.鬆綁相關經濟法條，取代香港，讓台灣成為亞洲世界金融中心。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "優化民生方案",
+                "content": "1.開展綠色能源，強調食品安全、食品管制。2.在現行的銀髮族照顧基礎上，增加更多民間養老設施，強化老年保險。3.預防天災，維護基礎建設，維護百姓安全。4.鼓勵生育。"
             }
         ]
     },
