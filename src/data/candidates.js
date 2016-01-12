@@ -10052,57 +10052,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "7",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "這是屬於婚姻自由的人權範圍，應予尊重。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "這個問題，基本上跟公投門檻太高是一樣的，都是技術性架空人民透過罷免收回權利的政治參與權。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "現行公投的高門檻創設了一個空有公投制度，卻無法通過公投呈現真正多數民意，反變成少數綁架多數。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "日本福島因地震造成核輻射災難的慘痛經驗已說明一切，再者，核廢料最終處置的問題迄今無解，不能一錯再錯。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "公民審議的精神，應該落實在教育中，這是我支持課綱制定程序完全公開透明的最重要理由。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "公民參審已是世界趨勢，可補我們的法官缺乏專業能力與社會經驗，避免失之偏頗，可讓恐龍法官逐漸絕跡。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "青年創業扶助",
+                "content": "立新法：設置區域性或專業性青年創業園區，共同基地、共同辦公室、 共用秘書、創業貸款5年零利息，協助創意實現。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "老人長照",
+                "content": "立新法：以在地安養為精神，讓受照顧者在熟悉的環境安養餘年、讓照顧者有喘息空間，尊嚴、品質。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "所得稅法",
+                "content": "修正第 5 條（免稅額、課稅級距及稅率）綜合所得稅之免稅額，以每人全年 12 萬元為基準。"
             }
         ]
     },
