@@ -134,3 +134,22 @@ $break: 500px;
 .districtInfo {
 	font-size: 14px;
 }
+.inputArea {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+.removeIconWrap {
+  background: #C5C4C4;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 8px;
+  right: 7px;
+  border-radius: 50%;
+}
+.removeIcon {
+  width: 14px;
+  margin: 6px 1px 0 0;
+}

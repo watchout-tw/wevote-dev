@@ -73,7 +73,13 @@ export default class Search extends Component {
           })
         }, 3000)
     }
-    
+  }
+  _onReset(){
+    document.getElementById("input").value = "";
+    this.setState({
+      keyword: "",
+      keyup: true
+    })
   }
   render(){
     const styles = require('./Search.scss');
@@ -139,13 +145,25 @@ export default class Search extends Component {
     
     let hintText = (keyword) ? "" : "輸入立委姓名";
 
+    let removeIconImg = require('../../images/icon_remove.svg');
+                  
+    let resetButton = (keyword) ? (
+      <div className={styles.removeIconWrap}
+           onClick={this._onReset.bind(this)}>
+        <img className={styles.removeIcon} src={removeIconImg}/>
+      </div>) : "";
+
     return (
       <div className={styles.wrap}>
           <div>
               <h2 className={styles.title}>區域立委候選人・姓名搜尋</h2>
-              <input className={styles.input}
-                     onChange={this._onChange.bind(this)}
-                     onKeyUp={this._onKeyUp.bind(this)}/>
+              <div className={styles.inputArea}>
+                  <input className={styles.input}
+                         onChange={this._onChange.bind(this)}
+                         onKeyUp={this._onKeyUp.bind(this)}
+                         id="input" />
+                  {resetButton}
+              </div>
               <div className={styles.inputHint}>{hintText}</div>
           </div>
          
