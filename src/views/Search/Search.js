@@ -147,11 +147,7 @@ export default class Search extends Component {
 
     let removeIconImg = require('../../images/icon_remove.svg');
                   
-    let resetButton = (keyword) ? (
-      <div className={styles.removeIconWrap}
-           onClick={this._onReset.bind(this)}>
-        <img className={styles.removeIcon} src={removeIconImg}/>
-      </div>) : "";
+   
 
     return (
       <div className={styles.wrap}>
@@ -162,7 +158,10 @@ export default class Search extends Component {
                          onChange={this._onChange.bind(this)}
                          onKeyUp={this._onKeyUp.bind(this)}
                          id="input" />
-                  {resetButton}
+                  <div className={`${styles.removeIconWrap} ${(keyword)?styles.active:""}`}
+                       onClick={this._onReset.bind(this)}>
+                    <img className={styles.removeIcon} src={removeIconImg}/>
+                  </div>
               </div>
               <div className={styles.inputHint}>{hintText}</div>
           </div>

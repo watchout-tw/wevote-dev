@@ -140,14 +140,19 @@ $break: 500px;
   position: relative;
 }
 .removeIconWrap {
-  background: #C5C4C4;
-  cursor: pointer;
+  background: transparent;
+  pointer-events: none;
   height: 25px;
   width: 25px;
   position: absolute;
   top: 8px;
   right: 7px;
   border-radius: 50%;
+}
+.removeIconWrap.active {
+  background: #C5C4C4;
+  cursor: pointer;
+  pointer-events: auto;
 }
 .removeIcon {
   width: 14px;
