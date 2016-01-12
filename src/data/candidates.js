@@ -7262,56 +7262,56 @@ const candidates =
         "districtArea": "TPE",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持婚姻平權，但應優先處理貧富差距擴大的階級不平等與恐性忌色的社會氣氛，才是解決同志們生活瓶頸、消除歧視、取得各種人際認同的解方。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "民陣主張人民才是主人，當選人需簽署辭職同意書，只要違背所屬公民參政團的承諾，就須自動下台。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "贊成下修，促進直接民主，除此之外，也希望藉此促進更多公共討論發生、放寬投票資格給所有在台生活者，詳見 https://goo.gl/2VQ9h1"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "除程序公開外，課綱內涵以柔性為主，課程血肉由各校因地制宜，透過校內課程發展委員會，討論落實。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "民陣認同司法改革是重要議題，但由於尚未經過所有公民參政團成員討論，產生所有人皆認同的具體作法，故不表態。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "（共同討論決定）",
+                "content": "按照人民民主陣線的精神，一個立委應該「優先」處理什麼法案，是要到時候和所有願意一起參與決策的參政團成員，共同討論決定的。由於光是目前想執行的政策，就超過三項，在尚未根據屆時立院情勢，和大家一起判斷前，任何表態都是不符民陣精神的行為。"
+            },
+            {
+                "goal": "（共同討論決定）",
                 "content": ""
             },
             {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
+                "goal": "（共同討論決定）",
                 "content": ""
             }
         ]
@@ -10176,57 +10176,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "8",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "國會改革法規",
+                "content": "黨團協商前，各黨須說明立場為何，協商後，對改變部分說明，並全程錄影錄音。修改立法院內規，將程序委員會排案過程全程記錄公開。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "食安法規",
+                "content": "源頭管理產銷流程，大幅提升稽查人力。設立毒物專責機構。提高檢舉獎金，加重罰鍰並專款專用。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "住宅法規",
+                "content": "廣建只租不售之公共住宅，推動房屋租賃專法。加速老屋改建，推動公辦都更，保障住戶權益。"
             }
         ]
     },
@@ -16686,56 +16686,56 @@ const candidates =
         "districtArea": "KHH",
         "districtNo": "8",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持婚姻平權，但應優先處理貧富差距擴大的階級不平等與恐性忌色的社會氣氛，才是解決同志們生活瓶頸、消除歧視、取得各種人際認同的解方。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "民陣主張人民才是主人，當選人需簽署辭職同意書，只要違背所屬公民參政團的承諾，就須自動下台。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "贊成下修，促進直接民主，除此之外，也希望藉此促進更多公共討論發生、放寬投票資格給所有在台生活者，詳見 https://goo.gl/2VQ9h1"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "除程序公開外，課綱內涵以柔性為主，課程血肉由各校因地制宜，透過校內課程發展委員會，討論落實。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "民陣認同司法改革是重要議題，但由於尚未經過所有公民參政團成員討論，產生所有人皆認同的具體作法，故不表態。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "（共同討論決定）",
+                "content": "按照人民民主陣線的精神，一個立委應該「優先」處理什麼法案，是要到時候和所有願意一起參與決策的參政團成員，共同討論決定的。由於光是目前想執行的政策，就超過三項，在尚未根據屆時立院情勢，和大家一起判斷前，任何表態都是不符民陣精神的行為。"
+            },
+            {
+                "goal": "（共同討論決定）",
                 "content": ""
             },
             {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
+                "goal": "（共同討論決定）",
                 "content": ""
             }
         ]
