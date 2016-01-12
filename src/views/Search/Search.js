@@ -13,10 +13,49 @@ const {candidates} = getData();
 
 export default class Search extends Component {
   constructor(props){super(props)
+
+    //建立索引 index
+    let searchIndex = this._onCreateSearchIndex();
+
     this.state = {
       keyword: "",
-      keyup: false
+      keyup: false,
+      searchIndex: searchIndex
     }
+  }
+  _onCreateSearchIndex(){
+    let searchIndex = [];
+    const pattern=/([A-Z]+)([a-z]+)/;
+    Object.keys(candidates)
+          .map((peopleId, index)=>{
+                let people = candidates[peopleId];
+                let engIndex = people.name.search(pattern);
+                //有英文姓名，拆成兩半，英文的部分轉小寫
+                if(engIndex !== -1){
+                    let chtText = people.name.substring(0,engIndex);
+                    let engText = people.name.substring(engIndex);
+                    engText = engText.toLowerCase();
+
+                    searchIndex.push({
+                        id: peopleId,
+                        name: chtText
+                    })
+                    searchIndex.push({
+                        id: peopleId,
+                        name: engText
+                    })
+                    
+                }else{
+                    //只有中文，直接 input
+                    searchIndex.push({
+                        id: peopleId,
+                        name: people.name
+                    })
+                }
+          });
+    //console.log(searchIndex);
+    return searchIndex;
+
   }
   _onChange(e){
     //console.log(e.target.value)
@@ -38,26 +77,25 @@ export default class Search extends Component {
   }
   render(){
     const styles = require('./Search.scss');
-    const {keyword,keyup} = this.state;
+    let {keyword} = this.state;
+    const {keyup, searchIndex} = this.state;
     //console.log("keyup:"+keyup)
 
     let resultArray = [];
-    Object.keys(candidates)
-          .map((peopleId, index)=>{
-              let shouldReturn = false;
-              if(keyword){
-                let people = candidates[peopleId];
-                if(people.name.indexOf(keyword)!==-1){
-                  shouldReturn = true;
-                }
-              }
-              
+    searchIndex.map((value, index)=>{
+        let shouldReturn = false;
+        if(keyword){
+            keyword = keyword.toLowerCase();
+            if(value.name.indexOf(keyword)!==-1){
+                shouldReturn = true;
+            }
+        }
+        
+        if(shouldReturn){
+            resultArray.push(candidates[value.id]);
+        }
 
-              if(shouldReturn){
-                resultArray.push(candidates[peopleId]);
-              }
-
-          })
+    })
 
     let resultItems = resultArray.map((people, index)=>{
         return (
