@@ -35,7 +35,7 @@ export default class Issues extends Component {
                       <Missions showComingMission={false}
                                 shipmentsType={"2"}/>
                       <MaXiCastle />
-                      <Missions showComingMission={true}
+                      <Missions showComingMission={false}
                                 shipmentsType={"1"}/>
                   </div>
               </div>

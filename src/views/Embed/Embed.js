@@ -108,7 +108,7 @@ class EmbedIssues extends Component {
                             embed={true}
                             shipmentsType={"2"}/>
                   <MaXiCastle embed={true}/>
-                  <Missions showComingMission={true}
+                  <Missions showComingMission={false}
                             embed={true}
                             shipmentsType={"1"}/>
               </div>

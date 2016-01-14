@@ -5712,57 +5712,57 @@ const candidates =
         "districtArea": "TPE",
         "districtNo": "3",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "nay",
+                    "statement": "目前的社會尚未成熟可接受同性婚姻的極度變化，待兒童教育跟上後再進行較合適，現在的變化會出現極大的反感。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "下修可能沒有追加中立的「調查委員會」還來的更好。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "盡量使用綠色能源，真的要使用核能，請用符合國際標準的核五，也不要使用風吹雨打10幾年的核四（危險炸彈）。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "陳科引的「陪審團」制度就是為了這個而定的。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "保護海洋資源",
+                "content": "目前大海資源因嚴重的不重視，導致了不可逆性的破壞，海產污染、非法捕魚、挖空海底，甚至大量二氧化碳排放、海平面上升、海洋酸化，更進一步影響人民的生命安全。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "提高國際競爭",
+                "content": "1.推動政策使僑民回歸，強化台灣投資，提高國際競爭力。2.加入TPP及RCEP，增加台灣貿易舞台。3.鬆綁相關經濟法條，取代香港，讓台灣成為亞洲世界金融中心。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "優化民生方案",
+                "content": "1.開展綠色能源，強調食品安全、食品管制。2.在現行的銀髮族照顧基礎上，增加更多民間養老設施，強化老年保險。3.預防天災，維護基礎建設，維護百姓安全。4.鼓勵生育。"
             }
         ]
     },
@@ -7262,56 +7262,56 @@ const candidates =
         "districtArea": "TPE",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持婚姻平權，但應優先處理貧富差距擴大的階級不平等與恐性忌色的社會氣氛，才是解決同志們生活瓶頸、消除歧視、取得各種人際認同的解方。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "民陣主張人民才是主人，當選人需簽署辭職同意書，只要違背所屬公民參政團的承諾，就須自動下台。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "贊成下修，促進直接民主，除此之外，也希望藉此促進更多公共討論發生、放寬投票資格給所有在台生活者，詳見 https://goo.gl/2VQ9h1"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "除程序公開外，課綱內涵以柔性為主，課程血肉由各校因地制宜，透過校內課程發展委員會，討論落實。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "民陣認同司法改革是重要議題，但由於尚未經過所有公民參政團成員討論，產生所有人皆認同的具體作法，故不表態。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "（共同討論決定）",
+                "content": "按照人民民主陣線的精神，一個立委應該「優先」處理什麼法案，是要到時候和所有願意一起參與決策的參政團成員，共同討論決定的。由於光是目前想執行的政策，就超過三項，在尚未根據屆時立院情勢，和大家一起判斷前，任何表態都是不符民陣精神的行為。"
+            },
+            {
+                "goal": "（共同討論決定）",
                 "content": ""
             },
             {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
+                "goal": "（共同討論決定）",
                 "content": ""
             }
         ]
@@ -9742,56 +9742,56 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "6",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "速審法",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "加薪法案",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "公共工程監督",
                 "content": ""
             }
         ]
@@ -10052,57 +10052,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "7",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "這是屬於婚姻自由的人權範圍，應予尊重。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "這個問題，基本上跟公投門檻太高是一樣的，都是技術性架空人民透過罷免收回權利的政治參與權。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "現行公投的高門檻創設了一個空有公投制度，卻無法通過公投呈現真正多數民意，反變成少數綁架多數。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "日本福島因地震造成核輻射災難的慘痛經驗已說明一切，再者，核廢料最終處置的問題迄今無解，不能一錯再錯。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "公民審議的精神，應該落實在教育中，這是我支持課綱制定程序完全公開透明的最重要理由。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "公民參審已是世界趨勢，可補我們的法官缺乏專業能力與社會經驗，避免失之偏頗，可讓恐龍法官逐漸絕跡。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "青年創業扶助",
+                "content": "立新法：設置區域性或專業性青年創業園區，共同基地、共同辦公室、 共用秘書、創業貸款5年零利息，協助創意實現。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "老人長照",
+                "content": "立新法：以在地安養為精神，讓受照顧者在熟悉的環境安養餘年、讓照顧者有喘息空間，尊嚴、品質。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "所得稅法",
+                "content": "修正第 5 條（免稅額、課稅級距及稅率）綜合所得稅之免稅額，以每人全年 12 萬元為基準。"
             }
         ]
     },
@@ -10176,57 +10176,57 @@ const candidates =
         "districtArea": "NTC",
         "districtNo": "8",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "國會改革法規",
+                "content": "黨團協商前，各黨須說明立場為何，協商後，對改變部分說明，並全程錄影錄音。修改立法院內規，將程序委員會排案過程全程記錄公開。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "食安法規",
+                "content": "源頭管理產銷流程，大幅提升稽查人力。設立毒物專責機構。提高檢舉獎金，加重罰鍰並專款專用。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "住宅法規",
+                "content": "廣建只租不售之公共住宅，推動房屋租賃專法。加速老屋改建，推動公辦都更，保障住戶權益。"
             }
         ]
     },
@@ -13338,57 +13338,57 @@ const candidates =
         "districtArea": "TXG",
         "districtNo": "5",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "nay",
+                    "statement": "現行民法中的婚姻，仍以穩定親族關係與繁衍為基礎(如民983條)，同性關係應另立合適之伴侶法為宜。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "現行罷免門檻過高，造成不適任民選首長與民意代表有恃無恐。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "現在公投門檻太高了，幾乎不可能達到有效的公民創制複決。"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "核四已成為政治問題，有太多的決策反覆與資源浪費，須用政治方式處裡，對此難表意見。"
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "課綱制定程序與過程應完全公開，課綱制訂應採納家長團體意見，且應有不同課綱可供不同族群做選擇。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持陪審團制，人民參與判決，有效監督，避免恐龍法官造成荒謬之判決。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
-                "content": ""
+                "goal": "社會住宅比例",
+                "content": "以容積獎勵換取商用住宅區建構時依區域提撥總戶數一定比例，作為青年住宅或社會住宅，並且接受地方政府監督，避免變相租賃或買賣。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "轉向托育補助",
+                "content": "家長都希望更多時間陪孩子長大，且因少子化幼教托育產業衰退，政府補助應該要轉一個方向，補助家長可以有更多時間陪伴孩子。"
             },
             {
-                "goal": "",
-                "content": ""
+                "goal": "海外商務中心",
+                "content": "新創產業、中小企業，最需要的是通路跟市場上的幫助。擴充我國駐外辦事處功能，並與結合民間與第三部門的力量，建立海外商務中心。"
             }
         ]
     },
@@ -13628,7 +13628,7 @@ const candidates =
         "bills": [
             {
                 "goal": "照護生老病終",
-                "content": "保障婦女生育法，協助未婚嗎媽，單親媽媽，哺育新生命。防止台灣健保遭濫用，推動長照法並提供塔位使經濟弱勢者有所終。"
+                "content": "保障婦女生育法，協助未婚媽媽，單親媽媽，哺育新生命。防止台灣健保遭濫用，推動長照法並提供塔位使經濟弱勢者有所終。"
             },
             {
                 "goal": "修法跟上時代",
@@ -14516,56 +14516,56 @@ const candidates =
         "districtArea": "TNN",
         "districtNo": "4",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
+                    "position": "refuse",
                     "statement": ""
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "（未回覆）",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "（未回覆）",
                 "content": ""
             },
             {
-                "goal": "",
+                "goal": "（未回覆）",
                 "content": ""
             }
         ]
@@ -16686,56 +16686,56 @@ const candidates =
         "districtArea": "KHH",
         "districtNo": "8",
         "contactAvaliable": true,
-        "hasReply": false,
+        "hasReply": true,
         "positions": {
             "marriageEquality": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "支持婚姻平權，但應優先處理貧富差距擴大的階級不平等與恐性忌色的社會氣氛，才是解決同志們生活瓶頸、消除歧視、取得各種人際認同的解方。"
                 }
             },
             "recall": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "民陣主張人民才是主人，當選人需簽署辭職同意書，只要違背所屬公民參政團的承諾，就須自動下台。"
                 }
             },
             "referendum": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "贊成下修，促進直接民主，除此之外，也希望藉此促進更多公共討論發生、放寬投票資格給所有在台生活者，詳見 https://goo.gl/2VQ9h1"
                 }
             },
             "nuclearPower": {
                 "promise": {
-                    "position": "none",
+                    "position": "aye",
                     "statement": ""
                 }
             },
             "courseGuide": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "aye",
+                    "statement": "除程序公開外，課綱內涵以柔性為主，課程血肉由各校因地制宜，透過校內課程發展委員會，討論落實。"
                 }
             },
             "justiceReform": {
                 "promise": {
-                    "position": "none",
-                    "statement": ""
+                    "position": "refuse",
+                    "statement": "民陣認同司法改革是重要議題，但由於尚未經過所有公民參政團成員討論，產生所有人皆認同的具體作法，故不表態。"
                 }
             }
         },
         "bills": [
             {
-                "goal": "",
+                "goal": "（共同討論決定）",
+                "content": "按照人民民主陣線的精神，一個立委應該「優先」處理什麼法案，是要到時候和所有願意一起參與決策的參政團成員，共同討論決定的。由於光是目前想執行的政策，就超過三項，在尚未根據屆時立院情勢，和大家一起判斷前，任何表態都是不符民陣精神的行為。"
+            },
+            {
+                "goal": "（共同討論決定）",
                 "content": ""
             },
             {
-                "goal": "",
-                "content": ""
-            },
-            {
-                "goal": "",
+                "goal": "（共同討論決定）",
                 "content": ""
             }
         ]

@@ -14,6 +14,7 @@
     line-height: 1.3;
     font-size: 30px;
     padding: 0 20px;
+    white-space:pre;
 }
 .author {
 	font-size: 15px;
@@ -27,6 +28,9 @@
 .Story h3 {
 	color: rgb(192, 80, 77);
 	text-align: left;
+	line-height: 1.6;
+    font-size: 22px;
+    padding: 10px;
 }
 .Story p.subtitle {
 	padding: 0 0 0 8px;
