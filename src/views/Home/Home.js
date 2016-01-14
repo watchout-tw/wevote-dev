@@ -24,7 +24,7 @@ export default class Home extends Component {
       var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
       var secondDate = new Date(2016,0,16);
       var firstDate = new Date();
-      return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+      return Math.ceil(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
     })();
     if(diffDays > 42) diffDays = 42;
     else if(diffDays < 0) diffDays = 0;
