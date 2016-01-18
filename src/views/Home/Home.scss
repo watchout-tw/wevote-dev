@@ -20,84 +20,142 @@ $break: 960px;
   width: 100%;
   margin: 0 auto;
 }
-.stonehenge {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+/* ------------- */
+.flexWrap {
+  display: flex;
 }
-.sky {
-  width: 100%;
-  padding: 300px 0 80px;
-  background-image: url(./images/sky.png);
-  background-size: cover;
-  background-position: center center;
-  text-align: center;
-
-  .stargate {
-    position: relative;
-    display: inline-block;
-    transition: transform 0.5s ease;
-    padding-top: 100px;
-    @include transform(scale(1.1));
-
-    &, &:active, &:visited {
-      text-decoration: none;
-      color: $black;
-    }
-    &.locked > .destination {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-    }
-    .destination {
-      display: block;
-      width: 320px;
-    }
-    .glow {
-      position: absolute;
-      top: 100px;
-      left: 0;
-      width: 320px;
-    }
-    .label_issues, .label_parties, .label_constituencies {
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      @include transform(translateX(-50%));
-      width: 125px;
-      height: 200px;
-      background-image: url('./images/labels.svg');
-      background-size: cover;
-      background-position: 0 0;
-    }
-    .label_parties {
-      background-position: -130px 0;
-      width: 175px;
-    }
-    .label_constituencies {
-      background-position: -300px 0;
-      width: 175px;
-    }
-  }
+.flexEven {
+  flex: 1;
 }
-.countdown {
-  display: block;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  max-width: 100%;
-  padding: 0 10px;
+.detailBlock {
+  
+}
+.detailBlock.active {
+  display: inline-block;
+}
+.peopleItem {
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 80px;
+  height: 40px;
+  vertical-align: top;
+}
+.peopleName {
+  height: 20px;
+  overflow: hidden;
 }
 
-@media all and (min-width: $break) {
-  .countdown {
-    top: 120px;
-  }
-  .stargate:hover {
-    transform: scale(1.35);
-    -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
-    filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
-  }
+.KMT {
+    //background-color: #000095;
+    background-color: rgba(148, 170, 217, 0.93);
 }
+.DPP {
+    //background-color: #009A00;
+    background-color: #60C960;
+}
+.PFP {
+    background-color: #FE6407;
+}
+.TSU {
+    background-color: #A25B09;
+}
+.NP, .NONE {
+    background-color: gray;
+}
+.NSU {
+    background-color: rgba(194,15,81,0.9);
+}
+.NPP {
+    background-color: #FFD300;
+}
+.MKT {
+    background-color: #FFD300;
+}
+
+.source {
+  font-size: 12px;
+  
+}
+
+
+// .stonehenge {
+//   width: 100%;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+// }
+// .sky {
+//   width: 100%;
+//   padding: 300px 0 80px;
+//   background-image: url(./images/sky.png);
+//   background-size: cover;
+//   background-position: center center;
+//   text-align: center;
+
+//   .stargate {
+//     position: relative;
+//     display: inline-block;
+//     transition: transform 0.5s ease;
+//     padding-top: 100px;
+//     @include transform(scale(1.1));
+
+//     &, &:active, &:visited {
+//       text-decoration: none;
+//       color: $black;
+//     }
+//     &.locked > .destination {
+//       -webkit-filter: grayscale(100%);
+//       filter: grayscale(100%);
+//     }
+//     .destination {
+//       display: block;
+//       width: 320px;
+//     }
+//     .glow {
+//       position: absolute;
+//       top: 100px;
+//       left: 0;
+//       width: 320px;
+//     }
+//     .label_issues, .label_parties, .label_constituencies {
+//       position: absolute;
+//       top: -25px;
+//       left: 50%;
+//       @include transform(translateX(-50%));
+//       width: 125px;
+//       height: 200px;
+//       background-image: url('./images/labels.svg');
+//       background-size: cover;
+//       background-position: 0 0;
+//     }
+//     .label_parties {
+//       background-position: -130px 0;
+//       width: 175px;
+//     }
+//     .label_constituencies {
+//       background-position: -300px 0;
+//       width: 175px;
+//     }
+//   }
+// }
+// .countdown {
+//   display: block;
+//   position: absolute;
+//   top: 100px;
+//   left: 50%;
+//   transform: translateX(-50%);
+
+//   max-width: 100%;
+//   padding: 0 10px;
+// }
+
+// @media all and (min-width: $break) {
+//   .countdown {
+//     top: 120px;
+//   }
+//   .stargate:hover {
+//     transform: scale(1.35);
+//     -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+//     filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+//   }
+// }

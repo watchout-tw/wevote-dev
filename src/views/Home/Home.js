@@ -1,11 +1,17 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
+import getFinalCompare from '../../utils/getFinalCompare';
+import eng2cht from '../../utils/eng2cht';
 
 export default class Home extends Component {
-  render() {
-    const styles = require('./Home.scss');
+  constructor(props){super(props)
+    this.state = {
+      data : getFinalCompare()
+    }
 
+  }
+  render() {
     const title = "沃草！立委出任務 - 2016立委投票攻略";
     const description = "2016立委選舉票該投給誰？「立委出任務」透過類遊戲互動方式，提供選民快速了解現任立委與下任候選人立場，並分析政黨對於議題表態和優先法案的未來承諾。想了解你的選區立委嗎？想知道政黨票怎麼投嗎？請上「立委出任務」！";
     const metaData = {
@@ -19,63 +25,132 @@ export default class Home extends Component {
       }
     };
 
-    // http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
-    // var diffDays=(function(){
-    //   var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-    //   var secondDate = new Date(2016,0,16);
-    //   var firstDate = new Date();
-    //   return Math.ceil(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
-    // })();
-    // if(diffDays > 42) diffDays = 42;
-    // else if(diffDays < 0) diffDays = 0;
-    //let countdown = require(`./images/countdown/countdown_${diffDays}.svg`);
-    let countdown = require(`./images/countdown/countdown_after.svg`);
+    //
+    const styles = require('./Home.scss');
+    const {data} = this.state;
 
-    let stonehenge = require('./images/stonehenge.png');
-    let stargate = require('./images/stargate.png');
+    //console.log(JSON.stringify(data));
+    //console.log(data);
 
-    let mountain = require('./images/mountain.png');
-    let field = require('./images/field.png');
-    let coliseum = require('./images/coliseum.png');
-
-    let labels = require('./images/labels.svg');
-
+    let issueBlocks = Object.keys(data).map((issueName,i)=>{
+        return <Issue issue={data[issueName]} issueName={issueName}/>
+    })
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
 
           <div className={styles.innerWrap}>
-
-              <div className={styles.invisible}>
-                <Link to={`/404`}>404</Link>
-                <Link to={`/8th-legislators`}>8th-legislators</Link>
-                <Link to ={`/9th-candidates`}>/9th-candidates</Link>
-                <Link to={`/embed`}>embed</Link>
-              </div>
-
-              <img src={countdown} className={styles.countdown}/>
-
-              <img src={stonehenge} className={styles.stonehenge}/>
-              <div className={styles.sky}>
-                <Link className={styles.stargate} to={`/issues/`}>
-                  <img src={mountain} className={styles.destination}/>
-                  <img src={stargate} className={styles.glow}/>
-                  <div className={styles.label_issues}></div>
-                </Link>
-                <Link className={styles.stargate} to={`/parties/`}>
-                  <img src={field} className={styles.destination}/>
-                  <img src={stargate} className={styles.glow}/>
-                  <div className={styles.label_parties}></div>
-                </Link>
-                <Link className={styles.stargate} to={`/constituencies/`}>
-                  <img src={coliseum} className={styles.destination}/>
-                  <img src={stargate} className={styles.glow}/>
-                  <div className={styles.label_constituencies}></div>
-                </Link>
-              </div>
-
+              {issueBlocks}
+          </div>
+          <div className={styles.invisible}>
+              <Link to={`/404`}>404</Link>
+              <Link to={`/8th-legislators`}>8th-legislators</Link>
+              <Link to ={`/9th-candidates`}>/9th-candidates</Link>
+              <Link to={`/embed`}>embed</Link>
           </div>
       </div>
     );
   }
 }
+class Issue extends Component {
+  
+  render() {
+    const styles = require('./Home.scss');
+    const {issue, issueName} = this.props;
+
+    let positionBlocks = ["aye","nay","unknown","evading","refuse","none"].map((pos,i)=>{
+        let position8th = <Position pos={issue["8th"][pos] || []} posName={pos} />;
+        let position9th = <Position pos={issue["9th"][pos] || []} posName={pos} />;
+
+        return (
+          <div>
+            <h3>{pos2cht(pos)}</h3>
+            <div className={styles.flexWrap}>
+              <div className={styles.flexEven}>{position8th}</div>
+              <div className={styles.flexEven}>{position9th}</div>
+            </div>
+          </div>
+
+        )
+    })
+    
+
+    // let position8th = Object.keys(issue["8th"]).map((pos, i)=>{
+    //     return <Position pos={issue["8th"][pos]} posName={pos} />
+    // })
+
+    // let position9th = Object.keys(issue["9th"]).map((pos, i)=>{
+    //     return <Position pos={issue["9th"][pos]} posName={pos} />
+    // })
+
+    return (
+      <div>
+          <h2>{eng2cht(issueName)}</h2>
+          {positionBlocks}
+      </div>
+    );
+  }
+}
+class Position extends Component {
+  
+  render() {
+    const styles = require('./Home.scss');
+    const {pos, posName} = this.props;
+    let details = pos.map((r,i)=>{
+        return (
+            <div className={`${styles.peopleItem} ${styles[r.party]}`}>
+                <div className={styles.peopleName}>{r.name}</div>
+                <div className={styles.source}>{r.source}</div>
+            </div>
+        )
+    })
+    return (
+      <div>
+        <div>{pos.length}</div>
+        <div className={`${styles.detailBlock}`}>
+            {details}
+        </div>
+      </div>
+    );
+  }
+}
+function pos2cht(value){
+  switch(value){
+    case 'aye':
+      return '贊成'
+      break;
+    case 'unknown':
+      return '模糊'
+      break;
+    case 'nay':
+      return '反對'
+      break;
+    case 'evading':
+      return '應表態未表態'
+      break;
+    case 'none':
+      return '未表態'
+      break;
+    case 'refuse':
+      return '不表態'
+      break;
+
+  }
+}
+/*
+    marriageEquality : {
+        "8th" : {
+            "aye" : [{ name:, party:DPP },]
+            "unknown" : []
+            "nay" : []
+            "none" : []
+        },
+        "9th" : {
+            "aye" : [{ name:, party:DPP },]
+            "unknown" : []
+            "nay" : []
+            "none" : []
+        }
+    }
+
+*/
