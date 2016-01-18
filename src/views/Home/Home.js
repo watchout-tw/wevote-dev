@@ -20,15 +20,16 @@ export default class Home extends Component {
     };
 
     // http://stackoverflow.com/questions/16484884/how-do-i-get-the-how-many-days-until-my-next-birthday
-    var diffDays=(function(){
-      var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-      var secondDate = new Date(2016,0,16);
-      var firstDate = new Date();
-      return Math.ceil(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
-    })();
-    if(diffDays > 42) diffDays = 42;
-    else if(diffDays < 0) diffDays = 0;
-    let countdown = require(`./images/countdown/countdown_${diffDays}.svg`);
+    // var diffDays=(function(){
+    //   var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+    //   var secondDate = new Date(2016,0,16);
+    //   var firstDate = new Date();
+    //   return Math.ceil(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+    // })();
+    // if(diffDays > 42) diffDays = 42;
+    // else if(diffDays < 0) diffDays = 0;
+    //let countdown = require(`./images/countdown/countdown_${diffDays}.svg`);
+    let countdown = require(`./images/countdown/countdown_after.svg`);
 
     let stonehenge = require('./images/stonehenge.png');
     let stargate = require('./images/stargate.png');
