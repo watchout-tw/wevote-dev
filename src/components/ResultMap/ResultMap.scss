@@ -1,0 +1,24 @@
+@import '../../common.scss';
+
+$webVersionBreak: 800px;
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+@media all and (min-width: $webVersionBreak){
+    .wrap {
+      width: 48%;
+      display: inline-block;
+    }
+}
+
+/* 每個選區應該要填什麼顏色 */
+.district.aye {
+  fill: #00FFB0;
+}
+.district.nay {
+  fill: #FF0055;
+}
+.district.none {
+  fill: gray;
+}

@@ -1,13 +1,16 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
-import getFinalCompare from '../../utils/getFinalCompare';
+
+import getFinalMap from '../../utils/getFinalMap';
 import eng2cht from '../../utils/eng2cht';
+
+import ResultMap from '../../components/ResultMap/ResultMap';
 
 export default class Home extends Component {
   constructor(props){super(props)
     this.state = {
-      data : getFinalCompare()
+      data : getFinalMap()
     }
 
   }
@@ -57,99 +60,30 @@ class Issue extends Component {
   render() {
     const styles = require('./Home.scss');
     const {issue, issueName} = this.props;
-
-    let positionBlocks = ["aye","nay","unknown","evading","refuse","none"].map((pos,i)=>{
-        let position8th = <Position pos={issue["8th"][pos] || []} posName={pos} />;
-        let position9th = <Position pos={issue["9th"][pos] || []} posName={pos} />;
-
-        return (
-          <div>
-            <h3>{pos2cht(pos)}</h3>
-            <div className={styles.flexWrap}>
-              <div className={styles.flexEven}>{position8th}</div>
-              <div className={styles.flexEven}>{position9th}</div>
-            </div>
-          </div>
-
-        )
-    })
-    
-
-    // let position8th = Object.keys(issue["8th"]).map((pos, i)=>{
-    //     return <Position pos={issue["8th"][pos]} posName={pos} />
-    // })
-
-    // let position9th = Object.keys(issue["9th"]).map((pos, i)=>{
-    //     return <Position pos={issue["9th"][pos]} posName={pos} />
-    // })
-
     return (
       <div>
           <h2>{eng2cht(issueName)}</h2>
-          {positionBlocks}
+          <ResultMap title="8th" data={issue["8th"]} />
+          <ResultMap title="9th" data={issue["9th"]} />
       </div>
     );
-  }
-}
-class Position extends Component {
-  
-  render() {
-    const styles = require('./Home.scss');
-    const {pos, posName} = this.props;
-    let details = pos.map((r,i)=>{
-        return (
-            <div className={`${styles.peopleItem} ${styles[r.party]}`}>
-                <div className={styles.peopleName}>{r.name}</div>
-                <div className={styles.source}>{r.source}</div>
-            </div>
-        )
-    })
-    return (
-      <div>
-        <div>{pos.length}</div>
-        <div className={`${styles.detailBlock}`}>
-            {details}
-        </div>
-      </div>
-    );
-  }
-}
-function pos2cht(value){
-  switch(value){
-    case 'aye':
-      return '贊成'
-      break;
-    case 'unknown':
-      return '模糊'
-      break;
-    case 'nay':
-      return '反對'
-      break;
-    case 'evading':
-      return '應表態未表態'
-      break;
-    case 'none':
-      return '未表態'
-      break;
-    case 'refuse':
-      return '不表態'
-      break;
-
   }
 }
 /*
     marriageEquality : {
         "8th" : {
-            "aye" : [{ name:, party:DPP },]
-            "unknown" : []
-            "nay" : []
-            "none" : []
+            "TPE" : {
+                "1" : {
+                    "legislator" : "丁守中",
+                    "positioin" : "aye"
+                },
+                "2" : {
+    
+                }
+            }
         },
         "9th" : {
-            "aye" : [{ name:, party:DPP },]
-            "unknown" : []
-            "nay" : []
-            "none" : []
+            
         }
     }
 
