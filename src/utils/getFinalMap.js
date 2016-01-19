@@ -50,12 +50,7 @@ export default function getFinalCompare(){
         Object.keys(LegislatorPosition).map((legislatorName, k)=>{
             let legislator = LegislatorPosition[legislatorName];
             let id = people_name2id(legislatorName);
-            let parties = legislators[id].parties;
-            let party = cht2eng(parties[parties.length - 1].partyCht)
-            let peopleItem = {
-                name : legislator.name,
-                party : party
-            }
+            
             //立場
             let position = legislator.positions[issueName].dominantPosition;
          
@@ -105,12 +100,12 @@ export default function getFinalCompare(){
                 if(areaNo === "N/A"){//立委只有單一選區的縣市
                     areaNo = "1";
                 }
-                //鄭天財,廖國棟,陳瑩
-                //高金素梅,簡東明,孔文吉
-                if(candidate.name === "廖國棟" || candidate.name === "簡東明"){
+                //廖國棟,鄭天財,陳瑩
+                //孔文吉,高金素梅,簡東明
+                if(candidate.name === "鄭天財Sra·Kacaw" || candidate.name === "高金素梅"){
                     areaNo = "2";
                 }
-                if(candidate.name === "陳瑩" || candidate.name === "孔文吉"){
+                if(candidate.name === "陳瑩" || candidate.name === "簡東明"){
                     areaNo = "3";
                 }
                

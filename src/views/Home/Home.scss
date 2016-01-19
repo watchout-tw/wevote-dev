@@ -21,60 +21,63 @@ $break: 960px;
   margin: 0 auto;
 }
 /* ------------- */
-.flexWrap {
-  display: flex;
+.fixedTop {
+  position: fixed;
+  top: 0;
+  background: rgba(250,250,250,0.9);
+  width: 100%;
+  padding-bottom: 10px; 
+  z-index: 999;
+  box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.12);
 }
-.flexEven {
-  flex: 1;
-}
-.detailBlock {
-  
-}
-.detailBlock.active {
-  display: inline-block;
+.districtTitle {
+  font-size: 18px;
+  font-weight: 800;
+  vertical-align: top;
+  margin-top: 10px;
+  border: 1px solid;
+  width: 180px;
+  color: white;
+  padding: 4px 0;
+  background: black;
+  margin: 10px auto;
 }
 .peopleItem {
   display: inline-block;
-  border: 1px solid #ccc;
-  width: 80px;
-  height: 40px;
-  vertical-align: top;
+  margin: 0 20px;
+  font-size: 14px;
 }
-.peopleName {
-  height: 20px;
-  overflow: hidden;
-}
-
-.KMT {
-    //background-color: #000095;
-    background-color: rgba(148, 170, 217, 0.93);
-}
-.DPP {
-    //background-color: #009A00;
-    background-color: #60C960;
-}
-.PFP {
-    background-color: #FE6407;
-}
-.TSU {
-    background-color: #A25B09;
-}
-.NP, .NONE {
-    background-color: gray;
-}
-.NSU {
-    background-color: rgba(194,15,81,0.9);
-}
-.NPP {
-    background-color: #FFD300;
-}
-.MKT {
-    background-color: #FFD300;
+.peopleAvatar {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 4px auto;
+    border: 4px solid lightgray;
+    border-radius: 50%;
 }
 
-.source {
-  font-size: 12px;
-  
+.peopleAvatar.KMT {
+    border-color: #000095;  
+}
+.peopleAvatar.DPP {
+    border-color: #009A00;  
+}
+.peopleAvatar.PFP {
+    border-color: #FE6407;
+}
+.peopleAvatar.TSU {
+    border-color: #A25B09;
+}
+.peopleAvatar.NP, .peopleAvatar.NONE {
+    border-color: gray;
+}
+.peopleAvatar.NSU {
+    border-color: rgba(194,15,81,0.9);
+}
+.peopleAvatar.NPP {
+    border-color: #FFD300;
+}
+.peopleAvatar.MKT {
+    border-color: #FFD300;
 }
 
 

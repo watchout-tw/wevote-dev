@@ -18,20 +18,28 @@ export default class ResultMap extends Component {
     const {data} = this.props;
     const styles = require('./ResultMap.scss');
     
-    console.log(area + ", " + areaNo)
-
     if(data[area][areaNo]){
-      let pos = getPosClass(data[area][areaNo].position);
-      return styles[pos];
+        let pos = getPosClass(data[area][areaNo].position);
+        return `${styles[pos]} ${this._getDistrictActiveStyle(area, areaNo)}`;
 
     }else{//第八屆平地原住民第三位，林正二解職
-      return "black";
+        return `black ${this._getDistrictActiveStyle(area, areaNo)}`;
     }
     
   }
   
-  _hoverClass(city){
-    return ""
+  _setActive(area, areaNo){
+    const {setActive} = this.props;
+    setActive(area,areaNo);
+  }
+  _getDistrictActiveStyle(area, areaNo){
+    const styles = require('./ResultMap.scss');
+    const {activeArea, activeAreaNo} = this.props;
+    if(activeArea === area && activeAreaNo === areaNo){
+        return styles.active;
+    }else{
+        return ""
+    }
   }
  
   render() {
@@ -47,51 +55,63 @@ export default class ResultMap extends Component {
 <rect fill="#97FFF5" width="1400" height="1400"/>
 <g id="districts">
   <path id="district-PIF-3" className={`${styles.district} ${this._getDistrictPosition('PIF','3')}`} 
+        onMouseEnter={this._setActive.bind(this, 'PIF','3')}
         stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M251.67,966.755
     l22.956-23.971l53.072,51.957l21.485-21.739l35.971,35.722l-8.334,8.178v34.989l-32.508,32.762v50.539l18.836,18.878l-26.963,26.92
     v23.28l-32.508,33.523h-11.174l-11.174,10.667v27.936h-8.127v-23.365l-22.194-22.194l-6.603,6.603l-7.774-7.774l16.762-16.762
     l-9.905-9.651l35.809-36.063v-70.602l6.095-6.603v-56.38l-33.523-33.523L251.67,966.755z M198.028,1013.288h14.899v-4.417
     l-6.765-6.765l-4.664,4.664v3.132h-3.471L198.028,1013.288L198.028,1013.288z"/>
   <polygon id="district-PIF-2" className={`${styles.district} ${this._getDistrictPosition('PIF','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'PIF','2')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     274.415,942.573 321.116,896.464 340.249,896.464 340.249,925.924 317.392,949.289 296.567,949.289 288.994,956.861   "/>
   <polygon id="district-PIF-1" className={`${styles.district} ${this._getDistrictPosition('PIF','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'PIF','1')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     321.116,896.464 313.854,889.37 353.709,849.734 365.645,861.925 417.454,861.925 417.454,878.179 444.883,878.179 
     469.517,902.559 494.66,902.559 494.66,934.051 458.258,969.606 424.565,969.606 385.301,1008.871 349.308,972.878 
     327.571,994.614 288.994,956.861 296.567,949.289 316.884,949.289 340.249,925.924 340.249,896.464   "/>
   <polygon id="district-KHH-9" className={`${styles.district} ${this._getDistrictPosition('KHH','9')}`} 
+           onMouseEnter={this._setActive.bind(this, 'KHH','9')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     230.282,928.21 237.139,935.067 243.742,935.067 234.599,925.839 234.599,900.528 240.694,900.528 240.694,916.781 
     265.075,916.781 265.075,936.083 257.964,943.194 239.001,943.194 227.403,931.596   "/>
   <polygon id="district-KHH-8" className={`${styles.district} ${this._getDistrictPosition('KHH','8')}`} 
+           onMouseEnter={this._setActive.bind(this, 'KHH','8')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     267.771,888.116 240.121,916.781 265.075,916.781 265.075,910.686 273.202,910.686 273.202,893.417   "/>
   <polygon id="district-KHH-7" className={`${styles.district} ${this._getDistrictPosition('KHH','7')}`} 
+           onMouseEnter={this._setActive.bind(this, 'KHH','7')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     255.474,900.414 240.632,884.754 234.599,890.588 234.599,900.528 240.694,900.528 240.694,916.781   "/>
   <polygon id="district-KHH-6" className={`${styles.district} ${this._getDistrictPosition('KHH','6')}`} 
+           onMouseEnter={this._setActive.bind(this, 'KHH','6')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     263.043,874.792 246.715,891.121 255.741,900.147 267.772,888.116 263.105,883.45  "/>
   <path id="district-KHH-5" className={`${styles.district} ${this._getDistrictPosition('KHH','5')}`} 
+        onMouseEnter={this._setActive.bind(this, 'KHH','5')}
         stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M246.856,890.979
     l-6.282-6.282l-4.3,4.3l-5.739-5.739v-13.1l8.163-8.105l18.598,18.709L246.856,890.979z M229.35,925.585v-37.248h-2.878v37.248
     H229.35z"/>
   <polygon id="district-KHH-4" className={`${styles.district} ${this._getDistrictPosition('KHH','4')}`} 
+           onMouseEnter={this._setActive.bind(this, 'KHH','4')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     251.869,967.574 240.694,967.574 240.694,943.194 257.964,943.194 265.075,936.337 265.075,910.686 273.202,910.686 
     273.202,893.417 263.043,883.512 263.043,871.068 270.662,863.956 280.313,863.956 286.662,870.052 292.503,863.956 
     299.614,863.956 299.614,871.068 287.424,883.766 287.424,903.575 300.591,916.742   "/>
-  <polygon id="district-KHH-3" className={`${styles.district} ${this._getDistrictPosition('KHH','3')}`} 
+  <polygon id="district-KHH-3" className={`${styles.district} ${this._getDistrictPosition('KHH','3')}`}
+           onMouseEnter={this._setActive.bind(this, 'KHH','3')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     242.163,865.538 250.853,856.337 250.853,843.639 264.059,843.639 277.265,856.507 277.265,863.956 270.352,863.956 
     263.043,871.068 263.043,875.131 257.354,880.82  "/>
-  <polygon id="district-KHH-2" className={`${styles.district} ${this._getDistrictPosition('KHH','2')}`} 
+  <polygon id="district-KHH-2" className={`${styles.district} ${this._getDistrictPosition('KHH','2')}`}
+           onMouseEnter={this._setActive.bind(this, 'KHH','2')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     263.043,745.101 263.043,771.513 252.885,781.035 252.885,843.639 264.059,843.639 276.106,855.594 281.329,855.491 
     281.329,829.417 294.535,829.417 307.029,816.924 292.068,801.963 298.664,795.452 298.598,788.952 283.36,773.545 283.36,765.418 
       "/>
   <polygon id="district-KHH-1" className={`${styles.district} ${this._getDistrictPosition('KHH','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'KHH','1')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     298.598,788.783 306.725,788.783 319.932,801.989 331.106,790.814 343.296,802.624 370.979,774.561 457.073,774.561 
     515.231,715.641 583.04,715.641 595.484,703.45 652.119,703.45 685.445,736.875 639.732,782.688 587.103,782.688 494.66,875.216 
@@ -100,30 +120,36 @@ export default class ResultMap extends Component {
     286.662,870.052 280.44,863.956 277.265,863.956 277.265,855.567 281.329,855.491 281.329,829.417 294.535,829.417 
     307.029,816.924 292.068,801.963 298.622,795.409   "/>
   <polygon id="district-TNN-5" className={`${styles.district} ${this._getDistrictPosition('TNN','5')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TNN','5')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     271.17,753.227 283.36,765.418 283.36,773.545 298.598,788.783 307.029,788.783 319.932,801.837 331.296,790.624 343.228,802.556 
     366.093,779.691 323.304,736.336 334.569,725.482 316.594,708.244 299.614,724.549 299.614,748.148 271.17,748.148  "/>
   <polygon id="district-TNN-4" className={`${styles.district} ${this._getDistrictPosition('TNN','4')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TNN','4')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     271.17,753.227 263.043,745.101 263.043,717.672 281.329,717.672 281.329,735.958 288.44,735.958 294.027,729.863 299.614,729.863 
     299.614,748.148 271.17,748.148  "/>
   <polygon id="district-TNN-3" className={`${styles.district} ${this._getDistrictPosition('TNN','3')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TNN','3')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     263.043,717.672 263.043,692.276 256.465,685.698 269.719,672.214 295.091,697.355 305.765,697.355 316.54,708.298 
     299.614,724.886 299.614,729.863 294.535,729.863 288.44,735.958 281.329,735.958 281.329,717.672  "/>
   <polygon id="district-TNN-2" className={`${styles.district} ${this._getDistrictPosition('TNN','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TNN','2')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     255.364,686.435 246.789,676.911 246.789,665.863 260.123,652.657 268.123,652.657 288.36,632.295 300.72,644.53 312.82,644.53 
     320.439,652.318 343.294,652.316 365.531,674.383 359.435,680.244 384.907,705.482 454.025,705.482 454.025,721.736 
     475.358,721.736 492.379,738.881 456.823,774.561 371.741,774.561 366.352,779.95 323.021,736.619 334.364,725.446 
     306.104,697.355 294.535,697.355 269.556,672.376   "/>
   <polygon id="district-TNN-1" className={`${styles.district} ${this._getDistrictPosition('TNN','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TNN','1')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     288.472,632.407 334.769,585.61 338.217,585.61 338.217,604.912 352.947,620.149 383.931,620.149 397.891,605.927 422.534,605.927 
     436.078,620.149 457.073,620.149 476.967,640.128 470.279,646.731 470.279,661.8 480.438,671.07 480.438,679.07 469.263,679.07 
     454.025,693.461 454.025,705.482 384.907,705.482 359.435,680.244 365.413,674.479 343.379,652.657 320.947,652.657 312.82,644.53 
     300.63,644.53   "/>
   <polygon id="district-CYI-2" className={`${styles.district} ${this._getDistrictPosition('CYI','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'CYI','2')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     476.967,640.128 476.882,614.054 498.723,614.054 498.723,598.816 488.565,589.167 488.565,583.832 471.558,583.842 
     456.057,569.356 441.835,569.356 441.835,538.88 496.692,538.88 496.692,544.976 525.136,544.976 525.136,564.277 589.643,628.784 
@@ -131,12 +157,14 @@ export default class ResultMap extends Component {
     583.04,715.641 515.231,715.641 492.379,738.881 475.296,721.736 454.025,721.736 454.025,693.461 469.263,679.07 480.438,679.07 
     480.438,671.07 470.279,661.8 470.279,646.731  "/>
   <polygon id="district-CYI-1" className={`${styles.district} ${this._getDistrictPosition('CYI','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'CYI','1')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     441.835,538.88 402.216,538.88 385.886,522.627 374.788,522.627 374.788,531.769 381.561,538.611 362.313,557.897 362.344,574.182 
     345.941,574.287 334.63,585.61 338.217,585.61 338.217,604.912 352.947,620.149 383.931,620.149 398.022,605.927 422.534,605.927 
     436.417,620.149 457.073,620.149 476.374,640.086 476.374,614.054 466.216,614.054 466.216,599.832 456.057,599.832 
     456.057,588.658 466.275,578.91 456.389,569.356 441.835,569.356  "/>
   <polygon id="district-YLN-2" className={`${styles.district} ${this._getDistrictPosition('YLN','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'YLN','2')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     501.119,441.764 513.284,453.929 535.929,453.929 545.03,463.029 545.03,469.209 583.04,507.219 596.077,507.219 610.468,521.611 
     610.468,544.976 603.357,544.976 571.865,575.826 571.865,586.626 586.952,601.864 599.294,601.864 607.929,610.499 
@@ -144,11 +172,13 @@ export default class ResultMap extends Component {
     553.58,511.114 546.469,504.341 535.125,504.341 515.993,486.056 500.374,486.056 489.581,475.897 478.406,475.897 
     478.406,464.553   "/>
   <polygon id="district-YLN-1" className={`${styles.district} ${this._getDistrictPosition('YLN','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'YLN','1')}
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     389.01,525.736 389.01,507.389 454.025,441.527 454.025,437.294 445.898,437.294 445.898,432.215 455.38,423.072 487.549,423.072 
     503.718,439.157 478.406,464.553 478.406,475.897 489.581,475.897 500.374,486.056 515.993,486.056 535.125,504.341 
     546.469,504.341 553.58,511.114 553.58,520.595 495.676,520.595 478.237,538.88 402.216,538.88   "/>
   <polygon id="district-NAN-2" className={`${styles.district} ${this._getDistrictPosition('NAN','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NAN','2')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     611.484,606.943 631.801,627.261 614.532,644.53 614.532,678.054 631.801,695.323 652.119,695.323 652.119,703.45 685.445,736.875 
     718.005,704.322 730.34,716.656 824.274,622.722 791.259,589.675 774.514,606.435 733.388,565.293 705.959,565.293 
@@ -156,6 +186,7 @@ export default class ResultMap extends Component {
     620.627,493.167 620.627,511.803 630.785,511.791 630.785,524.658 610.468,524.658 610.468,544.976 603.357,544.976 
     571.865,575.826 571.865,586.626 586.952,601.864 599.294,601.864 607.929,610.499   "/>
   <polygon id="district-NAN-1" className={`${styles.district} ${this._getDistrictPosition('NAN','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NAN','1')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     653.473,460.32 653.473,452.786 660.796,445.464 660.796,440.088 671.166,440.088 696.774,465.696 714.848,465.696 728.44,452.104 
     737.959,452.104 750.149,439.913 762.787,452.532 785.196,452.532 802.318,469.654 812.9,459.072 881.449,459.072 899.767,477.389 
@@ -163,12 +194,14 @@ export default class ResultMap extends Component {
     705.959,565.301 705.959,547.007 699.187,540.235 710.364,529.058 710.364,518.744 690.305,538.803 655.505,504.003 
     676.33,483.177  "/>
   <polygon id="district-CHW-4" className={`${styles.district} ${this._getDistrictPosition('CHW','4')}`} 
+           onMouseEnter={this._setActive.bind(this, 'CHW','4')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     608.436,417.739 625.452,417.739 645.261,437.548 645.261,452.786 653.473,452.786 653.473,460.32 620.627,493.167 
     620.627,511.803 630.785,511.803 630.785,524.658 610.468,524.658 610.468,521.611 596.077,507.219 604.034,499.262 
     594.214,489.442 594.214,485.378 598.304,485.378 598.304,466.051 581.685,449.432 581.685,438.899 597.904,438.899 
     608.436,449.432 621.464,449.432 621.464,438.295 608.436,425.268   "/>
   <polygon id="district-CHW-3" className={`${styles.district} ${this._getDistrictPosition('CHW','3')}`} 
+           onMouseEnter={this._setActive.bind(this, 'CHW','3')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     489.756,425.268 498.724,416.3 509.221,416.3 515.654,416.3 546.892,385.062 556.289,385.062 567.252,374.099 572.204,379.051 
     572.204,399.684 586.765,399.684 593.525,392.923 597.77,397.168 597.77,405.803 608.436,405.803 608.436,425.268 621.464,438.295 
@@ -176,42 +209,51 @@ export default class ResultMap extends Component {
     594.214,485.378 594.214,489.442 604.034,499.262 596.077,507.219 583.04,507.219 545.03,469.209 545.03,463.029 535.929,453.929 
     513.284,453.929 501.119,441.764 503.722,439.161   "/>
   <polygon id="district-CHW-2" className={`${styles.district} ${this._getDistrictPosition('CHW','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'CHW','2')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     667.864,399.961 667.864,415.961 657.325,426.501 662.531,431.707 671.674,431.707 671.674,440.088 660.796,440.088 
     660.796,445.464 653.473,452.786 645.261,452.786 645.261,437.548 625.452,417.739 623.674,417.739 623.717,390.946 
     630.955,383.708 651.611,383.708   "/>
   <polygon id="district-CHW-1" className={`${styles.district} ${this._getDistrictPosition('CHW','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'CHW','1')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     623.674,417.739 608.436,417.739 608.436,405.803 597.77,405.803 597.77,397.168 593.525,392.923 586.765,399.684 572.204,399.684 
     572.204,379.051 577.05,374.205 587.865,374.205 590.335,371.735 583.488,364.889 587.442,360.935 592.691,366.184 
     607.675,366.184 614.278,359.581 607.802,353.105 603.738,357.168 598.087,351.517 603.167,346.438 628.246,346.438 
     632.976,341.708 651.611,341.708 651.611,383.708 630.955,383.708 623.717,390.946   "/>
   <polygon id="district-TXG-8" className={`${styles.district} ${this._getDistrictPosition('TXG','8')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TXG','8')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     729.899,369.299 759.406,398.806 750.149,408.063 750.149,439.913 762.778,452.542 785.196,452.542 802.313,469.659 812.9,459.072 
     881.449,459.072 899.767,477.389 925.132,477.389 935.398,487.655 1025.006,399.039 1002.277,399.039 985.945,415.453 
     976.517,415.453 965.851,404.831 857.661,404.831 857.661,394.967 833.002,370.307 815.224,388.085 804.159,388.085 
     785.59,369.515 785.59,360.766 770.325,345.501 758.149,357.676 749.836,349.362   "/>
   <polygon id="district-TXG-7" className={`${styles.district} ${this._getDistrictPosition('TXG','7')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TXG','7')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     750.149,408.063 750.149,439.913 737.959,452.104 728.44,452.104 718.911,461.633 718.911,436.752 708.279,436.752 
     682.628,411.102 685.896,407.834 685.896,404.075 700.66,404.075 706.332,409.747 713.816,402.263 709.685,398.132 
     721.959,398.132 731.889,408.063   "/>
   <polygon id="district-TXG-6" className={`${styles.district} ${this._getDistrictPosition('TXG','6')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TXG','6')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     698.07,386.518 713.816,402.263 706.332,409.747 700.66,404.075 685.896,404.075 685.896,398.691   "/>
   <polygon id="district-TXG-5" className={`${styles.district} ${this._getDistrictPosition('TXG','5')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TXG','5')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     709.685,398.132 721.959,398.132 731.889,408.063 750.149,408.063 759.461,398.751 742.403,381.803 737.324,386.882 
     725.769,386.882 711.737,372.85 698.07,386.518   "/>
   <polygon id="district-TXG-4" className={`${styles.district} ${this._getDistrictPosition('TXG','4')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TXG','4')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     685.896,398.691 711.737,372.85 691.285,352.398 669.49,374.193 669.49,379.723 677.53,387.764 677.53,398.691  "/>
   <polygon id="district-TXG-3" className={`${styles.district} ${this._getDistrictPosition('TXG','3')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TXG','3')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     770.325,345.501 758.149,357.676 749.836,349.362 729.899,369.299 742.403,381.803 737.324,386.882 725.769,386.882 
     691.285,352.398 698.84,344.843 702.737,348.74 726.737,324.74 734.53,332.533 764.78,332.533 770.325,338.078  "/>
   <polygon id="district-TXG-2" className={`${styles.district} ${this._getDistrictPosition('TXG','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TXG','2')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     651.611,341.708 654.357,338.962 644.373,328.978 647.484,325.867 651.039,329.422 656.436,324.026 672.944,340.533 
     685.007,328.47 693.261,328.47 708.134,343.343 702.737,348.74 698.84,344.843 669.49,374.193 669.49,379.723 677.53,387.764 
@@ -219,11 +261,13 @@ export default class ResultMap extends Component {
     714.848,465.696 696.774,465.696 671.42,440.342 671.42,431.707 662.531,431.707 657.325,426.501 667.864,415.961 667.864,399.961 
     651.611,383.708   "/>
   <polygon id="district-TXG-1" className={`${styles.district} ${this._getDistrictPosition('TXG','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TXG','1')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     708.134,343.343 726.737,324.74 734.53,332.533 764.78,332.533 755.75,323.504 755.75,272.047 749.133,272.047 737.62,283.56 
     717.896,283.56 691.822,309.634 684.626,302.439 679.077,307.987 679.077,315.607 661.007,315.607 661.007,318.946 
     667.102,318.946 659.23,326.819 672.944,340.533 685.007,328.47 693.261,328.47  "/>
   <polygon id="district-ZMI-2" className={`${styles.district} ${this._getDistrictPosition('ZMI','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'ZMI','2')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     826.508,257.825 861.725,257.825 886.444,282.545 891.354,277.635 884.158,270.439 884.158,260.873 873.544,250.259 
     897.713,226.09 909.132,237.508 913.026,233.614 923.184,243.772 923.184,285.254 935.048,297.117 935.048,309.296 
@@ -232,12 +276,14 @@ export default class ResultMap extends Component {
     770.325,338.078 804.498,338.078 821.429,321.147 821.429,294.735 827.016,289.148 827.016,276.111 820.413,276.111 
     820.413,271.031 826.339,265.106   "/>
   <polygon id="district-ZMI-1" className={`${styles.district} ${this._getDistrictPosition('ZMI','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'ZMI','1')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     770.325,338.078 755.75,323.504 755.75,272.047 773.345,272.047 813.979,231.413 832.942,231.413 842.085,222.27 885.428,222.27 
     894.74,212.958 908.793,212.958 908.793,228.027 913.872,233.106 909.301,237.677 897.713,226.09 873.544,250.259 884.158,260.873 
     884.158,270.439 891.354,277.635 886.444,282.545 861.725,257.825 826.508,257.825 826.508,265.106 820.498,271.116 
     820.498,276.111 827.016,276.111 827.016,289.148 821.429,294.735 821.429,321.147 804.498,338.078   "/>
   <polygon id="district-TYN-6" className={`${styles.district} ${this._getDistrictPosition('TYN','6')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TYN','6')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1100.241,212.154 1100.241,221.854 1088.939,221.854 1088.939,255.455 1079.67,264.725 1088.643,273.698 1100.241,273.698 
     1100.241,287.624 1106.272,293.656 1106.272,305.232 1090.294,305.232 1090.294,347.898 1076.749,347.898 1049.163,375.484 
@@ -245,31 +291,37 @@ export default class ResultMap extends Component {
     1068.876,220.141 1068.876,212.154 1081.638,199.392 1082.844,200.598 1085.638,197.805 1088.685,197.805 1088.685,209.741 
     1091.225,209.741 1094.527,206.44  "/>
   <polygon id="district-TYN-5" className={`${styles.district} ${this._getDistrictPosition('TYN','5')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TYN','5')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1068.876,212.154 1068.876,220.141 1052.489,236.528 1058.844,242.884 1039.211,262.517 1023.344,246.651 1023.344,240.12 
     1012.508,229.284 1025.109,216.683 1034.421,216.683 1047.035,204.069 1047.035,186.376 1055.162,186.376 1055.162,192.471 
     1061.5,198.81 1061.5,212.154  "/>
   <polygon id="district-TYN-4" className={`${styles.district} ${this._getDistrictPosition('TYN','4')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TYN','4')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1082.844,193.995 1079.543,197.297 1082.844,200.598 1085.638,197.805 1088.685,197.805 1088.685,209.741 1091.225,209.741 
     1094.527,206.44 1100.241,212.154 1105.045,207.35 1104.156,206.461 1109.257,201.36 1109.257,188.916 1104.262,183.921 
     1096.304,183.921 1093.807,186.419 1093.807,193.995  "/>
   <polygon id="district-TYN-3" className={`${styles.district} ${this._getDistrictPosition('TYN','3')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TYN','3')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1047.035,186.376 1055.162,186.376 1055.162,192.471 1061.5,198.81 1061.5,212.154 1068.876,212.154 1081.638,199.392 
     1079.543,197.297 1082.844,193.995 1082.844,182.99 1080.135,182.99 1059.987,162.842 1041.744,181.085   "/>
   <polygon id="district-TYN-2" className={`${styles.district} ${this._getDistrictPosition('TYN','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TYN','2')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1025.109,216.683 1034.421,216.683 1047.035,204.069 1047.035,186.376 1041.744,181.085 1059.987,162.842 1080.135,182.99 
     1084.199,182.99 1084.199,167.075 1104.854,167.075 1104.854,142.017 1068.961,142.017 1061.003,134.059 1014.781,134.059 
     990.231,158.609 1004.538,172.916 992.94,184.514   "/>
   <polygon id="district-TYN-1" className={`${styles.district} ${this._getDistrictPosition('TYN','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TYN','1')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1104.854,142.017 1114.59,142.017 1120.389,147.816 1120.389,162.673 1136.833,179.117 1136.833,187.054 1141.838,192.059 
     1141.838,209.741 1136.939,209.741 1131.055,215.625 1113.32,215.625 1104.156,206.461 1109.257,201.36 1109.257,188.916 
     1104.262,183.921 1096.304,183.921 1093.807,186.419 1093.807,193.995 1082.844,193.995 1082.844,182.99 1084.199,182.99 
     1084.199,167.075 1104.854,167.075   "/>
   <polygon id="district-NTC-12" className={`${styles.district} ${this._getDistrictPosition('NTC','12')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','12')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1263.329,152.599 1267.181,156.451 1267.181,189.678 1271.185,193.682 1279.667,193.682 1279.667,196.535 1272.753,203.449 
     1272.753,208.278 1242.335,208.278 1242.335,212.888 1245.735,216.288 1241.252,220.771 1241.252,238.884 1265.952,263.584 
@@ -280,6 +332,7 @@ export default class ResultMap extends Component {
     1226.123,209.741 1230.144,209.741 1230.144,184.345 1234.038,180.45 1231.064,177.476 1234.197,174.344 1234.197,167.513 
     1241.996,167.513 1248.987,160.521 1263.329,160.521  "/>
   <polygon id="district-NTC-11" className={`${styles.district} ${this._getDistrictPosition('NTC','11')}`} 
+            onMouseEnter={this._setActive.bind(this, 'NTC','11')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1231.245,256.09 1241.573,256.09 1241.573,282.375 1260.668,301.471 1260.668,310.819 1239.819,331.669 1146.844,331.669 
     1146.844,347.898 1090.294,347.898 1090.294,305.232 1106.272,305.232 1106.272,302.1 1121.532,302.1 1136.431,287.201 
@@ -287,42 +340,52 @@ export default class ResultMap extends Component {
     1169.866,244.242 1175.203,244.242 1181.529,250.568 1181.529,258.503 1197.202,274.175 1202.631,268.746 1196.028,262.143 
     1206.822,251.349 1206.822,248.344 1208.811,248.344 1212.875,252.407 1220.917,252.407 1227.922,259.413   "/>
   <polygon id="district-NTC-10" className={`${styles.district} ${this._getDistrictPosition('NTC','10')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','10')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1153.512,246.439 1143.796,246.439 1138.695,251.54 1149.869,262.713 1141.065,271.517 1132.791,271.517 1132.791,283.56 
     1136.431,287.201 1121.532,302.1 1106.272,302.1 1106.272,293.656 1100.241,287.624 1100.241,273.698 1088.643,273.698 
     1079.67,264.725 1088.939,255.455 1088.939,229.677 1111.288,229.677 1120.495,238.884 1124.875,238.884 1133.173,230.586 
     1137.119,230.586 1139.559,233.026 1146.272,226.312 1151.161,231.201 1156.304,226.058 1156.304,236.154 1153.512,236.154  "/>
   <polygon id="district-NTC-9" className={`${styles.district} ${this._getDistrictPosition('NTC','9')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','9')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1169.905,228.027 1169.905,244.28 1175.203,244.28 1179.309,240.175 1179.309,228.027  "/>
   <polygon id="district-NTC-8" className={`${styles.district} ${this._getDistrictPosition('NTC','8')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','8')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1156.304,226.058 1156.304,236.154 1153.512,236.154 1153.512,246.439 1167.669,246.439 1169.866,244.242 1169.866,226.058  "/>
   <polygon id="district-NTC-7" className={`${styles.district} ${this._getDistrictPosition('NTC','7')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','7')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1150.018,214.148 1150.018,217.594 1137.119,230.493 1139.605,232.979 1146.272,226.312 1151.161,231.201 1156.304,226.058 
     1169.905,226.058 1169.905,222.299 1154.208,222.299 1154.208,214.148   "/>
   <polygon id="district-NTC-6" className={`${styles.district} ${this._getDistrictPosition('NTC','6')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','6')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1154.208,214.148 1154.208,222.299 1169.905,222.299 1169.905,216.572 1166.221,212.888 1164.981,214.128   "/>
   <polygon id="district-NTC-5" className={`${styles.district} ${this._getDistrictPosition('NTC','5')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','5')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1088.939,229.677 1111.288,229.677 1120.495,238.884 1124.875,238.884 1133.173,230.586 1137.119,230.586 1150.065,217.64 
     1150.065,214.148 1146.246,214.148 1141.838,209.741 1136.939,209.741 1131.055,215.625 1113.32,215.625 1105.045,207.35 
     1100.241,212.154 1100.241,221.854 1088.939,221.854  "/>
   <polygon id="district-NTC-4" className={`${styles.district} ${this._getDistrictPosition('NTC','4')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','4')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1141.838,209.741 1146.246,214.148 1165.002,214.148 1169.905,209.071 1169.905,201.221 1164.059,201.221 1157.002,208.278 
     1149.613,208.278 1141.886,200.551   "/>
-  <polyline id="district-NTC-3" className={`${styles.district} ${this._getDistrictPosition('NTC','3')}`} 
+  <polyline id="district-NTC-3" className={`${styles.district} ${this._getDistrictPosition('NTC','3')}`}
+            onMouseEnter={this._setActive.bind(this, 'NTC','3')}   
             stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1169.905,201.221 1187.991,201.221 1187.991,205.619 1177.039,216.572 1169.905,216.572 1166.221,212.888 1169.971,209.138 
     1169.971,201.221  "/>
   <polygon id="district-NTC-2" className={`${styles.district} ${this._getDistrictPosition('NTC','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','2')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1164.059,201.221 1188.056,201.221 1188.056,198.683 1179.328,189.955 1179.328,183.075 1181.244,181.158 1171.563,171.477 
     1163.097,171.477 1156.156,178.419 1159.203,181.466 1151.754,188.916   "/>
   <polygon id="district-NTC-1" className={`${styles.district} ${this._getDistrictPosition('NTC','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'NTC','1')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1120.77,147.435 1120.77,162.673 1137.023,178.927 1137.023,187.054 1141.933,191.964 1141.933,200.598 1149.613,208.278 
     1157.002,208.278 1164.059,201.221 1151.754,188.916 1159.203,181.466 1156.156,178.419 1163.097,171.477 1171.563,171.477 
@@ -330,50 +393,62 @@ export default class ResultMap extends Component {
     1263.329,146.08 1252.324,135.075 1240.641,135.075 1235.477,129.911 1216.938,129.911 1213.001,133.848 1202.716,133.848 
     1192.367,144.197 1185.436,144.197 1172.224,157.408 1144.473,157.408 1134.492,147.427  "/>
   <polygon id="district-TPE-8" className={`${styles.district} ${this._getDistrictPosition('TPE','8')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TPE','8')}   
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1179.351,240.217 1175.203,244.365 1181.467,250.63 1181.467,258.503 1197.171,274.206 1202.631,268.746 1196.028,262.143 
     1206.822,251.349 1206.822,248.344 1198.652,248.344 1198.652,244.28 1183.668,244.28  "/>
   <polygon id="district-TPE-7" className={`${styles.district} ${this._getDistrictPosition('TPE','7')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TPE','7')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1191.541,244.28 1198.652,244.28 1205.764,237.169 1205.764,229.042 1203.97,230.836 1198.255,225.122 1191.541,231.582   "/>
   <polygon id="district-TPE-6" className={`${styles.district} ${this._getDistrictPosition('TPE','6')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TPE','6')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1179.351,228.027 1179.351,240.217 1183.668,244.28 1191.541,244.28 1191.541,231.582 1198.035,225.343 1194.518,221.854 
     1188.462,228.069  "/>
   <polygon id="district-TPE-5" className={`${styles.district} ${this._getDistrictPosition('TPE','5')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TPE','5')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1177.039,216.572 1169.905,216.572 1169.905,228.027 1188.578,228.027 1191.541,225.169 1185.436,219.192 1182.577,222.052  "/>
   <polygon id="district-TPE-4" className={`${styles.district} ${this._getDistrictPosition('TPE','4')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TPE','4')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1226.081,209.741 1226.081,216.852 1231.753,222.439 1222.017,232.259 1222.017,246.905 1231.245,256.09 1227.922,259.413 
     1220.917,252.407 1212.875,252.407 1208.811,248.344 1198.652,248.344 1198.652,244.28 1205.764,237.169 1205.764,228.451 
     1209.827,224.386 1209.827,209.741   "/>
   <polygon id="district-TPE-3" className={`${styles.district} ${this._getDistrictPosition('TPE','3')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TPE','3')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1185.436,219.192 1191.555,225.155 1194.786,221.904 1203.675,230.542 1209.827,224.386 1209.827,209.741 1194.758,209.741  "/>
   <polygon id="district-TPE-2" className={`${styles.district} ${this._getDistrictPosition('TPE','2')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TPE','2')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1195.774,199.582 1179.351,183.075 1179.351,189.932 1188.06,198.683 1188.049,205.678 1177.039,216.572 1182.626,222.101 
     1194.758,209.741 1230.144,209.741 1230.144,184.345 1234.038,180.45 1231.064,177.476 1209.118,199.656  "/>
   <polygon id="district-TPE-1" className={`${styles.district} ${this._getDistrictPosition('TPE','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'TPE','1')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1179.351,183.075 1195.774,199.582 1208.811,199.582 1234.208,174.355 1234.208,167.513 1203.154,167.513 1195.436,175.202 
     1187.139,175.202  "/>
   <polygon id="district-KEL-1" className={`${styles.district} ${this._getDistrictPosition('KEL','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'KEL','1')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1242.335,208.278 1242.335,212.888 1245.735,216.288 1241.252,220.771 1241.252,238.884 1265.952,263.584 1277.636,263.584 
     1277.636,257.211 1273.837,253.413 1283.223,244.026 1288.81,249.614 1303.032,249.614 1303.032,244.28 1288.544,229.792 
     1278.652,229.792 1278.652,226.058 1283.421,221.29 1276.68,214.549 1276.68,208.278   "/>
   <path id="district-ILA-1" className={`${styles.district} ${this._getDistrictPosition('ILA','1')}`} 
+        onMouseEnter={this._setActive.bind(this, 'ILA','1')}  
         stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M1076.749,347.898
     h70.094v-16.254h119.872v-12.19h54.857v10.159h-35.555l-66.031,65.862v61.121l-39.449,39.619h-30.645l-34.568,34.568l-38.79-38.79
     l-16.065,16.065l-58.635-58.635l-47.435,47.435L940.3,482.759L1076.749,347.898z M1283.925,380.109l8.127,8.127v-10.159h-8.127
     V380.109z"/>
   <polygon id="district-HCC-1" className={`${styles.district} ${this._getDistrictPosition('HCC','1')}`} 
+           onMouseEnter={this._setActive.bind(this, 'HCC','1')} 
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     913.872,233.106 926.111,220.867 951.29,220.867 951.29,234.701 955.607,234.701 962.119,228.189 962.119,207.455 945.784,191.12 
     945.784,179.265 934.274,179.265 911.925,201.614 911.925,209.741 908.751,212.916 908.751,228.027   "/>
-  <polygon id="district-HSZ-1" className={`${styles.district} ${this._getDistrictPosition('HSZ','1')}`} 
+  <polygon id="district-HSZ-1" className={`${styles.district} ${this._getDistrictPosition('HSZ','1')}`}
+           onMouseEnter={this._setActive.bind(this, 'HSZ','1')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     945.784,179.265 954.846,179.265 974.993,159.117 990.739,159.117 1004.538,172.916 992.94,184.514 1025.109,216.683 
     1012.508,229.284 1023.344,240.12 1023.344,246.651 1043.274,266.581 1043.274,294.735 1038.848,299.161 1038.848,365.168 
@@ -381,12 +456,14 @@ export default class ResultMap extends Component {
     950.499,350.552 927.417,350.552 913.9,337.035 922.338,328.597 922.338,309.296 935.048,309.296 935.048,297.117 923.184,285.254 
     923.184,243.772 912.857,233.445 925.773,220.528 951.29,220.528 951.29,234.701 955.607,234.701 962.119,228.189 962.119,207.455 
     945.784,191.12  "/>
-  <polygon id="district-HUN-1" className={`${styles.district} ${this._getDistrictPosition('HUN','1')}`} 
+  <polygon id="district-HUN-1" className={`${styles.district} ${this._getDistrictPosition('HUN','1')}`}
+           onMouseEnter={this._setActive.bind(this, 'HUN','1')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1097.989,569.263 1126.083,541.49 1076.388,492.138 1060.45,508.04 1001.824,449.432 954.327,496.786 940.263,482.796 
     895.059,527.852 907.102,539.895 730.34,716.656 718.005,704.322 621.448,800.56 719.304,898.357 811.357,804.665 828.879,821.767 
     908.043,742.488 908.043,728.339 994.682,641.7 1004.115,641.7 1004.115,612.531 1047.458,569.187  "/>
   <path id="district-MZG-1" className={`${styles.district} ${this._getDistrictPosition('MZG','1')}`} 
+        onMouseEnter={this._setActive.bind(this, 'MZG','1')} 
         stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M184.123,414.945
     v-6.667l-3.746-3.746v-6.222l-2.159-2.159v-5.926h5.587v13.206l5.249,5.249l2.878-2.878l4.402,4.402l5.757-5.757v-3.888h-6.597
     l-5.763-5.763l2.032-2.032l3.386,3.386l2.37-2.37l-6.518-6.518l6.095-6.095l3.132,3.132l2.709-2.709l3.725,3.725l-3.386,3.386
@@ -401,23 +478,27 @@ export default class ResultMap extends Component {
      M63.934,488.849v10.921l2.921,2.921l4.063-4.063h4.952v-2.857l-4.921-4.921h-4.476L63.934,488.849z M245.901,331.01l3.809,3.809
     l3.682-3.682l-5.714-5.714l-4.952,4.952v4.063L245.901,331.01z M249.345,322.264l6.413-6.413l-2.746-2.746v3.175l-4.952,4.952
     L249.345,322.264z"/>
-  <polygon id="district-CYC-1" className={`${styles.district} ${this._getDistrictPosition('CYC','1')}`} 
+  <polygon id="district-CYC-1" className={`${styles.district} ${this._getDistrictPosition('CYC','1')}`}
+           onMouseEnter={this._setActive.bind(this, 'CYC','1')}  
            stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     466.275,578.91 456.057,588.413 456.057,599.832 466.216,599.832 466.216,614.054 498.723,614.054 498.723,598.816 
     488.565,589.167 488.565,583.832 471.558,583.842   "/>
   <path id="district-TTT-1" className={`${styles.district} ${this._getDistrictPosition('TTT','1')}`} 
+        onMouseEnter={this._setActive.bind(this, 'TTT','1')} 
         stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M621.477,800.531
     l97.007,97.007l93.083-93.083l16.057,16.057L690.721,957.416h-36.74l-56.719,56.888h-94.137l-140.02,139.85l-18.793-18.963v-50.285
     l32.508-33.016v-35.047l47.746-47.238h33.693l36.402-35.555V875.3l92.443-92.613h52.825L621.477,800.531z M658.722,1103.192v14.73
     l7.619,7.619l2.794-2.794l-4.19-4.19l8.762-8.762l-11.301-11.302L658.722,1103.192z M544.437,1333.624v26.412l7.788,7.788v11.174
     h11.852v-5.418l-5.926-5.926v-9.651l10.751-10.751l-19.725-19.725L544.437,1333.624z"/>
   <path id="district-KNH-1" className={`${styles.district} ${this._getDistrictPosition('KNH','1')}`} 
+        onMouseEnter={this._setActive.bind(this, 'KNH','1')} 
         stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M305.594,61.833
     v24.281l14.365,14.365h13.562L348.25,85.75v7.875l6.271-6.271l-4.229-4.229H360.5l4.375-4.375h4.958v13.708l4.958,4.958V119
     l-5.833,5.833v12.833l-15.167,15.167h-23.844v-19.906l-19.906-19.906h-17.646l-13.271,13.271h-9.042l-11.958-11.958V92.167
     l10.208,10.208l16.042-16.042V75.25h9.917v-6.417h-12.25l7-7H305.594z M221.375,79.917h33.833V63.292H248.5l-7.583-7.583
     L221.375,75.25V79.917z"/>
   <path id="district-MFK-1" className={`${styles.district} ${this._getDistrictPosition('MFK','1')}`} 
+        onMouseEnter={this._setActive.bind(this, 'MFK','1')} 
         stroke="#000000" strokeLinejoin="bevel" strokeMiterlimit="10" d="M32.594,90.663
     l8.094,8.094h-12.25v-7.875L32.594,90.663z M31.5,108.382l-4.448,4.448H47.25l-4.557-4.557L31.5,108.382z M60.667,87.09
     L50.021,97.736l9.771,9.771h14.583v-3.792L70,99.34h-7.802V87.09H60.667z M88.247,93.671l-9.917,9.917l2.315,2.315l6.079-6.079
@@ -425,26 +506,32 @@ export default class ResultMap extends Component {
     l-3.236,3.236l3.628,3.628l4.229-4.229l7.118,7.118l2.68-2.68l-2.014-2.014v-6.982h-9.069l4.872-4.872L132.708,94.71z"/>
   
     <polygon id="district-LAB-1" className={`${styles.district} ${this._getDistrictPosition('LAB','1')}`} 
+             onMouseEnter={this._setActive.bind(this, 'LAB','1')} 
              stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1306.663,1001 1228.039,1001 1218.946,1016.75 1315.756,1016.75   "/>
   
     <polygon id="district-LAB-2" className={`${styles.district} ${this._getDistrictPosition('LAB','2')}`} 
+             onMouseEnter={this._setActive.bind(this, 'LAB','2')} 
              stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1306.663,1001 1265.542,1001 1256.448,1016.75 1315.756,1016.75   "/>
   
     <polygon id="district-LAB-3" className={`${styles.district} ${this._getDistrictPosition('LAB','3')}`} 
+             onMouseEnter={this._setActive.bind(this, 'LAB','3')} 
              stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1306.663,1001 1297.917,1001 1288.823,1016.75 1315.756,1016.75   "/>
   
     <polygon id="district-MAB-1" className={`${styles.district} ${this._getDistrictPosition('MAB','1')}`} 
+             onMouseEnter={this._setActive.bind(this, 'MAB','1')} 
              stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1012.782,1016.75 1047.471,956.667 1082.16,1016.75   "/>
   
-    <polygon id="district-MAB-2" className={`${styles.district} ${this._getDistrictPosition('MAB','2')}`} 
+    <polygon id="district-MAB-2" className={`${styles.district} ${this._getDistrictPosition('MAB','2')}`}
+             onMouseEnter={this._setActive.bind(this, 'MAB','2')}  
              stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1053.247,1016.75 1087.936,956.667 1122.625,1016.75  "/>
   
     <polygon id="district-MAB-3" className={`${styles.district} ${this._getDistrictPosition('MAB','3')}`} 
+             onMouseEnter={this._setActive.bind(this, 'MAB','3')} 
              stroke="#000000" strokeWidth="3" strokeLinejoin="bevel" strokeMiterlimit="10" points="
     1053.247,1016.75 1082.16,1016.75 1067.703,991.71  "/>
 </g>
