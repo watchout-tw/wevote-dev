@@ -77,7 +77,7 @@ export default class Home extends Component {
     //
     const styles = require('./Home.scss');
     const {data, activeArea, activeAreaNo, x, y, activeIssue, viewWidth} = this.state;
-    let fixTopBlock;
+    let fixTopBlock = <div className={styles.fixedTop}></div>;
     let legislator8th = {}, legislator9th = {};
     if(activeArea && activeAreaNo){
 
@@ -99,27 +99,32 @@ export default class Home extends Component {
         if(coordinateX > viewWidth - 220){
             coordinateX = viewWidth - 220;
         }
-        ////
-
+        ////名字太長
+        let displayName8th = legislator8th.name;
+        let displayName9th = legislator9th.name;
+        if(displayName8th === "鄭天財Sra·Kacaw"){
+           displayName8th = "鄭天財";
+        }
+        if(displayName9th === "鄭天財Sra·Kacaw"){
+           displayName9th = "鄭天財";
+        }
         //
         //避免  無 -> 丁守中, ad-hoc quick fix
         let peopleBefore = (
             <div className={styles.peopleItem}>
-                <div>選前</div>
                 <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator8th.party)]}`}>
                     <PeoplePhoto id={legislator8th.id}/>
                 </div>
-                <b>{legislator8th.name}</b>
+                <b>{displayName8th}</b>
                 <div>{legislator8th.party}</div>
             </div>
         );
         if(legislator8th.id === "1" && legislator8th.name !== "丁守中"){
           peopleBefore = (
             <div className={styles.peopleItem}>
-                <div>選前</div>
                 <div className={`${styles.peopleAvatar} ${styles.noPeople}`}>
                 </div>
-                <b>{legislator8th.name}</b>
+                <b>{displayName8th}</b>    
             </div>
           );
         }
@@ -128,19 +133,18 @@ export default class Home extends Component {
         let arrowImg = require("./images/icon_arrow.svg");
 
         fixTopBlock = (
-            <div className={styles.fixedTop}
-                 style={{top: coordinateY, left: coordinateX}}>
+
+            <div className={`${styles.fixedTop} ${styles.active}`}> 
                 <div className={styles.districtTitle}>
                     {district2cht(activeArea)}{district_sub2cht(activeArea,activeAreaNo)}
                 </div>
                 {peopleBefore}
                 <img src={arrowImg} className={styles.arrowImg} />
                 <div className={styles.peopleItem}>
-                    <div>選後</div>
                     <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator9th.party)]}`}>
                         <PeoplePhoto id={legislator9th.id}/>
                     </div>
-                    <b>{legislator9th.name}</b>
+                    <b>{displayName9th}</b>
                     <div>{legislator9th.party}</div>
                 </div>
             </div>
@@ -170,7 +174,7 @@ export default class Home extends Component {
           <DocumentMeta {...metaData}/>
 
           <div className={styles.innerWrap}>
-            <img className={styles.powerfulTitle} src={powerfulTitleImage}/>
+            <img alt="新國會議題地圖解密：一分鐘看懂議題表態變化" className={styles.powerfulTitle} src={powerfulTitleImage}/>
               <header className={styles.header}>
                   <p className={styles.intro}>2016關鍵大戰結束，議題板塊有什麼變化呢？贊成、反對的勢力如何消長？你家的議題表態翻盤了嗎？讓我們來看看選前選後各區域立委的表態！</p>
                   <p className={styles.meta}>資料統計說明：選前地圖表態資料，根據過去第八屆各選區立委在立法院的發言、提案、表決等官方紀錄；選後地圖表態資料，根據各選區立委當選人所回覆問卷之表態紀錄，統計至 2016.1.16 為止。</p>
@@ -191,9 +195,12 @@ export default class Home extends Component {
                       </div>
                   </div>
               </header>
-              {fixTopBlock}
+              
               {issueController}
-              {issueBlocks}
+              <div className={styles.issueBlocks}>
+                {fixTopBlock}
+                {issueBlocks}
+              </div>
           </div>
           <div className={styles.invisible}>
               <Link to={`/404`}>404</Link>

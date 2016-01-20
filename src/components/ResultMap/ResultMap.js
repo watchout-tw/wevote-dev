@@ -36,7 +36,7 @@ export default class ResultMap extends Component {
   }
   _resetActive(){
     const {resetActive} = this.props;
-    resetActive();
+    //resetActive();
   }
   _getDistrictActiveStyle(area, areaNo){
     const styles = require('./ResultMap.scss');
@@ -1620,9 +1620,14 @@ const districts_with_hover = (
     //////
     let svgBlock;
     if(activeArea && activeAreaNo){
-      svgBlock = <Link to={`/constituencies/${activeArea}/${activeAreaNo}/`}>
-          {svgMap}
-      </Link>;
+        let linkArea = activeArea;
+        let linkAreaNo = activeAreaNo;
+        if(linkArea === "LAB" || linkArea === "MAB"){
+          linkAreaNo = 1;
+        }
+        svgBlock = <Link to={`/constituencies/${linkArea}/${linkAreaNo}/`}>
+            {svgMap}
+        </Link>;
     }else{
       svgBlock = svgMap;
     }

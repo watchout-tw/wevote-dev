@@ -111,44 +111,51 @@ $break: 800px;
   }
 }
 /**---*/
+.issueBlocks {
+  position: relative;
+}
 .fixedTop {
-  position: fixed;
+  opacity: 0;
+}
+.fixedTop.active {
+  opacity: 1;
+  position: absolute;
+  bottom: 28vw;
+  left: calc(50vw - 120px);
   background: rgba(250,250,250,0.9);
   padding-bottom: 10px;
   z-index: 999;
-  box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.12);
-  width: 220px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.42);
+  width: 180px;
+  height: 120px;
 }
 .districtTitle {
   font-size: 18px;
   font-weight: 800;
   vertical-align: top;
-  margin-top: 10px;
-  border: 1px solid;
   width: 180px;
   color: white;
   padding: 4px 0;
   background: black;
-  margin: 10px auto;
+  margin-bottom: 2px;
 }
 .arrowImg {
   position: absolute;
-  width: 40px;
-  left: calc(50% - 20px);
-  top: 82px;
+  width: 30px;
+  left: calc(50% - 15px);
+  top: 42px;
 }
 .peopleItem {
   display: inline-block;
-  margin: 0 20px;
   font-size: 14px;
-  width: 70px;
+  width: 50%;
   vertical-align: top;
 }
 .peopleAvatar {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     margin: 0 auto 4px auto;
-    border: 4px solid lightgray;
+    border: 3px solid lightgray;
     border-radius: 50%;
 }
 .peopleAvatar.noPeople {
