@@ -56,7 +56,6 @@ export default class Home extends Component {
       })
   }
   _onSetActiveIssue(name, e){
-      console.log(name);
       this.setState({
           activeIssue: name
       })
@@ -102,8 +101,31 @@ export default class Home extends Component {
         }
         ////
 
-        let arrowImg = require("./images/icon_arrow.svg");
+        //
+        //避免  無 -> 丁守中, ad-hoc quick fix
+        let peopleBefore = (
+            <div className={styles.peopleItem}>
+                <div>選前</div>
+                <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator8th.party)]}`}>
+                    <PeoplePhoto id={legislator8th.id}/>
+                </div>
+                <b>{legislator8th.name}</b>
+                <div>{legislator8th.party}</div>
+            </div>
+        );
+        if(legislator8th.id === "1" && legislator8th.name !== "丁守中"){
+          peopleBefore = (
+            <div className={styles.peopleItem}>
+                <div>選前</div>
+                <div className={`${styles.peopleAvatar} ${styles.noPeople}`}>
+                </div>
+                <b>{legislator8th.name}</b>    
+            </div>
+          );
+        }
 
+        //
+        let arrowImg = require("./images/icon_arrow.svg");
 
         fixTopBlock = (
             <div className={styles.fixedTop}
@@ -111,14 +133,7 @@ export default class Home extends Component {
                 <div className={styles.districtTitle}>
                     {district2cht(activeArea)}{district_sub2cht(activeArea,activeAreaNo)}
                 </div>
-                <div className={styles.peopleItem}>
-                    <div>選前</div>
-                    <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator8th.party)]}`}>
-                        <PeoplePhoto id={legislator8th.id}/>
-                    </div>
-                    <b>{legislator8th.name}</b>
-                    <div>{legislator8th.party}</div>
-                </div>
+                {peopleBefore}
                 <img src={arrowImg} className={styles.arrowImg} />
                 <div className={styles.peopleItem}>
                     <div>選後</div>
@@ -196,8 +211,9 @@ class Issue extends Component {
     const {issue, issueName, setActive, resetActive, activeArea, activeAreaNo, viewWidth} = this.props;
     let issueTitle = (viewWidth < 800) ? <h3 className={styles.issueTitle}>{eng2cht(issueName)}</h3> : "";
     return (
-      <div className={styles.resultMaps}>
+      <div className={styles.issue}>
           {issueTitle}
+          <KeyPoints issueName={issueName} viewWidth={viewWidth}/>
           <div className={styles.mapWrap}>
               <div className={styles.maps}>
                   <ResultMap title="8th" data={issue["8th"]} setActive={setActive} resetActive={resetActive}
@@ -209,17 +225,72 @@ class Issue extends Component {
               </div>
           </div>
           <Link to={`/issues/${eng2url(issueName)}/`}
-                className={styles.goToIssue}>深入了解「{eng2cht(issueName)}」議題</Link>
+                className={styles.goToIssue}>深入了解【{eng2cht(issueName)}】議題</Link>
       </div>
     );
   }
 }
 class KeyPoints extends Component {
   render(){
+    const styles = require('./Home.scss');
+    const {issueName, viewWidth} = this.props;
+    let data = KeyPointsData[issueName];
+    let content;
+    if(data){
+        let inner = data.map((item,i)=>{
+           return <li key={`${issueName}-${i}`}>{item}</li>
+        })
+        let titleText = (viewWidth >= 800) ? `${eng2cht(issueName)}・觀戰重點` : "觀戰重點";
+        content = (
+          <div>
+              <h3 className={styles.keypointsTitle}>{titleText}</h3>
+              <ol>{inner}</ol>
+          </div>
+        );
+    }
     return (
-        <div></div>
+        <div className={styles.keypointsWrap}>{content}</div>
     )
   }
+}
+const KeyPointsData = {
+    "marriageEquality" : [
+      "贊成立委由5位提升到16位，大量集中在台北市、新北市。",
+      "過去態度為反對者幾乎全部落選，僅原住民立委孔文吉成功連任。",
+      "願意承諾贊成的立委當選人中，國民黨僅一位蔣萬安、時代力量三位全部贊成、其餘均為民進黨。",
+      "贊成立委人數雖大幅提升，但是不表態立委人數仍然很多，超過七成。",
+      "現在承諾中完全沒有表態反對的立委，可能因為抱持反對立場的立委比較不願意回覆問卷。"
+    ],
+    "recall" : [
+      "贊成立委人數明顯提升，且集中在台北市、新北市、台中市、台南市、高雄市等都會地區，或許因為都會地區候選人回覆問卷意願較高。",
+      "苗栗陳超明、台中江啟臣，現在雖未回覆，但過去態度為反對。",
+      "部分過去態度為贊成的立委，現在並未回覆。",
+      "現在承諾中完全沒有表態反對的立委，可能因為抱持反對立場的立委比較不願意回覆問卷。"
+    ],
+    "referendum" : [
+      "贊成立委人數明顯提升，且集中在台北市、新北市、台中市、台南市、高雄市等都會地區，或許因為都會地區候選人回覆問卷意願較高。",
+      "過去態度為反對者如張慶忠、盧嘉辰、徐欣瑩，本次皆未參選或落選。",
+      "部分過去態度為贊成的立委，現在並未回覆。",
+      "現在承諾中完全沒有表態反對的立委，可能因為抱持反對立場的立委比較不願意回覆問卷。"
+    ],
+    "nuclearPower" : [
+      "有核電廠的新北市第一選區、第十二選區、屏東縣第三選區，當選立委皆願意承諾核四停建。",
+      "費鴻泰、賴士葆、蔣乃辛等多位立委，現在雖未回覆，但過去態度為反對。",
+      "部分過去態度為贊成的立委，現在並未回覆。",
+      "現在承諾中完全沒有表態反對的立委，可能因為抱持反對立場的立委比較不願意回覆問卷。"
+    ],
+    "courseGuide" : [
+      "贊成立委人數明顯提升，且集中在台北市、新北市、台中市、台南市、高雄市等都會地區，或許因為都會地區候選人回覆問卷意願較高。",
+      "過去態度為反對者有蔣乃辛、楊瓊瓔（落選）。",
+      "部分過去態度為贊成的立委，現在並未回覆。",
+      "現在承諾中完全沒有表態反對的立委，可能因為抱持反對立場的立委比較不願意回覆問卷。"
+    ],
+    "justiceReform" : [
+      "贊成立委人數明顯提升，且集中在台北市、新北市、台中市、台南市、高雄市等都會地區，或許因為都會地區候選人回覆問卷意願較高。",
+      "過去態度為反對者，如謝國樑、丁守中、林鴻池、廖正井、呂學樟、林瓊瓔、黃偉哲、林國正，本次皆未參選或落選。",
+      "部分過去態度為贊成的立委，現在並未回覆。",
+      "現在承諾中完全沒有表態反對的立委，可能因為抱持反對立場的立委比較不願意回覆問卷。"
+    ]
 }
 /*
     marriageEquality : {
