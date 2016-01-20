@@ -2,18 +2,32 @@
 
 $webVersionBreak: 800px;
 .wrap {
-  width: 100%;
-  margin: 0 auto;
+  width: 90vw;
+  margin: 0 4px;
+  position: relative;
+  display: inline-block;
 }
 @media all and (min-width: $webVersionBreak){
     .wrap {
-      width: 48%;
-      display: inline-block;
+      width: 50%;
+      margin: 0 auto;
     }
 }
-g {
-  cursor: pointer; 
+.title {
+  margin: 20px 0;
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  left: calc(50% - 30px);
+  width: auto;
 }
+@media all and (min-width: $webVersionBreak){
+    .title {
+      width: 50%;
+      left: 25%;
+    }
+}
+
 /* 每個選區應該要填什麼顏色 */
 .district.aye {
   fill: #00FFB0;
@@ -24,13 +38,19 @@ g {
 .district.none {
   fill: gray;
 }
-/* hover on, lighter */
-.district.aye:hover, .district.aye.active {
-  fill: lighten(#00FFB0, 20%);
+@media all and (min-width: $webVersionBreak){
+    g {
+      cursor: pointer; 
+    }
+    /* hover on, lighter */
+    .district.aye:hover, .district.aye.active {
+      fill: lighten(#00FFB0, 20%);
+    }
+    .district.nay:hover, .district.nay.active{
+      fill: lighten(#FF0055, 20%);
+    }
+    .district.none:hover, .district.none.active {
+      fill: lighten(gray, 20%);
+    } 
 }
-.district.nay:hover, .district.nay.active{
-  fill: lighten(#FF0055, 20%);
-}
-.district.none:hover, .district.none.active {
-  fill: lighten(gray, 20%);
-}
+
