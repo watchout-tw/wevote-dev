@@ -83,14 +83,14 @@ export default class Home extends Component {
 
         legislator8th.name = (data.marriageEquality["8th"][activeArea][activeAreaNo]) ? data.marriageEquality["8th"][activeArea][activeAreaNo].legislator : "無";
         legislator9th.name = data.marriageEquality["9th"][activeArea][activeAreaNo].legislator;
-  
+
         legislator8th.id = people_name2id(legislator8th.name);
         legislator9th.id = people_name2id(legislator9th.name);
-  
+
         legislator8th.party = eng2cht(this._getLegislatorParty(legislator8th.name));
         let id9th = people_name2id(legislator9th.name);
         legislator9th.party = eng2cht(candidates[id9th].party);
-  
+
         /////
         let coordinateX = x + 110, coordinateY = y+50;
         if(coordinateX < 0){
@@ -119,7 +119,7 @@ export default class Home extends Component {
                 <div>選前</div>
                 <div className={`${styles.peopleAvatar} ${styles.noPeople}`}>
                 </div>
-                <b>{legislator8th.name}</b>    
+                <b>{legislator8th.name}</b>
             </div>
           );
         }
@@ -129,7 +129,7 @@ export default class Home extends Component {
 
         fixTopBlock = (
             <div className={styles.fixedTop}
-                 style={{top: coordinateY, left: coordinateX}}> 
+                 style={{top: coordinateY, left: coordinateX}}>
                 <div className={styles.districtTitle}>
                     {district2cht(activeArea)}{district_sub2cht(activeArea,activeAreaNo)}
                 </div>
@@ -152,26 +152,27 @@ export default class Home extends Component {
                onClick={this._onSetActiveIssue.bind(this, issueName)}>
               {eng2cht(issueName)}
           </div>
-        );      
+        );
     }): "";
     let issueBlocks = Object.keys(data).map((issueName,i)=>{
         if(issueName===activeIssue || viewWidth < 800){
             //目前 active 的議題或者手機版
-            return  <Issue issue={data[issueName]} issueName={issueName} 
+            return  <Issue issue={data[issueName]} issueName={issueName}
                            setActive={this._setActive.bind(this)}
                            resetActive={this._resetActive.bind(this)}
                            activeArea={activeArea} activeAreaNo={activeAreaNo}
                            viewWidth={viewWidth}/>
-        }      
+        }
     })
+    let powerfulTitleImage = require('./images/title.svg')
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
 
           <div className={styles.innerWrap}>
+            <img src={powerfulTitleImage}/>
               <header className={styles.header}>
-                  <h1 className={styles.title}>議題地圖解密：一分鐘看懂議題態度變化</h1>
-                  <p className={styles.intro}>2016關鍵大戰結束，議題板塊有什麼變化呢？贊成/反對的勢力如何消長？你家的議題態度翻盤了嗎？讓我們來看看選前選後各區域立委的態度！</p>
+                  <p className={styles.intro}>2016關鍵大戰結束，議題板塊有什麼變化呢？贊成、反對的勢力如何消長？你家的議題表態翻盤了嗎？讓我們來看看選前選後各區域立委的表態！</p>
                   <p className={styles.meta}>資料統計說明：選前地圖表態資料，根據過去第八屆各選區立委在立法院的發言、提案、表決等官方紀錄；選後地圖表態資料，根據各選區立委當選人所回覆問卷之表態紀錄，統計至 2016.1.16 為止。</p>
                   <div className={styles.legend}>
                       <b>圖例說明</b>
@@ -185,7 +186,7 @@ export default class Home extends Component {
                               <div className={styles.legendText}>反對</div>
                           </div>
                           <div className={styles.position}><div className={`${styles.cube} ${styles.none}`}></div>
-                              <div className={styles.legendText}>未表態｜不表態｜模糊</div>
+                              <div className={styles.legendText}>未表態／不表態／模糊</div>
                           </div>
                       </div>
                   </div>
@@ -205,7 +206,7 @@ export default class Home extends Component {
   }
 }
 class Issue extends Component {
-  
+
   render() {
     const styles = require('./Home.scss');
     const {issue, issueName, setActive, resetActive, activeArea, activeAreaNo, viewWidth} = this.props;
@@ -217,10 +218,10 @@ class Issue extends Component {
           <div className={styles.mapWrap}>
               <div className={styles.maps}>
                   <ResultMap title="8th" data={issue["8th"]} setActive={setActive} resetActive={resetActive}
-                             activeArea={activeArea} activeAreaNo={activeAreaNo} 
+                             activeArea={activeArea} activeAreaNo={activeAreaNo}
                              viewWidth={viewWidth}/>
                   <ResultMap title="9th" data={issue["9th"]} setActive={setActive} resetActive={resetActive}
-                             activeArea={activeArea} activeAreaNo={activeAreaNo} 
+                             activeArea={activeArea} activeAreaNo={activeAreaNo}
                              viewWidth={viewWidth}/>
               </div>
           </div>
@@ -301,12 +302,12 @@ const KeyPointsData = {
                     "position" : "aye"
                 },
                 "2" : {
-    
+
                 }
             }
         },
         "9th" : {
-            
+
         }
     }
 
