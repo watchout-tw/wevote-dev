@@ -47,7 +47,7 @@ export default class CandidateCompare extends Component {
     let candidateCardItems = candidateList
     .filter((people, index)=>{
 
-        if(filter===true){//so many if that i wanna kill myself...
+        if(filter===true){//so many if that i wanna kill myself... //自殺不能解決問題 :D
             if(pkCategory==="position"){
                 if(people.hasReply || legislators[people.id]){
                    return true;
@@ -128,6 +128,10 @@ class Card extends Component {
       <div className={styles.noContactInfo} >無公開聯絡資訊</div>)
     : "";
 
+    let electedInfo;
+    if(people.isElected === true)
+      electedInfo = <div className={styles.electedInfo}>我當選了</div>;
+
     /* -------  表態 ------ */
     //表態
     //REFINE: image duplicated with position table
@@ -185,7 +189,7 @@ class Card extends Component {
     if(name.length > 20){
         const pattern=/([A-Z]+)([a-z]+)/;
         let engIndex = name.search(pattern);
-      
+
         if(engIndex !== -1){
           name = name.substring(0,engIndex);
         }
@@ -198,7 +202,9 @@ class Card extends Component {
                   {currentInfo}
                   {noContactInfo}
                 </div>
-                {people.isElected === true? "我當選了" : ""}
+
+                {electedInfo}
+
                 <div className={styles.peoplePhoto}>
                    <PeoplePhoto id={people.id}/>
                 </div>
