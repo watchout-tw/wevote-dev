@@ -88,18 +88,19 @@ $break: 800px;
 .issueTab.active {
   border-bottom: 4px solid #97FFF5;
 }
-.resultMaps {
+.issue {
   margin-top: 30px;
+  margin-bottom: 100px;
 }
 .mapWrap {
   width: 100%;
   overflow: scroll;
 }
 .maps {
-  width: 180vw;
+  width: calc(180vw + 16px);
 }
 @media all and (min-width: $break){
-  .resultMaps {
+  .issue {
     width: 100%;
   }
   .maps {
@@ -137,7 +138,8 @@ $break: 800px;
   display: inline-block;
   margin: 0 20px;
   font-size: 14px;
-  max-width: 70px;
+  width: 70px;
+  vertical-align: top;
 }
 .peopleAvatar {
     width: 60px;
@@ -145,6 +147,9 @@ $break: 800px;
     margin: 0 auto 4px auto;
     border: 4px solid lightgray;
     border-radius: 50%;
+}
+.peopleAvatar.noPeople {
+    background: lightgray;
 }
 
 .peopleAvatar.KMT {
@@ -179,6 +184,17 @@ $break: 800px;
   .issueTitle {
     display: none;
   }
+}
+.keypointsWrap {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+.keypointsTitle {
+  font-size: 20px;
+  text-align: center;
 }
 .goToIssue, .goToIssue:visited {
   background: $awesomeColor;

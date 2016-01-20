@@ -31,15 +31,12 @@ export default class ResultMap extends Component {
   
   _setActive(area, areaNo,e){
     const {setActive} = this.props;
-    console.log(e)
-    console.log("("+e.screenX+","+e.screenY+")")
     let y = e.screenY+window.innerHeight;
-    console.log("**("+e.screenX+","+y+")")
     setActive(area,areaNo, e.screenX, y);
   }
   _resetActive(){
     const {resetActive} = this.props;
-    //resetActive();
+    resetActive();
   }
   _getDistrictActiveStyle(area, areaNo){
     const styles = require('./ResultMap.scss');
