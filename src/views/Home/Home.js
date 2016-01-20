@@ -170,7 +170,7 @@ export default class Home extends Component {
           <DocumentMeta {...metaData}/>
 
           <div className={styles.innerWrap}>
-            <img src={powerfulTitleImage}/>
+            <img className={styles.powerfulTitle} src={powerfulTitleImage}/>
               <header className={styles.header}>
                   <p className={styles.intro}>2016關鍵大戰結束，議題板塊有什麼變化呢？贊成、反對的勢力如何消長？你家的議題表態翻盤了嗎？讓我們來看看選前選後各區域立委的表態！</p>
                   <p className={styles.meta}>資料統計說明：選前地圖表態資料，根據過去第八屆各選區立委在立法院的發言、提案、表決等官方紀錄；選後地圖表態資料，根據各選區立委當選人所回覆問卷之表態紀錄，統計至 2016.1.16 為止。</p>

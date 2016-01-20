@@ -214,3 +214,13 @@ $break: 800px;
 .goToIssue:hover {
   box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
 }
+
+.powerfulTitle {
+  width: 100%;
+}
+
+@media all and (min-width: 480px) {
+  .powerfulTitle {
+    width: 80%;
+  }
+}
