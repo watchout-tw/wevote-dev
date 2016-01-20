@@ -39,6 +39,7 @@ export default class Constituency extends Component {
           id: people.id,
           name: people.name,
           number: people.number,
+          isElected: people.isElected,
           party: people.party,
           hasReply: people.hasReply,
           positions: tableData[people.id].positions,
