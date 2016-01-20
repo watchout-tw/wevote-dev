@@ -128,8 +128,7 @@ export default class Home extends Component {
         let arrowImg = require("./images/icon_arrow.svg");
 
         fixTopBlock = (
-            <div className={styles.fixedTop}
-                 style={{top: coordinateY, left: coordinateX}}> 
+            <div className={styles.fixedTop}> 
                 <div className={styles.districtTitle}>
                     {district2cht(activeArea)}{district_sub2cht(activeArea,activeAreaNo)}
                 </div>
@@ -190,9 +189,12 @@ export default class Home extends Component {
                       </div>
                   </div>
               </header>
-              {fixTopBlock}
+              
               {issueController}
-              {issueBlocks}
+              <div className={styles.issueBlocks}>
+                {fixTopBlock}
+                {issueBlocks}
+              </div>
           </div>
           <div className={styles.invisible}>
               <Link to={`/404`}>404</Link>
