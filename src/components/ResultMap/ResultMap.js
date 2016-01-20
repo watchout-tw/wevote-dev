@@ -36,7 +36,7 @@ export default class ResultMap extends Component {
   }
   _resetActive(){
     const {resetActive} = this.props;
-    resetActive();
+    //resetActive();
   }
   _getDistrictActiveStyle(area, areaNo){
     const styles = require('./ResultMap.scss');
