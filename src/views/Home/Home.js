@@ -5,6 +5,7 @@ import DocumentMeta from 'react-document-meta';
 import getFinalMap from '../../utils/getFinalMap';
 import eng2cht from '../../utils/eng2cht';
 import cht2eng from '../../utils/cht2eng';
+import eng2url from '../../utils/eng2url';
 import district2cht from '../../utils/district2cht';
 import district_sub2cht from '../../utils/district_sub2cht';
 import people_name2id from '../../utils/people_name2id';
@@ -17,25 +18,48 @@ const {legislators, candidates} = getData();
 
 export default class Home extends Component {
   constructor(props){super(props)
-    this.state = {
-      data : getFinalMap(),
-      activeArea: "",
-      activeAreaNo: ""
-    }
-
+      this.state = {
+        data : getFinalMap(),
+        activeArea: "",
+        activeAreaNo: "",
+        x: 0,
+        y: 0,
+        activeIssue: "marriageEquality",
+        viewWidth: ""
+      }
   }
-  _setActive(area, areaNo){
+  componentDidMount(){
+    let w = window.innerWidth;
     this.setState({
-      activeArea: area,
-      activeAreaNo: areaNo
+        viewWidth: w
     })
-    //console.log("**"+area+", "+areaNo+"**")
+  }
+  _setActive(area, areaNo, x, y){
+      this.setState({
+        activeArea: area,
+        activeAreaNo: areaNo,
+        x: x,
+        y: y
+      })
+      //console.log("**"+area+", "+areaNo+"**")
   }
   _getLegislatorParty(name){
-    let id = people_name2id(name);
-    let parties = legislators[id].parties;
-    let party = cht2eng(parties[parties.length - 1].partyCht);
-    return party;
+      let id = people_name2id(name);
+      let parties = legislators[id].parties;
+      let party = cht2eng(parties[parties.length - 1].partyCht);
+      return party;
+  }
+  _resetActive(){
+      this.setState({
+        activeArea: "",
+        activeAreaNo: ""
+      })
+  }
+  _onSetActiveIssue(name, e){
+      console.log(name);
+      this.setState({
+          activeIssue: name
+      })
   }
   render() {
     const title = "沃草！立委出任務 - 2016立委投票攻略";
@@ -53,53 +77,106 @@ export default class Home extends Component {
 
     //
     const styles = require('./Home.scss');
-    const {data, activeArea, activeAreaNo} = this.state;
+    const {data, activeArea, activeAreaNo, x, y, activeIssue, viewWidth} = this.state;
     let fixTopBlock;
     let legislator8th = {}, legislator9th = {};
     if(activeArea && activeAreaNo){
 
-       legislator8th.name = (data.marriageEquality["8th"][activeArea][activeAreaNo]) ? data.marriageEquality["8th"][activeArea][activeAreaNo].legislator : "無";
-       legislator9th.name = data.marriageEquality["9th"][activeArea][activeAreaNo].legislator;
+        legislator8th.name = (data.marriageEquality["8th"][activeArea][activeAreaNo]) ? data.marriageEquality["8th"][activeArea][activeAreaNo].legislator : "無";
+        legislator9th.name = data.marriageEquality["9th"][activeArea][activeAreaNo].legislator;
+  
+        legislator8th.id = people_name2id(legislator8th.name);
+        legislator9th.id = people_name2id(legislator9th.name);
+  
+        legislator8th.party = eng2cht(this._getLegislatorParty(legislator8th.name));
+        let id9th = people_name2id(legislator9th.name);
+        legislator9th.party = eng2cht(candidates[id9th].party);
+  
+        /////
+        let coordinateX = x + 110, coordinateY = y+50;
+        if(coordinateX < 0){
+            coordinateX = 0;
+        }
+        if(coordinateX > viewWidth - 220){
+            coordinateX = viewWidth - 220;
+        }
+        ////
 
-       legislator8th.id = people_name2id(legislator8th.name);
-       legislator9th.id = people_name2id(legislator9th.name);
+        let arrowImg = require("./images/icon_arrow.svg");
 
-       legislator8th.party = eng2cht(this._getLegislatorParty(legislator8th.name));
-       let id9th = people_name2id(legislator9th.name);
-       legislator9th.party = eng2cht(candidates[id9th].party);
 
-       fixTopBlock = (
-            <div className={styles.fixedTop}>
+        fixTopBlock = (
+            <div className={styles.fixedTop}
+                 style={{top: coordinateY, left: coordinateX}}> 
                 <div className={styles.districtTitle}>
                     {district2cht(activeArea)}{district_sub2cht(activeArea,activeAreaNo)}
                 </div>
                 <div className={styles.peopleItem}>
-                    <div>第八屆</div>
+                    <div>選前</div>
                     <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator8th.party)]}`}>
-                        <PeoplePhoto id={legislator8th.id}/></div>
-                    {legislator8th.name}
+                        <PeoplePhoto id={legislator8th.id}/>
+                    </div>
+                    <b>{legislator8th.name}</b>
                     <div>{legislator8th.party}</div>
                 </div>
+                <img src={arrowImg} className={styles.arrowImg} />
                 <div className={styles.peopleItem}>
-                    <div>第九屆</div>
+                    <div>選後</div>
                     <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator9th.party)]}`}>
-                        <PeoplePhoto id={legislator9th.id}/></div>
-                    {legislator9th.name}
+                        <PeoplePhoto id={legislator9th.id}/>
+                    </div>
+                    <b>{legislator9th.name}</b>
                     <div>{legislator9th.party}</div>
                 </div>
             </div>
         );
     }
+    let issueController = (viewWidth >= 800) ? Object.keys(data).map((issueName,i)=>{
+        return (
+          <div className={`${styles.issueTab} ${(issueName===activeIssue)?styles.active:""}`}
+               onClick={this._onSetActiveIssue.bind(this, issueName)}>
+              {eng2cht(issueName)}
+          </div>
+        );      
+    }): "";
     let issueBlocks = Object.keys(data).map((issueName,i)=>{
-        return <Issue issue={data[issueName]} issueName={issueName} setActive={this._setActive.bind(this)}
-                      activeArea={activeArea} activeAreaNo={activeAreaNo}/>
+        if(issueName===activeIssue || viewWidth < 800){
+            //目前 active 的議題或者手機版
+            return  <Issue issue={data[issueName]} issueName={issueName} 
+                           setActive={this._setActive.bind(this)}
+                           resetActive={this._resetActive.bind(this)}
+                           activeArea={activeArea} activeAreaNo={activeAreaNo}
+                           viewWidth={viewWidth}/>
+        }      
     })
     return (
       <div className={styles.home}>
           <DocumentMeta {...metaData}/>
 
           <div className={styles.innerWrap}>
+              <header className={styles.header}>
+                  <h1 className={styles.title}>議題地圖解密：一分鐘看懂議題態度變化</h1>
+                  <p className={styles.intro}>2016關鍵大戰結束，議題板塊有什麼變化呢？贊成/反對的勢力如何消長？你家的議題態度翻盤了嗎？讓我們來看看選前選後各區域立委的態度！</p>
+                  <p className={styles.meta}>資料統計說明：選前地圖表態資料，根據過去第八屆各選區立委在立法院的發言、提案、表決等官方紀錄；選後地圖表態資料，根據各選區立委當選人所回覆問卷之表態紀錄，統計至 2016.1.16 為止。</p>
+                  <div className={styles.legend}>
+                      <b>圖例說明</b>
+                      <div className={styles.positions}>
+                          <div className={styles.position}>
+                              <div className={`${styles.cube} ${styles.aye}`}></div>
+                              <div className={styles.legendText}>贊成</div>
+                          </div>
+                          <div className={styles.position}>
+                              <div className={`${styles.cube} ${styles.nay}`}></div>
+                              <div className={styles.legendText}>反對</div>
+                          </div>
+                          <div className={styles.position}><div className={`${styles.cube} ${styles.none}`}></div>
+                              <div className={styles.legendText}>未表態｜不表態｜模糊</div>
+                          </div>
+                      </div>
+                  </div>
+              </header>
               {fixTopBlock}
+              {issueController}
               {issueBlocks}
           </div>
           <div className={styles.invisible}>
@@ -116,16 +193,32 @@ class Issue extends Component {
   
   render() {
     const styles = require('./Home.scss');
-    const {issue, issueName, setActive, activeArea, activeAreaNo} = this.props;
+    const {issue, issueName, setActive, resetActive, activeArea, activeAreaNo, viewWidth} = this.props;
+    let issueTitle = (viewWidth < 800) ? <h3 className={styles.issueTitle}>{eng2cht(issueName)}</h3> : "";
     return (
-      <div>
-          <h2>{eng2cht(issueName)}</h2>
-          <ResultMap title="8th" data={issue["8th"]} setActive={setActive}
-                     activeArea={activeArea} activeAreaNo={activeAreaNo} />
-          <ResultMap title="9th" data={issue["9th"]} setActive={setActive}
-                     activeArea={activeArea} activeAreaNo={activeAreaNo} />
+      <div className={styles.resultMaps}>
+          {issueTitle}
+          <div className={styles.mapWrap}>
+              <div className={styles.maps}>
+                  <ResultMap title="8th" data={issue["8th"]} setActive={setActive} resetActive={resetActive}
+                             activeArea={activeArea} activeAreaNo={activeAreaNo} 
+                             viewWidth={viewWidth}/>
+                  <ResultMap title="9th" data={issue["9th"]} setActive={setActive} resetActive={resetActive}
+                             activeArea={activeArea} activeAreaNo={activeAreaNo} 
+                             viewWidth={viewWidth}/>
+              </div>
+          </div>
+          <Link to={`/issues/${eng2url(issueName)}/`}
+                className={styles.goToIssue}>深入了解「{eng2cht(issueName)}」議題</Link>
       </div>
     );
+  }
+}
+class KeyPoints extends Component {
+  render(){
+    return (
+        <div></div>
+    )
   }
 }
 /*
@@ -134,7 +227,7 @@ class Issue extends Component {
             "TPE" : {
                 "1" : {
                     "legislator" : "丁守中",
-                    "positioin" : "aye"
+                    "position" : "aye"
                 },
                 "2" : {
     

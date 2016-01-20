@@ -190,6 +190,7 @@ class Card extends Component {
           name = name.substring(0,engIndex);
         }
     }
+    //console.log(people)
     return (
         <div className={styles.card}>
             <Link to={`/people/${people.id}/promises/`} className={styles.cardLink}>
@@ -197,6 +198,8 @@ class Card extends Component {
                   {currentInfo}
                   {noContactInfo}
                 </div>
+                
+                {people.isElected === true? "我當選了" : ""}
 
                 <div className={styles.peoplePhoto}>
                    <PeoplePhoto id={people.id}/>
