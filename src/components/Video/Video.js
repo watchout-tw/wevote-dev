@@ -80,8 +80,8 @@ export default class Video extends Component {
     const title = require("./images/VideoTitles_main.svg");
     const diffTens = Math.floor(diff/10);
     const diffOnes = diff%10;
-    const diffTensImg = require(`./images/counter_${diffTens}.svg`);
-    const diffOnesImg = require(`./images/counter_${diffOnes}.svg`);
+    //const diffTensImg = require(`./images/counter_${diffTens}.svg`);
+    //const diffOnesImg = require(`./images/counter_${diffOnes}.svg`);
     const storyBeginsHereImg = require("./images/VideoTitles_video.svg");
     const missionImg = require("./images/VideoTitles_mission.svg");
     return (
