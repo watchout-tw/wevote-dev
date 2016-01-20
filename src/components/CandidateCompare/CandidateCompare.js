@@ -128,6 +128,10 @@ class Card extends Component {
       <div className={styles.noContactInfo} >無公開聯絡資訊</div>)
     : "";
 
+    let electedInfo;
+    if(people.isElected === true)
+      electedInfo = <div className={styles.electedInfo}>我當選了</div>;
+
     /* -------  表態 ------ */
     //表態
     //REFINE: image duplicated with position table
@@ -198,8 +202,8 @@ class Card extends Component {
                   {currentInfo}
                   {noContactInfo}
                 </div>
-                
-                {people.isElected === true? "我當選了" : ""}
+
+                {electedInfo}
 
                 <div className={styles.peoplePhoto}>
                    <PeoplePhoto id={people.id}/>
