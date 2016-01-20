@@ -45,6 +45,7 @@ $break: 800px;
   color: rgba(85, 85, 85, 0.75);
   font-size: 14px;
   text-align: left;
+  line-height: 1.4;
 }
 /* ------------- */
 .legend {
@@ -80,13 +81,15 @@ $break: 800px;
 .issueTab {
   display: inline-block;
   cursor: pointer;
-  padding: 4px 10px;
+  padding: 4px 8px;
   background: $awesomeColor;
-  margin: 0 3px;
+  margin: 4px;
   color: white;
+  opacity: 0.5;
 }
-.issueTab.active {
-  border-bottom: 4px solid #97FFF5;
+.issueTab:hover, .issueTab.active {
+  //border-bottom: 4px solid #97FFF5;
+  opacity: 1;
 }
 .issue {
   margin-top: 30px;
@@ -160,10 +163,10 @@ $break: 800px;
 }
 
 .peopleAvatar.KMT {
-    border-color: #000095;  
+    border-color: #000095;
 }
 .peopleAvatar.DPP {
-    border-color: #009A00;  
+    border-color: #009A00;
 }
 .peopleAvatar.PFP {
     border-color: #FE6407;
@@ -193,11 +196,20 @@ $break: 800px;
   }
 }
 .keypointsWrap {
-  max-width: 600px;
+  max-width: 500px;
   margin: 10px auto 40px auto;
   text-align: left;
   line-height: 1.4;
   padding: 0 10px;
+
+  ol {
+    padding-left: 24px;
+  }
+}
+@media all and (min-width: 500px) {
+  .keypointsWrap {
+    padding: 0;
+  }
 }
 .keypointsTitle {
   font-size: 20px;
@@ -215,3 +227,12 @@ $break: 800px;
   box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
 }
 
+.powerfulTitle {
+  width: 100%;
+}
+
+@media all and (min-width: 480px) {
+  .powerfulTitle {
+    width: 80%;
+  }
+}
