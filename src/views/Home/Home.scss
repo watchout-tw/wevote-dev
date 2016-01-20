@@ -20,84 +20,145 @@ $break: 960px;
   width: 100%;
   margin: 0 auto;
 }
-.stonehenge {
+/* ------------- */
+.fixedTop {
+  position: fixed;
+  top: 0;
+  background: rgba(250,250,250,0.9);
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  padding-bottom: 10px; 
+  z-index: 999;
+  box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.12);
 }
-.sky {
-  width: 100%;
-  padding: 300px 0 80px;
-  background-image: url(./images/sky.png);
-  background-size: cover;
-  background-position: center center;
-  text-align: center;
-
-  .stargate {
-    position: relative;
-    display: inline-block;
-    transition: transform 0.5s ease;
-    padding-top: 100px;
-    @include transform(scale(1.1));
-
-    &, &:active, &:visited {
-      text-decoration: none;
-      color: $black;
-    }
-    &.locked > .destination {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-    }
-    .destination {
-      display: block;
-      width: 320px;
-    }
-    .glow {
-      position: absolute;
-      top: 100px;
-      left: 0;
-      width: 320px;
-    }
-    .label_issues, .label_parties, .label_constituencies {
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      @include transform(translateX(-50%));
-      width: 125px;
-      height: 200px;
-      background-image: url('./images/labels.svg');
-      background-size: cover;
-      background-position: 0 0;
-    }
-    .label_parties {
-      background-position: -130px 0;
-      width: 175px;
-    }
-    .label_constituencies {
-      background-position: -300px 0;
-      width: 175px;
-    }
-  }
+.districtTitle {
+  font-size: 18px;
+  font-weight: 800;
+  vertical-align: top;
+  margin-top: 10px;
+  border: 1px solid;
+  width: 180px;
+  color: white;
+  padding: 4px 0;
+  background: black;
+  margin: 10px auto;
 }
-.countdown {
-  display: block;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  max-width: 100%;
-  padding: 0 10px;
+.peopleItem {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 14px;
+}
+.peopleAvatar {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 4px auto;
+    border: 4px solid lightgray;
+    border-radius: 50%;
 }
 
-@media all and (min-width: $break) {
-  .countdown {
-    top: 120px;
-  }
-  .stargate:hover {
-    transform: scale(1.35);
-    -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
-    filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
-  }
+.peopleAvatar.KMT {
+    border-color: #000095;  
 }
+.peopleAvatar.DPP {
+    border-color: #009A00;  
+}
+.peopleAvatar.PFP {
+    border-color: #FE6407;
+}
+.peopleAvatar.TSU {
+    border-color: #A25B09;
+}
+.peopleAvatar.NP, .peopleAvatar.NONE {
+    border-color: gray;
+}
+.peopleAvatar.NSU {
+    border-color: rgba(194,15,81,0.9);
+}
+.peopleAvatar.NPP {
+    border-color: #FFD300;
+}
+.peopleAvatar.MKT {
+    border-color: #FFD300;
+}
+
+
+// .stonehenge {
+//   width: 100%;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+// }
+// .sky {
+//   width: 100%;
+//   padding: 300px 0 80px;
+//   background-image: url(./images/sky.png);
+//   background-size: cover;
+//   background-position: center center;
+//   text-align: center;
+
+//   .stargate {
+//     position: relative;
+//     display: inline-block;
+//     transition: transform 0.5s ease;
+//     padding-top: 100px;
+//     @include transform(scale(1.1));
+
+//     &, &:active, &:visited {
+//       text-decoration: none;
+//       color: $black;
+//     }
+//     &.locked > .destination {
+//       -webkit-filter: grayscale(100%);
+//       filter: grayscale(100%);
+//     }
+//     .destination {
+//       display: block;
+//       width: 320px;
+//     }
+//     .glow {
+//       position: absolute;
+//       top: 100px;
+//       left: 0;
+//       width: 320px;
+//     }
+//     .label_issues, .label_parties, .label_constituencies {
+//       position: absolute;
+//       top: -25px;
+//       left: 50%;
+//       @include transform(translateX(-50%));
+//       width: 125px;
+//       height: 200px;
+//       background-image: url('./images/labels.svg');
+//       background-size: cover;
+//       background-position: 0 0;
+//     }
+//     .label_parties {
+//       background-position: -130px 0;
+//       width: 175px;
+//     }
+//     .label_constituencies {
+//       background-position: -300px 0;
+//       width: 175px;
+//     }
+//   }
+// }
+// .countdown {
+//   display: block;
+//   position: absolute;
+//   top: 100px;
+//   left: 50%;
+//   transform: translateX(-50%);
+
+//   max-width: 100%;
+//   padding: 0 10px;
+// }
+
+// @media all and (min-width: $break) {
+//   .countdown {
+//     top: 120px;
+//   }
+//   .stargate:hover {
+//     transform: scale(1.35);
+//     -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+//     filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5));
+//   }
+// }

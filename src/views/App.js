@@ -74,7 +74,6 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <DocumentMeta {...meta}/>
-        <Buy/>
         <div className={styles.appContent}>
           {this.props.children}
         </div>
