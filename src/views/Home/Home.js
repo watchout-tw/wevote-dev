@@ -124,7 +124,7 @@ export default class Home extends Component {
             <div className={styles.peopleItem}>
                 <div className={`${styles.peopleAvatar} ${styles.noPeople}`}>
                 </div>
-                <b>{displayName8th}</b>    
+                <b>{displayName8th}</b>
             </div>
           );
         }
@@ -134,7 +134,7 @@ export default class Home extends Component {
 
         fixTopBlock = (
 
-            <div className={`${styles.fixedTop} ${styles.active}`}> 
+            <div className={`${styles.fixedTop} ${styles.active}`}>
                 <div className={styles.districtTitle}>
                     {district2cht(activeArea)}{district_sub2cht(activeArea,activeAreaNo)}
                 </div>
@@ -195,7 +195,7 @@ export default class Home extends Component {
                       </div>
                   </div>
               </header>
-              
+
               {issueController}
               <div className={styles.issueBlocks}>
                 {fixTopBlock}
