@@ -225,7 +225,7 @@ class Issue extends Component {
               </div>
           </div>
           <Link to={`/issues/${eng2url(issueName)}/`}
-                className={styles.goToIssue}>深入了解「{eng2cht(issueName)}」議題</Link>
+                className={styles.goToIssue}>深入了解【{eng2cht(issueName)}】議題</Link>
       </div>
     );
   }
