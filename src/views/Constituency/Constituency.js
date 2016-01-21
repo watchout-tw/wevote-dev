@@ -101,6 +101,23 @@ export default class Constituency extends Component {
         )
     })
 
+    //本區當選立委
+    let electedCount = 0;
+    let electedLegislatorItems = allCandidates.map((people, index)=>{
+        let separatorItem = (electedCount > 0) ? "、" : "";
+        
+        if(people.isElected === true){
+            electedCount++;
+            return (
+              <span key={`elected-${index}`}>
+                <Link to={`/people/${people.id}/promises/`}
+                      className={`${styles.ia} ${styles.black}`}>{people.name}</Link>
+                {separatorItem}
+              </span>
+            )
+        }
+    })
+
     //顯示參選人數跟回覆率
     let replyStatus = (comparableCandidates.length > 0) ? (
       ""
@@ -137,9 +154,9 @@ export default class Constituency extends Component {
           <div className={styles.mainContent}>
               <DistrictFlag area={area} areaNo={areaNo} />
               <div className={styles.districtInfo}>
-                  <h3 className={styles.electCount}>{allCandidates.length}人參選，將選出{shouldElect}位勇者</h3>
+                  <h3 className={styles.electCount}>{allCandidates.length}人參選，已選出{shouldElect}位勇者：{electedLegislatorItems}</h3>
                   <div className={styles.currentLegislators}>
-                      現任代表：{currentLegislatorItems}
+                      第八屆代表：{currentLegislatorItems}
                   </div>
               </div>
               {replyStatus}
