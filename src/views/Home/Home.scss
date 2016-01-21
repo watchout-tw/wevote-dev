@@ -145,13 +145,20 @@ $break: 800px;
   left: calc(50% - 15px);
   top: 42px;
 }
+.peopleItemGroup {
+  display: inline-block;
+  width: 50%;
+}
 .peopleItem {
+  display: none;
+}
+.peopleItem.active {
   display: inline-block;
   font-size: 14px;
-  width: 50%;
   vertical-align: top;
 }
 .peopleAvatar {
+    display: block;
     width: 45px;
     height: 45px;
     margin: 0 auto 4px auto;

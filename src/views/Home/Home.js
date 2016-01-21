@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import DocumentMeta from 'react-document-meta';
+import classnames from 'classnames';
 
 import getFinalMap from '../../utils/getFinalMap';
 import eng2cht from '../../utils/eng2cht';
@@ -22,8 +23,6 @@ export default class Home extends Component {
         data : getFinalMap(),
         activeArea: "",
         activeAreaNo: "",
-        x: 0,
-        y: 0,
         activeIssue: "marriageEquality",
         viewWidth: ""
       }
@@ -34,20 +33,12 @@ export default class Home extends Component {
         viewWidth: w
     })
   }
-  _setActive(area, areaNo, x, y){
+  _setActive(area, areaNo){
       this.setState({
         activeArea: area,
-        activeAreaNo: areaNo,
-        x: x,
-        y: y
+        activeAreaNo: areaNo
       })
       //console.log("**"+area+", "+areaNo+"**")
-  }
-  _getLegislatorParty(name){
-      let id = people_name2id(name);
-      let parties = legislators[id].parties;
-      let party = cht2eng(parties[parties.length - 1].partyCht);
-      return party;
   }
   _resetActive(){
       this.setState({
@@ -76,55 +67,32 @@ export default class Home extends Component {
 
     //
     const styles = require('./Home.scss');
-    const {data, activeArea, activeAreaNo, x, y, activeIssue, viewWidth} = this.state;
+    const {data, activeArea, activeAreaNo, activeIssue, viewWidth} = this.state;
     let fixTopBlock = <div className={styles.fixedTop}></div>;
     let legislator8th = {}, legislator9th = {};
+    
     if(activeArea && activeAreaNo){
 
         legislator8th.name = (data.marriageEquality["8th"][activeArea][activeAreaNo]) ? data.marriageEquality["8th"][activeArea][activeAreaNo].legislator : "無";
         legislator9th.name = data.marriageEquality["9th"][activeArea][activeAreaNo].legislator;
+        
+        legislator9th.displayName = trim(legislator9th.name);
 
         legislator8th.id = people_name2id(legislator8th.name);
         legislator9th.id = people_name2id(legislator9th.name);
 
-        legislator8th.party = eng2cht(this._getLegislatorParty(legislator8th.name));
         let id9th = people_name2id(legislator9th.name);
         legislator9th.party = eng2cht(candidates[id9th].party);
 
-        /////
-        let coordinateX = x + 110, coordinateY = y+50;
-        if(coordinateX < 0){
-            coordinateX = 0;
-        }
-        if(coordinateX > viewWidth - 220){
-            coordinateX = viewWidth - 220;
-        }
-        ////名字太長
-        let displayName8th = legislator8th.name;
-        let displayName9th = legislator9th.name;
-        if(displayName8th === "鄭天財Sra·Kacaw"){
-           displayName8th = "鄭天財";
-        }
-        if(displayName9th === "鄭天財Sra·Kacaw"){
-           displayName9th = "鄭天財";
-        }
-        //
-        //避免  無 -> 丁守中, ad-hoc quick fix
         let peopleBefore = (
-            <div className={styles.peopleItem}>
-                <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator8th.party)]}`}>
-                    <PeoplePhoto id={legislator8th.id}/>
-                </div>
-                <b>{displayName8th}</b>
-                <div>{legislator8th.party}</div>
-            </div>
+            <Legislator8thPhotos activeId={legislator8th.id} />
         );
+        //避免  無 -> 丁守中, ad-hoc quick fix
         if(legislator8th.id === "1" && legislator8th.name !== "丁守中"){
           peopleBefore = (
-            <div className={styles.peopleItem}>
-                <div className={`${styles.peopleAvatar} ${styles.noPeople}`}>
-                </div>
-                <b>{displayName8th}</b>
+            <div className={`${styles.peopleItem} ${styles.active}`}>
+                <div className={`${styles.peopleAvatar} ${styles.noPeople}`}></div>
+                <b>無</b>
             </div>
           );
         }
@@ -140,12 +108,15 @@ export default class Home extends Component {
                 </div>
                 {peopleBefore}
                 <img src={arrowImg} className={styles.arrowImg} />
-                <div className={styles.peopleItem}>
-                    <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator9th.party)]}`}>
-                        <PeoplePhoto id={legislator9th.id}/>
+
+                <div className={styles.peopleItemGroup}>
+                    <div className={`${styles.peopleItem} ${styles.active}`}>
+                        <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator9th.party)]}`}>
+                            <PeoplePhoto id={legislator9th.id}/>
+                        </div>
+                        <b>{legislator9th.displayName}</b>
+                        <div>{legislator9th.party}</div>
                     </div>
-                    <b>{displayName9th}</b>
-                    <div>{legislator9th.party}</div>
                 </div>
             </div>
         );
@@ -300,22 +271,67 @@ const KeyPointsData = {
       "現在承諾中完全沒有表態反對的立委，可能因為抱持反對立場的立委比較不願意回覆問卷。"
     ]
 }
-/*
-    marriageEquality : {
-        "8th" : {
-            "TPE" : {
-                "1" : {
-                    "legislator" : "丁守中",
-                    "position" : "aye"
-                },
-                "2" : {
+function trim(name){
+  if(name === "鄭天財Sra·Kacaw"){
+      return "鄭天財";
+  }else{
+      return name;
+  }
+}
 
-                }
-            }
-        },
-        "9th" : {
-
+//Require all legislator photo (hasn't resigned, not 黨團)
+class Legislator8thPhotos extends Component {
+  
+  render(){
+    const styles = require('./Home.scss');
+    const {activeId} = this.props;
+    let photos = Object.keys(legislators).map((id, i)=>{
+        let legislator = legislators[id];
+        if(legislator.hasResigned === false && legislator.name.indexOf("黨團")===-1){
+            let party = getLegislatorParty(legislator.name);
+            let displayName = trim(legislator.name);
+            let peopleClasses = classnames({
+              [styles.peopleItem] : true,
+              [styles.active] : Number(activeId) === Number(id)
+            })
+            return (
+              <div className={peopleClasses}>
+                  <div className={`${styles.peopleAvatar} ${styles[party]}`}>
+                      <PeoplePhoto id={id}/>
+                  </div>
+                  <b>{displayName}</b>
+                  <div>{eng2cht(party)}</div>
+              </div>
+            )
         }
-    }
+    })
+    return <div className={styles.peopleItemGroup}>{photos}</div>;
+    
+  }
+}
+function getLegislatorParty(name){
+   let id = people_name2id(name);
+   let parties = legislators[id].parties;
+   let party = cht2eng(parties[parties.length - 1].partyCht);
+   return party;
+}
+/*
+
+marriageEquality : {
+   "8th" : {
+       "TPE" : {
+           "1" : {
+               "legislator" : "丁守中",
+               "position" : "aye"
+           },
+           "2" : {
+
+           }
+       }
+   },
+   "9th" : {
+
+   }
+}
 
 */

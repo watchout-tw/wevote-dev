@@ -31,8 +31,7 @@ export default class ResultMap extends Component {
   
   _setActive(area, areaNo,e){
     const {setActive} = this.props;
-    let y = e.screenY+window.innerHeight;
-    setActive(area,areaNo, e.screenX, y);
+    setActive(area,areaNo);
   }
   _resetActive(){
     const {resetActive} = this.props;
