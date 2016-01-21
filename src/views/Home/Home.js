@@ -75,14 +75,8 @@ export default class Home extends Component {
 
         legislator8th.name = (data.marriageEquality["8th"][activeArea][activeAreaNo]) ? data.marriageEquality["8th"][activeArea][activeAreaNo].legislator : "無";
         legislator9th.name = data.marriageEquality["9th"][activeArea][activeAreaNo].legislator;
-        
-        legislator9th.displayName = trim(legislator9th.name);
-
         legislator8th.id = people_name2id(legislator8th.name);
         legislator9th.id = people_name2id(legislator9th.name);
-
-        let id9th = people_name2id(legislator9th.name);
-        legislator9th.party = eng2cht(candidates[id9th].party);
 
         let peopleBefore = (
             <Legislator8thPhotos activeId={legislator8th.id} />
@@ -97,27 +91,16 @@ export default class Home extends Component {
           );
         }
 
-        //
         let arrowImg = require("./images/icon_arrow.svg");
 
         fixTopBlock = (
-
             <div className={`${styles.fixedTop} ${styles.active}`}>
                 <div className={styles.districtTitle}>
                     {district2cht(activeArea)}{district_sub2cht(activeArea,activeAreaNo)}
                 </div>
                 {peopleBefore}
                 <img src={arrowImg} className={styles.arrowImg} />
-
-                <div className={styles.peopleItemGroup}>
-                    <div className={`${styles.peopleItem} ${styles.active}`}>
-                        <div className={`${styles.peopleAvatar} ${styles[cht2eng(legislator9th.party)]}`}>
-                            <PeoplePhoto id={legislator9th.id}/>
-                        </div>
-                        <b>{legislator9th.displayName}</b>
-                        <div>{legislator9th.party}</div>
-                    </div>
-                </div>
+                <Legislator9thPhotos activeId={legislator9th.id} />
             </div>
         );
     }
@@ -301,6 +284,34 @@ class Legislator8thPhotos extends Component {
                   </div>
                   <b>{displayName}</b>
                   <div>{eng2cht(party)}</div>
+              </div>
+            )
+        }
+    })
+    return <div className={styles.peopleItemGroup}>{photos}</div>;
+    
+  }
+}
+class Legislator9thPhotos extends Component {
+  
+  render(){
+    const styles = require('./Home.scss');
+    const {activeId} = this.props;
+    let photos = Object.keys(candidates).map((id, i)=>{
+        let candidate = candidates[id];
+        if(candidate.isElected=== true){
+            let displayName = trim(candidate.name);
+            let peopleClasses = classnames({
+              [styles.peopleItem] : true,
+              [styles.active] : Number(activeId) === Number(id)
+            })
+            return (
+              <div className={peopleClasses}>
+                  <div className={`${styles.peopleAvatar} ${styles[candidate.party]}`}>
+                      <PeoplePhoto id={id}/>
+                  </div>
+                  <b>{displayName}</b>
+                  <div>{eng2cht(candidate.party)}</div>
               </div>
             )
         }
