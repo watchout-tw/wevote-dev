@@ -91,7 +91,8 @@ export default class PeopleProfile extends Component {
     ///////////// 第九屆參選資訊
     let candidateInfoItem;
 
-    if(info.candidateTitle){    
+    if(info.candidateTitle){
+        let isElectedText = (candidateData.isElected === true) ? "（當選）" : ""; 
         candidateInfoItem = (
         <div>
             <p>2016第九屆
@@ -108,7 +109,7 @@ export default class PeopleProfile extends Component {
                       </Link>: ""
                     }
                 </span>
-                      {circleNumber(candidateData.number)}候選人</p>
+                      {circleNumber(candidateData.number)}候選人{isElectedText}</p>
                 <div className={styles.partyEng}>
                     <div className={`${styles.partyFlag} ${styles.small} ${styles[candidateData.party]}`}></div>
                     <PartyFlag partyId={candidateData.party} />

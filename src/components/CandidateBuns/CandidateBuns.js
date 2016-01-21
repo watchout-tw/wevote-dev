@@ -48,6 +48,8 @@ export default class CandidateBuns extends Component {
         //嘉義市名字超長
         let extremeClass = (area === "CYC") ? styles.extremeExtended : "";
 
+        //當選註記
+        let isElectedText = (candidate.isElected === true) ? "當選":"";
         return (
             <Link key={`partybun-${category}-${candidate.id}-${i}`}
                   className={`${styles.bunItem} 
@@ -60,6 +62,7 @@ export default class CandidateBuns extends Component {
                   <div className={`${styles.bunName} ${extendClass} ${extremeClass}`}>
                     {circleNumber(candidate.number)}{candidate.name}
                   </div>
+                  <div className={styles.isElected}>{isElectedText}</div>
             </Link>
             
         )
