@@ -84,9 +84,11 @@ export default class Home extends Component {
         //避免  無 -> 丁守中, ad-hoc quick fix
         if(legislator8th.id === "1" && legislator8th.name !== "丁守中"){
           peopleBefore = (
-            <div className={`${styles.peopleItem} ${styles.active}`}>
-                <div className={`${styles.peopleAvatar} ${styles.noPeople}`}></div>
-                <b>無</b>
+            <div className={styles.peopleItemGroup}>
+                <div className={`${styles.peopleItem} ${styles.active}`}>
+                    <div className={`${styles.peopleAvatar} ${styles.noPeople}`}></div>
+                    <b>無</b>
+                </div>
             </div>
           );
         }
